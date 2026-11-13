@@ -1,0 +1,825 @@
+{
+  "chapter": 5,
+  "chapterTitle": "Continuity and Differentiability",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/4/1)",
+          "question": "For what value of $k$ is the function $f(x) = \\begin{cases} \\dfrac{\\sqrt{4 + x} - 2}{x}, & x \\ne 0 \\\\ k, & x = 0 \\end{cases}$ continuous at $x = 0$?",
+          "options": [
+            "$0$",
+            "$\\dfrac{1}{4}$",
+            "$1$",
+            "$4$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{1}{4}$",
+            "concept": "Continuous at $0$ means $\\displaystyle\\lim_{x \\to 0} f(x) = f(0)$; a $\\dfrac{0}{0}$ root form is rationalised.",
+            "steps": [
+              {
+                "do": "Rationalise the numerator.",
+                "math": "\\dfrac{\\sqrt{4+x} - 2}{x} \\cdot \\dfrac{\\sqrt{4+x} + 2}{\\sqrt{4+x} + 2} = \\dfrac{(4 + x) - 4}{x\\left(\\sqrt{4+x} + 2\\right)} = \\dfrac{1}{\\sqrt{4+x} + 2}"
+              },
+              {
+                "do": "Take the limit as $x \\to 0$ and equate to $f(0) = k$.",
+                "math": "\\lim_{x \\to 0}\\dfrac{1}{\\sqrt{4+x} + 2} = \\dfrac{1}{2 + 2} = \\dfrac{1}{4} = k",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Putting $x = 0$ straight in gives $\\dfrac{0}{0}$; rationalise first, do not guess $k = 0$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/1/1)",
+          "question": "Which of the following statements is true for the function $f(x) = \\begin{cases} x^{2} + 3, & x \\ne 0 \\\\ 1, & x = 0 \\end{cases}$?",
+          "options": [
+            "$f(x)$ is continuous and differentiable $\\forall\\, x \\in \\mathbb{R}$",
+            "$f(x)$ is continuous $\\forall\\, x \\in \\mathbb{R}$",
+            "$f(x)$ is continuous and differentiable $\\forall\\, x \\in \\mathbb{R} - \\{0\\}$",
+            "$f(x)$ is discontinuous at infinitely many points"
+          ],
+          "solution": {
+            "answer": "(C) $f(x)$ is continuous and differentiable $\\forall\\, x \\in \\mathbb{R} - \\{0\\}$",
+            "concept": "A polynomial is continuous and differentiable; a function is not differentiable where it is discontinuous.",
+            "steps": [
+              {
+                "do": "Check $x = 0$: compare the limit with $f(0)$.",
+                "math": "\\lim_{x \\to 0}(x^{2} + 3) = 3 \\ne 1 = f(0)"
+              },
+              {
+                "do": "So $f$ is discontinuous at $x = 0$, hence not differentiable there."
+              },
+              {
+                "do": "For $x \\ne 0$, $f(x) = x^{2} + 3$ is a polynomial: continuous and differentiable.",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (C)."
+              }
+            ],
+            "mistake": "Choosing (B): the single point $x = 0$ breaks continuity because $f(0) = 1$, not $3$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/4/1)",
+          "question": "Derivative of $e^{2x}$ with respect to $e^{x}$ is:",
+          "options": [
+            "$e^{x}$",
+            "$2e^{x}$",
+            "$2e^{2x}$",
+            "$2e^{3x}$"
+          ],
+          "solution": {
+            "answer": "(B) $2e^{x}$",
+            "concept": "Derivative of $u$ w.r.t. $v$ is $\\dfrac{du/dx}{dv/dx}$.",
+            "steps": [
+              {
+                "do": "Let $u = e^{2x}$ and $v = e^{x}$. Differentiate both w.r.t. $x$.",
+                "math": "\\dfrac{du}{dx} = 2e^{2x}, \\qquad \\dfrac{dv}{dx} = e^{x}"
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{du}{dv} = \\dfrac{2e^{2x}}{e^{x}} = 2e^{x}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Giving $2e^{2x}$ (option C), which is the derivative w.r.t. $x$, not w.r.t. $e^{x}$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/1/1)",
+          "question": "The derivative of $\\sin(x^{2})$ w.r.t. $x$, at $x = \\sqrt{\\pi}$ is:",
+          "options": [
+            "$1$",
+            "$-1$",
+            "$-2\\sqrt{\\pi}$",
+            "$2\\sqrt{\\pi}$"
+          ],
+          "solution": {
+            "answer": "(C) $-2\\sqrt{\\pi}$",
+            "concept": "Chain rule: $\\dfrac{d}{dx}\\sin u = \\cos u \\cdot \\dfrac{du}{dx}$.",
+            "steps": [
+              {
+                "do": "Differentiate using the chain rule.",
+                "math": "\\dfrac{d}{dx}\\sin(x^{2}) = \\cos(x^{2}) \\cdot 2x"
+              },
+              {
+                "do": "Put $x = \\sqrt{\\pi}$, so $x^{2} = \\pi$.",
+                "math": "2\\sqrt{\\pi}\\cos\\pi = 2\\sqrt{\\pi}\\,(-1) = -2\\sqrt{\\pi}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (C)."
+              }
+            ],
+            "mistake": "Forgetting $\\cos\\pi = -1$ gives $2\\sqrt{\\pi}$ (option D)."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/3/1)",
+          "question": "The derivative of $2^{x}$ w.r.t. $3^{x}$ is:",
+          "options": [
+            "$\\left(\\dfrac{3}{2}\\right)^{x}\\dfrac{\\log 2}{\\log 3}$",
+            "$\\left(\\dfrac{2}{3}\\right)^{x}\\dfrac{\\log 3}{\\log 2}$",
+            "$\\left(\\dfrac{2}{3}\\right)^{x}\\dfrac{\\log 2}{\\log 3}$",
+            "$\\left(\\dfrac{3}{2}\\right)^{x}\\dfrac{\\log 3}{\\log 2}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\left(\\dfrac{2}{3}\\right)^{x}\\dfrac{\\log 2}{\\log 3}$",
+            "concept": "Treat $x$ as the parameter: $\\dfrac{du}{dv} = \\dfrac{du/dx}{dv/dx}$; $\\dfrac{d}{dx}a^{x} = a^{x}\\log a$.",
+            "steps": [
+              {
+                "do": "Let $u = 2^{x}$, $v = 3^{x}$. Differentiate both w.r.t. $x$.",
+                "math": "\\dfrac{du}{dx} = 2^{x}\\log 2, \\qquad \\dfrac{dv}{dx} = 3^{x}\\log 3"
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{du}{dv} = \\dfrac{2^{x}\\log 2}{3^{x}\\log 3} = \\left(\\dfrac{2}{3}\\right)^{x}\\dfrac{\\log 2}{\\log 3}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (C)."
+              }
+            ],
+            "mistake": "Dividing the wrong way round gives option (D)."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "CBSE SQP 2024-25",
+          "question": "**Assertion (A):** Consider the function defined as $f(x) = |x| + |x - 1|$, $x \\in \\mathbb{R}$. Then $f(x)$ is not differentiable at $x = 0$ and $x = 1$. **Reason (R):** Suppose $f$ be defined and continuous on $(a, b)$ and $c \\in (a, b)$; then $f(x)$ is not differentiable at $x = c$ if $\\displaystyle\\lim_{h \\to 0^-}\\dfrac{f(c+h) - f(c)}{h} \\ne \\lim_{h \\to 0^+}\\dfrac{f(c+h) - f(c)}{h}$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A",
+            "concept": "Differentiable at $c$ needs LHD $=$ RHD.",
+            "steps": [
+              {
+                "do": "Remove the modulus near $0$ and $1$.",
+                "math": "f(x) = \\begin{cases} 1 - 2x, & x < 0 \\\\ 1, & 0 \\le x \\le 1 \\\\ 2x - 1, & x > 1 \\end{cases}"
+              },
+              {
+                "do": "At $x = 0$: LHD $= -2$, RHD $= 0$; unequal.",
+                "why": "Slopes of $1 - 2x$ and $1$"
+              },
+              {
+                "do": "At $x = 1$: LHD $= 0$, RHD $= 2$; unequal. So **A is true**.",
+                "why": "Slopes of $1$ and $2x - 1$"
+              },
+              {
+                "do": "R is the definition: unequal one-sided derivatives mean not differentiable. **R is true**."
+              },
+              {
+                "do": "A follows exactly from the test in R, so **R explains A**.",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (A)."
+              }
+            ],
+            "mistake": "Thinking a continuous function must be differentiable; $f$ is continuous but has corners at $0$ and $1$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2024 (65/2/1)",
+          "question": "If $y = \\operatorname{cosec}(\\cot^{-1}x)$, then prove that $\\sqrt{1 + x^{2}}\\,\\dfrac{dy}{dx} - x = 0$.",
+          "solution": {
+            "answer": "$\\sqrt{1 + x^{2}}\\,\\dfrac{dy}{dx} - x = 0$ (proved)",
+            "concept": "Put $\\cot^{-1}x = \\theta$ and write $\\operatorname{cosec}\\theta$ in terms of $\\cot\\theta$.",
+            "steps": [
+              {
+                "do": "Let $\\cot^{-1}x = \\theta$, so $\\cot\\theta = x$ and $\\theta \\in (0, \\pi)$.",
+                "math": "\\operatorname{cosec}\\theta = \\sqrt{1 + \\cot^{2}\\theta} = \\sqrt{1 + x^{2}}",
+                "why": "$\\sin\\theta > 0$ on $(0, \\pi)$, so take the positive root",
+                "marks": 1
+              },
+              {
+                "do": "So $y = \\sqrt{1 + x^{2}}$. Differentiate w.r.t. $x$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{2x}{2\\sqrt{1 + x^{2}}} = \\dfrac{x}{\\sqrt{1 + x^{2}}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $\\sqrt{1 + x^{2}}$. Hence proved.",
+                "math": "\\sqrt{1 + x^{2}}\\,\\dfrac{dy}{dx} = x \\;\\Rightarrow\\; \\sqrt{1 + x^{2}}\\,\\dfrac{dy}{dx} - x = 0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Differentiating $\\operatorname{cosec}(\\cot^{-1}x)$ by the chain rule directly is long; simplify $y$ first."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the value of $k$ for which the function $f(x) = \\begin{cases} \\dfrac{k\\cos x}{\\pi - 2x}, & x \\ne \\dfrac{\\pi}{2} \\\\ 5, & x = \\dfrac{\\pi}{2} \\end{cases}$ is continuous at $x = \\dfrac{\\pi}{2}$.",
+          "solution": {
+            "answer": "$k = 10$",
+            "concept": "Continuity at $\\dfrac{\\pi}{2}$: $\\displaystyle\\lim_{x \\to \\pi/2} f(x) = f\\left(\\dfrac{\\pi}{2}\\right)$; use $\\displaystyle\\lim_{h \\to 0}\\dfrac{\\sin h}{h} = 1$.",
+            "steps": [
+              {
+                "do": "Put $x = \\dfrac{\\pi}{2} - h$; as $x \\to \\dfrac{\\pi}{2}$, $h \\to 0$.",
+                "math": "\\cos\\left(\\dfrac{\\pi}{2} - h\\right) = \\sin h, \\qquad \\pi - 2x = 2h",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the limit.",
+                "math": "\\lim_{x \\to \\frac{\\pi}{2}}\\dfrac{k\\cos x}{\\pi - 2x} = \\lim_{h \\to 0}\\dfrac{k\\sin h}{2h} = \\dfrac{k}{2}",
+                "marks": 1
+              },
+              {
+                "do": "Equate to $f\\left(\\dfrac{\\pi}{2}\\right) = 5$.",
+                "math": "\\dfrac{k}{2} = 5 \\;\\Rightarrow\\; k = 10",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Equating $k$ (not $\\dfrac{k}{2}$) to $5$; the factor $2$ from $\\pi - 2x = 2h$ is often lost."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2026-27",
+          "question": "If $y = x^{\\log x} + (\\log x)^{x}$, $x > 1$, then evaluate $\\dfrac{dy}{dx}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = x^{\\log x}\\cdot\\dfrac{2\\log x}{x} + (\\log x)^{x}\\left(\\log(\\log x) + \\dfrac{1}{\\log x}\\right)$",
+            "concept": "Split $y = u + v$; take $\\log$ of each power separately.",
+            "steps": [
+              {
+                "do": "Let $u = x^{\\log x}$ and $v = (\\log x)^{x}$, so $y = u + v$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{du}{dx} + \\dfrac{dv}{dx}",
+                "why": "$\\log$ of a sum cannot be split",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log of $u$ and differentiate w.r.t. $x$.",
+                "math": "\\log u = (\\log x)^{2} \\;\\Rightarrow\\; \\dfrac{1}{u}\\dfrac{du}{dx} = \\dfrac{2\\log x}{x}"
+              },
+              {
+                "do": "Multiply by $u$.",
+                "math": "\\dfrac{du}{dx} = x^{\\log x}\\cdot\\dfrac{2\\log x}{x}",
+                "marks": 1
+              },
+              {
+                "do": "Take log of $v$ and differentiate (product rule).",
+                "math": "\\log v = x\\log(\\log x) \\;\\Rightarrow\\; \\dfrac{1}{v}\\dfrac{dv}{dx} = \\log(\\log x) + x\\cdot\\dfrac{1}{\\log x}\\cdot\\dfrac{1}{x}"
+              },
+              {
+                "do": "Multiply by $v$.",
+                "math": "\\dfrac{dv}{dx} = (\\log x)^{x}\\left(\\log(\\log x) + \\dfrac{1}{\\log x}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Add the two results.",
+                "math": "\\dfrac{dy}{dx} = x^{\\log x}\\cdot\\dfrac{2\\log x}{x} + (\\log x)^{x}\\left(\\log(\\log x) + \\dfrac{1}{\\log x}\\right)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\log u = \\log x \\cdot \\log x$ and then differentiating to $\\dfrac{1}{x}$; it is $(\\log x)^2$, giving $\\dfrac{2\\log x}{x}$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2023 (65/1/3)",
+          "question": "If $x = \\sqrt{a^{\\tan^{-1}t}}$, $y = \\sqrt{a^{\\cot^{-1}t}}$, then show that $x\\dfrac{dy}{dx} + y = 0$.",
+          "solution": {
+            "answer": "$x\\dfrac{dy}{dx} + y = 0$ (proved)",
+            "concept": "Parametric form: $\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}$; take $\\log$ first to handle the power.",
+            "steps": [
+              {
+                "do": "Take log of $x$ and differentiate w.r.t. $t$.",
+                "math": "\\log x = \\dfrac{1}{2}\\tan^{-1}t\\,\\log a \\;\\Rightarrow\\; \\dfrac{dx}{dt} = \\dfrac{x\\log a}{2(1 + t^{2})}",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log of $y$ and differentiate w.r.t. $t$.",
+                "math": "\\log y = \\dfrac{1}{2}\\cot^{-1}t\\,\\log a \\;\\Rightarrow\\; \\dfrac{dy}{dt} = \\dfrac{-y\\log a}{2(1 + t^{2})}",
+                "why": "$\\dfrac{d}{dt}\\cot^{-1}t = \\dfrac{-1}{1+t^2}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt} = -\\dfrac{y}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Cross-multiply. Hence proved.",
+                "math": "x\\dfrac{dy}{dx} + y = 0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Missing the minus sign in the derivative of $\\cot^{-1}t$ gives $x\\dfrac{dy}{dx} = y$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024 (65(B))",
+          "question": "If $x = a\\cos\\theta$ and $y = b\\sin\\theta$, then prove that $\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{b^{4}}{a^{2}y^{3}}$.",
+          "solution": {
+            "answer": "$\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{b^{4}}{a^{2}y^{3}}$ (proved)",
+            "concept": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{d}{d\\theta}\\left(\\dfrac{dy}{dx}\\right)\\cdot\\dfrac{d\\theta}{dx}$.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ and $y$ w.r.t. $\\theta$.",
+                "math": "\\dfrac{dx}{d\\theta} = -a\\sin\\theta, \\qquad \\dfrac{dy}{d\\theta} = b\\cos\\theta",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide to get $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{b\\cos\\theta}{-a\\sin\\theta} = -\\dfrac{b}{a}\\cot\\theta",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (chain rule through $\\theta$).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{b}{a}\\operatorname{cosec}^{2}\\theta\\cdot\\dfrac{d\\theta}{dx} = \\dfrac{b}{a}\\operatorname{cosec}^{2}\\theta\\cdot\\dfrac{1}{-a\\sin\\theta}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{b}{a^{2}\\sin^{3}\\theta}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\sin\\theta = \\dfrac{y}{b}$. Hence proved.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{b}{a^{2}}\\cdot\\dfrac{b^{3}}{y^{3}} = -\\dfrac{b^{4}}{a^{2}y^{3}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d^2y}{dx^2} = \\dfrac{d^2y/d\\theta^2}{d^2x/d\\theta^2}$; you must multiply by $\\dfrac{d\\theta}{dx}$ instead."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024 (65/3/1)",
+          "question": "If $x\\cos(p + y) + \\cos p\\sin(p + y) = 0$, prove that $\\cos p\\,\\dfrac{dy}{dx} = -\\cos^{2}(p + y)$, where $p$ is a constant.",
+          "solution": {
+            "answer": "$\\cos p\\,\\dfrac{dy}{dx} = -\\cos^{2}(p + y)$ (proved)",
+            "concept": "Differentiate implicitly, then remove $x$ using the given equation.",
+            "steps": [
+              {
+                "do": "Differentiate both sides w.r.t. $x$ (product rule on the first term).",
+                "math": "\\cos(p+y) - x\\sin(p+y)\\dfrac{dy}{dx} + \\cos p\\cos(p+y)\\dfrac{dy}{dx} = 0",
+                "marks": 1
+              },
+              {
+                "do": "Collect the $\\dfrac{dy}{dx}$ terms.",
+                "math": "\\dfrac{dy}{dx}\\left[\\cos p\\cos(p+y) - x\\sin(p+y)\\right] = -\\cos(p+y)",
+                "marks": 0.5
+              },
+              {
+                "do": "From the given equation, find $x$.",
+                "math": "x = -\\dfrac{\\cos p\\sin(p+y)}{\\cos(p+y)}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put this $x$ in the bracket and simplify.",
+                "math": "\\cos p\\cos(p+y) + \\dfrac{\\cos p\\sin^{2}(p+y)}{\\cos(p+y)} = \\dfrac{\\cos p}{\\cos(p+y)}",
+                "why": "$\\cos^2 + \\sin^2 = 1$ in the numerator",
+                "marks": 0.5
+              },
+              {
+                "do": "So $\\dfrac{dy}{dx}\\cdot\\dfrac{\\cos p}{\\cos(p+y)} = -\\cos(p+y)$. Cross-multiply. Hence proved.",
+                "math": "\\cos p\\,\\dfrac{dy}{dx} = -\\cos^{2}(p + y)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Treating $\\cos p$ as a variable; $p$ is a constant, so $\\cos p$ has derivative $0$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2026-27",
+          "question": "If $y = \\sin(x + y)$ and $\\dfrac{dy}{dx} = 0$, then prove that $y = \\pm 1$.",
+          "solution": {
+            "answer": "$y = \\pm 1$ (proved)",
+            "concept": "Implicit differentiation: differentiate each side w.r.t. $x$, treating $y$ as a function of $x$.",
+            "steps": [
+              {
+                "do": "Differentiate both sides w.r.t. $x$ (chain rule).",
+                "math": "\\dfrac{dy}{dx} = \\cos(x + y)\\left(1 + \\dfrac{dy}{dx}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Solve for $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{\\cos(x + y)}{1 - \\cos(x + y)}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\dfrac{dy}{dx} = 0$: then $\\cos(x + y) = 0$, so $\\sin(x + y) = \\pm 1$.",
+                "math": "y = \\sin(x + y) = \\pm 1",
+                "why": "$\\sin^2 + \\cos^2 = 1$",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dx}\\sin(x+y) = \\cos(x+y)$ and missing the factor $\\left(1 + \\dfrac{dy}{dx}\\right)$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024 (65/3/1)",
+          "question": "Find the value of $a$ and $b$ so that the function $f$ defined as $f(x) = \\begin{cases} \\dfrac{x - 2}{|x - 2|} + a, & \\text{if } x < 2 \\\\ a + b, & \\text{if } x = 2 \\\\ \\dfrac{x - 2}{|x - 2|} + b, & \\text{if } x > 2 \\end{cases}$ is a continuous function.",
+          "solution": {
+            "answer": "$a = 1$, $b = -1$",
+            "concept": "For $x < 2$, $|x - 2| = -(x - 2)$; for $x > 2$, $|x - 2| = x - 2$. Then LHL $=$ RHL $= f(2)$.",
+            "steps": [
+              {
+                "do": "Find the LHL at $x = 2$.",
+                "math": "\\lim_{x \\to 2^-}\\left(\\dfrac{x - 2}{-(x - 2)} + a\\right) = -1 + a",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the RHL at $x = 2$.",
+                "math": "\\lim_{x \\to 2^+}\\left(\\dfrac{x - 2}{x - 2} + b\\right) = 1 + b",
+                "marks": 0.5
+              },
+              {
+                "do": "LHL $= f(2)$.",
+                "math": "a - 1 = a + b \\;\\Rightarrow\\; b = -1",
+                "marks": 1
+              },
+              {
+                "do": "RHL $= f(2)$.",
+                "math": "1 + b = a + b \\;\\Rightarrow\\; a = 1",
+                "marks": 1
+              }
+            ],
+            "mistake": "Taking $\\dfrac{x-2}{|x-2|} = 1$ on both sides; it is $-1$ for $x < 2$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "If $y = \\left(x + \\sqrt{1 + x^{2}}\\right)^{n}$, show that $(1 + x^{2})\\dfrac{d^{2}y}{dx^{2}} + x\\dfrac{dy}{dx} - n^{2}y = 0$.",
+          "solution": {
+            "answer": "$(1 + x^{2})\\dfrac{d^{2}y}{dx^{2}} + x\\dfrac{dy}{dx} - n^{2}y = 0$ (proved)",
+            "concept": "Write $y_1$ in terms of $y$, clear the root, then differentiate again.",
+            "steps": [
+              {
+                "do": "Differentiate w.r.t. $x$ (chain rule).",
+                "math": "y_1 = n\\left(x + \\sqrt{1+x^{2}}\\right)^{n-1}\\left(1 + \\dfrac{x}{\\sqrt{1+x^{2}}}\\right)"
+              },
+              {
+                "do": "The bracket equals $\\dfrac{\\sqrt{1+x^2} + x}{\\sqrt{1+x^2}}$, so:",
+                "math": "y_1 = \\dfrac{n\\left(x + \\sqrt{1+x^{2}}\\right)^{n}}{\\sqrt{1+x^{2}}} = \\dfrac{ny}{\\sqrt{1+x^{2}}}",
+                "marks": 1
+              },
+              {
+                "do": "Cross-multiply.",
+                "math": "\\sqrt{1+x^{2}}\\;y_1 = ny",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (product rule).",
+                "math": "\\sqrt{1+x^{2}}\\;y_2 + \\dfrac{x}{\\sqrt{1+x^{2}}}\\,y_1 = ny_1",
+                "marks": 1
+              },
+              {
+                "do": "Multiply by $\\sqrt{1+x^{2}}$ and use $\\sqrt{1+x^{2}}\\,y_1 = ny$.",
+                "math": "(1+x^{2})y_2 + xy_1 = n\\sqrt{1+x^{2}}\\,y_1 = n^{2}y"
+              },
+              {
+                "do": "Rearrange. Hence proved.",
+                "math": "(1 + x^{2})\\dfrac{d^{2}y}{dx^{2}} + x\\dfrac{dy}{dx} - n^{2}y = 0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not spotting $1 + \\dfrac{x}{\\sqrt{1+x^2}} = \\dfrac{x + \\sqrt{1+x^2}}{\\sqrt{1+x^2}}$, which turns $y_1$ into $\\dfrac{ny}{\\sqrt{1+x^2}}$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "If $(a + bx)e^{y/x} = x$, prove that $x^{3}\\dfrac{d^{2}y}{dx^{2}} = \\left(x\\dfrac{dy}{dx} - y\\right)^{2}$.",
+          "solution": {
+            "answer": "$x^{3}\\dfrac{d^{2}y}{dx^{2}} = \\left(x\\dfrac{dy}{dx} - y\\right)^{2}$ (proved)",
+            "concept": "Take $\\log$ to free $y$; find $x\\dfrac{dy}{dx} - y$ first, then differentiate it.",
+            "steps": [
+              {
+                "do": "Take log on both sides.",
+                "math": "\\log(a + bx) + \\dfrac{y}{x} = \\log x",
+                "marks": 0.5
+              },
+              {
+                "do": "Make $y$ the subject.",
+                "math": "y = x\\log x - x\\log(a + bx)",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (product rule on each term).",
+                "math": "\\dfrac{dy}{dx} = \\log x + 1 - \\log(a + bx) - \\dfrac{bx}{a + bx}",
+                "marks": 1
+              },
+              {
+                "do": "Multiply by $x$ and subtract $y$; the log terms cancel.",
+                "math": "x\\dfrac{dy}{dx} - y = x - \\dfrac{bx^{2}}{a + bx} = \\dfrac{ax}{a + bx} \\quad \\cdots (1)",
+                "marks": 1
+              },
+              {
+                "do": "Differentiate (1) w.r.t. $x$; the $\\dfrac{dy}{dx}$ terms cancel on the left.",
+                "math": "x\\dfrac{d^{2}y}{dx^{2}} + \\dfrac{dy}{dx} - \\dfrac{dy}{dx} = \\dfrac{a(a + bx) - ax\\cdot b}{(a + bx)^{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "x\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{a^{2}}{(a + bx)^{2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $x^{2}$ and use (1). Hence proved.",
+                "math": "x^{3}\\dfrac{d^{2}y}{dx^{2}} = \\left(\\dfrac{ax}{a + bx}\\right)^{2} = \\left(x\\dfrac{dy}{dx} - y\\right)^{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Differentiating $(a+bx)e^{y/x} = x$ directly; the quotient $\\dfrac{y}{x}$ makes it messy. Take log first."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024 (65/2/2)",
+          "question": "If $x^{30}y^{20} = (x + y)^{50}$, prove that $\\dfrac{dy}{dx} = \\dfrac{y}{x}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\dfrac{y}{x}$ (proved)",
+            "concept": "Take $\\log$ on both sides: powers come down as multipliers.",
+            "steps": [
+              {
+                "do": "Take log on both sides.",
+                "math": "30\\log x + 20\\log y = 50\\log(x + y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate both sides w.r.t. $x$.",
+                "math": "\\dfrac{30}{x} + \\dfrac{20}{y}\\dfrac{dy}{dx} = \\dfrac{50}{x + y}\\left(1 + \\dfrac{dy}{dx}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Collect the $\\dfrac{dy}{dx}$ terms.",
+                "math": "\\left(\\dfrac{20}{y} - \\dfrac{50}{x + y}\\right)\\dfrac{dy}{dx} = \\dfrac{50}{x + y} - \\dfrac{30}{x}"
+              },
+              {
+                "do": "Simplify both sides.",
+                "math": "\\dfrac{20x - 30y}{y(x + y)}\\cdot\\dfrac{dy}{dx} = \\dfrac{20x - 30y}{x(x + y)}",
+                "marks": 1
+              },
+              {
+                "do": "Cancel $\\dfrac{20x - 30y}{x + y}$ from both sides. Hence proved.",
+                "why": "Valid when $20x - 30y \\ne 0$",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{y}{x}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting the chain-rule factor $\\left(1 + \\dfrac{dy}{dx}\\right)$ when differentiating $\\log(x + y)$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2024-25",
+          "question": "If $f : \\mathbb{R} \\to \\mathbb{R}$ is defined by $f(x) = |x|^{3}$, show that $f''(x)$ exists for all real $x$ and find it.",
+          "solution": {
+            "answer": "$f''(x) = \\begin{cases} -6x, & x < 0 \\\\ 6x, & x \\ge 0 \\end{cases}$, i.e. $f''(x) = 6|x|$ for all real $x$.",
+            "concept": "Remove the modulus; at the joining point $x = 0$ use LHD and RHD, once for $f'$ and once for $f''$.",
+            "figure": "figs/pa-q18.svg",
+            "steps": [
+              {
+                "do": "Remove the modulus.",
+                "math": "f(x) = \\begin{cases} -x^{3}, & x < 0 \\\\ x^{3}, & x \\ge 0 \\end{cases}",
+                "marks": 1
+              },
+              {
+                "do": "For $x \\ne 0$, differentiate each piece.",
+                "math": "f'(x) = -3x^{2} \\;\\; (x < 0), \\qquad f'(x) = 3x^{2} \\;\\; (x > 0)",
+                "marks": 0.5
+              },
+              {
+                "do": "At $x = 0$: find LHD and RHD of $f$.",
+                "math": "\\text{LHD} = \\lim_{h \\to 0}\\dfrac{f(-h) - f(0)}{-h} = \\lim_{h \\to 0}\\dfrac{h^{3}}{-h} = 0, \\qquad \\text{RHD} = \\lim_{h \\to 0}\\dfrac{h^{3}}{h} = 0",
+                "why": "$f(-h) = |-h|^3 = h^3$",
+                "marks": 0.5
+              },
+              {
+                "do": "LHD $=$ RHD, so $f'(0) = 0$.",
+                "math": "f'(x) = \\begin{cases} -3x^{2}, & x < 0 \\\\ 3x^{2}, & x \\ge 0 \\end{cases}",
+                "marks": 1
+              },
+              {
+                "do": "For $x \\ne 0$, differentiate $f'$ again.",
+                "math": "f''(x) = -6x \\;\\; (x < 0), \\qquad f''(x) = 6x \\;\\; (x > 0)",
+                "marks": 0.5
+              },
+              {
+                "do": "At $x = 0$: find LHD and RHD of $f'$.",
+                "math": "\\text{LHD} = \\lim_{h \\to 0}\\dfrac{f'(-h) - f'(0)}{-h} = \\lim_{h \\to 0}\\dfrac{-3h^{2}}{-h} = 0, \\qquad \\text{RHD} = \\lim_{h \\to 0}\\dfrac{3h^{2}}{h} = 0"
+              },
+              {
+                "do": "LHD $=$ RHD, so $f''(0) = 0$ exists.",
+                "marks": 1
+              },
+              {
+                "do": "Hence $f''(x)$ exists for all real $x$.",
+                "math": "f''(x) = \\begin{cases} -6x, & x < 0 \\\\ 6x, & x \\ge 0 \\end{cases} = 6|x|",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $f'(x) = 3x^2$ for all $x$; for $x < 0$ it is $-3x^2$, since $f(x) = -x^3$ there."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2026-27",
+          "question": "If $x = \\sin^{3}t$, $y = \\cos^{3}t$, evaluate $\\dfrac{d^{2}y}{dx^{2}}$ at $\\left(\\dfrac{1}{2\\sqrt{2}}, \\dfrac{1}{2\\sqrt{2}}\\right)$.",
+          "solution": {
+            "answer": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{4\\sqrt{2}}{3}$ at $\\left(\\dfrac{1}{2\\sqrt{2}}, \\dfrac{1}{2\\sqrt{2}}\\right)$",
+            "concept": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{d}{dt}\\left(\\dfrac{dy}{dx}\\right)\\cdot\\dfrac{dt}{dx}$.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ w.r.t. $t$ (chain rule).",
+                "math": "\\dfrac{dx}{dt} = 3\\sin^{2}t\\cos t",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $y$ w.r.t. $t$.",
+                "math": "\\dfrac{dy}{dt} = -3\\cos^{2}t\\sin t",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide to get $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{-3\\cos^{2}t\\sin t}{3\\sin^{2}t\\cos t} = -\\cot t",
+                "marks": 1
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (chain rule through $t$).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\operatorname{cosec}^{2}t\\cdot\\dfrac{dt}{dx} = \\operatorname{cosec}^{2}t\\cdot\\dfrac{1}{3\\sin^{2}t\\cos t}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{1}{3\\sin^{4}t\\cos t}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $t$ at the point: $\\sin^{3}t = \\cos^{3}t = \\dfrac{1}{2\\sqrt{2}}$.",
+                "math": "\\sin t = \\cos t = \\dfrac{1}{\\sqrt{2}} \\;\\Rightarrow\\; t = \\dfrac{\\pi}{4}",
+                "why": "$\\dfrac{1}{2\\sqrt2} = \\left(\\dfrac{1}{\\sqrt2}\\right)^3$",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\sin^{4}t = \\dfrac{1}{4}$, $\\cos t = \\dfrac{1}{\\sqrt{2}}$.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{1}{3\\cdot\\frac{1}{4}\\cdot\\frac{1}{\\sqrt{2}}} = \\dfrac{4\\sqrt{2}}{3}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Differentiating $-\\cot t$ to get $\\operatorname{cosec}^2 t$ and stopping; you must still multiply by $\\dfrac{dt}{dx}$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE 2023 (65/4/1)",
+          "question": "**Case Study:** Let $f(x)$ be a real valued function. Then its Left Hand Derivative (L.H.D.) is $Lf'(a) = \\displaystyle\\lim_{h \\to 0}\\dfrac{f(a - h) - f(a)}{-h}$ and its Right Hand Derivative (R.H.D.) is $Rf'(a) = \\displaystyle\\lim_{h \\to 0}\\dfrac{f(a + h) - f(a)}{h}$. Also, a function $f(x)$ is said to be differentiable at $x = a$ if its L.H.D. and R.H.D. at $x = a$ exist and both are equal. For the function $f(x) = \\begin{cases} |x - 3|, & x \\ge 1 \\\\ \\dfrac{x^{2}}{4} - \\dfrac{3x}{2} + \\dfrac{13}{4}, & x < 1 \\end{cases}$ answer the following questions:",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "What is R.H.D. of $f(x)$ at $x = 1$?",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "What is L.H.D. of $f(x)$ at $x = 1$?",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Check if the function $f(x)$ is differentiable at $x = 1$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) R.H.D. $= -1$; (ii) L.H.D. $= -1$; (iii) Yes, $f$ is differentiable at $x = 1$ and $f'(1) = -1$.",
+            "concept": "Near $x = 1$ (on the right), $|x - 3| = 3 - x$; use the $h$-definitions given in the case.",
+            "figure": "figs/pa-q20.svg",
+            "parts": [
+              {
+                "label": "(i)",
+                "answer": "R.H.D. at $x = 1$ is $-1$.",
+                "steps": [
+                  {
+                    "do": "Find $f(1)$ and $f(1 + h)$ from the first piece; $|x - 3| = 3 - x$ near $1$.",
+                    "math": "f(1) = |1 - 3| = 2, \\qquad f(1 + h) = 3 - (1 + h) = 2 - h",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Use the R.H.D. formula.",
+                    "math": "Rf'(1) = \\lim_{h \\to 0}\\dfrac{(2 - h) - 2}{h} = \\lim_{h \\to 0}\\dfrac{-h}{h} = -1",
+                    "marks": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "(ii)",
+                "answer": "L.H.D. at $x = 1$ is $-1$.",
+                "steps": [
+                  {
+                    "do": "Find $f(1 - h)$ from the second piece.",
+                    "math": "f(1 - h) = \\dfrac{(1 - h)^{2}}{4} - \\dfrac{3(1 - h)}{2} + \\dfrac{13}{4} = 2 + h + \\dfrac{h^{2}}{4}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Use the L.H.D. formula with $f(1) = 2$.",
+                    "math": "Lf'(1) = \\lim_{h \\to 0}\\dfrac{h + \\frac{h^{2}}{4}}{-h} = \\lim_{h \\to 0}\\left(-1 - \\dfrac{h}{4}\\right) = -1",
+                    "marks": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "(iii)",
+                "answer": "Yes, $f$ is differentiable at $x = 1$, with $f'(1) = -1$.",
+                "steps": [
+                  {
+                    "do": "From (i) and (ii), both one-sided derivatives exist and are equal.",
+                    "math": "Lf'(1) = Rf'(1) = -1",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Hence $f(x)$ is differentiable at $x = 1$.",
+                    "math": "f'(1) = -1",
+                    "marks": 1
+                  }
+                ]
+              }
+            ],
+            "mistake": "Using $|x - 3| = x - 3$ near $x = 1$; since $x < 3$ there, $|x - 3| = 3 - x$."
+          }
+        }
+      ]
+    }
+  ]
+}

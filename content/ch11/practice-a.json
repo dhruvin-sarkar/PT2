@@ -1,0 +1,878 @@
+{
+  "chapter": 11,
+  "chapterTitle": "Three Dimensional Geometry",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024",
+          "question": "Direction ratios of a vector parallel to the line $\\dfrac{x-1}{2} = -y = \\dfrac{2z+1}{6}$ are:",
+          "options": [
+            "$2, -1, 6$",
+            "$2, 1, 6$",
+            "$2, 1, 3$",
+            "$2, -1, 3$"
+          ],
+          "solution": {
+            "answer": "(D) $2, -1, 3$",
+            "concept": "In $\\dfrac{x-x_1}{a} = \\dfrac{y-y_1}{b} = \\dfrac{z-z_1}{c}$ the coefficients of $x, y, z$ are $1$; DRs are $a, b, c$.",
+            "steps": [
+              {
+                "do": "Write $-y$ as $\\dfrac{y}{-1}$.",
+                "math": "-y = \\dfrac{y-0}{-1}"
+              },
+              {
+                "do": "Divide top and bottom of the last fraction by $2$.",
+                "math": "\\dfrac{2z+1}{6} = \\dfrac{z+\\frac{1}{2}}{3}"
+              },
+              {
+                "do": "Write the line in standard form.",
+                "math": "\\dfrac{x-1}{2} = \\dfrac{y-0}{-1} = \\dfrac{z+\\frac{1}{2}}{3}"
+              },
+              {
+                "do": "Read the denominators as direction ratios.",
+                "math": "\\text{DRs} = 2,\\ -1,\\ 3",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (D)."
+              }
+            ],
+            "mistake": "Reading $6$ from $\\dfrac{2z+1}{6}$ (option A) without first making the coefficient of $z$ equal to $1$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024",
+          "question": "If a line makes an angle of $30^\\circ$ with the positive direction of $x$-axis, $120^\\circ$ with the positive direction of $y$-axis, then the angle which it makes with the positive direction of $z$-axis is:",
+          "options": [
+            "$90^\\circ$",
+            "$120^\\circ$",
+            "$60^\\circ$",
+            "$0^\\circ$"
+          ],
+          "solution": {
+            "answer": "(A) $90^\\circ$",
+            "concept": "If a line makes angles $\\alpha, \\beta, \\gamma$ with the axes, then $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$.",
+            "steps": [
+              {
+                "do": "Use the identity for direction cosines.",
+                "math": "\\cos^2 30^\\circ + \\cos^2 120^\\circ + \\cos^2\\gamma = 1"
+              },
+              {
+                "do": "Put the values of the cosines.",
+                "math": "\\left(\\dfrac{\\sqrt{3}}{2}\\right)^2 + \\left(-\\dfrac{1}{2}\\right)^2 + \\cos^2\\gamma = 1"
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\dfrac{3}{4} + \\dfrac{1}{4} + \\cos^2\\gamma = 1 \\;\\Rightarrow\\; \\cos^2\\gamma = 0"
+              },
+              {
+                "do": "Solve for $\\gamma$.",
+                "math": "\\cos\\gamma = 0 \\;\\Rightarrow\\; \\gamma = 90^\\circ",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (A)."
+              }
+            ],
+            "mistake": "Picking $0^\\circ$ (option D) by confusing $\\cos\\gamma = 0$ with $\\gamma = 0$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024",
+          "question": "The Cartesian equation of a line passing through the point with position vector $\\vec{a} = \\hat{i} - \\hat{j}$ and parallel to the line $\\vec{r} = \\hat{i} + \\hat{k} + \\mu(2\\hat{i} - \\hat{j})$ is:",
+          "options": [
+            "$\\dfrac{x-2}{1} = \\dfrac{y+1}{0} = \\dfrac{z}{1}$",
+            "$\\dfrac{x-1}{2} = \\dfrac{y+1}{-1} = \\dfrac{z}{0}$",
+            "$\\dfrac{x+1}{2} = \\dfrac{y+1}{-1} = \\dfrac{z}{0}$",
+            "$\\dfrac{x-1}{2} = \\dfrac{y}{-1} = \\dfrac{z-1}{0}$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{x-1}{2} = \\dfrac{y+1}{-1} = \\dfrac{z}{0}$",
+            "concept": "Line through $(x_1, y_1, z_1)$ with DRs $a, b, c$: $\\dfrac{x-x_1}{a} = \\dfrac{y-y_1}{b} = \\dfrac{z-z_1}{c}$.",
+            "steps": [
+              {
+                "do": "Read the point from the position vector.",
+                "math": "\\vec{a} = \\hat{i} - \\hat{j} \\;\\Rightarrow\\; (1, -1, 0)"
+              },
+              {
+                "do": "A parallel line has the same direction vector.",
+                "math": "\\vec{b} = 2\\hat{i} - \\hat{j} + 0\\hat{k} \\;\\Rightarrow\\; \\text{DRs } 2, -1, 0"
+              },
+              {
+                "do": "Write the Cartesian form.",
+                "math": "\\dfrac{x-1}{2} = \\dfrac{y+1}{-1} = \\dfrac{z-0}{0}",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (B).",
+                "why": "A zero denominator only means $z$ stays $0$ on the line."
+              }
+            ],
+            "mistake": "Using the point $(1, 0, 1)$ of the given line (option D) instead of the given point $(1, -1, 0)$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2023",
+          "question": "The angle between the lines $2x = 3y = -z$ and $6x = -y = -4z$ is:",
+          "options": [
+            "$0^\\circ$",
+            "$30^\\circ$",
+            "$45^\\circ$",
+            "$90^\\circ$"
+          ],
+          "solution": {
+            "answer": "(D) $90^\\circ$",
+            "concept": "Lines with DRs $a_1, b_1, c_1$ and $a_2, b_2, c_2$ are perpendicular if $a_1a_2 + b_1b_2 + c_1c_2 = 0$.",
+            "steps": [
+              {
+                "do": "Divide $2x = 3y = -z$ by $6$ to get DRs.",
+                "math": "\\dfrac{x}{3} = \\dfrac{y}{2} = \\dfrac{z}{-6} \\;\\Rightarrow\\; 3, 2, -6"
+              },
+              {
+                "do": "Divide $6x = -y = -4z$ by $12$ to get DRs.",
+                "math": "\\dfrac{x}{2} = \\dfrac{y}{-12} = \\dfrac{z}{-3} \\;\\Rightarrow\\; 2, -12, -3"
+              },
+              {
+                "do": "Find $a_1a_2 + b_1b_2 + c_1c_2$.",
+                "math": "3(2) + 2(-12) + (-6)(-3) = 6 - 24 + 18 = 0",
+                "marks": 1
+              },
+              {
+                "do": "So $\\cos\\theta = 0$, the lines are perpendicular. Answer: option (D)."
+              }
+            ],
+            "mistake": "Taking DRs $2, 3, -1$ straight from $2x = 3y = -z$; the DRs are the reciprocals $\\tfrac{1}{2}, \\tfrac{1}{3}, -1$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024",
+          "question": "The lines $\\dfrac{1-x}{2} = \\dfrac{y-1}{3} = \\dfrac{z}{1}$ and $\\dfrac{2x-3}{2p} = \\dfrac{y}{-1} = \\dfrac{z-4}{7}$ are perpendicular to each other for $p$ equal to:",
+          "options": [
+            "$-\\dfrac{1}{2}$",
+            "$\\dfrac{1}{2}$",
+            "$2$",
+            "$3$"
+          ],
+          "solution": {
+            "answer": "(C) $2$",
+            "concept": "Perpendicular lines: $a_1a_2 + b_1b_2 + c_1c_2 = 0$, with both lines first in standard form.",
+            "steps": [
+              {
+                "do": "Make the coefficient of $x$ equal to $+1$ in the first line.",
+                "math": "\\dfrac{x-1}{-2} = \\dfrac{y-1}{3} = \\dfrac{z}{1} \\;\\Rightarrow\\; \\text{DRs } -2, 3, 1"
+              },
+              {
+                "do": "Divide top and bottom by $2$ in the second line.",
+                "math": "\\dfrac{x-\\frac{3}{2}}{p} = \\dfrac{y}{-1} = \\dfrac{z-4}{7} \\;\\Rightarrow\\; \\text{DRs } p, -1, 7"
+              },
+              {
+                "do": "Apply the perpendicular condition.",
+                "math": "-2p - 3 + 7 = 0 \\;\\Rightarrow\\; p = 2",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (C)."
+              }
+            ],
+            "mistake": "Keeping $2p$ as a DR without dividing $\\dfrac{2x-3}{2p}$ by $2$; that gives $p = 1$, which is not an option."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "CBSE 2023",
+          "question": "**Assertion (A):** If a line makes angles $\\alpha, \\beta, \\gamma$ with the positive directions of the coordinate axes, then $\\sin^2\\alpha + \\sin^2\\beta + \\sin^2\\gamma = 2$. **Reason (R):** The sum of squares of the direction cosines of a line is $1$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both true; R is the correct explanation of A.",
+            "concept": "Direction cosines $l = \\cos\\alpha$, $m = \\cos\\beta$, $n = \\cos\\gamma$ satisfy $l^2 + m^2 + n^2 = 1$.",
+            "steps": [
+              {
+                "do": "Check Assertion: write each $\\sin^2$ as $1 - \\cos^2$.",
+                "math": "\\sin^2\\alpha + \\sin^2\\beta + \\sin^2\\gamma = 3 - (\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma)"
+              },
+              {
+                "do": "Use $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$. So A is true.",
+                "math": "= 3 - 1 = 2"
+              },
+              {
+                "do": "Check Reason: $l^2 + m^2 + n^2 = 1$ is a standard result. So R is true."
+              },
+              {
+                "do": "R is exactly the fact used to prove A, so R explains A.",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (A)."
+              }
+            ],
+            "mistake": "Choosing (B): R is not a separate fact here, it is the very step that gives $3 - 1 = 2$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the vector and Cartesian equations of the line passing through the points $(3, 4, -7)$ and $(1, -1, 6)$.",
+          "solution": {
+            "answer": "$\\vec{r} = (3\\hat{i} + 4\\hat{j} - 7\\hat{k}) + \\lambda(-2\\hat{i} - 5\\hat{j} + 13\\hat{k})$; $\\dfrac{x-3}{-2} = \\dfrac{y-4}{-5} = \\dfrac{z+7}{13}$",
+            "concept": "Line through $\\vec{a}$ and $\\vec{b}$: $\\vec{r} = \\vec{a} + \\lambda(\\vec{b} - \\vec{a})$.",
+            "steps": [
+              {
+                "do": "Write the position vectors of the two points.",
+                "math": "\\vec{a} = 3\\hat{i} + 4\\hat{j} - 7\\hat{k}, \\quad \\vec{b} = \\hat{i} - \\hat{j} + 6\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the direction vector $\\vec{b} - \\vec{a}$.",
+                "math": "\\vec{b} - \\vec{a} = -2\\hat{i} - 5\\hat{j} + 13\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the vector equation.",
+                "math": "\\vec{r} = (3\\hat{i} + 4\\hat{j} - 7\\hat{k}) + \\lambda(-2\\hat{i} - 5\\hat{j} + 13\\hat{k})",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the Cartesian equation using point $(3, 4, -7)$ and DRs $-2, -5, 13$.",
+                "math": "\\dfrac{x-3}{-2} = \\dfrac{y-4}{-5} = \\dfrac{z+7}{13}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\vec{r} = \\vec{a} + \\lambda\\vec{b}$, using the second point as the direction instead of $\\vec{b} - \\vec{a}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 16,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Show that the line through the points $(1, -1, 2)$ and $(3, 4, -2)$ is perpendicular to the line through the points $(0, 3, 2)$ and $(3, 5, 6)$.",
+          "solution": {
+            "answer": "$a_1a_2 + b_1b_2 + c_1c_2 = 6 + 10 - 16 = 0$, so the lines are perpendicular.",
+            "concept": "DRs of the line through two points are $x_2 - x_1,\\ y_2 - y_1,\\ z_2 - z_1$.",
+            "steps": [
+              {
+                "do": "DRs of the first line.",
+                "math": "3-1,\\ 4-(-1),\\ -2-2 = 2,\\ 5,\\ -4",
+                "marks": 0.5
+              },
+              {
+                "do": "DRs of the second line.",
+                "math": "3-0,\\ 5-3,\\ 6-2 = 3,\\ 2,\\ 4",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $a_1a_2 + b_1b_2 + c_1c_2$.",
+                "math": "2(3) + 5(2) + (-4)(4) = 6 + 10 - 16 = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the two lines are perpendicular.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using the coordinates of one point as DRs instead of the differences of the two points."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "Find the shortest distance between the lines $l_1$ and $l_2$ whose vector equations are $\\vec{r} = (-\\hat{i} - \\hat{j} - \\hat{k}) + \\lambda(7\\hat{i} - 6\\hat{j} + \\hat{k})$ and $\\vec{r} = (3\\hat{i} + 5\\hat{j} + 7\\hat{k}) + \\mu(\\hat{i} - 2\\hat{j} + \\hat{k})$, where $\\lambda$ and $\\mu$ are parameters.",
+          "solution": {
+            "answer": "$2\\sqrt{29}$ units",
+            "concept": "For skew lines $\\vec{r} = \\vec{a}_1 + \\lambda\\vec{b}_1$, $\\vec{r} = \\vec{a}_2 + \\mu\\vec{b}_2$: $d = \\left|\\dfrac{(\\vec{b}_1 \\times \\vec{b}_2) \\cdot (\\vec{a}_2 - \\vec{a}_1)}{|\\vec{b}_1 \\times \\vec{b}_2|}\\right|$.",
+            "steps": [
+              {
+                "do": "Compare with $\\vec{r} = \\vec{a} + \\lambda\\vec{b}$.",
+                "math": "\\begin{aligned} \\vec{a}_1 &= -\\hat{i} - \\hat{j} - \\hat{k}, & \\vec{b}_1 &= 7\\hat{i} - 6\\hat{j} + \\hat{k} \\\\ \\vec{a}_2 &= 3\\hat{i} + 5\\hat{j} + 7\\hat{k}, & \\vec{b}_2 &= \\hat{i} - 2\\hat{j} + \\hat{k} \\end{aligned}"
+              },
+              {
+                "do": "Find $\\vec{a}_2 - \\vec{a}_1$.",
+                "math": "\\vec{a}_2 - \\vec{a}_1 = 4\\hat{i} + 6\\hat{j} + 8\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\vec{b}_1 \\times \\vec{b}_2$.",
+                "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 7 & -6 & 1 \\\\ 1 & -2 & 1 \\end{vmatrix} = -4\\hat{i} - 6\\hat{j} - 8\\hat{k}",
+                "marks": 1
+              },
+              {
+                "do": "Find its magnitude.",
+                "math": "|\\vec{b}_1 \\times \\vec{b}_2| = \\sqrt{16 + 36 + 64} = \\sqrt{116} = 2\\sqrt{29}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the dot product with $\\vec{a}_2 - \\vec{a}_1$.",
+                "math": "(-4)(4) + (-6)(6) + (-8)(8) = -116",
+                "marks": 0.5
+              },
+              {
+                "do": "Put into the formula.",
+                "math": "d = \\left|\\dfrac{-116}{2\\sqrt{29}}\\right| = \\dfrac{58}{\\sqrt{29}} = 2\\sqrt{29} \\text{ units}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Keeping the minus sign: distance is the modulus, so $-2\\sqrt{29}$ must become $2\\sqrt{29}$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024",
+          "question": "Find the distance between the line $\\dfrac{x}{2} = \\dfrac{2y-6}{4} = \\dfrac{1-z}{-1}$ and another line parallel to it passing through the point $(4, 0, -5)$.",
+          "solution": {
+            "answer": "$\\dfrac{\\sqrt{533}}{3}$ units",
+            "concept": "Parallel lines $\\vec{r} = \\vec{a}_1 + \\lambda\\vec{b}$, $\\vec{r} = \\vec{a}_2 + \\mu\\vec{b}$: $d = \\dfrac{|\\vec{b} \\times (\\vec{a}_2 - \\vec{a}_1)|}{|\\vec{b}|}$.",
+            "steps": [
+              {
+                "do": "Write the given line in standard form.",
+                "math": "\\dfrac{x-0}{2} = \\dfrac{y-3}{2} = \\dfrac{z-1}{1}",
+                "marks": 0.5
+              },
+              {
+                "do": "Read the point, direction and the second point.",
+                "math": "\\vec{a}_1 = 3\\hat{j} + \\hat{k}, \\quad \\vec{b} = 2\\hat{i} + 2\\hat{j} + \\hat{k}, \\quad \\vec{a}_2 = 4\\hat{i} - 5\\hat{k}"
+              },
+              {
+                "do": "Find $\\vec{a}_2 - \\vec{a}_1$.",
+                "math": "\\vec{a}_2 - \\vec{a}_1 = 4\\hat{i} - 3\\hat{j} - 6\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\vec{b} \\times (\\vec{a}_2 - \\vec{a}_1)$.",
+                "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 2 & 1 \\\\ 4 & -3 & -6 \\end{vmatrix} = -9\\hat{i} + 16\\hat{j} - 14\\hat{k}",
+                "marks": 1
+              },
+              {
+                "do": "Find the two magnitudes.",
+                "math": "\\sqrt{81 + 256 + 196} = \\sqrt{533}, \\qquad |\\vec{b}| = \\sqrt{4 + 4 + 1} = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Put into the formula.",
+                "math": "d = \\dfrac{\\sqrt{533}}{3} \\text{ units}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking DRs $2, 4, -1$ straight from the given form; make the coefficients of $y$ and $z$ equal to $1$ first."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the angle between the lines $\\vec{r} = 3\\hat{i} + \\hat{j} - 2\\hat{k} + \\lambda(\\hat{i} - \\hat{j} - 2\\hat{k})$ and $\\vec{r} = 2\\hat{i} - \\hat{j} - 56\\hat{k} + \\mu(3\\hat{i} - 5\\hat{j} - 4\\hat{k})$.",
+          "solution": {
+            "answer": "$\\theta = \\cos^{-1}\\left(\\dfrac{8\\sqrt{3}}{15}\\right)$",
+            "concept": "Angle between lines: $\\cos\\theta = \\left|\\dfrac{\\vec{b}_1 \\cdot \\vec{b}_2}{|\\vec{b}_1||\\vec{b}_2|}\\right|$.",
+            "steps": [
+              {
+                "do": "Write the direction vectors.",
+                "math": "\\vec{b}_1 = \\hat{i} - \\hat{j} - 2\\hat{k}, \\quad \\vec{b}_2 = 3\\hat{i} - 5\\hat{j} - 4\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the dot product and the magnitudes.",
+                "math": "\\vec{b}_1 \\cdot \\vec{b}_2 = 3 + 5 + 8 = 16, \\quad |\\vec{b}_1| = \\sqrt{6}, \\quad |\\vec{b}_2| = \\sqrt{50} = 5\\sqrt{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put into the formula.",
+                "math": "\\cos\\theta = \\dfrac{16}{\\sqrt{6} \\cdot 5\\sqrt{2}} = \\dfrac{16}{10\\sqrt{3}} = \\dfrac{8\\sqrt{3}}{15}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the angle.",
+                "math": "\\theta = \\cos^{-1}\\left(\\dfrac{8\\sqrt{3}}{15}\\right)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using the position vectors $3\\hat{i} + \\hat{j} - 2\\hat{k}$ and $2\\hat{i} - \\hat{j} - 56\\hat{k}$ instead of the direction vectors."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the value of $k$ so that the lines $x = -y = kz$ and $x - 2 = 2y + 1 = -z + 1$ are perpendicular to each other.",
+          "solution": {
+            "answer": "$k = 2$",
+            "concept": "Perpendicular lines: $a_1a_2 + b_1b_2 + c_1c_2 = 0$.",
+            "steps": [
+              {
+                "do": "Write the first line in standard form.",
+                "math": "\\dfrac{x}{1} = \\dfrac{y}{-1} = \\dfrac{z}{\\frac{1}{k}} \\;\\Rightarrow\\; \\text{DRs } 1, -1, \\dfrac{1}{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the second line in standard form.",
+                "math": "\\dfrac{x-2}{1} = \\dfrac{y+\\frac{1}{2}}{\\frac{1}{2}} = \\dfrac{z-1}{-1} \\;\\Rightarrow\\; \\text{DRs } 1, \\dfrac{1}{2}, -1",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply the perpendicular condition.",
+                "math": "1(1) + (-1)\\left(\\dfrac{1}{2}\\right) + \\dfrac{1}{k}(-1) = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $k$.",
+                "math": "\\dfrac{1}{2} - \\dfrac{1}{k} = 0 \\;\\Rightarrow\\; k = 2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking DRs $1, -1, k$ from $x = -y = kz$; the DR for $z$ is $\\dfrac{1}{k}$, not $k$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2023",
+          "question": "If the equation of a line is $x = ay + b$, $z = cy + d$, then find the direction ratios of the line and a point on the line.",
+          "solution": {
+            "answer": "DRs $a, 1, c$; a point on the line is $(b, 0, d)$.",
+            "concept": "Bring the line to $\\dfrac{x-x_1}{a} = \\dfrac{y-y_1}{b} = \\dfrac{z-z_1}{c}$; then read the DRs and the point.",
+            "steps": [
+              {
+                "do": "Make $y$ the subject of each equation.",
+                "math": "x = ay + b \\;\\Rightarrow\\; y = \\dfrac{x-b}{a}, \\qquad z = cy + d \\;\\Rightarrow\\; y = \\dfrac{z-d}{c}"
+              },
+              {
+                "do": "Equate the three expressions for $y$.",
+                "math": "\\dfrac{x-b}{a} = \\dfrac{y-0}{1} = \\dfrac{z-d}{c}",
+                "marks": 1
+              },
+              {
+                "do": "Read the direction ratios from the denominators.",
+                "math": "\\text{DRs} = a,\\ 1,\\ c",
+                "marks": 0.5
+              },
+              {
+                "do": "Read a point from the numerators.",
+                "math": "(b,\\ 0,\\ d)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the DRs as $a, b, c$; the $y$-term has denominator $1$ and $b$ is part of the point."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2026-27",
+          "question": "A line passing through the points $(2, 6, 5)$ and $(3, p, 7)$ is parallel to the line joining the points $(-4, 3, 4)$ and $(-1, 0, q)$. Find the value of $\\dfrac{q}{p}$.",
+          "solution": {
+            "answer": "$\\dfrac{q}{p} = 2$",
+            "concept": "Parallel lines have proportional direction ratios: $\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} = \\dfrac{c_1}{c_2}$.",
+            "steps": [
+              {
+                "do": "DRs of the first line.",
+                "math": "3-2,\\ p-6,\\ 7-5 = 1,\\ p-6,\\ 2",
+                "marks": 0.5
+              },
+              {
+                "do": "DRs of the second line.",
+                "math": "-1+4,\\ 0-3,\\ q-4 = 3,\\ -3,\\ q-4",
+                "marks": 0.5
+              },
+              {
+                "do": "Parallel lines have proportional DRs.",
+                "math": "\\dfrac{1}{3} = \\dfrac{p-6}{-3} = \\dfrac{2}{q-4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve each pair and find $\\dfrac{q}{p}$.",
+                "math": "p - 6 = -1 \\Rightarrow p = 5, \\quad q - 4 = 6 \\Rightarrow q = 10, \\quad \\dfrac{q}{p} = 2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using the perpendicular condition $a_1a_2 + b_1b_2 + c_1c_2 = 0$ for parallel lines."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 27,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2026-27",
+          "question": "Find the foot of the perpendicular drawn from the point $(2, 1, 4)$ on the line $x - 2 = \\dfrac{2y+3}{4} = 2 - z$. Also find the equation of the line passing through this point and the point $(2, 1, 4)$.",
+          "solution": {
+            "answer": "Foot $P\\left(\\dfrac{5}{2}, -\\dfrac{1}{2}, \\dfrac{3}{2}\\right)$; line $\\dfrac{x-2}{1} = \\dfrac{y-1}{-3} = \\dfrac{z-4}{-5}$",
+            "concept": "The foot $P$ lies on the line and $\\overrightarrow{AP}$ is perpendicular to the line's direction.",
+            "steps": [
+              {
+                "do": "Write the line in standard form.",
+                "math": "\\dfrac{x-2}{1} = \\dfrac{y+\\frac{3}{2}}{2} = \\dfrac{z-2}{-1} \\;\\Rightarrow\\; \\text{DRs } 1, 2, -1",
+                "marks": 0.5
+              },
+              {
+                "do": "Put each fraction equal to $k$ to get a general point.",
+                "math": "P\\left(k+2,\\ 2k - \\dfrac{3}{2},\\ 2-k\\right)",
+                "marks": 1
+              },
+              {
+                "do": "DRs of $AP$, where $A(2, 1, 4)$.",
+                "math": "k,\\ 2k - \\dfrac{5}{2},\\ -k-2",
+                "marks": 0.5
+              },
+              {
+                "do": "$AP$ is perpendicular to the line.",
+                "math": "1(k) + 2\\left(2k - \\dfrac{5}{2}\\right) + (-1)(-k-2) = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $k$.",
+                "math": "k + 4k - 5 + k + 2 = 0 \\;\\Rightarrow\\; 6k = 3 \\;\\Rightarrow\\; k = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $k = \\dfrac{1}{2}$ in $P$ to get the foot.",
+                "math": "P\\left(\\dfrac{5}{2},\\ -\\dfrac{1}{2},\\ \\dfrac{3}{2}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "DRs of $AP$ at $k = \\dfrac{1}{2}$; multiply by $2$.",
+                "math": "\\dfrac{1}{2},\\ -\\dfrac{3}{2},\\ -\\dfrac{5}{2} \\;\\Rightarrow\\; 1,\\ -3,\\ -5",
+                "marks": 0.5
+              },
+              {
+                "do": "Equation of the line through $A(2, 1, 4)$.",
+                "math": "\\dfrac{x-2}{1} = \\dfrac{y-1}{-3} = \\dfrac{z-4}{-5}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking DRs $1, 4, 1$ from $x - 2 = \\dfrac{2y+3}{4} = 2 - z$ without rewriting; the correct DRs are $1, 2, -1$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2024-25",
+          "question": "Find the image of the point $(1, 2, 1)$ with respect to the line $\\dfrac{x-3}{1} = \\dfrac{y+1}{2} = \\dfrac{z-1}{3}$. Also find the equation of the line joining the given point and its image.",
+          "solution": {
+            "answer": "Image $Q\\left(\\dfrac{39}{7}, -\\dfrac{20}{7}, \\dfrac{19}{7}\\right)$; line $PQ$: $\\dfrac{x-1}{16} = \\dfrac{y-2}{-17} = \\dfrac{z-1}{6}$",
+            "concept": "Foot $L$ of the perpendicular from $P$ is the mid-point of $P$ and its image $Q$.",
+            "figure": "figs/pa-q16-image.svg",
+            "steps": [
+              {
+                "do": "Let $P(1, 2, 1)$; put the line equal to $\\lambda$ for a general point $L$.",
+                "math": "L(\\lambda + 3,\\ 2\\lambda - 1,\\ 3\\lambda + 1)",
+                "marks": 1
+              },
+              {
+                "do": "DRs of $PL$.",
+                "math": "\\lambda + 2,\\ 2\\lambda - 3,\\ 3\\lambda",
+                "marks": 0.5
+              },
+              {
+                "do": "$PL$ is perpendicular to the line (DRs $1, 2, 3$).",
+                "math": "1(\\lambda + 2) + 2(2\\lambda - 3) + 3(3\\lambda) = 0"
+              },
+              {
+                "do": "Solve for $\\lambda$.",
+                "math": "14\\lambda - 4 = 0 \\;\\Rightarrow\\; \\lambda = \\dfrac{2}{7}",
+                "marks": 1
+              },
+              {
+                "do": "Foot of the perpendicular.",
+                "math": "L\\left(\\dfrac{23}{7},\\ -\\dfrac{3}{7},\\ \\dfrac{13}{7}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "$L$ is the mid-point of $PQ$, with $Q(x_1, y_1, z_1)$.",
+                "math": "\\dfrac{1+x_1}{2} = \\dfrac{23}{7}, \\quad \\dfrac{2+y_1}{2} = -\\dfrac{3}{7}, \\quad \\dfrac{1+z_1}{2} = \\dfrac{13}{7}"
+              },
+              {
+                "do": "Solve to get the image.",
+                "math": "Q\\left(\\dfrac{39}{7},\\ -\\dfrac{20}{7},\\ \\dfrac{19}{7}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "DRs of $PQ$; multiply by $\\dfrac{7}{2}$.",
+                "math": "\\dfrac{32}{7},\\ -\\dfrac{34}{7},\\ \\dfrac{12}{7} \\;\\Rightarrow\\; 16,\\ -17,\\ 6"
+              },
+              {
+                "do": "Equation of the line through $P(1, 2, 1)$.",
+                "math": "\\dfrac{x-1}{16} = \\dfrac{y-2}{-17} = \\dfrac{z-1}{6}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Stopping at the foot $L$ and calling it the image; the image is $Q = 2L - P$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE 2025",
+          "question": "Find the distance of the point $(-1, -5, -10)$ from the point of intersection of the lines $\\dfrac{x-1}{2} = \\dfrac{y-2}{3} = \\dfrac{z-3}{4}$ and $\\dfrac{x-4}{5} = \\dfrac{y-1}{2} = z$.",
+          "solution": {
+            "answer": "Point of intersection $(-1, -1, -1)$; distance $= \\sqrt{97}$ units",
+            "concept": "Lines meet if their general points agree for some $\\lambda, \\mu$ in all three coordinates.",
+            "steps": [
+              {
+                "do": "General point on the first line.",
+                "math": "(2\\lambda + 1,\\ 3\\lambda + 2,\\ 4\\lambda + 3)",
+                "marks": 0.5
+              },
+              {
+                "do": "General point on the second line.",
+                "math": "(5\\mu + 4,\\ 2\\mu + 1,\\ \\mu)",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate the $x$ and $y$ coordinates.",
+                "math": "2\\lambda - 5\\mu = 3, \\qquad 3\\lambda - 2\\mu = -1",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve the two equations.",
+                "math": "\\lambda = -1, \\quad \\mu = -1",
+                "marks": 1
+              },
+              {
+                "do": "Check the $z$ coordinates.",
+                "math": "4(-1) + 3 = -1 = \\mu \\;\\checkmark",
+                "why": "All three agree, so the lines intersect.",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the point of intersection.",
+                "math": "(2(-1) + 1,\\ 3(-1) + 2,\\ 4(-1) + 3) = (-1, -1, -1)",
+                "marks": 0.5
+              },
+              {
+                "do": "Use the distance formula with $(-1, -5, -10)$.",
+                "math": "\\sqrt{(-1+1)^2 + (-1+5)^2 + (-1+10)^2} = \\sqrt{0 + 16 + 81}",
+                "marks": 1
+              },
+              {
+                "do": "Hence the required distance.",
+                "math": "= \\sqrt{97} \\text{ units}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Skipping the $z$-check; without it you have not shown that the lines actually meet."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2025-26",
+          "question": "The two lines $\\dfrac{x-1}{3} = -y,\\ z + 1 = 0$ and $\\dfrac{-x}{2} = \\dfrac{y+1}{2} = z + 2$ intersect at a point whose $y$-coordinate is $1$. Find the coordinates of their point of intersection. Find the vector equation of a line perpendicular to both the given lines and passing through this point of intersection.",
+          "solution": {
+            "answer": "Point $(-2, 1, -1)$; $\\vec{r} = (-2\\hat{i} + \\hat{j} - \\hat{k}) + \\lambda(\\hat{i} + 3\\hat{j} - 4\\hat{k})$",
+            "concept": "A line perpendicular to both $\\vec{b}_1$ and $\\vec{b}_2$ is parallel to $\\vec{b}_1 \\times \\vec{b}_2$.",
+            "steps": [
+              {
+                "do": "General point on the first line: put $\\dfrac{x-1}{3} = -y = t$, with $z = -1$.",
+                "math": "(3t + 1,\\ -t,\\ -1)",
+                "marks": 1
+              },
+              {
+                "do": "Its $y$-coordinate is $1$.",
+                "math": "-t = 1 \\;\\Rightarrow\\; t = -1 \\;\\Rightarrow\\; (-2,\\ 1,\\ -1)",
+                "marks": 0.5
+              },
+              {
+                "do": "Check this point on the second line.",
+                "math": "\\dfrac{-(-2)}{2} = 1, \\quad \\dfrac{1+1}{2} = 1, \\quad -1 + 2 = 1",
+                "why": "All three are equal, so the point lies on both lines.",
+                "marks": 1
+              },
+              {
+                "do": "Direction vectors of the two lines.",
+                "math": "\\vec{b}_1 = 3\\hat{i} - \\hat{j} + 0\\hat{k}, \\quad \\vec{b}_2 = -2\\hat{i} + 2\\hat{j} + \\hat{k}",
+                "why": "Second line: $\\dfrac{x}{-2} = \\dfrac{y+1}{2} = \\dfrac{z+2}{1}$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\vec{b}_1 \\times \\vec{b}_2$.",
+                "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & -1 & 0 \\\\ -2 & 2 & 1 \\end{vmatrix} = -\\hat{i} - 3\\hat{j} + 4\\hat{k}",
+                "marks": 1
+              },
+              {
+                "do": "Take the direction as $\\hat{i} + 3\\hat{j} - 4\\hat{k}$ and write the equation.",
+                "math": "\\vec{r} = (-2\\hat{i} + \\hat{j} - \\hat{k}) + \\lambda(\\hat{i} + 3\\hat{j} - 4\\hat{k})",
+                "marks": 1
+              }
+            ],
+            "mistake": "Reading the first line's DRs as $3, -1, 1$; $z + 1 = 0$ means $z$ never changes, so its DR is $0$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "Find the vector and the Cartesian equations of the line that passes through $(-1, 2, 7)$ and is perpendicular to the lines $\\vec{r} = 2\\hat{i} + \\hat{j} - 3\\hat{k} + \\lambda(\\hat{i} + 2\\hat{j} + 5\\hat{k})$ and $\\vec{r} = 3\\hat{i} + 3\\hat{j} - 7\\hat{k} + \\mu(3\\hat{i} - 2\\hat{j} + 5\\hat{k})$.",
+          "solution": {
+            "answer": "$\\vec{r} = (-\\hat{i} + 2\\hat{j} + 7\\hat{k}) + \\lambda(10\\hat{i} + 5\\hat{j} - 4\\hat{k})$; $\\dfrac{x+1}{10} = \\dfrac{y-2}{5} = \\dfrac{z-7}{-4}$",
+            "concept": "A line perpendicular to both $\\vec{b}_1$ and $\\vec{b}_2$ is parallel to $\\vec{b}_1 \\times \\vec{b}_2$.",
+            "steps": [
+              {
+                "do": "Write the two direction vectors.",
+                "math": "\\vec{b}_1 = \\hat{i} + 2\\hat{j} + 5\\hat{k}, \\quad \\vec{b}_2 = 3\\hat{i} - 2\\hat{j} + 5\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\vec{b}_1 \\times \\vec{b}_2$.",
+                "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & 2 & 5 \\\\ 3 & -2 & 5 \\end{vmatrix} = 20\\hat{i} + 10\\hat{j} - 8\\hat{k} = 2(10\\hat{i} + 5\\hat{j} - 4\\hat{k})",
+                "marks": 1
+              },
+              {
+                "do": "Vector equation through $(-1, 2, 7)$.",
+                "math": "\\vec{r} = (-\\hat{i} + 2\\hat{j} + 7\\hat{k}) + \\lambda(10\\hat{i} + 5\\hat{j} - 4\\hat{k})",
+                "marks": 1
+              },
+              {
+                "do": "Cartesian equation.",
+                "math": "\\dfrac{x+1}{10} = \\dfrac{y-2}{5} = \\dfrac{z-7}{-4}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Sign slip in the middle term of the determinant: it is $-\\hat{j}(5 - 15) = +10\\hat{j}$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2026-27",
+          "question": "**Case Study:** Two security sensors in a multi-storey mall emit laser beams for movement detection. Three of these beams travel along the following lines: $l_1: \\vec{r} = (\\lambda + 1)\\hat{i} + (3\\lambda + 2)\\hat{j} + (3 - \\lambda)\\hat{k}$, $l_2: \\vec{r} = 2(\\mu + 1)\\hat{i} + (3\\mu - 1)\\hat{j} + (\\mu + 1)\\hat{k}$ and $l_3: \\vec{r} = (\\gamma + 3)\\hat{i} + (3\\gamma - 1)\\hat{j} + (1 - \\gamma)\\hat{k}$. Based on the given information, answer the following questions.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Show that the lines $l_1$ and $l_2$ are not parallel to each other.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Show that the lines $l_1$ and $l_3$ are parallel to each other.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Find the shortest distance between the lines $l_1$ and $l_2$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) DRs not proportional; (ii) same direction $\\hat{i} + 3\\hat{j} - \\hat{k}$; (iii) $\\dfrac{7\\sqrt{6}}{6}$ units",
+            "concept": "Separate the constant and parameter parts: $\\vec{r} = \\vec{a} + \\lambda\\vec{b}$; parallel lines have proportional $\\vec{b}$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Write $l_1$ and $l_2$ in the form $\\vec{a} + \\lambda\\vec{b}$.",
+                    "math": "\\begin{aligned} l_1 &: (\\hat{i} + 2\\hat{j} + 3\\hat{k}) + \\lambda(\\hat{i} + 3\\hat{j} - \\hat{k}) \\\\ l_2 &: (2\\hat{i} - \\hat{j} + \\hat{k}) + \\mu(2\\hat{i} + 3\\hat{j} + \\hat{k}) \\end{aligned}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Compare the ratios of the direction ratios.",
+                    "math": "\\dfrac{1}{2} \\ne \\dfrac{3}{3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "DRs are not proportional, so $l_1$ and $l_2$ are not parallel."
+                  }
+                ],
+                "answer": "$\\dfrac{1}{2} \\ne \\dfrac{3}{3}$, so $l_1$ and $l_2$ are not parallel."
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Write $l_3$ in the form $\\vec{a} + \\gamma\\vec{b}$.",
+                    "math": "l_3: (3\\hat{i} - \\hat{j} + \\hat{k}) + \\gamma(\\hat{i} + 3\\hat{j} - \\hat{k})",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Both $l_1$ and $l_3$ have direction $\\hat{i} + 3\\hat{j} - \\hat{k}$, so they are parallel.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Same direction vector $\\hat{i} + 3\\hat{j} - \\hat{k}$, so $l_1 \\parallel l_3$."
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Find $\\vec{a}_2 - \\vec{a}_1$.",
+                    "math": "(2\\hat{i} - \\hat{j} + \\hat{k}) - (\\hat{i} + 2\\hat{j} + 3\\hat{k}) = \\hat{i} - 3\\hat{j} - 2\\hat{k}"
+                  },
+                  {
+                    "do": "Find $\\vec{b}_1 \\times \\vec{b}_2$ and its magnitude.",
+                    "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & 3 & -1 \\\\ 2 & 3 & 1 \\end{vmatrix} = 6\\hat{i} - 3\\hat{j} - 3\\hat{k}, \\quad |\\vec{b}_1 \\times \\vec{b}_2| = 3\\sqrt{6}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Find the dot product.",
+                    "math": "(6\\hat{i} - 3\\hat{j} - 3\\hat{k}) \\cdot (\\hat{i} - 3\\hat{j} - 2\\hat{k}) = 6 + 9 + 6 = 21",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Put into the shortest distance formula.",
+                    "math": "d = \\left|\\dfrac{21}{3\\sqrt{6}}\\right| = \\dfrac{7}{\\sqrt{6}} = \\dfrac{7\\sqrt{6}}{6} \\text{ units}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\dfrac{7\\sqrt{6}}{6}$ units"
+              }
+            ],
+            "mistake": "Reading $l_2$'s direction as $\\hat{i} + 3\\hat{j} + \\hat{k}$: in $2(\\mu + 1)\\hat{i}$ the $\\mu$-coefficient is $2$."
+          }
+        }
+      ]
+    }
+  ]
+}

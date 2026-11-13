@@ -326,7 +326,7 @@
             "concept": "Mean $E(X) = \\sum x_i\\,p_i$.",
             "steps": [
               {
-                "do": "Let $X$ = number of sixes. $X$ takes values $0, 1, 2$.",
+                "do": "Let $X$ = number of sixes, so $X$ takes values $0, 1, 2$.",
                 "math": "P(\\text{six}) = \\dfrac{1}{6},\\quad P(\\text{not six}) = \\dfrac{5}{6}",
                 "marks": 0.5
               },
@@ -484,12 +484,12 @@
             "concept": "$P(E|F) = \\dfrac{P(E \\cap F)}{P(F)}$.",
             "steps": [
               {
-                "do": "Let $F$: sum is 6. Write its outcomes.",
+                "do": "Let $F$: sum is 6; list its outcomes.",
                 "math": "F = \\{(1,5), (2,4), (3,3), (4,2), (5,1)\\}",
                 "marks": 0.5
               },
               {
-                "do": "Let $E$: 4 appears at least once. Find $E \\cap F$.",
+                "do": "Let $E$: 4 appears at least once; find $E \\cap F$.",
                 "math": "E \\cap F = \\{(2,4), (4,2)\\}",
                 "marks": 0.5
               },
@@ -609,7 +609,7 @@
             "concept": "Bayes' theorem: $P(E_i|E) = \\dfrac{P(E_i)P(E|E_i)}{\\sum P(E_j)P(E|E_j)}$.",
             "steps": [
               {
-                "do": "Let $E_1, E_2, E_3$: form processed by Jayant, Sonia, Oliver. Let $E$: form has an error.",
+                "do": "Let $E_1, E_2, E_3$: form processed by Jayant, Sonia, Oliver; $E$: form has an error.",
                 "marks": 0.5
               },
               {
@@ -793,7 +793,7 @@
             "steps": [
               {
                 "do": "Let $E_1$: yoga course, $E_2$: drug, $A$: patient has a heart attack.",
-                "marks": 1
+                "marks": 0.5
               },
               {
                 "do": "Both options are equally likely.",
@@ -818,7 +818,7 @@
               {
                 "do": "Simplify.",
                 "math": "P(E_1|A) = \\dfrac{0.28}{0.58} = \\dfrac{28}{58} = \\dfrac{14}{29}",
-                "marks": 0.5
+                "marks": 1
               },
               {
                 "do": "Required probability $= \\dfrac{14}{29}$."
@@ -853,7 +853,7 @@
                 "label": "(i)",
                 "steps": [
                   {
-                    "do": "Let $E_1, E_2, E_3$: student in group 1, 2, 3. Let $A$: student has the issues."
+                    "do": "Let $E_1, E_2, E_3$: student in group 1, 2, 3; $A$: student has the issues."
                   },
                   {
                     "do": "Write the prior probabilities.",
@@ -882,7 +882,7 @@
                 "label": "(ii)",
                 "steps": [
                   {
-                    "do": "Required: $P(E_1|A)$. Write Bayes' theorem.",
+                    "do": "Required $P(E_1|A)$; write Bayes' theorem.",
                     "math": "P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(A)}",
                     "marks": 0.5
                   },

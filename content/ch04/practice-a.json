@@ -1,0 +1,930 @@
+{
+  "chapter": 4,
+  "chapterTitle": "Determinants",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 54,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "If $\\begin{vmatrix} x+1 & x-1 \\\\ x-3 & x+2 \\end{vmatrix} = \\begin{vmatrix} 4 & -1 \\\\ 1 & 3 \\end{vmatrix}$, then $x$ is equal to:",
+          "options": [
+            "$\\dfrac{12}{7}$",
+            "$2$",
+            "$-2$",
+            "$\\dfrac{8}{7}$"
+          ],
+          "solution": {
+            "answer": "(B) $2$",
+            "concept": "$\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc$",
+            "steps": [
+              {
+                "do": "Expand the LHS.",
+                "math": "(x+1)(x+2) - (x-1)(x-3) = (x^2+3x+2) - (x^2-4x+3) = 7x - 1"
+              },
+              {
+                "do": "Expand the RHS.",
+                "math": "4(3) - (-1)(1) = 12 + 1 = 13"
+              },
+              {
+                "do": "Equate and solve.",
+                "math": "7x - 1 = 13 \\;\\Rightarrow\\; x = 2",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Writing the RHS as $12 - 1 = 11$; here $bc = (-1)(1) = -1$, so $ad - bc = 12 + 1$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2023",
+          "question": "Let $A$ be a $3 \\times 3$ matrix such that $|\\text{adj}\\,A| = 64$. Then $|A|$ is equal to:",
+          "options": [
+            "$8$ only",
+            "$-8$ only",
+            "$64$",
+            "$8$ or $-8$"
+          ],
+          "solution": {
+            "answer": "(D) $8$ or $-8$",
+            "concept": "For a square matrix of order $n$: $|\\text{adj}\\,A| = |A|^{n-1}$.",
+            "steps": [
+              {
+                "do": "Use the result with $n = 3$.",
+                "math": "|\\text{adj}\\,A| = |A|^{3-1} = |A|^2"
+              },
+              {
+                "do": "Put $|\\text{adj}\\,A| = 64$ and solve.",
+                "math": "|A|^2 = 64 \\;\\Rightarrow\\; |A| = \\pm 8",
+                "marks": 1
+              },
+              {
+                "do": "Both values are possible. Option (D)."
+              }
+            ],
+            "mistake": "Taking only the positive square root; $|A|$ can be negative."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2023",
+          "question": "If $|A| = 2$, where $A$ is a $2 \\times 2$ matrix, then $|4A^{-1}|$ equals:",
+          "options": [
+            "$4$",
+            "$2$",
+            "$8$",
+            "$\\dfrac{1}{32}$"
+          ],
+          "solution": {
+            "answer": "(C) $8$",
+            "concept": "$|kB| = k^n|B|$ for order $n$, and $|A^{-1}| = \\dfrac{1}{|A|}$.",
+            "steps": [
+              {
+                "do": "Find $|A^{-1}|$.",
+                "math": "|A^{-1}| = \\dfrac{1}{|A|} = \\dfrac{1}{2}"
+              },
+              {
+                "do": "Use $|kB| = k^n|B|$ with $k = 4$, $n = 2$.",
+                "math": "|4A^{-1}| = 4^2 \\cdot \\dfrac{1}{2} = 16 \\cdot \\dfrac{1}{2} = 8",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (C)."
+              }
+            ],
+            "mistake": "Writing $|4A^{-1}| = 4 \\cdot \\tfrac{1}{2} = 2$; the factor 4 comes out as $4^2$ for a $2 \\times 2$ matrix."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "If the points $(x_1, y_1)$, $(x_2, y_2)$ and $(x_1 + x_2,\\ y_1 + y_2)$ are collinear, then $x_1y_2$ is equal to:",
+          "options": [
+            "$x_2y_1$",
+            "$x_1y_1$",
+            "$x_2y_2$",
+            "$x_1x_2$"
+          ],
+          "solution": {
+            "answer": "(A) $x_2y_1$",
+            "concept": "Three points are collinear when the area of the triangle they form is $0$.",
+            "steps": [
+              {
+                "do": "Collinear, so the area determinant is zero.",
+                "math": "\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_1+x_2 & y_1+y_2 & 1 \\end{vmatrix} = 0"
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "x_1(y_2 - y_1 - y_2) - y_1(x_2 - x_1 - x_2) + (x_2y_1 + x_2y_2 - x_1y_2 - x_2y_2) = 0"
+              },
+              {
+                "do": "Simplify.",
+                "math": "-x_1y_1 + x_1y_1 + x_2y_1 - x_1y_2 = 0 \\;\\Rightarrow\\; x_1y_2 = x_2y_1",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (A)."
+              }
+            ]
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "If $A_{ij}$ is the cofactor of the element $a_{ij}$ of the determinant $\\begin{vmatrix} 5 & 3 & 8 \\\\ 2 & 0 & 1 \\\\ 1 & 2 & 3 \\end{vmatrix}$, then the value of $a_{32} \\cdot A_{32}$ is:",
+          "options": [
+            "$22$",
+            "$-22$",
+            "$11$",
+            "$-11$"
+          ],
+          "solution": {
+            "answer": "(A) $22$",
+            "concept": "$A_{ij} = (-1)^{i+j} M_{ij}$, where $M_{ij}$ is the minor of $a_{ij}$.",
+            "steps": [
+              {
+                "do": "Read the element in row 3, column 2.",
+                "math": "a_{32} = 2"
+              },
+              {
+                "do": "Minor: delete row 3 and column 2.",
+                "math": "M_{32} = \\begin{vmatrix} 5 & 8 \\\\ 2 & 1 \\end{vmatrix} = 5 - 16 = -11"
+              },
+              {
+                "do": "Cofactor: attach the sign $(-1)^{3+2}$.",
+                "math": "A_{32} = (-1)^{5}(-11) = 11"
+              },
+              {
+                "do": "Multiply.",
+                "math": "a_{32} \\cdot A_{32} = 2 \\times 11 = 22",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (A)."
+              }
+            ],
+            "mistake": "Using the minor $-11$ in place of the cofactor and getting $-22$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** If $A$ is a square matrix of order 3 and $|A| = 3$, then $|\\text{adj}\\,A| = 27$. **Reason (R):** For a square matrix $A$ of order $n$, $|\\text{adj}\\,A| = |A|^{n-1}$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(D) Assertion (A) is false, but Reason (R) is true.",
+            "concept": "$|\\text{adj}\\,A| = |A|^{n-1}$ for a square matrix of order $n$.",
+            "steps": [
+              {
+                "do": "Check A using the result with $n = 3$.",
+                "math": "|\\text{adj}\\,A| = |A|^{3-1} = 3^2 = 9 \\ne 27"
+              },
+              {
+                "do": "So **A is false.**"
+              },
+              {
+                "do": "R is the standard result for order $n$. **R is true.**"
+              },
+              {
+                "do": "A false, R true. Hence option (D).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Using the power $n$ instead of $n - 1$, which gives $3^3 = 27$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the values of $k$ if the area of the triangle with vertices $(2, -6)$, $(5, 4)$ and $(k, 4)$ is $35$ sq units.",
+          "solution": {
+            "answer": "$k = 12$ or $k = -2$",
+            "concept": "Area $= \\dfrac{1}{2}\\left|\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}\\right|$",
+            "steps": [
+              {
+                "do": "Write the area using determinants.",
+                "math": "\\Delta = \\dfrac{1}{2}\\begin{vmatrix} 2 & -6 & 1 \\\\ 5 & 4 & 1 \\\\ k & 4 & 1 \\end{vmatrix} = \\pm 35",
+                "why": "Area is positive, so take both signs.",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "\\dfrac{1}{2}\\left[2(4-4) + 6(5-k) + 1(20-4k)\\right] = \\dfrac{1}{2}(50 - 10k) = 25 - 5k",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate to $\\pm 35$.",
+                "math": "25 - 5k = 35 \\quad \\text{or} \\quad 25 - 5k = -35",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve each equation.",
+                "math": "k = -2 \\quad \\text{or} \\quad k = 12",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $k = 12$ or $k = -2$."
+              }
+            ],
+            "mistake": "Taking only $+35$ and missing the second value $k = 12$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 17,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the adjoint and the inverse of the matrix $A = \\begin{bmatrix} 2 & -2 \\\\ 4 & 3 \\end{bmatrix}$.",
+          "solution": {
+            "answer": "$\\text{adj}\\,A = \\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}$, $A^{-1} = \\dfrac{1}{14}\\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}$",
+            "concept": "$A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$, when $|A| \\ne 0$.",
+            "steps": [
+              {
+                "do": "Find $|A|$.",
+                "math": "|A| = 2(3) - (-2)(4) = 6 + 8 = 14 \\ne 0",
+                "why": "So $A^{-1}$ exists.",
+                "marks": 0.5
+              },
+              {
+                "do": "For a $2 \\times 2$ matrix: swap the diagonal, change signs of the other two.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Divide by $|A|$.",
+                "math": "A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A = \\dfrac{1}{14}\\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Changing the signs of the diagonal elements instead of the off-diagonal ones."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "For the matrix $A = \\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix}$, find the numbers $a$ and $b$ such that $A^2 + aA + bI = O$. Hence find $A^{-1}$.",
+          "solution": {
+            "answer": "$a = -4$, $b = 1$; $A^{-1} = \\begin{bmatrix} 1 & -2 \\\\ -1 & 3 \\end{bmatrix}$",
+            "steps": [
+              {
+                "do": "Find $A^2$.",
+                "math": "A^2 = \\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix} = \\begin{bmatrix} 11 & 8 \\\\ 4 & 3 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Substitute in $A^2 + aA + bI = O$.",
+                "math": "\\begin{bmatrix} 11 + 3a + b & 8 + 2a \\\\ 4 + a & 3 + a + b \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate the $(2,1)$ elements, then the $(1,1)$ elements.",
+                "math": "4 + a = 0 \\Rightarrow a = -4; \\qquad 11 - 12 + b = 0 \\Rightarrow b = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "So $A^2 - 4A + I = O$. Also $|A| = 3 - 2 = 1 \\ne 0$, so $A^{-1}$ exists."
+              },
+              {
+                "do": "Multiply both sides by $A^{-1}$.",
+                "math": "A - 4I + A^{-1} = O \\;\\Rightarrow\\; A^{-1} = 4I - A",
+                "marks": 0.5
+              },
+              {
+                "do": "Compute $4I - A$.",
+                "math": "A^{-1} = \\begin{bmatrix} 4 & 0 \\\\ 0 & 4 \\end{bmatrix} - \\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & -2 \\\\ -1 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $A^{-1}I$ as $I$ while multiplying through; it is $A^{-1}$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Using determinants, find the equation of the line joining $A(1, 3)$ and $B(0, 0)$. Hence find $k$ if $D(k, 0)$ is a point such that the area of $\\triangle ABD$ is $3$ sq units.",
+          "solution": {
+            "answer": "$y = 3x$; $k = \\pm 2$",
+            "concept": "$P(x, y)$ lies on line $AB$ when the area of $\\triangle PAB$ is $0$.",
+            "steps": [
+              {
+                "do": "Let $P(x, y)$ be any point on $AB$. Area of $\\triangle PAB = 0$.",
+                "math": "\\begin{vmatrix} x & y & 1 \\\\ 1 & 3 & 1 \\\\ 0 & 0 & 1 \\end{vmatrix} = 0"
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "x(3 - 0) - y(1 - 0) + 1(0 - 0) = 0 \\;\\Rightarrow\\; y = 3x",
+                "marks": 1
+              },
+              {
+                "do": "Area of $\\triangle ABD$ using determinants.",
+                "math": "\\dfrac{1}{2}\\begin{vmatrix} 1 & 3 & 1 \\\\ 0 & 0 & 1 \\\\ k & 0 & 1 \\end{vmatrix} = \\pm 3"
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "\\dfrac{1}{2}\\left[1(0 - 0) - 3(0 - k) + 1(0 - 0)\\right] = \\dfrac{3k}{2} = \\pm 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve.",
+                "math": "k = \\pm 2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting the $\\pm$ sign for the area and giving only $k = 2$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Solve the following system of equations by the matrix method: $2x + 5y = 1$, $3x + 2y = 7$.",
+          "solution": {
+            "answer": "$x = 3$, $y = -1$",
+            "concept": "$AX = B \\Rightarrow X = A^{-1}B$, when $|A| \\ne 0$.",
+            "steps": [
+              {
+                "do": "Write the system as $AX = B$.",
+                "math": "\\begin{bmatrix} 2 & 5 \\\\ 3 & 2 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 7 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $|A|$.",
+                "math": "|A| = 4 - 15 = -11 \\ne 0",
+                "why": "So a unique solution exists.",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\text{adj}\\,A$.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 2 & -5 \\\\ -3 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $A^{-1}$.",
+                "math": "A^{-1} = -\\dfrac{1}{11}\\begin{bmatrix} 2 & -5 \\\\ -3 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "X = -\\dfrac{1}{11}\\begin{bmatrix} 2 - 35 \\\\ -3 + 14 \\end{bmatrix} = -\\dfrac{1}{11}\\begin{bmatrix} -33 \\\\ 11 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 3$, $y = -1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $X = BA^{-1}$; the order must be $A^{-1}B$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Examine the consistency of the system of equations: $2x - 3y = 5$, $6x - 9y = 15$.",
+          "solution": {
+            "answer": "Consistent, with infinitely many solutions.",
+            "concept": "If $|A| = 0$ and $(\\text{adj}\\,A)B = O$, the system may be consistent or inconsistent; check the equations.",
+            "steps": [
+              {
+                "do": "Write as $AX = B$ and find $|A|$.",
+                "math": "A = \\begin{bmatrix} 2 & -3 \\\\ 6 & -9 \\end{bmatrix},\\ B = \\begin{bmatrix} 5 \\\\ 15 \\end{bmatrix},\\ |A| = -18 + 18 = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\text{adj}\\,A$.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -9 & 3 \\\\ -6 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $(\\text{adj}\\,A)B$.",
+                "math": "(\\text{adj}\\,A)B = \\begin{bmatrix} -45 + 45 \\\\ -30 + 30 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix} = O",
+                "marks": 0.5
+              },
+              {
+                "do": "The second equation is 3 times the first, so both are the same line."
+              },
+              {
+                "do": "Hence the system is consistent, with infinitely many solutions.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Calling the system inconsistent just because $|A| = 0$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "If $A = \\begin{bmatrix} 3 & -4 \\\\ 2 & -3 \\end{bmatrix}$, show that $A^{-1} = A$.",
+          "solution": {
+            "answer": "$A^{-1} = \\begin{bmatrix} 3 & -4 \\\\ 2 & -3 \\end{bmatrix} = A$",
+            "steps": [
+              {
+                "do": "Find $|A|$.",
+                "math": "|A| = 3(-3) - (-4)(2) = -9 + 8 = -1 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\text{adj}\\,A$.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -3 & 4 \\\\ -2 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+                "math": "A^{-1} = \\dfrac{1}{-1}\\begin{bmatrix} -3 & 4 \\\\ -2 & 3 \\end{bmatrix} = \\begin{bmatrix} 3 & -4 \\\\ 2 & -3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "This is the matrix $A$. Hence $A^{-1} = A$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Dropping the minus sign of $|A| = -1$ when dividing."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} 3 & 7 \\\\ 2 & 5 \\end{bmatrix}$ and $B = \\begin{bmatrix} 6 & 8 \\\\ 7 & 9 \\end{bmatrix}$, verify that $(AB)^{-1} = B^{-1}A^{-1}$.",
+          "solution": {
+            "answer": "$(AB)^{-1} = B^{-1}A^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 61 & -87 \\\\ -47 & 67 \\end{bmatrix}$. Verified.",
+            "steps": [
+              {
+                "do": "Find $AB$.",
+                "math": "AB = \\begin{bmatrix} 18 + 49 & 24 + 63 \\\\ 12 + 35 & 16 + 45 \\end{bmatrix} = \\begin{bmatrix} 67 & 87 \\\\ 47 & 61 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $|AB|$.",
+                "math": "|AB| = 67 \\times 61 - 87 \\times 47 = 4087 - 4089 = -2"
+              },
+              {
+                "do": "Find $(AB)^{-1}$.",
+                "math": "(AB)^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 61 & -87 \\\\ -47 & 67 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Find $A^{-1}$; here $|A| = 15 - 14 = 1$.",
+                "math": "A^{-1} = \\begin{bmatrix} 5 & -7 \\\\ -2 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $B^{-1}$; here $|B| = 54 - 56 = -2$.",
+                "math": "B^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 9 & -8 \\\\ -7 & 6 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $B^{-1}A^{-1}$.",
+                "math": "B^{-1}A^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 45 + 16 & -63 - 24 \\\\ -35 - 12 & 49 + 18 \\end{bmatrix} = -\\dfrac{1}{2}\\begin{bmatrix} 61 & -87 \\\\ -47 & 67 \\end{bmatrix}"
+              },
+              {
+                "do": "Both sides are equal. Hence $(AB)^{-1} = B^{-1}A^{-1}$ is verified.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Multiplying in the order $A^{-1}B^{-1}$; the reversal law needs $B^{-1}A^{-1}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 29,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2024-25",
+          "question": "The equation of the path traversed by the ball headed by a footballer is $y = ax^2 + bx + c$ (where $0 \\le x \\le 14$ and $a, b, c \\in \\mathbb{R}$, $a \\ne 0$) with respect to an $XY$-coordinate system in the vertical plane. The ball passes through the points $(2, 15)$, $(4, 25)$ and $(14, 15)$. Determine the values of $a$, $b$ and $c$ by solving the system of linear equations in $a$, $b$ and $c$, using the matrix method. Also find the equation of the path traversed by the ball.",
+          "solution": {
+            "answer": "$a = -\\dfrac{1}{2}$, $b = 8$, $c = 1$; path: $y = -\\dfrac{1}{2}x^2 + 8x + 1$",
+            "concept": "$AX = B \\Rightarrow X = A^{-1}B = \\dfrac{1}{|A|}(\\text{adj}\\,A)B$.",
+            "steps": [
+              {
+                "do": "Put each point in $y = ax^2 + bx + c$.",
+                "math": "4a + 2b + c = 15,\\quad 16a + 4b + c = 25,\\quad 196a + 14b + c = 15",
+                "marks": 1
+              },
+              {
+                "do": "Write as $AX = B$.",
+                "math": "\\begin{bmatrix} 4 & 2 & 1 \\\\ 16 & 4 & 1 \\\\ 196 & 14 & 1 \\end{bmatrix}\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix} = \\begin{bmatrix} 15 \\\\ 25 \\\\ 15 \\end{bmatrix}"
+              },
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 4(4 - 14) - 2(16 - 196) + 1(224 - 784) = -40 + 360 - 560 = -240 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = -10,\\quad A_{12} = 180,\\quad A_{13} = -560",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = 12,\\quad A_{22} = -192,\\quad A_{23} = 336",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = -2,\\quad A_{32} = 12,\\quad A_{33} = -16",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -10 & 12 & -2 \\\\ 180 & -192 & 12 \\\\ -560 & 336 & -16 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = -\\dfrac{1}{240}\\begin{bmatrix} -10 & 12 & -2 \\\\ 180 & -192 & 12 \\\\ -560 & 336 & -16 \\end{bmatrix}"
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "X = -\\dfrac{1}{240}\\begin{bmatrix} -150 + 300 - 30 \\\\ 2700 - 4800 + 180 \\\\ -8400 + 8400 - 240 \\end{bmatrix} = -\\dfrac{1}{240}\\begin{bmatrix} 120 \\\\ -1920 \\\\ -240 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "a = -\\dfrac{1}{2},\\quad b = 8,\\quad c = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the path of the ball is $y = -\\dfrac{1}{2}x^2 + 8x + 1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $(x, y)$ as $(a, b)$; the unknowns are $a, b, c$ and each point gives one equation."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2025-26",
+          "question": "For two matrices $A = \\begin{bmatrix} 3 & -6 & -1 \\\\ 2 & -5 & -1 \\\\ -2 & 4 & 1 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & -2 & -1 \\\\ 0 & -1 & -1 \\\\ 2 & 0 & 3 \\end{bmatrix}$, find the product $AB$ and hence solve the system of equations: $3x - 6y - z = 3$, $2x - 5y - z + 2 = 0$, $-2x + 4y + z = 5$.",
+          "solution": {
+            "answer": "$AB = I$; $x = 2$, $y = -3$, $z = 21$",
+            "concept": "If $AB = I$, then $A^{-1} = B$.",
+            "steps": [
+              {
+                "do": "Row 1 of $AB$.",
+                "math": "(3 + 0 - 2,\\ -6 + 6 + 0,\\ -3 + 6 - 3) = (1,\\ 0,\\ 0)",
+                "marks": 0.5
+              },
+              {
+                "do": "Row 2 of $AB$.",
+                "math": "(2 + 0 - 2,\\ -4 + 5 + 0,\\ -2 + 5 - 3) = (0,\\ 1,\\ 0)",
+                "marks": 0.5
+              },
+              {
+                "do": "Row 3 of $AB$.",
+                "math": "(-2 + 0 + 2,\\ 4 - 4 + 0,\\ 2 - 4 + 3) = (0,\\ 0,\\ 1)",
+                "marks": 0.5
+              },
+              {
+                "do": "So $AB$ is the identity matrix.",
+                "math": "AB = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix} = I",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $A^{-1} = B$.",
+                "math": "AB = I \\;\\Rightarrow\\; A^{-1} = B",
+                "marks": 1
+              },
+              {
+                "do": "Write the system as $AX = C$; note $2x - 5y - z = -2$.",
+                "math": "\\begin{bmatrix} 3 & -6 & -1 \\\\ 2 & -5 & -1 \\\\ -2 & 4 & 1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -2 \\\\ 5 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "$X = A^{-1}C = BC$.",
+                "math": "X = \\begin{bmatrix} 1 & -2 & -1 \\\\ 0 & -1 & -1 \\\\ 2 & 0 & 3 \\end{bmatrix}\\begin{bmatrix} 3 \\\\ -2 \\\\ 5 \\end{bmatrix} = \\begin{bmatrix} 3 + 4 - 5 \\\\ 0 + 2 - 5 \\\\ 6 + 0 + 15 \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ -3 \\\\ 21 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $x = 2$, $y = -3$, $z = 21$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $+2$ on the right of the second equation; move it across first: $2x - 5y - z = -2$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE 2023",
+          "question": "Solve the following system of equations by the matrix method: $x + 2y + 3z = 6$, $2x - y + z = 2$, $3x + 2y - 2z = 3$.",
+          "solution": {
+            "answer": "$x = 1$, $y = 1$, $z = 1$",
+            "concept": "$AX = B \\Rightarrow X = A^{-1}B$, where $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+            "steps": [
+              {
+                "do": "Write as $AX = B$.",
+                "math": "\\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & -1 & 1 \\\\ 3 & 2 & -2 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ 2 \\\\ 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 1(2 - 2) - 2(-4 - 3) + 3(4 + 3) = 0 + 14 + 21 = 35 \\ne 0",
+                "marks": 1
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = 0,\\quad A_{12} = 7,\\quad A_{13} = 7",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = 10,\\quad A_{22} = -11,\\quad A_{23} = 4",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 5,\\quad A_{32} = 5,\\quad A_{33} = -5",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 0 & 10 & 5 \\\\ 7 & -11 & 5 \\\\ 7 & 4 & -5 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = \\dfrac{1}{35}\\begin{bmatrix} 0 & 10 & 5 \\\\ 7 & -11 & 5 \\\\ 7 & 4 & -5 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "X = \\dfrac{1}{35}\\begin{bmatrix} 0 + 20 + 15 \\\\ 42 - 22 + 15 \\\\ 42 + 8 - 15 \\end{bmatrix} = \\dfrac{1}{35}\\begin{bmatrix} 35 \\\\ 35 \\\\ 35 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 1$, $y = 1$, $z = 1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to transpose the cofactor matrix when writing $\\text{adj}\\,A$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Gautam buys 5 pens, 3 bags and 1 instrument box and pays ₹160. From the same shop, Vikram buys 2 pens, 1 bag and 3 instrument boxes and pays ₹190. Ankur buys 1 pen, 2 bags and 4 instrument boxes and pays ₹250. Using the matrix method, find the cost of one pen, one bag and one instrument box.",
+          "solution": {
+            "answer": "Pen ₹10, bag ₹20, instrument box ₹50",
+            "concept": "$AX = B \\Rightarrow X = A^{-1}B$, where $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+            "steps": [
+              {
+                "do": "Let one pen, bag, box cost ₹$x$, ₹$y$, ₹$z$.",
+                "math": "5x + 3y + z = 160,\\quad 2x + y + 3z = 190,\\quad x + 2y + 4z = 250",
+                "marks": 0.5
+              },
+              {
+                "do": "Write as $AX = B$.",
+                "math": "\\begin{bmatrix} 5 & 3 & 1 \\\\ 2 & 1 & 3 \\\\ 1 & 2 & 4 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 160 \\\\ 190 \\\\ 250 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 5(4 - 6) - 3(8 - 3) + 1(4 - 1) = -10 - 15 + 3 = -22 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = -2,\\quad A_{12} = -5,\\quad A_{13} = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = -10,\\quad A_{22} = 19,\\quad A_{23} = -7",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 8,\\quad A_{32} = -13,\\quad A_{33} = -1",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -2 & -10 & 8 \\\\ -5 & 19 & -13 \\\\ 3 & -7 & -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = -\\dfrac{1}{22}\\begin{bmatrix} -2 & -10 & 8 \\\\ -5 & 19 & -13 \\\\ 3 & -7 & -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "X = -\\dfrac{1}{22}\\begin{bmatrix} -320 - 1900 + 2000 \\\\ -800 + 3610 - 3250 \\\\ 480 - 1330 - 250 \\end{bmatrix} = -\\dfrac{1}{22}\\begin{bmatrix} -220 \\\\ -440 \\\\ -1100 \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ 20 \\\\ 50 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence a pen costs ₹10, a bag ₹20 and an instrument box ₹50.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Mixing up rows: each person's purchase is one equation, so it forms one row of $A$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE 2025 Compartment",
+          "question": "If $A = \\begin{bmatrix} 3 & 2 & 1 \\\\ 4 & -1 & 2 \\\\ 7 & 3 & -3 \\end{bmatrix}$, find $A^{-1}$. Using $A^{-1}$, solve the system of equations: $3x + 4y + 7z = 14$, $2x - y + 3z = 4$, $x + 2y - 3z = 0$.",
+          "solution": {
+            "answer": "$A^{-1} = \\dfrac{1}{62}\\begin{bmatrix} -3 & 9 & 5 \\\\ 26 & -16 & -2 \\\\ 19 & 5 & -11 \\end{bmatrix}$; $x = 1$, $y = 1$, $z = 1$",
+            "concept": "The coefficient matrix here is $A'$, and $(A')^{-1} = (A^{-1})'$.",
+            "steps": [
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 3(3 - 6) - 2(-12 - 14) + 1(12 + 7) = -9 + 52 + 19 = 62 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = -3,\\quad A_{12} = 26,\\quad A_{13} = 19",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = 9,\\quad A_{22} = -16,\\quad A_{23} = 5",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 5,\\quad A_{32} = -2,\\quad A_{33} = -11",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -3 & 9 & 5 \\\\ 26 & -16 & -2 \\\\ 19 & 5 & -11 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = \\dfrac{1}{62}\\begin{bmatrix} -3 & 9 & 5 \\\\ 26 & -16 & -2 \\\\ 19 & 5 & -11 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "The columns of $A$ are the rows of the system, so it reads $A'X = B$.",
+                "math": "A'X = B,\\quad B = \\begin{bmatrix} 14 \\\\ 4 \\\\ 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "So $X = (A')^{-1}B = (A^{-1})'B$.",
+                "math": "X = \\dfrac{1}{62}\\begin{bmatrix} -3 & 26 & 19 \\\\ 9 & -16 & 5 \\\\ 5 & -2 & -11 \\end{bmatrix}\\begin{bmatrix} 14 \\\\ 4 \\\\ 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply.",
+                "math": "X = \\dfrac{1}{62}\\begin{bmatrix} -42 + 104 + 0 \\\\ 126 - 64 + 0 \\\\ 70 - 8 + 0 \\end{bmatrix} = \\dfrac{1}{62}\\begin{bmatrix} 62 \\\\ 62 \\\\ 62 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 1$, $y = 1$, $z = 1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $X = A^{-1}B$ directly; the coefficient matrix is $A'$, not $A$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** A city planner marks three metro stations on a map grid at $P(1, 2)$, $Q(4, 3)$ and $R(7, 4)$. A new park is planned at $S(3, 7)$ (1 unit $= 100$ m).",
+          "figure": "figs/pa-q20.svg",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Using determinants, show that the stations $P$, $Q$ and $R$ lie on one straight line.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Using determinants, find the area of the triangular plot with corners $P$, $R$ and $S$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Using determinants, find the equation of the line through $P$ and $R$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) Determinant $= 0$, so collinear; (ii) $13$ sq units; (iii) $x - 3y + 5 = 0$",
+            "concept": "Area $= \\dfrac{1}{2}\\left|\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}\\right|$; area $0$ means collinear.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Find the area determinant for $P, Q, R$.",
+                    "math": "\\begin{vmatrix} 1 & 2 & 1 \\\\ 4 & 3 & 1 \\\\ 7 & 4 & 1 \\end{vmatrix} = 1(3 - 4) - 2(4 - 7) + 1(16 - 21) = -1 + 6 - 5 = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Area is $0$, so $P$, $Q$, $R$ lie on one straight line.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Determinant $= 0$, so $P$, $Q$, $R$ are collinear."
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Write the area of $\\triangle PRS$.",
+                    "math": "\\Delta = \\dfrac{1}{2}\\begin{vmatrix} 1 & 2 & 1 \\\\ 7 & 4 & 1 \\\\ 3 & 7 & 1 \\end{vmatrix} = \\dfrac{1}{2}\\left[1(4 - 7) - 2(7 - 3) + 1(49 - 12)\\right]",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "\\Delta = \\dfrac{1}{2}(-3 - 8 + 37) = \\dfrac{26}{2} = 13 \\text{ sq units}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$13$ sq units"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Let $(x, y)$ be any point on $PR$. The area with $P$ and $R$ is $0$.",
+                    "math": "\\begin{vmatrix} x & y & 1 \\\\ 1 & 2 & 1 \\\\ 7 & 4 & 1 \\end{vmatrix} = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Expand along $R_1$.",
+                    "math": "x(2 - 4) - y(1 - 7) + 1(4 - 14) = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "-2x + 6y - 10 = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Divide by $-2$. Required line: $x - 3y + 5 = 0$.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$x - 3y + 5 = 0$"
+              }
+            ],
+            "mistake": "Leaving the area negative; area is the absolute value of the determinant expression."
+          }
+        }
+      ]
+    }
+  ]
+}

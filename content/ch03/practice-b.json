@@ -1,0 +1,836 @@
+{
+  "chapter": 3,
+  "chapterTitle": "Matrices",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 49,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "If $A$ is a matrix of order $m \\times n$ and $B$ is a matrix such that $AB'$ and $B'A$ are both defined, then the order of $B$ is:",
+          "options": [
+            "$m \\times m$",
+            "$n \\times n$",
+            "$n \\times m$",
+            "$m \\times n$"
+          ],
+          "solution": {
+            "answer": "(D) $m \\times n$",
+            "concept": "$P_{a \\times b}\\,Q_{c \\times d}$ is defined only if $b = c$.",
+            "steps": [
+              {
+                "do": "Let $B$ be of order $u \\times v$, so $B'$ is $v \\times u$."
+              },
+              {
+                "do": "$A_{m \\times n}B'_{v \\times u}$ is defined.",
+                "math": "n = v"
+              },
+              {
+                "do": "$B'_{v \\times u}A_{m \\times n}$ is defined.",
+                "math": "u = m"
+              },
+              {
+                "do": "So $B$ has order $u \\times v = m \\times n$. Option (D).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Finding the order of $B'$ ($n \\times m$) and forgetting to transpose back to $B$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "If $\\begin{bmatrix} x + y & 2 \\\\ 5 & xy \\end{bmatrix} = \\begin{bmatrix} 6 & 2 \\\\ 5 & 8 \\end{bmatrix}$, then the value of $\\left(\\dfrac{24}{x} + \\dfrac{24}{y}\\right)$ is:",
+          "options": [
+            "$3$",
+            "$4$",
+            "$6$",
+            "$18$"
+          ],
+          "solution": {
+            "answer": "(D) $18$",
+            "concept": "Equal matrices have equal corresponding elements.",
+            "steps": [
+              {
+                "do": "Equate corresponding elements.",
+                "math": "x + y = 6, \\qquad xy = 8"
+              },
+              {
+                "do": "Take 24 common and use a common denominator.",
+                "math": "\\dfrac{24}{x} + \\dfrac{24}{y} = \\dfrac{24(x + y)}{xy} = \\dfrac{24 \\times 6}{8} = 18",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (D)."
+              }
+            ],
+            "mistake": "Writing $\\dfrac{24}{x} + \\dfrac{24}{y} = \\dfrac{24}{x + y} = 4$; fractions do not add like that."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Ex 3.3 Q11",
+          "question": "If $A$ and $B$ are symmetric matrices of the same order, then $AB - BA$ is a:",
+          "options": [
+            "skew-symmetric matrix",
+            "symmetric matrix",
+            "zero matrix",
+            "identity matrix"
+          ],
+          "solution": {
+            "answer": "(A) skew-symmetric matrix",
+            "concept": "$(AB)' = B'A'$; symmetric means $A' = A$.",
+            "steps": [
+              {
+                "do": "Take the transpose of $AB - BA$.",
+                "math": "(AB - BA)' = (AB)' - (BA)' = B'A' - A'B'"
+              },
+              {
+                "do": "Use $A' = A$ and $B' = B$.",
+                "math": "(AB - BA)' = BA - AB = -(AB - BA)",
+                "marks": 1
+              },
+              {
+                "do": "So $AB - BA$ is skew-symmetric. Option (A)."
+              }
+            ],
+            "mistake": "Writing $(AB)' = A'B'$ and concluding the matrix is symmetric."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "Let $A = [a_{ij}]$ be a $3 \\times 2$ matrix whose elements are given by $a_{ij} = (i - 3j)^2$. The element in the 2nd row and 3rd column of $A'$ is:",
+          "options": [
+            "$0$",
+            "$9$",
+            "$16$",
+            "$49$"
+          ],
+          "solution": {
+            "answer": "(B) $9$",
+            "concept": "The $(i, j)$ element of $A'$ is the $(j, i)$ element of $A$.",
+            "steps": [
+              {
+                "do": "$A$ is $3 \\times 2$, so $A'$ is $2 \\times 3$ and has a $(2, 3)$ element."
+              },
+              {
+                "do": "Swap the indices.",
+                "math": "(A')_{23} = a_{32}"
+              },
+              {
+                "do": "Put $i = 3$, $j = 2$ in the rule.",
+                "math": "a_{32} = (3 - 6)^2 = 9",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Putting $i = 2$, $j = 3$ in the rule to get $49$; $a_{23}$ does not even exist in $A$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "If $A$ is a square matrix such that $A^2 = I$, then $(A - I)^3 + (A + I)^3 - 7A$ is equal to:",
+          "options": [
+            "$A$",
+            "$I - A$",
+            "$I + A$",
+            "$3A$"
+          ],
+          "solution": {
+            "answer": "(A) $A$",
+            "concept": "$A$ and $I$ commute, so the binomial expansion holds; $A^3 = A \\cdot A^2 = A$.",
+            "steps": [
+              {
+                "do": "Expand both cubes.",
+                "math": "\\begin{aligned} (A - I)^3 &= A^3 - 3A^2 + 3A - I \\\\ (A + I)^3 &= A^3 + 3A^2 + 3A + I \\end{aligned}"
+              },
+              {
+                "do": "Add; the $A^2$ and $I$ terms cancel.",
+                "math": "(A - I)^3 + (A + I)^3 = 2A^3 + 6A"
+              },
+              {
+                "do": "Use $A^3 = A \\cdot A^2 = A \\cdot I = A$.",
+                "math": "2A + 6A - 7A = A",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (A)."
+              }
+            ],
+            "mistake": "Putting $A^3 = I$; with $A^2 = I$ we get $A^3 = A$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** For $A = \\begin{bmatrix} 2 & -4 \\\\ 1 & -2 \\end{bmatrix}$, $A^2 = O$. **Reason (R):** If the product of two matrices is a zero matrix, then at least one of the two matrices must be a zero matrix.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(C) Assertion (A) is true, but Reason (R) is false.",
+            "concept": "Two non-zero matrices can have a zero product.",
+            "steps": [
+              {
+                "do": "Find $A^2$.",
+                "math": "A^2 = \\begin{bmatrix} 4 - 4 & -8 + 8 \\\\ 2 - 2 & -4 + 4 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}"
+              },
+              {
+                "do": "So Assertion (A) is true."
+              },
+              {
+                "do": "Here $A \\cdot A = O$ but $A \\ne O$, so Reason (R) is false."
+              },
+              {
+                "do": "Hence option (C).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Carrying the rule \"$ab = 0 \\Rightarrow a = 0$ or $b = 0$\" from numbers over to matrices."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find the values of $x$ and $y$ if $2\\begin{bmatrix} x & 3 \\\\ y & x \\end{bmatrix} - \\begin{bmatrix} 1 & y \\\\ x & 4 \\end{bmatrix} = \\begin{bmatrix} 5 & 2 \\\\ 5 & 2 \\end{bmatrix}$.",
+          "solution": {
+            "answer": "$x = 3$, $y = 4$",
+            "steps": [
+              {
+                "do": "Multiply by 2 and subtract.",
+                "math": "\\begin{bmatrix} 2x - 1 & 6 - y \\\\ 2y - x & 2x - 4 \\end{bmatrix} = \\begin{bmatrix} 5 & 2 \\\\ 5 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate the $(1,1)$ elements.",
+                "math": "2x - 1 = 5 \\;\\Rightarrow\\; x = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate the $(1,2)$ elements.",
+                "math": "6 - y = 2 \\;\\Rightarrow\\; y = 4",
+                "marks": 0.5
+              },
+              {
+                "do": "Check the other two elements.",
+                "math": "2y - x = 8 - 3 = 5, \\qquad 2x - 4 = 6 - 4 = 2",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 3$ and $y = 4$."
+              }
+            ],
+            "mistake": "Multiplying only the first row by 2 instead of every element."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Construct a $3 \\times 3$ matrix $A = [a_{ij}]$ whose elements are given by $a_{ij} = \\begin{cases} i - j, & \\text{if } i \\ge j \\\\ i + j, & \\text{if } i < j \\end{cases}$",
+          "solution": {
+            "answer": "$A = \\begin{bmatrix} 0 & 3 & 4 \\\\ 1 & 0 & 5 \\\\ 2 & 1 & 0 \\end{bmatrix}$",
+            "concept": "On and below the diagonal $i \\ge j$; above the diagonal $i < j$.",
+            "steps": [
+              {
+                "do": "Row 1: only $a_{11}$ has $i \\ge j$.",
+                "math": "a_{11} = 1 - 1 = 0,\\quad a_{12} = 1 + 2 = 3,\\quad a_{13} = 1 + 3 = 4",
+                "marks": 0.5
+              },
+              {
+                "do": "Row 2: $a_{21}, a_{22}$ use $i - j$.",
+                "math": "a_{21} = 2 - 1 = 1,\\quad a_{22} = 0,\\quad a_{23} = 2 + 3 = 5",
+                "marks": 0.5
+              },
+              {
+                "do": "Row 3: all use $i - j$.",
+                "math": "a_{31} = 3 - 1 = 2,\\quad a_{32} = 3 - 2 = 1,\\quad a_{33} = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the matrix.",
+                "math": "A = \\begin{bmatrix} 0 & 3 & 4 \\\\ 1 & 0 & 5 \\\\ 2 & 1 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $i + j$ on the diagonal; there $i = j$, so the rule $i - j$ applies."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "For the matrix $A = \\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix}$, find the numbers $a$ and $b$ such that $A^2 + aA + bI = O$. Hence find $A^{-1}$.",
+          "solution": {
+            "answer": "$a = -4$, $b = 1$; $A^{-1} = \\begin{bmatrix} 1 & -2 \\\\ -1 & 3 \\end{bmatrix}$",
+            "steps": [
+              {
+                "do": "Find $A^2$.",
+                "math": "A^2 = \\begin{bmatrix} 9 + 2 & 6 + 2 \\\\ 3 + 1 & 2 + 1 \\end{bmatrix} = \\begin{bmatrix} 11 & 8 \\\\ 4 & 3 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Write $A^2 + aA + bI$ and set it equal to $O$.",
+                "math": "\\begin{bmatrix} 11 + 3a + b & 8 + 2a \\\\ 4 + a & 3 + a + b \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "From $4 + a = 0$ and $3 + a + b = 0$.",
+                "math": "a = -4, \\qquad b = 1",
+                "why": "These also satisfy $11 + 3a + b = 0$ and $8 + 2a = 0$.",
+                "marks": 0.5
+              },
+              {
+                "do": "So $A^2 - 4A + I = O$. Rearrange and take $A$ common.",
+                "math": "A(4I - A) = I \\;\\Rightarrow\\; A^{-1} = 4I - A",
+                "why": "Also $(4I - A)A = I$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Compute $4I - A$.",
+                "math": "A^{-1} = \\begin{bmatrix} 4 - 3 & -2 \\\\ -1 & 4 - 1 \\end{bmatrix} = \\begin{bmatrix} 1 & -2 \\\\ -1 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Adding $b$ to every element of $A^2 + aA$; $bI$ adds $b$ only on the diagonal."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Express the matrix $A = \\begin{bmatrix} 2 & 5 & -3 \\\\ 1 & 4 & 6 \\\\ 7 & -2 & 0 \\end{bmatrix}$ as the sum of a symmetric and a skew-symmetric matrix.",
+          "solution": {
+            "answer": "$A = \\begin{bmatrix} 2 & 3 & 2 \\\\ 3 & 4 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix} + \\begin{bmatrix} 0 & 2 & -5 \\\\ -2 & 0 & 4 \\\\ 5 & -4 & 0 \\end{bmatrix}$",
+            "concept": "$A = \\tfrac{1}{2}(A + A') + \\tfrac{1}{2}(A - A')$: symmetric part plus skew-symmetric part.",
+            "steps": [
+              {
+                "do": "Write the transpose.",
+                "math": "A' = \\begin{bmatrix} 2 & 1 & 7 \\\\ 5 & 4 & -2 \\\\ -3 & 6 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric part $P = \\tfrac{1}{2}(A + A')$.",
+                "math": "P = \\dfrac{1}{2}\\begin{bmatrix} 4 & 6 & 4 \\\\ 6 & 8 & 4 \\\\ 4 & 4 & 0 \\end{bmatrix} = \\begin{bmatrix} 2 & 3 & 2 \\\\ 3 & 4 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check: $P' = P$, so $P$ is symmetric.",
+                "marks": 0.5
+              },
+              {
+                "do": "Skew-symmetric part $Q = \\tfrac{1}{2}(A - A')$.",
+                "math": "Q = \\dfrac{1}{2}\\begin{bmatrix} 0 & 4 & -10 \\\\ -4 & 0 & 8 \\\\ 10 & -8 & 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 2 & -5 \\\\ -2 & 0 & 4 \\\\ 5 & -4 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check: $Q' = -Q$, so $Q$ is skew-symmetric.",
+                "marks": 0.5
+              },
+              {
+                "do": "Add to verify: $P + Q = A$.",
+                "math": "\\begin{bmatrix} 2 & 3 & 2 \\\\ 3 & 4 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix} + \\begin{bmatrix} 0 & 2 & -5 \\\\ -2 & 0 & 4 \\\\ 5 & -4 & 0 \\end{bmatrix} = \\begin{bmatrix} 2 & 5 & -3 \\\\ 1 & 4 & 6 \\\\ 7 & -2 & 0 \\end{bmatrix} = A",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Sign slip in $A - A'$ at the $(1,3)$ place: $-3 - 7 = -10$, not $4$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find the matrices $X$ and $Y$ if $X + 2Y = \\begin{bmatrix} 4 & 7 \\\\ -4 & 5 \\end{bmatrix}$ and $2X - Y = \\begin{bmatrix} 3 & -6 \\\\ 2 & 5 \\end{bmatrix}$.",
+          "solution": {
+            "answer": "$X = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix}$, $Y = \\begin{bmatrix} 1 & 4 \\\\ -2 & 1 \\end{bmatrix}$",
+            "concept": "Matrix equations are solved like simultaneous equations: eliminate one matrix.",
+            "steps": [
+              {
+                "do": "Multiply the second equation by 2 and add the first; $Y$ cancels.",
+                "math": "5X = \\begin{bmatrix} 4 & 7 \\\\ -4 & 5 \\end{bmatrix} + \\begin{bmatrix} 6 & -12 \\\\ 4 & 10 \\end{bmatrix} = \\begin{bmatrix} 10 & -5 \\\\ 0 & 15 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide by 5.",
+                "math": "X = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "From the second equation, $Y = 2X - \\begin{bmatrix} 3 & -6 \\\\ 2 & 5 \\end{bmatrix}$.",
+                "math": "Y = \\begin{bmatrix} 4 & -2 \\\\ 0 & 6 \\end{bmatrix} - \\begin{bmatrix} 3 & -6 \\\\ 2 & 5 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Subtract element by element.",
+                "math": "Y = \\begin{bmatrix} 1 & 4 \\\\ -2 & 1 \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Sign slip in $-2 - (-6) = 4$ at the $(1,2)$ place of $Y$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find $x$, if $\\begin{bmatrix} x & 1 & -1 \\end{bmatrix}\\begin{bmatrix} 1 & 2 & 0 \\\\ 2 & 0 & 1 \\\\ 1 & 0 & 2 \\end{bmatrix}\\begin{bmatrix} x \\\\ x \\\\ 2 \\end{bmatrix} = O$.",
+          "solution": {
+            "answer": "$x = \\dfrac{2}{3}$ or $x = -1$",
+            "concept": "$(1 \\times 3)(3 \\times 3) = 1 \\times 3$, then $(1 \\times 3)(3 \\times 1) = 1 \\times 1$.",
+            "steps": [
+              {
+                "do": "Multiply the row matrix by the $3 \\times 3$ matrix.",
+                "math": "\\begin{bmatrix} x + 2 - 1 & 2x + 0 + 0 & 0 + 1 - 2 \\end{bmatrix} = \\begin{bmatrix} x + 1 & 2x & -1 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Multiply by the column matrix.",
+                "math": "x(x + 1) + x(2x) + 2(-1) = 3x^2 + x - 2",
+                "marks": 1
+              },
+              {
+                "do": "Set the $1 \\times 1$ matrix equal to $O$ and factorise.",
+                "math": "3x^2 + x - 2 = 0 \\;\\Rightarrow\\; (3x - 2)(x + 1) = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the values of $x$.",
+                "math": "x = \\dfrac{2}{3} \\quad\\text{or}\\quad x = -1",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Missing that the second entry of the column is also $x$, which loses the $2x^2$ term."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "If $A = \\begin{bmatrix} \\cos\\alpha & -\\sin\\alpha \\\\ \\sin\\alpha & \\cos\\alpha \\end{bmatrix}$, find $\\alpha$ $\\left(0 < \\alpha < \\dfrac{\\pi}{2}\\right)$ such that $A^2 + I = \\sqrt{3}\\,A$.",
+          "solution": {
+            "answer": "$\\alpha = \\dfrac{\\pi}{6}$",
+            "concept": "$\\cos^2\\alpha - \\sin^2\\alpha = \\cos 2\\alpha$, $2\\sin\\alpha\\cos\\alpha = \\sin 2\\alpha$, $1 + \\cos 2\\alpha = 2\\cos^2\\alpha$.",
+            "steps": [
+              {
+                "do": "Multiply $A$ by itself and use the double-angle formulas.",
+                "math": "A^2 = \\begin{bmatrix} \\cos 2\\alpha & -\\sin 2\\alpha \\\\ \\sin 2\\alpha & \\cos 2\\alpha \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add $I$ and write the given equation.",
+                "math": "\\begin{bmatrix} 1 + \\cos 2\\alpha & -\\sin 2\\alpha \\\\ \\sin 2\\alpha & 1 + \\cos 2\\alpha \\end{bmatrix} = \\begin{bmatrix} \\sqrt{3}\\cos\\alpha & -\\sqrt{3}\\sin\\alpha \\\\ \\sqrt{3}\\sin\\alpha & \\sqrt{3}\\cos\\alpha \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate the $(2,1)$ elements; divide by $\\sin\\alpha \\ne 0$.",
+                "math": "2\\sin\\alpha\\cos\\alpha = \\sqrt{3}\\sin\\alpha \\;\\Rightarrow\\; \\cos\\alpha = \\dfrac{\\sqrt{3}}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "In $\\left(0, \\tfrac{\\pi}{2}\\right)$ this gives $\\alpha = \\tfrac{\\pi}{6}$; the $(1,1)$ element checks.",
+                "math": "1 + \\cos\\dfrac{\\pi}{3} = \\dfrac{3}{2} = \\sqrt{3}\\cos\\dfrac{\\pi}{6}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Squaring each element of $A$ to get $A^2$, instead of row-by-column multiplication."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "If $A' = \\begin{bmatrix} 1 & -2 & 3 \\\\ 0 & 1 & -1 \\end{bmatrix}$ and $B = \\begin{bmatrix} 2 & -1 \\\\ 1 & 3 \\end{bmatrix}$, verify that $(AB)' = B'A'$.",
+          "solution": {
+            "answer": "$(AB)' = B'A' = \\begin{bmatrix} 2 & -3 & 5 \\\\ -1 & 5 & -6 \\end{bmatrix}$, hence verified.",
+            "concept": "$(A')' = A$: transpose $A'$ to get $A$.",
+            "steps": [
+              {
+                "do": "Get $A$ by transposing $A'$ (order $3 \\times 2$).",
+                "math": "A = \\begin{bmatrix} 1 & 0 \\\\ -2 & 1 \\\\ 3 & -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $AB$ (order $3 \\times 2$).",
+                "math": "AB = \\begin{bmatrix} 2 + 0 & -1 + 0 \\\\ -4 + 1 & 2 + 3 \\\\ 6 - 1 & -3 - 3 \\end{bmatrix} = \\begin{bmatrix} 2 & -1 \\\\ -3 & 5 \\\\ 5 & -6 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Take the transpose: LHS.",
+                "math": "(AB)' = \\begin{bmatrix} 2 & -3 & 5 \\\\ -1 & 5 & -6 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $B'A'$: RHS.",
+                "math": "B'A' = \\begin{bmatrix} 2 & 1 \\\\ -1 & 3 \\end{bmatrix}\\begin{bmatrix} 1 & -2 & 3 \\\\ 0 & 1 & -1 \\end{bmatrix} = \\begin{bmatrix} 2 & -4 + 1 & 6 - 1 \\\\ -1 & 2 + 3 & -3 - 3 \\end{bmatrix} = \\begin{bmatrix} 2 & -3 & 5 \\\\ -1 & 5 & -6 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "LHS = RHS, so $(AB)' = B'A'$ is verified.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using the given $A'$ as $A$ in the product $AB$; it is not even defined that way."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 23,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} 1 & 2 & 2 \\\\ 2 & 1 & 2 \\\\ 2 & 2 & 1 \\end{bmatrix}$, show that $A^2 - 4A - 5I = O$. Hence find $A^{-1}$.",
+          "solution": {
+            "answer": "$A^2 - 4A - 5I = O$; $A^{-1} = \\dfrac{1}{5}\\begin{bmatrix} -3 & 2 & 2 \\\\ 2 & -3 & 2 \\\\ 2 & 2 & -3 \\end{bmatrix}$",
+            "steps": [
+              {
+                "do": "Find $A^2$.",
+                "math": "A^2 = \\begin{bmatrix} 1+4+4 & 2+2+4 & 2+4+2 \\\\ 2+2+4 & 4+1+4 & 4+2+2 \\\\ 2+4+2 & 4+2+2 & 4+4+1 \\end{bmatrix} = \\begin{bmatrix} 9 & 8 & 8 \\\\ 8 & 9 & 8 \\\\ 8 & 8 & 9 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Substitute in $A^2 - 4A - 5I$.",
+                "math": "\\begin{bmatrix} 9 & 8 & 8 \\\\ 8 & 9 & 8 \\\\ 8 & 8 & 9 \\end{bmatrix} - \\begin{bmatrix} 4 & 8 & 8 \\\\ 8 & 4 & 8 \\\\ 8 & 8 & 4 \\end{bmatrix} - \\begin{bmatrix} 5 & 0 & 0 \\\\ 0 & 5 & 0 \\\\ 0 & 0 & 5 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $A^2 - 4A - 5I = O$."
+              },
+              {
+                "do": "Rearrange and take $A$ common.",
+                "math": "A^2 - 4A = 5I \\;\\Rightarrow\\; A(A - 4I) = 5I \\;\\Rightarrow\\; A^{-1} = \\dfrac{1}{5}(A - 4I)",
+                "why": "$A \\cdot \\tfrac{1}{5}(A - 4I) = I$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Compute $A - 4I$ and divide by 5.",
+                "math": "A^{-1} = \\dfrac{1}{5}\\begin{bmatrix} -3 & 2 & 2 \\\\ 2 & -3 & 2 \\\\ 2 & 2 & -3 \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Subtracting 4 from every element of $A$; $4I$ changes only the diagonal."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "A stationery shop sells gel pens, ball pens and fountain pens. On Day 1 it sold 20 gel pens, 30 ball pens and 10 fountain pens. On Day 2 it sold 15 gel pens, 40 ball pens and 12 fountain pens. A ball pen costs ₹10 and a fountain pen costs ₹50. The total sales of the two days were ₹2,850. Using matrix multiplication, find the price of a gel pen and the sales on each day.",
+          "solution": {
+            "answer": "Gel pen ₹30; Day 1 sales ₹1,400; Day 2 sales ₹1,450",
+            "steps": [
+              {
+                "do": "Let a gel pen cost ₹$x$. Sales matrix (rows: days; columns: gel, ball, fountain).",
+                "math": "S = \\begin{bmatrix} 20 & 30 & 10 \\\\ 15 & 40 & 12 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Price column matrix.",
+                "math": "P = \\begin{bmatrix} x \\\\ 10 \\\\ 50 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Sales on each day $= SP$.",
+                "math": "SP = \\begin{bmatrix} 20x + 300 + 500 \\\\ 15x + 400 + 600 \\end{bmatrix} = \\begin{bmatrix} 20x + 800 \\\\ 15x + 1000 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Total of both days is ₹2,850.",
+                "math": "35x + 1800 = 2850 \\;\\Rightarrow\\; x = 30",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x = 30$: Day 1 $= 600 + 800 = 1400$; Day 2 $= 450 + 1000 = 1450$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence a gel pen costs ₹30; sales were ₹1,400 on Day 1 and ₹1,450 on Day 2."
+              }
+            ],
+            "mistake": "Writing prices as a row matrix, so that $SP$ is not defined."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 3,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} 3 & -5 \\\\ -4 & 2 \\end{bmatrix}$, find $A^2 - 5A - 14I$. Hence obtain $A^3$.",
+          "solution": {
+            "answer": "$A^2 - 5A - 14I = O$; $A^3 = \\begin{bmatrix} 187 & -195 \\\\ -156 & 148 \\end{bmatrix}$",
+            "steps": [
+              {
+                "do": "Find $A^2$.",
+                "math": "A^2 = \\begin{bmatrix} 9 + 20 & -15 - 10 \\\\ -12 - 8 & 20 + 4 \\end{bmatrix} = \\begin{bmatrix} 29 & -25 \\\\ -20 & 24 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Substitute in $A^2 - 5A - 14I$.",
+                "math": "\\begin{bmatrix} 29 & -25 \\\\ -20 & 24 \\end{bmatrix} - \\begin{bmatrix} 15 & -25 \\\\ -20 & 10 \\end{bmatrix} - \\begin{bmatrix} 14 & 0 \\\\ 0 & 14 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "So $A^2 = 5A + 14I$. Multiply both sides by $A$.",
+                "math": "A^3 = 5A^2 + 14A",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute $A^2$ and $A$.",
+                "math": "A^3 = \\begin{bmatrix} 145 & -125 \\\\ -100 & 120 \\end{bmatrix} + \\begin{bmatrix} 42 & -70 \\\\ -56 & 28 \\end{bmatrix} = \\begin{bmatrix} 187 & -195 \\\\ -156 & 148 \\end{bmatrix}",
+                "why": "Same as $39A + 70I$, using $A^2 = 5A + 14I$ again.",
+                "marks": 1
+              }
+            ],
+            "mistake": "Writing $A^3 = 5A^2 + 14$; multiplying $14I$ by $A$ gives $14A$, not $14$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} \\cos^2\\alpha & \\cos\\alpha\\sin\\alpha \\\\ \\cos\\alpha\\sin\\alpha & \\sin^2\\alpha \\end{bmatrix}$ and $B = \\begin{bmatrix} \\cos^2\\beta & \\cos\\beta\\sin\\beta \\\\ \\cos\\beta\\sin\\beta & \\sin^2\\beta \\end{bmatrix}$, show that $AB$ is the zero matrix when $\\alpha$ and $\\beta$ differ by an odd multiple of $\\dfrac{\\pi}{2}$.",
+          "solution": {
+            "answer": "$AB = \\cos(\\alpha - \\beta)\\begin{bmatrix} \\cos\\alpha\\cos\\beta & \\cos\\alpha\\sin\\beta \\\\ \\sin\\alpha\\cos\\beta & \\sin\\alpha\\sin\\beta \\end{bmatrix} = O$ when $\\alpha - \\beta = (2n + 1)\\dfrac{\\pi}{2}$",
+            "concept": "$\\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta = \\cos(\\alpha - \\beta)$.",
+            "steps": [
+              {
+                "do": "Element $(1,1)$ of $AB$; take $\\cos\\alpha\\cos\\beta$ common.",
+                "math": "\\begin{aligned} &\\cos^2\\alpha\\cos^2\\beta + \\cos\\alpha\\sin\\alpha\\cos\\beta\\sin\\beta \\\\ &= \\cos\\alpha\\cos\\beta\\,(\\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta) = \\cos\\alpha\\cos\\beta\\cos(\\alpha - \\beta) \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "Element $(1,2)$; take $\\cos\\alpha\\sin\\beta$ common.",
+                "math": "\\begin{aligned} &\\cos^2\\alpha\\cos\\beta\\sin\\beta + \\cos\\alpha\\sin\\alpha\\sin^2\\beta \\\\ &= \\cos\\alpha\\sin\\beta\\,(\\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta) = \\cos\\alpha\\sin\\beta\\cos(\\alpha - \\beta) \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "Element $(2,1)$; take $\\sin\\alpha\\cos\\beta$ common.",
+                "math": "\\cos\\alpha\\sin\\alpha\\cos^2\\beta + \\sin^2\\alpha\\cos\\beta\\sin\\beta = \\sin\\alpha\\cos\\beta\\cos(\\alpha - \\beta)",
+                "marks": 0.5
+              },
+              {
+                "do": "Element $(2,2)$; take $\\sin\\alpha\\sin\\beta$ common.",
+                "math": "\\cos\\alpha\\sin\\alpha\\cos\\beta\\sin\\beta + \\sin^2\\alpha\\sin^2\\beta = \\sin\\alpha\\sin\\beta\\cos(\\alpha - \\beta)",
+                "marks": 0.5
+              },
+              {
+                "do": "Take $\\cos(\\alpha - \\beta)$ out of the matrix.",
+                "math": "AB = \\cos(\\alpha - \\beta)\\begin{bmatrix} \\cos\\alpha\\cos\\beta & \\cos\\alpha\\sin\\beta \\\\ \\sin\\alpha\\cos\\beta & \\sin\\alpha\\sin\\beta \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\alpha$ and $\\beta$ differ by an odd multiple of $\\tfrac{\\pi}{2}$.",
+                "math": "\\alpha - \\beta = (2n + 1)\\dfrac{\\pi}{2},\\ n \\in \\mathbb{Z} \\;\\Rightarrow\\; \\cos(\\alpha - \\beta) = 0",
+                "marks": 1
+              },
+              {
+                "do": "Every element of $AB$ is then $0$.",
+                "math": "AB = 0 \\cdot \\begin{bmatrix} \\cos\\alpha\\cos\\beta & \\cos\\alpha\\sin\\beta \\\\ \\sin\\alpha\\cos\\beta & \\sin\\alpha\\sin\\beta \\end{bmatrix} = O",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $AB$ is the zero matrix."
+              }
+            ],
+            "mistake": "Using $\\cos(\\alpha + \\beta)$; the bracket is $\\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta = \\cos(\\alpha - \\beta)$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ p & q & r \\end{bmatrix}$, show that $A^3 = pI + qA + rA^2$.",
+          "solution": {
+            "answer": "Both sides equal $\\begin{bmatrix} p & q & r \\\\ pr & p + qr & q + r^2 \\\\ pq + pr^2 & pr + q^2 + qr^2 & p + 2qr + r^3 \\end{bmatrix}$, so $A^3 = pI + qA + rA^2$.",
+            "steps": [
+              {
+                "do": "Find $A^2 = A \\cdot A$.",
+                "math": "A^2 = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ p & q & r \\end{bmatrix}\\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ p & q & r \\end{bmatrix} = \\begin{bmatrix} 0 & 0 & 1 \\\\ p & q & r \\\\ pr & p + qr & q + r^2 \\end{bmatrix}",
+                "why": "Row 3: $(0 + 0 + pr,\\ p + 0 + qr,\\ 0 + q + r^2)$.",
+                "marks": 1.5
+              },
+              {
+                "do": "Find $A^3 = A \\cdot A^2$.",
+                "math": "A^3 = \\begin{bmatrix} p & q & r \\\\ pr & p + qr & q + r^2 \\\\ pq + pr^2 & pr + q^2 + qr^2 & p + 2qr + r^3 \\end{bmatrix}",
+                "why": "Row 3 is $p(\\text{row 1}) + q(\\text{row 2}) + r(\\text{row 3})$ of $A^2$.",
+                "marks": 1.5
+              },
+              {
+                "do": "Write $pI$, $qA$ and $rA^2$.",
+                "math": "pI = \\begin{bmatrix} p & 0 & 0 \\\\ 0 & p & 0 \\\\ 0 & 0 & p \\end{bmatrix},\\quad qA = \\begin{bmatrix} 0 & q & 0 \\\\ 0 & 0 & q \\\\ pq & q^2 & qr \\end{bmatrix},\\quad rA^2 = \\begin{bmatrix} 0 & 0 & r \\\\ pr & qr & r^2 \\\\ pr^2 & pr + qr^2 & qr + r^3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add them: RHS.",
+                "math": "pI + qA + rA^2 = \\begin{bmatrix} p & q & r \\\\ pr & p + qr & q + r^2 \\\\ pq + pr^2 & pr + q^2 + qr^2 & p + 2qr + r^3 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "LHS = RHS element by element.",
+                "math": "A^3 = pI + qA + rA^2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Adding $p$ to every element for $pI$; it adds $p$ only on the diagonal."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** A dairy cooperative sells milk, curd and paneer in two towns P and Q. In one week, town P buys 500 litres of milk, 150 kg of curd and 40 kg of paneer; town Q buys 400 litres of milk, 200 kg of curd and 50 kg of paneer. The selling prices are ₹60 per litre of milk, ₹80 per kg of curd and ₹400 per kg of paneer. The cost prices are ₹45, ₹60 and ₹320 respectively.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Write the weekly sales as a $2 \\times 3$ matrix and the selling prices as a column matrix.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Find the revenue from town P.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)(a)",
+              "text": "Using matrix multiplication, find the profit from each town and the total profit.",
+              "marks": 2
+            },
+            {
+              "label": "(iii)(b)",
+              "text": "The cooperative changes the price of paneer to ₹$x$ per kg, keeping the other prices the same. The total revenue from both towns becomes ₹1,22,500. Using matrices, find $x$.",
+              "marks": 2,
+              "alt": true
+            }
+          ],
+          "solution": {
+            "answer": "Revenue from P ₹58,000. Profit: P ₹13,700, Q ₹14,000, total ₹27,700. OR: $x = 450$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Rows = towns P, Q; columns = milk, curd, paneer.",
+                    "math": "S = \\begin{bmatrix} 500 & 150 & 40 \\\\ 400 & 200 & 50 \\end{bmatrix}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Selling prices as a column matrix.",
+                    "math": "P = \\begin{bmatrix} 60 \\\\ 80 \\\\ 400 \\end{bmatrix}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$S = \\begin{bmatrix} 500 & 150 & 40 \\\\ 400 & 200 & 50 \\end{bmatrix}$, $P = \\begin{bmatrix} 60 \\\\ 80 \\\\ 400 \\end{bmatrix}$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Multiply town P's row by the price column.",
+                    "math": "\\begin{bmatrix} 500 & 150 & 40 \\end{bmatrix}\\begin{bmatrix} 60 \\\\ 80 \\\\ 400 \\end{bmatrix} = 30000 + 12000 + 16000",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Revenue from town P is ₹58,000.",
+                    "math": "= 58000",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "₹58,000"
+              },
+              {
+                "label": "(iii)(a)",
+                "steps": [
+                  {
+                    "do": "Profit per unit = selling price $-$ cost price.",
+                    "math": "\\begin{bmatrix} 60 \\\\ 80 \\\\ 400 \\end{bmatrix} - \\begin{bmatrix} 45 \\\\ 60 \\\\ 320 \\end{bmatrix} = \\begin{bmatrix} 15 \\\\ 20 \\\\ 80 \\end{bmatrix}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Profit matrix = $S$ times the profit column.",
+                    "math": "\\begin{bmatrix} 500 & 150 & 40 \\\\ 400 & 200 & 50 \\end{bmatrix}\\begin{bmatrix} 15 \\\\ 20 \\\\ 80 \\end{bmatrix} = \\begin{bmatrix} 7500 + 3000 + 3200 \\\\ 6000 + 4000 + 4000 \\end{bmatrix} = \\begin{bmatrix} 13700 \\\\ 14000 \\end{bmatrix}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Total profit $= 13700 + 14000 = 27700$.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Town P: ₹13,700; town Q: ₹14,000; total ₹27,700"
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "steps": [
+                  {
+                    "do": "New price column has $x$ for paneer.",
+                    "math": "\\begin{bmatrix} 500 & 150 & 40 \\\\ 400 & 200 & 50 \\end{bmatrix}\\begin{bmatrix} 60 \\\\ 80 \\\\ x \\end{bmatrix} = \\begin{bmatrix} 42000 + 40x \\\\ 40000 + 50x \\end{bmatrix}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Total revenue is ₹1,22,500.",
+                    "math": "82000 + 90x = 122500 \\;\\Rightarrow\\; 90x = 40500",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence the new price of paneer.",
+                    "math": "x = 450",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$x = 450$, i.e. ₹450 per kg"
+              }
+            ],
+            "mistake": "Using the selling prices instead of (selling $-$ cost) when finding profit."
+          }
+        }
+      ]
+    }
+  ]
+}

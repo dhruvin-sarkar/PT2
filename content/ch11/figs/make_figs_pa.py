@@ -36,7 +36,7 @@ def q16_image():
     tx, ty = 3.2 / math.hypot(3.2, 1.2), 1.2 / math.hypot(3.2, 1.2)
     s = 0.28
     ax.plot([tx * s, tx * s + ux * s, ux * s], [ty * s, ty * s + uy * s, uy * s], color=INK, lw=1)
-    ax.text(-2.9, 1.7, "$PL = LQ$ and $PQ \\perp$ line", fontsize=10, color=INK)
+    ax.text(-3.3, -2.1, "$PL = LQ$ and $PQ \\perp$ line", fontsize=10, color=INK)
     ax.set_aspect("equal")
     ax.set_xlim(-3.4, 3.4)
     ax.set_ylim(-2.3, 2.3)

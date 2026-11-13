@@ -1,7 +1,7 @@
 """Figures for Chapter 2 (Inverse Trigonometric Functions), Practice Set A.
 
 Run from anywhere:  python content/ch02/figs/make_figs_pa.py
-Writes pa-q04-graph.svg, pa-q15-graph.svg and pa-q20-drone.svg next to this script.
+Writes pa-q04-graph.svg, pa-q15-graph.svg and pa-q20-ladder.svg next to this script.
 """
 import os
 
@@ -76,6 +76,8 @@ def q15_graph():
                              (a, np.pi / 4, r"$\left(\frac{1}{\sqrt{2}},\,\frac{\pi}{4}\right)$", (-70, 12))]:
         ax.plot(px, py, "o", color=ACCENT, ms=6, zorder=5)
         ax.annotate(lab, (px, py), textcoords="offset points", xytext=off, fontsize=12)
+    for px in (-0.5, 0.5):  # table points (+-1/2, +-pi/6)
+        ax.plot(px, np.arcsin(px), "o", color=ACCENT, ms=5, zorder=5)
     ax.plot([a, a], [0, np.pi / 4], ls="--", lw=0.9, color=GREY)
     ax.plot([0, a], [np.pi / 4, np.pi / 4], ls="--", lw=0.9, color=GREY)
     ax.plot([-a, -a], [0, -np.pi / 4], ls="--", lw=0.9, color=GREY)
@@ -93,39 +95,43 @@ def q15_graph():
     save(fig, "pa-q15-graph.svg")
 
 
-def q20_drone():
-    """Drone D at height 60 m above P; observer O at horizontal distance x m; angle of elevation theta."""
-    fig, ax = plt.subplots(figsize=(4.8, 3.0), dpi=96)
-    ox, px, top = 0.0, 4.0, 2.4
-    ax.fill([ox, px, px], [0, 0, top], color=FILL, alpha=0.45, lw=0)
-    ax.plot([ox - 0.2, px + 0.5], [0, 0], color=INK, lw=2)
-    ax.plot([px, px], [0, top], color=INK, lw=1.2, ls="--")
-    ax.plot([ox, px], [0, top], color=INK, lw=1.4)
-    s = 0.18
-    ax.plot([px - s, px - s, px], [0, s, s], color=INK, lw=1)
-    th = np.arctan2(top, px)
+def q20_ladder():
+    """Ladder FT of length 10 m against a vertical wall; foot F is x m from the wall foot W; theta at F.
+
+    Drawn to scale for x = 5 (theta = pi/3); labels stay general.
+    """
+    fig, ax = plt.subplots(figsize=(4.8, 4.2), dpi=96)
+    L = 10.0
+    th = np.pi / 3
+    fx, wx = 0.0, L * np.cos(th)          # foot of ladder, foot of wall
+    top = L * np.sin(th)
+    ax.fill([fx, wx, wx], [0, 0, top], color=FILL, alpha=0.45, lw=0)
+    ax.plot([fx - 1.2, wx + 0.2], [0, 0], color=INK, lw=2)                 # ground
+    ax.fill([wx, wx + 0.6, wx + 0.6, wx], [0, 0, top + 1.0, top + 1.0], color="#e5e7eb", lw=0)
+    ax.plot([wx, wx], [0, top + 1.0], color=INK, lw=2)                     # wall face
+    ax.plot([fx, wx], [0, top], color=ACCENT, lw=3)                        # ladder
+    s = 0.45
+    ax.plot([wx - s, wx - s, wx], [0, s, s], color=INK, lw=1)              # right angle at W
     a = np.linspace(0, th, 40)
-    ax.plot(0.75 * np.cos(a), 0.75 * np.sin(a), color=ACCENT, lw=1.6)
-    ax.text(0.85, 0.13, r"$\theta$", fontsize=13, color=ACCENT)
-    # drone: body + two rotors
-    ax.plot([px - 0.3, px + 0.3], [top, top], color=INK, lw=3)
-    for dx in (-0.3, 0.3):
-        ax.plot([px + dx - 0.15, px + dx + 0.15], [top + 0.12, top + 0.12], color=INK, lw=1.5)
-        ax.plot([px + dx, px + dx], [top, top + 0.12], color=INK, lw=1)
-    ax.text(px + 0.4, top - 0.05, "Drone (D)", fontsize=11)
-    ax.text(ox - 0.15, -0.35, "Observer (O)", fontsize=11, ha="left")
-    ax.text(px, -0.35, "P", fontsize=11, ha="center")
-    ax.text(px + 0.12, top / 2, "60 m", fontsize=12)
-    ax.text((ox + px) / 2, -0.35, "$x$ m", fontsize=12, ha="center")
-    ax.set_xlim(-0.4, 5.4)
-    ax.set_ylim(-0.6, 2.85)
+    ax.plot(1.3 * np.cos(a), 1.3 * np.sin(a), color=INK, lw=1.4)
+    ax.text(1.45, 0.35, r"$\theta$", fontsize=13)
+    ax.text(1.0, top / 2 + 0.5, "ladder 10 m", fontsize=12, rotation=np.degrees(th) - 2,
+            ha="center", va="center", color=ACCENT)
+    ax.text(wx + 0.75, top / 2, "Wall", fontsize=11, rotation=90, va="center")
+    ax.text((fx + wx) / 2, -0.75, "$x$ m", fontsize=12, ha="center")
+    ax.text(fx, -0.75, "F", fontsize=11, ha="center")
+    ax.text(wx, -0.75, "W", fontsize=11, ha="center")
+    ax.text(wx - 0.25, top, "T", fontsize=11, ha="right", va="bottom")
+    ax.text(-1.2, 0.2, "Ground", fontsize=11)
+    ax.set_xlim(-1.4, wx + 1.6)
+    ax.set_ylim(-1.2, top + 1.2)
     ax.set_aspect("equal")
     ax.axis("off")
-    save(fig, "pa-q20-drone.svg")
+    save(fig, "pa-q20-ladder.svg")
 
 
 if __name__ == "__main__":
     q04_graph()
     q15_graph()
-    q20_drone()
+    q20_ladder()
     print("figures written to", HERE)

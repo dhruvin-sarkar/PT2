@@ -94,12 +94,12 @@
             "answer": "(A) $-\\dfrac{1}{2x^2}\\sqrt{1 + x^4} + C$",
             "concept": "Take the highest power of $x$ out of the root, then substitute.",
             "steps": [
-              { "do": "Take $x^4$ out of the root ($x > 0$)", "math": "\\displaystyle\\int \\dfrac{dx}{x^3\\cdot x^2\\sqrt{1 + x^{-4}}} = \\int \\dfrac{x^{-5}\\,dx}{\\sqrt{1 + x^{-4}}}" },
+              { "do": "Take $x^4$ out of the root; $\\sqrt{x^4} = x^2$", "math":"\\displaystyle\\int \\dfrac{dx}{x^3\\cdot x^2\\sqrt{1 + x^{-4}}} = \\int \\dfrac{x^{-5}\\,dx}{\\sqrt{1 + x^{-4}}}" },
               { "do": "Put $1 + x^{-4} = t$", "math": "-4x^{-5}\\,dx = dt" },
               { "do": "Substitute", "math": "-\\dfrac{1}{4}\\displaystyle\\int t^{-1/2}\\,dt = -\\dfrac{1}{2}\\sqrt t + C" },
               { "do": "Put back $t = \\dfrac{1 + x^4}{x^4}$", "math": "-\\dfrac{1}{2}\\cdot\\dfrac{\\sqrt{1 + x^4}}{x^2} + C = -\\dfrac{1}{2x^2}\\sqrt{1 + x^4} + C", "marks": 1 }
             ],
-            "mistake": "Choosing (D): the sign is lost if $dt = -4x^{-5}\\,dx$ is written as $+4x^{-5}\\,dx$."
+            "mistake": "Dropping the minus sign in $dt = -4x^{-5}\\,dx$, or the $\\dfrac{1}{4}$ with it; the answer is $-\\dfrac{1}{2x^2}\\sqrt{1 + x^4}$."
           }
         },
         {
@@ -142,9 +142,10 @@
             "concept": "If $f(-x) = -f(x)$, then $\\displaystyle\\int_{-a}^{a} f(x)\\,dx = 0$",
             "steps": [
               { "do": "Check A: let $f(x) = \\log\\dfrac{2 - x}{2 + x}$ and replace $x$ by $-x$", "math": "f(-x) = \\log\\dfrac{2 + x}{2 - x} = -\\log\\dfrac{2 - x}{2 + x} = -f(x)" },
-              { "do": "So $f$ is odd and its integral over $[-1, 1]$ is $0$. A is true." },
-              { "do": "Check R: it is the standard property of even functions. R is true." },
-              { "do": "A needs the odd-function property; R is about even functions. So R does not explain A.", "marks": 1 }
+              { "do": "So $f$ is odd; its integral over $[-1, 1]$ is $0$. A is true." },
+              { "do": "R is the standard property of even functions. R is true." },
+              { "do": "A uses the odd-function property, not R. So R does not explain A." },
+              { "do": "Hence the correct option is (B).", "marks": 1 }
             ],
             "mistake": "Marking (A) because both statements are true, without checking that R is about even functions."
           }
@@ -327,7 +328,7 @@
               { "do": "Multiply top and bottom by $\\cos x$", "math": "\\dfrac{\\tan x}{\\sec x + \\tan x} = \\dfrac{\\sin x}{1 + \\sin x} = 1 - \\dfrac{1}{1 + \\sin x}", "marks": 0.5 },
               { "do": "Multiply by $\\dfrac{1 - \\sin x}{1 - \\sin x}$", "math": "\\dfrac{1}{1 + \\sin x} = \\dfrac{1 - \\sin x}{\\cos^2 x} = \\sec^2 x - \\sec x\\tan x", "marks": 0.5 },
               { "do": "So", "math": "2I = \\pi\\displaystyle\\int_0^{\\pi} \\left(1 - \\sec^2 x + \\sec x\\tan x\\right)dx", "marks": 0.5 },
-              { "do": "Integrate", "math": "2I = \\pi\\big[x - \\tan x + \\sec x\\big]_0^{\\pi}", "marks": 1 },
+              { "do": "Integrate", "math": "2I = \\pi\\big[x - \\tan x + \\sec x\\big]_0^{\\pi}", "why": "$\\sec x - \\tan x = \\dfrac{\\cos x}{1 + \\sin x}$ has no break at $\\dfrac{\\pi}{2}$", "marks": 1 },
               { "do": "Put the limits ($\\sec\\pi = -1$, $\\sec 0 = 1$)", "math": "2I = \\pi\\left[(\\pi - 0 - 1) - (0 - 0 + 1)\\right] = \\pi(\\pi - 2)", "marks": 0.5 },
               { "do": "Hence", "math": "I = \\dfrac{\\pi(\\pi - 2)}{2}", "marks": 0.5 }
             ],
@@ -422,7 +423,7 @@
           "marks": 4,
           "type": "case",
           "source": "Board-pattern",
-          "question": "**Case Study:** While revising definite integrals, a student notes the property $\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$. With $a = 0$ it becomes $\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$. Use these properties to answer the following.",
+          "question": "**Case Study:** While revising definite integrals, a student notes the property $\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$. When the lower limit is $0$, it becomes $\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$. Use these properties to answer the following.",
           "parts": [
             { "label": "(i)", "text": "Evaluate $\\displaystyle\\int_2^8 \\dfrac{\\sqrt{10 - x}}{\\sqrt x + \\sqrt{10 - x}}\\,dx$.", "marks": 1 },
             { "label": "(ii)", "text": "Evaluate $\\displaystyle\\int_0^{\\pi/2} \\log(\\tan x)\\,dx$.", "marks": 1 },

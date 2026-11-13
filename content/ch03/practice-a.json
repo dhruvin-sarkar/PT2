@@ -364,7 +364,8 @@
                 "marks": 0.5
               },
               {
-                "do": "Check: $P' = P$, so $P$ is symmetric.",
+                "do": "Check that $P$ is symmetric.",
+                "math": "P' = \\begin{bmatrix} 2 & \\frac{5}{2} \\\\ \\frac{5}{2} & 4 \\end{bmatrix} = P",
                 "marks": 0.5
               },
               {

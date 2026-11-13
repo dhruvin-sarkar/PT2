@@ -529,8 +529,8 @@
             "concept": "$y = \\sin^{-1}x$ is the mirror image of $y = \\sin x$, $x \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$, in the line $y = x$; it is increasing.",
             "steps": [
               {
-                "do": "Make a table of values at the end points and the middle.",
-                "math": "\\begin{array}{c|c|c|c} x & -\\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\\\ \\hline y = \\sin^{-1}x & -\\frac{\\pi}{4} & 0 & \\frac{\\pi}{4} \\end{array}",
+                "do": "Make a table of values from $-\\dfrac{1}{\\sqrt{2}}$ to $\\dfrac{1}{\\sqrt{2}}$.",
+                "math": "\\begin{array}{c|ccccc} x & -\\frac{1}{\\sqrt{2}} & -\\frac{1}{2} & 0 & \\frac{1}{2} & \\frac{1}{\\sqrt{2}} \\\\ \\hline y = \\sin^{-1}x & -\\frac{\\pi}{4} & -\\frac{\\pi}{6} & 0 & \\frac{\\pi}{6} & \\frac{\\pi}{4} \\end{array}",
                 "marks": 1
               },
               {
@@ -665,7 +665,7 @@
                 "marks": 0.5
               }
             ],
-            "mistake": "Writing $\\cos(\\theta - \\tfrac{\\pi}{3})$ and cancelling to $\\theta - \\dfrac{\\pi}{3}$; that angle is negative, outside $[0, \\pi]$."
+            "mistake": "Writing $\\cos\\left(\\theta - \\dfrac{\\pi}{3}\\right)$ and cancelling to $\\theta - \\dfrac{\\pi}{3}$; for $x > \\dfrac{1}{2}$ that angle is negative, outside $[0, \\pi]$."
           }
         },
         {
@@ -718,81 +718,81 @@
           "marks": 4,
           "type": "case",
           "source": "Board-pattern",
-          "question": "**Case Study:** A drone is hovering at a fixed height of 60 m vertically above a point P on level ground. An observer O stands on the ground at a horizontal distance of $x$ m from P. The angle of elevation $\\theta$ of the drone from O is given by $\\theta = \\tan^{-1}\\left(\\dfrac{60}{x}\\right)$.",
-          "figure": "figs/pa-q20-drone.svg",
+          "question": "**Case Study:** A ladder $10$ m long rests against a vertical wall. Its foot F is on level ground, $x$ m from the foot W of the wall, and its top T touches the wall. The angle $\\theta$ that the ladder makes with the ground is given by $\\theta = \\cos^{-1}\\left(\\dfrac{x}{10}\\right)$.",
+          "figure": "figs/pa-q20-ladder.svg",
           "parts": [
-            { "label": "(i)", "text": "Find $\\theta$ when $x = 60$ m.", "marks": 1 },
-            { "label": "(ii)", "text": "Write $\\theta$ in terms of $\\cot^{-1}$, and state the range of the principal value branch of $\\cot^{-1}x$.", "marks": 1 },
-            { "label": "(iii)", "text": "Starting from $x = 60$ m, the observer walks straight towards P until $\\theta = \\dfrac{\\pi}{3}$. Find the distance walked.", "marks": 2 }
+            { "label": "(i)", "text": "Find $\\theta$ when $x = 5$ m.", "marks": 1 },
+            { "label": "(ii)", "text": "Write the domain of the function $f(x) = \\cos^{-1}\\left(\\dfrac{x}{10}\\right)$ and the range of its principal value branch.", "marks": 1 },
+            { "label": "(iii)", "text": "The foot of the ladder slips away from the wall until $\\theta = \\dfrac{\\pi}{6}$. Find the new distance $x$ of the foot from the wall and the height WT at which the top now touches the wall.", "marks": 2 }
           ],
           "solution": {
-            "answer": "(i) $\\dfrac{\\pi}{4}$  (ii) $\\theta = \\cot^{-1}\\left(\\dfrac{x}{60}\\right)$; range $(0, \\pi)$  (iii) $20\\left(3 - \\sqrt{3}\\right) \\approx 25.36$ m",
-            "concept": "In the right triangle, $\\tan\\theta = \\dfrac{\\text{height}}{\\text{horizontal distance}} = \\dfrac{60}{x}$.",
+            "answer": "(i) $\\theta = \\dfrac{\\pi}{3}$  (ii) Domain $[-10, 10]$; range $[0, \\pi]$  (iii) $x = 5\\sqrt{3} \\approx 8.66$ m; height $= 5$ m",
+            "concept": "In right triangle FWT: $\\cos\\theta = \\dfrac{\\text{FW}}{\\text{FT}} = \\dfrac{x}{10}$ and $\\sin\\theta = \\dfrac{\\text{WT}}{\\text{FT}} = \\dfrac{\\text{WT}}{10}$.",
             "parts": [
               {
                 "label": "(i)",
                 "steps": [
                   {
-                    "do": "Put $x = 60$.",
-                    "math": "\\theta = \\tan^{-1}\\left(\\dfrac{60}{60}\\right) = \\tan^{-1}1",
+                    "do": "Put $x = 5$.",
+                    "math": "\\theta = \\cos^{-1}\\left(\\dfrac{5}{10}\\right) = \\cos^{-1}\\left(\\dfrac{1}{2}\\right)",
                     "marks": 0.5
                   },
                   {
-                    "do": "$\\tan\\dfrac{\\pi}{4} = 1$ and $\\dfrac{\\pi}{4} \\in \\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$.",
-                    "math": "\\theta = \\dfrac{\\pi}{4}",
+                    "do": "$\\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}$ and $\\dfrac{\\pi}{3} \\in [0, \\pi]$.",
+                    "math": "\\theta = \\dfrac{\\pi}{3}",
                     "marks": 0.5
                   }
                 ],
-                "answer": "$\\theta = \\dfrac{\\pi}{4}$"
+                "answer": "$\\theta = \\dfrac{\\pi}{3}$"
               },
               {
                 "label": "(ii)",
                 "steps": [
                   {
-                    "do": "From $\\tan\\theta = \\dfrac{60}{x}$, take the reciprocal.",
-                    "math": "\\cot\\theta = \\dfrac{x}{60}"
+                    "do": "The input of $\\cos^{-1}$ must lie in $[-1, 1]$.",
+                    "math": "-1 \\le \\dfrac{x}{10} \\le 1"
                   },
                   {
-                    "do": "$\\theta$ is acute, so it lies in $(0, \\pi)$, the range of $\\cot^{-1}$.",
-                    "math": "\\theta = \\cot^{-1}\\left(\\dfrac{x}{60}\\right)",
+                    "do": "Multiply each part by $10$.",
+                    "math": "-10 \\le x \\le 10 \\;\\Rightarrow\\; \\text{Domain} = [-10, 10]",
                     "marks": 0.5
                   },
                   {
-                    "do": "State the range of the principal value branch.",
-                    "math": "\\cot^{-1}x \\in (0, \\pi)",
+                    "do": "Values of $\\cos^{-1}$ lie in its principal value branch.",
+                    "math": "\\text{Range} = [0, \\pi]",
                     "marks": 0.5
                   }
                 ],
-                "answer": "$\\theta = \\cot^{-1}\\left(\\dfrac{x}{60}\\right)$; range of $\\cot^{-1}x$ is $(0, \\pi)$"
+                "answer": "Domain $[-10, 10]$; range $[0, \\pi]$"
               },
               {
                 "label": "(iii)",
                 "steps": [
                   {
-                    "do": "Put $\\theta = \\dfrac{\\pi}{3}$, so $\\tan\\theta = \\sqrt{3}$.",
-                    "math": "\\dfrac{60}{x} = \\sqrt{3}",
+                    "do": "Put $\\theta = \\dfrac{\\pi}{6}$ in $\\cos\\theta = \\dfrac{x}{10}$.",
+                    "math": "\\dfrac{x}{10} = \\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2}",
                     "marks": 0.5
                   },
                   {
-                    "do": "Solve for the new distance from P.",
-                    "math": "x = \\dfrac{60}{\\sqrt{3}} = 20\\sqrt{3}\\ \\text{m}",
+                    "do": "Solve for $x$.",
+                    "math": "x = 5\\sqrt{3}\\ \\text{m} \\approx 8.66\\ \\text{m}",
                     "marks": 0.5
                   },
                   {
-                    "do": "Distance walked $=$ old distance $-$ new distance.",
-                    "math": "60 - 20\\sqrt{3} = 20\\left(3 - \\sqrt{3}\\right)\\ \\text{m}",
+                    "do": "For the height use $\\sin\\theta = \\dfrac{\\text{WT}}{10}$.",
+                    "math": "\\text{WT} = 10\\sin\\dfrac{\\pi}{6} = 10 \\times \\dfrac{1}{2}",
                     "marks": 0.5
                   },
                   {
-                    "do": "Use $\\sqrt{3} \\approx 1.732$.",
-                    "math": "20 \\times 1.268 \\approx 25.36\\ \\text{m}",
+                    "do": "Hence the top touches the wall at:",
+                    "math": "\\text{WT} = 5\\ \\text{m}",
                     "marks": 0.5
                   }
                 ],
-                "answer": "Distance walked $= 20\\left(3 - \\sqrt{3}\\right) \\approx 25.36$ m"
+                "answer": "New distance $x = 5\\sqrt{3} \\approx 8.66$ m; height WT $= 5$ m"
               }
             ],
-            "mistake": "Answering $20\\sqrt{3}$ m in (iii): that is the new distance from P, not the distance walked."
+            "mistake": "In (ii), writing the domain as $[-1, 1]$; that is the condition on $\\dfrac{x}{10}$, not on $x$."
           }
         }
       ]
