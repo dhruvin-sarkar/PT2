@@ -1,0 +1,895 @@
+{
+  "chapter": 8,
+  "chapterTitle": "Application of Integrals",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 53,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The area of the region bounded by $y = x^2$, the x-axis and the lines $x = 0$ and $x = 3$ is:",
+          "options": [
+            "$3$ sq units",
+            "$9$ sq units",
+            "$27$ sq units",
+            "$6$ sq units"
+          ],
+          "solution": {
+            "answer": "(B) $9$ sq units",
+            "concept": "Area under $y=f(x)\\ge 0$ from $x=a$ to $x=b$ is $\\int_a^b y\\,dx$.",
+            "steps": [
+              {
+                "do": "Write the area as an integral.",
+                "math": "A = \\displaystyle\\int_0^3 x^2\\,dx"
+              },
+              {
+                "do": "Integrate and put the limits.",
+                "math": "A = \\left[\\dfrac{x^3}{3}\\right]_0^3 = \\dfrac{27}{3} - 0 = 9",
+                "marks": 1
+              },
+              {
+                "do": "So the area is $9$ sq units, option (B)."
+              }
+            ],
+            "mistake": "Forgetting to divide by $3$ and choosing $27$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The area enclosed by the circle $x^2 + y^2 = 4$ is:",
+          "options": [
+            "$2\\pi$ sq units",
+            "$4\\pi$ sq units",
+            "$16\\pi$ sq units",
+            "$\\pi$ sq units"
+          ],
+          "solution": {
+            "answer": "(B) $4\\pi$ sq units",
+            "concept": "Area of the circle $x^2+y^2=r^2$ is $\\pi r^2$.",
+            "steps": [
+              {
+                "do": "Compare with $x^2 + y^2 = r^2$.",
+                "math": "r^2 = 4 \\Rightarrow r = 2"
+              },
+              {
+                "do": "Use area $= \\pi r^2$.",
+                "math": "A = \\pi (2)^2 = 4\\pi",
+                "why": "Same as $4\\int_0^2\\sqrt{4-x^2}\\,dx$.",
+                "marks": 1
+              },
+              {
+                "do": "So the area is $4\\pi$ sq units, option (B)."
+              }
+            ],
+            "mistake": "Using $r = 4$ instead of $r = 2$ and choosing $16\\pi$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The area enclosed by the ellipse $\\dfrac{x^2}{9} + \\dfrac{y^2}{4} = 1$ is:",
+          "options": [
+            "$6\\pi$ sq units",
+            "$36\\pi$ sq units",
+            "$13\\pi$ sq units",
+            "$12\\pi$ sq units"
+          ],
+          "solution": {
+            "answer": "(A) $6\\pi$ sq units",
+            "concept": "Area of the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $\\pi ab$.",
+            "steps": [
+              {
+                "do": "Compare with $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$.",
+                "math": "a^2 = 9,\\ b^2 = 4 \\Rightarrow a = 3,\\ b = 2"
+              },
+              {
+                "do": "Use area $= \\pi ab$.",
+                "math": "A = \\pi (3)(2) = 6\\pi",
+                "marks": 1
+              },
+              {
+                "do": "So the area is $6\\pi$ sq units, option (A)."
+              }
+            ],
+            "mistake": "Multiplying $a^2$ and $b^2$ to get $36\\pi$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The area of the region bounded by $y = \\cos x$, the x-axis, $x = 0$ and $x = \\dfrac{\\pi}{2}$ is:",
+          "options": [
+            "$2$ sq units",
+            "$1$ sq unit",
+            "$\\dfrac{\\pi}{2}$ sq units",
+            "$0$"
+          ],
+          "solution": {
+            "answer": "(B) $1$ sq unit",
+            "concept": "$\\int\\cos x\\,dx = \\sin x + C$",
+            "steps": [
+              {
+                "do": "Write the area as an integral.",
+                "math": "A = \\displaystyle\\int_0^{\\pi/2} \\cos x\\,dx",
+                "why": "$\\cos x \\ge 0$ on $\\left[0, \\frac{\\pi}{2}\\right]$."
+              },
+              {
+                "do": "Integrate and put the limits.",
+                "math": "A = \\left[\\sin x\\right]_0^{\\pi/2} = \\sin\\dfrac{\\pi}{2} - \\sin 0 = 1 - 0 = 1",
+                "marks": 1
+              },
+              {
+                "do": "So the area is $1$ sq unit, option (B)."
+              }
+            ]
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The area of the region bounded by the curve $y = x$ and the x-axis, between $x = 0$ and $x = 2$, is:",
+          "options": [
+            "$2$ sq units",
+            "$\\dfrac{1}{2}$ sq unit",
+            "$1$ sq unit",
+            "$4$ sq units"
+          ],
+          "solution": {
+            "answer": "(A) $2$ sq units",
+            "steps": [
+              {
+                "do": "Write the area as an integral.",
+                "math": "A = \\displaystyle\\int_0^2 x\\,dx"
+              },
+              {
+                "do": "Integrate and put the limits.",
+                "math": "A = \\left[\\dfrac{x^2}{2}\\right]_0^2 = \\dfrac{4}{2} - 0 = 2",
+                "why": "Check: triangle area $\\frac{1}{2}\\times 2\\times 2 = 2$.",
+                "marks": 1
+              },
+              {
+                "do": "So the area is $2$ sq units, option (A)."
+              }
+            ]
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** The area bounded by $y = \\sin x$ and the x-axis between $x = 0$ and $x = 2\\pi$ is $4$ sq units. **Reason (R):** $\\displaystyle\\int_0^{2\\pi} \\sin x\\,dx = 0$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(B) Both A and R are true, but R is not the correct explanation of A",
+            "concept": "Area uses $|\\sin x|$: split where the curve crosses the x-axis.",
+            "steps": [
+              {
+                "do": "Assertion: $\\sin x < 0$ on $(\\pi, 2\\pi)$, so split at $\\pi$.",
+                "math": "\\begin{aligned} A &= \\displaystyle\\int_0^{\\pi}\\sin x\\,dx + \\left|\\int_{\\pi}^{2\\pi}\\sin x\\,dx\\right| \\\\ &= 2 + |-2| = 4 \\end{aligned}"
+              },
+              {
+                "do": "So **A is true**."
+              },
+              {
+                "do": "Reason: integrate straight from $0$ to $2\\pi$.",
+                "math": "\\displaystyle\\int_0^{2\\pi}\\sin x\\,dx = \\left[-\\cos x\\right]_0^{2\\pi} = -1 + 1 = 0"
+              },
+              {
+                "do": "So **R is true**."
+              },
+              {
+                "do": "R gives $0$ because the parts cancel; it does not give the area $4$.",
+                "marks": 1
+              },
+              {
+                "do": "So R is not the correct explanation of A: option (B)."
+              }
+            ],
+            "mistake": "Thinking area $= \\int_0^{2\\pi}\\sin x\\,dx = 0$ and marking A false."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the area of the region bounded by $y^2 = x$, the x-axis and the lines $x = 1$ and $x = 4$, lying in the first quadrant.",
+          "solution": {
+            "answer": "$\\dfrac{14}{3}$ sq units",
+            "concept": "Area $= \\int_a^b y\\,dx$, with $y$ taken from the curve.",
+            "steps": [
+              {
+                "do": "Draw a rough sketch and shade the region from $x = 1$ to $x = 4$.",
+                "figure": "figs/q07.svg"
+              },
+              {
+                "do": "In the first quadrant, take the positive root.",
+                "math": "y^2 = x \\Rightarrow y = \\sqrt{x}"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_1^4 y\\,dx = \\int_1^4 \\sqrt{x}\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Integrate.",
+                "math": "A = \\left[\\dfrac{2}{3}x^{3/2}\\right]_1^4",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "A = \\dfrac{2}{3}\\left(4^{3/2} - 1^{3/2}\\right) = \\dfrac{2}{3}(8 - 1) = \\dfrac{14}{3}",
+                "why": "$4^{3/2} = (\\sqrt{4})^3 = 8$"
+              },
+              {
+                "do": "Hence the required area $= \\dfrac{14}{3}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $4^{3/2}$ as $6$ instead of $8$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the area of the region bounded by $y^2 = 9x$, $x = 2$, $x = 4$ and the x-axis in the first quadrant.",
+          "solution": {
+            "answer": "$16 - 4\\sqrt{2}$ sq units",
+            "concept": "Area $= \\int_a^b y\\,dx$, with $y$ taken from the curve.",
+            "steps": [
+              {
+                "do": "Draw a rough sketch and shade the region from $x = 2$ to $x = 4$.",
+                "marks": 0.5,
+                "figure": "figs/q08.svg"
+              },
+              {
+                "do": "In the first quadrant, take the positive root.",
+                "math": "y^2 = 9x \\Rightarrow y = 3\\sqrt{x}"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_2^4 y\\,dx = \\int_2^4 3\\sqrt{x}\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Integrate.",
+                "math": "A = 3\\left[\\dfrac{2}{3}x^{3/2}\\right]_2^4 = 2\\left[x^{3/2}\\right]_2^4",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "A = 2\\left(4^{3/2} - 2^{3/2}\\right) = 2\\left(8 - 2\\sqrt{2}\\right)",
+                "why": "$2^{3/2} = 2\\sqrt{2}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the required area $= 16 - 4\\sqrt{2}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $2^{3/2}$ as $3$ or as $\\sqrt{2}$; it is $2\\sqrt{2}$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the area of the region bounded by $x^2 = 4y$, $y = 2$, $y = 4$ and the y-axis in the first quadrant.",
+          "solution": {
+            "answer": "$\\dfrac{32 - 8\\sqrt{2}}{3}$ sq units",
+            "concept": "Area between a curve and the y-axis from $y=c$ to $y=d$ is $\\int_c^d x\\,dy$.",
+            "steps": [
+              {
+                "do": "Draw a rough sketch and shade the region between the y-axis and the curve.",
+                "marks": 0.5,
+                "figure": "figs/q09.svg"
+              },
+              {
+                "do": "The region is bounded by the y-axis, so integrate w.r.t. $y$."
+              },
+              {
+                "do": "In the first quadrant, express $x$ in terms of $y$.",
+                "math": "x^2 = 4y \\Rightarrow x = 2\\sqrt{y}"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_2^4 x\\,dy = \\int_2^4 2\\sqrt{y}\\,dy",
+                "marks": 1
+              },
+              {
+                "do": "Integrate.",
+                "math": "A = 2\\left[\\dfrac{2}{3}y^{3/2}\\right]_2^4 = \\dfrac{4}{3}\\left[y^{3/2}\\right]_2^4",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "A = \\dfrac{4}{3}\\left(8 - 2\\sqrt{2}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the required area $= \\dfrac{32 - 8\\sqrt{2}}{3}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Integrating w.r.t. $x$; here the strips are horizontal, so use $dy$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "question": "Using integration, find the area of the region bounded by the line $y = 3x + 2$, the x-axis and the ordinates $x = -1$ and $x = 1$.",
+          "solution": {
+            "answer": "$\\dfrac{13}{3}$ sq units",
+            "concept": "A part of the region below the x-axis is taken with modulus.",
+            "steps": [
+              {
+                "do": "Find where the line meets the x-axis.",
+                "math": "3x + 2 = 0 \\Rightarrow x = -\\dfrac{2}{3}",
+                "why": "Line is below the x-axis for $x < -\\frac{2}{3}$."
+              },
+              {
+                "do": "Draw a rough sketch; the region has two parts $A_1$ and $A_2$.",
+                "marks": 0.5,
+                "figure": "figs/q10.svg"
+              },
+              {
+                "do": "Split at $x = -\\dfrac{2}{3}$ and write the area.",
+                "math": "A = \\left|\\displaystyle\\int_{-1}^{-2/3}(3x+2)\\,dx\\right| + \\int_{-2/3}^{1}(3x+2)\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Evaluate the first integral.",
+                "math": "\\begin{aligned} \\left[\\dfrac{3x^2}{2} + 2x\\right]_{-1}^{-2/3} &= \\left(\\dfrac{2}{3} - \\dfrac{4}{3}\\right) - \\left(\\dfrac{3}{2} - 2\\right) \\\\ &= -\\dfrac{2}{3} + \\dfrac{1}{2} = -\\dfrac{1}{6} \\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "Evaluate the second integral.",
+                "math": "\\left[\\dfrac{3x^2}{2} + 2x\\right]_{-2/3}^{1} = \\dfrac{7}{2} - \\left(-\\dfrac{2}{3}\\right) = \\dfrac{25}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the two areas.",
+                "math": "A = \\left|-\\dfrac{1}{6}\\right| + \\dfrac{25}{6} = \\dfrac{26}{6} = \\dfrac{13}{3}"
+              },
+              {
+                "do": "Hence the required area $= \\dfrac{13}{3}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Integrating straight from $-1$ to $1$ gives $4$, which is wrong."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the area of the region in the first quadrant bounded by the ellipse $\\dfrac{x^2}{16} + \\dfrac{y^2}{9} = 1$ and the coordinate axes.",
+          "solution": {
+            "answer": "$3\\pi$ sq units",
+            "concept": "$\\int\\sqrt{a^2-x^2}\\,dx=\\frac{x}{2}\\sqrt{a^2-x^2}+\\frac{a^2}{2}\\sin^{-1}\\frac{x}{a}+C$",
+            "steps": [
+              {
+                "do": "Draw a rough sketch; shade the first-quadrant part of the ellipse.",
+                "figure": "figs/q11.svg"
+              },
+              {
+                "do": "Solve for $y$ in the first quadrant.",
+                "math": "y^2 = \\dfrac{9}{16}\\left(16 - x^2\\right) \\Rightarrow y = \\dfrac{3}{4}\\sqrt{16 - x^2}"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_0^4 y\\,dx = \\dfrac{3}{4}\\int_0^4 \\sqrt{16 - x^2}\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Integrate using the $\\sqrt{a^2 - x^2}$ formula with $a = 4$.",
+                "math": "A = \\dfrac{3}{4}\\left[\\dfrac{x}{2}\\sqrt{16 - x^2} + 8\\sin^{-1}\\dfrac{x}{4}\\right]_0^4",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "A = \\dfrac{3}{4}\\left[\\left(0 + 8\\cdot\\dfrac{\\pi}{2}\\right) - 0\\right] = \\dfrac{3}{4}\\times 4\\pi",
+                "why": "$\\sin^{-1}1 = \\frac{\\pi}{2}$, $\\sin^{-1}0 = 0$"
+              },
+              {
+                "do": "Hence the required area $= 3\\pi$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\frac{a^2}{2} = 16$ instead of $8$ in the formula."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the area of the region bounded by the circle $x^2 + y^2 = 16$, the x-axis and the lines $x = 0$ and $x = 2$, lying in the first quadrant.",
+          "solution": {
+            "answer": "$2\\sqrt{3} + \\dfrac{4\\pi}{3}$ sq units",
+            "concept": "$\\int\\sqrt{a^2-x^2}\\,dx=\\frac{x}{2}\\sqrt{a^2-x^2}+\\frac{a^2}{2}\\sin^{-1}\\frac{x}{a}+C$",
+            "steps": [
+              {
+                "do": "Draw a rough sketch; shade the region from $x = 0$ to $x = 2$.",
+                "marks": 0.5,
+                "figure": "figs/q12.svg"
+              },
+              {
+                "do": "Solve for $y$ in the first quadrant.",
+                "math": "y = \\sqrt{16 - x^2}"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_0^2 \\sqrt{16 - x^2}\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Integrate using the $\\sqrt{a^2 - x^2}$ formula with $a = 4$.",
+                "math": "A = \\left[\\dfrac{x}{2}\\sqrt{16 - x^2} + 8\\sin^{-1}\\dfrac{x}{4}\\right]_0^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "\\begin{aligned} A &= \\left(\\dfrac{2}{2}\\sqrt{12} + 8\\sin^{-1}\\dfrac{1}{2}\\right) - 0 \\\\ &= 2\\sqrt{3} + 8\\cdot\\dfrac{\\pi}{6} \\end{aligned}",
+                "why": "$\\sin^{-1}\\frac{1}{2} = \\frac{\\pi}{6}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the required area $= 2\\sqrt{3} + \\dfrac{4\\pi}{3}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $\\sin^{-1}\\frac{1}{2} = \\frac{\\pi}{3}$ instead of $\\frac{\\pi}{6}$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the area bounded by $y = \\sin x$ and the x-axis between $x = 0$ and $x = \\dfrac{3\\pi}{2}$.",
+          "solution": {
+            "answer": "$3$ sq units",
+            "concept": "A part of the region below the x-axis is taken with modulus.",
+            "steps": [
+              {
+                "do": "Sketch: $\\sin x \\ge 0$ on $[0, \\pi]$ and $\\sin x \\le 0$ on $\\left[\\pi, \\dfrac{3\\pi}{2}\\right]$.",
+                "figure": "figs/q13.svg"
+              },
+              {
+                "do": "Split at $x = \\pi$ and write the area.",
+                "math": "A = \\displaystyle\\int_0^{\\pi}\\sin x\\,dx + \\left|\\int_{\\pi}^{3\\pi/2}\\sin x\\,dx\\right|",
+                "marks": 1
+              },
+              {
+                "do": "Evaluate each integral.",
+                "math": "\\begin{aligned} \\displaystyle\\int_0^{\\pi}\\sin x\\,dx &= \\left[-\\cos x\\right]_0^{\\pi} = 1 + 1 = 2 \\\\ \\int_{\\pi}^{3\\pi/2}\\sin x\\,dx &= \\left[-\\cos x\\right]_{\\pi}^{3\\pi/2} = 0 - 1 = -1 \\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the two areas.",
+                "math": "A = 2 + |-1| = 3"
+              },
+              {
+                "do": "Hence the required area $= 3$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Integrating straight from $0$ to $\\frac{3\\pi}{2}$ gives $1$, not the area."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the area of the region bounded by $y = x^3$, the x-axis and the lines $x = -2$ and $x = 1$.",
+          "solution": {
+            "answer": "$\\dfrac{17}{4}$ sq units",
+            "concept": "A part of the region below the x-axis is taken with modulus.",
+            "steps": [
+              {
+                "do": "Sketch: $x^3 < 0$ for $x < 0$ and $x^3 > 0$ for $x > 0$.",
+                "figure": "figs/q14.svg"
+              },
+              {
+                "do": "Split at $x = 0$ and write the area.",
+                "math": "A = \\left|\\displaystyle\\int_{-2}^{0} x^3\\,dx\\right| + \\int_0^1 x^3\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Evaluate each integral.",
+                "math": "\\begin{aligned} \\displaystyle\\int_{-2}^{0} x^3\\,dx &= \\left[\\dfrac{x^4}{4}\\right]_{-2}^{0} = 0 - 4 = -4 \\\\ \\int_0^1 x^3\\,dx &= \\left[\\dfrac{x^4}{4}\\right]_0^1 = \\dfrac{1}{4} \\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the two areas.",
+                "math": "A = |-4| + \\dfrac{1}{4} = \\dfrac{17}{4}"
+              },
+              {
+                "do": "Hence the required area $= \\dfrac{17}{4}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Integrating straight from $-2$ to $1$ gives $-\\frac{15}{4}$, which is wrong."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 27,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "question": "Find the area of the region in the first quadrant enclosed by the x-axis, the line $y = x$ and the circle $x^2 + y^2 = 32$.",
+          "solution": {
+            "answer": "$4\\pi$ sq units",
+            "concept": "$\\int\\sqrt{a^2-x^2}\\,dx=\\frac{x}{2}\\sqrt{a^2-x^2}+\\frac{a^2}{2}\\sin^{-1}\\frac{x}{a}+C$",
+            "steps": [
+              {
+                "do": "Solve $y = x$ with $x^2 + y^2 = 32$.",
+                "math": "x^2 + x^2 = 32 \\Rightarrow x^2 = 16 \\Rightarrow x = 4",
+                "why": "Take $x > 0$ in the first quadrant."
+              },
+              {
+                "do": "So the line meets the circle at $B(4, 4)$; the circle meets the x-axis at $A(4\\sqrt{2}, 0)$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Draw the sketch and $BM \\perp$ x-axis; area $= $ ar$(OBM) + $ ar$(BMA)$.",
+                "marks": 1,
+                "figure": "figs/q15.svg"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_0^4 x\\,dx + \\int_4^{4\\sqrt{2}} \\sqrt{32 - x^2}\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Area of $OBM$ (under the line).",
+                "math": "\\displaystyle\\int_0^4 x\\,dx = \\left[\\dfrac{x^2}{2}\\right]_0^4 = 8",
+                "marks": 0.5
+              },
+              {
+                "do": "Area of $BMA$: use the $\\sqrt{a^2 - x^2}$ formula with $a = 4\\sqrt{2}$.",
+                "math": "\\displaystyle\\int_4^{4\\sqrt{2}}\\sqrt{32 - x^2}\\,dx = \\left[\\dfrac{x}{2}\\sqrt{32 - x^2} + 16\\sin^{-1}\\dfrac{x}{4\\sqrt{2}}\\right]_4^{4\\sqrt{2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "\\begin{aligned} &= \\left(0 + 16\\cdot\\dfrac{\\pi}{2}\\right) - \\left(2\\cdot 4 + 16\\cdot\\dfrac{\\pi}{4}\\right) \\\\ &= 8\\pi - 8 - 4\\pi = 4\\pi - 8 \\end{aligned}",
+                "why": "$\\sin^{-1}\\frac{4}{4\\sqrt{2}} = \\sin^{-1}\\frac{1}{\\sqrt{2}} = \\frac{\\pi}{4}$",
+                "marks": 1
+              },
+              {
+                "do": "Add the two areas.",
+                "math": "A = 8 + (4\\pi - 8) = 4\\pi"
+              },
+              {
+                "do": "Hence the required area $= 4\\pi$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Integrating the circle from $0$ instead of from $x = 4$, where the line meets it."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "question": "Using integration, find the area of the triangle whose vertices are $(1, 0)$, $(2, 2)$ and $(3, 1)$.",
+          "solution": {
+            "answer": "$\\dfrac{3}{2}$ sq units",
+            "concept": "Line through two points: $y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1)$.",
+            "steps": [
+              {
+                "do": "Plot $A(1,0)$, $B(2,2)$, $C(3,1)$ and shade triangle $ABC$.",
+                "marks": 1,
+                "figure": "figs/q16.svg"
+              },
+              {
+                "do": "Equation of $AB$.",
+                "math": "y - 0 = \\dfrac{2 - 0}{2 - 1}(x - 1) \\Rightarrow y = 2x - 2",
+                "marks": 0.5
+              },
+              {
+                "do": "Equation of $BC$.",
+                "math": "y - 2 = \\dfrac{1 - 2}{3 - 2}(x - 2) \\Rightarrow y = 4 - x",
+                "marks": 0.5
+              },
+              {
+                "do": "Equation of $AC$.",
+                "math": "y - 0 = \\dfrac{1 - 0}{3 - 1}(x - 1) \\Rightarrow y = \\dfrac{x - 1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Area under $AB$ and $BC$, minus area under $AC$.",
+                "math": "\\text{ar}(ABC) = \\displaystyle\\int_1^2 (2x - 2)\\,dx + \\int_2^3 (4 - x)\\,dx - \\int_1^3 \\dfrac{x - 1}{2}\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Evaluate the first two integrals.",
+                "math": "\\begin{aligned} \\displaystyle\\int_1^2 (2x - 2)\\,dx &= \\left[x^2 - 2x\\right]_1^2 = 0 - (-1) = 1 \\\\ \\int_2^3 (4 - x)\\,dx &= \\left[4x - \\dfrac{x^2}{2}\\right]_2^3 = \\dfrac{15}{2} - 6 = \\dfrac{3}{2} \\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "Evaluate the third integral.",
+                "math": "\\displaystyle\\int_1^3 \\dfrac{x - 1}{2}\\,dx = \\dfrac{1}{2}\\left[\\dfrac{(x - 1)^2}{2}\\right]_1^3 = \\dfrac{1}{2}\\cdot 2 = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Combine.",
+                "math": "\\text{ar}(ABC) = 1 + \\dfrac{3}{2} - 1 = \\dfrac{3}{2}"
+              },
+              {
+                "do": "Hence the area of the triangle $= \\dfrac{3}{2}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Adding the area under $AC$ instead of subtracting it."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "question": "Find the area of the region bounded by the curve $y = 4x^2$ and the line $y = 8x + 12$.",
+          "solution": {
+            "answer": "$\\dfrac{128}{3}$ sq units",
+            "concept": "Area between curves $= \\int_a^b (y_{\\text{upper}} - y_{\\text{lower}})\\,dx$.",
+            "steps": [
+              {
+                "do": "Solve the two equations together.",
+                "math": "4x^2 = 8x + 12 \\Rightarrow x^2 - 2x - 3 = 0"
+              },
+              {
+                "do": "Factorise.",
+                "math": "(x - 3)(x + 1) = 0 \\Rightarrow x = -1 \\text{ or } x = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the points of intersection.",
+                "math": "P(-1, 4),\\quad Q(3, 36)",
+                "marks": 0.5
+              },
+              {
+                "do": "Draw the sketch; between $P$ and $Q$ the line is above the parabola.",
+                "marks": 1,
+                "figure": "figs/q17.svg"
+              },
+              {
+                "do": "Write the required area.",
+                "math": "A = \\displaystyle\\int_{-1}^{3}\\left[(8x + 12) - 4x^2\\right]dx",
+                "marks": 1
+              },
+              {
+                "do": "Integrate.",
+                "math": "A = \\left[4x^2 + 12x - \\dfrac{4x^3}{3}\\right]_{-1}^{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "\\begin{aligned} A &= (36 + 36 - 36) - \\left(4 - 12 + \\dfrac{4}{3}\\right) \\\\ &= 36 + \\dfrac{20}{3} = \\dfrac{128}{3} \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "Hence the required area $= \\dfrac{128}{3}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Sign slip at $x = -1$: $-\\frac{4(-1)^3}{3} = +\\frac{4}{3}$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "question": "Using integration, find the area of the region bounded by the curve $4x^2 + y^2 = 36$.",
+          "solution": {
+            "answer": "$18\\pi$ sq units",
+            "concept": "$\\int\\sqrt{a^2-x^2}\\,dx=\\frac{x}{2}\\sqrt{a^2-x^2}+\\frac{a^2}{2}\\sin^{-1}\\frac{x}{a}+C$",
+            "steps": [
+              {
+                "do": "Divide by $36$ to get the standard form.",
+                "math": "\\dfrac{x^2}{9} + \\dfrac{y^2}{36} = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "It is an ellipse with vertices $(\\pm 3, 0)$ and $(0, \\pm 6)$."
+              },
+              {
+                "do": "Draw the sketch and shade the whole ellipse.",
+                "marks": 1,
+                "figure": "figs/q18.svg"
+              },
+              {
+                "do": "Solve for $y$ in the first quadrant.",
+                "math": "y^2 = 36 - 4x^2 \\Rightarrow y = 2\\sqrt{9 - x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Area $= 4 \\times$ area in the first quadrant.",
+                "math": "A = 4\\displaystyle\\int_0^3 y\\,dx = 4\\int_0^3 2\\sqrt{9 - x^2}\\,dx = 8\\int_0^3\\sqrt{9 - x^2}\\,dx",
+                "why": "The ellipse is symmetric about both axes.",
+                "marks": 1
+              },
+              {
+                "do": "Integrate using the $\\sqrt{a^2 - x^2}$ formula with $a = 3$.",
+                "math": "A = 8\\left[\\dfrac{x}{2}\\sqrt{9 - x^2} + \\dfrac{9}{2}\\sin^{-1}\\dfrac{x}{3}\\right]_0^3",
+                "marks": 0.5
+              },
+              {
+                "do": "Put the limits.",
+                "math": "A = 8\\left[\\left(0 + \\dfrac{9}{2}\\cdot\\dfrac{\\pi}{2}\\right) - 0\\right] = 8\\cdot\\dfrac{9\\pi}{4} = 18\\pi",
+                "marks": 1
+              },
+              {
+                "do": "Hence the required area $= 18\\pi$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to multiply by $4$ and giving only the quarter area $\\frac{9\\pi}{2}$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the area of the region bounded by the parabola $y^2 = 4ax$ and its latus rectum.",
+          "solution": {
+            "answer": "$\\dfrac{8a^2}{3}$ sq units",
+            "concept": "Latus rectum of $y^2 = 4ax$ is the line $x = a$ through the focus $S(a, 0)$.",
+            "steps": [
+              {
+                "do": "Put $x = a$ in the parabola to find the ends of the latus rectum.",
+                "math": "y^2 = 4a^2 \\Rightarrow y = \\pm 2a",
+                "marks": 0.5
+              },
+              {
+                "do": "So $L(a, 2a)$ and $L'(a, -2a)$; draw the sketch.",
+                "marks": 0.5,
+                "figure": "figs/q19.svg"
+              },
+              {
+                "do": "The region is symmetric about the x-axis.",
+                "math": "A = 2\\displaystyle\\int_0^a y\\,dx = 2\\int_0^a 2\\sqrt{ax}\\,dx",
+                "why": "Area $OLL' = 2\\times$ area $OLS$.",
+                "marks": 1
+              },
+              {
+                "do": "Integrate.",
+                "math": "A = 4\\sqrt{a}\\left[\\dfrac{2}{3}x^{3/2}\\right]_0^a = \\dfrac{8\\sqrt{a}}{3}\\cdot a^{3/2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify: $\\sqrt{a}\\cdot a^{3/2} = a^2$.",
+                "math": "A = \\dfrac{8a^2}{3}"
+              },
+              {
+                "do": "Hence the required area $= \\dfrac{8a^2}{3}$ sq units.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking only the upper half and getting $\\frac{4a^2}{3}$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** A running track in a sports complex is in the shape of the ellipse $\\dfrac{x^2}{36} + \\dfrac{y^2}{16} = 1$ (units in metres). The region inside the track is to be grassed.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Find the total area enclosed by the track.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Find the area of the region in the first quadrant enclosed by the track and the axes.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Find the area of the region inside the track between $x = 0$ and $x = 3$ in the first quadrant.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $24\\pi\\ \\text{m}^2$ (ii) $6\\pi\\ \\text{m}^2$ (iii) $(3\\sqrt{3} + 2\\pi)\\ \\text{m}^2$",
+            "concept": "Area of an ellipse is $\\pi ab$; part areas use $\\int\\sqrt{a^2-x^2}\\,dx$.",
+            "figure": "figs/q20.svg",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Compare with $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$.",
+                    "math": "a = 6,\\quad b = 4"
+                  },
+                  {
+                    "do": "Use area of ellipse $= \\pi ab$.",
+                    "math": "A = \\pi(6)(4) = 24\\pi",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Total area enclosed $= 24\\pi\\ \\text{m}^2$."
+                  }
+                ],
+                "answer": "$24\\pi\\ \\text{m}^2$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "The ellipse is symmetric about both axes, so take one quarter.",
+                    "math": "A = \\dfrac{1}{4}\\times 24\\pi = 6\\pi",
+                    "marks": 1
+                  },
+                  {
+                    "do": "First-quadrant area $= 6\\pi\\ \\text{m}^2$."
+                  }
+                ],
+                "answer": "$6\\pi\\ \\text{m}^2$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Solve for $y$ in the first quadrant.",
+                    "math": "y = \\dfrac{4}{6}\\sqrt{36 - x^2} = \\dfrac{2}{3}\\sqrt{36 - x^2}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Write the required area.",
+                    "math": "A = \\displaystyle\\int_0^3 \\dfrac{2}{3}\\sqrt{36 - x^2}\\,dx",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Integrate using the $\\sqrt{a^2 - x^2}$ formula with $a = 6$.",
+                    "math": "A = \\dfrac{2}{3}\\left[\\dfrac{x}{2}\\sqrt{36 - x^2} + 18\\sin^{-1}\\dfrac{x}{6}\\right]_0^3",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Put the limits.",
+                    "math": "\\begin{aligned} A &= \\dfrac{2}{3}\\left[\\dfrac{3}{2}\\sqrt{27} + 18\\cdot\\dfrac{\\pi}{6}\\right] \\\\ &= \\dfrac{2}{3}\\left[\\dfrac{9\\sqrt{3}}{2} + 3\\pi\\right] \\end{aligned}",
+                    "why": "$\\sin^{-1}\\frac{1}{2} = \\frac{\\pi}{6}$, $\\sqrt{27} = 3\\sqrt{3}$"
+                  },
+                  {
+                    "do": "Hence the required area $= (3\\sqrt{3} + 2\\pi)\\ \\text{m}^2$.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$(3\\sqrt{3} + 2\\pi)\\ \\text{m}^2$"
+              }
+            ],
+            "mistake": "In (iii), forgetting the factor $\\frac{2}{3}$ that comes from $y = \\frac{4}{6}\\sqrt{36 - x^2}$."
+          }
+        }
+      ]
+    }
+  ]
+}

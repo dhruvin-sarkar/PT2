@@ -1,0 +1,464 @@
+{
+  "chapter": 8,
+  "chapterTitle": "Application of Integrals",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 53,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "A student observes an open-air honeybee nest on the branch of a tree, whose plane figure is parabolic in shape, given by $x^2 = 4y$. Then the area (in sq units) of the region bounded by the parabola $x^2 = 4y$ and the line $y = 4$ is:",
+          "options": [
+            "$\\dfrac{32}{3}$",
+            "$\\dfrac{64}{3}$",
+            "$\\dfrac{128}{3}$",
+            "$\\dfrac{256}{3}$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{64}{3}$",
+            "concept": "Area between a curve and the y-axis: $\\displaystyle\\int_c^d x\\,dy$",
+            "steps": [
+              { "do": "Write $x$ in terms of $y$ (first quadrant)", "math": "x^2 = 4y \\Rightarrow x = 2\\sqrt{y}" },
+              { "do": "The region is symmetric about the y-axis, so double the first-quadrant part", "math": "A = 2\\displaystyle\\int_0^4 2\\sqrt{y}\\,dy" },
+              { "do": "Integrate and put the limits", "math": "A = 4\\cdot\\dfrac{2}{3}\\left[y^{3/2}\\right]_0^4 = 4 \\cdot \\dfrac{2}{3} \\cdot 8 = \\dfrac{64}{3}", "marks": 1 }
+            ],
+            "mistake": "Forgetting to double: the first-quadrant part alone is $\\dfrac{32}{3}$, which is option (A)."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The area of the region in the first quadrant enclosed by the circle $x^2 + y^2 = 36$ and the coordinate axes is:",
+          "options": [
+            "$9\\pi$ sq units",
+            "$18\\pi$ sq units",
+            "$36\\pi$ sq units",
+            "$6\\pi$ sq units"
+          ],
+          "solution": {
+            "answer": "(A) $9\\pi$ sq units",
+            "concept": "$\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx = \\dfrac{x}{2}\\sqrt{a^2 - x^2} + \\dfrac{a^2}{2}\\sin^{-1}\\dfrac{x}{a} + C$",
+            "steps": [
+              { "do": "Radius $r = 6$; in the first quadrant the curve is", "math": "y = \\sqrt{36 - x^2},\\quad 0 \\le x \\le 6" },
+              { "do": "Write the area", "math": "A = \\displaystyle\\int_0^6 \\sqrt{36 - x^2}\\,dx = \\left[\\dfrac{x}{2}\\sqrt{36 - x^2} + 18\\sin^{-1}\\dfrac{x}{6}\\right]_0^6" },
+              { "do": "Put the limits", "math": "A = 0 + 18 \\cdot \\dfrac{\\pi}{2} - 0 = 9\\pi", "marks": 1 }
+            ],
+            "mistake": "Giving the area of the whole circle, $\\pi r^2 = 36\\pi$, when only one quadrant is asked."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The area enclosed by the ellipse $x^2 + 4y^2 = 16$ is:",
+          "options": [
+            "$16\\pi$ sq units",
+            "$64\\pi$ sq units",
+            "$8\\pi$ sq units",
+            "$4\\pi$ sq units"
+          ],
+          "solution": {
+            "answer": "(C) $8\\pi$ sq units",
+            "concept": "Area enclosed by $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ is $\\pi ab$.",
+            "steps": [
+              { "do": "Divide by $16$ to get the standard form", "math": "\\dfrac{x^2}{16} + \\dfrac{y^2}{4} = 1 \\Rightarrow a = 4,\\ b = 2" },
+              { "do": "Use area $= \\pi ab$", "math": "A = \\pi \\times 4 \\times 2 = 8\\pi", "marks": 1 }
+            ],
+            "mistake": "Using $a^2$ and $b^2$ instead of $a$ and $b$: $\\pi \\times 16 \\times 4 = 64\\pi$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The area of the region bounded by the curve $y = \\sin x$, the x-axis and the lines $x = 0$ and $x = \\pi$ is:",
+          "options": [
+            "$1$ sq unit",
+            "$2$ sq units",
+            "$0$",
+            "$\\pi$ sq units"
+          ],
+          "solution": {
+            "answer": "(B) $2$ sq units",
+            "steps": [
+              { "do": "$\\sin x \\ge 0$ on $[0, \\pi]$, so the area is the integral itself", "math": "A = \\displaystyle\\int_0^{\\pi} \\sin x\\,dx" },
+              { "do": "Integrate and put the limits", "math": "A = \\left[-\\cos x\\right]_0^{\\pi} = -\\cos\\pi + \\cos 0 = 1 + 1 = 2", "marks": 1 }
+            ],
+            "mistake": "Writing $-\\cos\\pi$ as $-1$; since $\\cos\\pi = -1$, $-\\cos\\pi = +1$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The area of the region bounded by the line $x + 2y = 4$ and the coordinate axes is:",
+          "options": [
+            "$8$ sq units",
+            "$2$ sq units",
+            "$16$ sq units",
+            "$4$ sq units"
+          ],
+          "solution": {
+            "answer": "(D) $4$ sq units",
+            "steps": [
+              { "do": "Write $y$ in terms of $x$; the line meets the x-axis at $x = 4$", "math": "y = \\dfrac{4 - x}{2}" },
+              { "do": "Area under the line from $x = 0$ to $x = 4$", "math": "A = \\displaystyle\\int_0^4 \\dfrac{4 - x}{2}\\,dx = \\dfrac{1}{2}\\left[4x - \\dfrac{x^2}{2}\\right]_0^4" },
+              { "do": "Put the limits", "math": "A = \\dfrac{1}{2}(16 - 8) = 4", "marks": 1 }
+            ],
+            "mistake": "Multiplying the intercepts, $4 \\times 2 = 8$, and forgetting the $\\dfrac{1}{2}$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** The area of the region bounded by the curve $y = x^3$, the x-axis and the lines $x = -1$ and $x = 1$ is $0$. **Reason (R):** $\\displaystyle\\int_{-1}^{1} x^3\\,dx = 0$, as $x^3$ is an odd function.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(D) A is false, but R is true",
+            "concept": "Area is always positive: take the modulus of the part below the x-axis.",
+            "steps": [
+              { "do": "For A: $x^3 < 0$ on $(-1, 0)$, so split the area", "math": "\\text{Area} = \\left|\\displaystyle\\int_{-1}^{0} x^3\\,dx\\right| + \\displaystyle\\int_0^1 x^3\\,dx = \\dfrac{1}{4} + \\dfrac{1}{4} = \\dfrac{1}{2}" },
+              { "do": "The area is $\\dfrac{1}{2}$, not $0$, so A is false" },
+              { "do": "For R: evaluate the integral", "math": "\\displaystyle\\int_{-1}^{1} x^3\\,dx = \\left[\\dfrac{x^4}{4}\\right]_{-1}^{1} = \\dfrac{1}{4} - \\dfrac{1}{4} = 0", "why": "Integral of an odd function over $[-a, a]$ is $0$." },
+              { "do": "So R is true; R cannot explain A, since A is false" },
+              { "do": "A is false and R is true, so the option is (D)", "marks": 1 }
+            ],
+            "mistake": "Taking the definite integral as the area; the two equal parts cancel in the integral."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2025-26",
+          "question": "Find the area of the shaded region in the figure given below. The region lies in the first quadrant and is bounded by the parabola $x^2 = y$, the y-axis and the line $y = 4$.",
+          "figure": "figs/pa-q07.svg",
+          "solution": {
+            "answer": "$\\dfrac{16}{3}$ sq units",
+            "concept": "Area between a curve and the y-axis: $A = \\displaystyle\\int_c^d x\\,dy$",
+            "steps": [
+              { "do": "In the first quadrant, $x = \\sqrt{y}$; take horizontal strips from $y = 0$ to $y = 4$", "math": "A = \\displaystyle\\int_0^4 x\\,dy = \\displaystyle\\int_0^4 \\sqrt{y}\\,dy", "marks": 1 },
+              { "do": "Integrate and put the limits", "math": "A = \\dfrac{2}{3}\\left[y^{3/2}\\right]_0^4 = \\dfrac{2}{3}(8 - 0)" },
+              { "do": "Required area", "math": "A = \\dfrac{16}{3}\\ \\text{sq units}", "marks": 1 }
+            ],
+            "mistake": "Finding $\\displaystyle\\int_0^2 x^2\\,dx = \\dfrac{8}{3}$: that is the area below the curve, not the shaded part."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Sketch the graph of $y = x^2$ and, using integration, find the area of the region bounded by the curve $y = x^2$, the x-axis and the lines $x = -1$ and $x = 2$.",
+          "solution": {
+            "answer": "$3$ sq units",
+            "figure": "figs/pa-q08.svg",
+            "steps": [
+              { "do": "Sketch the parabola $y = x^2$ and shade the region from $x = -1$ to $x = 2$", "marks": 0.5 },
+              { "do": "$y = x^2 \\ge 0$ for all $x$, so the whole region is above the x-axis", "math": "A = \\displaystyle\\int_{-1}^{2} x^2\\,dx", "marks": 1 },
+              { "do": "Integrate and put the limits", "math": "A = \\left[\\dfrac{x^3}{3}\\right]_{-1}^{2} = \\dfrac{8}{3} - \\left(-\\dfrac{1}{3}\\right)", "marks": 1 },
+              { "do": "Required area", "math": "A = \\dfrac{9}{3} = 3\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Subtracting $\\dfrac{1}{3}$ instead of $-\\dfrac{1}{3}$ at the lower limit, which gives $\\dfrac{7}{3}$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Sketch the region bounded by the lines $2x + y = 8$, $y = 2$, $y = 4$ and the y-axis. Hence, obtain its area using integration.",
+          "solution": {
+            "answer": "$5$ sq units",
+            "figure": "figs/pa-q09.svg",
+            "steps": [
+              { "do": "Sketch: the line meets $y = 2$ at $(3, 2)$ and $y = 4$ at $(2, 4)$", "marks": 1 },
+              { "do": "Write $x$ in terms of $y$", "math": "2x + y = 8 \\Rightarrow x = \\dfrac{8 - y}{2}" },
+              { "do": "Take horizontal strips from $y = 2$ to $y = 4$", "math": "A = \\displaystyle\\int_2^4 x\\,dy = \\dfrac{1}{2}\\displaystyle\\int_2^4 (8 - y)\\,dy", "marks": 1 },
+              { "do": "Integrate and put the limits", "math": "A = \\dfrac{1}{2}\\left[8y - \\dfrac{y^2}{2}\\right]_2^4 = \\dfrac{1}{2}\\left[(32 - 8) - (16 - 2)\\right]", "marks": 0.5 },
+              { "do": "Required area", "math": "A = \\dfrac{1}{2} \\times 10 = 5\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Using vertical strips with $dx$; the region is bounded by $y = 2$, $y = 4$ and the y-axis, so integrate w.r.t. $y$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Using integration, find the area of the region bounded by the line $y = 4 - 2x$, the x-axis and the ordinates $x = -1$ and $x = 3$.",
+          "solution": {
+            "answer": "$10$ sq units",
+            "figure": "figs/pa-q10.svg",
+            "steps": [
+              { "do": "Find where the line meets the x-axis (put $y = 0$)", "math": "4 - 2x = 0 \\Rightarrow x = 2", "marks": 0.5 },
+              { "do": "Line is above the x-axis on $[-1, 2]$ and below it on $[2, 3]$", "math": "A = \\displaystyle\\int_{-1}^{2} (4 - 2x)\\,dx + \\left|\\displaystyle\\int_2^3 (4 - 2x)\\,dx\\right|", "marks": 1 },
+              { "do": "First integral", "math": "\\left[4x - x^2\\right]_{-1}^{2} = (8 - 4) - (-4 - 1) = 9", "marks": 0.5 },
+              { "do": "Second integral", "math": "\\left[4x - x^2\\right]_2^3 = (12 - 9) - (8 - 4) = -1", "marks": 0.5 },
+              { "do": "Required area", "math": "A = 9 + |-1| = 10\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Integrating straight from $-1$ to $3$ gives $9 - 1 = 8$; the part below the x-axis must be added as $|-1|$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Using integration, find the area of the region bounded by the curve $y = \\dfrac{3}{2}\\sqrt{4 - x^2}$ and the x-axis.",
+          "solution": {
+            "answer": "$3\\pi$ sq units",
+            "figure": "figs/pa-q11.svg",
+            "steps": [
+              { "do": "Square both sides: the curve is the upper half of an ellipse", "math": "\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1,\\quad y \\ge 0" },
+              { "do": "It meets the x-axis at $x = \\pm 2$; use symmetry about the y-axis", "math": "A = \\displaystyle\\int_{-2}^{2} \\dfrac{3}{2}\\sqrt{4 - x^2}\\,dx = 3\\displaystyle\\int_0^2 \\sqrt{4 - x^2}\\,dx", "marks": 1 },
+              { "do": "Integrate and put the limits", "math": "A = 3\\left[\\dfrac{x}{2}\\sqrt{4 - x^2} + 2\\sin^{-1}\\dfrac{x}{2}\\right]_0^2 = 3\\left[0 + 2 \\cdot \\dfrac{\\pi}{2}\\right]", "marks": 0.5 },
+              { "do": "Required area", "math": "A = 3\\pi\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Taking the whole ellipse, $6\\pi$; the curve $y = \\dfrac{3}{2}\\sqrt{4 - x^2}$ gives only the upper half."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Using integration, find the area of the minor segment of the circle $x^2 + y^2 = 16$ cut off by the line $x = 2$.",
+          "solution": {
+            "answer": "$\\left(\\dfrac{16\\pi}{3} - 4\\sqrt{3}\\right)$ sq units",
+            "figure": "figs/pa-q12.svg",
+            "steps": [
+              { "do": "The line $x = 2$ meets the circle at $(2, \\pm 2\\sqrt{3})$; the minor segment runs from $x = 2$ to $x = 4$", "marks": 0.5 },
+              { "do": "The segment is symmetric about the x-axis", "math": "A = 2\\displaystyle\\int_2^4 \\sqrt{16 - x^2}\\,dx", "marks": 1 },
+              { "do": "Use the formula for $\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx$", "math": "A = 2\\left[\\dfrac{x}{2}\\sqrt{16 - x^2} + 8\\sin^{-1}\\dfrac{x}{4}\\right]_2^4", "marks": 0.5 },
+              { "do": "Put the limits", "math": "A = 2\\left[\\left(0 + 8 \\cdot \\dfrac{\\pi}{2}\\right) - \\left(2\\sqrt{3} + 8 \\cdot \\dfrac{\\pi}{6}\\right)\\right]", "marks": 0.5 },
+              { "do": "Simplify", "math": "A = 2\\left[4\\pi - 2\\sqrt{3} - \\dfrac{4\\pi}{3}\\right] = 2\\left[\\dfrac{8\\pi}{3} - 2\\sqrt{3}\\right]" },
+              { "do": "Required area", "math": "A = \\left(\\dfrac{16\\pi}{3} - 4\\sqrt{3}\\right)\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Forgetting the factor $2$: the integral alone gives only the half above the x-axis."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "Draw the rough sketch of the curve $y = 20\\cos 2x$, where $\\dfrac{\\pi}{6} \\le x \\le \\dfrac{\\pi}{3}$. Using integration, find the area of the region bounded by the curve $y = 20\\cos 2x$ from the ordinates $x = \\dfrac{\\pi}{6}$ to $x = \\dfrac{\\pi}{3}$ and the x-axis.",
+          "solution": {
+            "answer": "$(20 - 10\\sqrt{3})$ sq units",
+            "figure": "figs/pa-q13.svg",
+            "steps": [
+              { "do": "Sketch: the curve cuts the x-axis where $\\cos 2x = 0$", "math": "2x = \\dfrac{\\pi}{2} \\Rightarrow x = \\dfrac{\\pi}{4}", "marks": 0.5 },
+              { "do": "Curve is above the x-axis on $\\left[\\dfrac{\\pi}{6}, \\dfrac{\\pi}{4}\\right]$ and below on $\\left[\\dfrac{\\pi}{4}, \\dfrac{\\pi}{3}\\right]$", "math": "A = 20\\displaystyle\\int_{\\pi/6}^{\\pi/4} \\cos 2x\\,dx + \\left|20\\displaystyle\\int_{\\pi/4}^{\\pi/3} \\cos 2x\\,dx\\right|" },
+              { "do": "Integrate", "math": "A = 10\\left[\\sin 2x\\right]_{\\pi/6}^{\\pi/4} + \\left|10\\left[\\sin 2x\\right]_{\\pi/4}^{\\pi/3}\\right|" },
+              { "do": "Put the limits", "math": "A = 10\\left(1 - \\dfrac{\\sqrt{3}}{2}\\right) + \\left|10\\left(\\dfrac{\\sqrt{3}}{2} - 1\\right)\\right|", "marks": 1 },
+              { "do": "Required area", "math": "A = (10 - 5\\sqrt{3}) + (10 - 5\\sqrt{3}) = (20 - 10\\sqrt{3})\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Integrating straight from $\\dfrac{\\pi}{6}$ to $\\dfrac{\\pi}{3}$ gives $0$, because the two parts cancel."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Using integration, find the area of the region bounded by the curve $y = x|x|$, the x-axis and the ordinates $x = -1$ and $x = 1$.",
+          "solution": {
+            "answer": "$\\dfrac{2}{3}$ sq units",
+            "figure": "figs/pa-q14.svg",
+            "steps": [
+              { "do": "Remove the modulus", "math": "y = x|x| = \\begin{cases} -x^2, & x < 0 \\\\ x^2, & x \\ge 0 \\end{cases}", "marks": 0.5 },
+              { "do": "The curve is below the x-axis for $x < 0$, so take the modulus there", "math": "A = \\left|\\displaystyle\\int_{-1}^{0} (-x^2)\\,dx\\right| + \\displaystyle\\int_0^1 x^2\\,dx", "marks": 0.5 },
+              { "do": "Integrate and put the limits", "math": "A = \\left|\\left[-\\dfrac{x^3}{3}\\right]_{-1}^{0}\\right| + \\left[\\dfrac{x^3}{3}\\right]_0^1 = \\left|-\\dfrac{1}{3}\\right| + \\dfrac{1}{3}", "marks": 0.5 },
+              { "do": "Required area", "math": "A = \\dfrac{2}{3}\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Writing the area as $\\displaystyle\\int_{-1}^{1} x|x|\\,dx = 0$; $x|x|$ is odd, so the two parts cancel."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 27,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2026-27",
+          "question": "Using integration, find the area of the region $\\{(x, y) : 0 \\le y \\le \\sqrt{4 - x^2},\\ x \\ge 2 - y\\}$.",
+          "solution": {
+            "answer": "$(\\pi - 2)$ sq units",
+            "figure": "figs/pa-q15.svg",
+            "steps": [
+              { "do": "$y = \\sqrt{4 - x^2}$ is the upper semicircle of $x^2 + y^2 = 4$ (centre O, radius $2$)" },
+              { "do": "$x \\ge 2 - y$ means $x + y \\ge 2$: the side of the line away from O" },
+              { "do": "The line $x + y = 2$ meets the circle at $A(2, 0)$ and $B(0, 2)$; sketch and shade the region", "marks": 1 },
+              { "do": "The circle is on top and the line below, for $0 \\le x \\le 2$", "math": "A = \\displaystyle\\int_0^2 \\left[\\sqrt{4 - x^2} - (2 - x)\\right] dx", "marks": 1 },
+              { "do": "Integrate", "math": "A = \\left[\\dfrac{x}{2}\\sqrt{4 - x^2} + 2\\sin^{-1}\\dfrac{x}{2} - 2x + \\dfrac{x^2}{2}\\right]_0^2", "marks": 1 },
+              { "do": "Put the limits", "math": "A = \\left(0 + 2 \\cdot \\dfrac{\\pi}{2} - 4 + 2\\right) - 0", "marks": 1 },
+              { "do": "Required area", "math": "A = (\\pi - 2)\\ \\text{sq units}", "marks": 1 }
+            ],
+            "mistake": "Shading the triangle OAB instead: $x \\ge 2 - y$ is the side of the line away from the origin."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Using integration, find the area of the triangle whose vertices are $A(-1, 0)$, $B(1, 3)$ and $C(3, 2)$.",
+          "solution": {
+            "answer": "$4$ sq units",
+            "figure": "figs/pa-q16.svg",
+            "steps": [
+              { "do": "Plot the three vertices and draw the triangle", "marks": 0.5 },
+              { "do": "Equation of AB (two-point form)", "math": "y - 0 = \\dfrac{3 - 0}{1 + 1}(x + 1) \\Rightarrow y = \\dfrac{3}{2}(x + 1)", "marks": 0.5 },
+              { "do": "Equation of BC", "math": "y - 3 = \\dfrac{2 - 3}{3 - 1}(x - 1) \\Rightarrow y = \\dfrac{7 - x}{2}", "marks": 0.5 },
+              { "do": "Equation of AC", "math": "y - 0 = \\dfrac{2 - 0}{3 + 1}(x + 1) \\Rightarrow y = \\dfrac{x + 1}{2}", "marks": 0.5 },
+              { "do": "Area = area under AB + area under BC − area under AC", "math": "A = \\displaystyle\\int_{-1}^{1} \\dfrac{3}{2}(x + 1)\\,dx + \\displaystyle\\int_1^3 \\dfrac{7 - x}{2}\\,dx - \\displaystyle\\int_{-1}^{3} \\dfrac{x + 1}{2}\\,dx", "marks": 1 },
+              { "do": "First integral", "math": "\\dfrac{3}{2}\\left[\\dfrac{(x + 1)^2}{2}\\right]_{-1}^{1} = \\dfrac{3}{2} \\times 2 = 3", "marks": 0.5 },
+              { "do": "Second integral", "math": "\\dfrac{1}{2}\\left[7x - \\dfrac{x^2}{2}\\right]_1^3 = \\dfrac{1}{2}\\left[\\dfrac{33}{2} - \\dfrac{13}{2}\\right] = 5", "marks": 0.5 },
+              { "do": "Third integral", "math": "\\dfrac{1}{2}\\left[\\dfrac{(x + 1)^2}{2}\\right]_{-1}^{3} = \\dfrac{1}{2} \\times 8 = 4", "marks": 0.5 },
+              { "do": "Required area", "math": "A = 3 + 5 - 4 = 4\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Adding the area under AC instead of subtracting it; AC is the lower side of the triangle."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2026-27",
+          "question": "Using integration, find the area of the region bounded by the curve $y^2 = 2x$ and the line $x - 2y = 0$.",
+          "solution": {
+            "answer": "$\\dfrac{16}{3}$ sq units",
+            "figure": "figs/pa-q17.svg",
+            "steps": [
+              { "do": "Put $x = 2y$ in $y^2 = 2x$", "math": "y^2 = 4y \\Rightarrow y = 0 \\text{ or } y = 4" },
+              { "do": "So the curves meet at $O(0, 0)$ and $P(8, 4)$", "marks": 1 },
+              { "do": "Sketch: between O and P the parabola $y = \\sqrt{2x}$ lies above the line $y = \\dfrac{x}{2}$", "marks": 1 },
+              { "do": "Write the area", "math": "A = \\displaystyle\\int_0^8 \\left(\\sqrt{2x} - \\dfrac{x}{2}\\right) dx", "marks": 1 },
+              { "do": "Integrate", "math": "A = \\left[\\sqrt{2} \\cdot \\dfrac{2}{3}x^{3/2} - \\dfrac{x^2}{4}\\right]_0^8", "marks": 1 },
+              { "do": "Put the limits, using $8^{3/2} = 16\\sqrt{2}$", "math": "A = \\dfrac{2\\sqrt{2}}{3} \\cdot 16\\sqrt{2} - 16 = \\dfrac{64}{3} - 16" },
+              { "do": "Required area", "math": "A = \\dfrac{16}{3}\\ \\text{sq units}", "marks": 1 }
+            ],
+            "mistake": "Taking the line as the upper curve gives $-\\dfrac{16}{3}$; check which curve is on top first."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2026-27",
+          "question": "Using integration, find the area of the region enclosed within $25x^2 + 16y^2 = 400$.",
+          "solution": {
+            "answer": "$20\\pi$ sq units",
+            "figure": "figs/pa-q18.svg",
+            "steps": [
+              { "do": "Divide by $400$ to get the standard form", "math": "\\dfrac{x^2}{16} + \\dfrac{y^2}{25} = 1,\\quad a = 4,\\ b = 5", "marks": 0.5 },
+              { "do": "Sketch the ellipse through $(\\pm 4, 0)$ and $(0, \\pm 5)$", "marks": 1 },
+              { "do": "In the first quadrant", "math": "y = \\dfrac{5}{4}\\sqrt{16 - x^2}" },
+              { "do": "The ellipse is symmetric about both axes", "math": "A = 4\\displaystyle\\int_0^4 \\dfrac{5}{4}\\sqrt{16 - x^2}\\,dx = 5\\displaystyle\\int_0^4 \\sqrt{16 - x^2}\\,dx", "marks": 1 },
+              { "do": "Integrate", "math": "A = 5\\left[\\dfrac{x}{2}\\sqrt{16 - x^2} + 8\\sin^{-1}\\dfrac{x}{4}\\right]_0^4", "marks": 1 },
+              { "do": "Put the limits", "math": "A = 5\\left[0 + 8 \\cdot \\dfrac{\\pi}{2} - 0\\right] = 5 \\times 4\\pi", "marks": 0.5 },
+              { "do": "Required area", "math": "A = 20\\pi\\ \\text{sq units}", "marks": 1 }
+            ],
+            "mistake": "Writing $y = \\dfrac{4}{5}\\sqrt{25 - x^2}$; here the larger denominator, $25$, is under $y^2$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2025-26",
+          "question": "Using integration, find the area of the region $\\{(x, y) : x^2 - 4y \\le 0,\\ y - x \\le 0\\}$.",
+          "solution": {
+            "answer": "$\\dfrac{8}{3}$ sq units",
+            "figure": "figs/pa-q19.svg",
+            "steps": [
+              { "do": "$x^2 - 4y \\le 0$ means $y \\ge \\dfrac{x^2}{4}$: on or above the parabola $x^2 = 4y$" },
+              { "do": "$y - x \\le 0$ means $y \\le x$: on or below the line $y = x$" },
+              { "do": "Put $y = x$ in $x^2 = 4y$ to get the corners", "math": "x^2 = 4x \\Rightarrow x = 0,\\ 4;\\quad O(0, 0),\\ P(4, 4)", "marks": 1 },
+              { "do": "Line on top, parabola below, for $0 \\le x \\le 4$", "math": "A = \\displaystyle\\int_0^4 x\\,dx - \\displaystyle\\int_0^4 \\dfrac{x^2}{4}\\,dx", "marks": 1 },
+              { "do": "Integrate and put the limits", "math": "A = \\left[\\dfrac{x^2}{2}\\right]_0^4 - \\dfrac{1}{12}\\left[x^3\\right]_0^4 = 8 - \\dfrac{16}{3}", "marks": 0.5 },
+              { "do": "Required area", "math": "A = \\dfrac{8}{3}\\ \\text{sq units}", "marks": 0.5 }
+            ],
+            "mistake": "Reading $y - x \\le 0$ as the region above the line; it means $y \\le x$, below the line."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** A circular garden in a housing society has its boundary given by $x^2 + y^2 = 100$, with its centre at the origin (units in metres). A flower bed is to be made in the part of the garden between two straight paths along the lines $x = -5$ and $x = 5$. Based on this information, answer the following questions using integration.",
+          "parts": [
+            { "label": "(i)", "text": "Find the total area of the garden.", "marks": 1 },
+            { "label": "(ii)", "text": "Find the area of the part of the garden lying in the first quadrant.", "marks": 1 },
+            { "label": "(iii)", "text": "Find the area of the flower bed, that is, the part of the garden between the lines $x = -5$ and $x = 5$.", "marks": 2 }
+          ],
+          "solution": {
+            "answer": "(i) $100\\pi\\ \\text{m}^2$ (ii) $25\\pi\\ \\text{m}^2$ (iii) $\\left(50\\sqrt{3} + \\dfrac{100\\pi}{3}\\right)\\ \\text{m}^2$",
+            "concept": "$\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx = \\dfrac{x}{2}\\sqrt{a^2 - x^2} + \\dfrac{a^2}{2}\\sin^{-1}\\dfrac{x}{a} + C$",
+            "figure": "figs/pa-q20.svg",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  { "do": "Radius $= 10$; the circle is symmetric about both axes", "math": "A = 4\\displaystyle\\int_0^{10} \\sqrt{100 - x^2}\\,dx = 4\\left[\\dfrac{x}{2}\\sqrt{100 - x^2} + 50\\sin^{-1}\\dfrac{x}{10}\\right]_0^{10}", "marks": 0.5 },
+                  { "do": "Put the limits", "math": "A = 4 \\times 50 \\cdot \\dfrac{\\pi}{2} = 100\\pi\\ \\text{m}^2", "marks": 0.5 }
+                ],
+                "answer": "$100\\pi\\ \\text{m}^2$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  { "do": "Take the first-quadrant part only", "math": "A = \\displaystyle\\int_0^{10} \\sqrt{100 - x^2}\\,dx = \\left[\\dfrac{x}{2}\\sqrt{100 - x^2} + 50\\sin^{-1}\\dfrac{x}{10}\\right]_0^{10}", "marks": 0.5 },
+                  { "do": "Put the limits", "math": "A = 50 \\cdot \\dfrac{\\pi}{2} = 25\\pi\\ \\text{m}^2", "marks": 0.5 }
+                ],
+                "answer": "$25\\pi\\ \\text{m}^2$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  { "do": "The bed is symmetric about both axes: four equal parts", "math": "A = 4\\displaystyle\\int_0^{5} \\sqrt{100 - x^2}\\,dx", "marks": 0.5 },
+                  { "do": "Integrate", "math": "A = 4\\left[\\dfrac{x}{2}\\sqrt{100 - x^2} + 50\\sin^{-1}\\dfrac{x}{10}\\right]_0^{5}", "marks": 0.5 },
+                  { "do": "Put the limits, using $\\sqrt{75} = 5\\sqrt{3}$ and $\\sin^{-1}\\dfrac{1}{2} = \\dfrac{\\pi}{6}$", "math": "A = 4\\left[\\dfrac{5}{2} \\cdot 5\\sqrt{3} + 50 \\cdot \\dfrac{\\pi}{6}\\right] = 4\\left[\\dfrac{25\\sqrt{3}}{2} + \\dfrac{25\\pi}{3}\\right]", "marks": 0.5 },
+                  { "do": "Required area", "math": "A = \\left(50\\sqrt{3} + \\dfrac{100\\pi}{3}\\right)\\ \\text{m}^2", "marks": 0.5 }
+                ],
+                "answer": "$\\left(50\\sqrt{3} + \\dfrac{100\\pi}{3}\\right)\\ \\text{m}^2$"
+              }
+            ],
+            "mistake": "In (iii), finding only the first-quadrant strip; the flower bed has four equal parts."
+          }
+        }
+      ]
+    }
+  ]
+}
