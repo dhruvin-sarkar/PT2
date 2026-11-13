@@ -1,0 +1,67 @@
+/*
+ * Design tokens shared by the print sheets (PDF) and the website.
+ *
+ * Sizes are in rem so one scale serves both media: print sets the root to
+ * 10.5pt (print.css), the website sets its own root size (for example 17px).
+ *
+ * Colour roles
+ *   --ink          main text, rules of the hand-drawn frames
+ *   --ink-soft     secondary text
+ *   --muted        small notes, step numbers, captions
+ *   --rule         thin dividers between steps / rows
+ *   --paper        page background for print (pure white, no ink)
+ *   --paper-web    sketchbook page tone for the website
+ *   --tint         lightly tinted box behind a restated question
+ *   --pen-red      examiner marks, "Watch out" label (prints as mid grey)
+ *   --pen-red-soft notebook margin line beside the marks column
+ *   --pen-blue     handwritten headings, question badge, labels
+ *   --pencil       handwritten "why" notes
+ *   --fig-fill     shaded regions in figures (matches CONTRACT.md)
+ *   --fig-accent   second accent in figures (matches CONTRACT.md)
+ */
+:root {
+  --ink: #1c2230;
+  --ink-soft: #384152;
+  --muted: #5d6676;
+  --rule: #cdd3dc;
+  --rule-strong: #9aa3b1;
+  --paper: #ffffff;
+  --paper-web: #fcfbf7;
+  --tint: #f1f4f9;
+  --tint-strong: #e3e9f2;
+  --pen-red: #c22f2f;
+  --pen-red-soft: #ecb0b0;
+  --pen-blue: #24467f;
+  --pencil: #4a5363;
+  --fig-ink: #1f2937;
+  --fig-fill: #93c5fd;
+  --fig-accent: #ef4444;
+
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-hand: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive;
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.88rem;
+  --fs-body: 1rem;
+  --fs-lg: 1.14rem;
+  --fs-h3: 1.3rem;
+  --fs-h2: 1.62rem;
+  --fs-h1: 2.35rem;
+  --lh-body: 1.45;
+  --lh-tight: 1.2;
+  --math-scale: 1.08;
+
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+
+  --radius-sm: 3px;
+  --stroke: 1.15px;
+  --hand-stroke: 0.35px;
+
+  --col-step-n: 1.7rem;
+  --col-marks: 3.4rem;
+}

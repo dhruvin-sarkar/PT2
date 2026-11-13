@@ -1,0 +1,303 @@
+/*
+ * A4 print layout for the PDF sheets (solutions and worksheet). Loaded after tokens.css, fonts.css,
+ * katex.min.css and sheet.css. The running header text is injected per document by src/sheets.mjs
+ * (an @page rule with the chapter / set titles).
+ */
+@page {
+  size: A4 portrait;
+  margin: 17mm 16mm 15mm 16mm;
+}
+
+html {
+  font-size: 10.5pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-variant-numeric: lining-nums;
+  orphans: 3;
+  widows: 3;
+}
+.sheet {
+  width: 178mm; /* A4 width minus the side margins, so fit.js measures the printed column */
+}
+p {
+  margin: 0;
+}
+
+/* ---------- title block (page one) ---------- */
+.title-block {
+  position: relative;
+  padding: 0 0 var(--sp-3);
+  margin-bottom: var(--sp-2);
+}
+.tb-kicker {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.tb-title,
+.key-title,
+.ws-n,
+.ws-level th {
+  -webkit-text-stroke: var(--hand-stroke) currentColor;
+}
+.tb-title {
+  margin: 0.1rem 0 0;
+  font: 400 var(--fs-h1) / 1.1 var(--font-hand);
+  color: var(--ink);
+}
+.tb-sub {
+  margin-top: 0.15rem;
+  font: 400 var(--fs-h3) / 1.25 var(--font-hand);
+  color: var(--pen-blue);
+}
+.tb-meta {
+  display: flex;
+  gap: var(--sp-5);
+  margin: var(--sp-2) 0 0;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+.tb-meta b {
+  color: var(--ink);
+}
+.tb-rule {
+  display: block;
+  width: 100%;
+  height: 8px;
+  margin-top: var(--sp-3);
+  color: var(--ink-soft);
+}
+
+/* the slim legend explaining the marks column */
+.legend {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--col-marks);
+  align-items: stretch;
+  margin: var(--sp-2) 0 var(--sp-1);
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.legend p {
+  padding: 0.35rem var(--sp-3) 0.35rem 0;
+  line-height: 1.4;
+}
+.legend .step-marks {
+  padding-top: 0.3rem;
+}
+.legend .hand {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  color: var(--pen-red);
+  font-size: var(--fs-body);
+}
+
+/* ---------- page-break rules: solutions ---------- */
+.level-head {
+  break-after: avoid;
+  break-inside: avoid;
+}
+.level:first-of-type .level-head {
+  margin-top: var(--sp-4);
+}
+.q-head {
+  break-after: avoid;
+  break-inside: avoid;
+}
+.q-box {
+  break-inside: avoid;
+  break-after: avoid;
+}
+.sol-concept,
+.sol-fig,
+.sol-part-head,
+.sol-or,
+.q-or {
+  break-inside: avoid;
+  break-after: avoid;
+}
+.steps {
+  break-before: avoid;
+}
+.step {
+  break-inside: avoid;
+}
+.answer {
+  break-inside: avoid;
+  break-before: avoid;
+}
+.watch {
+  break-inside: avoid;
+  break-before: avoid;
+}
+.q-part,
+.q-opt,
+.q-options {
+  break-inside: avoid;
+}
+.fig {
+  break-inside: avoid;
+}
+.q-solved + .q-solved {
+  margin-top: var(--sp-5);
+}
+
+/* ---------- worksheet (question paper) ---------- */
+.ws-lines {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: var(--sp-5);
+  margin: var(--sp-4) 0 var(--sp-3);
+  font-size: var(--fs-body);
+}
+.ws-line {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  white-space: nowrap;
+}
+.ws-line i {
+  flex: 1;
+  border-bottom: 1px solid var(--ink-soft);
+  transform: translateY(-0.2em);
+}
+.ws-instr {
+  margin: 0 0 var(--sp-3);
+  padding: 0.5rem 0.8rem 0.5rem 1.9rem;
+  background: var(--tint);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+.ws-instr li + li {
+  margin-top: 0.1rem;
+}
+.ws-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.ws-table col.c-n {
+  width: 13mm;
+}
+.ws-table col.c-m {
+  width: 16mm;
+}
+.ws-table thead th {
+  font: 400 var(--fs-body) / 1.2 var(--font-hand);
+  color: var(--pen-blue);
+  text-align: left;
+  padding: 0.3rem 0.4rem;
+  border-bottom: 1.5px solid var(--ink-soft);
+}
+.ws-table thead th.c-m,
+.ws-table td.ws-m {
+  text-align: right;
+}
+.ws-table td {
+  vertical-align: top;
+  padding: 0.55rem 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.ws-table tr {
+  break-inside: avoid;
+}
+.ws-n {
+  font: 400 var(--fs-lg) / 1.25 var(--font-hand);
+  color: var(--pen-blue);
+}
+.ws-m {
+  font: 400 var(--fs-body) / 1.4 var(--font-hand);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.ws-type {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+.ws-level th {
+  text-align: left;
+  padding: var(--sp-4) 0.4rem 0.3rem;
+  font: 400 var(--fs-h3) / 1.2 var(--font-hand);
+  color: var(--pen-blue);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.ws-level th span {
+  float: right;
+  font-weight: 400;
+  font-size: var(--fs-body);
+  color: var(--ink-soft);
+}
+.ws-level {
+  break-after: avoid;
+}
+/* the question card sits inside a table cell: no card chrome, and no break rules that would
+   chain every row together (a chain of "avoid" makes Chrome push the whole table to page 2) */
+.ws-q .q {
+  margin: 0;
+}
+.ws-q .q-box {
+  background: none;
+  padding: 0;
+  break-after: auto;
+  break-inside: auto;
+}
+.ws-q .q-options {
+  margin-top: var(--sp-2);
+}
+.ws-q .q-parts {
+  margin-top: var(--sp-2);
+}
+.ws-q .fig {
+  margin: var(--sp-2) 0;
+}
+
+/* answer key on its own last page */
+.key {
+  break-before: page;
+}
+.key-title {
+  margin: 0 0 var(--sp-1);
+  font: 400 var(--fs-h2) / 1.2 var(--font-hand);
+  color: var(--ink);
+}
+.key-sub {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+}
+.key-level {
+  margin: var(--sp-3) 0 var(--sp-1);
+  font: 400 var(--fs-lg) / 1.2 var(--font-hand);
+  color: var(--pen-blue);
+  break-after: avoid;
+}
+.key-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.key-list li {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: var(--sp-2);
+  padding: 0.28rem 0;
+  border-bottom: 1px solid var(--rule);
+  break-inside: avoid;
+  line-height: 1.4;
+}
+.key-n {
+  font: 400 var(--fs-body) / 1.4 var(--font-hand);
+  color: var(--pen-blue);
+}
