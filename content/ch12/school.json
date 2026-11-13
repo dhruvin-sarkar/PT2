@@ -1,0 +1,519 @@
+{
+  "chapter": 12,
+  "chapterTitle": "Linear Programming",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 27,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 4,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The corner points of the feasible region of an LPP are $(0,2)$, $(3,0)$, $(6,0)$, $(6,8)$ and $(0,5)$. If $Z = 4x + 6y$, then the minimum value of $Z$ occurs at:",
+          "options": [
+            "$(0,2)$ only",
+            "$(3,0)$ only",
+            "the mid-point of the line segment joining $(0,2)$ and $(3,0)$ only",
+            "any point on the line segment joining $(0,2)$ and $(3,0)$"
+          ],
+          "solution": {
+            "answer": "(D) any point on the line segment joining $(0,2)$ and $(3,0)$",
+            "concept": "If two adjacent corner points give the same optimal value, every point on the segment joining them is optimal.",
+            "steps": [
+              {
+                "do": "Find $Z = 4x + 6y$ at each corner point.",
+                "math": "\\begin{aligned} Z(0,2) &= 12, \\quad Z(3,0) = 12 \\\\ Z(6,0) &= 24, \\quad Z(6,8) = 72, \\quad Z(0,5) = 30 \\end{aligned}"
+              },
+              {
+                "do": "Pick the smallest value.",
+                "math": "Z_{\\min} = 12 \\text{ at both } (0,2) \\text{ and } (3,0)"
+              },
+              {
+                "do": "Two adjacent corners give the same minimum, so every point between them gives $Z = 12$.",
+                "why": "Both corners lie on the line $4x + 6y = 12$.",
+                "marks": 1
+              },
+              {
+                "do": "Hence the minimum occurs at any point on the segment joining $(0,2)$ and $(3,0)$; option (D)."
+              }
+            ],
+            "mistake": "Choosing (A) or (B): when two corners tie for the minimum, the whole edge between them is optimal."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The region represented by the system of inequations $3x + y \\ge 3$, $2x - y \\ge -5$, $x, y \\ge 0$ is:",
+          "options": [
+            "unbounded in the 1st quadrant",
+            "bounded in the 1st quadrant",
+            "unbounded in the 2nd quadrant",
+            "bounded in the 2nd quadrant"
+          ],
+          "solution": {
+            "answer": "(A) unbounded in the 1st quadrant",
+            "concept": "A feasible region is unbounded if it cannot be enclosed in a circle; $x, y \\ge 0$ keeps it in the 1st quadrant.",
+            "steps": [
+              {
+                "do": "Rewrite the second inequation.",
+                "math": "2x - y \\ge -5 \\;\\Rightarrow\\; y \\le 2x + 5"
+              },
+              {
+                "do": "Points on the boundary lines.",
+                "math": "\\begin{aligned} 3x + y = 3 &: (1,0),\\ (0,3) \\\\ y = 2x + 5 &: (0,5),\\ (1,7) \\end{aligned}"
+              },
+              {
+                "do": "Origin test: $(0,0)$ fails $3x + y \\ge 3$ but satisfies $y \\le 2x + 5$.",
+                "math": "0 \\ge 3 \\ (\\text{false}), \\qquad 0 \\le 5 \\ (\\text{true})"
+              },
+              {
+                "do": "Since $x \\ge 0,\\ y \\ge 0$, the region lies in the 1st quadrant only."
+              },
+              {
+                "do": "Every point $(k, 0)$ with $k \\ge 1$ satisfies all the inequations, so the region extends without end.",
+                "math": "3k + 0 \\ge 3, \\qquad 2k - 0 \\ge -5 \\qquad (k \\ge 1)",
+                "marks": 1,
+                "figure": "figs/q02-sol.svg"
+              },
+              {
+                "do": "Hence the region is unbounded in the 1st quadrant; option (A)."
+              }
+            ],
+            "mistake": "Thinking the region is bounded because both lines cut the $y$-axis; it is open towards the right."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The restrictions imposed on the decision variables involved in the objective function of a linear programming problem are called:",
+          "options": [
+            "feasible solutions",
+            "constraints",
+            "optimal solutions",
+            "infeasible solutions"
+          ],
+          "solution": {
+            "answer": "(B) constraints",
+            "steps": [
+              {
+                "do": "Recall: the linear inequations or equations on the decision variables of an LPP are called **constraints**.",
+                "marks": 1
+              },
+              {
+                "do": "Feasible, optimal and infeasible solutions are points, not restrictions."
+              },
+              {
+                "do": "Hence the answer is option (B) constraints."
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** If the feasible region of an LPP is bounded, the objective function $Z = ax + by$ has both a maximum and a minimum value on it. **Reason (R):** If the feasible region is bounded, the maximum and minimum values of $Z$ each occur at a corner point of the feasible region.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true, and R is the correct explanation of A",
+            "concept": "Theorem 2 (NCERT): on a bounded feasible region, $Z$ has both a maximum and a minimum, each at a corner point.",
+            "steps": [
+              {
+                "do": "Assertion (A) is true: it is the first half of Theorem 2."
+              },
+              {
+                "do": "Reason (R) is true: it is the second half of Theorem 2."
+              },
+              {
+                "do": "A bounded region has finitely many corner points, so $Z$ takes finitely many values there.",
+                "why": "The largest and smallest of these are the maximum and minimum."
+              },
+              {
+                "do": "So R tells us why the maximum and minimum exist: R correctly explains A.",
+                "marks": 1
+              },
+              {
+                "do": "Hence the correct option is (A)."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 9,
+      "questions": [
+        {
+          "n": 5,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve the following linear programming problem graphically: Minimise $Z = 600x + 400y$ subject to the constraints $x + y \\ge 8$, $x + 2y \\le 16$, $4x + y \\le 29$, $x, y \\ge 0$.",
+          "solution": {
+            "answer": "Minimum $Z = 3200$ at $x = 0,\\ y = 8$",
+            "concept": "Corner Point Method: on a bounded region, evaluate $Z$ at every corner point and pick the least value.",
+            "steps": [
+              {
+                "do": "Treat each constraint as an equation and find two points on each line.",
+                "math": "\\begin{aligned} x + y = 8 &: (8,0),\\ (0,8) \\\\ x + 2y = 16 &: (16,0),\\ (0,8) \\\\ 4x + y = 29 &: (7.25,0),\\ (0,29) \\end{aligned}"
+              },
+              {
+                "do": "Origin test: $(0,0)$ fails $x + y \\ge 8$, so shade away from the origin.",
+                "math": "0 + 0 \\ge 8 \\ (\\text{false})"
+              },
+              {
+                "do": "$(0,0)$ satisfies $x + 2y \\le 16$ and $4x + y \\le 29$, so shade towards the origin.",
+                "math": "0 \\le 16, \\quad 0 \\le 29 \\ (\\text{true})"
+              },
+              {
+                "do": "Draw the lines and shade the common region in the 1st quadrant: bounded triangle $ABC$.",
+                "marks": 1.5,
+                "figure": "figs/q05-sol.svg"
+              },
+              {
+                "do": "Corner $B$: solve $x + 2y = 16$ and $4x + y = 29$.",
+                "math": "x = 16 - 2y \\Rightarrow 4(16 - 2y) + y = 29 \\Rightarrow 7y = 35 \\Rightarrow y = 5,\\ x = 6"
+              },
+              {
+                "do": "Corner $C$: subtract $x + y = 8$ from $4x + y = 29$.",
+                "math": "3x = 21 \\Rightarrow x = 7,\\ y = 1"
+              },
+              {
+                "do": "Corner $A$: both $x + y = 8$ and $x + 2y = 16$ pass through $(0,8)$.",
+                "math": "A(0,8),\\quad B(6,5),\\quad C(7,1)"
+              },
+              {
+                "do": "Find $Z$ at each corner point.",
+                "math": "\\begin{array}{c|c} \\text{Corner point} & Z = 600x + 400y \\\\ \\hline A(0,8) & 3200 \\ \\leftarrow \\text{minimum} \\\\ B(6,5) & 5600 \\\\ C(7,1) & 4600 \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "The region is bounded, so the least corner value is the minimum.",
+                "math": "Z_{\\min} = 3200 \\text{ at } x = 0,\\ y = 8",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Shading $x + y \\ge 8$ towards the origin; always run the origin test for each constraint."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve the following LPP graphically: Minimise $Z = 3x + 5y$ subject to $x + 3y \\ge 3$, $x + y \\ge 2$, $x \\ge 0$, $y \\ge 0$.",
+          "solution": {
+            "answer": "Minimum $Z = 7$ at $x = \\dfrac{3}{2},\\ y = \\dfrac{1}{2}$",
+            "concept": "On an unbounded region, the smallest corner value $m$ is the minimum only if $ax + by < m$ has no point in common with the region.",
+            "steps": [
+              {
+                "do": "Find two points on each boundary line.",
+                "math": "\\begin{aligned} x + 3y = 3 &: (3,0),\\ (0,1) \\\\ x + y = 2 &: (2,0),\\ (0,2) \\end{aligned}"
+              },
+              {
+                "do": "Origin test: $(0,0)$ fails both constraints, so shade away from the origin.",
+                "math": "0 \\ge 3 \\ (\\text{false}), \\quad 0 \\ge 2 \\ (\\text{false})"
+              },
+              {
+                "do": "Draw the lines and shade the common region in the 1st quadrant; it is unbounded.",
+                "marks": 1.5,
+                "figure": "figs/q06-sol.svg"
+              },
+              {
+                "do": "Corner $B$: subtract $x + y = 2$ from $x + 3y = 3$.",
+                "math": "2y = 1 \\Rightarrow y = \\dfrac{1}{2},\\quad x = 2 - \\dfrac{1}{2} = \\dfrac{3}{2}"
+              },
+              {
+                "do": "Find $Z$ at each corner point.",
+                "math": "\\begin{array}{c|c} \\text{Corner point} & Z = 3x + 5y \\\\ \\hline A(0,2) & 10 \\\\ B\\left(\\frac{3}{2},\\frac{1}{2}\\right) & 7 \\ \\leftarrow \\text{smallest} \\\\ C(3,0) & 9 \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "The region is unbounded, so $7$ may or may not be the minimum.",
+                "why": "An unbounded region needs the half-plane check."
+              },
+              {
+                "do": "Draw the open half-plane $3x + 5y < 7$ (below the dashed line through $B$).",
+                "math": "3x + 5y < 7"
+              },
+              {
+                "do": "It has no point in common with the feasible region."
+              },
+              {
+                "do": "Hence the minimum value of $Z$ is $7$.",
+                "math": "Z_{\\min} = 7 \\text{ at } x = \\dfrac{3}{2},\\ y = \\dfrac{1}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the minimum straight from the table; for an unbounded region the half-plane check must be shown."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve the following LPP graphically: Maximise $Z = 5x + 3y$ subject to $3x + 5y \\le 15$, $5x + 2y \\le 10$, $x \\ge 0$, $y \\ge 0$.",
+          "solution": {
+            "answer": "Maximum $Z = \\dfrac{235}{19}$ at $x = \\dfrac{20}{19},\\ y = \\dfrac{45}{19}$",
+            "concept": "Corner Point Method: on a bounded region, evaluate $Z$ at every corner point and pick the greatest value.",
+            "steps": [
+              {
+                "do": "Find two points on each boundary line.",
+                "math": "\\begin{aligned} 3x + 5y = 15 &: (5,0),\\ (0,3) \\\\ 5x + 2y = 10 &: (2,0),\\ (0,5) \\end{aligned}"
+              },
+              {
+                "do": "Origin test: $(0,0)$ satisfies both constraints, so shade towards the origin.",
+                "math": "0 \\le 15, \\quad 0 \\le 10 \\ (\\text{true})"
+              },
+              {
+                "do": "Draw the lines and shade the common region in the 1st quadrant: bounded region $OABC$.",
+                "marks": 1.5,
+                "figure": "figs/q07-sol.svg"
+              },
+              {
+                "do": "Corner $B$: multiply to equalise the $y$-coefficients, then subtract.",
+                "math": "\\begin{aligned} 2(3x + 5y) = 30 &\\Rightarrow 6x + 10y = 30 \\\\ 5(5x + 2y) = 50 &\\Rightarrow 25x + 10y = 50 \\\\ \\Rightarrow 19x = 20 &\\Rightarrow x = \\dfrac{20}{19} \\end{aligned}"
+              },
+              {
+                "do": "Put $x = \\dfrac{20}{19}$ in $5x + 2y = 10$.",
+                "math": "2y = 10 - \\dfrac{100}{19} = \\dfrac{90}{19} \\Rightarrow y = \\dfrac{45}{19}"
+              },
+              {
+                "do": "Find $Z$ at each corner point.",
+                "math": "\\begin{array}{c|c} \\text{Corner point} & Z = 5x + 3y \\\\ \\hline O(0,0) & 0 \\\\ A(2,0) & 10 \\\\ B\\left(\\frac{20}{19},\\frac{45}{19}\\right) & \\frac{100}{19} + \\frac{135}{19} = \\frac{235}{19} \\ \\leftarrow \\text{maximum} \\\\ C(0,3) & 9 \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "The region is bounded, so the greatest corner value is the maximum.",
+                "math": "Z_{\\max} = \\dfrac{235}{19} \\approx 12.37 \\text{ at } x = \\dfrac{20}{19},\\ y = \\dfrac{45}{19}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Skipping the intersection point $B$; the maximum is at $B$, not at the axis corners."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 14,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 5,
+          "type": "long",
+          "question": "Solve graphically: Minimise and maximise $Z = x + 2y$ subject to $x + 2y \\ge 100$, $2x - y \\le 0$, $2x + y \\le 200$, $x \\ge 0$, $y \\ge 0$.",
+          "solution": {
+            "answer": "Minimum $Z = 100$ at every point of the segment joining $(0,50)$ and $(20,40)$; maximum $Z = 400$ at $(0,200)$",
+            "concept": "Corner Point Method; if two adjacent corners give the same optimum, every point of the edge joining them is optimal.",
+            "steps": [
+              {
+                "do": "Find two points on each boundary line.",
+                "math": "\\begin{aligned} x + 2y = 100 &: (100,0),\\ (0,50) \\\\ 2x - y = 0 &: (0,0),\\ (50,100) \\\\ 2x + y = 200 &: (100,0),\\ (0,200) \\end{aligned}"
+              },
+              {
+                "do": "Origin test: $(0,0)$ fails $x + 2y \\ge 100$ (shade away) and satisfies $2x + y \\le 200$ (shade towards).",
+                "math": "0 \\ge 100 \\ (\\text{false}), \\quad 0 \\le 200 \\ (\\text{true})"
+              },
+              {
+                "do": "$2x - y = 0$ passes through the origin, so test $(0,1)$ instead.",
+                "math": "2(0) - 1 = -1 \\le 0 \\ (\\text{true})",
+                "why": "So shade the side above the line $y = 2x$."
+              },
+              {
+                "do": "Draw the lines and shade the common region in the 1st quadrant: bounded region $ABCD$.",
+                "marks": 2,
+                "figure": "figs/q08-sol.svg"
+              },
+              {
+                "do": "Corner $B$: put $y = 2x$ in $x + 2y = 100$.",
+                "math": "x + 4x = 100 \\Rightarrow x = 20,\\ y = 40",
+                "marks": 0.5
+              },
+              {
+                "do": "Corner $C$: put $y = 2x$ in $2x + y = 200$.",
+                "math": "2x + 2x = 200 \\Rightarrow x = 50,\\ y = 100",
+                "marks": 0.5
+              },
+              {
+                "do": "Corners on the $y$-axis come from the intercepts.",
+                "math": "A(0,50),\\quad B(20,40),\\quad C(50,100),\\quad D(0,200)"
+              },
+              {
+                "do": "Find $Z$ at each corner point.",
+                "math": "\\begin{array}{c|c} \\text{Corner point} & Z = x + 2y \\\\ \\hline A(0,50) & 100 \\ \\leftarrow \\text{minimum} \\\\ B(20,40) & 100 \\ \\leftarrow \\text{minimum} \\\\ C(50,100) & 250 \\\\ D(0,200) & 400 \\ \\leftarrow \\text{maximum} \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "The region is bounded; the minimum $100$ occurs at both $A$ and $B$.",
+                "math": "Z_{\\min} = 100 \\text{ at all points on the segment joining } (0,50) \\text{ and } (20,40)",
+                "why": "$AB$ lies on $x + 2y = 100$, so $Z = 100$ along it.",
+                "marks": 0.5
+              },
+              {
+                "do": "The maximum is the greatest corner value.",
+                "math": "Z_{\\max} = 400 \\text{ at } (0,200)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the minimum at only one point; $A$ and $B$ tie, so the whole segment $AB$ gives the minimum."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 5,
+          "type": "long",
+          "question": "A furniture dealer deals in only two items, tables and chairs. He has ₹50,000 to invest and storage space for at most 60 pieces. A table costs ₹2,500 and a chair ₹500. He expects a profit of ₹250 on a table and ₹75 on a chair. Formulate this as an LPP and solve it graphically to find how many tables and chairs he should buy to maximise his profit, assuming he can sell all the items he buys.",
+          "solution": {
+            "answer": "Buy 10 tables and 50 chairs; maximum profit ₹6,250",
+            "concept": "Formulate (variables, objective, constraints), graph the feasible region, then use the Corner Point Method.",
+            "steps": [
+              {
+                "do": "Let the dealer buy $x$ tables and $y$ chairs.",
+                "marks": 0.5
+              },
+              {
+                "do": "Profit is ₹250 per table and ₹75 per chair.",
+                "math": "\\text{Maximise } Z = 250x + 75y",
+                "marks": 0.5
+              },
+              {
+                "do": "Investment constraint (₹2,500 per table, ₹500 per chair, ₹50,000 in all); divide by 500.",
+                "math": "2500x + 500y \\le 50000 \\;\\Rightarrow\\; 5x + y \\le 100",
+                "marks": 0.5
+              },
+              {
+                "do": "Storage constraint (at most 60 pieces) and non-negativity.",
+                "math": "x + y \\le 60, \\qquad x \\ge 0,\\ y \\ge 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find two points on each line; $(0,0)$ satisfies both, so shade towards the origin.",
+                "math": "\\begin{aligned} 5x + y = 100 &: (20,0),\\ (0,100) \\\\ x + y = 60 &: (60,0),\\ (0,60) \\end{aligned}"
+              },
+              {
+                "do": "Draw the lines and shade the common region in the 1st quadrant: bounded region $OABC$.",
+                "marks": 1.5,
+                "figure": "figs/q09-sol.svg"
+              },
+              {
+                "do": "Corner $B$: subtract $x + y = 60$ from $5x + y = 100$.",
+                "math": "4x = 40 \\Rightarrow x = 10,\\quad y = 60 - 10 = 50"
+              },
+              {
+                "do": "Find $Z$ at each corner point.",
+                "math": "\\begin{array}{c|c} \\text{Corner point} & Z = 250x + 75y \\\\ \\hline O(0,0) & 0 \\\\ A(20,0) & 5000 \\\\ B(10,50) & 6250 \\ \\leftarrow \\text{maximum} \\\\ C(0,60) & 4500 \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "The region is bounded, so the maximum is at $B(10, 50)$.",
+                "math": "Z_{\\max} = 6250 \\text{ at } x = 10,\\ y = 50"
+              },
+              {
+                "do": "Hence the dealer should buy 10 tables and 50 chairs; maximum profit is ₹6,250.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not dividing $2500x + 500y \\le 50000$ by 500, which makes the graph scale awkward and errors likely."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** A dietician wants to prepare a mixture of two foods $F_1$ and $F_2$. One kg of $F_1$ contains 2 units of vitamin A and 1 unit of minerals; one kg of $F_2$ contains 1 unit of vitamin A and 2 units of minerals. The mixture must contain at least 8 units of vitamin A and 10 units of minerals. $F_1$ costs ₹50 per kg and $F_2$ costs ₹70 per kg. Let $x$ kg of $F_1$ and $y$ kg of $F_2$ be used.",
+          "parts": [
+            { "label": "(i)", "text": "Write the objective function and the constraints of the LPP.", "marks": 1 },
+            { "label": "(ii)", "text": "Find the corner points of the feasible region.", "marks": 1 },
+            { "label": "(iii)", "text": "Find the minimum cost of the mixture, and justify why the minimum exists even though the feasible region is unbounded.", "marks": 2 }
+          ],
+          "solution": {
+            "answer": "Minimum cost ₹380, using 2 kg of $F_1$ and 4 kg of $F_2$",
+            "concept": "On an unbounded region, the smallest corner value $m$ is the minimum only if $ax + by < m$ has no point in common with the region.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Cost is ₹50 per kg of $F_1$ and ₹70 per kg of $F_2$.",
+                    "math": "\\text{Minimise } Z = 50x + 70y",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Write the vitamin A, mineral and non-negativity constraints.",
+                    "math": "\\begin{aligned} 2x + y &\\ge 8 \\quad (\\text{vitamin A}) \\\\ x + 2y &\\ge 10 \\quad (\\text{minerals}) \\\\ x \\ge 0,\\ y &\\ge 0 \\end{aligned}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Minimise $Z = 50x + 70y$ subject to $2x + y \\ge 8$, $x + 2y \\ge 10$, $x \\ge 0$, $y \\ge 0$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Find two points on each boundary line.",
+                    "math": "\\begin{aligned} 2x + y = 8 &: (4,0),\\ (0,8) \\\\ x + 2y = 10 &: (10,0),\\ (0,5) \\end{aligned}"
+                  },
+                  {
+                    "do": "$(0,0)$ fails both constraints, so shade away from the origin; the region is unbounded.",
+                    "math": "0 \\ge 8 \\ (\\text{false}), \\quad 0 \\ge 10 \\ (\\text{false})",
+                    "marks": 0.5,
+                    "figure": "figs/q10-sol.svg"
+                  },
+                  {
+                    "do": "Corner $B$: put $y = 8 - 2x$ in $x + 2y = 10$.",
+                    "math": "x + 16 - 4x = 10 \\Rightarrow x = 2,\\quad y = 8 - 4 = 4"
+                  },
+                  {
+                    "do": "List the corner points.",
+                    "math": "A(0,8),\\quad B(2,4),\\quad C(10,0)",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$A(0,8)$, $B(2,4)$, $C(10,0)$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Find $Z$ at each corner point.",
+                    "math": "\\begin{array}{c|c} \\text{Corner point} & Z = 50x + 70y \\\\ \\hline A(0,8) & 560 \\\\ B(2,4) & 380 \\ \\leftarrow \\text{smallest} \\\\ C(10,0) & 500 \\end{array}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "The region is unbounded, so $380$ may or may not be the minimum."
+                  },
+                  {
+                    "do": "Draw the open half-plane $50x + 70y < 380$, i.e. $5x + 7y < 38$ (dashed line).",
+                    "math": "50x + 70y < 380"
+                  },
+                  {
+                    "do": "It has no point in common with the feasible region, so $380$ is the minimum.",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence the minimum cost is ₹380, with 2 kg of $F_1$ and 4 kg of $F_2$.",
+                    "math": "Z_{\\min} = 380 \\text{ at } x = 2,\\ y = 4",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Minimum cost ₹380 at $x = 2$, $y = 4$; it exists because $50x + 70y < 380$ has no point in common with the region"
+              }
+            ],
+            "mistake": "Writing $\\le$ for \"at least\"; \"at least 8 units\" means $2x + y \\ge 8$."
+          }
+        }
+      ]
+    }
+  ]
+}
