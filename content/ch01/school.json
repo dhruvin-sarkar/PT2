@@ -1,0 +1,867 @@
+{
+  "chapter": 1,
+  "chapterTitle": "Relations and Functions",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 52,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "Let $R$ be the relation on the set $\\{1,2,3\\}$ given by $R=\\{(1,1),(2,2),(3,3),(1,2),(2,3)\\}$. Then $R$ is:",
+          "options": [
+            "reflexive, but neither symmetric nor transitive",
+            "an equivalence relation",
+            "symmetric and transitive only",
+            "transitive only"
+          ],
+          "solution": {
+            "answer": "(A) reflexive, but neither symmetric nor transitive",
+            "concept": "Reflexive: $(a,a)\\in R$ for all $a$. Symmetric: $(a,b)\\Rightarrow(b,a)$. Transitive: $(a,b),(b,c)\\Rightarrow(a,c)$.",
+            "steps": [
+              {
+                "do": "Reflexive check: every $(a,a)$ is in $R$.",
+                "math": "(1,1),\\ (2,2),\\ (3,3)\\in R \\Rightarrow R \\text{ is reflexive}"
+              },
+              {
+                "do": "Symmetric check: $(1,2)$ is in $R$ but its reverse is not.",
+                "math": "(1,2)\\in R \\text{ but } (2,1)\\notin R \\Rightarrow \\text{not symmetric}"
+              },
+              {
+                "do": "Transitive check: $(1,2)$ and $(2,3)$ are in $R$, but $(1,3)$ is not.",
+                "math": "(1,2),(2,3)\\in R \\text{ but } (1,3)\\notin R \\Rightarrow \\text{not transitive}",
+                "marks": 1
+              },
+              {
+                "do": "So $R$ is reflexive only. Option (A)."
+              }
+            ],
+            "mistake": "Calling $R$ transitive without checking the chain $(1,2),(2,3)\\Rightarrow(1,3)$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The number of equivalence relations on the set $\\{1,2,3\\}$ containing $(1,2)$ and $(2,1)$ is:",
+          "options": [
+            "$1$",
+            "$2$",
+            "$3$",
+            "$4$"
+          ],
+          "solution": {
+            "answer": "(B) $2$",
+            "concept": "An equivalence relation must be reflexive, symmetric and transitive.",
+            "steps": [
+              {
+                "do": "Smallest one: add all $(a,a)$ to the given pairs.",
+                "math": "R_1=\\{(1,1),(2,2),(3,3),(1,2),(2,1)\\}",
+                "why": "$R_1$ is reflexive, symmetric and transitive."
+              },
+              {
+                "do": "Add one more pair, say $(2,3)$. Symmetry and transitivity force more pairs.",
+                "math": "(3,2)\\in R;\\quad (1,2),(2,3)\\in R \\Rightarrow (1,3)\\in R \\Rightarrow (3,1)\\in R",
+                "why": "Adding $(1,3)$ or $(3,1)$ instead leads to the same result."
+              },
+              {
+                "do": "Then every pair is present, so we get $A\\times A$.",
+                "math": "R_2=A\\times A"
+              },
+              {
+                "do": "Only $R_1$ and $R_2$ are possible.",
+                "math": "\\text{Number of equivalence relations}=2",
+                "marks": 1
+              }
+            ],
+            "mistake": "Forgetting that $A\\times A$ itself is also an equivalence relation."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=x^2$ is:",
+          "options": [
+            "one-one and onto",
+            "many-one and onto",
+            "one-one but not onto",
+            "neither one-one nor onto"
+          ],
+          "solution": {
+            "answer": "(D) neither one-one nor onto",
+            "steps": [
+              {
+                "do": "Two different inputs give the same output.",
+                "math": "f(-1)=1=f(1),\\ \\text{but } -1\\neq 1 \\Rightarrow \\text{not one-one}"
+              },
+              {
+                "do": "A negative number has no pre-image, as $x^2\\ge 0$.",
+                "math": "f(x)=-1 \\Rightarrow x^2=-1, \\text{ no real } x \\Rightarrow \\text{not onto}"
+              },
+              {
+                "do": "So $f$ is neither one-one nor onto. Option (D).",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The function $f:\\mathbb{N}\\to\\mathbb{N}$ defined by $f(x)=2x$ is:",
+          "options": [
+            "bijective",
+            "injective but not surjective",
+            "surjective but not injective",
+            "neither injective nor surjective"
+          ],
+          "solution": {
+            "answer": "(B) injective but not surjective",
+            "steps": [
+              {
+                "do": "Let $f(x_1)=f(x_2)$.",
+                "math": "2x_1=2x_2 \\Rightarrow x_1=x_2 \\Rightarrow \\text{injective (one-one)}"
+              },
+              {
+                "do": "Try to find a pre-image of $1\\in\\mathbb{N}$.",
+                "math": "2x=1 \\Rightarrow x=\\dfrac{1}{2}\\notin\\mathbb{N} \\Rightarrow \\text{not surjective (onto)}"
+              },
+              {
+                "do": "So $f$ is injective but not surjective. Option (B).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Taking $x=\\tfrac12$ as a pre-image — the domain is $\\mathbb{N}$, not $\\mathbb{R}$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If set $A$ has $3$ elements and set $B$ has $4$ elements, then the number of one-one functions from $A$ to $B$ is:",
+          "options": [
+            "$12$",
+            "$24$",
+            "$64$",
+            "$81$"
+          ],
+          "solution": {
+            "answer": "(B) $24$",
+            "concept": "Number of one-one functions from an $m$-set to an $n$-set ($m\\le n$) is ${}^{n}P_{m}$.",
+            "steps": [
+              {
+                "do": "Images must all be different: 4 choices, then 3, then 2.",
+                "math": "{}^{4}P_{3}=4\\times3\\times2=24",
+                "marks": 1
+              },
+              {
+                "do": "Option (B)."
+              }
+            ],
+            "mistake": "Using $4^3=64$, which counts all functions, not just one-one ones."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** The relation $R=\\{(a,b): a\\le b\\}$ on the set of real numbers is not an equivalence relation. **Reason (R):** The relation $R=\\{(a,b): a\\le b\\}$ is not symmetric.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true, and R is the correct explanation of A",
+            "steps": [
+              {
+                "do": "Assertion: $2\\le 3$ but $3\\not\\le 2$, so $R$ fails symmetry. A is true.",
+                "math": "(2,3)\\in R,\\ (3,2)\\notin R"
+              },
+              {
+                "do": "Reason: the same example shows $R$ is not symmetric. R is true."
+              },
+              {
+                "do": "$R$ is reflexive ($a\\le a$) and transitive; only symmetry fails. So R explains A.",
+                "math": "a\\le b,\\ b\\le c \\Rightarrow a\\le c"
+              },
+              {
+                "do": "Option (A).",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "question": "Show that the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=3-4x$ is a bijection.",
+          "solution": {
+            "answer": "$f$ is one-one and onto, so $f$ is a bijection.",
+            "concept": "Bijection = one-one and onto.",
+            "steps": [
+              {
+                "do": "**One-one:** let $x_1,x_2\\in\\mathbb{R}$ with $f(x_1)=f(x_2)$.",
+                "math": "3-4x_1=3-4x_2"
+              },
+              {
+                "do": "Subtract 3 and divide by $-4$.",
+                "math": "x_1=x_2 \\Rightarrow f \\text{ is one-one}",
+                "marks": 1
+              },
+              {
+                "do": "**Onto:** let $y\\in\\mathbb{R}$. Put $f(x)=y$ and solve for $x$.",
+                "math": "3-4x=y \\Rightarrow x=\\dfrac{3-y}{4}\\in\\mathbb{R}"
+              },
+              {
+                "do": "Check that this $x$ maps to $y$.",
+                "math": "f\\left(\\dfrac{3-y}{4}\\right)=3-4\\cdot\\dfrac{3-y}{4}=3-(3-y)=y \\Rightarrow f \\text{ is onto}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $f$ is one-one and onto, i.e. a bijection."
+              }
+            ],
+            "mistake": "Finding $x=\\dfrac{3-y}{4}$ but not checking $f(x)=y$, or not saying $x\\in\\mathbb{R}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "question": "Show that the relation $R$ on the set of integers $\\mathbb{Z}$ defined by $R=\\{(a,b): 2 \\text{ divides } (a-b)\\}$ is an equivalence relation.",
+          "solution": {
+            "answer": "$R$ is reflexive, symmetric and transitive, hence an equivalence relation.",
+            "steps": [
+              {
+                "do": "**Reflexive:** for any $a\\in\\mathbb{Z}$,",
+                "math": "a-a=0=2\\times0 \\Rightarrow 2\\mid(a-a) \\Rightarrow (a,a)\\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "**Symmetric:** let $(a,b)\\in R$, so $a-b=2k$, $k\\in\\mathbb{Z}$.",
+                "math": "b-a=-2k=2(-k) \\Rightarrow 2\\mid(b-a) \\Rightarrow (b,a)\\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "**Transitive:** let $(a,b),(b,c)\\in R$: $a-b=2k$, $b-c=2m$. Add.",
+                "math": "a-c=2k+2m=2(k+m) \\Rightarrow (a,c)\\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "question": "Check whether the relation $R$ on $\\mathbb{R}$ defined by $R=\\{(a,b): a\\le b^3\\}$ is reflexive, symmetric or transitive.",
+          "solution": {
+            "answer": "$R$ is neither reflexive, nor symmetric, nor transitive.",
+            "concept": "To disprove a property, one counter-example is enough.",
+            "steps": [
+              {
+                "do": "**Reflexive?** Take $a=\\tfrac12$.",
+                "math": "\\left(\\tfrac12\\right)^3=\\tfrac18 \\text{ and } \\tfrac12\\not\\le\\tfrac18 \\Rightarrow \\left(\\tfrac12,\\tfrac12\\right)\\notin R"
+              },
+              {
+                "do": "So $R$ is not reflexive.",
+                "marks": 1
+              },
+              {
+                "do": "**Symmetric?** $1\\le 2^3=8$, so $(1,2)\\in R$.",
+                "math": "\\text{But } 2\\not\\le 1^3=1 \\Rightarrow (2,1)\\notin R"
+              },
+              {
+                "do": "So $R$ is not symmetric.",
+                "marks": 1
+              },
+              {
+                "do": "**Transitive?** Check $\\left(3,\\tfrac32\\right)$ and $\\left(\\tfrac32,\\tfrac43\\right)$.",
+                "math": "3\\le\\left(\\tfrac32\\right)^3=\\tfrac{27}{8},\\quad \\tfrac32\\le\\left(\\tfrac43\\right)^3=\\tfrac{64}{27}"
+              },
+              {
+                "do": "Both are in $R$, but $\\left(3,\\tfrac43\\right)$ is not.",
+                "math": "3\\not\\le\\left(\\tfrac43\\right)^3=\\tfrac{64}{27}\\approx2.37 \\Rightarrow \\left(3,\\tfrac43\\right)\\notin R"
+              },
+              {
+                "do": "So $R$ is not transitive.",
+                "marks": 1
+              }
+            ],
+            "mistake": "Testing only whole numbers like $a=1$ or $2$ — they satisfy $a\\le a^3$, so pick $a=\\tfrac12$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "question": "Let $A=\\{1,2,3,\\ldots,9\\}$ and $R$ be the relation on $A\\times A$ defined by $(a,b)\\,R\\,(c,d)$ if $a+d=b+c$. Prove that $R$ is an equivalence relation and find the equivalence class $[(2,5)]$.",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; $[(2,5)]=\\{(1,4),(2,5),(3,6),(4,7),(5,8),(6,9)\\}$.",
+            "steps": [
+              {
+                "do": "**Reflexive:** for any $(a,b)\\in A\\times A$,",
+                "math": "a+b=b+a \\Rightarrow (a,b)\\,R\\,(a,b)",
+                "marks": 0.5
+              },
+              {
+                "do": "**Symmetric:** let $(a,b)\\,R\\,(c,d)$.",
+                "math": "a+d=b+c \\Rightarrow c+b=d+a \\Rightarrow (c,d)\\,R\\,(a,b)",
+                "marks": 0.5
+              },
+              {
+                "do": "**Transitive:** let $(a,b)\\,R\\,(c,d)$ and $(c,d)\\,R\\,(e,f)$. Add the two equations.",
+                "math": "\\begin{aligned} a+d&=b+c \\\\ c+f&=d+e \\\\ \\Rightarrow a+d+c+f&=b+c+d+e \\end{aligned}"
+              },
+              {
+                "do": "Cancel $c+d$ from both sides.",
+                "math": "a+f=b+e \\Rightarrow (a,b)\\,R\\,(e,f)",
+                "marks": 1
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation."
+              },
+              {
+                "do": "**Class of $(2,5)$:** $(a,b)\\,R\\,(2,5)$ means",
+                "math": "a+5=b+2 \\Rightarrow b=a+3",
+                "marks": 0.5
+              },
+              {
+                "do": "Need $b\\le 9$, so $a=1,2,\\ldots,6$.",
+                "math": "[(2,5)]=\\{(1,4),(2,5),(3,6),(4,7),(5,8),(6,9)\\}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Including $(7,10)$ — $10\\notin A$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "question": "Let $f:\\mathbb{N}\\to\\mathbb{N}$ be defined by $f(n)=\\begin{cases}\\dfrac{n+1}{2}, & n \\text{ odd}\\\\[4pt] \\dfrac{n}{2}, & n \\text{ even}\\end{cases}$. Show that $f$ is onto but not one-one.",
+          "solution": {
+            "answer": "$f$ is onto but not one-one.",
+            "steps": [
+              {
+                "do": "**Not one-one:** find $f(1)$ and $f(2)$.",
+                "math": "f(1)=\\dfrac{1+1}{2}=1,\\qquad f(2)=\\dfrac{2}{2}=1"
+              },
+              {
+                "do": "$1\\neq2$ but $f(1)=f(2)$, so $f$ is not one-one.",
+                "marks": 1
+              },
+              {
+                "do": "**Onto:** let $m\\in\\mathbb{N}$. Take the odd number $n=2m-1\\in\\mathbb{N}$.",
+                "math": "f(2m-1)=\\dfrac{(2m-1)+1}{2}=m",
+                "marks": 1
+              },
+              {
+                "do": "Also take the even number $n=2m\\in\\mathbb{N}$.",
+                "math": "f(2m)=\\dfrac{2m}{2}=m",
+                "marks": 0.5
+              },
+              {
+                "do": "Every $m\\in\\mathbb{N}$ has a pre-image, so $f$ is onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Proving onto with one example value of $m$ instead of a general $m\\in\\mathbb{N}$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "question": "Show that the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\dfrac{x}{x^2+1}$ is neither one-one nor onto.",
+          "solution": {
+            "answer": "$f$ is neither one-one nor onto.",
+            "steps": [
+              {
+                "do": "**Not one-one:** find $f(2)$ and $f\\left(\\tfrac12\\right)$.",
+                "math": "f(2)=\\dfrac{2}{4+1}=\\dfrac25,\\qquad f\\left(\\tfrac12\\right)=\\dfrac{\\tfrac12}{\\tfrac14+1}=\\dfrac{\\tfrac12}{\\tfrac54}=\\dfrac25",
+                "marks": 0.5
+              },
+              {
+                "do": "$2\\neq\\tfrac12$ but $f(2)=f\\left(\\tfrac12\\right)$, so $f$ is not one-one.",
+                "marks": 1
+              },
+              {
+                "do": "**Not onto:** suppose $1\\in\\mathbb{R}$ has a pre-image $x$.",
+                "math": "\\dfrac{x}{x^2+1}=1 \\Rightarrow x^2-x+1=0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the discriminant.",
+                "math": "D=(-1)^2-4(1)(1)=-3<0 \\Rightarrow \\text{no real } x",
+                "marks": 0.5
+              },
+              {
+                "do": "So $1$ has no pre-image; $f$ is not onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Saying \"not onto\" without naming a codomain value that has no pre-image."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "question": "Let $A=\\mathbb{R}-\\{3\\}$ and $B=\\mathbb{R}-\\{1\\}$. Show that $f:A\\to B$ defined by $f(x)=\\dfrac{x-2}{x-3}$ is one-one and onto.",
+          "solution": {
+            "answer": "$f$ is one-one and onto.",
+            "steps": [
+              {
+                "do": "**One-one:** let $x_1,x_2\\in A$ with $f(x_1)=f(x_2)$. Cross-multiply.",
+                "math": "(x_1-2)(x_2-3)=(x_2-2)(x_1-3)",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand both sides.",
+                "math": "x_1x_2-3x_1-2x_2+6=x_1x_2-3x_2-2x_1+6"
+              },
+              {
+                "do": "Cancel equal terms.",
+                "math": "-3x_1-2x_2=-3x_2-2x_1 \\Rightarrow -x_1=-x_2 \\Rightarrow x_1=x_2"
+              },
+              {
+                "do": "So $f$ is one-one.",
+                "marks": 1
+              },
+              {
+                "do": "**Onto:** let $y\\in B$, so $y\\neq1$. Put $f(x)=y$.",
+                "math": "x-2=xy-3y \\Rightarrow x(1-y)=2-3y \\Rightarrow x=\\dfrac{3y-2}{y-1}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check $x\\neq3$: if $x=3$ then",
+                "math": "3y-2=3y-3 \\Rightarrow -2=-3, \\text{ impossible} \\Rightarrow x\\in A",
+                "why": "So the pre-image lies in the domain $A$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Check that $f(x)=y$.",
+                "math": "f(x)=\\dfrac{\\frac{3y-2}{y-1}-2}{\\frac{3y-2}{y-1}-3}=\\dfrac{3y-2-2y+2}{3y-2-3y+3}=\\dfrac{y}{1}=y"
+              },
+              {
+                "do": "Every $y\\in B$ has a pre-image in $A$, so $f$ is onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not checking that $x=\\dfrac{3y-2}{y-1}$ is never $3$, i.e. that it lies in $A$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "question": "Let $A=\\{1,2,3,4,5,6\\}$ and $R=\\{(a,b): b=a+1\\}$ on $A$. Is $R$ reflexive, symmetric or transitive? Justify.",
+          "solution": {
+            "answer": "$R$ is neither reflexive, nor symmetric, nor transitive.",
+            "steps": [
+              {
+                "do": "Write $R$ in roster form.",
+                "math": "R=\\{(1,2),(2,3),(3,4),(4,5),(5,6)\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "**Reflexive?** $1\\neq1+1$.",
+                "math": "(1,1)\\notin R \\Rightarrow \\text{not reflexive}",
+                "marks": 0.5
+              },
+              {
+                "do": "**Symmetric?**",
+                "math": "(1,2)\\in R \\text{ but } (2,1)\\notin R \\Rightarrow \\text{not symmetric}",
+                "marks": 0.5
+              },
+              {
+                "do": "**Transitive?**",
+                "math": "(1,2),(2,3)\\in R \\text{ but } (1,3)\\notin R \\Rightarrow \\text{not transitive}",
+                "marks": 0.5
+              },
+              {
+                "do": "So $R$ is neither reflexive, nor symmetric, nor transitive."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "question": "Let $L$ be the set of all lines in a plane and $R=\\{(L_1,L_2): L_1\\perp L_2\\}$. Show that $R$ is symmetric but neither reflexive nor transitive.",
+          "solution": {
+            "answer": "$R$ is symmetric but neither reflexive nor transitive.",
+            "steps": [
+              {
+                "do": "**Reflexive?** No line is perpendicular to itself.",
+                "math": "L_1\\not\\perp L_1 \\Rightarrow (L_1,L_1)\\notin R \\Rightarrow \\text{not reflexive}",
+                "marks": 1
+              },
+              {
+                "do": "**Symmetric:** let $(L_1,L_2)\\in R$.",
+                "math": "L_1\\perp L_2 \\Rightarrow L_2\\perp L_1 \\Rightarrow (L_2,L_1)\\in R",
+                "marks": 1
+              },
+              {
+                "do": "**Transitive?** Let $L_1\\perp L_2$ and $L_2\\perp L_3$.",
+                "math": "L_1\\perp L_2,\\ L_2\\perp L_3 \\Rightarrow L_1\\parallel L_3",
+                "why": "Two lines perpendicular to the same line are parallel.",
+                "figure": "figs/q15-sol.svg"
+              },
+              {
+                "do": "So $L_1\\not\\perp L_3$, i.e. $(L_1,L_3)\\notin R$. Not transitive.",
+                "marks": 1
+              },
+              {
+                "do": "Hence $R$ is symmetric but neither reflexive nor transitive."
+              }
+            ]
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "question": "Let $\\mathbb{N}$ be the set of natural numbers and $R$ be the relation on $\\mathbb{N}\\times\\mathbb{N}$ defined by $(a,b)\\,R\\,(c,d)$ if and only if $ad=bc$. Show that $R$ is an equivalence relation.",
+          "solution": {
+            "answer": "$R$ is reflexive, symmetric and transitive, hence an equivalence relation.",
+            "steps": [
+              {
+                "do": "**Reflexive:** for any $(a,b)\\in\\mathbb{N}\\times\\mathbb{N}$,",
+                "math": "ab=ba \\Rightarrow (a,b)\\,R\\,(a,b)",
+                "why": "Multiplication of natural numbers is commutative.",
+                "marks": 1
+              },
+              {
+                "do": "**Symmetric:** let $(a,b)\\,R\\,(c,d)$.",
+                "math": "ad=bc \\Rightarrow cb=da \\Rightarrow (c,d)\\,R\\,(a,b)",
+                "marks": 1
+              },
+              {
+                "do": "**Transitive:** let $(a,b)\\,R\\,(c,d)$ and $(c,d)\\,R\\,(e,f)$.",
+                "math": "ad=bc \\quad\\text{and}\\quad cf=de",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply the two equations.",
+                "math": "(ad)(cf)=(bc)(de)",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide both sides by $cd$.",
+                "math": "af=be",
+                "why": "$c,d\\in\\mathbb{N}$, so $cd\\neq0$.",
+                "marks": 1
+              },
+              {
+                "do": "So $(a,b)\\,R\\,(e,f)$; $R$ is transitive.",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Dividing by $cd$ without saying $cd\\neq0$ because $c,d\\in\\mathbb{N}$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "question": "Show that the function $f:\\mathbb{R}\\to\\{x\\in\\mathbb{R}: -1<x<1\\}$ defined by $f(x)=\\dfrac{x}{1+|x|}$ is one-one and onto.",
+          "solution": {
+            "answer": "$f$ is one-one and onto.",
+            "concept": "Split $|x|$: $|x|=x$ for $x\\ge0$ and $|x|=-x$ for $x<0$.",
+            "figure": "figs/q17-graph.svg",
+            "steps": [
+              {
+                "do": "Write $f$ without the modulus.",
+                "math": "f(x)=\\begin{cases}\\dfrac{x}{1+x}, & x\\ge0\\\\[4pt] \\dfrac{x}{1-x}, & x<0\\end{cases}",
+                "marks": 0.5
+              },
+              {
+                "do": "**One-one, Case 1:** $x_1,x_2\\ge0$ and $f(x_1)=f(x_2)$. Cross-multiply.",
+                "math": "x_1+x_1x_2=x_2+x_1x_2 \\Rightarrow x_1=x_2",
+                "marks": 0.5
+              },
+              {
+                "do": "**Case 2:** $x_1,x_2<0$ and $f(x_1)=f(x_2)$. Cross-multiply.",
+                "math": "x_1-x_1x_2=x_2-x_1x_2 \\Rightarrow x_1=x_2",
+                "marks": 0.5
+              },
+              {
+                "do": "**Case 3:** $x_1\\ge0$, $x_2<0$. Signs of the outputs differ.",
+                "math": "f(x_1)\\ge0>f(x_2) \\Rightarrow f(x_1)\\neq f(x_2)",
+                "marks": 0.5
+              },
+              {
+                "do": "In all cases $f(x_1)=f(x_2)\\Rightarrow x_1=x_2$. So $f$ is one-one.",
+                "marks": 0.5
+              },
+              {
+                "do": "**Onto, Case 1:** let $0\\le y<1$. Take $x=\\dfrac{y}{1-y}\\ge0$.",
+                "math": "f(x)=\\dfrac{\\frac{y}{1-y}}{1+\\frac{y}{1-y}}=\\dfrac{\\frac{y}{1-y}}{\\frac{1}{1-y}}=y",
+                "why": "$1-y>0$, so $x\\ge0$.",
+                "marks": 1
+              },
+              {
+                "do": "**Case 2:** let $-1<y<0$. Take $x=\\dfrac{y}{1+y}<0$.",
+                "math": "f(x)=\\dfrac{\\frac{y}{1+y}}{1-\\frac{y}{1+y}}=\\dfrac{\\frac{y}{1+y}}{\\frac{1}{1+y}}=y",
+                "why": "$1+y>0$ and $y<0$, so $x<0$.",
+                "marks": 1
+              },
+              {
+                "do": "Every $y\\in(-1,1)$ has a pre-image, so $f$ is onto.",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $f$ is one-one and onto."
+              }
+            ],
+            "mistake": "Using one formula for all $x$ — the pre-image formula differs for $y\\ge0$ and $y<0$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "question": "Let $A=\\{x\\in\\mathbb{Z}: 0\\le x\\le 12\\}$. Show that $R=\\{(a,b): |a-b| \\text{ is a multiple of } 4\\}$ is an equivalence relation on $A$. Find the set of all elements related to $1$ and write the equivalence class $[2]$.",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; elements related to $1$: $\\{1,5,9\\}$; $[2]=\\{2,6,10\\}$.",
+            "steps": [
+              {
+                "do": "**Reflexive:** for any $a\\in A$,",
+                "math": "|a-a|=0=4\\times0 \\Rightarrow (a,a)\\in R",
+                "marks": 1
+              },
+              {
+                "do": "**Symmetric:** let $(a,b)\\in R$, so $|a-b|=4k$.",
+                "math": "|b-a|=|a-b|=4k \\Rightarrow (b,a)\\in R",
+                "marks": 1
+              },
+              {
+                "do": "**Transitive:** let $(a,b),(b,c)\\in R$: $a-b=\\pm4k$, $b-c=\\pm4m$.",
+                "math": "a-c=(a-b)+(b-c)=\\pm4k\\pm4m=4(\\pm k\\pm m)"
+              },
+              {
+                "do": "So $|a-c|$ is a multiple of 4; $(a,c)\\in R$.",
+                "marks": 1
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation on $A$."
+              },
+              {
+                "do": "**Related to 1:** need $|1-b|\\in\\{0,4,8,\\ldots\\}$ with $b\\in A$.",
+                "math": "b=1,\\ 5,\\ 9 \\Rightarrow \\{1,5,9\\}",
+                "marks": 1
+              },
+              {
+                "do": "**Class $[2]$:** need $|2-b|$ a multiple of 4, $b\\in A$.",
+                "math": "b=2,\\ 6,\\ 10 \\Rightarrow [2]=\\{2,6,10\\}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Including $13$ or $-3$ — they are not in $A=\\{0,1,\\ldots,12\\}$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "question": "Show that the function $f:[-1,1]\\to\\mathbb{R}$ defined by $f(x)=\\dfrac{x}{x+2}$ is one-one. Also find the range of $f$.",
+          "solution": {
+            "answer": "$f$ is one-one; range of $f=\\left[-1,\\tfrac13\\right]$.",
+            "steps": [
+              {
+                "do": "**One-one:** let $x_1,x_2\\in[-1,1]$ with $f(x_1)=f(x_2)$. Cross-multiply.",
+                "math": "x_1(x_2+2)=x_2(x_1+2)",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand and cancel $x_1x_2$.",
+                "math": "2x_1=2x_2 \\Rightarrow x_1=x_2 \\Rightarrow f \\text{ is one-one}",
+                "marks": 1
+              },
+              {
+                "do": "**Range:** rewrite $f(x)$.",
+                "math": "f(x)=\\dfrac{(x+2)-2}{x+2}=1-\\dfrac{2}{x+2}"
+              },
+              {
+                "do": "For $-1\\le x\\le1$, we get $1\\le x+2\\le3$.",
+                "math": "\\dfrac23\\le\\dfrac{2}{x+2}\\le2 \\Rightarrow -1\\le f(x)\\le\\dfrac13",
+                "marks": 0.5
+              },
+              {
+                "do": "Conversely, let $-1\\le y\\le\\tfrac13$. Solve $y=\\dfrac{x}{x+2}$ for $x$.",
+                "math": "x=\\dfrac{2y}{1-y}",
+                "marks": 0.5
+              },
+              {
+                "do": "As $1-y>0$: $y\\ge-1 \\Rightarrow x\\ge-1$ and $y\\le\\tfrac13 \\Rightarrow x\\le1$.",
+                "math": "x\\in[-1,1] \\text{ and } f(x)=y"
+              },
+              {
+                "do": "So every such $y$ is attained.",
+                "math": "\\text{Range of } f=\\left[-1,\\tfrac13\\right]",
+                "why": "Ends: $f(-1)=-1$, $f(1)=\\tfrac13$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Giving the range as $\\mathbb{R}-\\{1\\}$ — that ignores the domain $[-1,1]$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** A classroom teacher wants to assess her students' understanding of “relations”. She writes the following five relations, each defined on the set $A=\\{1,2,3\\}$: $R_1=\\{(2,3),(3,2)\\}$, $R_2=\\{(1,2),(1,3),(3,2)\\}$, $R_3=\\{(1,2),(2,1),(1,1)\\}$, $R_4=\\{(1,1),(1,2),(3,3),(2,2)\\}$, $R_5=\\{(1,1),(1,2),(3,3),(2,2),(2,1),(2,3),(3,2)\\}$.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Identify the relation which is reflexive, transitive but not symmetric.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Identify the relation which is reflexive and symmetric but not transitive.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)(a)",
+              "text": "Identify the relations which are symmetric but neither reflexive nor transitive.",
+              "marks": 2
+            },
+            {
+              "label": "(iii)(b)",
+              "text": "What pairs should be added to the relation $R_2$ to make it an equivalence relation?",
+              "marks": 2,
+              "alt": true
+            }
+          ],
+          "solution": {
+            "answer": "(i) $R_4$ (ii) $R_5$ (iii)(a) $R_1$ and $R_3$ OR (iii)(b) add $(1,1),(2,2),(3,3),(2,1),(3,1),(2,3)$",
+            "concept": "Reflexive on $A$ needs all of $(1,1),(2,2),(3,3)$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "answer": "$R_4$",
+                "steps": [
+                  {
+                    "do": "Only $R_4$ and $R_5$ contain $(1,1),(2,2),(3,3)$; $R_5$ is symmetric. Test $R_4$."
+                  },
+                  {
+                    "do": "$R_4$ is reflexive; $(1,2)\\in R_4$ but $(2,1)\\notin R_4$, so not symmetric."
+                  },
+                  {
+                    "do": "Transitive: the only chains through $(1,2)$ give $(1,2)$ again.",
+                    "math": "(1,1),(1,2)\\Rightarrow(1,2)\\in R_4;\\quad (1,2),(2,2)\\Rightarrow(1,2)\\in R_4"
+                  },
+                  {
+                    "do": "So the required relation is $R_4$.",
+                    "marks": 1
+                  }
+                ]
+              },
+              {
+                "label": "(ii)",
+                "answer": "$R_5$",
+                "steps": [
+                  {
+                    "do": "$R_5$ contains $(1,1),(2,2),(3,3)$, so it is reflexive."
+                  },
+                  {
+                    "do": "Symmetric: $(1,2),(2,1)\\in R_5$ and $(2,3),(3,2)\\in R_5$."
+                  },
+                  {
+                    "do": "Not transitive:",
+                    "math": "(1,2),(2,3)\\in R_5 \\text{ but } (1,3)\\notin R_5"
+                  },
+                  {
+                    "do": "So the required relation is $R_5$.",
+                    "marks": 1
+                  }
+                ]
+              },
+              {
+                "label": "(iii)(a)",
+                "answer": "$R_1$ and $R_3$",
+                "steps": [
+                  {
+                    "do": "$R_1$: $(1,1)\\notin R_1$ (not reflexive); $(2,3),(3,2)$ both present (symmetric).",
+                    "math": "(2,3),(3,2)\\in R_1 \\text{ but } (2,2)\\notin R_1 \\Rightarrow \\text{not transitive}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "$R_3$: $(2,2)\\notin R_3$ (not reflexive); $(1,2),(2,1)$ both present (symmetric).",
+                    "math": "(2,1),(1,2)\\in R_3 \\text{ but } (2,2)\\notin R_3 \\Rightarrow \\text{not transitive}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "$R_2$ is not symmetric; $R_4,R_5$ are reflexive. So the answer is $R_1$ and $R_3$."
+                  }
+                ]
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "answer": "Add $(1,1),(2,2),(3,3),(2,1),(3,1),(2,3)$; then $R_2$ becomes $A\\times A$.",
+                "steps": [
+                  {
+                    "do": "For reflexive, add the missing diagonal pairs.",
+                    "math": "(1,1),\\ (2,2),\\ (3,3)",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "For symmetric, add the reverse of each pair of $R_2$.",
+                    "math": "(2,1),\\ (3,1),\\ (2,3)",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "The new relation has all $9$ pairs, so it is $A\\times A$.",
+                    "math": "R_2\\cup\\{\\ldots\\}=A\\times A",
+                    "why": "$A\\times A$ is reflexive, symmetric and transitive.",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Pairs to add: $(1,1),(2,2),(3,3),(2,1),(3,1),(2,3)$.",
+                    "marks": 0.5
+                  }
+                ]
+              }
+            ],
+            "mistake": "Calling $R_1$ transitive — $(2,3),(3,2)$ forces $(2,2)$, which is missing."
+          }
+        }
+      ]
+    }
+  ]
+}

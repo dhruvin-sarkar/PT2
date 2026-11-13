@@ -1,0 +1,914 @@
+{
+  "chapter": 1,
+  "chapterTitle": "Relations and Functions",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 52,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/1/3) Q7",
+          "question": "A relation $R$ defined on a set of human beings as $R = \\{(x, y) : x \\text{ is 5 cm shorter than } y\\}$ is:",
+          "options": [
+            "reflexive only",
+            "reflexive and transitive",
+            "symmetric and transitive",
+            "neither transitive, nor symmetric, nor reflexive"
+          ],
+          "solution": {
+            "answer": "(D) neither transitive, nor symmetric, nor reflexive",
+            "concept": "Reflexive: $(a,a) \\in R$; symmetric: $(a,b) \\in R \\Rightarrow (b,a) \\in R$; transitive: $(a,b), (b,c) \\in R \\Rightarrow (a,c) \\in R$.",
+            "steps": [
+              {
+                "do": "Reflexive? Nobody is 5 cm shorter than himself.",
+                "math": "(x, x) \\notin R"
+              },
+              {
+                "do": "Symmetric? If $x$ is 5 cm shorter than $y$, then $y$ is 5 cm taller.",
+                "math": "(x, y) \\in R \\;\\Rightarrow\\; (y, x) \\notin R"
+              },
+              {
+                "do": "Transitive? Let $x$ be 5 cm shorter than $y$, and $y$ than $z$.",
+                "math": "x \\text{ is 10 cm shorter than } z \\;\\Rightarrow\\; (x, z) \\notin R",
+                "marks": 1
+              },
+              {
+                "do": "$R$ has none of the three properties. Option (D)."
+              }
+            ],
+            "mistake": "Treating it like ‘shorter than’, which is transitive — ‘exactly 5 cm shorter’ is not."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/1/2) Q13",
+          "question": "A relation $R$ defined on set $A = \\{x : x \\in \\mathbb{Z} \\text{ and } 0 \\le x \\le 10\\}$ as $R = \\{(x, y) : x = y\\}$ is given to be an equivalence relation. The number of equivalence classes is:",
+          "options": [
+            "$1$",
+            "$2$",
+            "$10$",
+            "$11$"
+          ],
+          "solution": {
+            "answer": "(D) $11$",
+            "concept": "The equivalence class $[a]$ is the set of all elements related to $a$.",
+            "steps": [
+              {
+                "do": "List the elements of $A$.",
+                "math": "A = \\{0, 1, 2, \\ldots, 10\\} \\;\\Rightarrow\\; n(A) = 11"
+              },
+              {
+                "do": "Each element is related only to itself.",
+                "math": "[a] = \\{a\\} \\text{ for every } a \\in A"
+              },
+              {
+                "do": "So there is one class for each element.",
+                "math": "\\text{Number of equivalence classes} = n(A) = 11",
+                "marks": 1
+              },
+              {
+                "do": "Option (D)."
+              }
+            ],
+            "mistake": "Counting $0$ to $10$ as ten numbers — there are eleven."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/3/1) Q2",
+          "question": "Let $\\mathbb{R}_+$ denote the set of all non-negative real numbers. Then the function $f : \\mathbb{R}_+ \\to \\mathbb{R}_+$ defined as $f(x) = x^2 + 1$ is:",
+          "options": [
+            "one-one but not onto",
+            "onto but not one-one",
+            "both one-one and onto",
+            "neither one-one nor onto"
+          ],
+          "solution": {
+            "answer": "(A) one-one but not onto",
+            "concept": "One-one: $f(x_1) = f(x_2) \\Rightarrow x_1 = x_2$. Onto: every element of the codomain has a pre-image.",
+            "steps": [
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$ with $x_1, x_2 \\ge 0$.",
+                "math": "x_1^2 + 1 = x_2^2 + 1 \\;\\Rightarrow\\; x_1^2 = x_2^2 \\;\\Rightarrow\\; x_1 = x_2",
+                "why": "both are non-negative, so $x_1 = -x_2$ is ruled out"
+              },
+              {
+                "do": "Find the least value of $f$ on $\\mathbb{R}_+$.",
+                "math": "x^2 \\ge 0 \\;\\Rightarrow\\; f(x) \\ge 1"
+              },
+              {
+                "do": "So $0$ in the codomain has no pre-image: not onto.",
+                "math": "f(x) = 0 \\;\\Rightarrow\\; x^2 = -1, \\text{ no real } x",
+                "marks": 1
+              },
+              {
+                "do": "One-one but not onto. Option (A)."
+              }
+            ],
+            "mistake": "Calling it many-one as for $x^2$ on $\\mathbb{R}$ — this domain has no negative numbers."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/1/1) Q1",
+          "question": "A function $f : \\mathbb{R}_+ \\to \\mathbb{R}$ (where $\\mathbb{R}_+$ is the set of all non-negative real numbers) defined by $f(x) = 4x + 3$ is:",
+          "options": [
+            "both one-one and onto",
+            "onto but not one-one",
+            "one-one but not onto",
+            "neither one-one nor onto"
+          ],
+          "solution": {
+            "answer": "(C) one-one but not onto",
+            "concept": "Onto means range $=$ codomain; here the codomain is all of $\\mathbb{R}$.",
+            "steps": [
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$.",
+                "math": "4x_1 + 3 = 4x_2 + 3 \\;\\Rightarrow\\; x_1 = x_2"
+              },
+              {
+                "do": "Onto? Take $y = -1$ in the codomain $\\mathbb{R}$.",
+                "math": "4x + 3 = -1 \\;\\Rightarrow\\; x = -1 \\notin \\mathbb{R}_+",
+                "marks": 1
+              },
+              {
+                "do": "So $-1$ has no pre-image: $f$ is not onto."
+              },
+              {
+                "do": "One-one but not onto. Option (C)."
+              }
+            ],
+            "mistake": "Forgetting the domain is only $x \\ge 0$; on all of $\\mathbb{R}$ the same rule is onto."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "Let $A = \\{1, 2, 3, 4\\}$ and $B = \\{a, b\\}$. The number of onto functions from $A$ to $B$ is:",
+          "options": [
+            "$16$",
+            "$14$",
+            "$12$",
+            "$8$"
+          ],
+          "solution": {
+            "answer": "(B) $14$",
+            "concept": "Number of functions from an $m$-element set to an $n$-element set $= n^m$.",
+            "steps": [
+              {
+                "do": "Each of the 4 elements of $A$ has 2 choices of image.",
+                "math": "\\text{Total functions} = 2^4 = 16"
+              },
+              {
+                "do": "A function is not onto only when every element goes to the same image.",
+                "math": "\\text{all to } a \\text{ or all to } b: \\ 2 \\text{ functions}"
+              },
+              {
+                "do": "Subtract these.",
+                "math": "\\text{Onto functions} = 16 - 2 = 14",
+                "marks": 1
+              },
+              {
+                "do": "Option (B)."
+              }
+            ],
+            "mistake": "Answering $16$ — that counts all functions, not only the onto ones."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "CBSE 2024 (65/4/1) Q19",
+          "question": "**Assertion (A):** The relation $R = \\{(x, y) : (x + y) \\text{ is a prime number and } x, y \\in \\mathbb{N}\\}$ is not a reflexive relation. **Reason (R):** The number $2n$ is composite for all natural numbers $n$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(C) A is true, but R is false",
+            "concept": "$(x, x) \\in R$ needs $x + x = 2x$ to be prime.",
+            "steps": [
+              {
+                "do": "Check A: take $x = 2$.",
+                "math": "2 + 2 = 4 \\text{ is not prime} \\;\\Rightarrow\\; (2, 2) \\notin R",
+                "why": "so $R$ is not reflexive: A is true"
+              },
+              {
+                "do": "Check R: take $n = 1$.",
+                "math": "2n = 2, \\text{ which is prime, not composite}",
+                "marks": 1,
+                "why": "so R is false"
+              },
+              {
+                "do": "A false statement cannot explain A."
+              },
+              {
+                "do": "A is true, R is false. Option (C)."
+              }
+            ],
+            "mistake": "Forgetting $n = 1$: then $2n = 2$ is prime, so R fails."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2024 (65/1/1) Q26(b)",
+          "question": "A function $f$ is defined from $\\mathbb{R} \\to \\mathbb{R}$ as $f(x) = ax + b$, such that $f(1) = 1$ and $f(2) = 3$. Find function $f(x)$. Hence, check whether function $f(x)$ is one-one and onto or not.",
+          "solution": {
+            "answer": "$f(x) = 2x - 1$; it is both one-one and onto.",
+            "concept": "Onto: for every $y$ in the codomain, solve $f(x) = y$ and check $x$ lies in the domain.",
+            "steps": [
+              {
+                "do": "Use the given values.",
+                "math": "f(1) = a + b = 1, \\qquad f(2) = 2a + b = 3"
+              },
+              {
+                "do": "Subtract to get $a$, then find $b$.",
+                "math": "a = 2, \\ b = -1 \\;\\Rightarrow\\; f(x) = 2x - 1",
+                "marks": 0.5
+              },
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$.",
+                "math": "2x_1 - 1 = 2x_2 - 1 \\;\\Rightarrow\\; x_1 = x_2",
+                "marks": 0.5
+              },
+              {
+                "do": "Onto: let $y \\in \\mathbb{R}$ and solve $f(x) = y$.",
+                "math": "2x - 1 = y \\;\\Rightarrow\\; x = \\dfrac{y + 1}{2} \\in \\mathbb{R}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check the pre-image.",
+                "math": "f\\left(\\dfrac{y + 1}{2}\\right) = (y + 1) - 1 = y",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $f(x) = 2x - 1$ is both one-one and onto."
+              }
+            ],
+            "mistake": "Finding $x = \\dfrac{y+1}{2}$ but not showing $f(x) = y$ for it."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Show that the relation $R$ on the set $\\mathbb{Z}$ of integers, given by $R = \\{(a, b) : 2a + 3b \\text{ is divisible by } 5\\}$, is an equivalence relation.",
+          "solution": {
+            "answer": "$R$ is reflexive, symmetric and transitive, hence an equivalence relation.",
+            "concept": "An equivalence relation is reflexive, symmetric and transitive.",
+            "steps": [
+              {
+                "do": "Reflexive: put $b = a$.",
+                "math": "2a + 3a = 5a, \\text{ divisible by } 5 \\;\\Rightarrow\\; (a, a) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: let $(a, b) \\in R$, so $2a + 3b = 5k$.",
+                "math": "2b + 3a = 5(a + b) - (2a + 3b) = 5(a + b - k)",
+                "marks": 0.5
+              },
+              {
+                "do": "So $5$ divides $2b + 3a$, i.e. $(b, a) \\in R$."
+              },
+              {
+                "do": "Transitive: let $2a + 3b = 5k$ and $2b + 3c = 5m$. Add them.",
+                "math": "2a + 5b + 3c = 5(k + m)"
+              },
+              {
+                "do": "Rearrange.",
+                "math": "2a + 3c = 5(k + m - b) \\;\\Rightarrow\\; (a, c) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $2b + 3a = 2a + 3b$ — false in general; use $5(a + b)$ minus the given sum."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2023 (65/1/1) Q32",
+          "question": "A relation $R$ is defined on the set of real numbers $\\mathbb{R}$ as $R = \\{(x, y) : x \\cdot y \\text{ is an irrational number}\\}$. Check whether $R$ is reflexive, symmetric and transitive or not.",
+          "solution": {
+            "answer": "$R$ is symmetric, but neither reflexive nor transitive.",
+            "concept": "To prove a property, argue for all elements; to disprove it, one counter-example is enough.",
+            "steps": [
+              {
+                "do": "Reflexive? Take $x = 1$.",
+                "math": "1 \\cdot 1 = 1, \\text{ rational} \\;\\Rightarrow\\; (1, 1) \\notin R",
+                "marks": 1,
+                "why": "so $R$ is not reflexive"
+              },
+              {
+                "do": "Symmetric: let $(x, y) \\in R$.",
+                "math": "x \\cdot y \\text{ irrational} \\;\\Rightarrow\\; y \\cdot x = x \\cdot y \\text{ irrational} \\;\\Rightarrow\\; (y, x) \\in R",
+                "marks": 1,
+                "why": "multiplication of real numbers is commutative"
+              },
+              {
+                "do": "Transitive? Take $x = 1$, $y = \\sqrt{2}$, $z = 2$.",
+                "math": "1 \\cdot \\sqrt{2} = \\sqrt{2}, \\quad \\sqrt{2} \\cdot 2 = 2\\sqrt{2} \\quad (\\text{both irrational})"
+              },
+              {
+                "do": "So $(1, \\sqrt{2}) \\in R$ and $(\\sqrt{2}, 2) \\in R$. But:",
+                "math": "1 \\cdot 2 = 2, \\text{ rational} \\;\\Rightarrow\\; (1, 2) \\notin R",
+                "marks": 1
+              },
+              {
+                "do": "Hence $R$ is symmetric, but neither reflexive nor transitive."
+              }
+            ],
+            "mistake": "Trying to prove transitivity in general — pick a counter-example with a common middle term."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Let $A = \\{1, 2, 3, \\ldots, 9\\}$ and $R$ be the relation in $A \\times A$ defined by $(a, b)\\,R\\,(c, d)$ if $a + b = c + d$ for $(a, b), (c, d) \\in A \\times A$. Prove that $R$ is an equivalence relation. Also obtain the equivalence class $[(3, 5)]$.",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; $[(3, 5)] = \\{(1, 7), (2, 6), (3, 5), (4, 4), (5, 3), (6, 2), (7, 1)\\}$",
+            "concept": "$[(a, b)]$ is the set of all pairs in $A \\times A$ related to $(a, b)$.",
+            "steps": [
+              {
+                "do": "Reflexive: for any $(a, b) \\in A \\times A$.",
+                "math": "a + b = a + b \\;\\Rightarrow\\; (a, b)\\,R\\,(a, b)",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: let $(a, b)\\,R\\,(c, d)$.",
+                "math": "a + b = c + d \\;\\Rightarrow\\; c + d = a + b \\;\\Rightarrow\\; (c, d)\\,R\\,(a, b)",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: let $(a, b)\\,R\\,(c, d)$ and $(c, d)\\,R\\,(e, f)$.",
+                "math": "a + b = c + d = e + f \\;\\Rightarrow\\; (a, b)\\,R\\,(e, f)",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              },
+              {
+                "do": "$[(3, 5)]$ contains every pair in $A \\times A$ with sum $3 + 5 = 8$.",
+                "math": "[(3, 5)] = \\{(a, b) \\in A \\times A : a + b = 8\\}"
+              },
+              {
+                "do": "List them.",
+                "math": "[(3, 5)] = \\{(1, 7), (2, 6), (3, 5), (4, 4), (5, 3), (6, 2), (7, 1)\\}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Missing $(4, 4)$, or including $(8, 0)$ although $0 \\notin A$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Let $f : \\mathbb{N} \\to \\mathbb{N}$ be defined by $f(n) = \\begin{cases} n + 1, & \\text{if } n \\text{ is odd} \\\\ n - 1, & \\text{if } n \\text{ is even} \\end{cases}$. Show that $f$ is both one-one and onto.",
+          "solution": {
+            "answer": "$f$ is both one-one and onto (bijective).",
+            "concept": "For a piecewise function, check one-one in every case, including mixed cases.",
+            "steps": [
+              {
+                "do": "One-one: let $f(n_1) = f(n_2)$. Case 1: both odd.",
+                "math": "n_1 + 1 = n_2 + 1 \\;\\Rightarrow\\; n_1 = n_2"
+              },
+              {
+                "do": "Case 2: both even.",
+                "math": "n_1 - 1 = n_2 - 1 \\;\\Rightarrow\\; n_1 = n_2",
+                "marks": 0.5
+              },
+              {
+                "do": "Case 3: $n_1$ odd, $n_2$ even.",
+                "math": "n_1 + 1 = n_2 - 1 \\;\\Rightarrow\\; n_2 = n_1 + 2"
+              },
+              {
+                "do": "But $n_1 + 2$ is odd and $n_2$ is even — impossible. So $f$ is one-one.",
+                "marks": 1
+              },
+              {
+                "do": "Onto: let $m \\in \\mathbb{N}$. If $m$ is odd, $m + 1$ is even.",
+                "math": "f(m + 1) = (m + 1) - 1 = m",
+                "marks": 0.5
+              },
+              {
+                "do": "If $m$ is even, $m - 1 \\ (\\ge 1)$ is odd.",
+                "math": "f(m - 1) = (m - 1) + 1 = m",
+                "marks": 0.5
+              },
+              {
+                "do": "Every $m \\in \\mathbb{N}$ has a pre-image. Hence $f$ is one-one and onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Skipping the mixed case ($n_1$ odd, $n_2$ even) in the one-one part."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024 (65/2/3) Q33(a)",
+          "question": "Show that a function $f : \\mathbb{R} \\to \\mathbb{R}$ defined as $f(x) = x^2 + x + 1$ is neither one-one nor onto. Also, find all the values of $x$ for which $f(x) = 3$.",
+          "solution": {
+            "answer": "Neither one-one nor onto; $f(x) = 3$ for $x = 1$ and $x = -2$.",
+            "concept": "Two different inputs with the same output $\\Rightarrow$ not one-one; a codomain value never reached $\\Rightarrow$ not onto.",
+            "steps": [
+              {
+                "do": "Solve $f(x) = 3$.",
+                "math": "x^2 + x + 1 = 3 \\;\\Rightarrow\\; x^2 + x - 2 = 0"
+              },
+              {
+                "do": "Factorise.",
+                "math": "(x + 2)(x - 1) = 0 \\;\\Rightarrow\\; x = 1 \\text{ or } x = -2",
+                "marks": 1
+              },
+              {
+                "do": "So $f(1) = f(-2) = 3$, but $1 \\ne -2$.",
+                "math": "\\Rightarrow\\; f \\text{ is not one-one}",
+                "marks": 1
+              },
+              {
+                "do": "Complete the square.",
+                "math": "f(x) = \\left(x + \\dfrac{1}{2}\\right)^2 + \\dfrac{3}{4} \\ge \\dfrac{3}{4}"
+              },
+              {
+                "do": "So $0 \\in \\mathbb{R}$ (codomain) has no pre-image: $f$ is not onto.",
+                "math": "f(x) \\ne 0 \\text{ for every } x \\in \\mathbb{R}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $f$ is neither one-one nor onto, and $f(x) = 3$ at $x = 1, -2$."
+              }
+            ],
+            "mistake": "Saying ‘not onto’ without naming a codomain value (like $0$) that has no pre-image."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2023 (65/4/1) Q34(b)",
+          "question": "Let $f : \\mathbb{R} - \\left\\{-\\dfrac{4}{3}\\right\\} \\to \\mathbb{R}$ be a function defined as $f(x) = \\dfrac{4x}{3x + 4}$. Show that $f$ is a one-one function. Also, check whether $f$ is an onto function or not.",
+          "solution": {
+            "answer": "$f$ is one-one but not onto ($\\tfrac{4}{3}$ has no pre-image).",
+            "concept": "Onto fails if some $y$ in the codomain gives no valid $x$ when solving $f(x) = y$.",
+            "steps": [
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$ and cross-multiply.",
+                "math": "4x_1(3x_2 + 4) = 4x_2(3x_1 + 4)",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand and cancel $12x_1x_2$.",
+                "math": "16x_1 = 16x_2 \\;\\Rightarrow\\; x_1 = x_2",
+                "marks": 1
+              },
+              {
+                "do": "So $f$ is one-one."
+              },
+              {
+                "do": "Onto: let $y \\in \\mathbb{R}$ and solve $f(x) = y$.",
+                "math": "4x = 3xy + 4y \\;\\Rightarrow\\; x = \\dfrac{4y}{4 - 3y}, \\ \\ y \\ne \\dfrac{4}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check $y = \\dfrac{4}{3}$ directly.",
+                "math": "\\dfrac{4x}{3x + 4} = \\dfrac{4}{3} \\;\\Rightarrow\\; 12x = 12x + 16 \\;\\Rightarrow\\; 0 = 16",
+                "marks": 0.5
+              },
+              {
+                "do": "Impossible, so $\\dfrac{4}{3} \\in \\mathbb{R}$ has no pre-image. Hence $f$ is not onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Calling it onto — the codomain is all of $\\mathbb{R}$, and $\\tfrac{4}{3}$ is never reached."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2024 (65/1/1) Q26(a)",
+          "question": "A relation $R$ on set $A = \\{1, 2, 3, 4, 5\\}$ is defined as $R = \\{(x, y) : |x^2 - y^2| < 8\\}$. Check whether the relation $R$ is reflexive, symmetric and transitive.",
+          "solution": {
+            "answer": "$R$ is reflexive and symmetric, but not transitive.",
+            "concept": "Write the relation in roster form, then test each property.",
+            "steps": [
+              {
+                "do": "Write $R$ in roster form.",
+                "math": "\\begin{aligned} R = \\{&(1,1), (2,2), (3,3), (4,4), (5,5), \\\\ &(1,2), (2,1), (2,3), (3,2), (3,4), (4,3)\\} \\end{aligned}"
+              },
+              {
+                "do": "Reflexive: for every $x \\in A$.",
+                "math": "|x^2 - x^2| = 0 < 8 \\;\\Rightarrow\\; (x, x) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: let $(x, y) \\in R$.",
+                "math": "|y^2 - x^2| = |x^2 - y^2| < 8 \\;\\Rightarrow\\; (y, x) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive? $(1, 2) \\in R$ and $(2, 3) \\in R$, but:",
+                "math": "|1^2 - 3^2| = 8 \\not< 8 \\;\\Rightarrow\\; (1, 3) \\notin R",
+                "marks": 1
+              },
+              {
+                "do": "Hence $R$ is reflexive and symmetric, but not transitive."
+              }
+            ],
+            "mistake": "Treating $8 < 8$ as true — the condition is strict, so $(1, 3) \\notin R$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Ex 1.1 Q12",
+          "question": "Show that the relation $R$ defined in the set $A$ of all triangles as $R = \\{(T_1, T_2) : T_1 \\text{ is similar to } T_2\\}$ is an equivalence relation. Consider three right angle triangles $T_1$ with sides $3, 4, 5$, $T_2$ with sides $5, 12, 13$ and $T_3$ with sides $6, 8, 10$. Which triangles among $T_1$, $T_2$ and $T_3$ are related?",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; only $T_1$ and $T_3$ are related.",
+            "concept": "Two triangles are similar when their corresponding sides are proportional.",
+            "steps": [
+              {
+                "do": "Reflexive: every triangle is similar to itself.",
+                "math": "(X, X) \\in R \\text{ for every triangle } X",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: if $X$ is similar to $Y$, then $Y$ is similar to $X$.",
+                "math": "(X, Y) \\in R \\;\\Rightarrow\\; (Y, X) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: if $X \\sim Y$ and $Y \\sim Z$, then $X \\sim Z$.",
+                "math": "(X, Y), (Y, Z) \\in R \\;\\Rightarrow\\; (X, Z) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              },
+              {
+                "do": "Compare the sides of $T_1$ and $T_3$.",
+                "math": "\\dfrac{3}{6} = \\dfrac{4}{8} = \\dfrac{5}{10} = \\dfrac{1}{2} \\;\\Rightarrow\\; T_1 \\sim T_3",
+                "marks": 0.5
+              },
+              {
+                "do": "Compare $T_2$ with $T_1$ and with $T_3$.",
+                "math": "\\dfrac{3}{5} \\ne \\dfrac{4}{12}, \\qquad \\dfrac{6}{5} \\ne \\dfrac{8}{12}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence only $T_1$ and $T_3$ are related."
+              }
+            ],
+            "mistake": "Saying all right triangles are similar — a right angle alone does not make sides proportional."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE 2023 (65/4/1) Q34(a)",
+          "question": "If $\\mathbb{N}$ denotes the set of all natural numbers and $R$ is the relation on $\\mathbb{N} \\times \\mathbb{N}$ defined by $(a, b)\\,R\\,(c, d)$ if $ad(b + c) = bc(a + d)$, show that $R$ is an equivalence relation.",
+          "solution": {
+            "answer": "$R$ is reflexive, symmetric and transitive, hence an equivalence relation.",
+            "concept": "Dividing by $abcd$ turns the condition into $\\dfrac{1}{a} - \\dfrac{1}{b} = \\dfrac{1}{c} - \\dfrac{1}{d}$.",
+            "steps": [
+              {
+                "do": "Divide both sides by $abcd$ (non-zero, all are natural numbers).",
+                "math": "\\dfrac{b + c}{bc} = \\dfrac{a + d}{ad} \\;\\Rightarrow\\; \\dfrac{1}{c} + \\dfrac{1}{b} = \\dfrac{1}{d} + \\dfrac{1}{a}"
+              },
+              {
+                "do": "Rearrange into a handy form.",
+                "math": "(a, b)\\,R\\,(c, d) \\iff \\dfrac{1}{a} - \\dfrac{1}{b} = \\dfrac{1}{c} - \\dfrac{1}{d}",
+                "marks": 1
+              },
+              {
+                "do": "Reflexive: for any $(a, b) \\in \\mathbb{N} \\times \\mathbb{N}$.",
+                "math": "ab(b + a) = ba(a + b) \\;\\Rightarrow\\; (a, b)\\,R\\,(a, b)",
+                "marks": 1
+              },
+              {
+                "do": "Symmetric: let $(a, b)\\,R\\,(c, d)$. Rewrite the same equation.",
+                "math": "ad(b + c) = bc(a + d) \\;\\Rightarrow\\; cb(d + a) = da(c + b)",
+                "marks": 0.5
+              },
+              {
+                "do": "This is the condition for $(c, d)\\,R\\,(a, b)$. So $R$ is symmetric.",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: let $(a, b)\\,R\\,(c, d)$ and $(c, d)\\,R\\,(e, f)$.",
+                "math": "\\dfrac{1}{a} - \\dfrac{1}{b} = \\dfrac{1}{c} - \\dfrac{1}{d} \\quad \\text{and} \\quad \\dfrac{1}{c} - \\dfrac{1}{d} = \\dfrac{1}{e} - \\dfrac{1}{f}"
+              },
+              {
+                "do": "Equate the two results.",
+                "math": "\\dfrac{1}{a} - \\dfrac{1}{b} = \\dfrac{1}{e} - \\dfrac{1}{f}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $abef$ and rearrange.",
+                "math": "bef - aef = abf - abe \\;\\Rightarrow\\; af(b + e) = be(a + f)",
+                "marks": 1
+              },
+              {
+                "do": "So $(a, b)\\,R\\,(e, f)$: $R$ is transitive. Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Attempting transitivity directly from $ad(b+c) = bc(a+d)$ — use the reciprocal form first."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "Show that the function $f : \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = x|x|$ is both one-one and onto.",
+          "solution": {
+            "answer": "$f$ is both one-one and onto (bijective).",
+            "concept": "$|x| = x$ for $x \\ge 0$ and $|x| = -x$ for $x < 0$.",
+            "steps": [
+              {
+                "do": "Remove the modulus.",
+                "math": "f(x) = \\begin{cases} x^2, & x \\ge 0 \\\\ -x^2, & x < 0 \\end{cases}",
+                "marks": 0.5
+              },
+              {
+                "do": "Note: $f(x)$ has the same sign as $x$.",
+                "math": "x \\ge 0 \\Rightarrow f(x) \\ge 0, \\qquad x < 0 \\Rightarrow f(x) < 0"
+              },
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$. Case 1: $x_1, x_2 \\ge 0$.",
+                "math": "x_1^2 = x_2^2 \\;\\Rightarrow\\; x_1 = x_2",
+                "why": "both are non-negative",
+                "marks": 0.5
+              },
+              {
+                "do": "Case 2: $x_1, x_2 < 0$.",
+                "math": "-x_1^2 = -x_2^2 \\;\\Rightarrow\\; x_1 = x_2",
+                "why": "both are negative",
+                "marks": 0.5
+              },
+              {
+                "do": "Case 3: $x_1 \\ge 0$ and $x_2 < 0$.",
+                "math": "f(x_1) \\ge 0 > f(x_2) \\;\\Rightarrow\\; f(x_1) \\ne f(x_2)",
+                "marks": 0.5
+              },
+              {
+                "do": "So case 3 cannot occur. Hence $f$ is one-one.",
+                "marks": 0.5
+              },
+              {
+                "do": "Onto: let $y \\in \\mathbb{R}$. If $y \\ge 0$, take $x = \\sqrt{y}$.",
+                "math": "f(\\sqrt{y}) = \\sqrt{y} \\cdot \\sqrt{y} = y",
+                "marks": 1
+              },
+              {
+                "do": "If $y < 0$, take $x = -\\sqrt{-y}$, a negative number.",
+                "math": "f(-\\sqrt{-y}) = -\\left(\\sqrt{-y}\\right)^2 = -(-y) = y",
+                "marks": 1
+              },
+              {
+                "do": "Every $y \\in \\mathbb{R}$ has a pre-image. Hence $f$ is one-one and onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $x = \\sqrt{y}$ for negative $y$ — it is undefined; take $x = -\\sqrt{-y}$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE 2024 (65/3/1) Q32",
+          "question": "A relation $R$ on set $A = \\{-4, -3, -2, -1, 0, 1, 2, 3, 4\\}$ is defined as $R = \\{(x, y) : x + y \\text{ is an integer divisible by } 2\\}$. Show that $R$ is an equivalence relation. Also, write the equivalence class $[2]$.",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; $[2] = \\{-4, -2, 0, 2, 4\\}$",
+            "concept": "$[a] = \\{x \\in A : (x, a) \\in R\\}$.",
+            "steps": [
+              {
+                "do": "Reflexive: for every $x \\in A$.",
+                "math": "x + x = 2x, \\text{ divisible by } 2 \\;\\Rightarrow\\; (x, x) \\in R",
+                "marks": 1
+              },
+              {
+                "do": "Symmetric: let $(x, y) \\in R$, so $x + y = 2k$.",
+                "math": "y + x = x + y = 2k \\;\\Rightarrow\\; (y, x) \\in R",
+                "marks": 1
+              },
+              {
+                "do": "Transitive: let $x + y = 2k$ and $y + z = 2m$. Add them.",
+                "math": "x + 2y + z = 2(k + m)"
+              },
+              {
+                "do": "Rearrange.",
+                "math": "x + z = 2(k + m - y) \\;\\Rightarrow\\; (x, z) \\in R",
+                "marks": 1.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              },
+              {
+                "do": "$[2]$ has all $y \\in A$ with $2 + y$ even, i.e. $y$ even.",
+                "math": "[2] = \\{y \\in A : 2 + y \\text{ is divisible by } 2\\}"
+              },
+              {
+                "do": "List them.",
+                "math": "[2] = \\{-4, -2, 0, 2, 4\\}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Leaving out $0$ or the negative even numbers from $[2]$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2023 (65/2/2) Q34",
+          "question": "A function $f : [-4, 4] \\to [0, 4]$ is given by $f(x) = \\sqrt{16 - x^2}$. Show that $f$ is an onto function but not a one-one function. Further, find all possible values of $a$ for which $f(a) = \\sqrt{7}$.",
+          "solution": {
+            "answer": "$f$ is onto but not one-one; $a = 3$ or $a = -3$.",
+            "concept": "Onto: every $y$ in the codomain $[0, 4]$ must have a pre-image in the domain $[-4, 4]$.",
+            "steps": [
+              {
+                "do": "Onto: let $y \\in [0, 4]$ and solve $f(x) = y$.",
+                "math": "\\sqrt{16 - x^2} = y \\;\\Rightarrow\\; x^2 = 16 - y^2 \\;\\Rightarrow\\; x = \\pm\\sqrt{16 - y^2}"
+              },
+              {
+                "do": "As $0 \\le y \\le 4$, take $x = \\sqrt{16 - y^2} \\in [0, 4] \\subset [-4, 4]$.",
+                "math": "f(x) = \\sqrt{16 - (16 - y^2)} = \\sqrt{y^2} = y",
+                "why": "$y \\ge 0$, so $\\sqrt{y^2} = y$",
+                "marks": 1
+              },
+              {
+                "do": "Every $y \\in [0, 4]$ has a pre-image, so $f$ is onto."
+              },
+              {
+                "do": "Not one-one: take $x = 4$ and $x = -4$.",
+                "math": "f(4) = f(-4) = \\sqrt{16 - 16} = 0, \\ \\text{but } 4 \\ne -4",
+                "marks": 1
+              },
+              {
+                "do": "Put $f(a) = \\sqrt{7}$ and square.",
+                "math": "16 - a^2 = 7 \\;\\Rightarrow\\; a^2 = 9 \\;\\Rightarrow\\; a = \\pm 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Both lie in $[-4, 4]$. So $a = 3$ or $a = -3$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Giving only $a = 3$ — the negative value $-3$ is also in the domain."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2025-26 Q36",
+          "question": "**Case Study:** A city’s traffic management department is planning to optimize traffic flow by analyzing the connectivity between various traffic signals. The city has five major spots labelled $A, B, C, D$ and $E$. The department has collected the following data regarding one-way traffic flow between spots: traffic flows from $A$ to $B$, $A$ to $C$ and $A$ to $D$; from $B$ to $C$ and $B$ to $E$; from $C$ to $E$; from $D$ to $E$ and $D$ to $C$. The department wants to represent and analyze this data using relations and functions, taking $(X, Y) \\in R$ when traffic flows from $X$ to $Y$, on the set $S = \\{A, B, C, D, E\\}$.",
+          "figure": "figs/pa-q20.svg",
+          "parts": [
+            { "label": "(i)", "text": "Is the traffic flow reflexive? Justify.", "marks": 1 },
+            { "label": "(ii)", "text": "Is the traffic flow transitive? Justify.", "marks": 1 },
+            { "label": "(iii)(a)", "text": "Represent the relation describing the traffic flow as a set of ordered pairs. Also state the domain and range of the relation.", "marks": 2 },
+            { "label": "(iii)(b)", "text": "Does the traffic flow represent a function? Justify your answer.", "marks": 2, "alt": true }
+          ],
+          "solution": {
+            "answer": "(i) Not reflexive (ii) Not transitive (iii)(a) 8 ordered pairs; domain $\\{A, B, C, D\\}$, range $\\{B, C, D, E\\}$ (iii)(b) Not a function",
+            "concept": "Domain of a relation = set of first entries; range = set of second entries.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Reflexive needs $(X, X) \\in R$ for every spot $X$."
+                  },
+                  {
+                    "do": "No traffic flows from a spot to itself.",
+                    "math": "(A, A) \\notin R",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Hence the traffic flow is not reflexive."
+                  }
+                ],
+                "answer": "Not reflexive, since $(A, A) \\notin R$."
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Traffic flows from $A$ to $B$ and from $B$ to $E$.",
+                    "math": "(A, B) \\in R, \\ (B, E) \\in R"
+                  },
+                  {
+                    "do": "But there is no direct flow from $A$ to $E$.",
+                    "math": "(A, E) \\notin R",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Hence the traffic flow is not transitive."
+                  }
+                ],
+                "answer": "Not transitive, since $(A, B), (B, E) \\in R$ but $(A, E) \\notin R$."
+              },
+              {
+                "label": "(iii)(a)",
+                "steps": [
+                  {
+                    "do": "Write each one-way flow as an ordered pair.",
+                    "math": "\\begin{aligned} R = \\{&(A, B), (A, C), (A, D), (B, C), \\\\ &(B, E), (C, E), (D, E), (D, C)\\} \\end{aligned}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Domain = set of first entries.",
+                    "math": "\\text{Domain} = \\{A, B, C, D\\}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Range = set of second entries.",
+                    "math": "\\text{Range} = \\{B, C, D, E\\}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$R$ has 8 pairs; domain $\\{A, B, C, D\\}$, range $\\{B, C, D, E\\}$."
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "steps": [
+                  {
+                    "do": "A function needs exactly one image for every element of $S$."
+                  },
+                  {
+                    "do": "$A$ is related to three different spots.",
+                    "math": "(A, B), \\ (A, C), \\ (A, D) \\in R",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Also $E$ has no image at all.",
+                    "math": "\\text{no pair } (E, Y) \\in R",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence the traffic flow does not represent a function.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "No — $A$ has three images and $E$ has none."
+              }
+            ],
+            "mistake": "Writing the range as all five spots — $A$ never appears as a second entry."
+          }
+        }
+      ]
+    }
+  ]
+}
