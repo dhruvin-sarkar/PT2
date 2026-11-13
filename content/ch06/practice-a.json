@@ -265,7 +265,7 @@
               { "do": "Let horizontal distance $= x$ m and string $= s$ m; height is fixed at $3$ m", "math": "s^2 = x^2 + 3^2", "marks": 0.5 },
               { "do": "When $s = 5$", "math": "x = \\sqrt{25 - 9} = 4\\ \\text{m}", "marks": 0.5 },
               { "do": "Differentiate w.r.t. $t$", "math": "2s\\,\\dfrac{ds}{dt} = 2x\\,\\dfrac{dx}{dt}", "marks": 1 },
-              { "do": "Put $x = 4$, $s = 5$, $\\dfrac{dx}{dt} = 200$ cm/s $= 2$ m/s", "math": "\\dfrac{ds}{dt} = \\dfrac{4 \\times 2}{5} = 1.6\\ \\text{m/s}", "marks": 0.5 },
+              { "do": "Put $x = 4$, $s = 5$, $\\dfrac{dx}{dt} = 200$ cm/s $= 2$ m/s", "math": "\\dfrac{ds}{dt} = \\dfrac{x}{s}\\cdot\\dfrac{dx}{dt} = \\dfrac{4 \\times 2}{5} = 1.6\\ \\text{m/s}", "marks": 0.5 },
               { "do": "Hence the string is released at $1.6$ m/s, i.e. $160$ cm/s", "marks": 0.5 }
             ],
             "mistake": "Mixing cm/s with metres; convert $200$ cm/s to $2$ m/s first."
@@ -318,23 +318,23 @@
           "n": 15,
           "marks": 5,
           "type": "long",
-          "source": "Board-pattern",
-          "question": "Show that among all right-angled triangles with a given hypotenuse $h$, the isosceles triangle has the maximum area. Also find this maximum area.",
+          "source": "PYQ-style",
+          "question": "An open tank with a square base and vertical sides is to be constructed from a metal sheet so as to hold a given quantity of water. Show that the cost of the material will be least when the depth of the tank is half of its width.",
           "solution": {
-            "answer": "Area is maximum when both legs equal $\\dfrac{h}{\\sqrt{2}}$ (isosceles); maximum area $= \\dfrac{h^2}{4}$",
-            "concept": "Area and (area)$^2$ are maximum together, so maximise $S = A^2$ to avoid the square root.",
-            "figure": "figs/pa-q15-right-triangle.svg",
+            "answer": "Sheet area (hence cost) is least when $h = \\dfrac{x}{2}$, i.e. depth $=$ half the width",
+            "concept": "Cost of material $\\propto$ area of sheet used; write the area in one variable using the fixed volume $V = x^2h$.",
+            "figure": "figs/pa-q15-open-tank.svg",
             "steps": [
-              { "do": "Let the legs be $x$ and $y$; by Pythagoras", "math": "x^2 + y^2 = h^2 \\;\\Rightarrow\\; y = \\sqrt{h^2 - x^2}", "marks": 1 },
-              { "do": "Area of the triangle", "math": "A = \\dfrac{1}{2}x\\sqrt{h^2 - x^2}", "marks": 0.5 },
-              { "do": "Let $S = A^2$", "math": "S = \\dfrac{1}{4}x^2(h^2 - x^2) = \\dfrac{1}{4}(h^2x^2 - x^4)", "why": "$A > 0$, so $A$ and $A^2$ are maximum together", "marks": 0.5 },
-              { "do": "Differentiate w.r.t. $x$", "math": "\\dfrac{dS}{dx} = \\dfrac{1}{4}(2h^2x - 4x^3)", "marks": 0.5 },
-              { "do": "Put $\\dfrac{dS}{dx} = 0$ ($x \\neq 0$)", "math": "x^2 = \\dfrac{h^2}{2} \\;\\Rightarrow\\; x = \\dfrac{h}{\\sqrt{2}}", "marks": 0.5 },
-              { "do": "Second derivative test", "math": "\\dfrac{d^2S}{dx^2} = \\dfrac{1}{4}(2h^2 - 12x^2) = \\dfrac{1}{4}(2h^2 - 6h^2) = -h^2 < 0", "marks": 1 },
-              { "do": "So the area is maximum; find the other leg", "math": "y = \\sqrt{h^2 - \\dfrac{h^2}{2}} = \\dfrac{h}{\\sqrt{2}} = x", "marks": 0.5 },
-              { "do": "Legs are equal, so the triangle is isosceles; maximum area", "math": "A = \\dfrac{1}{2}\\cdot\\dfrac{h}{\\sqrt{2}}\\cdot\\dfrac{h}{\\sqrt{2}} = \\dfrac{h^2}{4}", "marks": 0.5 }
+              { "do": "Let side of base $= x$, depth $= h$, fixed volume $= V$", "math": "V = x^2h \\;\\Rightarrow\\; h = \\dfrac{V}{x^2}", "marks": 1 },
+              { "do": "Area of sheet = base + four sides (no top)", "math": "S = x^2 + 4xh", "why": "Cost is proportional to this area", "marks": 0.5 },
+              { "do": "Put $h = \\dfrac{V}{x^2}$", "math": "S = x^2 + \\dfrac{4V}{x}", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $x$", "math": "\\dfrac{dS}{dx} = 2x - \\dfrac{4V}{x^2}", "marks": 0.5 },
+              { "do": "Put $\\dfrac{dS}{dx} = 0$", "math": "2x^3 = 4V \\;\\Rightarrow\\; V = \\dfrac{x^3}{2}", "marks": 0.5 },
+              { "do": "Second derivative test, using $V = \\dfrac{x^3}{2}$", "math": "\\dfrac{d^2S}{dx^2} = 2 + \\dfrac{8V}{x^3} = 2 + 4 = 6 > 0", "marks": 1 },
+              { "do": "So $S$ is least here; find the depth", "math": "h = \\dfrac{V}{x^2} = \\dfrac{x^3/2}{x^2} = \\dfrac{x}{2}", "marks": 0.5 },
+              { "do": "Hence the cost is least when depth $=$ half the width", "math": "h = \\dfrac{x}{2}", "marks": 0.5 }
             ],
-            "mistake": "Differentiating $A$ directly and making an error with the square root; work with $S = A^2$."
+            "mistake": "Counting a top face in the area: the tank is open, so the sheet is $x^2 + 4xh$, not $2x^2 + 4xh$."
           }
         },
         {
@@ -368,7 +368,7 @@
           "question": "A window is in the form of a rectangle surmounted by an equilateral triangle. The perimeter of the window is $12$ m. Find the dimensions of the rectangle that will produce the largest area of the window.",
           "figure": "figs/pa-q17-window.svg",
           "solution": {
-            "answer": "Width $= \\dfrac{12}{6 - \\sqrt{3}}$ m ($\\approx 2.81$ m), height $= \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}}$ m ($\\approx 1.78$ m)",
+            "answer": "Width $= \\dfrac{12}{6 - \\sqrt{3}} = \\dfrac{4(6 + \\sqrt{3})}{11}$ m ($\\approx 2.81$ m), height $= \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}} = \\dfrac{30 - 6\\sqrt{3}}{11}$ m ($\\approx 1.78$ m)",
             "concept": "Use the perimeter to write area in one variable, then $A'(x) = 0$, $A''(x) < 0$.",
             "steps": [
               { "do": "Let width $= x$, height $= y$. Perimeter = base + 2 heights + 2 triangle sides", "math": "x + 2y + 2x = 12 \\;\\Rightarrow\\; y = \\dfrac{12 - 3x}{2}", "marks": 1 },
@@ -378,7 +378,7 @@
               { "do": "Put $\\dfrac{dA}{dx} = 0$", "math": "x\\left(3 - \\dfrac{\\sqrt{3}}{2}\\right) = 6 \\;\\Rightarrow\\; x = \\dfrac{12}{6 - \\sqrt{3}}", "marks": 0.5 },
               { "do": "Second derivative test", "math": "\\dfrac{d^2A}{dx^2} = -3 + \\dfrac{\\sqrt{3}}{2} < 0 \\;\\Rightarrow\\; \\text{maximum}", "marks": 1 },
               { "do": "Find $y$", "math": "y = 6 - \\dfrac{3}{2}\\cdot\\dfrac{12}{6 - \\sqrt{3}} = \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}}", "marks": 0.5 },
-              { "do": "Hence, for the largest area, the rectangle has", "math": "\\text{width} = \\dfrac{12}{6 - \\sqrt{3}}\\ \\text{m},\\quad \\text{height} = \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}}\\ \\text{m}", "marks": 0.5 }
+              { "do": "Hence, for the largest area, the rectangle has", "math": "\\text{width} = \\dfrac{4(6 + \\sqrt{3})}{11}\\ \\text{m},\\quad \\text{height} = \\dfrac{30 - 6\\sqrt{3}}{11}\\ \\text{m}", "why": "Rationalise: multiply by $\\dfrac{6 + \\sqrt{3}}{6 + \\sqrt{3}}$", "marks": 0.5 }
             ],
             "mistake": "Counting the common side (top of the rectangle) in the perimeter: it is not on the boundary."
           }

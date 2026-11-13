@@ -27,7 +27,8 @@
             "steps": [
               { "do": "Write $x$ in terms of $y$ (first quadrant)", "math": "x^2 = 4y \\Rightarrow x = 2\\sqrt{y}" },
               { "do": "The region is symmetric about the y-axis, so double the first-quadrant part", "math": "A = 2\\displaystyle\\int_0^4 2\\sqrt{y}\\,dy" },
-              { "do": "Integrate and put the limits", "math": "A = 4\\cdot\\dfrac{2}{3}\\left[y^{3/2}\\right]_0^4 = 4 \\cdot \\dfrac{2}{3} \\cdot 8 = \\dfrac{64}{3}", "marks": 1 }
+              { "do": "Integrate and put the limits", "math": "A = 4\\cdot\\dfrac{2}{3}\\left[y^{3/2}\\right]_0^4 = 4 \\cdot \\dfrac{2}{3} \\cdot 8 = \\dfrac{64}{3}", "marks": 1 },
+              { "do": "So the area is $\\dfrac{64}{3}$ sq units, option (B)." }
             ],
             "mistake": "Forgetting to double: the first-quadrant part alone is $\\dfrac{32}{3}$, which is option (A)."
           }
@@ -50,7 +51,8 @@
             "steps": [
               { "do": "Radius $r = 6$; in the first quadrant the curve is", "math": "y = \\sqrt{36 - x^2},\\quad 0 \\le x \\le 6" },
               { "do": "Write the area", "math": "A = \\displaystyle\\int_0^6 \\sqrt{36 - x^2}\\,dx = \\left[\\dfrac{x}{2}\\sqrt{36 - x^2} + 18\\sin^{-1}\\dfrac{x}{6}\\right]_0^6" },
-              { "do": "Put the limits", "math": "A = 0 + 18 \\cdot \\dfrac{\\pi}{2} - 0 = 9\\pi", "marks": 1 }
+              { "do": "Put the limits", "math": "A = 0 + 18 \\cdot \\dfrac{\\pi}{2} - 0 = 9\\pi", "marks": 1 },
+              { "do": "So the area is $9\\pi$ sq units, option (A)." }
             ],
             "mistake": "Giving the area of the whole circle, $\\pi r^2 = 36\\pi$, when only one quadrant is asked."
           }
@@ -72,7 +74,8 @@
             "concept": "Area enclosed by $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ is $\\pi ab$.",
             "steps": [
               { "do": "Divide by $16$ to get the standard form", "math": "\\dfrac{x^2}{16} + \\dfrac{y^2}{4} = 1 \\Rightarrow a = 4,\\ b = 2" },
-              { "do": "Use area $= \\pi ab$", "math": "A = \\pi \\times 4 \\times 2 = 8\\pi", "marks": 1 }
+              { "do": "Use area $= \\pi ab$", "math": "A = \\pi \\times 4 \\times 2 = 8\\pi", "marks": 1 },
+              { "do": "So the area is $8\\pi$ sq units, option (C)." }
             ],
             "mistake": "Using $a^2$ and $b^2$ instead of $a$ and $b$: $\\pi \\times 16 \\times 4 = 64\\pi$."
           }
@@ -93,7 +96,8 @@
             "answer": "(B) $2$ sq units",
             "steps": [
               { "do": "$\\sin x \\ge 0$ on $[0, \\pi]$, so the area is the integral itself", "math": "A = \\displaystyle\\int_0^{\\pi} \\sin x\\,dx" },
-              { "do": "Integrate and put the limits", "math": "A = \\left[-\\cos x\\right]_0^{\\pi} = -\\cos\\pi + \\cos 0 = 1 + 1 = 2", "marks": 1 }
+              { "do": "Integrate and put the limits", "math": "A = \\left[-\\cos x\\right]_0^{\\pi} = -\\cos\\pi + \\cos 0 = 1 + 1 = 2", "marks": 1 },
+              { "do": "So the area is $2$ sq units, option (B)." }
             ],
             "mistake": "Writing $-\\cos\\pi$ as $-1$; since $\\cos\\pi = -1$, $-\\cos\\pi = +1$."
           }
@@ -115,7 +119,8 @@
             "steps": [
               { "do": "Write $y$ in terms of $x$; the line meets the x-axis at $x = 4$", "math": "y = \\dfrac{4 - x}{2}" },
               { "do": "Area under the line from $x = 0$ to $x = 4$", "math": "A = \\displaystyle\\int_0^4 \\dfrac{4 - x}{2}\\,dx = \\dfrac{1}{2}\\left[4x - \\dfrac{x^2}{2}\\right]_0^4" },
-              { "do": "Put the limits", "math": "A = \\dfrac{1}{2}(16 - 8) = 4", "marks": 1 }
+              { "do": "Put the limits", "math": "A = \\dfrac{1}{2}(16 - 8) = 4", "marks": 1 },
+              { "do": "So the area is $4$ sq units, option (D)." }
             ],
             "mistake": "Multiplying the intercepts, $4 \\times 2 = 8$, and forgetting the $\\dfrac{1}{2}$."
           }
@@ -195,6 +200,7 @@
           "question": "Sketch the region bounded by the lines $2x + y = 8$, $y = 2$, $y = 4$ and the y-axis. Hence, obtain its area using integration.",
           "solution": {
             "answer": "$5$ sq units",
+            "concept": "Area between a curve and the y-axis from $y = c$ to $y = d$ is $\\displaystyle\\int_c^d x\\,dy$.",
             "figure": "figs/pa-q09.svg",
             "steps": [
               { "do": "Sketch: the line meets $y = 2$ at $(3, 2)$ and $y = 4$ at $(2, 4)$", "marks": 1 },
@@ -203,7 +209,7 @@
               { "do": "Integrate and put the limits", "math": "A = \\dfrac{1}{2}\\left[8y - \\dfrac{y^2}{2}\\right]_2^4 = \\dfrac{1}{2}\\left[(32 - 8) - (16 - 2)\\right]", "marks": 0.5 },
               { "do": "Required area", "math": "A = \\dfrac{1}{2} \\times 10 = 5\\ \\text{sq units}", "marks": 0.5 }
             ],
-            "mistake": "Using vertical strips with $dx$; the region is bounded by $y = 2$, $y = 4$ and the y-axis, so integrate w.r.t. $y$."
+            "mistake": "Using $2$ and $4$ as $x$-limits in $\\displaystyle\\int y\\,dx$; they are $y$-values, so integrate $x\\,dy$."
           }
         },
         {
@@ -233,6 +239,7 @@
           "question": "Using integration, find the area of the region bounded by the curve $y = \\dfrac{3}{2}\\sqrt{4 - x^2}$ and the x-axis.",
           "solution": {
             "answer": "$3\\pi$ sq units",
+            "concept": "$\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx = \\dfrac{x}{2}\\sqrt{a^2 - x^2} + \\dfrac{a^2}{2}\\sin^{-1}\\dfrac{x}{a} + C$",
             "figure": "figs/pa-q11.svg",
             "steps": [
               { "do": "Square both sides: the curve is the upper half of an ellipse", "math": "\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1,\\quad y \\ge 0" },
@@ -251,6 +258,7 @@
           "question": "Using integration, find the area of the minor segment of the circle $x^2 + y^2 = 16$ cut off by the line $x = 2$.",
           "solution": {
             "answer": "$\\left(\\dfrac{16\\pi}{3} - 4\\sqrt{3}\\right)$ sq units",
+            "concept": "$\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx = \\dfrac{x}{2}\\sqrt{a^2 - x^2} + \\dfrac{a^2}{2}\\sin^{-1}\\dfrac{x}{a} + C$",
             "figure": "figs/pa-q12.svg",
             "steps": [
               { "do": "The line $x = 2$ meets the circle at $(2, \\pm 2\\sqrt{3})$; the minor segment runs from $x = 2$ to $x = 4$", "marks": 0.5 },
@@ -274,9 +282,9 @@
             "figure": "figs/pa-q13.svg",
             "steps": [
               { "do": "Sketch: the curve cuts the x-axis where $\\cos 2x = 0$", "math": "2x = \\dfrac{\\pi}{2} \\Rightarrow x = \\dfrac{\\pi}{4}", "marks": 0.5 },
-              { "do": "Curve is above the x-axis on $\\left[\\dfrac{\\pi}{6}, \\dfrac{\\pi}{4}\\right]$ and below on $\\left[\\dfrac{\\pi}{4}, \\dfrac{\\pi}{3}\\right]$", "math": "A = 20\\displaystyle\\int_{\\pi/6}^{\\pi/4} \\cos 2x\\,dx + \\left|20\\displaystyle\\int_{\\pi/4}^{\\pi/3} \\cos 2x\\,dx\\right|" },
+              { "do": "Curve is above the x-axis on $\\left[\\dfrac{\\pi}{6}, \\dfrac{\\pi}{4}\\right]$ and below on $\\left[\\dfrac{\\pi}{4}, \\dfrac{\\pi}{3}\\right]$", "math": "A = 20\\displaystyle\\int_{\\pi/6}^{\\pi/4} \\cos 2x\\,dx + \\left|20\\displaystyle\\int_{\\pi/4}^{\\pi/3} \\cos 2x\\,dx\\right|", "marks": 0.5 },
               { "do": "Integrate", "math": "A = 10\\left[\\sin 2x\\right]_{\\pi/6}^{\\pi/4} + \\left|10\\left[\\sin 2x\\right]_{\\pi/4}^{\\pi/3}\\right|" },
-              { "do": "Put the limits", "math": "A = 10\\left(1 - \\dfrac{\\sqrt{3}}{2}\\right) + \\left|10\\left(\\dfrac{\\sqrt{3}}{2} - 1\\right)\\right|", "marks": 1 },
+              { "do": "Put the limits", "math": "A = 10\\left(1 - \\dfrac{\\sqrt{3}}{2}\\right) + \\left|10\\left(\\dfrac{\\sqrt{3}}{2} - 1\\right)\\right|", "marks": 0.5 },
               { "do": "Required area", "math": "A = (10 - 5\\sqrt{3}) + (10 - 5\\sqrt{3}) = (20 - 10\\sqrt{3})\\ \\text{sq units}", "marks": 0.5 }
             ],
             "mistake": "Integrating straight from $\\dfrac{\\pi}{6}$ to $\\dfrac{\\pi}{3}$ gives $0$, because the two parts cancel."
@@ -314,6 +322,7 @@
           "question": "Using integration, find the area of the region $\\{(x, y) : 0 \\le y \\le \\sqrt{4 - x^2},\\ x \\ge 2 - y\\}$.",
           "solution": {
             "answer": "$(\\pi - 2)$ sq units",
+            "concept": "$\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx = \\dfrac{x}{2}\\sqrt{a^2 - x^2} + \\dfrac{a^2}{2}\\sin^{-1}\\dfrac{x}{a} + C$",
             "figure": "figs/pa-q15.svg",
             "steps": [
               { "do": "$y = \\sqrt{4 - x^2}$ is the upper semicircle of $x^2 + y^2 = 4$ (centre O, radius $2$)" },
@@ -335,6 +344,7 @@
           "question": "Using integration, find the area of the triangle whose vertices are $A(-1, 0)$, $B(1, 3)$ and $C(3, 2)$.",
           "solution": {
             "answer": "$4$ sq units",
+            "concept": "Line through two points: $y - y_1 = \\dfrac{y_2 - y_1}{x_2 - x_1}(x - x_1)$.",
             "figure": "figs/pa-q16.svg",
             "steps": [
               { "do": "Plot the three vertices and draw the triangle", "marks": 0.5 },
@@ -358,6 +368,7 @@
           "question": "Using integration, find the area of the region bounded by the curve $y^2 = 2x$ and the line $x - 2y = 0$.",
           "solution": {
             "answer": "$\\dfrac{16}{3}$ sq units",
+            "concept": "Area between two curves $= \\displaystyle\\int_a^b (y_{\\text{upper}} - y_{\\text{lower}})\\,dx$.",
             "figure": "figs/pa-q17.svg",
             "steps": [
               { "do": "Put $x = 2y$ in $y^2 = 2x$", "math": "y^2 = 4y \\Rightarrow y = 0 \\text{ or } y = 4" },
@@ -379,6 +390,7 @@
           "question": "Using integration, find the area of the region enclosed within $25x^2 + 16y^2 = 400$.",
           "solution": {
             "answer": "$20\\pi$ sq units",
+            "concept": "$\\displaystyle\\int \\sqrt{a^2 - x^2}\\,dx = \\dfrac{x}{2}\\sqrt{a^2 - x^2} + \\dfrac{a^2}{2}\\sin^{-1}\\dfrac{x}{a} + C$",
             "figure": "figs/pa-q18.svg",
             "steps": [
               { "do": "Divide by $400$ to get the standard form", "math": "\\dfrac{x^2}{16} + \\dfrac{y^2}{25} = 1,\\quad a = 4,\\ b = 5", "marks": 0.5 },
@@ -400,6 +412,7 @@
           "question": "Using integration, find the area of the region $\\{(x, y) : x^2 - 4y \\le 0,\\ y - x \\le 0\\}$.",
           "solution": {
             "answer": "$\\dfrac{8}{3}$ sq units",
+            "concept": "Area between two curves $= \\displaystyle\\int_a^b (y_{\\text{upper}} - y_{\\text{lower}})\\,dx$.",
             "figure": "figs/pa-q19.svg",
             "steps": [
               { "do": "$x^2 - 4y \\le 0$ means $y \\ge \\dfrac{x^2}{4}$: on or above the parabola $x^2 = 4y$" },

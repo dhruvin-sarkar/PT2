@@ -297,8 +297,8 @@
                 "do": "So $5$ divides $2b + 3a$, i.e. $(b, a) \\in R$."
               },
               {
-                "do": "Transitive: let $2a + 3b = 5k$ and $2b + 3c = 5m$. Add them.",
-                "math": "2a + 5b + 3c = 5(k + m)"
+                "do": "Transitive: let $(a, b), (b, c) \\in R$ and add the two conditions.",
+                "math": "(2a + 3b) + (2b + 3c) = 5k + 5m \\;\\Rightarrow\\; 2a + 5b + 3c = 5(k + m)"
               },
               {
                 "do": "Rearrange.",
@@ -404,21 +404,21 @@
             "concept": "For a piecewise function, check one-one in every case, including mixed cases.",
             "steps": [
               {
-                "do": "One-one: let $f(n_1) = f(n_2)$. Case 1: both odd.",
-                "math": "n_1 + 1 = n_2 + 1 \\;\\Rightarrow\\; n_1 = n_2"
-              },
-              {
-                "do": "Case 2: both even.",
-                "math": "n_1 - 1 = n_2 - 1 \\;\\Rightarrow\\; n_1 = n_2",
+                "do": "One-one: let $f(n_1) = f(n_2)$. Case 1: both odd, or both even.",
+                "math": "n_1 + 1 = n_2 + 1 \\ \\text{ or } \\ n_1 - 1 = n_2 - 1 \\;\\Rightarrow\\; n_1 = n_2",
                 "marks": 0.5
               },
               {
-                "do": "Case 3: $n_1$ odd, $n_2$ even.",
+                "do": "Case 2: one odd, one even. Say $n_1$ odd, $n_2$ even.",
                 "math": "n_1 + 1 = n_2 - 1 \\;\\Rightarrow\\; n_2 = n_1 + 2"
               },
               {
-                "do": "But $n_1 + 2$ is odd and $n_2$ is even — impossible. So $f$ is one-one.",
-                "marks": 1
+                "do": "But $n_1 + 2$ is odd and $n_2$ is even — impossible.",
+                "marks": 0.5
+              },
+              {
+                "do": "The case $n_1$ even, $n_2$ odd is the same. So $f$ is one-one.",
+                "marks": 0.5
               },
               {
                 "do": "Onto: let $m \\in \\mathbb{N}$. If $m$ is odd, $m + 1$ is even.",
@@ -512,7 +512,7 @@
                 "marks": 0.5
               },
               {
-                "do": "Impossible, so $\\dfrac{4}{3} \\in \\mathbb{R}$ has no pre-image. Hence $f$ is not onto.",
+                "do": "So $\\dfrac{4}{3} \\in \\mathbb{R}$ has no pre-image. Hence $f$ is one-one but not onto.",
                 "marks": 0.5
               }
             ],
@@ -632,7 +632,7 @@
                 "marks": 1
               },
               {
-                "do": "Symmetric: let $(a, b)\\,R\\,(c, d)$. Rewrite the same equation.",
+                "do": "Symmetric: let $(a, b)\\,R\\,(c, d)$ and rewrite its equation.",
                 "math": "ad(b + c) = bc(a + d) \\;\\Rightarrow\\; cb(d + a) = da(c + b)",
                 "marks": 0.5
               },
@@ -699,7 +699,7 @@
                 "marks": 0.5
               },
               {
-                "do": "So case 3 cannot occur. Hence $f$ is one-one.",
+                "do": "Same if $x_1 < 0 \\le x_2$. So case 3 cannot occur; $f$ is one-one.",
                 "marks": 0.5
               },
               {
@@ -741,8 +741,8 @@
                 "marks": 1
               },
               {
-                "do": "Transitive: let $x + y = 2k$ and $y + z = 2m$. Add them.",
-                "math": "x + 2y + z = 2(k + m)"
+                "do": "Transitive: let $(x, y), (y, z) \\in R$ and add the two conditions.",
+                "math": "(x + y) + (y + z) = 2k + 2m \\;\\Rightarrow\\; x + 2y + z = 2(k + m)"
               },
               {
                 "do": "Rearrange.",

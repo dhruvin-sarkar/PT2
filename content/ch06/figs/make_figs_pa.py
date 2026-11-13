@@ -57,32 +57,34 @@ def q12():
     save(fig, "pa-q12-kite.svg")
 
 
-# Q15: right triangle with hypotenuse h (diameter of a circle)
+# Q15: open tank with a square base of side x and depth h (no lid), drawn in oblique view
 def q15():
-    fig, ax = new(5.4, 4.0)
-    R = 2.0
-    th = np.deg2rad(62)
-    C = (R * np.cos(th), R * np.sin(th))
-    A, B = (-R, 0), (R, 0)
-    t = np.linspace(0, np.pi, 200)
-    ax.plot(R * np.cos(t), R * np.sin(t), color=INK, lw=1, ls="--")
-    ax.add_patch(Polygon([A, B, C], closed=True, fc=FILL, alpha=0.45, ec="none"))
-    ax.add_patch(Polygon([A, B, C], closed=True, fill=False, ec=INK, lw=2))
-    ax.plot([A[0], B[0]], [0, 0], color=ACC, lw=2.2)
-    # right-angle mark at C
-    u = np.array(A) - np.array(C); u = u / np.linalg.norm(u) * 0.22
-    v = np.array(B) - np.array(C); v = v / np.linalg.norm(v) * 0.22
-    p = np.array(C)
-    ax.plot([(p + u)[0], (p + u + v)[0], (p + v)[0]], [(p + u)[1], (p + u + v)[1], (p + v)[1]], color=INK, lw=1)
-    ax.text(0, -0.3, "hypotenuse $h$ (fixed)", ha="center", va="top", color=ACC)
-    ax.text((A[0] + C[0]) / 2 - 0.12, (A[1] + C[1]) / 2 + 0.08, "$x$", ha="right", va="bottom", fontsize=13)
-    ax.text((B[0] + C[0]) / 2 + 0.1, (B[1] + C[1]) / 2 + 0.05, "$y$", ha="left", va="bottom", fontsize=13)
-    ax.text(A[0] - 0.08, -0.05, "A", ha="right", va="top")
-    ax.text(B[0] + 0.08, -0.05, "B", ha="left", va="top")
-    ax.text(C[0], C[1] + 0.1, "C", ha="center", va="bottom")
-    ax.set_xlim(-2.5, 2.5)
-    ax.set_ylim(-0.6, 2.4)
-    save(fig, "pa-q15-right-triangle.svg")
+    fig, ax = new(5.4, 4.2)
+    x = 3.0                      # side of the square base
+    h = x / 2                    # depth at the optimum (h = x/2)
+    d = np.array([1.1, 0.75])    # oblique offset for the receding edge (length x drawn shorter)
+    F = [np.array(p, float) for p in [(0, 0), (x, 0), (x, h), (0, h)]]   # front face
+    B = [p + d for p in F]                                               # back face
+    # side and front faces shaded (the sheet metal); top left open
+    for face in ([F[0], F[1], F[2], F[3]], [F[1], B[1], B[2], F[2]]):
+        ax.add_patch(Polygon(face, closed=True, fc=FILL, alpha=0.45, ec="none"))
+    # visible edges
+    for p, q in [(F[0], F[1]), (F[1], F[2]), (F[2], F[3]), (F[3], F[0]),
+                 (F[1], B[1]), (B[1], B[2]), (F[2], B[2]), (F[3], B[3]), (B[3], B[2])]:
+        ax.plot([p[0], q[0]], [p[1], q[1]], color=INK, lw=2)
+    # hidden edges
+    for p, q in [(F[0], B[0]), (B[0], B[1]), (B[0], B[3])]:
+        ax.plot([p[0], q[0]], [p[1], q[1]], color=INK, lw=1, ls="--")
+    ax.text(x / 2 + d[0] / 2, h + d[1] / 2, "open top", ha="center", va="center", color=ACC)
+    ax.annotate("", xy=(x, -0.3), xytext=(0, -0.3), arrowprops=dict(arrowstyle="<->", color=INK))
+    ax.text(x / 2, -0.55, "$x$", ha="center", va="center", fontsize=13)
+    ax.text(x + d[0] / 2 + 0.15, d[1] / 2 - 0.1, "$x$", ha="left", va="center", fontsize=13)
+    ax.annotate("", xy=(-0.3, h), xytext=(-0.3, 0), arrowprops=dict(arrowstyle="<->", color=INK))
+    ax.text(-0.45, h / 2, "$h$", ha="right", va="center", fontsize=13)
+    ax.text(x / 2 + 0.2, 0.32, "volume $V = x^2h$ (fixed)", ha="center", va="center", fontsize=11)
+    ax.set_xlim(-1.0, x + d[0] + 0.6)
+    ax.set_ylim(-0.85, h + d[1] + 0.3)
+    save(fig, "pa-q15-open-tank.svg")
 
 
 # Q16: cone inscribed in a sphere of radius r (cross-section), h = 4r/3

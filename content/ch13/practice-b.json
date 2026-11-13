@@ -1,0 +1,942 @@
+{
+  "chapter": 13,
+  "chapterTitle": "Probability",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "If $P(B) = \\dfrac{3}{5}$, $P(A|B) = \\dfrac{1}{2}$ and $P(A \\cup B) = \\dfrac{4}{5}$, then $P(A \\cup B)' + P(A' \\cup B)$ is equal to:",
+          "options": [
+            "$\\dfrac{1}{5}$",
+            "$\\dfrac{4}{5}$",
+            "$\\dfrac{1}{2}$",
+            "$1$"
+          ],
+          "solution": {
+            "answer": "(D) $1$",
+            "concept": "$P(A \\cap B) = P(B)\\,P(A|B)$; De Morgan: $(A' \\cup B)' = A \\cap B'$.",
+            "steps": [
+              {
+                "do": "Find $P(A \\cap B)$ by the multiplication rule.",
+                "math": "P(A \\cap B) = P(B)\\,P(A|B) = \\dfrac{3}{5} \\times \\dfrac{1}{2} = \\dfrac{3}{10}"
+              },
+              {
+                "do": "Find $P(A)$ from the addition rule.",
+                "math": "P(A) = P(A \\cup B) - P(B) + P(A \\cap B) = \\dfrac{4}{5} - \\dfrac{3}{5} + \\dfrac{3}{10} = \\dfrac{1}{2}"
+              },
+              {
+                "do": "Probability of the complement of $A \\cup B$.",
+                "math": "P(A \\cup B)' = 1 - \\dfrac{4}{5} = \\dfrac{1}{5}"
+              },
+              {
+                "do": "$A' \\cup B$ is the complement of $A \\cap B'$.",
+                "math": "P(A' \\cup B) = 1 - P(A \\cap B') = 1 - \\left(\\dfrac{1}{2} - \\dfrac{3}{10}\\right) = \\dfrac{4}{5}"
+              },
+              {
+                "do": "Add the two results.",
+                "math": "\\dfrac{1}{5} + \\dfrac{4}{5} = 1",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (D)}"
+              }
+            ],
+            "mistake": "Writing $P(A' \\cup B) = 1 - P(A \\cup B)$: by De Morgan its complement is $A \\cap B'$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "Three persons $A$, $B$ and $C$ fire at a target in turn, starting with $A$. Their probabilities of hitting the target are $0.4$, $0.3$ and $0.2$ respectively. The probability of two hits is:",
+          "options": [
+            "$0.024$",
+            "$0.188$",
+            "$0.336$",
+            "$0.452$"
+          ],
+          "solution": {
+            "answer": "(B) $0.188$",
+            "concept": "For independent events, $P(E \\cap F \\cap G) = P(E)\\,P(F)\\,P(G)$.",
+            "steps": [
+              {
+                "do": "The shots are independent; the chances of missing are $0.6$, $0.7$, $0.8$."
+              },
+              {
+                "do": "Two hits means exactly one of the three misses.",
+                "math": "P = (0.4)(0.3)(0.8) + (0.4)(0.7)(0.2) + (0.6)(0.3)(0.2)"
+              },
+              {
+                "do": "Simplify.",
+                "math": "P = 0.096 + 0.056 + 0.036 = 0.188",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (B)}"
+              }
+            ],
+            "mistake": "Choosing $0.024$: that is all three hitting; 'two hits' means exactly two."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "Two dice are thrown. If it is known that the sum of numbers on the dice was less than $6$, the probability of getting a sum $3$ is:",
+          "options": [
+            "$\\dfrac{1}{18}$",
+            "$\\dfrac{5}{18}$",
+            "$\\dfrac{1}{5}$",
+            "$\\dfrac{2}{5}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{1}{5}$",
+            "concept": "$P(E|F) = \\dfrac{n(E \\cap F)}{n(F)}$ when outcomes are equally likely.",
+            "steps": [
+              {
+                "do": "Let $F$: sum less than 6. Count sums 2, 3, 4, 5.",
+                "math": "n(F) = 1 + 2 + 3 + 4 = 10"
+              },
+              {
+                "do": "Let $E$: sum is 3.",
+                "math": "E \\cap F = \\{(1, 2),\\ (2, 1)\\},\\quad n(E \\cap F) = 2"
+              },
+              {
+                "do": "Use the reduced sample space $F$.",
+                "math": "P(E|F) = \\dfrac{n(E \\cap F)}{n(F)} = \\dfrac{2}{10} = \\dfrac{1}{5}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (C)}"
+              }
+            ],
+            "mistake": "Choosing $\\dfrac{1}{18}$: that is $P(E)$; the given condition cuts the sample space to 10 outcomes."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "If $A$ and $B$ are such events that $P(A) > 0$ and $P(B) \\neq 1$, then $P(A'|B')$ equals:",
+          "options": [
+            "$1 - P(A|B)$",
+            "$1 - P(A'|B)$",
+            "$\\dfrac{1 - P(A \\cup B)}{P(B')}$",
+            "$\\dfrac{P(A')}{P(B')}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{1 - P(A \\cup B)}{P(B')}$",
+            "concept": "$P(E|F) = \\dfrac{P(E \\cap F)}{P(F)}$ and $A' \\cap B' = (A \\cup B)'$.",
+            "steps": [
+              {
+                "do": "Definition; $P(B') \\neq 0$ since $P(B) \\neq 1$.",
+                "math": "P(A'|B') = \\dfrac{P(A' \\cap B')}{P(B')}"
+              },
+              {
+                "do": "Use De Morgan's law.",
+                "math": "P(A' \\cap B') = P\\big((A \\cup B)'\\big) = 1 - P(A \\cup B)"
+              },
+              {
+                "do": "Substitute.",
+                "math": "P(A'|B') = \\dfrac{1 - P(A \\cup B)}{P(B')}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (C)}"
+              }
+            ],
+            "mistake": "Choosing $1 - P(A|B)$: that equals $P(A'|B)$; the condition must stay $B'$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "Two events $E$ and $F$ are independent. If $P(E) = 0.3$ and $P(E \\cup F) = 0.5$, then $P(E|F) - P(F|E)$ equals:",
+          "options": [
+            "$\\dfrac{2}{7}$",
+            "$\\dfrac{3}{35}$",
+            "$\\dfrac{1}{70}$",
+            "$\\dfrac{1}{7}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{1}{70}$",
+            "concept": "If $E$, $F$ are independent: $P(E \\cap F) = P(E)\\,P(F)$, $P(E|F) = P(E)$, $P(F|E) = P(F)$.",
+            "steps": [
+              {
+                "do": "Let $P(F) = p$; addition rule with $P(E \\cap F) = 0.3p$.",
+                "math": "0.3 + p - 0.3p = 0.5 \\;\\Rightarrow\\; 0.7p = 0.2 \\;\\Rightarrow\\; p = \\dfrac{2}{7}"
+              },
+              {
+                "do": "Independence gives $P(E|F) = P(E)$ and $P(F|E) = P(F)$.",
+                "math": "P(E|F) - P(F|E) = \\dfrac{3}{10} - \\dfrac{2}{7} = \\dfrac{21 - 20}{70} = \\dfrac{1}{70}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (C)}"
+              }
+            ],
+            "mistake": "Choosing $\\dfrac{2}{7}$: that is $P(F)$ alone, not the difference asked for."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** If $P(A) = 0.3$ and $P(B) = 0.4$, then $A$ and $B$ cannot be both mutually exclusive and independent. **Reason (R):** If $A$ and $B$ are mutually exclusive, then $P(A \\cap B) = 0$; if they are independent, then $P(A \\cap B) = P(A)\\,P(B)$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A",
+            "concept": "Mutually exclusive: $P(A \\cap B) = 0$. Independent: $P(A \\cap B) = P(A)\\,P(B)$.",
+            "steps": [
+              {
+                "do": "If $A$, $B$ were mutually exclusive:",
+                "math": "P(A \\cap B) = 0"
+              },
+              {
+                "do": "If $A$, $B$ were independent:",
+                "math": "P(A \\cap B) = 0.3 \\times 0.4 = 0.12"
+              },
+              {
+                "do": "$0 \\neq 0.12$, so both cannot hold: **Assertion (A) is true**."
+              },
+              {
+                "do": "Both parts of R are standard results: **Reason (R) is true**."
+              },
+              {
+                "do": "A follows directly from the two facts in R, so **R explains A**."
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (A)}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Treating 'mutually exclusive' and 'independent' as the same idea: with non-zero probabilities they never hold together."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "A bag contains 5 red marbles and 3 black marbles. Three marbles are drawn one by one without replacement. What is the probability that at least one of the three marbles drawn be black, if the first marble is red?",
+          "solution": {
+            "answer": "$\\dfrac{5}{7}$",
+            "concept": "Multiplication theorem: $P(E \\cap F) = P(E)\\,P(F|E)$, applied to the draws after the first.",
+            "steps": [
+              {
+                "do": "First marble is red, so 4 red and 3 black remain (7 marbles).",
+                "marks": 0.5
+              },
+              {
+                "do": "'At least one black' is the complement of 'next two both red'.",
+                "math": "P(\\text{at least one black}) = 1 - P(\\text{2nd red and 3rd red})",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiplication theorem for the next two draws.",
+                "math": "P(\\text{2nd red and 3rd red}) = \\dfrac{4}{7} \\times \\dfrac{3}{6} = \\dfrac{2}{7}",
+                "marks": 0.5
+              },
+              {
+                "do": "Subtract from 1.",
+                "math": "1 - \\dfrac{2}{7} = \\dfrac{5}{7}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{5}{7}$."
+              }
+            ],
+            "mistake": "Using all 8 marbles for the later draws: the red first marble is already out of the bag."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Ex 13.3 Q7",
+          "question": "An insurance company insured 2000 scooter drivers, 4000 car drivers and 6000 truck drivers. The probabilities of an accident are $0.01$, $0.03$ and $0.15$ respectively. One of the insured persons meets with an accident. What is the probability that he is a scooter driver?",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{1}{52}$",
+            "concept": "Bayes' theorem: $P(E_i|A) = \\dfrac{P(E_i)P(A|E_i)}{\\sum P(E_j)P(A|E_j)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1, E_2, E_3$: scooter, car, truck driver; $A$: meets with an accident."
+              },
+              {
+                "do": "Total insured $= 12000$; write the prior probabilities.",
+                "math": "P(E_1) = \\dfrac{2000}{12000} = \\dfrac{1}{6},\\quad P(E_2) = \\dfrac{1}{3},\\quad P(E_3) = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the probabilities of an accident.",
+                "math": "P(A|E_1) = 0.01,\\quad P(A|E_2) = 0.03,\\quad P(A|E_3) = 0.15",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply Bayes' theorem for $E_1$.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{1}{6}(0.01)}{\\frac{1}{6}(0.01) + \\frac{1}{3}(0.03) + \\frac{1}{2}(0.15)}",
+                "marks": 1
+              },
+              {
+                "do": "Multiply numerator and denominator by 600.",
+                "math": "P(E_1|A) = \\dfrac{1}{1 + 6 + 45} = \\dfrac{1}{52}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{1}{52}$."
+              }
+            ],
+            "mistake": "Answering $0.01$: that is $P(A|E_1)$, but the question asks for $P(E_1|A)$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "A bag contains 4 white and 5 black balls. Another bag contains 9 white and 7 black balls. A ball is transferred from the first bag to the second and then a ball is drawn at random from the second bag. Find the probability that the ball drawn is white.",
+          "solution": {
+            "answer": "$\\dfrac{5}{9}$",
+            "concept": "Theorem of total probability: $P(A) = P(E_1)P(A|E_1) + P(E_2)P(A|E_2)$.",
+            "steps": [
+              {
+                "do": "Let $E_1$: white ball transferred, $E_2$: black ball transferred; $A$: white ball drawn."
+              },
+              {
+                "do": "The first bag has 9 balls.",
+                "math": "P(E_1) = \\dfrac{4}{9},\\quad P(E_2) = \\dfrac{5}{9}",
+                "marks": 0.5
+              },
+              {
+                "do": "The second bag now has 17 balls.",
+                "math": "P(A|E_1) = \\dfrac{10}{17},\\quad P(A|E_2) = \\dfrac{9}{17}",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply the theorem of total probability.",
+                "math": "P(A) = \\dfrac{4}{9} \\cdot \\dfrac{10}{17} + \\dfrac{5}{9} \\cdot \\dfrac{9}{17}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(A) = \\dfrac{40 + 45}{153} = \\dfrac{85}{153} = \\dfrac{5}{9}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{5}{9}$."
+              }
+            ],
+            "mistake": "Using 16 balls in the second bag: after the transfer it holds 17."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "For two events $A$ and $B$, it is given that $P(A) = 0.6$, $P(A \\cup B) = 0.8$ and $P(A|B) = 0.5$. Find $P(B)$, $P(B|A')$ and $P(A'|B')$.",
+          "solution": {
+            "answer": "$P(B) = 0.4$, $P(B|A') = 0.5$, $P(A'|B') = \\dfrac{1}{3}$",
+            "concept": "$P(A \\cap B) = P(B)\\,P(A|B)$; $P(A' \\cap B') = 1 - P(A \\cup B)$.",
+            "steps": [
+              {
+                "do": "Let $P(B) = x$; multiplication rule.",
+                "math": "P(A \\cap B) = P(B)\\,P(A|B) = 0.5x"
+              },
+              {
+                "do": "Addition rule; solve for $x$.",
+                "math": "0.6 + x - 0.5x = 0.8 \\;\\Rightarrow\\; 0.5x = 0.2 \\;\\Rightarrow\\; P(B) = 0.4",
+                "marks": 1
+              },
+              {
+                "do": "So the intersection is",
+                "math": "P(A \\cap B) = 0.5 \\times 0.4 = 0.2"
+              },
+              {
+                "do": "$A' \\cap B$ is '$B$ but not $A$'.",
+                "math": "P(A' \\cap B) = P(B) - P(A \\cap B) = 0.4 - 0.2 = 0.2",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(B|A') = \\dfrac{P(A' \\cap B)}{P(A')} = \\dfrac{0.2}{0.4} = 0.5",
+                "marks": 0.5
+              },
+              {
+                "do": "Use De Morgan's law.",
+                "math": "P(A' \\cap B') = 1 - P(A \\cup B) = 1 - 0.8 = 0.2",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(A'|B') = \\dfrac{P(A' \\cap B')}{P(B')} = \\dfrac{0.2}{0.6} = \\dfrac{1}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $P(B) = 0.4$, $P(B|A') = 0.5$, $P(A'|B') = \\dfrac{1}{3}$."
+              }
+            ],
+            "mistake": "Writing $P(B|A') = 1 - P(B|A)$: the complement rule changes the event, never the condition."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2022-23",
+          "question": "Three friends go for coffee. They decide who will pay the bill, by each tossing a coin and then letting the “odd person” pay. There is no odd person if all three tosses produce the same result. If there is no odd person in the first round, they make a second round of tosses and they continue to do so until there is an odd person. What is the probability that exactly three rounds of tosses are made?",
+          "solution": {
+            "answer": "$\\dfrac{3}{64}$",
+            "concept": "Rounds are independent, so $P(E \\cap F \\cap G) = P(E)\\,P(F)\\,P(G)$.",
+            "steps": [
+              {
+                "do": "One round of three tosses has $2^3 = 8$ equally likely outcomes."
+              },
+              {
+                "do": "No odd person: all heads or all tails.",
+                "math": "P(\\text{no odd person}) = \\dfrac{1}{2}\\cdot\\dfrac{1}{2}\\cdot\\dfrac{1}{2} \\times 2 = \\dfrac{1}{4}",
+                "marks": 1
+              },
+              {
+                "do": "Probability of an odd person in a round.",
+                "math": "P(\\text{odd person}) = 1 - \\dfrac{1}{4} = \\dfrac{3}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Exactly three rounds: no odd person in rounds 1 and 2, odd person in round 3.",
+                "marks": 0.5
+              },
+              {
+                "do": "Rounds are independent, so multiply.",
+                "math": "P = \\dfrac{1}{4} \\times \\dfrac{1}{4} \\times \\dfrac{3}{4} = \\dfrac{3}{64}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{3}{64}$."
+              }
+            ],
+            "mistake": "Answering $\\left(\\dfrac{1}{4}\\right)^3$: the third round must produce an odd person, which has probability $\\dfrac{3}{4}$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Assume that in a family, each child is equally likely to be a boy or a girl. A family with three children is chosen at random. Find the probability that the eldest child is a girl, given that the family has at least one girl.",
+          "solution": {
+            "answer": "$\\dfrac{4}{7}$",
+            "concept": "$P(E|F) = \\dfrac{P(E \\cap F)}{P(F)}$.",
+            "steps": [
+              {
+                "do": "Write the sample space, eldest child first.",
+                "math": "S = \\{BBB, BBG, BGB, BGG, GBB, GBG, GGB, GGG\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $F$: at least one girl. Only $BBB$ is left out.",
+                "math": "P(F) = \\dfrac{7}{8}",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $E$: eldest is a girl. Every such outcome has a girl.",
+                "math": "E \\cap F = \\{GBB, GBG, GGB, GGG\\},\\quad P(E \\cap F) = \\dfrac{4}{8}",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(E|F) = \\dfrac{4/8}{7/8} = \\dfrac{4}{7}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{4}{7}$."
+              }
+            ],
+            "mistake": "Answering $\\dfrac{1}{2}$: the condition removes $BBB$, so only 7 outcomes remain."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "A bag contains $(2n + 1)$ coins. It is known that $n$ of these coins have a head on both sides, whereas the rest of the coins are fair. A coin is picked up at random from the bag and is tossed. If the probability that the toss results in a head is $\\dfrac{31}{42}$, determine the value of $n$.",
+          "solution": {
+            "answer": "$n = 10$",
+            "concept": "Theorem of total probability: $P(H) = P(E_1)P(H|E_1) + P(E_2)P(H|E_2)$.",
+            "steps": [
+              {
+                "do": "Let $E_1$: two-headed coin picked, $E_2$: fair coin picked; $H$: toss shows a head."
+              },
+              {
+                "do": "$n$ coins are two-headed and $n + 1$ are fair.",
+                "math": "P(E_1) = \\dfrac{n}{2n + 1},\\quad P(E_2) = \\dfrac{n + 1}{2n + 1}",
+                "marks": 0.5
+              },
+              {
+                "do": "A two-headed coin always shows a head.",
+                "math": "P(H|E_1) = 1,\\quad P(H|E_2) = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply the theorem of total probability.",
+                "math": "P(H) = \\dfrac{n}{2n + 1} \\cdot 1 + \\dfrac{n + 1}{2n + 1} \\cdot \\dfrac{1}{2} = \\dfrac{3n + 1}{2(2n + 1)}",
+                "marks": 1
+              },
+              {
+                "do": "Equate to $\\dfrac{31}{42}$ and cross-multiply.",
+                "math": "42(3n + 1) = 62(2n + 1) \\;\\Rightarrow\\; 126n + 42 = 124n + 62",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $n$.",
+                "math": "2n = 20 \\;\\Rightarrow\\; n = 10",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $n = 10$."
+              }
+            ],
+            "mistake": "Taking $P(H|E_1) = \\dfrac{1}{2}$: a coin with heads on both sides always shows a head."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Two dice are tossed. Find whether the following two events $A$ and $B$ are independent: $A = \\{(x, y) : x + y = 11\\}$, $B = \\{(x, y) : x \\neq 5\\}$, where $(x, y)$ denotes a typical sample point.",
+          "solution": {
+            "answer": "Not independent, since $P(A \\cap B) = \\dfrac{1}{36} \\neq \\dfrac{5}{108} = P(A)\\,P(B)$",
+            "concept": "$A$, $B$ independent $\\iff P(A \\cap B) = P(A)\\,P(B)$.",
+            "steps": [
+              {
+                "do": "There are 36 outcomes. List $A$.",
+                "math": "A = \\{(5, 6),\\ (6, 5)\\},\\quad P(A) = \\dfrac{2}{36} = \\dfrac{1}{18}",
+                "marks": 0.5
+              },
+              {
+                "do": "$B'$ has the 6 outcomes with $x = 5$.",
+                "math": "P(B) = \\dfrac{36 - 6}{36} = \\dfrac{5}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $A \\cap B$.",
+                "math": "A \\cap B = \\{(6, 5)\\},\\quad P(A \\cap B) = \\dfrac{1}{36}",
+                "marks": 0.5
+              },
+              {
+                "do": "Compare with $P(A)\\,P(B)$.",
+                "math": "P(A)\\,P(B) = \\dfrac{1}{18} \\times \\dfrac{5}{6} = \\dfrac{5}{108} \\neq \\dfrac{1}{36}"
+              },
+              {
+                "do": "Hence $A$ and $B$ are not independent.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Assuming '$x \\neq 5$' has nothing to do with the sum: it removes $(5, 6)$ from $A$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Exemplar",
+          "question": "A shopkeeper sells three types of flower seeds $A_1$, $A_2$ and $A_3$. They are sold as a mixture where the proportions are $4 : 4 : 2$ respectively. The germination rates of the three types of seeds are $45\\%$, $60\\%$ and $35\\%$. Calculate the probability",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "of a randomly chosen seed to germinate,",
+              "marks": 2
+            },
+            {
+              "label": "(ii)",
+              "text": "that it will not germinate given that the seed is of type $A_3$,",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "that it is of the type $A_2$ given that a randomly chosen seed does not germinate.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $0.49$ (ii) $0.65$ (iii) $\\dfrac{16}{51}$",
+            "concept": "Total probability for (i); $P(G'|E) = 1 - P(G|E)$ for (ii); Bayes' theorem for (iii).",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Let $E_1, E_2, E_3$: seed of type $A_1, A_2, A_3$; $G$: seed germinates."
+                  },
+                  {
+                    "do": "Proportions $4 : 4 : 2$ give the priors.",
+                    "math": "P(E_1) = \\dfrac{4}{10},\\quad P(E_2) = \\dfrac{4}{10},\\quad P(E_3) = \\dfrac{2}{10}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Write the germination rates.",
+                    "math": "P(G|E_1) = 0.45,\\quad P(G|E_2) = 0.60,\\quad P(G|E_3) = 0.35",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Theorem of total probability.",
+                    "math": "P(G) = 0.4 \\times 0.45 + 0.4 \\times 0.60 + 0.2 \\times 0.35",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(G) = 0.18 + 0.24 + 0.07 = 0.49",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$0.49$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Not germinating is the complement, given type $A_3$.",
+                    "math": "P(G'|E_3) = 1 - P(G|E_3) = 1 - 0.35 = 0.65",
+                    "marks": 1
+                  }
+                ],
+                "answer": "$0.65$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Probability that a seed does not germinate, from (i).",
+                    "math": "P(G') = 1 - 0.49 = 0.51",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Given type $A_2$, the chance of not germinating.",
+                    "math": "P(G'|E_2) = 1 - 0.60 = 0.40",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Apply Bayes' theorem.",
+                    "math": "P(E_2|G') = \\dfrac{P(E_2)\\,P(G'|E_2)}{P(G')} = \\dfrac{0.4 \\times 0.40}{0.51}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(E_2|G') = \\dfrac{0.16}{0.51} = \\dfrac{16}{51}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\dfrac{16}{51}$"
+              }
+            ],
+            "mistake": "Dividing by $P(G) = 0.49$ in (iii): the given event is 'does not germinate', so divide by $P(G') = 0.51$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "In a test, an examinee either guesses or copies or knows the answer to a multiple-choice question with four choices. The probability that he makes a guess is $\\dfrac{1}{3}$ and the probability that he copies the answer is $\\dfrac{1}{6}$. The probability that his answer is correct, given that he copied it, is $\\dfrac{1}{8}$. Find the probability that he knew the answer to the question, given that he correctly answered it.",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{24}{29}$",
+            "concept": "Bayes' theorem with three cases: knows, guesses, copies.",
+            "steps": [
+              {
+                "do": "Let $E_1$: knows, $E_2$: guesses, $E_3$: copies; $A$: answers correctly."
+              },
+              {
+                "do": "Write the priors; 'knows' is what remains.",
+                "math": "P(E_2) = \\dfrac{1}{3},\\quad P(E_3) = \\dfrac{1}{6},\\quad P(E_1) = 1 - \\dfrac{1}{3} - \\dfrac{1}{6} = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the chances of a correct answer.",
+                "math": "P(A|E_1) = 1,\\quad P(A|E_2) = \\dfrac{1}{4},\\quad P(A|E_3) = \\dfrac{1}{8}",
+                "why": "A guess picks one of four choices.",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply Bayes' theorem for $E_1$.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{1}{2}\\cdot 1}{\\frac{1}{2}\\cdot 1 + \\frac{1}{3}\\cdot\\frac{1}{4} + \\frac{1}{6}\\cdot\\frac{1}{8}}",
+                "marks": 1
+              },
+              {
+                "do": "Write every term over 48 and simplify.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{24}{48}}{\\frac{24}{48} + \\frac{4}{48} + \\frac{1}{48}} = \\dfrac{24}{29}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{24}{29}$."
+              }
+            ],
+            "mistake": "Leaving out the 'knows' case or not finding $P(E_1) = \\dfrac{1}{2}$: the three cases must add up to 1."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Ex 13.3 Q10",
+          "question": "Suppose a girl throws a die. If she gets a 5 or 6, she tosses a coin three times and notes the number of heads. If she gets 1, 2, 3 or 4, she tosses a coin once and notes whether a head or tail is obtained. If she obtained exactly one head, what is the probability that she threw 1, 2, 3 or 4 with the die?",
+          "solution": {
+            "answer": "$P(E_2|A) = \\dfrac{8}{11}$",
+            "concept": "Bayes' theorem: $P(E_2|A) = \\dfrac{P(E_2)P(A|E_2)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1$: die shows 5 or 6, $E_2$: 1 to 4; $A$: exactly one head.",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the prior probabilities from the die.",
+                "math": "P(E_1) = \\dfrac{2}{6} = \\dfrac{1}{3},\\quad P(E_2) = \\dfrac{4}{6} = \\dfrac{2}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Under $E_1$ the coin is tossed three times.",
+                "math": "A = \\{HTT, THT, TTH\\} \\;\\Rightarrow\\; P(A|E_1) = \\dfrac{3}{8}",
+                "marks": 1
+              },
+              {
+                "do": "Under $E_2$ the coin is tossed once.",
+                "math": "P(A|E_2) = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply Bayes' theorem for $E_2$.",
+                "math": "P(E_2|A) = \\dfrac{\\frac{2}{3} \\cdot \\frac{1}{2}}{\\frac{1}{3} \\cdot \\frac{3}{8} + \\frac{2}{3} \\cdot \\frac{1}{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Write every term over 24 and simplify.",
+                "math": "P(E_2|A) = \\dfrac{\\frac{8}{24}}{\\frac{3}{24} + \\frac{8}{24}} = \\dfrac{8}{11}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{8}{11}$."
+              }
+            ],
+            "mistake": "Taking $P(A|E_1) = \\dfrac{1}{8}$: one head in three tosses can come in 3 ways."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Three events $A$, $B$ and $C$ have probabilities $\\dfrac{2}{5}$, $\\dfrac{1}{3}$ and $\\dfrac{1}{2}$, respectively. Given that $P(A \\cap C) = \\dfrac{1}{5}$ and $P(B \\cap C) = \\dfrac{1}{4}$, find the values of $P(C|B)$ and $P(A' \\cap C')$.",
+          "solution": {
+            "answer": "$P(C|B) = \\dfrac{3}{4}$, $P(A' \\cap C') = \\dfrac{3}{10}$",
+            "concept": "$P(C|B) = \\dfrac{P(B \\cap C)}{P(B)}$; De Morgan: $A' \\cap C' = (A \\cup C)'$.",
+            "steps": [
+              {
+                "do": "Write the conditional probability formula.",
+                "math": "P(C|B) = \\dfrac{P(B \\cap C)}{P(B)}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute and simplify.",
+                "math": "P(C|B) = \\dfrac{1/4}{1/3} = \\dfrac{3}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use the addition rule for $A$ and $C$.",
+                "math": "P(A \\cup C) = P(A) + P(C) - P(A \\cap C) = \\dfrac{2}{5} + \\dfrac{1}{2} - \\dfrac{1}{5} = \\dfrac{7}{10}",
+                "marks": 1
+              },
+              {
+                "do": "Use De Morgan's law.",
+                "math": "P(A' \\cap C') = 1 - P(A \\cup C)",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute.",
+                "math": "P(A' \\cap C') = 1 - \\dfrac{7}{10} = \\dfrac{3}{10}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $P(C|B) = \\dfrac{3}{4}$ and $P(A' \\cap C') = \\dfrac{3}{10}$."
+              }
+            ],
+            "mistake": "Dividing by $P(C)$ for $P(C|B)$: always divide by the probability of the given event $B$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Ex 13.3 Q12",
+          "question": "A card from a pack of 52 cards is lost. From the remaining cards of the pack, two cards are drawn and are found to be both diamonds. Find the probability of the lost card being a diamond.",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{11}{50}$",
+            "concept": "Bayes' theorem: $P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1$: the lost card is a diamond, $E_2$: it is not a diamond.",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $A$: both cards drawn are diamonds."
+              },
+              {
+                "do": "13 of the 52 cards are diamonds.",
+                "math": "P(E_1) = \\dfrac{13}{52} = \\dfrac{1}{4},\\quad P(E_2) = \\dfrac{3}{4}",
+                "marks": 1
+              },
+              {
+                "do": "If a diamond is lost, 12 diamonds remain among 51 cards.",
+                "math": "P(A|E_1) = \\dfrac{{}^{12}C_2}{{}^{51}C_2} = \\dfrac{66}{1275}",
+                "marks": 1
+              },
+              {
+                "do": "If a non-diamond is lost, all 13 diamonds remain among 51 cards.",
+                "math": "P(A|E_2) = \\dfrac{{}^{13}C_2}{{}^{51}C_2} = \\dfrac{78}{1275}",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{1}{4}\\cdot\\frac{66}{1275}}{\\frac{1}{4}\\cdot\\frac{66}{1275} + \\frac{3}{4}\\cdot\\frac{78}{1275}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Cancel the common factor $\\dfrac{1}{4 \\times 1275}$ and simplify.",
+                "math": "P(E_1|A) = \\dfrac{66}{66 + 234} = \\dfrac{66}{300} = \\dfrac{11}{50}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{11}{50}$."
+              }
+            ],
+            "mistake": "Answering $\\dfrac{1}{4}$: the two diamonds drawn are new information, so Bayes' theorem must be used."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2024-25",
+          "question": "**Case Study:** Arka bought two cages of birds: Cage-I contains 5 parrots and 1 owl and Cage-II contains 6 parrots. One day Arka forgot to lock both cages and two birds flew from Cage-I to Cage-II (simultaneously). Then two birds flew back from Cage-II to Cage-I (simultaneously). Assume that all the birds have equal chances of flying. On the basis of the above information, answer the following questions.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "When two birds flew from Cage-I to Cage-II and two birds flew back from Cage-II to Cage-I, find the probability that the owl is still in Cage-I.",
+              "marks": 2
+            },
+            {
+              "label": "(ii)",
+              "text": "When two birds flew from Cage-I to Cage-II and two birds flew back from Cage-II to Cage-I, the owl is still seen in Cage-I. What is the probability that one parrot and the owl flew from Cage-I to Cage-II?",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $\\dfrac{3}{4}$ (ii) $\\dfrac{1}{9}$",
+            "concept": "Total probability for (i); Bayes' theorem for (ii).",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Let $E_1$: one parrot and the owl fly out of Cage-I, $E_2$: two parrots fly out."
+                  },
+                  {
+                    "do": "Let $A$: the owl is still in Cage-I at the end."
+                  },
+                  {
+                    "do": "Any 2 of the 6 birds in Cage-I fly out.",
+                    "math": "P(E_1) = \\dfrac{{}^5C_1 \\cdot {}^1C_1}{{}^6C_2} = \\dfrac{5}{15} = \\dfrac{1}{3},\\quad P(E_2) = \\dfrac{{}^5C_2}{{}^6C_2} = \\dfrac{10}{15} = \\dfrac{2}{3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Under $E_1$, Cage-II has 7 parrots and the owl; the owl must fly back.",
+                    "math": "P(A|E_1) = \\dfrac{{}^1C_1 \\cdot {}^7C_1}{{}^8C_2} = \\dfrac{7}{28} = \\dfrac{1}{4}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Under $E_2$, the owl never left Cage-I.",
+                    "math": "P(A|E_2) = 1"
+                  },
+                  {
+                    "do": "Theorem of total probability.",
+                    "math": "P(A) = P(E_1)P(A|E_1) + P(E_2)P(A|E_2) = \\dfrac{1}{3}\\cdot\\dfrac{1}{4} + \\dfrac{2}{3}\\cdot 1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(A) = \\dfrac{1}{12} + \\dfrac{8}{12} = \\dfrac{9}{12} = \\dfrac{3}{4}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\dfrac{3}{4}$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Required $P(E_1|A)$; write Bayes' theorem.",
+                    "math": "P(E_1|A) = \\dfrac{P(E_1)\\,P(A|E_1)}{P(A)}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Substitute, using $P(A) = \\dfrac{3}{4}$ from (i).",
+                    "math": "P(E_1|A) = \\dfrac{\\frac{1}{3}\\cdot\\frac{1}{4}}{\\frac{3}{4}} = \\dfrac{\\frac{1}{12}}{\\frac{3}{4}}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(E_1|A) = \\dfrac{1}{12} \\times \\dfrac{4}{3} = \\dfrac{1}{9}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Required probability $= \\dfrac{1}{9}$."
+                  }
+                ],
+                "answer": "$\\dfrac{1}{9}$"
+              }
+            ],
+            "mistake": "Taking $P(A|E_1) = \\dfrac{1}{8}$: two birds fly back, so the owl returns with probability $\\dfrac{7}{28}$."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,879 @@
+{
+  "chapter": 10,
+  "chapterTitle": "Vector Algebra",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 47,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The unit vector $\\hat{n}$ perpendicular to both $\\vec{a}=\\hat{i}+\\hat{j}$ and $\\vec{b}=\\hat{j}+\\hat{k}$, such that $\\vec{a}$, $\\vec{b}$, $\\hat{n}$ form a right-handed system, is:",
+          "options": [
+            "$\\dfrac{-\\hat{i}+\\hat{j}-\\hat{k}}{\\sqrt{3}}$",
+            "$\\dfrac{\\hat{i}+\\hat{j}+\\hat{k}}{\\sqrt{3}}$",
+            "$\\hat{i}-\\hat{j}+\\hat{k}$",
+            "$\\dfrac{\\hat{i}-\\hat{j}+\\hat{k}}{\\sqrt{3}}$"
+          ],
+          "solution": {
+            "answer": "(D) $\\dfrac{\\hat{i}-\\hat{j}+\\hat{k}}{\\sqrt{3}}$",
+            "concept": "$\\vec{a}$, $\\vec{b}$, $\\vec{a}\\times\\vec{b}$ form a right-handed system, so $\\hat{n}=\\dfrac{\\vec{a}\\times\\vec{b}}{|\\vec{a}\\times\\vec{b}|}$.",
+            "steps": [
+              {
+                "do": "For a right-handed system, $\\hat{n}$ is along $\\vec{a}\\times\\vec{b}$ (in this order).",
+                "math": "\\hat{n} = \\dfrac{\\vec{a}\\times\\vec{b}}{|\\vec{a}\\times\\vec{b}|}"
+              },
+              {
+                "do": "Find the cross product.",
+                "math": "\\vec{a}\\times\\vec{b} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & 1 & 0 \\\\ 0 & 1 & 1 \\end{vmatrix} = \\hat{i}-\\hat{j}+\\hat{k}"
+              },
+              {
+                "do": "Divide by its magnitude $\\sqrt{1+1+1}=\\sqrt{3}$.",
+                "math": "\\hat{n} = \\dfrac{\\hat{i}-\\hat{j}+\\hat{k}}{\\sqrt{3}}",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (D)."
+              }
+            ],
+            "mistake": "Choosing (A): that is along $\\vec{b}\\times\\vec{a}$, the left-handed order; (C) is not a unit vector."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "If $\\vec{a}$, $\\vec{b}$, $\\vec{c}$ are three vectors such that $\\vec{a}+\\vec{b}+\\vec{c}=\\vec{0}$ and $|\\vec{a}|=2$, $|\\vec{b}|=3$, $|\\vec{c}|=5$, then the value of $\\vec{a}\\cdot\\vec{b}+\\vec{b}\\cdot\\vec{c}+\\vec{c}\\cdot\\vec{a}$ is:",
+          "options": [
+            "$0$",
+            "$1$",
+            "$-19$",
+            "$38$"
+          ],
+          "solution": {
+            "answer": "(C) $-19$",
+            "concept": "$|\\vec{a}+\\vec{b}+\\vec{c}|^2 = |\\vec{a}|^2+|\\vec{b}|^2+|\\vec{c}|^2+2(\\vec{a}\\cdot\\vec{b}+\\vec{b}\\cdot\\vec{c}+\\vec{c}\\cdot\\vec{a})$.",
+            "steps": [
+              {
+                "do": "Take the dot product of $\\vec{a}+\\vec{b}+\\vec{c}=\\vec{0}$ with itself.",
+                "math": "|\\vec{a}+\\vec{b}+\\vec{c}|^2 = 0"
+              },
+              {
+                "do": "Expand; let $S=\\vec{a}\\cdot\\vec{b}+\\vec{b}\\cdot\\vec{c}+\\vec{c}\\cdot\\vec{a}$.",
+                "math": "|\\vec{a}|^2+|\\vec{b}|^2+|\\vec{c}|^2+2S = 0"
+              },
+              {
+                "do": "Put the magnitudes and solve.",
+                "math": "4+9+25+2S = 0 \\;\\Rightarrow\\; S = -19",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (C)."
+              }
+            ],
+            "mistake": "Choosing (D): dropping the minus sign and the factor $2$ in $2S=-38$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "If $\\vec{a}=\\hat{i}+\\lambda\\hat{j}+2\\hat{k}$ and $\\vec{b}=2\\hat{i}-\\hat{j}+\\hat{k}$, then the value(s) of $\\lambda$ for which $\\vec{a}+\\vec{b}$ is perpendicular to $\\vec{a}-\\vec{b}$ is/are:",
+          "options": [
+            "$1$ only",
+            "$\\pm 1$",
+            "$4$",
+            "$0$"
+          ],
+          "solution": {
+            "answer": "(B) $\\pm 1$",
+            "concept": "$(\\vec{a}+\\vec{b})\\cdot(\\vec{a}-\\vec{b}) = |\\vec{a}|^2-|\\vec{b}|^2$.",
+            "steps": [
+              {
+                "do": "Perpendicular vectors have dot product zero.",
+                "math": "(\\vec{a}+\\vec{b})\\cdot(\\vec{a}-\\vec{b}) = 0"
+              },
+              {
+                "do": "Expand; the terms $\\vec{a}\\cdot\\vec{b}$ and $\\vec{b}\\cdot\\vec{a}$ cancel.",
+                "math": "|\\vec{a}|^2-|\\vec{b}|^2 = 0 \\;\\Rightarrow\\; |\\vec{a}|^2 = |\\vec{b}|^2"
+              },
+              {
+                "do": "Put the magnitudes.",
+                "math": "1+\\lambda^2+4 = 4+1+1 \\;\\Rightarrow\\; \\lambda^2 = 1 \\;\\Rightarrow\\; \\lambda = \\pm 1",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (B)."
+              }
+            ],
+            "mistake": "Choosing (C): solving $\\vec{a}\\cdot\\vec{b}=0$, which makes $\\vec{a}\\perp\\vec{b}$, not $(\\vec{a}+\\vec{b})\\perp(\\vec{a}-\\vec{b})$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "If $|\\vec{a}|=2$, $|\\vec{b}|=3$ and $|\\vec{a}+\\vec{b}|=\\sqrt{19}$, then $|\\vec{a}\\times\\vec{b}|$ is equal to:",
+          "options": [
+            "$3\\sqrt{3}$",
+            "$3$",
+            "$27$",
+            "$6$"
+          ],
+          "solution": {
+            "answer": "(A) $3\\sqrt{3}$",
+            "concept": "$|\\vec{a}\\times\\vec{b}|^2+(\\vec{a}\\cdot\\vec{b})^2 = |\\vec{a}|^2|\\vec{b}|^2$.",
+            "steps": [
+              {
+                "do": "Expand $|\\vec{a}+\\vec{b}|^2$ to get $\\vec{a}\\cdot\\vec{b}$.",
+                "math": "19 = 4+9+2\\,\\vec{a}\\cdot\\vec{b} \\;\\Rightarrow\\; \\vec{a}\\cdot\\vec{b} = 3"
+              },
+              {
+                "do": "Use the identity for the cross product.",
+                "math": "|\\vec{a}\\times\\vec{b}|^2 = |\\vec{a}|^2|\\vec{b}|^2-(\\vec{a}\\cdot\\vec{b})^2 = 36-9 = 27"
+              },
+              {
+                "do": "Take the square root.",
+                "math": "|\\vec{a}\\times\\vec{b}| = \\sqrt{27} = 3\\sqrt{3}",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (A)."
+              }
+            ],
+            "mistake": "Choosing (C): stopping at $|\\vec{a}\\times\\vec{b}|^2=27$; or (B): giving $\\vec{a}\\cdot\\vec{b}$ instead."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "If $A$, $B$, $C$, $D$ are the points with position vectors $\\hat{i}+\\hat{j}-\\hat{k}$, $2\\hat{i}-\\hat{j}+3\\hat{k}$, $2\\hat{i}-3\\hat{k}$, $3\\hat{i}-2\\hat{j}+\\hat{k}$ respectively, then the projection of $\\overrightarrow{AB}$ along $\\overrightarrow{CD}$ is:",
+          "options": [
+            "$\\dfrac{1}{\\sqrt{21}}$",
+            "$21$",
+            "$\\sqrt{21}$",
+            "$-\\sqrt{21}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\sqrt{21}$",
+            "concept": "Projection of $\\vec{a}$ along $\\vec{b}$ $=\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}$.",
+            "steps": [
+              {
+                "do": "Find both vectors as head minus tail.",
+                "math": "\\overrightarrow{AB} = \\hat{i}-2\\hat{j}+4\\hat{k},\\quad \\overrightarrow{CD} = \\hat{i}-2\\hat{j}+4\\hat{k}"
+              },
+              {
+                "do": "Find the dot product and $|\\overrightarrow{CD}|$.",
+                "math": "\\overrightarrow{AB}\\cdot\\overrightarrow{CD} = 1+4+16 = 21,\\quad |\\overrightarrow{CD}| = \\sqrt{21}"
+              },
+              {
+                "do": "Divide by $|\\overrightarrow{CD}|$.",
+                "math": "\\text{Projection} = \\dfrac{21}{\\sqrt{21}} = \\sqrt{21}",
+                "marks": 1
+              },
+              {
+                "do": "Hence the answer is option (C)."
+              }
+            ],
+            "mistake": "Choosing (B): forgetting to divide $\\overrightarrow{AB}\\cdot\\overrightarrow{CD}$ by $|\\overrightarrow{CD}|$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** The vectors $\\vec{a}=2\\hat{i}-3\\hat{j}+4\\hat{k}$ and $\\vec{b}=-4\\hat{i}+6\\hat{j}-8\\hat{k}$ are collinear. **Reason (R):** Two collinear vectors always have the same direction.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(C) A is true, but R is false",
+            "concept": "$\\vec{a}$, $\\vec{b}$ are collinear if $\\vec{b}=\\lambda\\vec{a}$; $\\lambda>0$ gives like vectors, $\\lambda<0$ unlike vectors.",
+            "steps": [
+              {
+                "do": "Compare $\\vec{b}$ with $\\vec{a}$.",
+                "math": "\\vec{b} = -2(2\\hat{i}-3\\hat{j}+4\\hat{k}) = -2\\vec{a}"
+              },
+              {
+                "do": "So $\\vec{b}=\\lambda\\vec{a}$ with $\\lambda=-2$; the vectors are collinear. **A is true.**"
+              },
+              {
+                "do": "Since $\\lambda<0$, $\\vec{b}$ points opposite to $\\vec{a}$. **R is false.**",
+                "why": "Collinear vectors may be like or unlike."
+              },
+              {
+                "do": "Hence the correct option is (C).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Thinking collinear means same direction; collinear (parallel) vectors can point in opposite directions."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Find the area of the parallelogram whose diagonals are $2\\hat{i}-\\hat{j}+\\hat{k}$ and $\\hat{i}+3\\hat{j}-\\hat{k}$.",
+          "solution": {
+            "answer": "Area $=\\dfrac{\\sqrt{62}}{2}$ sq units",
+            "concept": "Area of a parallelogram with diagonals $\\vec{d_1}$, $\\vec{d_2}$ $=\\dfrac{1}{2}|\\vec{d_1}\\times\\vec{d_2}|$.",
+            "steps": [
+              {
+                "do": "Write the formula for diagonals.",
+                "math": "\\text{Area} = \\dfrac{1}{2}|\\vec{d_1}\\times\\vec{d_2}|",
+                "why": "Adjacent sides are $\\tfrac{1}{2}(\\vec{d_1}+\\vec{d_2})$ and $\\tfrac{1}{2}(\\vec{d_1}-\\vec{d_2})$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the cross product.",
+                "math": "\\vec{d_1}\\times\\vec{d_2} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & -1 & 1 \\\\ 1 & 3 & -1 \\end{vmatrix} = -2\\hat{i}+3\\hat{j}+7\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find its magnitude.",
+                "math": "|\\vec{d_1}\\times\\vec{d_2}| = \\sqrt{4+9+49} = \\sqrt{62}",
+                "marks": 0.5
+              },
+              {
+                "do": "Halve it. Hence the required area is",
+                "math": "\\text{Area} = \\dfrac{\\sqrt{62}}{2}\\ \\text{sq units}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not halving: $|\\vec{d_1}\\times\\vec{d_2}|$ is the formula for adjacent sides, not diagonals."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 16,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "A vector $\\vec{r}$ has magnitude $14$ and direction ratios $2, 3, -6$. Find the direction cosines and components of $\\vec{r}$, given that $\\vec{r}$ makes an acute angle with the $x$-axis.",
+          "solution": {
+            "answer": "d.c. $\\dfrac{2}{7}, \\dfrac{3}{7}, -\\dfrac{6}{7}$; $\\vec{r}=4\\hat{i}+6\\hat{j}-12\\hat{k}$, components $4, 6, -12$",
+            "concept": "$l=\\dfrac{a}{\\sqrt{a^2+b^2+c^2}}$, etc.; $\\vec{r}=|\\vec{r}|(l\\hat{i}+m\\hat{j}+n\\hat{k})$.",
+            "steps": [
+              {
+                "do": "Find the root of the sum of squares of the direction ratios.",
+                "math": "\\sqrt{2^2+3^2+(-6)^2} = \\sqrt{49} = 7",
+                "marks": 0.5
+              },
+              {
+                "do": "Take the $+$ sign, since the angle with the $x$-axis is acute.",
+                "math": "l = \\dfrac{2}{7},\\quad m = \\dfrac{3}{7},\\quad n = -\\dfrac{6}{7}",
+                "why": "Acute angle means $l=\\cos\\alpha>0$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply the unit vector by the magnitude $14$.",
+                "math": "\\vec{r} = 14\\left(\\dfrac{2}{7}\\hat{i}+\\dfrac{3}{7}\\hat{j}-\\dfrac{6}{7}\\hat{k}\\right) = 4\\hat{i}+6\\hat{j}-12\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "State the components.",
+                "math": "\\text{scalar components: } 4,\\ 6,\\ -12;\\quad \\text{vector components: } 4\\hat{i},\\ 6\\hat{j},\\ -12\\hat{k}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $-\\tfrac{2}{7}, -\\tfrac{3}{7}, \\tfrac{6}{7}$: these make an obtuse angle with the $x$-axis."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Find a vector of magnitude $6$, which is perpendicular to both the vectors $2\\hat{i}-\\hat{j}+2\\hat{k}$ and $4\\hat{i}-\\hat{j}+3\\hat{k}$.",
+          "solution": {
+            "answer": "$\\pm(-2\\hat{i}+4\\hat{j}+4\\hat{k})$",
+            "concept": "$\\vec{a}\\times\\vec{b}$ is perpendicular to both $\\vec{a}$ and $\\vec{b}$.",
+            "steps": [
+              {
+                "do": "Let $\\vec{a}=2\\hat{i}-\\hat{j}+2\\hat{k}$, $\\vec{b}=4\\hat{i}-\\hat{j}+3\\hat{k}$. Find $\\vec{a}\\times\\vec{b}$.",
+                "math": "\\vec{a}\\times\\vec{b} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & -1 & 2 \\\\ 4 & -1 & 3 \\end{vmatrix} = -\\hat{i}+2\\hat{j}+2\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find its magnitude.",
+                "math": "|\\vec{a}\\times\\vec{b}| = \\sqrt{1+4+4} = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Unit vectors perpendicular to both.",
+                "math": "\\hat{n} = \\pm\\dfrac{1}{3}(-\\hat{i}+2\\hat{j}+2\\hat{k})",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $6$. Hence the required vectors are",
+                "math": "6\\hat{n} = \\pm 2(-\\hat{i}+2\\hat{j}+2\\hat{k}) = \\pm(-2\\hat{i}+4\\hat{j}+4\\hat{k})",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Giving only one sign; $-(\\vec{a}\\times\\vec{b})$ is also perpendicular to both vectors."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "The vectors $\\vec{a}=3\\hat{i}-2\\hat{j}+2\\hat{k}$ and $\\vec{b}=-\\hat{i}-2\\hat{k}$ are the adjacent sides of a parallelogram. Find the acute angle between its diagonals.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi}{4}$",
+            "concept": "Diagonals are $\\vec{a}+\\vec{b}$ and $\\vec{a}-\\vec{b}$; $\\cos\\theta=\\dfrac{\\vec{d_1}\\cdot\\vec{d_2}}{|\\vec{d_1}||\\vec{d_2}|}$.",
+            "steps": [
+              {
+                "do": "The diagonals are the sum and the difference of the sides.",
+                "math": "\\vec{d_1} = \\vec{a}+\\vec{b} = 2\\hat{i}-2\\hat{j}+0\\hat{k},\\quad \\vec{d_2} = \\vec{a}-\\vec{b} = 4\\hat{i}-2\\hat{j}+4\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the dot product and the magnitudes.",
+                "math": "\\vec{d_1}\\cdot\\vec{d_2} = 8+4+0 = 12,\\quad |\\vec{d_1}| = 2\\sqrt{2},\\quad |\\vec{d_2}| = 6",
+                "marks": 0.5
+              },
+              {
+                "do": "Use the angle formula.",
+                "math": "\\cos\\theta = \\dfrac{12}{2\\sqrt{2}\\times 6} = \\dfrac{1}{\\sqrt{2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the acute angle between the diagonals is",
+                "math": "\\theta = \\dfrac{\\pi}{4}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Finding the angle between the sides $\\vec{a}$ and $\\vec{b}$ instead of between the diagonals."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Using vectors, find the area of the triangle with vertices $A(1,0,2)$, $B(2,4,1)$ and $C(3,2,3)$. Hence find the length of the perpendicular from $A$ to $BC$.",
+          "solution": {
+            "answer": "Area $=\\dfrac{9}{2}$ sq units; perpendicular from $A$ to $BC$ $=3$ units",
+            "concept": "Area of $\\triangle ABC=\\dfrac{1}{2}|\\overrightarrow{AB}\\times\\overrightarrow{AC}|=\\dfrac{1}{2}\\times BC\\times h$.",
+            "steps": [
+              {
+                "do": "Find two sides from $A$.",
+                "math": "\\overrightarrow{AB} = \\hat{i}+4\\hat{j}-\\hat{k},\\quad \\overrightarrow{AC} = 2\\hat{i}+2\\hat{j}+\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the cross product.",
+                "math": "\\overrightarrow{AB}\\times\\overrightarrow{AC} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & 4 & -1 \\\\ 2 & 2 & 1 \\end{vmatrix} = 6\\hat{i}-3\\hat{j}-6\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find its magnitude.",
+                "math": "|\\overrightarrow{AB}\\times\\overrightarrow{AC}| = \\sqrt{36+9+36} = 9",
+                "marks": 0.5
+              },
+              {
+                "do": "The area is half of this.",
+                "math": "\\text{Area} = \\dfrac{9}{2}\\ \\text{sq units}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the base $BC$.",
+                "math": "\\overrightarrow{BC} = \\hat{i}-2\\hat{j}+2\\hat{k},\\quad |\\overrightarrow{BC}| = \\sqrt{1+4+4} = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Use area $=\\tfrac{1}{2}\\times\\text{base}\\times\\text{height}$.",
+                "math": "\\dfrac{9}{2} = \\dfrac{1}{2}\\times 3\\times h \\;\\Rightarrow\\; h = 3\\ \\text{units}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $|\\overrightarrow{AB}\\times\\overrightarrow{AC}|=9$ as the area, which gives $h=6$; the triangle is half of it."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find $\\lambda$ if the projection of $\\vec{a}=\\lambda\\hat{i}+\\hat{j}+4\\hat{k}$ on $\\vec{b}=2\\hat{i}+6\\hat{j}+3\\hat{k}$ is $4$ units. Hence find the projection vector of $\\vec{a}$ on $\\vec{b}$.",
+          "solution": {
+            "answer": "$\\lambda=5$; projection vector $=\\dfrac{8}{7}\\hat{i}+\\dfrac{24}{7}\\hat{j}+\\dfrac{12}{7}\\hat{k}$",
+            "concept": "Projection of $\\vec{a}$ on $\\vec{b}$ $=\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}$; projection vector $=\\left(\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}\\right)\\hat{b}$.",
+            "steps": [
+              {
+                "do": "Write the formula.",
+                "math": "\\text{Projection of } \\vec{a} \\text{ on } \\vec{b} = \\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\vec{a}\\cdot\\vec{b}$ and $|\\vec{b}|$.",
+                "math": "\\vec{a}\\cdot\\vec{b} = 2\\lambda+6+12 = 2\\lambda+18,\\quad |\\vec{b}| = \\sqrt{4+36+9} = 7",
+                "marks": 0.5
+              },
+              {
+                "do": "Set the projection equal to $4$ and solve.",
+                "math": "\\dfrac{2\\lambda+18}{7} = 4 \\;\\Rightarrow\\; 2\\lambda = 10 \\;\\Rightarrow\\; \\lambda = 5",
+                "marks": 1
+              },
+              {
+                "do": "Projection vector = projection $\\times$ unit vector along $\\vec{b}$.",
+                "math": "4\\,\\hat{b} = 4\\cdot\\dfrac{2\\hat{i}+6\\hat{j}+3\\hat{k}}{7}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\text{Projection vector} = \\dfrac{8}{7}\\hat{i}+\\dfrac{24}{7}\\hat{j}+\\dfrac{12}{7}\\hat{k}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the projection vector as $4\\vec{b}$; multiply $4$ by the unit vector $\\hat{b}$, not by $\\vec{b}$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "If $|\\vec{a}|=2$, $|\\vec{b}|=1$ and the angle between $\\vec{a}$ and $\\vec{b}$ is $\\dfrac{\\pi}{3}$, find the value of $\\lambda$ for which $\\vec{a}+\\lambda\\vec{b}$ is perpendicular to $\\vec{a}-3\\vec{b}$.",
+          "solution": {
+            "answer": "$\\lambda=\\dfrac{1}{2}$",
+            "concept": "$\\vec{u}\\perp\\vec{v} \\iff \\vec{u}\\cdot\\vec{v}=0$; $\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta$.",
+            "steps": [
+              {
+                "do": "Find $\\vec{a}\\cdot\\vec{b}$.",
+                "math": "\\vec{a}\\cdot\\vec{b} = 2\\times 1\\times\\cos\\dfrac{\\pi}{3} = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Perpendicular means the dot product is zero.",
+                "math": "(\\vec{a}+\\lambda\\vec{b})\\cdot(\\vec{a}-3\\vec{b}) = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand the dot product.",
+                "math": "|\\vec{a}|^2-3\\,\\vec{a}\\cdot\\vec{b}+\\lambda\\,\\vec{b}\\cdot\\vec{a}-3\\lambda|\\vec{b}|^2 = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute the values and solve.",
+                "math": "4-3+\\lambda-3\\lambda = 0 \\;\\Rightarrow\\; 1-2\\lambda = 0 \\;\\Rightarrow\\; \\lambda = \\dfrac{1}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $\\vec{a}\\cdot\\vec{b}=0$; the vectors are at $\\tfrac{\\pi}{3}$, so $\\vec{a}\\cdot\\vec{b}=1$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "If $\\vec{a}$ and $\\vec{b}$ are the position vectors of $A$ and $B$ respectively, find the position vector of a point $C$ in $BA$ produced such that $BC=1.5\\,BA$.",
+          "solution": {
+            "answer": "$\\overrightarrow{OC}=\\dfrac{3\\vec{a}-\\vec{b}}{2}$",
+            "concept": "$\\overrightarrow{PQ}=$ (p.v. of $Q$) $-$ (p.v. of $P$).",
+            "steps": [
+              {
+                "do": "$C$ lies on $BA$ produced, so $\\overrightarrow{BC}$ has the direction of $\\overrightarrow{BA}$.",
+                "math": "\\overrightarrow{BC} = 1.5\\,\\overrightarrow{BA} = \\dfrac{3}{2}\\overrightarrow{BA}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write both sides with position vectors; let $\\vec{c}$ be the p.v. of $C$.",
+                "math": "\\vec{c}-\\vec{b} = \\dfrac{3}{2}(\\vec{a}-\\vec{b})",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $\\vec{c}$.",
+                "math": "\\vec{c} = \\dfrac{3}{2}\\vec{a}-\\dfrac{3}{2}\\vec{b}+\\vec{b} = \\dfrac{3}{2}\\vec{a}-\\dfrac{1}{2}\\vec{b}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the position vector of $C$ is",
+                "math": "\\overrightarrow{OC} = \\dfrac{3\\vec{a}-\\vec{b}}{2}",
+                "why": "Same as dividing $BA$ externally in the ratio $3:1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $\\overrightarrow{AB}$ instead of $\\overrightarrow{BA}$; that puts $C$ beyond $B$, on the wrong side."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 23,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "If $\\vec{a}+\\vec{b}+\\vec{c}=\\vec{0}$, show that $\\vec{a}\\times\\vec{b}=\\vec{b}\\times\\vec{c}=\\vec{c}\\times\\vec{a}$. Interpret the result geometrically.",
+          "solution": {
+            "answer": "$\\vec{a}\\times\\vec{b}=\\vec{b}\\times\\vec{c}=\\vec{c}\\times\\vec{a}$; each has magnitude twice the area of the triangle formed by $\\vec{a},\\vec{b},\\vec{c}$.",
+            "concept": "$\\vec{a}\\times\\vec{a}=\\vec{0}$ and $\\vec{a}\\times\\vec{b}=-\\vec{b}\\times\\vec{a}$.",
+            "steps": [
+              {
+                "do": "Take the cross product of $\\vec{a}$ with both sides.",
+                "math": "\\vec{a}\\times(\\vec{a}+\\vec{b}+\\vec{c}) = \\vec{a}\\times\\vec{0} = \\vec{0}",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand and use $\\vec{a}\\times\\vec{a}=\\vec{0}$.",
+                "math": "\\vec{a}\\times\\vec{b}+\\vec{a}\\times\\vec{c} = \\vec{0} \\;\\Rightarrow\\; \\vec{a}\\times\\vec{b} = -\\vec{a}\\times\\vec{c} = \\vec{c}\\times\\vec{a}",
+                "marks": 0.5
+              },
+              {
+                "do": "Similarly, take the cross product of $\\vec{b}$ with both sides.",
+                "math": "\\vec{b}\\times\\vec{a}+\\vec{b}\\times\\vec{c} = \\vec{0} \\;\\Rightarrow\\; \\vec{b}\\times\\vec{c} = -\\vec{b}\\times\\vec{a} = \\vec{a}\\times\\vec{b}",
+                "marks": 0.5
+              },
+              {
+                "do": "Combine the two results.",
+                "math": "\\vec{a}\\times\\vec{b} = \\vec{b}\\times\\vec{c} = \\vec{c}\\times\\vec{a}",
+                "marks": 0.5
+              },
+              {
+                "do": "Geometrically, $\\vec{a}+\\vec{b}+\\vec{c}=\\vec{0}$ means $\\vec{a},\\vec{b},\\vec{c}$ are the sides of a triangle taken in order.",
+                "marks": 0.5
+              },
+              {
+                "do": "Each cross product has magnitude twice the area of this same triangle.",
+                "math": "|\\vec{a}\\times\\vec{b}| = |\\vec{b}\\times\\vec{c}| = |\\vec{c}\\times\\vec{a}| = 2\\times(\\text{area of the triangle})",
+                "why": "All three are also normal to the plane of the triangle.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\vec{a}\\times\\vec{c}=\\vec{c}\\times\\vec{a}$; changing the order changes the sign."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Exemplar",
+          "question": "If $\\vec{a}$, $\\vec{b}$, $\\vec{c}$ determine the vertices of a triangle, show that $\\dfrac{1}{2}\\left[\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}+\\vec{a}\\times\\vec{b}\\right]$ gives the vector area of the triangle. Hence deduce the condition that the three points $\\vec{a}$, $\\vec{b}$, $\\vec{c}$ are collinear. Also find the unit vector normal to the plane of the triangle.",
+          "solution": {
+            "answer": "Vector area $=\\dfrac{1}{2}[\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}+\\vec{a}\\times\\vec{b}]$ (shown); collinear $\\iff \\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}=\\vec{0}$; $\\hat{n}=\\dfrac{\\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}}{|\\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}|}$",
+            "concept": "Vector area of $\\triangle ABC=\\dfrac{1}{2}\\overrightarrow{AB}\\times\\overrightarrow{AC}$: its magnitude is the area, its direction is normal to the plane.",
+            "steps": [
+              {
+                "do": "Let $A$, $B$, $C$ have position vectors $\\vec{a}$, $\\vec{b}$, $\\vec{c}$. Write two sides.",
+                "math": "\\overrightarrow{AB} = \\vec{b}-\\vec{a},\\quad \\overrightarrow{AC} = \\vec{c}-\\vec{a}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the vector area of $\\triangle ABC$.",
+                "math": "\\vec{\\Delta} = \\dfrac{1}{2}\\,\\overrightarrow{AB}\\times\\overrightarrow{AC} = \\dfrac{1}{2}(\\vec{b}-\\vec{a})\\times(\\vec{c}-\\vec{a})",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand the cross product term by term.",
+                "math": "(\\vec{b}-\\vec{a})\\times(\\vec{c}-\\vec{a}) = \\vec{b}\\times\\vec{c}-\\vec{b}\\times\\vec{a}-\\vec{a}\\times\\vec{c}+\\vec{a}\\times\\vec{a}",
+                "marks": 1
+              },
+              {
+                "do": "Use $\\vec{a}\\times\\vec{a}=\\vec{0}$, $-\\vec{b}\\times\\vec{a}=\\vec{a}\\times\\vec{b}$ and $-\\vec{a}\\times\\vec{c}=\\vec{c}\\times\\vec{a}$.",
+                "math": "(\\vec{b}-\\vec{a})\\times(\\vec{c}-\\vec{a}) = \\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}+\\vec{a}\\times\\vec{b}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the vector area of the triangle is",
+                "math": "\\vec{\\Delta} = \\dfrac{1}{2}\\left[\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}+\\vec{a}\\times\\vec{b}\\right]",
+                "marks": 0.5
+              },
+              {
+                "do": "Three points are collinear exactly when the triangle has zero area, i.e. $\\vec{\\Delta}=\\vec{0}$.",
+                "math": "\\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a} = \\vec{0}",
+                "marks": 1
+              },
+              {
+                "do": "$\\vec{\\Delta}$ is perpendicular to the plane of the triangle; divide it by its magnitude.",
+                "math": "\\hat{n} = \\dfrac{\\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}}{|\\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a}|}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Losing a sign when swapping the order: $\\vec{b}\\times\\vec{a}=-\\vec{a}\\times\\vec{b}$, not $+\\vec{a}\\times\\vec{b}$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find a vector of magnitude $9$ units which is perpendicular to both $\\vec{a}=2\\hat{i}+\\hat{j}+2\\hat{k}$ and $\\vec{b}=3\\hat{i}+2\\hat{j}+2\\hat{k}$, and which makes an obtuse angle with the $y$-axis.",
+          "solution": {
+            "answer": "$6\\hat{i}-6\\hat{j}-3\\hat{k}$",
+            "concept": "Vectors of magnitude $m$ perpendicular to $\\vec{a}$ and $\\vec{b}$ are $\\pm m\\dfrac{\\vec{a}\\times\\vec{b}}{|\\vec{a}\\times\\vec{b}|}$.",
+            "steps": [
+              {
+                "do": "$\\vec{a}\\times\\vec{b}$ is perpendicular to both; find it.",
+                "math": "\\vec{a}\\times\\vec{b} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 1 & 2 \\\\ 3 & 2 & 2 \\end{vmatrix} = -2\\hat{i}+2\\hat{j}+\\hat{k}",
+                "marks": 1
+              },
+              {
+                "do": "Find its magnitude.",
+                "math": "|\\vec{a}\\times\\vec{b}| = \\sqrt{4+4+1} = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Vectors of magnitude $9$ perpendicular to both.",
+                "math": "\\pm\\dfrac{9}{3}(-2\\hat{i}+2\\hat{j}+\\hat{k}) = \\pm(-6\\hat{i}+6\\hat{j}+3\\hat{k})",
+                "marks": 0.5
+              },
+              {
+                "do": "An obtuse angle with the $y$-axis needs a negative $\\hat{j}$-component.",
+                "why": "$\\cos\\beta=\\dfrac{\\hat{j}\\text{-component}}{|\\vec{r}|}<0$ for an obtuse $\\beta$.",
+                "marks": 0.5
+              },
+              {
+                "do": "So take the minus sign.",
+                "math": "\\vec{r} = 6\\hat{i}-6\\hat{j}-3\\hat{k}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Giving both signs; the obtuse-angle condition keeps only one of them."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "$ABCD$ is a plane quadrilateral with vertices $A(1,1,1)$, $B(3,1,3)$, $C(3,4,6)$ and $D(1,2,2)$. Using vectors, find its area by dividing it along the diagonal $AC$.",
+          "solution": {
+            "answer": "Area $=4\\sqrt{3}$ sq units",
+            "concept": "$\\text{ar}(ABCD)=\\text{ar}(\\triangle ABC)+\\text{ar}(\\triangle ACD)$, each $=\\dfrac{1}{2}|\\text{cross product of two sides}|$.",
+            "steps": [
+              {
+                "do": "Find the vectors from $A$.",
+                "math": "\\overrightarrow{AB} = 2\\hat{i}+0\\hat{j}+2\\hat{k},\\quad \\overrightarrow{AC} = 2\\hat{i}+3\\hat{j}+5\\hat{k},\\quad \\overrightarrow{AD} = 0\\hat{i}+\\hat{j}+\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "For $\\triangle ABC$, find $\\overrightarrow{AB}\\times\\overrightarrow{AC}$.",
+                "math": "\\overrightarrow{AB}\\times\\overrightarrow{AC} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 0 & 2 \\\\ 2 & 3 & 5 \\end{vmatrix} = -6\\hat{i}-6\\hat{j}+6\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Halve its magnitude.",
+                "math": "\\text{ar}(\\triangle ABC) = \\dfrac{1}{2}\\sqrt{36+36+36} = \\dfrac{6\\sqrt{3}}{2} = 3\\sqrt{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "For $\\triangle ACD$, find $\\overrightarrow{AC}\\times\\overrightarrow{AD}$.",
+                "math": "\\overrightarrow{AC}\\times\\overrightarrow{AD} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 3 & 5 \\\\ 0 & 1 & 1 \\end{vmatrix} = -2\\hat{i}-2\\hat{j}+2\\hat{k}",
+                "marks": 0.5
+              },
+              {
+                "do": "Halve its magnitude.",
+                "math": "\\text{ar}(\\triangle ACD) = \\dfrac{1}{2}\\sqrt{4+4+4} = \\dfrac{2\\sqrt{3}}{2} = \\sqrt{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the two areas.",
+                "math": "\\text{ar}(ABCD) = 3\\sqrt{3}+\\sqrt{3} = 4\\sqrt{3}\\ \\text{sq units}",
+                "why": "Check: $\\tfrac{1}{2}|\\overrightarrow{AC}\\times\\overrightarrow{BD}|=4\\sqrt{3}$ as well.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $|\\overrightarrow{AB}\\times\\overrightarrow{AD}|$ as for a parallelogram; here $\\overrightarrow{BC}=3\\overrightarrow{AD}$, so $ABCD$ is a trapezium."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "In a triangle $ABC$, let $a$, $b$, $c$ be the lengths of the sides opposite to the vertices $A$, $B$, $C$ respectively.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Using vectors, prove that $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$.",
+              "marks": 3
+            },
+            {
+              "label": "(ii)",
+              "text": "Hence find $\\cos A$ for the triangle with vertices $A(1,2,1)$, $B(3,4,2)$ and $C(5,2,-2)$, and check your answer using $\\overrightarrow{AB}\\cdot\\overrightarrow{AC}$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) proved; (ii) $\\cos A=\\dfrac{1}{3}$",
+            "concept": "$|\\vec{u}-\\vec{v}|^2 = |\\vec{u}|^2+|\\vec{v}|^2-2\\,\\vec{u}\\cdot\\vec{v}$ and $\\vec{u}\\cdot\\vec{v}=|\\vec{u}||\\vec{v}|\\cos\\theta$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Let $\\vec{b}=\\overrightarrow{AC}$ and $\\vec{c}=\\overrightarrow{AB}$; the angle between them is $A$.",
+                    "math": "|\\vec{b}| = b,\\quad |\\vec{c}| = c,\\quad \\vec{b}\\cdot\\vec{c} = bc\\cos A",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "By the triangle law, $\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AC}$.",
+                    "math": "\\overrightarrow{BC} = \\vec{b}-\\vec{c}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "The length of $BC$ is $a$; square it.",
+                    "math": "a^2 = |\\vec{b}-\\vec{c}|^2 = (\\vec{b}-\\vec{c})\\cdot(\\vec{b}-\\vec{c})",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Expand the dot product.",
+                    "math": "a^2 = |\\vec{b}|^2+|\\vec{c}|^2-2\\,\\vec{b}\\cdot\\vec{c} = b^2+c^2-2bc\\cos A",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Rearrange for $\\cos A$.",
+                    "math": "\\cos A = \\dfrac{b^2+c^2-a^2}{2bc}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$ (proved)"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Find the side vectors.",
+                    "math": "\\overrightarrow{AB} = 2\\hat{i}+2\\hat{j}+\\hat{k},\\quad \\overrightarrow{AC} = 4\\hat{i}+0\\hat{j}-3\\hat{k},\\quad \\overrightarrow{BC} = 2\\hat{i}-2\\hat{j}-4\\hat{k}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Find the side lengths.",
+                    "math": "c = AB = 3,\\quad b = AC = 5,\\quad a = BC = \\sqrt{24} = 2\\sqrt{6}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Use the result of part (i).",
+                    "math": "\\cos A = \\dfrac{25+9-24}{2\\times 5\\times 3} = \\dfrac{10}{30} = \\dfrac{1}{3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Check with the dot product of the two sides from $A$.",
+                    "math": "\\cos A = \\dfrac{\\overrightarrow{AB}\\cdot\\overrightarrow{AC}}{|\\overrightarrow{AB}||\\overrightarrow{AC}|} = \\dfrac{8+0-3}{3\\times 5} = \\dfrac{1}{3}\\ \\checkmark",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\cos A=\\dfrac{1}{3}$"
+              }
+            ],
+            "mistake": "For angle $A$ both vectors must start at $A$; using $\\overrightarrow{BA}$ with $\\overrightarrow{AC}$ flips the sign of $\\cos A$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2023-24",
+          "question": "**Case Study:** Teams $A$, $B$, $C$ went for playing a tug of war game. Teams $A$, $B$, $C$ have attached a rope to a metal ring and each is trying to pull the ring into its own area. Team $A$ pulls with force $\\vec{F_1}=6\\hat{i}+0\\hat{j}$ kN, Team $B$ pulls with force $\\vec{F_2}=-4\\hat{i}+4\\hat{j}$ kN and Team $C$ pulls with force $\\vec{F_3}=-3\\hat{i}-3\\hat{j}$ kN.",
+          "figure": "figs/pb-q20.svg",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "What is the magnitude of the force of Team $A$?",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Which team will win the game?",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "In what direction is the ring getting pulled?",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $6$ kN; (ii) Team $B$; (iii) along $-\\hat{i}+\\hat{j}$, at $\\dfrac{3\\pi}{4}$ with the positive $x$-axis",
+            "concept": "The ring moves along the resultant $\\vec{F_1}+\\vec{F_2}+\\vec{F_3}$; $|x\\hat{i}+y\\hat{j}|=\\sqrt{x^2+y^2}$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Find the magnitude of $\\vec{F_1}$.",
+                    "math": "|\\vec{F_1}| = \\sqrt{6^2+0^2} = 6\\ \\text{kN}",
+                    "marks": 1
+                  }
+                ],
+                "answer": "$6$ kN"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Add the pulls of teams $A$ and $C$.",
+                    "math": "\\vec{F_1}+\\vec{F_3} = 3\\hat{i}-3\\hat{j} = 3(\\hat{i}-\\hat{j})"
+                  },
+                  {
+                    "do": "Write $\\vec{F_2}$ in the same form; it is opposite to $\\vec{F_1}+\\vec{F_3}$.",
+                    "math": "\\vec{F_2} = -4(\\hat{i}-\\hat{j})",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Compare the magnitudes.",
+                    "math": "|\\vec{F_2}| = 4\\sqrt{2} > |\\vec{F_1}+\\vec{F_3}| = 3\\sqrt{2}"
+                  },
+                  {
+                    "do": "So the ring moves towards $B$. Hence Team $B$ wins.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Team $B$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Find the resultant force.",
+                    "math": "\\vec{F} = \\vec{F_1}+\\vec{F_2}+\\vec{F_3} = (6-4-3)\\hat{i}+(0+4-3)\\hat{j} = -\\hat{i}+\\hat{j}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Let $\\theta$ be its angle with the positive $x$-axis.",
+                    "math": "\\cos\\theta = \\dfrac{-1}{\\sqrt{2}},\\quad \\sin\\theta = \\dfrac{1}{\\sqrt{2}}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "So $\\theta$ is in the second quadrant; the ring is pulled along $-\\hat{i}+\\hat{j}$.",
+                    "math": "\\theta = \\pi-\\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Along $\\dfrac{-\\hat{i}+\\hat{j}}{\\sqrt{2}}$, i.e. at $\\dfrac{3\\pi}{4}$ with the positive $x$-axis"
+              }
+            ],
+            "mistake": "Picking Team $A$ for its largest single pull; $A$ and $C$ partly cancel, so compare $\\vec{F_2}$ with $\\vec{F_1}+\\vec{F_3}$."
+          }
+        }
+      ]
+    }
+  ]
+}

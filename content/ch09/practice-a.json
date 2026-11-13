@@ -212,7 +212,7 @@
                 "do": "Hence option (B)."
               }
             ],
-            "mistake": "Choosing (A) because both statements mention a second order equation; R says nothing about why $y$ satisfies it."
+            "mistake": "Choosing (A) because $y$ has two constants and the order is $2$; that fits R but does not show $y$ satisfies the equation."
           }
         },
         {

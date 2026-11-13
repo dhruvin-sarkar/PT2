@@ -189,7 +189,7 @@
           "marks": 1,
           "type": "assertion-reason",
           "source": "Board-pattern",
-          "question": "**Assertion (A):** If $A$ is a square matrix of order 3 and $|A| = 3$, then $|\\text{adj}\\,A| = 27$. **Reason (R):** For a square matrix $A$ of order $n$, $|\\text{adj}\\,A| = |A|^{n-1}$.",
+          "question": "**Assertion (A):** If $A$ is a square matrix of order 3 and $|A| = 3$, then $(\\text{adj}\\,A)\\,A = 3I$. **Reason (R):** For a square matrix $A$ of order $n$, $|\\text{adj}\\,A| = |A|^{n-1}$.",
           "options": [
             "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
             "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
@@ -197,25 +197,28 @@
             "Assertion (A) is false, but Reason (R) is true."
           ],
           "solution": {
-            "answer": "(D) Assertion (A) is false, but Reason (R) is true.",
-            "concept": "$|\\text{adj}\\,A| = |A|^{n-1}$ for a square matrix of order $n$.",
+            "answer": "(B) Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "concept": "$A(\\text{adj}\\,A) = (\\text{adj}\\,A)A = |A|\\,I$ for every square matrix $A$.",
             "steps": [
               {
-                "do": "Check A using the result with $n = 3$.",
-                "math": "|\\text{adj}\\,A| = |A|^{3-1} = 3^2 = 9 \\ne 27"
+                "do": "Check A using $(\\text{adj}\\,A)A = |A|\\,I$ with $|A| = 3$.",
+                "math": "(\\text{adj}\\,A)\\,A = 3I"
               },
               {
-                "do": "So **A is false.**"
+                "do": "So **A is true.**"
               },
               {
                 "do": "R is the standard result for order $n$. **R is true.**"
               },
               {
-                "do": "A false, R true. Hence option (D).",
+                "do": "R gives the value of $|\\text{adj}\\,A|$, not the product $(\\text{adj}\\,A)A$. So R does not explain A."
+              },
+              {
+                "do": "Both true, R not the explanation. Hence option (B).",
                 "marks": 1
               }
             ],
-            "mistake": "Using the power $n$ instead of $n - 1$, which gives $3^3 = 27$."
+            "mistake": "Choosing (A) because both involve $\\text{adj}\\,A$; A follows from $(\\text{adj}\\,A)A = |A|\\,I$, not from R."
           }
         },
         {
@@ -231,7 +234,7 @@
               {
                 "do": "Write the area using determinants.",
                 "math": "\\Delta = \\dfrac{1}{2}\\begin{vmatrix} 2 & -6 & 1 \\\\ 5 & 4 & 1 \\\\ k & 4 & 1 \\end{vmatrix} = \\pm 35",
-                "why": "Area is positive, so take both signs.",
+                "why": "The determinant may be positive or negative.",
                 "marks": 0.5
               },
               {
@@ -267,25 +270,25 @@
           "marks": 2,
           "type": "short",
           "source": "PYQ-style",
-          "question": "Find the adjoint and the inverse of the matrix $A = \\begin{bmatrix} 2 & -2 \\\\ 4 & 3 \\end{bmatrix}$.",
+          "question": "Find the adjoint and the inverse of the matrix $A = \\begin{bmatrix} -1 & 5 \\\\ -3 & 2 \\end{bmatrix}$.",
           "solution": {
-            "answer": "$\\text{adj}\\,A = \\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}$, $A^{-1} = \\dfrac{1}{14}\\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}$",
+            "answer": "$\\text{adj}\\,A = \\begin{bmatrix} 2 & -5 \\\\ 3 & -1 \\end{bmatrix}$, $A^{-1} = \\dfrac{1}{13}\\begin{bmatrix} 2 & -5 \\\\ 3 & -1 \\end{bmatrix}$",
             "concept": "$A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$, when $|A| \\ne 0$.",
             "steps": [
               {
                 "do": "Find $|A|$.",
-                "math": "|A| = 2(3) - (-2)(4) = 6 + 8 = 14 \\ne 0",
+                "math": "|A| = (-1)(2) - (5)(-3) = -2 + 15 = 13 \\ne 0",
                 "why": "So $A^{-1}$ exists.",
                 "marks": 0.5
               },
               {
                 "do": "For a $2 \\times 2$ matrix: swap the diagonal, change signs of the other two.",
-                "math": "\\text{adj}\\,A = \\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 2 & -5 \\\\ 3 & -1 \\end{bmatrix}",
                 "marks": 1
               },
               {
                 "do": "Divide by $|A|$.",
-                "math": "A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A = \\dfrac{1}{14}\\begin{bmatrix} 3 & 2 \\\\ -4 & 2 \\end{bmatrix}",
+                "math": "A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A = \\dfrac{1}{13}\\begin{bmatrix} 2 & -5 \\\\ 3 & -1 \\end{bmatrix}",
                 "marks": 0.5
               }
             ],
@@ -317,7 +320,8 @@
                 "marks": 0.5
               },
               {
-                "do": "So $A^2 - 4A + I = O$. Also $|A| = 3 - 2 = 1 \\ne 0$, so $A^{-1}$ exists."
+                "do": "So $A^2 - 4A + I = O$. Check that $A^{-1}$ exists.",
+                "math": "|A| = 3 - 2 = 1 \\ne 0"
               },
               {
                 "do": "Multiply both sides by $A^{-1}$.",
@@ -851,7 +855,7 @@
             },
             {
               "label": "(ii)",
-              "text": "Using determinants, find the area of the triangular plot with corners $P$, $R$ and $S$.",
+              "text": "Using determinants, find the area, in square units, of the triangular plot with corners $P$, $R$ and $S$.",
               "marks": 1
             },
             {

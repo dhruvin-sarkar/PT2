@@ -1,0 +1,844 @@
+{
+  "chapter": 5,
+  "chapterTitle": "Continuity and Differentiability",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2023-24",
+          "question": "If $f(x) = \\begin{cases} \\dfrac{kx}{|x|}, & \\text{if } x < 0 \\\\ 3, & \\text{if } x \\ge 0 \\end{cases}$ is continuous at $x = 0$, then the value of $k$ is:",
+          "options": [
+            "$-3$",
+            "$0$",
+            "$3$",
+            "any real number"
+          ],
+          "solution": {
+            "answer": "(A) $-3$",
+            "concept": "Continuous at $0$ means LHL $=$ RHL $= f(0)$.",
+            "steps": [
+              {
+                "do": "For $x < 0$, $|x| = -x$.",
+                "math": "\\dfrac{kx}{|x|} = \\dfrac{kx}{-x} = -k"
+              },
+              {
+                "do": "Find the LHL, the RHL and $f(0)$.",
+                "math": "\\lim_{x \\to 0^-} f(x) = -k, \\qquad \\lim_{x \\to 0^+} f(x) = 3 = f(0)"
+              },
+              {
+                "do": "Equate LHL to $f(0)$.",
+                "math": "-k = 3 \\;\\Rightarrow\\; k = -3",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (A)."
+              }
+            ],
+            "mistake": "Taking $|x| = x$ for $x < 0$ gives $k = 3$ (option C)."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Ex 5.3 Q90",
+          "question": "Let $f(x) = |\\sin x|$. Then",
+          "options": [
+            "$f$ is everywhere differentiable",
+            "$f$ is everywhere continuous but not differentiable at $x = n\\pi$, $n \\in \\mathbb{Z}$",
+            "$f$ is everywhere continuous but not differentiable at $x = (2n + 1)\\dfrac{\\pi}{2}$, $n \\in \\mathbb{Z}$",
+            "none of these"
+          ],
+          "solution": {
+            "answer": "(B) $f$ is everywhere continuous but not differentiable at $x = n\\pi$, $n \\in \\mathbb{Z}$",
+            "concept": "$|u|$ can have a corner only where $u = 0$; check LHD and RHD there.",
+            "steps": [
+              {
+                "do": "$f$ is $|x|$ composed with $\\sin x$, both continuous, so $f$ is continuous everywhere.",
+                "why": "A composite of continuous functions is continuous"
+              },
+              {
+                "do": "A corner can occur only where $\\sin x = 0$, i.e. at $x = n\\pi$."
+              },
+              {
+                "do": "At $x = n\\pi$: $f(n\\pi + h) = |\\sin h|$ and $f(n\\pi) = 0$.",
+                "math": "\\text{LHD} = \\lim_{h \\to 0}\\dfrac{|\\sin(-h)|}{-h} = -1, \\qquad \\text{RHD} = \\lim_{h \\to 0}\\dfrac{|\\sin h|}{h} = 1"
+              },
+              {
+                "do": "LHD $\\ne$ RHD, so $f$ is not differentiable at $x = n\\pi$.",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Choosing (C): at $x = (2n+1)\\frac{\\pi}{2}$, $\\sin x = \\pm 1$, so $|\\sin x|$ is smooth there."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The derivative of $2^{\\cos^{2}x}$ with respect to $x$ is:",
+          "options": [
+            "$2^{\\cos^{2}x}\\,\\sin 2x\\,\\log 2$",
+            "$-\\cos^{2}x \\cdot 2^{\\cos^{2}x - 1}\\sin 2x$",
+            "$-2^{\\cos^{2}x}\\,\\sin 2x\\,\\log 2$",
+            "$-\\dfrac{2^{\\cos^{2}x}\\,\\sin 2x}{\\log 2}$"
+          ],
+          "solution": {
+            "answer": "(C) $-2^{\\cos^{2}x}\\,\\sin 2x\\,\\log 2$",
+            "concept": "$\\dfrac{d}{dx}a^{u} = a^{u}\\log a\\cdot\\dfrac{du}{dx}$.",
+            "steps": [
+              {
+                "do": "Use the formula for $a^{u}$ with $u = \\cos^{2}x$.",
+                "math": "\\dfrac{d}{dx}2^{\\cos^{2}x} = 2^{\\cos^{2}x}\\log 2\\cdot\\dfrac{d}{dx}(\\cos^{2}x)"
+              },
+              {
+                "do": "Differentiate $\\cos^{2}x$ (chain rule).",
+                "math": "\\dfrac{d}{dx}\\cos^{2}x = 2\\cos x(-\\sin x) = -\\sin 2x"
+              },
+              {
+                "do": "Combine.",
+                "math": "\\dfrac{d}{dx}2^{\\cos^{2}x} = -2^{\\cos^{2}x}\\,\\sin 2x\\,\\log 2",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (C)."
+              }
+            ],
+            "mistake": "Using the power rule on $2^{u}$ gives option (B); the variable is in the exponent."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Ex 5.3 Q91",
+          "question": "If $y = \\log\\left(\\dfrac{1 - x^{2}}{1 + x^{2}}\\right)$, then $\\dfrac{dy}{dx}$ is equal to",
+          "options": [
+            "$\\dfrac{4x^{3}}{1 - x^{4}}$",
+            "$\\dfrac{-4x}{1 - x^{4}}$",
+            "$\\dfrac{1}{4 - x^{4}}$",
+            "$\\dfrac{-4x^{3}}{1 - x^{4}}$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{-4x}{1 - x^{4}}$",
+            "concept": "$\\log\\dfrac{m}{n} = \\log m - \\log n$; then $\\dfrac{d}{dx}\\log u = \\dfrac{1}{u}\\dfrac{du}{dx}$.",
+            "steps": [
+              {
+                "do": "Split the log.",
+                "math": "y = \\log(1 - x^{2}) - \\log(1 + x^{2})"
+              },
+              {
+                "do": "Differentiate each term (chain rule).",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{-2x}{1 - x^{2}} - \\dfrac{2x}{1 + x^{2}}"
+              },
+              {
+                "do": "Take the common denominator $(1 - x^{2})(1 + x^{2}) = 1 - x^{4}$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{-2x(1 + x^{2}) - 2x(1 - x^{2})}{1 - x^{4}} = \\dfrac{-4x}{1 - x^{4}}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dx}\\log(1 - x^{2}) = \\dfrac{2x}{1 - x^{2}}$; the inner derivative is $-2x$, not $2x$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Ex 5.3 Q94",
+          "question": "If $x = t^{2}$, $y = t^{3}$, then $\\dfrac{d^{2}y}{dx^{2}}$ is",
+          "options": [
+            "$\\dfrac{3}{2}$",
+            "$\\dfrac{3}{4t}$",
+            "$\\dfrac{3}{2t}$",
+            "$\\dfrac{3}{4}$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{3}{4t}$",
+            "concept": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{d}{dt}\\left(\\dfrac{dy}{dx}\\right)\\cdot\\dfrac{dt}{dx}$.",
+            "steps": [
+              {
+                "do": "$\\dfrac{dx}{dt} = 2t$, $\\dfrac{dy}{dt} = 3t^{2}$. Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{3t^{2}}{2t} = \\dfrac{3t}{2}"
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (chain rule through $t$).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{3}{2}\\cdot\\dfrac{dt}{dx} = \\dfrac{3}{2}\\cdot\\dfrac{1}{2t} = \\dfrac{3}{4t}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Stopping at $\\dfrac{d}{dt}\\left(\\dfrac{3t}{2}\\right) = \\dfrac{3}{2}$ (option A) without multiplying by $\\dfrac{dt}{dx}$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** The function $f(x) = \\begin{cases} \\dfrac{x}{|x| + 2x^{2}}, & x \\ne 0 \\\\ k, & x = 0 \\end{cases}$ is discontinuous at $x = 0$, whatever the value of $k$. **Reason (R):** $\\displaystyle\\lim_{x \\to 0^-} f(x) \\ne \\lim_{x \\to 0^+} f(x)$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A",
+            "concept": "If LHL $\\ne$ RHL, the limit does not exist, so no value $f(0)$ can make $f$ continuous.",
+            "steps": [
+              {
+                "do": "LHL: for $x < 0$, $|x| = -x$.",
+                "math": "\\lim_{x \\to 0^-}\\dfrac{x}{-x + 2x^{2}} = \\lim_{x \\to 0^-}\\dfrac{1}{-1 + 2x} = -1"
+              },
+              {
+                "do": "RHL: for $x > 0$, $|x| = x$.",
+                "math": "\\lim_{x \\to 0^+}\\dfrac{x}{x + 2x^{2}} = \\lim_{x \\to 0^+}\\dfrac{1}{1 + 2x} = 1"
+              },
+              {
+                "do": "$-1 \\ne 1$, so **R is true**."
+              },
+              {
+                "do": "The limit at $0$ does not exist, so no $k$ works: **A is true**."
+              },
+              {
+                "do": "A follows directly from R, so **R explains A**.",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (A)."
+              }
+            ],
+            "mistake": "Cancelling $x$ as if $|x| = x$ on both sides, which gives limit $1$ and $k = 1$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 5.3 Q43",
+          "question": "Differentiate $\\tan^{-1}\\left(\\dfrac{\\sqrt{1 + x^{2}} + \\sqrt{1 - x^{2}}}{\\sqrt{1 + x^{2}} - \\sqrt{1 - x^{2}}}\\right)$ with respect to $x$, where $-1 < x < 1$, $x \\ne 0$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = -\\dfrac{x}{\\sqrt{1 - x^{4}}}$",
+            "concept": "Put $x^{2} = \\cos 2\\theta$ so the roots become $\\sqrt{2}\\cos\\theta$ and $\\sqrt{2}\\sin\\theta$.",
+            "steps": [
+              {
+                "do": "Let $y$ be the function. Put $x^{2} = \\cos 2\\theta$, $0 < \\theta < \\dfrac{\\pi}{4}$.",
+                "math": "\\sqrt{1 + \\cos 2\\theta} = \\sqrt{2}\\cos\\theta, \\qquad \\sqrt{1 - \\cos 2\\theta} = \\sqrt{2}\\sin\\theta",
+                "why": "$0 < x^{2} < 1$ gives $0 < 2\\theta < \\frac{\\pi}{2}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide numerator and denominator by $\\cos\\theta$.",
+                "math": "\\dfrac{\\cos\\theta + \\sin\\theta}{\\cos\\theta - \\sin\\theta} = \\dfrac{1 + \\tan\\theta}{1 - \\tan\\theta} = \\tan\\left(\\dfrac{\\pi}{4} + \\theta\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "So $y = \\tan^{-1}\\tan\\left(\\dfrac{\\pi}{4} + \\theta\\right)$; write $\\theta$ in terms of $x$.",
+                "math": "y = \\dfrac{\\pi}{4} + \\theta = \\dfrac{\\pi}{4} + \\dfrac{1}{2}\\cos^{-1}(x^{2})",
+                "why": "$\\frac{\\pi}{4} + \\theta$ lies in $\\left(\\frac{\\pi}{4}, \\frac{\\pi}{2}\\right)$, inside the range of $\\tan^{-1}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (chain rule).",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{1}{2}\\cdot\\dfrac{-1}{\\sqrt{1 - x^{4}}}\\cdot 2x = -\\dfrac{x}{\\sqrt{1 - x^{4}}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting the factor $2x$ from the inner function $x^{2}$ in $\\cos^{-1}(x^{2})$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 5.3 Q12",
+          "question": "Find the value of $k$ so that the function $f(x) = \\begin{cases} \\dfrac{2^{x+2} - 16}{4^{x} - 16}, & \\text{if } x \\ne 2 \\\\ k, & \\text{if } x = 2 \\end{cases}$ is continuous at $x = 2$.",
+          "solution": {
+            "answer": "$k = \\dfrac{1}{2}$",
+            "concept": "Continuity at $2$: $\\displaystyle\\lim_{x \\to 2} f(x) = f(2)$; put $2^{x} = t$ to remove the $\\dfrac{0}{0}$ form.",
+            "steps": [
+              {
+                "do": "Put $2^{x} = t$; as $x \\to 2$, $t \\to 4$.",
+                "math": "\\dfrac{2^{x+2} - 16}{4^{x} - 16} = \\dfrac{4t - 16}{t^{2} - 16}",
+                "why": "$2^{x+2} = 4\\cdot 2^{x}$ and $4^{x} = (2^{x})^{2}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Factorise and cancel $(t - 4)$, since $t \\ne 4$.",
+                "math": "\\dfrac{4(t - 4)}{(t - 4)(t + 4)} = \\dfrac{4}{t + 4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Take the limit.",
+                "math": "\\lim_{x \\to 2} f(x) = \\lim_{t \\to 4}\\dfrac{4}{t + 4} = \\dfrac{4}{8} = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate to $f(2) = k$.",
+                "math": "k = \\dfrac{1}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $4^{x} = 4\\cdot 2^{x}$; in fact $4^{x} = (2^{x})^{2} = t^{2}$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q11",
+          "question": "Differentiate w.r.t. $x$: $x^{x^{2} - 3} + (x - 3)^{x^{2}}$, for $x > 3$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = x^{x^{2}-3}\\left(2x\\log x + \\dfrac{x^{2}-3}{x}\\right) + (x-3)^{x^{2}}\\left(2x\\log(x-3) + \\dfrac{x^{2}}{x-3}\\right)$",
+            "concept": "Split $y = u + v$; take $\\log$ of each power separately.",
+            "steps": [
+              {
+                "do": "Let $u = x^{x^{2}-3}$ and $v = (x - 3)^{x^{2}}$, so $y = u + v$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{du}{dx} + \\dfrac{dv}{dx}",
+                "why": "$\\log$ of a sum cannot be split",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log of $u$ and differentiate (product rule).",
+                "math": "\\log u = (x^{2} - 3)\\log x \\;\\Rightarrow\\; \\dfrac{1}{u}\\dfrac{du}{dx} = 2x\\log x + \\dfrac{x^{2} - 3}{x}"
+              },
+              {
+                "do": "Multiply by $u$.",
+                "math": "\\dfrac{du}{dx} = x^{x^{2} - 3}\\left(2x\\log x + \\dfrac{x^{2} - 3}{x}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Take log of $v$ and differentiate (product rule).",
+                "math": "\\log v = x^{2}\\log(x - 3) \\;\\Rightarrow\\; \\dfrac{1}{v}\\dfrac{dv}{dx} = 2x\\log(x - 3) + \\dfrac{x^{2}}{x - 3}"
+              },
+              {
+                "do": "Multiply by $v$.",
+                "math": "\\dfrac{dv}{dx} = (x - 3)^{x^{2}}\\left(2x\\log(x - 3) + \\dfrac{x^{2}}{x - 3}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Add the two results.",
+                "math": "\\dfrac{dy}{dx} = x^{x^{2}-3}\\left(2x\\log x + \\dfrac{x^{2}-3}{x}\\right) + (x-3)^{x^{2}}\\left(2x\\log(x-3) + \\dfrac{x^{2}}{x-3}\\right)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using the power rule on $x^{x^{2}-3}$; when $x$ is in the exponent, take log first."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 5.3 Q51",
+          "question": "If $x = 3\\sin t - \\sin 3t$, $y = 3\\cos t - \\cos 3t$, find $\\dfrac{dy}{dx}$ at $t = \\dfrac{\\pi}{3}$.",
+          "solution": {
+            "answer": "$\\left(\\dfrac{dy}{dx}\\right)_{t = \\frac{\\pi}{3}} = -\\dfrac{1}{\\sqrt{3}}$",
+            "concept": "Parametric form: $\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}$.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ w.r.t. $t$.",
+                "math": "\\dfrac{dx}{dt} = 3\\cos t - 3\\cos 3t",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $y$ w.r.t. $t$.",
+                "math": "\\dfrac{dy}{dt} = -3\\sin t + 3\\sin 3t",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{\\sin 3t - \\sin t}{\\cos t - \\cos 3t}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $t = \\dfrac{\\pi}{3}$: $\\sin\\pi = 0$, $\\cos\\pi = -1$.",
+                "math": "\\left(\\dfrac{dy}{dx}\\right)_{t = \\frac{\\pi}{3}} = \\dfrac{0 - \\frac{\\sqrt{3}}{2}}{\\frac{1}{2} + 1} = -\\dfrac{1}{\\sqrt{3}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dt}\\sin 3t = \\cos 3t$; the chain rule gives $3\\cos 3t$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 5.3 Q81",
+          "question": "If $x = \\sin t$ and $y = \\sin pt$, prove that $(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - x\\dfrac{dy}{dx} + p^{2}y = 0$.",
+          "solution": {
+            "answer": "$(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - x\\dfrac{dy}{dx} + p^{2}y = 0$ (proved)",
+            "concept": "Find $\\dfrac{dy}{dx}$, square to remove $\\cos t$ and $\\cos pt$, then differentiate again.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ and $y$ w.r.t. $t$.",
+                "math": "\\dfrac{dx}{dt} = \\cos t, \\qquad \\dfrac{dy}{dt} = p\\cos pt",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide and cross-multiply.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{p\\cos pt}{\\cos t} \\;\\Rightarrow\\; \\cos t\\,\\dfrac{dy}{dx} = p\\cos pt",
+                "marks": 0.5
+              },
+              {
+                "do": "Square; use $\\cos^{2}t = 1 - x^{2}$ and $\\cos^{2}pt = 1 - y^{2}$.",
+                "math": "(1 - x^{2})\\left(\\dfrac{dy}{dx}\\right)^{2} = p^{2}(1 - y^{2})",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate both sides w.r.t. $x$.",
+                "math": "(1 - x^{2})\\cdot 2\\dfrac{dy}{dx}\\cdot\\dfrac{d^{2}y}{dx^{2}} - 2x\\left(\\dfrac{dy}{dx}\\right)^{2} = -2p^{2}y\\dfrac{dy}{dx}",
+                "marks": 1
+              },
+              {
+                "do": "Divide by $2\\dfrac{dy}{dx}$ and rearrange. Hence proved.",
+                "math": "(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - x\\dfrac{dy}{dx} + p^{2}y = 0",
+                "why": "Valid where $\\frac{dy}{dx} \\ne 0$",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Differentiating $\\dfrac{p\\cos pt}{\\cos t}$ w.r.t. $t$ and forgetting $\\dfrac{dt}{dx}$; squaring first avoids this."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q14",
+          "question": "If $x\\sqrt{1 + y} + y\\sqrt{1 + x} = 0$, for $-1 < x < 1$, prove that $\\dfrac{dy}{dx} = -\\dfrac{1}{(1 + x)^{2}}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = -\\dfrac{1}{(1 + x)^{2}}$ (proved)",
+            "concept": "Square and factorise to get $y$ explicitly, then differentiate.",
+            "steps": [
+              {
+                "do": "Move one term across and square.",
+                "math": "x\\sqrt{1 + y} = -y\\sqrt{1 + x} \\;\\Rightarrow\\; x^{2}(1 + y) = y^{2}(1 + x)",
+                "marks": 0.5
+              },
+              {
+                "do": "Rearrange and factorise.",
+                "math": "(x^{2} - y^{2}) + xy(x - y) = 0 \\;\\Rightarrow\\; (x - y)(x + y + xy) = 0",
+                "marks": 1
+              },
+              {
+                "do": "$x = y$ fails the given equation (except at $x = 0$), so $x + y + xy = 0$.",
+                "math": "y = -\\dfrac{x}{1 + x}",
+                "why": "$x = y$ gives $2x\\sqrt{1 + x} = 0$",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate (quotient rule). Hence proved.",
+                "math": "\\dfrac{dy}{dx} = -\\dfrac{(1 + x)\\cdot 1 - x\\cdot 1}{(1 + x)^{2}} = -\\dfrac{1}{(1 + x)^{2}}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Not rejecting the factor $x - y = 0$; it gives $\\dfrac{dy}{dx} = 1$, which is wrong here."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 5.3 Q55",
+          "question": "Find $\\dfrac{dy}{dx}$ when $x$ and $y$ are connected by the relation $\\sec(x + y) = xy$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\dfrac{y - \\sec(x + y)\\tan(x + y)}{\\sec(x + y)\\tan(x + y) - x}$",
+            "concept": "Implicit differentiation: differentiate each side w.r.t. $x$, treating $y$ as a function of $x$.",
+            "steps": [
+              {
+                "do": "Differentiate both sides w.r.t. $x$ (chain rule on the left, product rule on the right).",
+                "math": "\\sec(x + y)\\tan(x + y)\\left(1 + \\dfrac{dy}{dx}\\right) = y + x\\dfrac{dy}{dx}",
+                "marks": 1
+              },
+              {
+                "do": "Collect the $\\dfrac{dy}{dx}$ terms.",
+                "math": "\\dfrac{dy}{dx}\\left[\\sec(x + y)\\tan(x + y) - x\\right] = y - \\sec(x + y)\\tan(x + y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{y - \\sec(x + y)\\tan(x + y)}{\\sec(x + y)\\tan(x + y) - x}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Missing the factor $\\left(1 + \\dfrac{dy}{dx}\\right)$ from the chain rule on $\\sec(x + y)$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the values of $a$, $b$ and $c$ for which the function $f(x) = \\begin{cases} \\dfrac{\\sin(a + 1)x + \\sin x}{x}, & x < 0 \\\\ c, & x = 0 \\\\ \\dfrac{\\sqrt{x + bx^{2}} - \\sqrt{x}}{bx^{3/2}}, & x > 0 \\end{cases}$ is continuous at $x = 0$.",
+          "solution": {
+            "answer": "$a = -\\dfrac{3}{2}$, $c = \\dfrac{1}{2}$, and $b$ is any non-zero real number",
+            "concept": "Continuous at $0$: LHL $=$ RHL $= f(0)$; use $\\displaystyle\\lim_{\\theta \\to 0}\\dfrac{\\sin\\theta}{\\theta} = 1$ and rationalisation.",
+            "steps": [
+              {
+                "do": "LHL: split the fraction.",
+                "math": "\\lim_{x \\to 0^-}\\left[\\dfrac{\\sin(a + 1)x}{(a + 1)x}\\cdot(a + 1) + \\dfrac{\\sin x}{x}\\right] = (a + 1) + 1 = a + 2",
+                "why": "$\\lim_{\\theta \\to 0}\\frac{\\sin\\theta}{\\theta} = 1$",
+                "marks": 1
+              },
+              {
+                "do": "RHL: take $\\sqrt{x}$ common from the numerator.",
+                "math": "\\dfrac{\\sqrt{x}\\left(\\sqrt{1 + bx} - 1\\right)}{bx\\sqrt{x}} = \\dfrac{\\sqrt{1 + bx} - 1}{bx}"
+              },
+              {
+                "do": "Rationalise and take the limit.",
+                "math": "\\lim_{x \\to 0^+}\\dfrac{(1 + bx) - 1}{bx\\left(\\sqrt{1 + bx} + 1\\right)} = \\lim_{x \\to 0^+}\\dfrac{1}{\\sqrt{1 + bx} + 1} = \\dfrac{1}{2}",
+                "marks": 1
+              },
+              {
+                "do": "Equate LHL, RHL and $f(0) = c$.",
+                "math": "a + 2 = \\dfrac{1}{2} = c \\;\\Rightarrow\\; a = -\\dfrac{3}{2}, \\quad c = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "The RHL is $\\dfrac{1}{2}$ for every $b$, so $b$ is any non-zero real number.",
+                "why": "$b \\ne 0$, else $f$ is undefined for $x > 0$",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Hunting for one value of $b$; the right-hand limit equals $\\dfrac{1}{2}$ for every $b \\ne 0$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "If $y = \\dfrac{\\sin^{-1}x}{\\sqrt{1 - x^{2}}}$, $-1 < x < 1$, show that $(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - 3x\\dfrac{dy}{dx} - y = 0$.",
+          "solution": {
+            "answer": "$(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - 3x\\dfrac{dy}{dx} - y = 0$ (proved)",
+            "concept": "Clear the root first: $\\sqrt{1 - x^{2}}\\,y = \\sin^{-1}x$, then differentiate twice.",
+            "steps": [
+              {
+                "do": "Cross-multiply.",
+                "math": "\\sqrt{1 - x^{2}}\\;y = \\sin^{-1}x",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (product rule); write $y_1 = \\dfrac{dy}{dx}$.",
+                "math": "\\sqrt{1 - x^{2}}\\;y_1 - \\dfrac{x}{\\sqrt{1 - x^{2}}}\\,y = \\dfrac{1}{\\sqrt{1 - x^{2}}}",
+                "marks": 1
+              },
+              {
+                "do": "Multiply by $\\sqrt{1 - x^{2}}$.",
+                "math": "(1 - x^{2})y_1 - xy = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$; write $y_2 = \\dfrac{d^{2}y}{dx^{2}}$.",
+                "math": "(1 - x^{2})y_2 - 2xy_1 - (y + xy_1) = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Collect the terms. Hence proved.",
+                "math": "(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - 3x\\dfrac{dy}{dx} - y = 0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dx}(xy) = y$ instead of $y + xy_1$, which gives $-2xy_1$ in place of $-3xy_1$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "If $ax^{2} + 2hxy + by^{2} = 1$, prove that $\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{h^{2} - ab}{(hx + by)^{3}}$.",
+          "solution": {
+            "answer": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{h^{2} - ab}{(hx + by)^{3}}$ (proved)",
+            "concept": "Find $y_1$ implicitly, differentiate it by the quotient rule, then use the given equation to simplify.",
+            "steps": [
+              {
+                "do": "Differentiate both sides w.r.t. $x$.",
+                "math": "2ax + 2h\\left(y + x\\dfrac{dy}{dx}\\right) + 2by\\dfrac{dy}{dx} = 0",
+                "marks": 1
+              },
+              {
+                "do": "Solve for $\\dfrac{dy}{dx}$ (write $y_1$).",
+                "math": "y_1 = -\\dfrac{ax + hy}{hx + by} \\quad \\cdots (1)",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate (1) w.r.t. $x$ (quotient rule); write $y_2 = \\dfrac{d^{2}y}{dx^{2}}$.",
+                "math": "y_2 = -\\dfrac{(a + hy_1)(hx + by) - (ax + hy)(h + by_1)}{(hx + by)^{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Expand the numerator $N$; the $ahx$ and $bhyy_1$ terms cancel.",
+                "math": "\\begin{aligned} N &= ahx + aby + h^{2}xy_1 + bhyy_1 - ahx - h^{2}y - abxy_1 - bhyy_1 \\\\ &= (ab - h^{2})(y - xy_1) \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "Use (1) and the given equation.",
+                "math": "y - xy_1 = y + \\dfrac{x(ax + hy)}{hx + by} = \\dfrac{ax^{2} + 2hxy + by^{2}}{hx + by} = \\dfrac{1}{hx + by}",
+                "why": "$ax^{2} + 2hxy + by^{2} = 1$",
+                "marks": 1
+              },
+              {
+                "do": "Substitute in $y_2$. Hence proved.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{ab - h^{2}}{(hx + by)^{2}}\\cdot\\dfrac{1}{hx + by} = \\dfrac{h^{2} - ab}{(hx + by)^{3}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Trying to simplify $y_2$ without using $ax^{2} + 2hxy + by^{2} = 1$; the numerator only collapses after that."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 5.3 Q61",
+          "question": "If $y = (\\cos x)^{(\\cos x)^{(\\cos x)^{\\cdots\\infty}}}$, show that $\\dfrac{dy}{dx} = \\dfrac{y^{2}\\tan x}{y\\log\\cos x - 1}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\dfrac{y^{2}\\tan x}{y\\log\\cos x - 1}$ (proved)",
+            "concept": "An infinite tower repeats itself, so the exponent is $y$: $y = (\\cos x)^{y}$.",
+            "steps": [
+              {
+                "do": "The exponent is the same infinite tower, i.e. $y$ itself.",
+                "math": "y = (\\cos x)^{y}",
+                "why": "Removing one $\\cos x$ leaves the same tower",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log on both sides.",
+                "math": "\\log y = y\\log\\cos x",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (product rule on the right).",
+                "math": "\\dfrac{1}{y}\\dfrac{dy}{dx} = \\dfrac{dy}{dx}\\log\\cos x + y\\cdot\\dfrac{-\\sin x}{\\cos x}",
+                "marks": 1
+              },
+              {
+                "do": "Collect the $\\dfrac{dy}{dx}$ terms.",
+                "math": "\\dfrac{dy}{dx}\\cdot\\dfrac{1 - y\\log\\cos x}{y} = -y\\tan x",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $\\dfrac{dy}{dx}$. Hence proved.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{-y^{2}\\tan x}{1 - y\\log\\cos x} = \\dfrac{y^{2}\\tan x}{y\\log\\cos x - 1}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Treating the exponent $y$ as a constant; $y\\log\\cos x$ needs the product rule."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "A function $f$ is defined on $[0, 3)$ by $f(x) = \\begin{cases} x[x], & 0 \\le x < 2 \\\\ (x - 1)x, & 2 \\le x < 3 \\end{cases}$ where $[x]$ is the greatest integer function. Examine the continuity and differentiability of $f$ at $x = 1$ and at $x = 2$.",
+          "solution": {
+            "answer": "At $x = 1$: discontinuous, so not differentiable. At $x = 2$: continuous but not differentiable (LHD $= 1$, RHD $= 3$).",
+            "concept": "Remove $[x]$ piece by piece; differentiable needs continuity first and then LHD $=$ RHD.",
+            "figure": "figs/pb-q18.svg",
+            "steps": [
+              {
+                "do": "Write $f$ without $[x]$.",
+                "math": "f(x) = \\begin{cases} 0, & 0 \\le x < 1 \\\\ x, & 1 \\le x < 2 \\\\ x^{2} - x, & 2 \\le x < 3 \\end{cases}",
+                "why": "$[x] = 0$ on $[0, 1)$ and $[x] = 1$ on $[1, 2)$",
+                "marks": 1
+              },
+              {
+                "do": "At $x = 1$: find the one-sided limits and $f(1)$.",
+                "math": "\\lim_{x \\to 1^-} f(x) = 0, \\qquad \\lim_{x \\to 1^+} f(x) = 1 = f(1)",
+                "marks": 1
+              },
+              {
+                "do": "LHL $\\ne f(1)$, so $f$ is discontinuous at $x = 1$; hence not differentiable there.",
+                "why": "Differentiable at a point implies continuous there",
+                "marks": 0.5
+              },
+              {
+                "do": "At $x = 2$: find the one-sided limits and $f(2)$.",
+                "math": "\\lim_{x \\to 2^-} x = 2, \\qquad \\lim_{x \\to 2^+}(x^{2} - x) = 2, \\qquad f(2) = 2",
+                "marks": 0.5
+              },
+              {
+                "do": "All three are equal, so $f$ is continuous at $x = 2$.",
+                "marks": 0.5
+              },
+              {
+                "do": "LHD at $x = 2$ (use $f(x) = x$ on the left).",
+                "math": "\\text{LHD} = \\lim_{h \\to 0}\\dfrac{f(2 - h) - f(2)}{-h} = \\lim_{h \\to 0}\\dfrac{(2 - h) - 2}{-h} = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "RHD at $x = 2$ (use $f(x) = x^{2} - x$ on the right).",
+                "math": "\\text{RHD} = \\lim_{h \\to 0}\\dfrac{(2 + h)^{2} - (2 + h) - 2}{h} = \\lim_{h \\to 0}\\dfrac{3h + h^{2}}{h} = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "LHD $\\ne$ RHD, so $f$ is continuous but not differentiable at $x = 2$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $[x] = 2$ just to the left of $x = 2$; for $1 \\le x < 2$, $[x] = 1$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "If $x = a(\\cos t + t\\sin t)$ and $y = a(\\sin t - t\\cos t)$, $0 < t < \\dfrac{\\pi}{2}$, find $\\dfrac{d^{2}y}{dx^{2}}$. Hence find its value at $t = \\dfrac{\\pi}{4}$.",
+          "solution": {
+            "answer": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{\\sec^{3}t}{at}$; at $t = \\dfrac{\\pi}{4}$ it is $\\dfrac{8\\sqrt{2}}{a\\pi}$",
+            "concept": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{d}{dt}\\left(\\dfrac{dy}{dx}\\right)\\cdot\\dfrac{dt}{dx}$.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ w.r.t. $t$ (product rule on $t\\sin t$).",
+                "math": "\\dfrac{dx}{dt} = a(-\\sin t + \\sin t + t\\cos t) = at\\cos t",
+                "marks": 1
+              },
+              {
+                "do": "Differentiate $y$ w.r.t. $t$ (product rule on $t\\cos t$).",
+                "math": "\\dfrac{dy}{dt} = a(\\cos t - \\cos t + t\\sin t) = at\\sin t",
+                "marks": 1
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{at\\sin t}{at\\cos t} = \\tan t",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (chain rule through $t$).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\sec^{2}t\\cdot\\dfrac{dt}{dx} = \\sec^{2}t\\cdot\\dfrac{1}{at\\cos t}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{\\sec^{3}t}{at}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $t = \\dfrac{\\pi}{4}$, where $\\sec^{3}\\dfrac{\\pi}{4} = (\\sqrt{2})^{3} = 2\\sqrt{2}$.",
+                "math": "\\left(\\dfrac{d^{2}y}{dx^{2}}\\right)_{t = \\frac{\\pi}{4}} = \\dfrac{2\\sqrt{2}}{a\\cdot\\frac{\\pi}{4}} = \\dfrac{8\\sqrt{2}}{a\\pi}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dt}(t\\sin t) = t\\cos t$ and dropping $\\sin t$; then the terms do not cancel."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** A skate-park designer models the side profile of a ramp. If $x$ is the horizontal distance (in m) and $f(x)$ is the height (in m), the profile is $f(x) = \\begin{cases} ax^{2} + bx, & 0 \\le x \\le 1 \\\\ 2 + \\log x, & 1 < x \\le e \\end{cases}$ For a smooth ride the two pieces must meet without a gap or a sharp corner, so $f$ must be continuous and differentiable at $x = 1$.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Write the condition on $a$ and $b$ for $f$ to be continuous at $x = 1$.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Using (i), find the left-hand derivative and the right-hand derivative of $f$ at $x = 1$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Find the values of $a$ and $b$, and the height of the ramp at $x = \\dfrac{1}{2}$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $a + b = 2$; (ii) LHD $= 2a + b$, RHD $= 1$; (iii) $a = -1$, $b = 3$, height $= \\dfrac{5}{4}$ m.",
+            "concept": "Continuity: LHL $=$ RHL $= f(1)$. Differentiability: LHD $=$ RHD. Use $\\displaystyle\\lim_{h \\to 0}\\dfrac{\\log(1 + h)}{h} = 1$.",
+            "figure": "figs/pb-q20.svg",
+            "parts": [
+              {
+                "label": "(i)",
+                "answer": "$a + b = 2$",
+                "steps": [
+                  {
+                    "do": "$f(1)$ and the LHL come from the first piece.",
+                    "math": "\\lim_{x \\to 1^-} f(x) = f(1) = a + b",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "RHL from the second piece; equate.",
+                    "math": "\\lim_{x \\to 1^+}(2 + \\log x) = 2 + 0 = 2 \\;\\Rightarrow\\; a + b = 2",
+                    "marks": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "(ii)",
+                "answer": "LHD $= 2a + b$, RHD $= 1$",
+                "steps": [
+                  {
+                    "do": "LHD, with $f(1) = a + b$.",
+                    "math": "\\text{LHD} = \\lim_{h \\to 0}\\dfrac{a(1 - h)^{2} + b(1 - h) - (a + b)}{-h} = \\lim_{h \\to 0}(2a + b - ah) = 2a + b",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "RHD, with $f(1) = 2$ from (i).",
+                    "math": "\\text{RHD} = \\lim_{h \\to 0}\\dfrac{2 + \\log(1 + h) - 2}{h} = \\lim_{h \\to 0}\\dfrac{\\log(1 + h)}{h} = 1",
+                    "marks": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "(iii)",
+                "answer": "$a = -1$, $b = 3$; height at $x = \\dfrac{1}{2}$ is $\\dfrac{5}{4}$ m",
+                "steps": [
+                  {
+                    "do": "Differentiable at $x = 1$: LHD $=$ RHD.",
+                    "math": "2a + b = 1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Subtract $a + b = 2$ from it.",
+                    "math": "a = 1 - 2 = -1, \\qquad b = 2 - a = 3",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Height at $x = \\dfrac{1}{2}$, from $f(x) = -x^{2} + 3x$.",
+                    "math": "f\\left(\\dfrac{1}{2}\\right) = -\\dfrac{1}{4} + \\dfrac{3}{2} = \\dfrac{5}{4}\\text{ m}",
+                    "marks": 0.5
+                  }
+                ]
+              }
+            ],
+            "mistake": "Finding the RHD before using $f(1) = 2$; without continuity the right-hand quotient has no finite limit."
+          }
+        }
+      ]
+    }
+  ]
+}

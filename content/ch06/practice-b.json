@@ -1,0 +1,862 @@
+{
+  "chapter": 6,
+  "chapterTitle": "Application of Derivatives",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 52,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The radius of a right circular cylinder is increasing at the rate of $3$ cm/s and its height is decreasing at the rate of $4$ cm/s. The rate of change of its volume when the radius is $4$ cm and the height is $6$ cm is:",
+          "options": [
+            "$80\\pi\\ \\text{cm}^3/\\text{s}$",
+            "$144\\pi\\ \\text{cm}^3/\\text{s}$",
+            "$208\\pi\\ \\text{cm}^3/\\text{s}$",
+            "$64\\pi\\ \\text{cm}^3/\\text{s}$"
+          ],
+          "solution": {
+            "answer": "(A) $80\\pi\\ \\text{cm}^3/\\text{s}$",
+            "concept": "Both $r$ and $h$ change with $t$, so use the product rule on $V = \\pi r^2 h$.",
+            "steps": [
+              {
+                "do": "Differentiate $V = \\pi r^2 h$ w.r.t. $t$ (product rule)",
+                "math": "\\dfrac{dV}{dt} = \\pi\\left(2rh\\,\\dfrac{dr}{dt} + r^2\\,\\dfrac{dh}{dt}\\right)"
+              },
+              {
+                "do": "Put $r = 4$, $h = 6$, $\\dfrac{dr}{dt} = 3$, $\\dfrac{dh}{dt} = -4$",
+                "math": "\\dfrac{dV}{dt} = \\pi\\big(2(4)(6)(3) + 16(-4)\\big) = \\pi(144 - 64) = 80\\pi",
+                "why": "Height is decreasing, so $\\dfrac{dh}{dt}$ is negative",
+                "marks": 1
+              }
+            ],
+            "mistake": "Taking $\\dfrac{dh}{dt} = +4$ gives $208\\pi$; dropping the $h$-term gives $144\\pi$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "Let $f : \\mathbb{R} \\to \\mathbb{R}$ be defined by $f(x) = 2x + \\cos x$. Then $f$:",
+          "options": [
+            "has a minimum at $x = \\pi$",
+            "has a maximum at $x = 0$",
+            "is a decreasing function",
+            "is an increasing function"
+          ],
+          "solution": {
+            "answer": "(D) is an increasing function",
+            "concept": "$f'(x) > 0$ for all $x$ means $f$ is increasing on $\\mathbb{R}$ and has no local extremum.",
+            "steps": [
+              {
+                "do": "Differentiate",
+                "math": "f'(x) = 2 - \\sin x"
+              },
+              {
+                "do": "Since $\\sin x \\le 1$, $f'(x) > 0$ for every real $x$",
+                "math": "f'(x) = 2 - \\sin x \\ge 2 - 1 = 1 > 0",
+                "marks": 1
+              },
+              {
+                "do": "So $f$ is increasing on $\\mathbb{R}$, with no maximum or minimum",
+                "math": "\\text{Option (D)}"
+              }
+            ],
+            "mistake": "Thinking $\\cos x$ has a minimum at $\\pi$, so $f$ must too; the $2x$ term keeps $f$ rising."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2026-27",
+          "question": "If $y = a\\left\\{x + 2a\\sin\\left(\\dfrac{x}{a}\\right)\\right\\}$, $a > 0$, $x \\in [0, \\pi a]$, is a decreasing function, then the interval in which $x$ lies is:",
+          "options": [
+            "$\\left(\\dfrac{5\\pi}{6}, \\pi\\right]$",
+            "$\\left(\\dfrac{2\\pi}{3}, \\pi\\right]$",
+            "$\\left(\\dfrac{5\\pi a}{6}, \\pi a\\right]$",
+            "$\\left(\\dfrac{2\\pi a}{3}, \\pi a\\right]$"
+          ],
+          "solution": {
+            "answer": "(D) $\\left(\\dfrac{2\\pi a}{3}, \\pi a\\right]$",
+            "concept": "$y$ is decreasing where $\\dfrac{dy}{dx} < 0$.",
+            "steps": [
+              {
+                "do": "Differentiate w.r.t. $x$",
+                "math": "\\dfrac{dy}{dx} = a\\left\\{1 + 2\\cos\\left(\\dfrac{x}{a}\\right)\\right\\}"
+              },
+              {
+                "do": "Decreasing needs $\\dfrac{dy}{dx} < 0$; since $a > 0$",
+                "math": "\\cos\\left(\\dfrac{x}{a}\\right) < -\\dfrac{1}{2}"
+              },
+              {
+                "do": "Here $\\dfrac{x}{a} \\in [0, \\pi]$, where $\\cos\\theta < -\\tfrac{1}{2}$ for $\\theta \\in \\left(\\tfrac{2\\pi}{3}, \\pi\\right]$",
+                "math": "\\dfrac{2\\pi}{3} < \\dfrac{x}{a} \\le \\pi \\;\\Rightarrow\\; \\dfrac{2\\pi a}{3} < x \\le \\pi a",
+                "marks": 1
+              }
+            ],
+            "mistake": "Stopping at $\\dfrac{x}{a}$ and choosing $\\left(\\dfrac{2\\pi}{3}, \\pi\\right]$; multiply back by $a$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "At $x = \\dfrac{5\\pi}{6}$, $f(x) = 2\\sin 3x + 3\\cos 3x$ is:",
+          "options": [
+            "maximum",
+            "minimum",
+            "zero",
+            "neither maximum nor minimum"
+          ],
+          "solution": {
+            "answer": "(D) neither maximum nor minimum",
+            "concept": "A local maximum or minimum of a differentiable function needs $f'(c) = 0$.",
+            "steps": [
+              {
+                "do": "Value at $x = \\dfrac{5\\pi}{6}$ ($3x = \\dfrac{5\\pi}{2}$)",
+                "math": "f\\left(\\dfrac{5\\pi}{6}\\right) = 2\\sin\\dfrac{5\\pi}{2} + 3\\cos\\dfrac{5\\pi}{2} = 2(1) + 0 = 2 \\neq 0"
+              },
+              {
+                "do": "Differentiate",
+                "math": "f'(x) = 6\\cos 3x - 9\\sin 3x"
+              },
+              {
+                "do": "$f'\\left(\\dfrac{5\\pi}{6}\\right) \\neq 0$, so it is not a point of extremum",
+                "math": "f'\\left(\\dfrac{5\\pi}{6}\\right) = 6(0) - 9(1) = -9 \\neq 0",
+                "marks": 1
+              }
+            ],
+            "mistake": "Taking $\\sin 3x = 1$ as a sign of a maximum; the maximum of $f$ is $\\sqrt{13}$, not $2$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The local minimum value of $f(x) = x^x$, $x > 0$, is:",
+          "options": [
+            "$e^{-1/e}$",
+            "$e^{1/e}$",
+            "$\\dfrac{1}{e}$",
+            "$1$"
+          ],
+          "solution": {
+            "answer": "(A) $e^{-1/e}$",
+            "concept": "For $y = x^x$ take logs first: $\\log y = x\\log x$.",
+            "steps": [
+              {
+                "do": "Take logs and differentiate w.r.t. $x$",
+                "math": "\\log y = x\\log x \\;\\Rightarrow\\; \\dfrac{1}{y}\\dfrac{dy}{dx} = 1 + \\log x"
+              },
+              {
+                "do": "So $f'(x) = x^x(1 + \\log x) = 0$ gives",
+                "math": "\\log x = -1 \\;\\Rightarrow\\; x = \\dfrac{1}{e}"
+              },
+              {
+                "do": "$f'$ changes from $-$ to $+$ at $x = \\dfrac{1}{e}$, so it is a local minimum",
+                "math": "x^x > 0,\\quad 1 + \\log x < 0 \\text{ for } x < \\tfrac{1}{e},\\ > 0 \\text{ for } x > \\tfrac{1}{e}"
+              },
+              {
+                "do": "Local minimum value",
+                "math": "f\\left(\\dfrac{1}{e}\\right) = \\left(\\dfrac{1}{e}\\right)^{1/e} = e^{-1/e}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Giving the point $x = \\dfrac{1}{e}$ instead of the value $f\\left(\\dfrac{1}{e}\\right)$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** $f(x) = x^3$ is strictly increasing on $\\mathbb{R}$. **Reason (R):** If a function $f$ is strictly increasing on an interval, then $f'(x) > 0$ for every $x$ in that interval.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(C) A is true, but R is false.",
+            "concept": "$f' > 0$ on an interval implies strictly increasing, but the converse is false.",
+            "steps": [
+              {
+                "do": "$f'(x) = 3x^2 > 0$ except at $x = 0$, so $f$ is strictly increasing: **A is true**",
+                "math": "x_1 < x_2 \\;\\Rightarrow\\; x_1^3 < x_2^3"
+              },
+              {
+                "do": "$x^3$ is strictly increasing, yet $f'(0) = 0$: **R is false**",
+                "math": "f'(0) = 3(0)^2 = 0"
+              },
+              {
+                "do": "A is true and R is false",
+                "math": "\\text{Option (C)}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Choosing (A): R is the converse of the theorem, and $x^3$ is the counter-example."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Ex 6.1 Q2",
+          "question": "The volume of a cube is increasing at the rate of $8\\ \\text{cm}^3/\\text{s}$. How fast is the surface area increasing when the length of an edge is $12$ cm?",
+          "solution": {
+            "answer": "Surface area increases at $\\dfrac{8}{3}\\ \\text{cm}^2/\\text{s}$",
+            "concept": "Find $\\dfrac{dx}{dt}$ from $V$, then use it in $\\dfrac{dS}{dt}$.",
+            "steps": [
+              {
+                "do": "Let edge $= x$; volume and surface area",
+                "math": "V = x^3,\\qquad S = 6x^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $V$ w.r.t. $t$ and use $\\dfrac{dV}{dt} = 8$",
+                "math": "3x^2\\,\\dfrac{dx}{dt} = 8 \\;\\Rightarrow\\; \\dfrac{dx}{dt} = \\dfrac{8}{3x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $S$ w.r.t. $t$",
+                "math": "\\dfrac{dS}{dt} = 12x\\,\\dfrac{dx}{dt} = 12x\\cdot\\dfrac{8}{3x^2} = \\dfrac{32}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x = 12$",
+                "math": "\\dfrac{dS}{dt} = \\dfrac{32}{12} = \\dfrac{8}{3}\\ \\text{cm}^2/\\text{s}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $\\dfrac{dx}{dt} = 8$; the $8$ is the rate of change of volume, not of the edge."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the intervals in which the function $f(x) = \\dfrac{x^4}{4} - x^3 - 5x^2 + 24x + 12$ is (a) strictly increasing (b) strictly decreasing.",
+          "solution": {
+            "answer": "Strictly increasing on $(-3, 2) \\cup (4, \\infty)$; strictly decreasing on $(-\\infty, -3) \\cup (2, 4)$",
+            "concept": "Sign of $f'(x)$ on each interval between the roots of $f'(x) = 0$.",
+            "steps": [
+              {
+                "do": "Differentiate",
+                "math": "f'(x) = x^3 - 3x^2 - 10x + 24",
+                "marks": 0.5
+              },
+              {
+                "do": "$x = 2$ is a root ($8 - 12 - 20 + 24 = 0$); factorise",
+                "math": "f'(x) = (x - 2)(x^2 - x - 12) = (x - 2)(x - 4)(x + 3)",
+                "marks": 0.5
+              },
+              {
+                "do": "$f'(x) = 0$ gives the points",
+                "math": "x = -3,\\ 2,\\ 4",
+                "marks": 0.5
+              },
+              {
+                "do": "Signs of $f'(x)$ on the intervals",
+                "math": "\\begin{aligned} (-\\infty,-3)&: (-)(-)(-) < 0 \\\\ (-3,2)&: (-)(-)(+) > 0 \\\\ (2,4)&: (+)(-)(+) < 0 \\\\ (4,\\infty)&: (+)(+)(+) > 0 \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "(a) Strictly increasing where $f'(x) > 0$; (b) strictly decreasing where $f'(x) < 0$",
+                "math": "\\text{(a) } (-3, 2) \\cup (4, \\infty) \\qquad \\text{(b) } (-\\infty, -3) \\cup (2, 4)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not finding the root $x = 2$ by trial; test $x = \\pm1, \\pm2, \\pm3, \\ldots$ in $f'(x)$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "A spherical balloon is being inflated so that its volume increases at the rate of $25\\ \\text{cm}^3/\\text{s}$. Find the rate at which its surface area is increasing when the radius is $5$ cm.",
+          "solution": {
+            "answer": "Surface area increases at $10\\ \\text{cm}^2/\\text{s}$",
+            "concept": "$V = \\dfrac{4}{3}\\pi r^3$ and $S = 4\\pi r^2$; link them through $\\dfrac{dr}{dt}$.",
+            "steps": [
+              {
+                "do": "Differentiate $V = \\dfrac{4}{3}\\pi r^3$ w.r.t. $t$",
+                "math": "\\dfrac{dV}{dt} = 4\\pi r^2\\,\\dfrac{dr}{dt}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\dfrac{dV}{dt} = 25$, $r = 5$",
+                "math": "25 = 4\\pi(25)\\dfrac{dr}{dt} \\;\\Rightarrow\\; \\dfrac{dr}{dt} = \\dfrac{1}{4\\pi}",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $S = 4\\pi r^2$ w.r.t. $t$",
+                "math": "\\dfrac{dS}{dt} = 8\\pi r\\,\\dfrac{dr}{dt}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $r = 5$, $\\dfrac{dr}{dt} = \\dfrac{1}{4\\pi}$",
+                "math": "\\dfrac{dS}{dt} = 8\\pi(5)\\cdot\\dfrac{1}{4\\pi} = 10\\ \\text{cm}^2/\\text{s}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{dS}{dt} = 8\\pi r$ and forgetting the factor $\\dfrac{dr}{dt}$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Find the points of local maxima, local minima and the points of inflexion (critical points where $f'$ does not change sign) of the function $f(x) = x^5 - 5x^4 + 5x^3 - 1$. Also find the corresponding local maximum and local minimum values.",
+          "solution": {
+            "answer": "Local maximum at $x = 1$, value $0$; local minimum at $x = 3$, value $-28$; point of inflexion at $x = 0$",
+            "concept": "First derivative test: $f'$ from $+$ to $-$ is a maximum; no sign change is a point of inflexion.",
+            "steps": [
+              {
+                "do": "Differentiate and factorise",
+                "math": "f'(x) = 5x^4 - 20x^3 + 15x^2 = 5x^2(x - 1)(x - 3)",
+                "marks": 0.5
+              },
+              {
+                "do": "$f'(x) = 0$ gives",
+                "math": "x = 0,\\ 1,\\ 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Near $x = 0$, $f' > 0$ on both sides: no sign change",
+                "math": "x = 0 \\text{ is a point of inflexion}",
+                "marks": 0.5
+              },
+              {
+                "do": "At $x = 1$: $f'$ changes from $+$ to $-$; at $x = 3$: from $-$ to $+$",
+                "math": "x = 1:\\ \\text{local maximum},\\qquad x = 3:\\ \\text{local minimum}",
+                "marks": 1
+              },
+              {
+                "do": "Corresponding values",
+                "math": "f(1) = 1 - 5 + 5 - 1 = 0,\\qquad f(3) = 243 - 405 + 135 - 1 = -28",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Calling $x = 0$ a maximum or minimum just because $f'(0) = 0$; check the sign change."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the intervals in which the function $f(x) = \\log(1 + x) - \\dfrac{x}{1 + x}$, $x > -1$, is strictly increasing or strictly decreasing.",
+          "solution": {
+            "answer": "Strictly decreasing on $(-1, 0)$; strictly increasing on $(0, \\infty)$",
+            "concept": "On the domain $x > -1$, the sign of $f'(x)$ decides increasing or decreasing.",
+            "steps": [
+              {
+                "do": "Differentiate (quotient rule for the second term)",
+                "math": "f'(x) = \\dfrac{1}{1 + x} - \\dfrac{(1 + x) - x}{(1 + x)^2}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify",
+                "math": "f'(x) = \\dfrac{1}{1 + x} - \\dfrac{1}{(1 + x)^2} = \\dfrac{x}{(1 + x)^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "$(1 + x)^2 > 0$, so $f'(x)$ has the sign of $x$; $f'(x) = 0$ at $x = 0$",
+                "math": "-1 < x < 0: f'(x) < 0,\\qquad x > 0: f'(x) > 0",
+                "marks": 1
+              },
+              {
+                "do": "Hence",
+                "math": "\\text{strictly decreasing on } (-1, 0),\\quad \\text{strictly increasing on } (0, \\infty)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $(-\\infty, 0)$ for the decreasing interval; the domain starts at $x = -1$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2026-27",
+          "question": "The circular area of vision on the ground by a surveillance drone fitted with a camera increases at the rate of $44\\ \\text{m}^2$ per metre as it gains vertical height. The radius of the circle on the ground increases at the rate of $6$ m/s. Find the rate at which the height of the drone increases with time, at the instant when the radius of the circular area on the ground is $14$ m. (Use $\\pi = \\dfrac{22}{7}$)",
+          "solution": {
+            "answer": "The height of the drone increases at $12$ m/s",
+            "concept": "Chain rule: $\\dfrac{dA}{dt} = \\dfrac{dA}{dh}\\cdot\\dfrac{dh}{dt}$.",
+            "steps": [
+              {
+                "do": "Let area $= A$, radius $= r$, height $= h$ at time $t$; given",
+                "math": "\\dfrac{dA}{dh} = 44\\ \\text{m}^2/\\text{m},\\qquad \\dfrac{dr}{dt} = 6\\ \\text{m/s}",
+                "marks": 0.5
+              },
+              {
+                "do": "Area $A = \\pi r^2$; differentiate w.r.t. $t$",
+                "math": "\\dfrac{dA}{dt} = 2\\pi r\\,\\dfrac{dr}{dt}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $r = 14$, $\\dfrac{dr}{dt} = 6$",
+                "math": "\\dfrac{dA}{dt} = 2\\times\\dfrac{22}{7}\\times 14\\times 6 = 528\\ \\text{m}^2/\\text{s}",
+                "marks": 0.5
+              },
+              {
+                "do": "By the chain rule",
+                "math": "\\dfrac{dA}{dt} = \\dfrac{dA}{dh}\\cdot\\dfrac{dh}{dt} \\;\\Rightarrow\\; 528 = 44\\,\\dfrac{dh}{dt}",
+                "marks": 1
+              },
+              {
+                "do": "Hence",
+                "math": "\\dfrac{dh}{dt} = \\dfrac{528}{44} = 12\\ \\text{m/s}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Treating $44$ as $\\dfrac{dA}{dt}$; it is the rate per metre of height, $\\dfrac{dA}{dh}$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q11",
+          "question": "Find the absolute maximum and minimum values of the function $f$ given by $f(x) = \\cos^2 x + \\sin x$, $x \\in [0, \\pi]$.",
+          "solution": {
+            "answer": "Absolute maximum $= \\dfrac{5}{4}$ (at $x = \\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}$); absolute minimum $= 1$ (at $x = 0, \\dfrac{\\pi}{2}, \\pi$)",
+            "concept": "Compare $f$ at the critical points and at the end points of $[0, \\pi]$.",
+            "steps": [
+              {
+                "do": "Differentiate",
+                "math": "f'(x) = -2\\cos x\\sin x + \\cos x = \\cos x\\,(1 - 2\\sin x)",
+                "marks": 0.5
+              },
+              {
+                "do": "$f'(x) = 0$ in $[0, \\pi]$",
+                "math": "\\cos x = 0 \\Rightarrow x = \\dfrac{\\pi}{2};\\qquad \\sin x = \\dfrac{1}{2} \\Rightarrow x = \\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}",
+                "marks": 1
+              },
+              {
+                "do": "Values at critical points and end points",
+                "math": "\\begin{aligned} f(0) &= 1, \\quad f\\left(\\tfrac{\\pi}{6}\\right) = \\tfrac{3}{4} + \\tfrac{1}{2} = \\tfrac{5}{4}, \\quad f\\left(\\tfrac{\\pi}{2}\\right) = 0 + 1 = 1 \\\\ f\\left(\\tfrac{5\\pi}{6}\\right) &= \\tfrac{3}{4} + \\tfrac{1}{2} = \\tfrac{5}{4}, \\quad f(\\pi) = 1 + 0 = 1 \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "Compare the values",
+                "math": "\\text{Absolute max} = \\dfrac{5}{4} \\text{ at } x = \\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6};\\qquad \\text{Absolute min} = 1 \\text{ at } x = 0, \\dfrac{\\pi}{2}, \\pi",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Missing $x = \\dfrac{5\\pi}{6}$: $\\sin x = \\dfrac{1}{2}$ has two solutions in $[0, \\pi]$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Ex 6.3 Q14",
+          "question": "Find two positive numbers $x$ and $y$ such that $x + y = 60$ and $xy^3$ is maximum.",
+          "solution": {
+            "answer": "$x = 15$, $y = 45$",
+            "concept": "Write the product in one variable, then $P' = 0$ and $P'' < 0$.",
+            "steps": [
+              {
+                "do": "Put $x = 60 - y$; let $P = xy^3$",
+                "math": "P = (60 - y)y^3 = 60y^3 - y^4",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate and put $\\dfrac{dP}{dy} = 0$",
+                "math": "\\dfrac{dP}{dy} = 180y^2 - 4y^3 = 4y^2(45 - y) = 0 \\;\\Rightarrow\\; y = 45",
+                "why": "$y > 0$, so $y \\neq 0$",
+                "marks": 0.5
+              },
+              {
+                "do": "Second derivative test",
+                "math": "\\dfrac{d^2P}{dy^2} = 360y - 12y^2 = 16200 - 24300 = -8100 < 0",
+                "marks": 0.5
+              },
+              {
+                "do": "So $P$ is maximum at $y = 45$; hence the numbers are",
+                "math": "x = 60 - 45 = 15,\\qquad y = 45",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $P$ in terms of $x$ and then mixing up which number is $15$ and which is $45$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Show that the isosceles triangle of maximum area that can be inscribed in a circle of radius $r$ is an equilateral triangle. Also find its maximum area.",
+          "solution": {
+            "answer": "Maximum area when all sides are $\\sqrt{3}\\,r$ (equilateral); maximum area $= \\dfrac{3\\sqrt{3}}{4}r^2$",
+            "concept": "Area and (area)$^2$ are maximum together, so maximise $S = A^2$.",
+            "figure": "figs/pb-q15-triangle-in-circle.svg",
+            "steps": [
+              {
+                "do": "Let $AB = AC$; altitude $AD$ passes through centre $O$; let $OD = x$",
+                "math": "AD = r + x,\\qquad BD = \\sqrt{OB^2 - OD^2} = \\sqrt{r^2 - x^2}",
+                "marks": 1
+              },
+              {
+                "do": "Area of the triangle",
+                "math": "A = \\dfrac{1}{2}\\cdot BC\\cdot AD = (r + x)\\sqrt{r^2 - x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $S = A^2$",
+                "math": "S = (r + x)^2(r^2 - x^2) = (r + x)^3(r - x)",
+                "why": "$A > 0$, so $A$ and $A^2$ are maximum together",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$",
+                "math": "\\dfrac{dS}{dx} = 3(r + x)^2(r - x) - (r + x)^3 = (r + x)^2(2r - 4x)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\dfrac{dS}{dx} = 0$ ($r + x \\neq 0$)",
+                "math": "x = \\dfrac{r}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Second derivative at $x = \\dfrac{r}{2}$",
+                "math": "\\dfrac{d^2S}{dx^2} = 2(r + x)(2r - 4x) - 4(r + x)^2 = 0 - 4\\cdot\\dfrac{9r^2}{4} = -9r^2 < 0",
+                "marks": 1
+              },
+              {
+                "do": "So the area is maximum at $x = \\dfrac{r}{2}$; find the sides",
+                "math": "\\begin{aligned} AD &= \\tfrac{3r}{2}, \\quad BD = \\tfrac{\\sqrt{3}\\,r}{2} \\;\\Rightarrow\\; BC = \\sqrt{3}\\,r \\\\ AB &= \\sqrt{AD^2 + BD^2} = \\sqrt{\\tfrac{9r^2}{4} + \\tfrac{3r^2}{4}} = \\sqrt{3}\\,r \\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "$AB = AC = BC$: the triangle is equilateral; maximum area",
+                "math": "A = AD\\cdot BD = \\dfrac{3r}{2}\\cdot\\dfrac{\\sqrt{3}\\,r}{2} = \\dfrac{3\\sqrt{3}}{4}r^2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $AD = r - x$; the vertex $A$ is on the far side of $O$ from $BC$, so $AD = r + x$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Misc. Ex. Q15",
+          "question": "Show that the height of the cylinder of greatest volume which can be inscribed in a right circular cone of height $h$ and semi-vertical angle $\\alpha$ is one-third that of the cone and the greatest volume of the cylinder is $\\dfrac{4}{27}\\pi h^3\\tan^2\\alpha$.",
+          "solution": {
+            "answer": "Height of cylinder $= \\dfrac{h}{3}$; greatest volume $= \\dfrac{4}{27}\\pi h^3\\tan^2\\alpha$",
+            "concept": "Use similar triangles to write the cylinder's height in terms of its radius, then maximise $V$.",
+            "figure": "figs/pb-q16-cylinder-in-cone.svg",
+            "steps": [
+              {
+                "do": "Let the cylinder have radius $x$ and height $H$; the cone's radius at height $H$ is $(h - H)\\tan\\alpha$",
+                "math": "x = (h - H)\\tan\\alpha \\;\\Rightarrow\\; H = h - x\\cot\\alpha",
+                "marks": 1
+              },
+              {
+                "do": "Volume of the cylinder",
+                "math": "V = \\pi x^2 H = \\pi\\left(hx^2 - x^3\\cot\\alpha\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$",
+                "math": "\\dfrac{dV}{dx} = \\pi\\left(2hx - 3x^2\\cot\\alpha\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\dfrac{dV}{dx} = 0$ ($x \\neq 0$)",
+                "math": "x = \\dfrac{2h}{3\\cot\\alpha} = \\dfrac{2h}{3}\\tan\\alpha",
+                "marks": 0.5
+              },
+              {
+                "do": "Second derivative test",
+                "math": "\\dfrac{d^2V}{dx^2} = \\pi\\left(2h - 6x\\cot\\alpha\\right) = \\pi(2h - 4h) = -2\\pi h < 0",
+                "marks": 1
+              },
+              {
+                "do": "So $V$ is greatest; height of the cylinder",
+                "math": "H = h - \\dfrac{2h}{3}\\tan\\alpha\\cot\\alpha = h - \\dfrac{2h}{3} = \\dfrac{h}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Greatest volume",
+                "math": "V = \\pi\\cdot\\dfrac{4h^2\\tan^2\\alpha}{9}\\cdot\\dfrac{h}{3} = \\dfrac{4}{27}\\pi h^3\\tan^2\\alpha",
+                "marks": 1
+              }
+            ],
+            "mistake": "Writing $H = x\\cot\\alpha$; that is the cone's height above the cylinder, not $H$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Ex 6.3 Q22",
+          "question": "A wire of length $28$ m is to be cut into two pieces. One of the pieces is to be made into a square and the other into a circle. What should be the length of the two pieces so that the combined area of the square and the circle is minimum?",
+          "solution": {
+            "answer": "Square piece $= \\dfrac{112}{\\pi + 4}$ m and circle piece $= \\dfrac{28\\pi}{\\pi + 4}$ m",
+            "concept": "Write the total area in one variable using $4a + 2\\pi r = 28$; minimum needs $A' = 0$, $A'' > 0$.",
+            "figure": "figs/pb-q17-wire.svg",
+            "steps": [
+              {
+                "do": "Let the square have side $a$ and the circle radius $r$; total length",
+                "math": "4a + 2\\pi r = 28 \\;\\Rightarrow\\; a = 7 - \\dfrac{\\pi r}{2}",
+                "marks": 1
+              },
+              {
+                "do": "Combined area",
+                "math": "A = a^2 + \\pi r^2 = \\left(7 - \\dfrac{\\pi r}{2}\\right)^2 + \\pi r^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $r$",
+                "math": "\\dfrac{dA}{dr} = 2\\left(7 - \\dfrac{\\pi r}{2}\\right)\\left(-\\dfrac{\\pi}{2}\\right) + 2\\pi r = -7\\pi + \\dfrac{\\pi^2 r}{2} + 2\\pi r",
+                "marks": 1
+              },
+              {
+                "do": "Put $\\dfrac{dA}{dr} = 0$ and divide by $\\pi$",
+                "math": "\\dfrac{\\pi r}{2} + 2r = 7 \\;\\Rightarrow\\; r = \\dfrac{14}{\\pi + 4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Second derivative test",
+                "math": "\\dfrac{d^2A}{dr^2} = \\dfrac{\\pi^2}{2} + 2\\pi > 0",
+                "marks": 1
+              },
+              {
+                "do": "So $A$ is minimum; lengths of the two pieces",
+                "math": "\\begin{aligned} \\text{circle: } 2\\pi r &= \\dfrac{28\\pi}{\\pi + 4}\\ \\text{m} \\\\ \\text{square: } 28 - \\dfrac{28\\pi}{\\pi + 4} &= \\dfrac{112}{\\pi + 4}\\ \\text{m} \\end{aligned}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Giving $r$ or $a$ as the answer; the question asks for the lengths of the two pieces of wire."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q3",
+          "question": "Find the intervals in which the function $f$ given by $f(x) = \\dfrac{4\\sin x - 2x - x\\cos x}{2 + \\cos x}$, $0 \\le x \\le 2\\pi$, is (i) increasing (ii) decreasing.",
+          "solution": {
+            "answer": "(i) Increasing on $\\left(0, \\dfrac{\\pi}{2}\\right) \\cup \\left(\\dfrac{3\\pi}{2}, 2\\pi\\right)$ (ii) decreasing on $\\left(\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}\\right)$",
+            "concept": "Split $f(x) = \\dfrac{4\\sin x}{2 + \\cos x} - x$ before differentiating.",
+            "steps": [
+              {
+                "do": "Split the fraction",
+                "math": "f(x) = \\dfrac{4\\sin x - x(2 + \\cos x)}{2 + \\cos x} = \\dfrac{4\\sin x}{2 + \\cos x} - x",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate (quotient rule)",
+                "math": "f'(x) = \\dfrac{4\\cos x(2 + \\cos x) + 4\\sin^2 x}{(2 + \\cos x)^2} - 1 = \\dfrac{8\\cos x + 4}{(2 + \\cos x)^2} - 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify",
+                "math": "f'(x) = \\dfrac{8\\cos x + 4 - 4 - 4\\cos x - \\cos^2 x}{(2 + \\cos x)^2} = \\dfrac{\\cos x\\,(4 - \\cos x)}{(2 + \\cos x)^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "$4 - \\cos x > 0$ and $(2 + \\cos x)^2 > 0$, so $f'(x)$ has the sign of $\\cos x$",
+                "math": "f'(x) = 0 \\Rightarrow \\cos x = 0 \\Rightarrow x = \\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Sign of $\\cos x$ on the intervals",
+                "math": "\\left(0, \\tfrac{\\pi}{2}\\right): +,\\qquad \\left(\\tfrac{\\pi}{2}, \\tfrac{3\\pi}{2}\\right): -,\\qquad \\left(\\tfrac{3\\pi}{2}, 2\\pi\\right): +",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence",
+                "math": "\\text{(i) increasing on } \\left(0, \\tfrac{\\pi}{2}\\right) \\cup \\left(\\tfrac{3\\pi}{2}, 2\\pi\\right),\\quad \\text{(ii) decreasing on } \\left(\\tfrac{\\pi}{2}, \\tfrac{3\\pi}{2}\\right)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Applying the quotient rule to the whole fraction and getting lost; split off $-x$ first."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A spotlight on the ground shines on a vertical wall $12$ m away. A man $2$ m tall walks from the spotlight straight towards the wall at a speed of $1.6$ m/s. How fast is the height of his shadow on the wall decreasing when he is $4$ m from the wall?",
+          "figure": "figs/pb-q19-spotlight.svg",
+          "solution": {
+            "answer": "The shadow on the wall is decreasing at $0.6$ m/s",
+            "concept": "Similar triangles give $y$ in terms of $x$; then differentiate w.r.t. $t$.",
+            "steps": [
+              {
+                "do": "Let the man be $x$ m from the spotlight and the shadow be $y$ m high; similar triangles",
+                "math": "\\dfrac{y}{12} = \\dfrac{2}{x} \\;\\Rightarrow\\; y = \\dfrac{24}{x}",
+                "marks": 1
+              },
+              {
+                "do": "Differentiate w.r.t. $t$",
+                "math": "\\dfrac{dy}{dt} = -\\dfrac{24}{x^2}\\,\\dfrac{dx}{dt}",
+                "marks": 1
+              },
+              {
+                "do": "$4$ m from the wall means $x = 12 - 4 = 8$; put $\\dfrac{dx}{dt} = 1.6$",
+                "math": "\\dfrac{dy}{dt} = -\\dfrac{24}{64}\\times 1.6 = -0.6",
+                "marks": 0.5
+              },
+              {
+                "do": "Negative sign: the shadow is getting shorter",
+                "math": "\\text{Shadow decreases at } 0.6\\ \\text{m/s}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Putting $x = 4$; $x$ is measured from the spotlight, so $x = 12 - 4 = 8$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2022-23",
+          "question": "**Case Study:** In an elliptical sports field, the authority wants to design a rectangular soccer field with the maximum possible area. The sports field is given by the graph of $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$.",
+          "figure": "figs/pb-q20-ellipse-field.svg",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "If the length and the breadth of the rectangular field are $2x$ and $2y$ respectively, find the area function in terms of $x$.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Find the critical point of the function.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)(a)",
+              "text": "Use the first derivative test to find the length $2x$ and width $2y$ of the soccer field (in terms of $a$ and $b$) that maximise its area.",
+              "marks": 2
+            },
+            {
+              "label": "(iii)(b)",
+              "text": "Use the second derivative test to find the length $2x$ and width $2y$ of the soccer field (in terms of $a$ and $b$) that maximise its area.",
+              "marks": 2,
+              "alt": true
+            }
+          ],
+          "solution": {
+            "concept": "$A$ is maximum where $A'(x) = 0$ and $A'$ changes from $+$ to $-$ (or $A'' < 0$).",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "A corner $P(x, y)$ lies on the ellipse",
+                    "math": "y = \\dfrac{b}{a}\\sqrt{a^2 - x^2}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Area $= 2x \\times 2y$",
+                    "math": "A(x) = \\dfrac{4b}{a}\\,x\\sqrt{a^2 - x^2},\\quad 0 < x < a",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$A(x) = \\dfrac{4b}{a}\\,x\\sqrt{a^2 - x^2}$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Differentiate w.r.t. $x$",
+                    "math": "A'(x) = \\dfrac{4b}{a}\\left[\\sqrt{a^2 - x^2} - \\dfrac{x^2}{\\sqrt{a^2 - x^2}}\\right] = \\dfrac{4b}{a}\\cdot\\dfrac{a^2 - 2x^2}{\\sqrt{a^2 - x^2}}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Put $A'(x) = 0$ ($x > 0$)",
+                    "math": "a^2 - 2x^2 = 0 \\;\\Rightarrow\\; x = \\dfrac{a}{\\sqrt{2}}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Critical point $x = \\dfrac{a}{\\sqrt{2}}$"
+              },
+              {
+                "label": "(iii)(a)",
+                "steps": [
+                  {
+                    "do": "Sign of $A'(x)$ depends on $a^2 - 2x^2$",
+                    "math": "0 < x < \\tfrac{a}{\\sqrt{2}}: A'(x) > 0,\\qquad \\tfrac{a}{\\sqrt{2}} < x < a: A'(x) < 0",
+                    "marks": 1
+                  },
+                  {
+                    "do": "$A'$ changes from $+$ to $-$, so $A$ is maximum at $x = \\dfrac{a}{\\sqrt{2}}$; then",
+                    "math": "y = \\dfrac{b}{a}\\sqrt{a^2 - \\dfrac{a^2}{2}} = \\dfrac{b}{\\sqrt{2}}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Dimensions of the field",
+                    "math": "2x = \\sqrt{2}\\,a,\\qquad 2y = \\sqrt{2}\\,b",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Length $2x = \\sqrt{2}\\,a$, width $2y = \\sqrt{2}\\,b$"
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "steps": [
+                  {
+                    "do": "Differentiate $A'(x) = \\dfrac{4b}{a}(a^2 - 2x^2)(a^2 - x^2)^{-1/2}$ again",
+                    "math": "A''(x) = \\dfrac{4b}{a}\\left[\\dfrac{-4x}{\\sqrt{a^2 - x^2}} + \\dfrac{x(a^2 - 2x^2)}{(a^2 - x^2)^{3/2}}\\right]",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "At $x = \\dfrac{a}{\\sqrt{2}}$: $a^2 - 2x^2 = 0$ and $\\sqrt{a^2 - x^2} = \\dfrac{a}{\\sqrt{2}}$",
+                    "math": "A''\\left(\\tfrac{a}{\\sqrt{2}}\\right) = \\dfrac{4b}{a}\\cdot\\dfrac{-4\\cdot\\frac{a}{\\sqrt{2}}}{\\frac{a}{\\sqrt{2}}} = -\\dfrac{16b}{a} < 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "So $A$ is maximum at $x = \\dfrac{a}{\\sqrt{2}}$; then",
+                    "math": "y = \\dfrac{b}{a}\\sqrt{a^2 - \\dfrac{a^2}{2}} = \\dfrac{b}{\\sqrt{2}}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Dimensions of the field",
+                    "math": "2x = \\sqrt{2}\\,a,\\qquad 2y = \\sqrt{2}\\,b",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Length $2x = \\sqrt{2}\\,a$, width $2y = \\sqrt{2}\\,b$"
+              }
+            ],
+            "answer": "(i) $A(x) = \\dfrac{4b}{a}x\\sqrt{a^2 - x^2}$ (ii) $x = \\dfrac{a}{\\sqrt{2}}$ (iii) length $\\sqrt{2}\\,a$, width $\\sqrt{2}\\,b$ (maximum area $2ab$)",
+            "mistake": "Taking the area as $xy$; the field's length and breadth are $2x$ and $2y$, so $A = 4xy$."
+          }
+        }
+      ]
+    }
+  ]
+}

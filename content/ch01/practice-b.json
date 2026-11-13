@@ -1,0 +1,1009 @@
+{
+  "chapter": 1,
+  "chapterTitle": "Relations and Functions",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 52,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Ex 1.1 Q15",
+          "question": "Let $R$ be the relation in the set $\\{1, 2, 3, 4\\}$ given by $R = \\{(1, 2), (2, 2), (1, 1), (4, 4), (1, 3), (3, 3), (3, 2)\\}$. Then:",
+          "options": [
+            "$R$ is reflexive and symmetric but not transitive",
+            "$R$ is reflexive and transitive but not symmetric",
+            "$R$ is symmetric and transitive but not reflexive",
+            "$R$ is an equivalence relation"
+          ],
+          "solution": {
+            "answer": "(B) $R$ is reflexive and transitive but not symmetric",
+            "concept": "Transitive: whenever $(a, b) \\in R$ and $(b, c) \\in R$, also $(a, c) \\in R$.",
+            "steps": [
+              {
+                "do": "Reflexive: all of $(1,1), (2,2), (3,3), (4,4)$ are in $R$.",
+                "math": "(a, a) \\in R \\ \\text{ for every } a"
+              },
+              {
+                "do": "Symmetric? $(1, 2) \\in R$ but $(2, 1) \\notin R$.",
+                "math": "\\Rightarrow\\; R \\text{ is not symmetric}"
+              },
+              {
+                "do": "Transitive: check every chain $(a, b), (b, c)$ with $a \\ne b \\ne c$.",
+                "math": "(1, 3), (3, 2) \\in R \\;\\Rightarrow\\; (1, 2) \\in R \\ \\checkmark"
+              },
+              {
+                "do": "The other chains end in a pair $(b, b)$, so they give nothing new. $R$ is transitive.",
+                "marks": 1
+              },
+              {
+                "do": "Reflexive and transitive but not symmetric. Option (B)."
+              }
+            ],
+            "mistake": "Missing the chain $(1, 3), (3, 2)$ and calling $R$ not transitive — $(1, 2)$ is present."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Misc. Ex. Q6",
+          "question": "Let $A = \\{1, 2, 3\\}$. Then the number of relations containing $(1, 2)$ and $(1, 3)$ which are reflexive and symmetric but not transitive is:",
+          "options": [
+            "$1$",
+            "$2$",
+            "$3$",
+            "$4$"
+          ],
+          "solution": {
+            "answer": "(A) $1$",
+            "concept": "Build the smallest relation with the required properties, then see what else can be added.",
+            "steps": [
+              {
+                "do": "Reflexive: add all $(a, a)$. Symmetric: add $(2, 1)$ and $(3, 1)$.",
+                "math": "R_1 = \\{(1,1), (2,2), (3,3), (1,2), (2,1), (1,3), (3,1)\\}"
+              },
+              {
+                "do": "$R_1$ is not transitive.",
+                "math": "(2, 1), (1, 3) \\in R_1 \\text{ but } (2, 3) \\notin R_1"
+              },
+              {
+                "do": "The only pairs left are $(2, 3)$ and $(3, 2)$; symmetry forces both together.",
+                "math": "R_1 \\cup \\{(2,3), (3,2)\\} = A \\times A, \\text{ which is transitive}"
+              },
+              {
+                "do": "So $R_1$ is the only such relation.",
+                "math": "\\text{Number of relations} = 1",
+                "marks": 1
+              },
+              {
+                "do": "Option (A)."
+              }
+            ],
+            "mistake": "Adding $(2, 3)$ alone — symmetry then forces $(3, 2)$, giving $A \\times A$, which is transitive."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "Let $f : \\mathbb{R}_+ \\to [-5, \\infty)$ be defined as $f(x) = 9x^2 + 6x - 5$, where $\\mathbb{R}_+$ is the set of all non-negative real numbers. Then $f$ is:",
+          "options": [
+            "one-one but not onto",
+            "onto but not one-one",
+            "bijective",
+            "neither one-one nor onto"
+          ],
+          "solution": {
+            "answer": "(C) bijective",
+            "concept": "Complete the square: $9x^2 + 6x - 5 = (3x + 1)^2 - 6$.",
+            "steps": [
+              {
+                "do": "Complete the square.",
+                "math": "f(x) = (3x + 1)^2 - 6"
+              },
+              {
+                "do": "One-one: $f(x_1) = f(x_2)$ with $x_1, x_2 \\ge 0$.",
+                "math": "(3x_1 + 1)^2 = (3x_2 + 1)^2 \\;\\Rightarrow\\; 3x_1 + 1 = 3x_2 + 1 \\;\\Rightarrow\\; x_1 = x_2",
+                "why": "both $3x_1 + 1$ and $3x_2 + 1$ are positive"
+              },
+              {
+                "do": "Onto: for $y \\ge -5$, solve $f(x) = y$.",
+                "math": "x = \\dfrac{\\sqrt{y + 6} - 1}{3} \\ge 0 \\quad (\\text{as } y + 6 \\ge 1)",
+                "marks": 1
+              },
+              {
+                "do": "One-one and onto, so $f$ is bijective. Option (C)."
+              }
+            ],
+            "mistake": "Calling it many-one like $x^2$ on $\\mathbb{R}$ — on $x \\ge 0$ the bracket $3x + 1$ never changes sign."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2024 (65/3/3) Q8",
+          "question": "Let $\\mathbb{Z}$ denote the set of integers, then function $f : \\mathbb{Z} \\to \\mathbb{Z}$ defined as $f(x) = x^3 - 1$ is:",
+          "options": [
+            "both one-one and onto",
+            "one-one but not onto",
+            "onto but not one-one",
+            "neither one-one nor onto"
+          ],
+          "solution": {
+            "answer": "(B) one-one but not onto",
+            "concept": "Onto needs a pre-image **inside the domain** $\\mathbb{Z}$ for every integer in the codomain.",
+            "steps": [
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$.",
+                "math": "x_1^3 - 1 = x_2^3 - 1 \\;\\Rightarrow\\; x_1^3 = x_2^3 \\;\\Rightarrow\\; x_1 = x_2"
+              },
+              {
+                "do": "Onto? Take $y = 1$ in the codomain.",
+                "math": "x^3 - 1 = 1 \\;\\Rightarrow\\; x = \\sqrt[3]{2} \\notin \\mathbb{Z}",
+                "marks": 1
+              },
+              {
+                "do": "So $1$ has no pre-image in $\\mathbb{Z}$: $f$ is not onto."
+              },
+              {
+                "do": "One-one but not onto. Option (B)."
+              }
+            ],
+            "mistake": "Thinking ‘cubes are onto’ — that is true on $\\mathbb{R}$, not on $\\mathbb{Z}$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Ex 1.3 Q35",
+          "question": "If the set $A$ contains $5$ elements and the set $B$ contains $6$ elements, then the number of one-one and onto mappings from $A$ to $B$ is:",
+          "options": [
+            "$720$",
+            "$120$",
+            "$0$",
+            "none of these"
+          ],
+          "solution": {
+            "answer": "(C) $0$",
+            "concept": "A one-one map from an $m$-element set has exactly $m$ images.",
+            "steps": [
+              {
+                "do": "A one-one map from $A$ uses exactly $5$ different images.",
+                "math": "n(\\text{range}) = 5"
+              },
+              {
+                "do": "But onto needs all $6$ elements of $B$ as images.",
+                "math": "5 < 6 \\;\\Rightarrow\\; \\text{not onto}",
+                "marks": 1
+              },
+              {
+                "do": "So the number of one-one and onto maps is $0$. Option (C)."
+              }
+            ],
+            "mistake": "Answering ${}^6P_5 = 720$ — that counts one-one maps, none of which is onto."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** The relation $R = \\{(a, b) : ab > 0\\}$ on the set $\\mathbb{R}$ of real numbers is symmetric and transitive but not reflexive. **Reason (R):** Every relation which is symmetric and transitive is also reflexive.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(C) A is true, but R is false",
+            "concept": "Symmetric and transitive give $(a, a)$ only for those $a$ that are related to some $b$.",
+            "steps": [
+              {
+                "do": "Check A: $R$ is symmetric and transitive.",
+                "math": "ab > 0 \\Rightarrow ba > 0; \\qquad ab > 0,\\ bc > 0 \\Rightarrow ab^2c > 0 \\Rightarrow ac > 0",
+                "why": "$b \\ne 0$, so $b^2 > 0$"
+              },
+              {
+                "do": "But $R$ is not reflexive, so A is true.",
+                "math": "0 \\cdot 0 = 0 \\not> 0 \\;\\Rightarrow\\; (0, 0) \\notin R"
+              },
+              {
+                "do": "Check R: the relation in A itself is symmetric and transitive but not reflexive.",
+                "math": "\\text{So R is false}",
+                "marks": 1
+              },
+              {
+                "do": "A false statement cannot explain A."
+              },
+              {
+                "do": "A is true, R is false. Option (C)."
+              }
+            ],
+            "mistake": "‘Proving’ reflexivity from $(a, b), (b, a) \\in R$ — it fails for $a = 0$, which is related to nothing."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Show that the function $f : \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = 4x^3 + 5$ is both one-one and onto.",
+          "solution": {
+            "answer": "$f$ is one-one and onto (bijective).",
+            "concept": "Every real number has exactly one real cube root.",
+            "steps": [
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$.",
+                "math": "4x_1^3 + 5 = 4x_2^3 + 5 \\;\\Rightarrow\\; x_1^3 = x_2^3"
+              },
+              {
+                "do": "Take cube roots.",
+                "math": "x_1 = x_2 \\;\\Rightarrow\\; f \\text{ is one-one}",
+                "marks": 1
+              },
+              {
+                "do": "Onto: let $y \\in \\mathbb{R}$ and solve $f(x) = y$.",
+                "math": "x = \\sqrt[3]{\\dfrac{y - 5}{4}} \\in \\mathbb{R}",
+                "why": "a cube root of any real number is real",
+                "marks": 0.5
+              },
+              {
+                "do": "Check the pre-image.",
+                "math": "f(x) = 4 \\cdot \\dfrac{y - 5}{4} + 5 = y",
+                "marks": 0.5
+              },
+              {
+                "do": "Every $y$ has a pre-image. Hence $f$ is one-one and onto."
+              }
+            ],
+            "mistake": "Writing $x_1^3 = x_2^3 \\Rightarrow x_1 = \\pm x_2$ — that is for squares, not cubes."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Show that the relation $R$ on the set $\\mathbb{Z}$ of integers, given by $R = \\{(a, b) : a^2 + b^2 \\text{ is divisible by } 2\\}$, is an equivalence relation.",
+          "solution": {
+            "answer": "$R$ is reflexive, symmetric and transitive, hence an equivalence relation.",
+            "concept": "An equivalence relation is reflexive, symmetric and transitive.",
+            "steps": [
+              {
+                "do": "Reflexive: put $b = a$.",
+                "math": "a^2 + a^2 = 2a^2, \\text{ divisible by } 2 \\;\\Rightarrow\\; (a, a) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: let $(a, b) \\in R$.",
+                "math": "b^2 + a^2 = a^2 + b^2, \\text{ divisible by } 2 \\;\\Rightarrow\\; (b, a) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: let $a^2 + b^2 = 2k$ and $b^2 + c^2 = 2m$. Add them.",
+                "math": "a^2 + 2b^2 + c^2 = 2(k + m)"
+              },
+              {
+                "do": "Rearrange.",
+                "math": "a^2 + c^2 = 2(k + m - b^2) \\;\\Rightarrow\\; (a, c) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $a^2 + c^2 = 2(k + m)$ — the $2b^2$ term must be taken across first."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024 (65/4/1) Q33(b)",
+          "question": "Check whether the relation $S$ in the set of real numbers $\\mathbb{R}$ defined by $S = \\{(a, b) : a - b + \\sqrt{2} \\text{ is an irrational number}\\}$ is reflexive, symmetric or transitive.",
+          "solution": {
+            "answer": "$S$ is reflexive, but neither symmetric nor transitive.",
+            "concept": "One counter-example is enough to disprove a property.",
+            "steps": [
+              {
+                "do": "Reflexive: for every $a \\in \\mathbb{R}$.",
+                "math": "a - a + \\sqrt{2} = \\sqrt{2}, \\text{ irrational} \\;\\Rightarrow\\; (a, a) \\in S",
+                "marks": 1
+              },
+              {
+                "do": "Symmetric? Take $a = \\sqrt{2}$, $b = 0$.",
+                "math": "\\sqrt{2} - 0 + \\sqrt{2} = 2\\sqrt{2} \\text{ (irrational)} \\;\\Rightarrow\\; (\\sqrt{2}, 0) \\in S"
+              },
+              {
+                "do": "Reverse the pair.",
+                "math": "0 - \\sqrt{2} + \\sqrt{2} = 0 \\text{ (rational)} \\;\\Rightarrow\\; (0, \\sqrt{2}) \\notin S",
+                "marks": 1
+              },
+              {
+                "do": "So $S$ is not symmetric."
+              },
+              {
+                "do": "Transitive? Take $a = \\sqrt{2}$, $b = 1$, $c = 2\\sqrt{2}$.",
+                "math": "a - b + \\sqrt{2} = 2\\sqrt{2} - 1, \\quad b - c + \\sqrt{2} = 1 - \\sqrt{2} \\quad (\\text{both irrational})"
+              },
+              {
+                "do": "So $(a, b), (b, c) \\in S$. But:",
+                "math": "a - c + \\sqrt{2} = \\sqrt{2} - 2\\sqrt{2} + \\sqrt{2} = 0 \\;\\Rightarrow\\; (a, c) \\notin S",
+                "marks": 1
+              },
+              {
+                "do": "Hence $S$ is reflexive, but neither symmetric nor transitive."
+              }
+            ],
+            "mistake": "Testing only rational numbers — every counter-example here needs $\\sqrt{2}$ to cancel."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Let $A = \\{1, 2, 3, \\ldots, 12\\}$ and $R$ be the relation in $A \\times A$ defined by $(a, b)\\,R\\,(c, d)$ if $ab = cd$. Prove that $R$ is an equivalence relation and obtain the equivalence class $[(3, 4)]$.",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; $[(3, 4)] = \\{(1, 12), (2, 6), (3, 4), (4, 3), (6, 2), (12, 1)\\}$",
+            "concept": "$[(a, b)]$ is the set of all pairs in $A \\times A$ related to $(a, b)$.",
+            "steps": [
+              {
+                "do": "Reflexive: for any $(a, b) \\in A \\times A$.",
+                "math": "ab = ab \\;\\Rightarrow\\; (a, b)\\,R\\,(a, b)",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: let $(a, b)\\,R\\,(c, d)$.",
+                "math": "ab = cd \\;\\Rightarrow\\; cd = ab \\;\\Rightarrow\\; (c, d)\\,R\\,(a, b)",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: let $(a, b)\\,R\\,(c, d)$ and $(c, d)\\,R\\,(e, f)$.",
+                "math": "ab = cd = ef \\;\\Rightarrow\\; (a, b)\\,R\\,(e, f)",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              },
+              {
+                "do": "$[(3, 4)]$ has every pair in $A \\times A$ with product $3 \\times 4 = 12$.",
+                "math": "[(3, 4)] = \\{(a, b) \\in A \\times A : ab = 12\\}"
+              },
+              {
+                "do": "List the factor pairs of $12$ with both factors in $A$.",
+                "math": "[(3, 4)] = \\{(1, 12), (2, 6), (3, 4), (4, 3), (6, 2), (12, 1)\\}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Forgetting $(1, 12)$ and $(12, 1)$ — $12 \\in A$, so they belong to the class."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Let $f : \\mathbb{N} \\to \\mathbb{Z}$ be defined by $f(n) = \\begin{cases} \\dfrac{n - 1}{2}, & \\text{if } n \\text{ is odd} \\\\ -\\dfrac{n}{2}, & \\text{if } n \\text{ is even} \\end{cases}$. Show that $f$ is both one-one and onto.",
+          "solution": {
+            "answer": "$f$ is both one-one and onto (bijective).",
+            "concept": "Odd $n$ give images $\\ge 0$; even $n$ give images $< 0$.",
+            "steps": [
+              {
+                "do": "Note the signs of the images.",
+                "math": "n \\text{ odd} \\Rightarrow f(n) = \\dfrac{n - 1}{2} \\ge 0, \\qquad n \\text{ even} \\Rightarrow f(n) = -\\dfrac{n}{2} < 0"
+              },
+              {
+                "do": "One-one: let $f(n_1) = f(n_2)$. Both odd:",
+                "math": "\\dfrac{n_1 - 1}{2} = \\dfrac{n_2 - 1}{2} \\;\\Rightarrow\\; n_1 = n_2",
+                "marks": 0.5
+              },
+              {
+                "do": "Both even:",
+                "math": "-\\dfrac{n_1}{2} = -\\dfrac{n_2}{2} \\;\\Rightarrow\\; n_1 = n_2",
+                "marks": 0.5
+              },
+              {
+                "do": "One odd, one even: one image is $\\ge 0$, the other $< 0$.",
+                "math": "f(n_1) \\ne f(n_2), \\text{ so this case cannot occur}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $f$ is one-one."
+              },
+              {
+                "do": "Onto: let $y \\in \\mathbb{Z}$. If $y \\ge 0$, take the odd number $n = 2y + 1$.",
+                "math": "f(2y + 1) = \\dfrac{2y + 1 - 1}{2} = y",
+                "marks": 0.5
+              },
+              {
+                "do": "If $y < 0$, take the even natural number $n = -2y$.",
+                "math": "f(-2y) = -\\dfrac{-2y}{2} = y",
+                "marks": 0.5
+              },
+              {
+                "do": "Every integer has a pre-image in $\\mathbb{N}$. Hence $f$ is one-one and onto.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "For $y < 0$ taking $n = 2y$, which is negative — use $n = -2y$, a natural number."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Show that the function $f : \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = \\dfrac{x^2}{1 + x^2}$ is neither one-one nor onto. Further, find the set $A$ so that $f : \\mathbb{R} \\to A$ becomes an onto function.",
+          "solution": {
+            "answer": "Neither one-one nor onto; $A = [0, 1)$.",
+            "concept": "Range of $f$: the set of $y$ for which $f(x) = y$ has a real solution $x$.",
+            "steps": [
+              {
+                "do": "Not one-one: compare $x = 1$ and $x = -1$.",
+                "math": "f(1) = \\dfrac{1}{2} = f(-1), \\ \\text{but } 1 \\ne -1",
+                "marks": 1
+              },
+              {
+                "do": "Not onto: $x^2 \\ge 0$ and $1 + x^2 > 0$, so $f(x) \\ge 0$.",
+                "math": "-1 \\in \\mathbb{R} \\text{ has no pre-image} \\;\\Rightarrow\\; f \\text{ is not onto}",
+                "marks": 1
+              },
+              {
+                "do": "Let $f(x) = y$ and solve for $x^2$.",
+                "math": "x^2 = y + yx^2 \\;\\Rightarrow\\; x^2(1 - y) = y"
+              },
+              {
+                "do": "$y = 1$ gives $0 = 1$, impossible. For $y \\ne 1$:",
+                "math": "x^2 = \\dfrac{y}{1 - y}"
+              },
+              {
+                "do": "Real $x$ needs $x^2 \\ge 0$.",
+                "math": "\\dfrac{y}{1 - y} \\ge 0 \\;\\Rightarrow\\; 0 \\le y < 1"
+              },
+              {
+                "do": "So the range of $f$ is $[0, 1)$. Take $A$ equal to it.",
+                "math": "A = [0, 1)",
+                "marks": 1,
+                "figure": "figs/pb-q12-graph.svg"
+              }
+            ],
+            "mistake": "Writing $A = [0, 1]$ — $f(x) = 1$ needs $x^2 = 1 + x^2$, which is impossible."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Let $A = \\mathbb{R} - \\{-1\\}$ and $f : A \\to \\mathbb{R} - \\{b\\}$ be defined by $f(x) = \\dfrac{2x - 3}{x + 1}$. Find the value of $b$ for which $f$ is onto. For this $b$, show that $f$ is also one-one.",
+          "solution": {
+            "answer": "$b = 2$; $f$ is one-one and onto.",
+            "concept": "$b$ is the one real number that $f(x)$ can never equal.",
+            "steps": [
+              {
+                "do": "Let $f(x) = y$ and solve for $x$.",
+                "math": "2x - 3 = xy + y \\;\\Rightarrow\\; x(2 - y) = y + 3 \\;\\Rightarrow\\; x = \\dfrac{y + 3}{2 - y}"
+              },
+              {
+                "do": "This fails only at $y = 2$; check it directly.",
+                "math": "\\dfrac{2x - 3}{x + 1} = 2 \\;\\Rightarrow\\; 2x - 3 = 2x + 2 \\;\\Rightarrow\\; -3 = 2"
+              },
+              {
+                "do": "Impossible, so $2$ is never an image. Hence $b = 2$.",
+                "marks": 1
+              },
+              {
+                "do": "Onto: for $y \\ne 2$, the pre-image $x = \\dfrac{y + 3}{2 - y}$ is never $-1$.",
+                "math": "\\dfrac{y + 3}{2 - y} = -1 \\;\\Rightarrow\\; y + 3 = y - 2, \\text{ impossible}"
+              },
+              {
+                "do": "Check $f(x) = y$ (multiply top and bottom by $2 - y$).",
+                "math": "f(x) = \\dfrac{2(y + 3) - 3(2 - y)}{(y + 3) + (2 - y)} = \\dfrac{5y}{5} = y",
+                "marks": 1
+              },
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$ and cross-multiply.",
+                "math": "(2x_1 - 3)(x_2 + 1) = (2x_2 - 3)(x_1 + 1)",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand and cancel $2x_1x_2 - 3$.",
+                "math": "5x_1 = 5x_2 \\;\\Rightarrow\\; x_1 = x_2",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence with $b = 2$, $f$ is one-one and onto."
+              }
+            ],
+            "mistake": "Not checking that the pre-image $\\dfrac{y + 3}{2 - y}$ avoids $-1$, the excluded point of the domain."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Exemplar Ex 1.3 Q17",
+          "question": "Let $R$ be the relation defined on the set of natural numbers $\\mathbb{N}$ as $R = \\{(x, y) : x \\in \\mathbb{N}, y \\in \\mathbb{N}, 2x + y = 41\\}$. Find the domain and range of the relation $R$. Also verify whether $R$ is reflexive, symmetric and transitive.",
+          "solution": {
+            "answer": "Domain $= \\{1, 2, \\ldots, 20\\}$, range $= \\{1, 3, 5, \\ldots, 39\\}$; $R$ is neither reflexive, nor symmetric, nor transitive.",
+            "concept": "$y = 41 - 2x$ must be a natural number, so $x \\le 20$.",
+            "steps": [
+              {
+                "do": "$y = 41 - 2x \\ge 1 \\Rightarrow x \\le 20$. List domain and range.",
+                "math": "\\text{Domain} = \\{1, 2, \\ldots, 20\\}, \\quad \\text{Range} = \\{39, 37, \\ldots, 3, 1\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "Reflexive? $(1, 1)$:",
+                "math": "2(1) + 1 = 3 \\ne 41 \\;\\Rightarrow\\; (1, 1) \\notin R",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric? $(1, 39) \\in R$, but:",
+                "math": "2(39) + 1 = 79 \\ne 41 \\;\\Rightarrow\\; (39, 1) \\notin R",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive? $(11, 19), (19, 3) \\in R$, but:",
+                "math": "2(11) + 3 = 25 \\ne 41 \\;\\Rightarrow\\; (11, 3) \\notin R",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is neither reflexive, nor symmetric, nor transitive."
+              }
+            ],
+            "mistake": "Taking $x$ up to $41$ — $x = 21$ already gives $y = -1 \\notin \\mathbb{N}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Ex 1.1 Q11",
+          "question": "Show that the relation $R$ in the set $A$ of points in a plane given by $R = \\{(P, Q) : \\text{distance of the point } P \\text{ from the origin is same as the distance of the point } Q \\text{ from the origin}\\}$, is an equivalence relation. Further, show that the set of all points related to a point $P \\ne (0, 0)$ is the circle passing through $P$ with origin as centre.",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; points related to $P$ form the circle with centre $O$ and radius $OP$.",
+            "concept": "With $O$ the origin, $(P, Q) \\in R \\iff OP = OQ$.",
+            "steps": [
+              {
+                "do": "Reflexive: for every point $P$.",
+                "math": "OP = OP \\;\\Rightarrow\\; (P, P) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Symmetric: let $(P, Q) \\in R$.",
+                "math": "OP = OQ \\;\\Rightarrow\\; OQ = OP \\;\\Rightarrow\\; (Q, P) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: let $(P, Q), (Q, S) \\in R$.",
+                "math": "OP = OQ = OS \\;\\Rightarrow\\; (P, S) \\in R",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              },
+              {
+                "do": "Points related to $P$: all $Q$ with $OQ = OP$.",
+                "math": "\\{Q : OQ = OP\\}"
+              },
+              {
+                "do": "So these points form the circle with centre $O$ and radius $OP$, passing through $P$.",
+                "marks": 1,
+                "figure": "figs/pb-q15-sol.svg"
+              }
+            ],
+            "mistake": "Describing the set as ‘a circle’ without naming its centre $O$ and radius $OP$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2026-27 Q32(A)",
+          "question": "Let $A = \\mathbb{N} \\times \\mathbb{N}$, where $\\mathbb{N}$ is the set of natural numbers and a relation $R$ is defined on $A$ such that $(a, b)\\,R\\,(c, d)$ if and only if $a^2 + d^2 = b^2 + c^2$. Check whether $R$ is an equivalence relation or not.",
+          "solution": {
+            "answer": "$R$ is reflexive, symmetric and transitive, hence an equivalence relation.",
+            "concept": "Rewrite the condition as $a^2 - b^2 = c^2 - d^2$.",
+            "steps": [
+              {
+                "do": "Rearrange the defining condition.",
+                "math": "(a, b)\\,R\\,(c, d) \\iff a^2 - b^2 = c^2 - d^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Reflexive: for any $(a, b) \\in A$.",
+                "math": "a^2 + b^2 = b^2 + a^2 \\;\\Rightarrow\\; (a, b)\\,R\\,(a, b)",
+                "marks": 1
+              },
+              {
+                "do": "Symmetric: let $(a, b)\\,R\\,(c, d)$.",
+                "math": "a^2 + d^2 = b^2 + c^2 \\;\\Rightarrow\\; c^2 + b^2 = d^2 + a^2",
+                "marks": 0.5
+              },
+              {
+                "do": "This is the condition for $(c, d)\\,R\\,(a, b)$. So $R$ is symmetric.",
+                "marks": 0.5
+              },
+              {
+                "do": "Transitive: let $(a, b)\\,R\\,(c, d)$ and $(c, d)\\,R\\,(e, f)$.",
+                "math": "a^2 - b^2 = c^2 - d^2 \\quad \\text{and} \\quad c^2 - d^2 = e^2 - f^2"
+              },
+              {
+                "do": "Equate the two results.",
+                "math": "a^2 - b^2 = e^2 - f^2",
+                "marks": 1
+              },
+              {
+                "do": "Rearrange.",
+                "math": "a^2 + f^2 = b^2 + e^2 \\;\\Rightarrow\\; (a, b)\\,R\\,(e, f)",
+                "marks": 1
+              },
+              {
+                "do": "So $R$ is transitive. Hence $R$ is an equivalence relation.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the symmetric condition as $c^2 + d^2 = a^2 + b^2$ — for $(c, d)\\,R\\,(a, b)$ it is $c^2 + b^2 = d^2 + a^2$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Exemplar Ex 1.3 Q21",
+          "question": "Let $A = [-1, 1]$. Discuss whether the following functions from $A$ to $A$ are one-one, onto or bijective:",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "$f(x) = \\dfrac{x}{2}$",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "$g(x) = |x|$",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "$h(x) = x|x|$",
+              "marks": 2
+            },
+            {
+              "label": "(iv)",
+              "text": "$k(x) = x^2$",
+              "marks": 1
+            }
+          ],
+          "solution": {
+            "answer": "(i) one-one, not onto (ii) neither one-one nor onto (iii) bijective (iv) neither one-one nor onto",
+            "concept": "Onto $A \\to A$ means the range must be the whole of $[-1, 1]$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "One-one: $\\dfrac{x_1}{2} = \\dfrac{x_2}{2} \\Rightarrow x_1 = x_2$.",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Onto? For $x \\in [-1, 1]$, $f(x) \\in \\left[-\\dfrac{1}{2}, \\dfrac{1}{2}\\right]$. So $1 \\in A$ has no pre-image.",
+                    "math": "f(x) = 1 \\;\\Rightarrow\\; x = 2 \\notin A",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence $f$ is one-one but not onto."
+                  }
+                ],
+                "answer": "One-one but not onto."
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Not one-one:",
+                    "math": "g(-1) = g(1) = 1, \\ \\text{but } -1 \\ne 1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Not onto: $|x| \\ge 0$, so $-1 \\in A$ has no pre-image.",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence $g$ is neither one-one nor onto."
+                  }
+                ],
+                "answer": "Neither one-one nor onto."
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Remove the modulus.",
+                    "math": "h(x) = \\begin{cases} x^2, & 0 \\le x \\le 1 \\\\ -x^2, & -1 \\le x < 0 \\end{cases}"
+                  },
+                  {
+                    "do": "One-one: if $x_1, x_2$ have the same sign, $x_1^2 = x_2^2 \\Rightarrow x_1 = x_2$.",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "If the signs differ, one image is $\\ge 0$ and the other $< 0$.",
+                    "math": "h(x_1) \\ne h(x_2) \\;\\Rightarrow\\; h \\text{ is one-one}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Onto: for $0 \\le y \\le 1$, take $x = \\sqrt{y} \\in A$.",
+                    "math": "h(\\sqrt{y}) = \\left(\\sqrt{y}\\right)^2 = y"
+                  },
+                  {
+                    "do": "For $-1 \\le y < 0$, take $x = -\\sqrt{-y} \\in A$.",
+                    "math": "h(-\\sqrt{-y}) = -\\left(\\sqrt{-y}\\right)^2 = -(-y) = y",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Every $y \\in A$ has a pre-image. Hence $h$ is bijective.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Bijective (one-one and onto)."
+              },
+              {
+                "label": "(iv)",
+                "steps": [
+                  {
+                    "do": "Not one-one:",
+                    "math": "k(-1) = k(1) = 1, \\ \\text{but } -1 \\ne 1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Not onto: $x^2 \\ge 0$, so $-1 \\in A$ has no pre-image.",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence $k$ is neither one-one nor onto."
+                  }
+                ],
+                "answer": "Neither one-one nor onto."
+              }
+            ],
+            "mistake": "Calling $f(x) = \\dfrac{x}{2}$ onto — it only reaches $\\left[-\\dfrac{1}{2}, \\dfrac{1}{2}\\right]$, not all of $A$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "Let $A = \\{x \\in \\mathbb{Z} : 0 \\le x \\le 10\\}$. Show that the relation $R = \\{(a, b) : a, b \\in A,\\ a^2 - b^2 \\text{ is divisible by } 5\\}$ is an equivalence relation on $A$. Write the equivalence classes $[1]$ and $[2]$. How many distinct equivalence classes does $R$ have?",
+          "solution": {
+            "answer": "$R$ is an equivalence relation; $[1] = \\{1, 4, 6, 9\\}$, $[2] = \\{2, 3, 7, 8\\}$; $3$ classes.",
+            "concept": "$a$ and $b$ are related exactly when $a^2$ and $b^2$ leave the same remainder on division by $5$.",
+            "steps": [
+              {
+                "do": "Reflexive: for every $a \\in A$.",
+                "math": "a^2 - a^2 = 0, \\text{ divisible by } 5 \\;\\Rightarrow\\; (a, a) \\in R",
+                "marks": 1
+              },
+              {
+                "do": "Symmetric: let $a^2 - b^2 = 5k$.",
+                "math": "b^2 - a^2 = 5(-k) \\;\\Rightarrow\\; (b, a) \\in R",
+                "marks": 1
+              },
+              {
+                "do": "Transitive: let $a^2 - b^2 = 5k$ and $b^2 - c^2 = 5m$. Add them.",
+                "math": "a^2 - c^2 = 5(k + m) \\;\\Rightarrow\\; (a, c) \\in R",
+                "marks": 1
+              },
+              {
+                "do": "Hence $R$ is an equivalence relation."
+              },
+              {
+                "do": "Remainders of $a^2$ on division by $5$ for $a = 0, 1, \\ldots, 10$:",
+                "math": "0,\\ 1,\\ 4,\\ 4,\\ 1,\\ 0,\\ 1,\\ 4,\\ 4,\\ 1,\\ 0",
+                "marks": 0.5
+              },
+              {
+                "do": "$[1]$: all $b$ with remainder $1$, like $1^2$.",
+                "math": "[1] = \\{1, 4, 6, 9\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "$[2]$: all $b$ with remainder $4$, like $2^2$.",
+                "math": "[2] = \\{2, 3, 7, 8\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "The rest form $[0] = \\{0, 5, 10\\}$. So $R$ has $3$ distinct equivalence classes.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Putting $3$ in $[1]$ — $3^2 - 1^2 = 8$ is not divisible by $5$; check squares, not the numbers."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Show that the function $f : [1, 3] \\to \\mathbb{R}$ defined by $f(x) = x^2 - 2x + 3$ is one-one. Also find the range of $f$.",
+          "solution": {
+            "answer": "$f$ is one-one; range of $f = [2, 6]$.",
+            "concept": "$x^2 - 2x + 3 = (x - 1)^2 + 2$, and $x - 1 \\ge 0$ on $[1, 3]$.",
+            "steps": [
+              {
+                "do": "One-one: let $f(x_1) = f(x_2)$ for $x_1, x_2 \\in [1, 3]$.",
+                "math": "x_1^2 - x_2^2 - 2(x_1 - x_2) = 0 \\;\\Rightarrow\\; (x_1 - x_2)(x_1 + x_2 - 2) = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "$x_1 + x_2 - 2 = 0$ only if $x_1 = x_2 = 1$, since both are $\\ge 1$.",
+                "math": "\\Rightarrow\\; x_1 = x_2 \\text{ in every case}",
+                "marks": 1
+              },
+              {
+                "do": "So $f$ is one-one."
+              },
+              {
+                "do": "Range: write $f(x) = (x - 1)^2 + 2$ with $0 \\le x - 1 \\le 2$.",
+                "math": "0 \\le (x - 1)^2 \\le 4 \\;\\Rightarrow\\; 2 \\le f(x) \\le 6",
+                "marks": 0.5
+              },
+              {
+                "do": "Each $y \\in [2, 6]$ is reached at $x = 1 + \\sqrt{y - 2} \\in [1, 3]$.",
+                "math": "f\\left(1 + \\sqrt{y - 2}\\right) = (y - 2) + 2 = y",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the range of $f$ is $[2, 6]$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the range as $[f(1), f(3)]$ without showing $2 \\le f(x) \\le 6$ for every $x \\in [1, 3]$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2024-25 Q37",
+          "question": "**Case Study:** An organization conducted bike race under 2 different categories — boys and girls. In all, there were 250 participants. Among all of them finally three from Category 1 and two from Category 2 were selected for the final race. Ravi forms two sets $B$ and $G$ with these participants for his college project. Let $B = \\{b_1, b_2, b_3\\}$, $G = \\{g_1, g_2\\}$, where $B$ represents the set of boys selected and $G$ the set of girls who were selected for the final race. Ravi decides to explore these sets for various types of relations and functions.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Ravi wishes to form all the relations possible from $B$ to $G$. How many such relations are possible?",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Write the smallest equivalence relation on $G$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)(a)",
+              "text": "Ravi defines a relation from $B$ to $B$ as $R_1 = \\{(b_1, b_2), (b_2, b_1)\\}$. Write the minimum ordered pairs to be added in $R_1$ so that it becomes (A) reflexive but not symmetric, (B) reflexive and symmetric but not transitive.",
+              "marks": 2
+            },
+            {
+              "label": "(iii)(b)",
+              "text": "If the track of the final race (for the biker $b_1$) follows the curve $x^2 = 4y$ (where $0 \\le x \\le 20\\sqrt{2}$ and $0 \\le y \\le 200$), then state whether the track represents a one-one and onto function or not. (Justify)",
+              "marks": 2,
+              "alt": true
+            }
+          ],
+          "solution": {
+            "answer": "(i) $64$ (ii) $\\{(g_1, g_1), (g_2, g_2)\\}$ (iii)(a) (A) $(b_1, b_1), (b_2, b_2), (b_3, b_3), (b_2, b_3)$; (B) $(b_1, b_1), (b_2, b_2), (b_3, b_3), (b_2, b_3), (b_3, b_2)$ (other valid choices accepted) (iii)(b) one-one and onto",
+            "concept": "A relation from $B$ to $G$ is any subset of $B \\times G$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Count the elements of $B \\times G$.",
+                    "math": "n(B \\times G) = 3 \\times 2 = 6"
+                  },
+                  {
+                    "do": "Each relation is a subset of $B \\times G$.",
+                    "math": "\\text{Number of relations} = 2^6 = 64",
+                    "marks": 1
+                  }
+                ],
+                "answer": "$64$ relations."
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "An equivalence relation must contain every $(g, g)$; these alone are already symmetric and transitive."
+                  },
+                  {
+                    "do": "Smallest equivalence relation on $G$:",
+                    "math": "\\{(g_1, g_1), (g_2, g_2)\\}",
+                    "marks": 1
+                  }
+                ],
+                "answer": "$\\{(g_1, g_1), (g_2, g_2)\\}$"
+              },
+              {
+                "label": "(iii)(a)",
+                "steps": [
+                  {
+                    "do": "(A) Reflexive needs $(b_1, b_1), (b_2, b_2), (b_3, b_3)$. The result is still symmetric, so add one pair without its reverse."
+                  },
+                  {
+                    "do": "Minimum pairs to add for (A):",
+                    "math": "(b_1, b_1), (b_2, b_2), (b_3, b_3), (b_2, b_3)",
+                    "why": "$(b_3, b_2)$, $(b_1, b_3)$ or $(b_3, b_1)$ also works for $(b_2, b_3)$",
+                    "marks": 1
+                  },
+                  {
+                    "do": "(B) $R_1$ with the three $(b, b)$ is transitive; add a pair and its reverse to break transitivity.",
+                    "math": "(b_1, b_2), (b_2, b_3) \\in R \\ \\text{but} \\ (b_1, b_3) \\notin R"
+                  },
+                  {
+                    "do": "Minimum pairs to add for (B):",
+                    "math": "(b_1, b_1), (b_2, b_2), (b_3, b_3), (b_2, b_3), (b_3, b_2)",
+                    "why": "$(b_1, b_3), (b_3, b_1)$ in place of the last two also works",
+                    "marks": 1
+                  }
+                ],
+                "answer": "(A) add $(b_1, b_1), (b_2, b_2), (b_3, b_3), (b_2, b_3)$; (B) add $(b_1, b_1), (b_2, b_2), (b_3, b_3), (b_2, b_3), (b_3, b_2)$ (other choices noted above are also correct)"
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "steps": [
+                  {
+                    "do": "Write the track as a function.",
+                    "math": "f : [0, 20\\sqrt{2}] \\to [0, 200], \\quad f(x) = \\dfrac{x^2}{4}"
+                  },
+                  {
+                    "do": "One-one: let $f(x_1) = f(x_2)$.",
+                    "math": "x_1^2 = x_2^2 \\;\\Rightarrow\\; (x_1 - x_2)(x_1 + x_2) = 0 \\;\\Rightarrow\\; x_1 = x_2",
+                    "why": "$x_1, x_2 \\ge 0$, so $x_1 + x_2 = 0$ only if both are $0$",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Onto: for $y \\in [0, 200]$ take $x = 2\\sqrt{y} \\in [0, 20\\sqrt{2}]$.",
+                    "math": "f(2\\sqrt{y}) = \\dfrac{4y}{4} = y",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Hence the track represents a one-one and onto function."
+                  }
+                ],
+                "answer": "Yes — it is a one-one and onto function."
+              }
+            ],
+            "mistake": "Answering $6$ in (i) — that is $n(B \\times G)$; the relations are its subsets, $2^6 = 64$."
+          }
+        }
+      ]
+    }
+  ]
+}

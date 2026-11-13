@@ -1,0 +1,937 @@
+{
+  "chapter": 9,
+  "chapterTitle": "Differential Equations",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2026-27",
+          "question": "The degree and order of the differential equation $y-x\\left(\\dfrac{dy}{dx}\\right)^3=a\\left(y+\\dfrac{d^2y}{dx^2}\\right)^2$ are respectively:",
+          "options": [
+            "$3,\\ 1$",
+            "$2,\\ 2$",
+            "$3,\\ 2$",
+            "$4,\\ 2$"
+          ],
+          "solution": {
+            "answer": "(B) $2,\\ 2$",
+            "concept": "Order = order of the highest derivative; degree = power of that derivative, once the equation is a polynomial in derivatives.",
+            "steps": [
+              {
+                "do": "The highest order derivative is $\\dfrac{d^2y}{dx^2}$.",
+                "math": "\\text{Order}=2"
+              },
+              {
+                "do": "The equation is a polynomial in derivatives. On expanding, $\\dfrac{d^2y}{dx^2}$ has highest power $2$.",
+                "math": "\\text{Degree}=2",
+                "marks": 1
+              },
+              {
+                "do": "Degree first, then order: $2,\\ 2$. Hence option (B)."
+              }
+            ],
+            "mistake": "Reading the degree as $3$ from $\\left(\\dfrac{dy}{dx}\\right)^3$; the degree is the power of the **highest order** derivative only."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Q35",
+          "question": "The degree of the differential equation $\\left[1+\\left(\\dfrac{dy}{dx}\\right)^2\\right]^{\\frac{3}{2}}=\\dfrac{d^2y}{dx^2}$ is:",
+          "options": [
+            "$4$",
+            "$\\dfrac{3}{2}$",
+            "not defined",
+            "$2$"
+          ],
+          "solution": {
+            "answer": "(D) $2$",
+            "concept": "Degree is a positive integer; first remove fractional powers of derivatives, then read the power of the highest derivative.",
+            "steps": [
+              {
+                "do": "The power $\\dfrac{3}{2}$ is not an integer. Square both sides to remove it.",
+                "math": "\\left[1+\\left(\\dfrac{dy}{dx}\\right)^2\\right]^{3}=\\left(\\dfrac{d^2y}{dx^2}\\right)^2"
+              },
+              {
+                "do": "Now it is a polynomial in derivatives. The highest derivative $\\dfrac{d^2y}{dx^2}$ has power $2$.",
+                "math": "\\text{Degree}=2",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (D)."
+              }
+            ],
+            "mistake": "Answering $\\dfrac{3}{2}$ or 'not defined'; a fractional power is removed by squaring, and the degree is then $2$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Q55",
+          "question": "The integrating factor of the differential equation $\\dfrac{dy}{dx}+y=\\dfrac{1+y}{x}$ is:",
+          "options": [
+            "$\\dfrac{x}{e^x}$",
+            "$\\dfrac{e^x}{x}$",
+            "$xe^x$",
+            "$e^x$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{e^x}{x}$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$, $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Split the right side and bring the $y$ term to the left.",
+                "math": "\\dfrac{dy}{dx}+\\left(1-\\dfrac{1}{x}\\right)y=\\dfrac{1}{x}"
+              },
+              {
+                "do": "Compare with $\\dfrac{dy}{dx}+Py=Q$ and integrate $P$.",
+                "math": "P=1-\\dfrac{1}{x},\\qquad \\displaystyle\\int P\\,dx=x-\\log x"
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{x-\\log x}=e^x\\cdot e^{-\\log x}=\\dfrac{e^x}{x}",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Taking $P=1$ and choosing $e^x$; the $\\dfrac{y}{x}$ hidden in $\\dfrac{1+y}{x}$ is also part of $P$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The number of arbitrary constants in the general solution of the differential equation $\\left(\\dfrac{d^2y}{dx^2}\\right)^3+\\left(\\dfrac{dy}{dx}\\right)^4+y=e^x$ is:",
+          "options": [
+            "$1$",
+            "$2$",
+            "$3$",
+            "$4$"
+          ],
+          "solution": {
+            "answer": "(B) $2$",
+            "concept": "The general solution has as many arbitrary constants as the order of the equation.",
+            "steps": [
+              {
+                "do": "The highest order derivative is $\\dfrac{d^2y}{dx^2}$.",
+                "math": "\\text{Order}=2"
+              },
+              {
+                "do": "Number of arbitrary constants = order $=2$.",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Using the degree $3$ or the power $4$; the number of constants depends only on the order."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar Q73",
+          "question": "The general solution of the differential equation $(e^x+1)\\,y\\,dy=(y+1)\\,e^x\\,dx$ is:",
+          "options": [
+            "$(y+1)=k\\left(e^x+1\\right)$",
+            "$y+1=e^x+1+k$",
+            "$y=\\log\\left\\{k(y+1)\\left(e^x+1\\right)\\right\\}$",
+            "$y=\\log\\left\\{\\dfrac{e^x+1}{y+1}\\right\\}+k$"
+          ],
+          "solution": {
+            "answer": "(C) $y=\\log\\left\\{k(y+1)\\left(e^x+1\\right)\\right\\}$",
+            "concept": "Variable separable: put all $y$ terms with $dy$ and all $x$ terms with $dx$, then integrate.",
+            "steps": [
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{y}{y+1}\\,dy=\\dfrac{e^x}{e^x+1}\\,dx"
+              },
+              {
+                "do": "Write $\\dfrac{y}{y+1}=1-\\dfrac{1}{y+1}$ and integrate both sides.",
+                "math": "y-\\log|y+1|=\\log\\left(e^x+1\\right)+\\log k",
+                "marks": 1
+              },
+              {
+                "do": "Move $\\log|y+1|$ to the right and combine the logs.",
+                "math": "y=\\log\\left\\{k(y+1)\\left(e^x+1\\right)\\right\\}"
+              },
+              {
+                "do": "Hence option (C)."
+              }
+            ],
+            "mistake": "Moving $-\\log|y+1|$ across without changing its sign, which gives option (D)."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** $y=ae^{x}+be^{x}$, where $a$ and $b$ are arbitrary constants, is the general solution of the differential equation $\\dfrac{d^2y}{dx^2}-2\\dfrac{dy}{dx}+y=0$. **Reason (R):** The general solution of a differential equation contains as many arbitrary constants as the order of the equation.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(D) A is false, but R is true.",
+            "steps": [
+              {
+                "do": "Combine the terms: $a+b$ is one constant $A$.",
+                "math": "y=(a+b)e^x=Ae^x"
+              },
+              {
+                "do": "Check: $y'=y''=Ae^x$, so $y$ satisfies the equation.",
+                "math": "Ae^x-2Ae^x+Ae^x=0"
+              },
+              {
+                "do": "It has only one arbitrary constant, but the order is $2$. So A is false."
+              },
+              {
+                "do": "R is the definition of a general solution. So R is true."
+              },
+              {
+                "do": "A is false and R is true. Hence option (D).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Counting $a$ and $b$ as two constants; $ae^x+be^x=(a+b)e^x$ has only one."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q4",
+          "question": "Find the general solution of the differential equation $\\dfrac{dy}{dx}+\\sqrt{\\dfrac{1-y^2}{1-x^2}}=0$.",
+          "solution": {
+            "answer": "$\\sin^{-1}x+\\sin^{-1}y=C$",
+            "concept": "$\\displaystyle\\int\\dfrac{dt}{\\sqrt{1-t^2}}=\\sin^{-1}t+C$",
+            "steps": [
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dy}{\\sqrt{1-y^2}}=-\\dfrac{dx}{\\sqrt{1-x^2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\displaystyle\\int\\dfrac{dy}{\\sqrt{1-y^2}}=-\\int\\dfrac{dx}{\\sqrt{1-x^2}}\\ \\Rightarrow\\ \\sin^{-1}y=-\\sin^{-1}x+C",
+                "marks": 1
+              },
+              {
+                "do": "Hence the general solution is $\\sin^{-1}x+\\sin^{-1}y=C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Losing the minus sign when moving $\\sqrt{\\dfrac{1-y^2}{1-x^2}}$ to the right side."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "The population of a town increases at a rate proportional to the population present at that time, the constant of proportionality being $k\\ (k>0)$. Show that the population doubles in time $\\dfrac{\\log 2}{k}$, whatever the initial population.",
+          "solution": {
+            "answer": "$P=P_0e^{kt}$; doubling time $T=\\dfrac{\\log 2}{k}$, which does not involve $P_0$",
+            "concept": "Rate proportional to amount: $\\dfrac{dP}{dt}=kP$ gives $P=P_0e^{kt}$.",
+            "steps": [
+              {
+                "do": "Let $P$ be the population at time $t$, and $P_0$ at $t=0$.",
+                "math": "\\dfrac{dP}{dt}=kP",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate and integrate.",
+                "math": "\\dfrac{dP}{P}=k\\,dt\\ \\Rightarrow\\ \\log P=kt+C"
+              },
+              {
+                "do": "At $t=0$, $P=P_0$, so $C=\\log P_0$.",
+                "math": "\\log\\dfrac{P}{P_0}=kt\\ \\Rightarrow\\ P=P_0e^{kt}",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $T$ be the doubling time. Put $P=2P_0$.",
+                "math": "2P_0=P_0e^{kT}\\ \\Rightarrow\\ e^{kT}=2",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log. $P_0$ has cancelled, so $T$ does not depend on the initial population.",
+                "math": "T=\\dfrac{\\log 2}{k}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Putting $P=2$ instead of $P=2P_0$; doubling means twice the starting value."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q12",
+          "question": "Find a particular solution of the differential equation $(x+1)\\dfrac{dy}{dx}=2e^{-y}-1$, given that $y=0$ when $x=0$.",
+          "solution": {
+            "answer": "$y=\\log\\left|\\dfrac{2x+1}{x+1}\\right|$",
+            "concept": "$\\displaystyle\\int\\dfrac{f'(y)}{f(y)}\\,dy=\\log|f(y)|+C$",
+            "steps": [
+              {
+                "do": "Write the right side as one fraction.",
+                "math": "(x+1)\\dfrac{dy}{dx}=\\dfrac{2-e^y}{e^y}"
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{e^y}{2-e^y}\\,dy=\\dfrac{dx}{x+1}",
+                "marks": 0.5
+              },
+              {
+                "do": "For the left side, put $2-e^y=t$, so $-e^y\\,dy=dt$.",
+                "math": "\\displaystyle\\int\\dfrac{e^y}{2-e^y}\\,dy=-\\int\\dfrac{dt}{t}=-\\log|2-e^y|",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "-\\log|2-e^y|=\\log|x+1|+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=0$, $y=0$.",
+                "math": "-\\log 1=\\log 1+C\\ \\Rightarrow\\ C=0",
+                "marks": 0.5
+              },
+              {
+                "do": "So $\\log|2-e^y|+\\log|x+1|=0$. Near $(0,0)$ both factors are positive.",
+                "math": "(2-e^y)(x+1)=1\\ \\Rightarrow\\ e^y=2-\\dfrac{1}{x+1}=\\dfrac{2x+1}{x+1}",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log. Hence the particular solution is $y=\\log\\left|\\dfrac{2x+1}{x+1}\\right|$.",
+                "math": "y=\\log\\left|\\dfrac{2x+1}{x+1}\\right|",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\dfrac{e^y}{2-e^y}\\,dy=\\log|2-e^y|$; the derivative of $2-e^y$ is $-e^y$, so a minus sign appears."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q10",
+          "question": "Solve the differential equation $\\left[\\dfrac{e^{-2\\sqrt{x}}}{\\sqrt{x}}-\\dfrac{y}{\\sqrt{x}}\\right]\\dfrac{dx}{dy}=1\\ \\ (x\\neq 0)$.",
+          "solution": {
+            "answer": "$y\\,e^{2\\sqrt{x}}=2\\sqrt{x}+C$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, where $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Take the reciprocal to get $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{e^{-2\\sqrt{x}}}{\\sqrt{x}}-\\dfrac{y}{\\sqrt{x}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Rearrange: it is linear in $y$.",
+                "math": "\\dfrac{dy}{dx}+\\dfrac{1}{\\sqrt{x}}\\,y=\\dfrac{e^{-2\\sqrt{x}}}{\\sqrt{x}},\\qquad P=\\dfrac{1}{\\sqrt{x}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\displaystyle\\int\\dfrac{dx}{\\sqrt{x}}=2\\sqrt{x}\\ \\Rightarrow\\ \\text{I.F.}=e^{2\\sqrt{x}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution formula.",
+                "math": "y\\,e^{2\\sqrt{x}}=\\displaystyle\\int\\dfrac{e^{-2\\sqrt{x}}}{\\sqrt{x}}\\cdot e^{2\\sqrt{x}}\\,dx+C",
+                "marks": 0.5
+              },
+              {
+                "do": "The exponentials cancel. Integrate.",
+                "math": "y\\,e^{2\\sqrt{x}}=\\displaystyle\\int x^{-\\frac{1}{2}}\\,dx=2\\sqrt{x}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the general solution is $y\\,e^{2\\sqrt{x}}=2\\sqrt{x}+C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Treating it as linear in $x$ because $\\dfrac{dx}{dy}$ is given; take the reciprocal first."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar Q16",
+          "question": "Solve the differential equation $x^2\\dfrac{dy}{dx}=x^2+xy+y^2$.",
+          "solution": {
+            "answer": "$\\tan^{-1}\\left(\\dfrac{y}{x}\\right)=\\log|x|+C$",
+            "concept": "Homogeneous equation $\\dfrac{dy}{dx}=g\\left(\\dfrac{y}{x}\\right)$: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+            "steps": [
+              {
+                "do": "Divide by $x^2$. The right side is a function of $\\dfrac{y}{x}$, so it is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=1+\\dfrac{y}{x}+\\left(\\dfrac{y}{x}\\right)^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "v+x\\dfrac{dv}{dx}=1+v+v^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Cancel $v$ on both sides.",
+                "math": "x\\dfrac{dv}{dx}=1+v^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dv}{1+v^2}=\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\tan^{-1}v=\\log|x|+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$. Hence the general solution is $\\tan^{-1}\\left(\\dfrac{y}{x}\\right)=\\log|x|+C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to cancel $v$ from both sides and getting $x\\dfrac{dv}{dx}=1+v+v^2$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q2(i)",
+          "question": "Verify that the function $xy=ae^x+be^{-x}+x^2$ is a solution of the differential equation $x\\dfrac{d^2y}{dx^2}+2\\dfrac{dy}{dx}-xy+x^2-2=0$.",
+          "solution": {
+            "answer": "$x\\dfrac{d^2y}{dx^2}+2\\dfrac{dy}{dx}-xy+x^2-2=0$ holds, so the function is a solution.",
+            "concept": "A function is a solution if it satisfies the equation identically.",
+            "steps": [
+              {
+                "do": "Differentiate both sides w.r.t. $x$ (product rule on the left).",
+                "math": "x\\dfrac{dy}{dx}+y=ae^x-be^{-x}+2x",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$.",
+                "math": "x\\dfrac{d^2y}{dx^2}+2\\dfrac{dy}{dx}=ae^x+be^{-x}+2",
+                "marks": 0.5
+              },
+              {
+                "do": "From the given function, $ae^x+be^{-x}=xy-x^2$. Substitute.",
+                "math": "x\\dfrac{d^2y}{dx^2}+2\\dfrac{dy}{dx}=xy-x^2+2",
+                "marks": 0.5
+              },
+              {
+                "do": "Rearrange. Hence verified.",
+                "math": "x\\dfrac{d^2y}{dx^2}+2\\dfrac{dy}{dx}-xy+x^2-2=0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dx}(xy)=\\dfrac{dy}{dx}$; by the product rule it is $x\\dfrac{dy}{dx}+y$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Ex 9.3 Q1",
+          "question": "Find the general solution of the differential equation $\\dfrac{dy}{dx}=\\dfrac{1-\\cos x}{1+\\cos x}$.",
+          "solution": {
+            "answer": "$y=2\\tan\\dfrac{x}{2}-x+C$",
+            "concept": "$1-\\cos x=2\\sin^2\\dfrac{x}{2}$, $1+\\cos x=2\\cos^2\\dfrac{x}{2}$ and $\\tan^2\\theta=\\sec^2\\theta-1$.",
+            "steps": [
+              {
+                "do": "Use the half-angle formulas.",
+                "math": "\\dfrac{1-\\cos x}{1+\\cos x}=\\dfrac{2\\sin^2\\frac{x}{2}}{2\\cos^2\\frac{x}{2}}=\\tan^2\\dfrac{x}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $\\tan^2\\dfrac{x}{2}=\\sec^2\\dfrac{x}{2}-1$ and separate.",
+                "math": "dy=\\left(\\sec^2\\dfrac{x}{2}-1\\right)dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "y=2\\tan\\dfrac{x}{2}-x+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the general solution is $y=2\\tan\\dfrac{x}{2}-x+C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\sec^2\\dfrac{x}{2}\\,dx=\\tan\\dfrac{x}{2}$; dividing by the coefficient $\\dfrac{1}{2}$ gives $2\\tan\\dfrac{x}{2}$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar Q12",
+          "question": "If $y(t)$ is a solution of $(1+t)\\dfrac{dy}{dt}-ty=1$ and $y(0)=-1$, then show that $y(1)=-\\dfrac{1}{2}$.",
+          "solution": {
+            "answer": "$y=-\\dfrac{1}{1+t}$, so $y(1)=-\\dfrac{1}{2}$",
+            "concept": "For $\\dfrac{dy}{dt}+Py=Q$: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dt+C$, where $\\text{I.F.}=e^{\\int P\\,dt}$.",
+            "steps": [
+              {
+                "do": "Divide by $1+t$ to get the standard form.",
+                "math": "\\dfrac{dy}{dt}-\\dfrac{t}{1+t}\\,y=\\dfrac{1}{1+t}",
+                "marks": 0.5
+              },
+              {
+                "do": "Here $P=-\\dfrac{t}{1+t}=-1+\\dfrac{1}{1+t}$. Integrate $P$.",
+                "math": "\\displaystyle\\int P\\,dt=-t+\\log(1+t)",
+                "why": "$\\dfrac{t}{1+t}=1-\\dfrac{1}{1+t}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{-t+\\log(1+t)}=(1+t)\\,e^{-t}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution formula and integrate.",
+                "math": "y(1+t)e^{-t}=\\displaystyle\\int\\dfrac{1}{1+t}\\cdot(1+t)e^{-t}\\,dt=-e^{-t}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $t=0$, $y=-1$.",
+                "math": "-1\\cdot 1\\cdot 1=-1+C\\ \\Rightarrow\\ C=0",
+                "marks": 0.5
+              },
+              {
+                "do": "So $y=-\\dfrac{1}{1+t}$. Put $t=1$. Hence shown.",
+                "math": "y(1)=-\\dfrac{1}{1+1}=-\\dfrac{1}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $P=-t$ without dividing the whole equation by $(1+t)$ first."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Ex 9.4 Q9",
+          "question": "Show that the differential equation $y\\,dx+x\\log\\left(\\dfrac{y}{x}\\right)dy-2x\\,dy=0$ is homogeneous and solve it.",
+          "solution": {
+            "answer": "$cy=\\log\\left|\\dfrac{y}{x}\\right|-1$",
+            "concept": "Homogeneous: $F(\\lambda x,\\lambda y)=\\lambda^0F(x,y)$. Put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dy}{dx}=F(x,y)$.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{y}{2x-x\\log\\left(\\frac{y}{x}\\right)}=F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Replace $x,y$ by $\\lambda x,\\lambda y$; $\\dfrac{y}{x}$ does not change. So it is homogeneous.",
+                "math": "F(\\lambda x,\\lambda y)=\\dfrac{\\lambda y}{\\lambda x\\left(2-\\log\\frac{y}{x}\\right)}=\\lambda^0F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{v}{2-\\log v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "x\\dfrac{dv}{dx}=\\dfrac{v-2v+v\\log v}{2-\\log v}=\\dfrac{v(\\log v-1)}{2-\\log v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{2-\\log v}{v(\\log v-1)}\\,dv=\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\log v-1=t$, so $\\dfrac{dv}{v}=dt$ and $2-\\log v=1-t$.",
+                "math": "\\displaystyle\\int\\dfrac{1-t}{t}\\,dt=\\int\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\log|t|-t=\\log|x|+C_1",
+                "marks": 1
+              },
+              {
+                "do": "Collect the logs and take exponentials.",
+                "math": "\\log\\left|\\dfrac{t}{x}\\right|=t+C_1\\ \\Rightarrow\\ \\dfrac{t}{x}=A\\,e^{t}",
+                "why": "$A=\\pm e^{C_1}$",
+                "marks": 0.5
+              },
+              {
+                "do": "Here $e^{t}=e^{\\log v-1}=\\dfrac{v}{e}=\\dfrac{y}{ex}$. Substitute.",
+                "math": "\\dfrac{t}{x}=\\dfrac{A\\,y}{e\\,x}\\ \\Rightarrow\\ t=\\dfrac{A}{e}\\,y"
+              },
+              {
+                "do": "Put $t=\\log\\dfrac{y}{x}-1$ and $c=\\dfrac{A}{e}$. Hence the general solution is $cy=\\log\\left|\\dfrac{y}{x}\\right|-1$.",
+                "math": "cy=\\log\\left|\\dfrac{y}{x}\\right|-1",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Splitting $\\dfrac{1-t}{t}$ wrongly; it is $\\dfrac{1}{t}-1$, which integrates to $\\log|t|-t$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q11",
+          "question": "Find a particular solution of the differential equation $\\dfrac{dy}{dx}+y\\cot x=4x\\operatorname{cosec}x\\ \\ (x\\neq 0)$, given that $y=0$ when $x=\\dfrac{\\pi}{2}$.",
+          "solution": {
+            "answer": "$y\\sin x=2x^2-\\dfrac{\\pi^2}{2}$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, where $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Compare with $\\dfrac{dy}{dx}+Py=Q$.",
+                "math": "P=\\cot x,\\quad Q=4x\\operatorname{cosec}x",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\cot x\\,dx}=e^{\\log\\sin x}=\\sin x",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution formula; $\\operatorname{cosec}x\\cdot\\sin x=1$.",
+                "math": "y\\sin x=\\displaystyle\\int 4x\\operatorname{cosec}x\\cdot\\sin x\\,dx=\\int 4x\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate.",
+                "math": "y\\sin x=2x^2+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=\\dfrac{\\pi}{2}$, $y=0$.",
+                "math": "0=2\\cdot\\dfrac{\\pi^2}{4}+C\\ \\Rightarrow\\ C=-\\dfrac{\\pi^2}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is $y\\sin x=2x^2-\\dfrac{\\pi^2}{2}$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\text{I.F.}=e^{\\int\\cot x\\,dx}=\\cos x$; the integral of $\\cot x$ is $\\log\\sin x$, so $\\text{I.F.}=\\sin x$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Exemplar Q29",
+          "question": "Find the equation of a curve passing through the point $(2,1)$ if the slope of the tangent to the curve at any point $(x,y)$ is $\\dfrac{x^2+y^2}{2xy}$.",
+          "solution": {
+            "answer": "$2(x^2-y^2)=3x$",
+            "concept": "Slope of the tangent $=\\dfrac{dy}{dx}$. A homogeneous equation is solved by $y=vx$.",
+            "figure": "figs/pb-q17.svg",
+            "steps": [
+              {
+                "do": "Slope of the tangent is $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{x^2+y^2}{2xy}=F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Replace $x,y$ by $\\lambda x,\\lambda y$. So it is homogeneous.",
+                "math": "F(\\lambda x,\\lambda y)=\\dfrac{\\lambda^2(x^2+y^2)}{\\lambda^2\\cdot 2xy}=\\lambda^0F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{1+v^2}{2v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "x\\dfrac{dv}{dx}=\\dfrac{1+v^2-2v^2}{2v}=\\dfrac{1-v^2}{2v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{2v}{1-v^2}\\,dv=\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "-\\log|1-v^2|=\\log|x|+C_1",
+                "why": "Put $1-v^2=t$, so $-2v\\,dv=dt$.",
+                "marks": 1
+              },
+              {
+                "do": "Combine the logs.",
+                "math": "x\\left(1-v^2\\right)=C",
+                "why": "$C=\\pm e^{-C_1}$"
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$.",
+                "math": "x\\left(1-\\dfrac{y^2}{x^2}\\right)=C\\ \\Rightarrow\\ x^2-y^2=Cx",
+                "marks": 0.5
+              },
+              {
+                "do": "The curve passes through $(2,1)$.",
+                "math": "4-1=2C\\ \\Rightarrow\\ C=\\dfrac{3}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the required curve is $2(x^2-y^2)=3x$.",
+                "math": "2\\left(x^2-y^2\\right)=3x",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\dfrac{2v}{1-v^2}\\,dv=\\log|1-v^2|$; the derivative of $1-v^2$ is $-2v$, so it is $-\\log|1-v^2|$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2026-27",
+          "question": "Find the particular solution of the differential equation $(x^2+y^2)\\,dy=xy\\,dx$, given that $y(0)=1$.",
+          "solution": {
+            "answer": "$x^2=2y^2\\log|y|$",
+            "concept": "Homogeneous equation: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dy}{dx}$. Both parts have degree $2$, so it is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{xy}{x^2+y^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{v}{1+v^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "x\\dfrac{dv}{dx}=\\dfrac{v-v-v^3}{1+v^2}=-\\dfrac{v^3}{1+v^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\left(\\dfrac{1}{v^3}+\\dfrac{1}{v}\\right)dv=-\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "-\\dfrac{1}{2v^2}+\\log|v|=-\\log|x|+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$; $\\log|x|$ cancels.",
+                "math": "-\\dfrac{x^2}{2y^2}+\\log|y|-\\log|x|=-\\log|x|+C\\ \\Rightarrow\\ \\log|y|-\\dfrac{x^2}{2y^2}=C"
+              },
+              {
+                "do": "Put $x=0$, $y=1$: $C=0$. Hence the particular solution is $x^2=2y^2\\log|y|$.",
+                "math": "\\log|y|=\\dfrac{x^2}{2y^2}\\ \\Rightarrow\\ x^2=2y^2\\log|y|",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\dfrac{dv}{v^3}=\\dfrac{1}{2v^2}$; it is $-\\dfrac{1}{2v^2}$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2025-26",
+          "question": "Solve the differential equation $y+\\dfrac{d}{dx}(xy)=x(\\sin x+x)$.",
+          "solution": {
+            "answer": "$x^2y=-x^2\\cos x+2x\\sin x+2\\cos x+\\dfrac{x^4}{4}+C$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, where $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Expand $\\dfrac{d}{dx}(xy)=x\\dfrac{dy}{dx}+y$.",
+                "math": "y+x\\dfrac{dy}{dx}+y=x(\\sin x+x)\\ \\Rightarrow\\ x\\dfrac{dy}{dx}+2y=x(\\sin x+x)",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide by $x$: it is linear in $y$.",
+                "math": "\\dfrac{dy}{dx}+\\dfrac{2}{x}\\,y=\\sin x+x",
+                "marks": 0.5
+              },
+              {
+                "do": "Here $P=\\dfrac{2}{x}$. Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\frac{2}{x}dx}=e^{2\\log x}=x^2",
+                "marks": 1
+              },
+              {
+                "do": "Write the solution formula.",
+                "math": "y\\cdot x^2=\\displaystyle\\int x^2(\\sin x+x)\\,dx=\\int x^2\\sin x\\,dx+\\int x^3\\,dx",
+                "marks": 1
+              },
+              {
+                "do": "Integrate $x^2\\sin x$ by parts.",
+                "math": "\\displaystyle\\int x^2\\sin x\\,dx=-x^2\\cos x+\\int 2x\\cos x\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate $2x\\cos x$ by parts again.",
+                "math": "\\displaystyle\\int 2x\\cos x\\,dx=2\\left(x\\sin x+\\cos x\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Add $\\displaystyle\\int x^3\\,dx=\\dfrac{x^4}{4}$. Hence the general solution is",
+                "math": "x^2y=-x^2\\cos x+2x\\sin x+2\\cos x+\\dfrac{x^4}{4}+C",
+                "marks": 1
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dx}(xy)=x\\dfrac{dy}{dx}$ and missing one $y$; then $P=\\dfrac{1}{x}$ and the I.F. is wrong."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** After a medicine is injected, the body removes it from the blood at a rate proportional to the amount present at that time. A patient is given a dose of 400 mg. After 3 hours, 300 mg of the medicine is still present. Let $A$ mg be the amount present $t$ hours after the dose.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Write the differential equation satisfied by $A$ and state its order and degree.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Show that $A=400\\left(\\dfrac{3}{4}\\right)^{t/3}$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)(a)",
+              "text": "Find the amount of medicine present 6 hours after the dose.",
+              "marks": 2
+            },
+            {
+              "label": "(iii)(b)",
+              "text": "The next dose is given when the amount falls to 168.75 mg. After how many hours is the next dose given?",
+              "marks": 2,
+              "alt": true
+            }
+          ],
+          "solution": {
+            "answer": "(i) $\\dfrac{dA}{dt}=-kA$, order 1, degree 1; (ii) shown; (iii)(a) 225 mg; OR (iii)(b) after 9 hours",
+            "concept": "Rate proportional to amount: $\\dfrac{dA}{dt}=-kA$ gives $A=A_0e^{-kt}$.",
+            "figure": "figs/pb-q20.svg",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "The amount decreases, so the rate is negative. Take constant $k>0$.",
+                    "math": "\\dfrac{dA}{dt}=-kA",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Highest derivative is $\\dfrac{dA}{dt}$, with power $1$.",
+                    "math": "\\text{Order}=1,\\quad\\text{Degree}=1",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\dfrac{dA}{dt}=-kA$; order 1, degree 1"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Separate and integrate.",
+                    "math": "\\dfrac{dA}{A}=-k\\,dt\\ \\Rightarrow\\ \\log A=-kt+C"
+                  },
+                  {
+                    "do": "At $t=0$, $A=400$, so $C=\\log 400$.",
+                    "math": "A=400\\,e^{-kt}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "At $t=3$, $A=300$.",
+                    "math": "300=400\\,e^{-3k}\\ \\Rightarrow\\ e^{-3k}=\\dfrac{3}{4}\\ \\Rightarrow\\ e^{-k}=\\left(\\dfrac{3}{4}\\right)^{1/3}"
+                  },
+                  {
+                    "do": "Substitute $e^{-k}$. Hence shown.",
+                    "math": "A=400\\left(e^{-k}\\right)^{t}=400\\left(\\dfrac{3}{4}\\right)^{t/3}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$A=400\\left(\\dfrac{3}{4}\\right)^{t/3}$"
+              },
+              {
+                "label": "(iii)(a)",
+                "steps": [
+                  {
+                    "do": "Put $t=6$.",
+                    "math": "A=400\\left(\\dfrac{3}{4}\\right)^{6/3}=400\\left(\\dfrac{3}{4}\\right)^{2}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "A=400\\times\\dfrac{9}{16}=225",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Hence 225 mg of medicine is present after 6 hours.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "225 mg"
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "steps": [
+                  {
+                    "do": "Put $A=168.75$.",
+                    "math": "168.75=400\\left(\\dfrac{3}{4}\\right)^{t/3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Divide by $400$.",
+                    "math": "\\left(\\dfrac{3}{4}\\right)^{t/3}=\\dfrac{168.75}{400}=\\dfrac{27}{64}=\\left(\\dfrac{3}{4}\\right)^{3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Compare powers.",
+                    "math": "\\dfrac{t}{3}=3\\ \\Rightarrow\\ t=9",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence the next dose is given 9 hours after the first dose.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "after 9 hours"
+              }
+            ],
+            "mistake": "Writing $\\dfrac{dA}{dt}=kA$ with $k>0$; the medicine is being removed, so the rate is $-kA$."
+          }
+        }
+      ]
+    }
+  ]
+}

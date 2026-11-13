@@ -257,7 +257,7 @@
                 "marks": 0.5
               },
               {
-                "do": "Write the vector equation.",
+                "do": "Vector equation: $\\vec{r} = \\vec{a} + \\lambda(\\vec{b} - \\vec{a})$.",
                 "math": "\\vec{r} = (3\\hat{i} + 4\\hat{j} - 7\\hat{k}) + \\lambda(-2\\hat{i} - 5\\hat{j} + 13\\hat{k})",
                 "marks": 0.5
               },
@@ -297,7 +297,7 @@
                 "marks": 0.5
               },
               {
-                "do": "Find $a_1a_2 + b_1b_2 + c_1c_2$.",
+                "do": "Lines are perpendicular if $a_1a_2 + b_1b_2 + c_1c_2 = 0$. Check it.",
                 "math": "2(3) + 5(2) + (-4)(4) = 6 + 10 - 16 = 0",
                 "marks": 0.5
               },
@@ -345,7 +345,7 @@
               },
               {
                 "do": "Put into the formula.",
-                "math": "d = \\left|\\dfrac{-116}{2\\sqrt{29}}\\right| = \\dfrac{58}{\\sqrt{29}} = 2\\sqrt{29} \\text{ units}",
+                "math": "\\begin{aligned} d &= \\left|\\dfrac{(\\vec{b}_1 \\times \\vec{b}_2) \\cdot (\\vec{a}_2 - \\vec{a}_1)}{|\\vec{b}_1 \\times \\vec{b}_2|}\\right| \\\\ &= \\left|\\dfrac{-116}{2\\sqrt{29}}\\right| = \\dfrac{58}{\\sqrt{29}} = 2\\sqrt{29} \\text{ units} \\end{aligned}",
                 "marks": 0.5
               }
             ],
@@ -388,7 +388,7 @@
               },
               {
                 "do": "Put into the formula.",
-                "math": "d = \\dfrac{\\sqrt{533}}{3} \\text{ units}",
+                "math": "d = \\dfrac{|\\vec{b} \\times (\\vec{a}_2 - \\vec{a}_1)|}{|\\vec{b}|} = \\dfrac{\\sqrt{533}}{3} \\text{ units}",
                 "marks": 0.5
               }
             ],
@@ -417,7 +417,7 @@
               },
               {
                 "do": "Put into the formula.",
-                "math": "\\cos\\theta = \\dfrac{16}{\\sqrt{6} \\cdot 5\\sqrt{2}} = \\dfrac{16}{10\\sqrt{3}} = \\dfrac{8\\sqrt{3}}{15}",
+                "math": "\\cos\\theta = \\left|\\dfrac{\\vec{b}_1 \\cdot \\vec{b}_2}{|\\vec{b}_1||\\vec{b}_2|}\\right| = \\dfrac{16}{\\sqrt{6} \\cdot 5\\sqrt{2}} = \\dfrac{16}{10\\sqrt{3}} = \\dfrac{8\\sqrt{3}}{15}",
                 "marks": 0.5
               },
               {
@@ -735,7 +735,7 @@
                 "marks": 0.5
               },
               {
-                "do": "Find $\\vec{b}_1 \\times \\vec{b}_2$.",
+                "do": "The required line is parallel to $\\vec{b}_1 \\times \\vec{b}_2$. Find it.",
                 "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & -1 & 0 \\\\ -2 & 2 & 1 \\end{vmatrix} = -\\hat{i} - 3\\hat{j} + 4\\hat{k}",
                 "marks": 1
               },
@@ -764,7 +764,7 @@
                 "marks": 0.5
               },
               {
-                "do": "Find $\\vec{b}_1 \\times \\vec{b}_2$.",
+                "do": "The required line is parallel to $\\vec{b}_1 \\times \\vec{b}_2$. Find it.",
                 "math": "\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & 2 & 5 \\\\ 3 & -2 & 5 \\end{vmatrix} = 20\\hat{i} + 10\\hat{j} - 8\\hat{k} = 2(10\\hat{i} + 5\\hat{j} - 4\\hat{k})",
                 "marks": 1
               },
@@ -862,7 +862,7 @@
                   },
                   {
                     "do": "Put into the shortest distance formula.",
-                    "math": "d = \\left|\\dfrac{21}{3\\sqrt{6}}\\right| = \\dfrac{7}{\\sqrt{6}} = \\dfrac{7\\sqrt{6}}{6} \\text{ units}",
+                    "math": "\\begin{aligned} d &= \\left|\\dfrac{(\\vec{b}_1 \\times \\vec{b}_2) \\cdot (\\vec{a}_2 - \\vec{a}_1)}{|\\vec{b}_1 \\times \\vec{b}_2|}\\right| \\\\ &= \\left|\\dfrac{21}{3\\sqrt{6}}\\right| = \\dfrac{7}{\\sqrt{6}} = \\dfrac{7\\sqrt{6}}{6} \\text{ units} \\end{aligned}",
                     "marks": 0.5
                   }
                 ],

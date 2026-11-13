@@ -1,0 +1,944 @@
+{
+  "chapter": 4,
+  "chapterTitle": "Determinants",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 54,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "There are two values of $a$ which make the determinant $\\Delta = \\begin{vmatrix} 1 & -2 & 5 \\\\ 2 & a & -1 \\\\ 0 & 4 & 2a \\end{vmatrix} = 86$. The sum of these two values is:",
+          "options": [
+            "$4$",
+            "$5$",
+            "$-4$",
+            "$9$"
+          ],
+          "solution": {
+            "answer": "(C) $-4$",
+            "concept": "Expand a $3 \\times 3$ determinant along a row: $\\Delta = a_{11}A_{11} + a_{12}A_{12} + a_{13}A_{13}$.",
+            "steps": [
+              {
+                "do": "Expand along $R_1$.",
+                "math": "\\Delta = 1(2a^2 + 4) + 2(4a - 0) + 5(8 - 0) = 2a^2 + 8a + 44"
+              },
+              {
+                "do": "Put $\\Delta = 86$.",
+                "math": "2a^2 + 8a - 42 = 0 \\;\\Rightarrow\\; a^2 + 4a - 21 = 0"
+              },
+              {
+                "do": "Factorise.",
+                "math": "(a + 7)(a - 3) = 0 \\;\\Rightarrow\\; a = -7 \\text{ or } a = 3"
+              },
+              {
+                "do": "Add the two values.",
+                "math": "-7 + 3 = -4",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (C)."
+              }
+            ],
+            "mistake": "Taking $-2$ in place of $+2$ for the middle term: the sign pattern gives $-(-2)(4a) = +8a$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2025-26",
+          "question": "If $A$ is a square matrix of order 4 and $|\\text{adj}\\,A| = 27$, then $A\\,(\\text{adj}\\,A)$ is equal to:",
+          "options": [
+            "$3$",
+            "$9$",
+            "$3I$",
+            "$9I$"
+          ],
+          "solution": {
+            "answer": "(C) $3I$",
+            "concept": "$|\\text{adj}\\,A| = |A|^{n-1}$ and $A\\,(\\text{adj}\\,A) = |A|\\,I$.",
+            "steps": [
+              {
+                "do": "Use $|\\text{adj}\\,A| = |A|^{n-1}$ with $n = 4$.",
+                "math": "|A|^{3} = 27 \\;\\Rightarrow\\; |A| = 3"
+              },
+              {
+                "do": "Use $A\\,(\\text{adj}\\,A) = |A|\\,I$.",
+                "math": "A\\,(\\text{adj}\\,A) = 3I",
+                "marks": 1
+              },
+              {
+                "do": "The answer is a matrix, not a number, so option (C)."
+              }
+            ],
+            "mistake": "Choosing $3$: $A\\,(\\text{adj}\\,A)$ is a matrix, so the answer must carry $I$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2023-24",
+          "question": "Given that $A$ is a square matrix of order 3 and $|A| = -2$, then $|\\text{adj}\\,(2A)|$ is equal to:",
+          "options": [
+            "$-2^6$",
+            "$+4$",
+            "$-2^8$",
+            "$2^8$"
+          ],
+          "solution": {
+            "answer": "(D) $2^8$",
+            "concept": "$|kA| = k^n|A|$ and $|\\text{adj}\\,B| = |B|^{n-1}$ for order $n$.",
+            "steps": [
+              {
+                "do": "Find $|2A|$ with $n = 3$.",
+                "math": "|2A| = 2^3|A| = 8(-2) = -16"
+              },
+              {
+                "do": "$2A$ is also of order 3, so $|\\text{adj}\\,(2A)| = |2A|^2$.",
+                "math": "|\\text{adj}\\,(2A)| = (-16)^2 = 256 = 2^8",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (D)."
+              }
+            ],
+            "mistake": "Writing $|2A| = 2|A|$; for order 3 the factor comes out as $2^3$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "The area of a triangle with vertices $(-3, 0)$, $(3, 0)$ and $(0, k)$ is $9$ sq units. The value of $k$ will be:",
+          "options": [
+            "$9$",
+            "$3$",
+            "$-9$",
+            "$6$"
+          ],
+          "solution": {
+            "answer": "(B) $3$",
+            "concept": "Area $= \\dfrac{1}{2}\\left|\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}\\right|$",
+            "steps": [
+              {
+                "do": "Write the area determinant.",
+                "math": "\\dfrac{1}{2}\\begin{vmatrix} -3 & 0 & 1 \\\\ 3 & 0 & 1 \\\\ 0 & k & 1 \\end{vmatrix} = \\pm 9"
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "\\dfrac{1}{2}\\left[-3(0 - k) - 0 + 1(3k - 0)\\right] = \\dfrac{6k}{2} = 3k"
+              },
+              {
+                "do": "Solve.",
+                "math": "3k = \\pm 9 \\;\\Rightarrow\\; k = \\pm 3",
+                "marks": 1
+              },
+              {
+                "do": "Only $3$ is among the options, so option (B)."
+              }
+            ],
+            "mistake": "Forgetting the factor $\\tfrac{1}{2}$ and getting $6k = 9$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "If $A_{ij}$ is the cofactor of the element $a_{ij}$ of the determinant $\\Delta = \\begin{vmatrix} 1 & 2 & -1 \\\\ 3 & 0 & 4 \\\\ -2 & 5 & 1 \\end{vmatrix}$, then the value of $a_{11}A_{21} + a_{12}A_{22} + a_{13}A_{23}$ is:",
+          "options": [
+            "$-57$",
+            "$0$",
+            "$57$",
+            "$-4$"
+          ],
+          "solution": {
+            "answer": "(B) $0$",
+            "concept": "Elements of one row times the cofactors of another row add up to $0$.",
+            "steps": [
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = -(2 + 5) = -7,\\quad A_{22} = 1 - 2 = -1,\\quad A_{23} = -(5 + 4) = -9"
+              },
+              {
+                "do": "Multiply by the elements of row 1 and add.",
+                "math": "1(-7) + 2(-1) + (-1)(-9) = -7 - 2 + 9 = 0",
+                "marks": 1
+              },
+              {
+                "do": "Row 1 elements with row 2 cofactors give $0$, so option (B)."
+              }
+            ],
+            "mistake": "Using minors instead of cofactors, which gives $7 - 2 - 9 = -4$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** If $A$ is a square matrix of order 3 with $|A| = -2$, then $|\\text{adj}\\,(\\text{adj}\\,A)| = 16$. **Reason (R):** For a square matrix $A$ of order $n$, $|\\text{adj}\\,A| = |A|^{n-1}$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A.",
+            "concept": "$|\\text{adj}\\,A| = |A|^{n-1}$, and $\\text{adj}\\,A$ is again a square matrix of order $n$.",
+            "steps": [
+              {
+                "do": "Apply R to $A$ (order 3).",
+                "math": "|\\text{adj}\\,A| = |A|^2 = (-2)^2 = 4"
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is of order 3, so apply R again.",
+                "math": "|\\text{adj}\\,(\\text{adj}\\,A)| = |\\text{adj}\\,A|^2 = 4^2 = 16"
+              },
+              {
+                "do": "So **Assertion (A) is true.**"
+              },
+              {
+                "do": "R is the standard result for the adjoint, so **Reason (R) is true.**"
+              },
+              {
+                "do": "A follows by using R twice, so R is the correct explanation of A."
+              },
+              {
+                "do": "Hence option (A).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Thinking the answer must be negative because $|A|$ is negative; even powers remove the sign."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the values of $k$ if the area of the triangle with vertices $(1, -1)$, $(-4, 2k)$ and $(-k, -5)$ is $24$ sq units.",
+          "solution": {
+            "answer": "$k = 3$ or $k = -\\dfrac{9}{2}$",
+            "concept": "Area $= \\dfrac{1}{2}\\left|\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}\\right|$",
+            "steps": [
+              {
+                "do": "Write the area using determinants.",
+                "math": "\\dfrac{1}{2}\\begin{vmatrix} 1 & -1 & 1 \\\\ -4 & 2k & 1 \\\\ -k & -5 & 1 \\end{vmatrix} = \\pm 24",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "1(2k + 5) + 1(-4 + k) + 1(20 + 2k^2) = 2k^2 + 3k + 21",
+                "marks": 0.5
+              },
+              {
+                "do": "Equate to $\\pm 48$.",
+                "math": "2k^2 + 3k + 21 = 48 \\quad \\text{or} \\quad 2k^2 + 3k + 21 = -48"
+              },
+              {
+                "do": "First case: factorise.",
+                "math": "2k^2 + 3k - 27 = 0 \\;\\Rightarrow\\; (k - 3)(2k + 9) = 0 \\;\\Rightarrow\\; k = 3,\\ -\\dfrac{9}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Second case: $2k^2 + 3k + 69 = 0$ has discriminant $9 - 552 < 0$, so no real $k$."
+              },
+              {
+                "do": "Hence $k = 3$ or $k = -\\dfrac{9}{2}$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Expanding $-a_{12}M_{12}$ with the wrong sign: here $-(-1)(-4 + k) = -4 + k$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 17,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find the adjoint and the inverse of $A = \\begin{bmatrix} a & b \\\\ c & \\dfrac{1 + bc}{a} \\end{bmatrix}$, where $a \\ne 0$.",
+          "solution": {
+            "answer": "$\\text{adj}\\,A = A^{-1} = \\begin{bmatrix} \\dfrac{1 + bc}{a} & -b \\\\ -c & a \\end{bmatrix}$",
+            "concept": "$A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$, when $|A| \\ne 0$.",
+            "steps": [
+              {
+                "do": "Find $|A|$.",
+                "math": "|A| = a \\cdot \\dfrac{1 + bc}{a} - bc = 1 + bc - bc = 1 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Swap the diagonal elements and change the signs of the other two.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} \\dfrac{1 + bc}{a} & -b \\\\ -c & a \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Divide by $|A| = 1$.",
+                "math": "A^{-1} = \\dfrac{1}{1}\\,\\text{adj}\\,A = \\begin{bmatrix} \\dfrac{1 + bc}{a} & -b \\\\ -c & a \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not simplifying $|A|$ first; it is just $1$, so $A^{-1} = \\text{adj}\\,A$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Find $A^{-1}$ if $A = \\begin{bmatrix} 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0 \\end{bmatrix}$ and show that $A^{-1} = \\dfrac{A^2 - 3I}{2}$.",
+          "solution": {
+            "answer": "$A^{-1} = \\dfrac{1}{2}\\begin{bmatrix} -1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix} = \\dfrac{A^2 - 3I}{2}$",
+            "concept": "$A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$, when $|A| \\ne 0$.",
+            "steps": [
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 0(0 - 1) - 1(0 - 1) + 1(1 - 0) = 2 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the cofactors.",
+                "math": "\\begin{aligned} A_{11} &= -1,\\quad A_{12} = 1,\\quad A_{13} = 1 \\\\ A_{21} &= 1,\\quad A_{22} = -1,\\quad A_{23} = 1 \\\\ A_{31} &= 1,\\quad A_{32} = 1,\\quad A_{33} = -1 \\end{aligned}"
+              },
+              {
+                "do": "Transpose the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = \\dfrac{1}{2}\\begin{bmatrix} -1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $A^2$.",
+                "math": "A^2 = \\begin{bmatrix} 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0 \\end{bmatrix}\\begin{bmatrix} 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0 \\end{bmatrix} = \\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\dfrac{A^2 - 3I}{2}$.",
+                "math": "\\dfrac{A^2 - 3I}{2} = \\dfrac{1}{2}\\begin{bmatrix} -1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 1 & -1 \\end{bmatrix}"
+              },
+              {
+                "do": "This equals $A^{-1}$, hence $A^{-1} = \\dfrac{A^2 - 3I}{2}$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Subtracting $3$ from every element of $A^2$; $3I$ changes only the diagonal."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Using determinants, find the equation of the line joining $A(2, -3)$ and $B(-1, 4)$. Hence find $k$ if the point $C(k, -10)$ lies on this line.",
+          "solution": {
+            "answer": "$7x + 3y - 5 = 0$; $k = 5$",
+            "concept": "$P(x, y)$ lies on $AB$ when the area of $\\triangle PAB$ is $0$.",
+            "steps": [
+              {
+                "do": "Let $P(x, y)$ be any point on $AB$. Area of $\\triangle PAB = 0$.",
+                "math": "\\begin{vmatrix} x & y & 1 \\\\ 2 & -3 & 1 \\\\ -1 & 4 & 1 \\end{vmatrix} = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Expand along $R_1$.",
+                "math": "x(-3 - 4) - y(2 + 1) + 1(8 - 3) = 0 \\;\\Rightarrow\\; -7x - 3y + 5 = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "So the line is $7x + 3y - 5 = 0$.",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $C(k, -10)$ in the equation.",
+                "math": "7k - 30 - 5 = 0 \\;\\Rightarrow\\; k = 5",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the middle term as $+y(2 + 1)$; the $R_1$ expansion has $-y$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2023",
+          "question": "If $A = \\begin{bmatrix} 3 & 2 \\\\ 5 & -7 \\end{bmatrix}$, then find $A^{-1}$ and use it to solve the following system of equations: $3x + 5y = 11$, $2x - 7y = -3$.",
+          "solution": {
+            "answer": "$A^{-1} = -\\dfrac{1}{31}\\begin{bmatrix} -7 & -2 \\\\ -5 & 3 \\end{bmatrix}$; $x = 2$, $y = 1$",
+            "concept": "The coefficient matrix here is $A'$, and $(A')^{-1} = (A^{-1})'$.",
+            "steps": [
+              {
+                "do": "Find $|A|$.",
+                "math": "|A| = -21 - 10 = -31 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $\\text{adj}\\,A$.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -7 & -2 \\\\ -5 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = -\\dfrac{1}{31}\\begin{bmatrix} -7 & -2 \\\\ -5 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "The columns of $A$ are the rows of the system, so it reads $A'X = B$.",
+                "math": "\\begin{bmatrix} 3 & 5 \\\\ 2 & -7 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 11 \\\\ -3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "So $X = (A')^{-1}B = (A^{-1})'B$.",
+                "math": "X = -\\dfrac{1}{31}\\begin{bmatrix} -7 & -5 \\\\ -2 & 3 \\end{bmatrix}\\begin{bmatrix} 11 \\\\ -3 \\end{bmatrix} = -\\dfrac{1}{31}\\begin{bmatrix} -62 \\\\ -31 \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 2$, $y = 1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $X = A^{-1}B$ directly; the coefficient matrix is $A'$, not $A$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Using the matrix method, find the value of $k$ for which the system of equations $x + 2y = 3$, $3x + ky = 5$ has no solution.",
+          "solution": {
+            "answer": "$k = 6$",
+            "concept": "If $|A| = 0$ and $(\\text{adj}\\,A)B \\ne O$, the system is inconsistent.",
+            "steps": [
+              {
+                "do": "Write as $AX = B$ and find $|A|$.",
+                "math": "A = \\begin{bmatrix} 1 & 2 \\\\ 3 & k \\end{bmatrix},\\ B = \\begin{bmatrix} 3 \\\\ 5 \\end{bmatrix},\\ |A| = k - 6",
+                "marks": 0.5
+              },
+              {
+                "do": "If $|A| \\ne 0$ the solution is unique, so we need $|A| = 0$.",
+                "math": "k - 6 = 0 \\;\\Rightarrow\\; k = 6",
+                "marks": 0.5
+              },
+              {
+                "do": "For $k = 6$, find $\\text{adj}\\,A$.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 6 & -2 \\\\ -3 & 1 \\end{bmatrix}"
+              },
+              {
+                "do": "Find $(\\text{adj}\\,A)B$.",
+                "math": "(\\text{adj}\\,A)B = \\begin{bmatrix} 18 - 10 \\\\ -9 + 5 \\end{bmatrix} = \\begin{bmatrix} 8 \\\\ -4 \\end{bmatrix} \\ne O",
+                "marks": 0.5
+              },
+              {
+                "do": "So the system is inconsistent, hence it has no solution when $k = 6$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Stopping at $|A| = 0$; you must also show $(\\text{adj}\\,A)B \\ne O$ to rule out infinitely many solutions."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} 1 & \\tan x \\\\ -\\tan x & 1 \\end{bmatrix}$, show that $A'A^{-1} = \\begin{bmatrix} \\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x \\end{bmatrix}$.",
+          "solution": {
+            "answer": "$A'A^{-1} = \\begin{bmatrix} \\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x \\end{bmatrix}$. Shown.",
+            "concept": "$\\cos 2x = \\cos^2 x - \\sin^2 x$ and $\\sin 2x = 2\\sin x\\cos x$.",
+            "steps": [
+              {
+                "do": "Find $|A|$.",
+                "math": "|A| = 1 + \\tan^2 x = \\sec^2 x \\ne 0"
+              },
+              {
+                "do": "Find $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+                "math": "A^{-1} = \\cos^2 x\\begin{bmatrix} 1 & -\\tan x \\\\ \\tan x & 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A'$; it equals $\\text{adj}\\,A$ here.",
+                "math": "A' = \\begin{bmatrix} 1 & -\\tan x \\\\ \\tan x & 1 \\end{bmatrix}"
+              },
+              {
+                "do": "Multiply.",
+                "math": "A'A^{-1} = \\cos^2 x\\begin{bmatrix} 1 - \\tan^2 x & -2\\tan x \\\\ 2\\tan x & 1 - \\tan^2 x \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Take $\\cos^2 x$ inside.",
+                "math": "= \\begin{bmatrix} \\cos^2 x - \\sin^2 x & -2\\sin x\\cos x \\\\ 2\\sin x\\cos x & \\cos^2 x - \\sin^2 x \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use double-angle formulas.",
+                "math": "A'A^{-1} = \\begin{bmatrix} \\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x \\end{bmatrix}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $|A| = 1 - \\tan^2 x$; here $bc = (\\tan x)(-\\tan x)$, so $ad - bc = 1 + \\tan^2 x$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "If $A^{-1} = \\begin{bmatrix} 3 & -1 \\\\ -5 & 2 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, find $(AB)^{-1}$.",
+          "solution": {
+            "answer": "$(AB)^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 22 & -8 \\\\ -14 & 5 \\end{bmatrix} = \\begin{bmatrix} -11 & 4 \\\\ 7 & -\\tfrac{5}{2} \\end{bmatrix}$",
+            "concept": "Reversal law: $(AB)^{-1} = B^{-1}A^{-1}$.",
+            "steps": [
+              {
+                "do": "Find $|B|$.",
+                "math": "|B| = 4 - 6 = -2 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $B^{-1} = \\dfrac{1}{|B|}\\,\\text{adj}\\,B$.",
+                "math": "B^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 4 & -2 \\\\ -3 & 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use the reversal law.",
+                "math": "(AB)^{-1} = B^{-1}A^{-1} = -\\dfrac{1}{2}\\begin{bmatrix} 4 & -2 \\\\ -3 & 1 \\end{bmatrix}\\begin{bmatrix} 3 & -1 \\\\ -5 & 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply.",
+                "math": "= -\\dfrac{1}{2}\\begin{bmatrix} 12 + 10 & -4 - 4 \\\\ -9 - 5 & 3 + 2 \\end{bmatrix} = -\\dfrac{1}{2}\\begin{bmatrix} 22 & -8 \\\\ -14 & 5 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $(AB)^{-1} = \\begin{bmatrix} -11 & 4 \\\\ 7 & -\\tfrac{5}{2} \\end{bmatrix}$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Multiplying in the order $A^{-1}B^{-1}$; the reversal law needs $B^{-1}A^{-1}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 29,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "A school wants to award its students for the values of Honesty, Regularity and Hard work with a total cash award of ₹6,000. Three times the award money for Hard work added to that given for Honesty amounts to ₹11,000. The award money given for Honesty and Hard work together is double the one given for Regularity. Represent the situation algebraically and find the award money for each value, using the matrix method.",
+          "solution": {
+            "answer": "Honesty ₹500, Regularity ₹2,000, Hard work ₹3,500",
+            "concept": "$AX = B \\Rightarrow X = A^{-1}B$, where $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+            "steps": [
+              {
+                "do": "Let the awards for Honesty, Regularity, Hard work be ₹$x$, ₹$y$, ₹$z$.",
+                "math": "x + y + z = 6000,\\quad x + 3z = 11000,\\quad x - 2y + z = 0",
+                "marks": 1
+              },
+              {
+                "do": "Write as $AX = B$.",
+                "math": "\\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 3 \\\\ 1 & -2 & 1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 6000 \\\\ 11000 \\\\ 0 \\end{bmatrix}"
+              },
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 1(0 + 6) - 1(1 - 3) + 1(-2 - 0) = 6 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = 6,\\quad A_{12} = 2,\\quad A_{13} = -2"
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = -3,\\quad A_{22} = 0,\\quad A_{23} = 3"
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 3,\\quad A_{32} = -2,\\quad A_{33} = -1",
+                "marks": 1
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 6 & -3 & 3 \\\\ 2 & 0 & -2 \\\\ -2 & 3 & -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = \\dfrac{1}{6}\\begin{bmatrix} 6 & -3 & 3 \\\\ 2 & 0 & -2 \\\\ -2 & 3 & -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "X = \\dfrac{1}{6}\\begin{bmatrix} 36000 - 33000 + 0 \\\\ 12000 + 0 - 0 \\\\ -12000 + 33000 - 0 \\end{bmatrix} = \\dfrac{1}{6}\\begin{bmatrix} 3000 \\\\ 12000 \\\\ 21000 \\end{bmatrix} = \\begin{bmatrix} 500 \\\\ 2000 \\\\ 3500 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Hence Honesty ₹500, Regularity ₹2,000 and Hard work ₹3,500.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the third condition as $2(x + z) = y$; it is $x + z = 2y$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE 2025",
+          "question": "Given $A = \\begin{bmatrix} -4 & 4 & 4 \\\\ -7 & 1 & 3 \\\\ 5 & -3 & -1 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & -1 & 1 \\\\ 1 & -2 & -2 \\\\ 2 & 1 & 3 \\end{bmatrix}$, find $AB$. Hence, solve the system of linear equations: $x - y + z = 4$, $x - 2y - 2z = 9$, $2x + y + 3z = 1$.",
+          "solution": {
+            "answer": "$AB = 8I$; $x = 3$, $y = -2$, $z = -1$",
+            "concept": "If $AB = kI$ with $k \\ne 0$, then $B^{-1} = \\dfrac{1}{k}A$.",
+            "steps": [
+              {
+                "do": "Row 1 of $AB$.",
+                "math": "(-4 + 4 + 8,\\ 4 - 8 + 4,\\ -4 - 8 + 12) = (8,\\ 0,\\ 0)",
+                "marks": 0.5
+              },
+              {
+                "do": "Row 2 of $AB$.",
+                "math": "(-7 + 1 + 6,\\ 7 - 2 + 3,\\ -7 - 2 + 9) = (0,\\ 8,\\ 0)",
+                "marks": 0.5
+              },
+              {
+                "do": "Row 3 of $AB$.",
+                "math": "(5 - 3 - 2,\\ -5 + 6 - 1,\\ 5 + 6 - 3) = (0,\\ 0,\\ 8)",
+                "marks": 0.5
+              },
+              {
+                "do": "So $AB$ is $8$ times the identity.",
+                "math": "AB = \\begin{bmatrix} 8 & 0 & 0 \\\\ 0 & 8 & 0 \\\\ 0 & 0 & 8 \\end{bmatrix} = 8I",
+                "marks": 0.5
+              },
+              {
+                "do": "The system has coefficient matrix $B$: $BX = C$.",
+                "math": "\\begin{bmatrix} 1 & -1 & 1 \\\\ 1 & -2 & -2 \\\\ 2 & 1 & 3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 9 \\\\ 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "From $AB = 8I$: $\\left(\\tfrac{1}{8}A\\right)B = I$.",
+                "math": "B^{-1} = \\dfrac{1}{8}A",
+                "marks": 1
+              },
+              {
+                "do": "Find $X = B^{-1}C$.",
+                "math": "X = \\dfrac{1}{8}\\begin{bmatrix} -4 & 4 & 4 \\\\ -7 & 1 & 3 \\\\ 5 & -3 & -1 \\end{bmatrix}\\begin{bmatrix} 4 \\\\ 9 \\\\ 1 \\end{bmatrix} = \\dfrac{1}{8}\\begin{bmatrix} -16 + 36 + 4 \\\\ -28 + 9 + 3 \\\\ 20 - 27 - 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "X = \\dfrac{1}{8}\\begin{bmatrix} 24 \\\\ -16 \\\\ -8 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -2 \\\\ -1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 3$, $y = -2$, $z = -1$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $B^{-1} = A$; since $AB = 8I$, not $I$, divide by $8$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Misc. Ex. Q7",
+          "question": "Solve the following system of equations by the matrix method: $\\dfrac{2}{x} + \\dfrac{3}{y} + \\dfrac{10}{z} = 4$, $\\dfrac{4}{x} - \\dfrac{6}{y} + \\dfrac{5}{z} = 1$, $\\dfrac{6}{x} + \\dfrac{9}{y} - \\dfrac{20}{z} = 2$.",
+          "solution": {
+            "answer": "$x = 2$, $y = 3$, $z = 5$",
+            "concept": "Put $\\tfrac{1}{x} = u$, $\\tfrac{1}{y} = v$, $\\tfrac{1}{z} = w$ to get a linear system; then $X = A^{-1}B$.",
+            "steps": [
+              {
+                "do": "Put $\\dfrac{1}{x} = u$, $\\dfrac{1}{y} = v$, $\\dfrac{1}{z} = w$ and write as $AX = B$.",
+                "math": "\\begin{bmatrix} 2 & 3 & 10 \\\\ 4 & -6 & 5 \\\\ 6 & 9 & -20 \\end{bmatrix}\\begin{bmatrix} u \\\\ v \\\\ w \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 1 \\\\ 2 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 2(120 - 45) - 3(-80 - 30) + 10(36 + 36) = 150 + 330 + 720 = 1200 \\ne 0",
+                "marks": 1
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = 75,\\quad A_{12} = 110,\\quad A_{13} = 72",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = 150,\\quad A_{22} = -100,\\quad A_{23} = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 75,\\quad A_{32} = 30,\\quad A_{33} = -24",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 75 & 150 & 75 \\\\ 110 & -100 & 30 \\\\ 72 & 0 & -24 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+                "math": "A^{-1} = \\dfrac{1}{1200}\\begin{bmatrix} 75 & 150 & 75 \\\\ 110 & -100 & 30 \\\\ 72 & 0 & -24 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "\\begin{bmatrix} u \\\\ v \\\\ w \\end{bmatrix} = \\dfrac{1}{1200}\\begin{bmatrix} 300 + 150 + 150 \\\\ 440 - 100 + 60 \\\\ 288 + 0 - 48 \\end{bmatrix} = \\dfrac{1}{1200}\\begin{bmatrix} 600 \\\\ 400 \\\\ 240 \\end{bmatrix} = \\begin{bmatrix} \\tfrac{1}{2} \\\\ \\tfrac{1}{3} \\\\ \\tfrac{1}{5} \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Go back to $x, y, z$.",
+                "math": "\\dfrac{1}{x} = \\dfrac{1}{2},\\quad \\dfrac{1}{y} = \\dfrac{1}{3},\\quad \\dfrac{1}{z} = \\dfrac{1}{5}"
+              },
+              {
+                "do": "Hence $x = 2$, $y = 3$, $z = 5$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Stopping at $u = \\tfrac{1}{2}$ and writing $x = \\tfrac{1}{2}$; $u$ is $\\tfrac{1}{x}$, so $x = 2$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "Ritu invests a total of ₹10,000 in three schemes P, Q and R, which pay simple interest at $5\\%$, $8\\%$ and $9\\%$ per annum respectively. Her total interest for one year is ₹770. The amount invested in scheme Q is equal to the sum of the amounts invested in P and R. Using the matrix method, find the amount invested in each scheme.",
+          "solution": {
+            "answer": "P: ₹2,000, Q: ₹5,000, R: ₹3,000",
+            "concept": "$AX = B \\Rightarrow X = A^{-1}B$, where $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+            "steps": [
+              {
+                "do": "Let the amounts in P, Q, R be ₹$x$, ₹$y$, ₹$z$.",
+                "math": "x + y + z = 10000,\\quad \\dfrac{5x}{100} + \\dfrac{8y}{100} + \\dfrac{9z}{100} = 770,\\quad y = x + z"
+              },
+              {
+                "do": "Clear fractions and rearrange.",
+                "math": "x + y + z = 10000,\\quad 5x + 8y + 9z = 77000,\\quad x - y + z = 0",
+                "marks": 1
+              },
+              {
+                "do": "Write as $AX = B$.",
+                "math": "\\begin{bmatrix} 1 & 1 & 1 \\\\ 5 & 8 & 9 \\\\ 1 & -1 & 1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 10000 \\\\ 77000 \\\\ 0 \\end{bmatrix}"
+              },
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 1(8 + 9) - 1(5 - 9) + 1(-5 - 8) = 17 + 4 - 13 = 8 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = 17,\\quad A_{12} = 4,\\quad A_{13} = -13"
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = -2,\\quad A_{22} = 0,\\quad A_{23} = 2"
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 1,\\quad A_{32} = -4,\\quad A_{33} = 3",
+                "marks": 1
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} 17 & -2 & 1 \\\\ 4 & 0 & -4 \\\\ -13 & 2 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\,A$.",
+                "math": "A^{-1} = \\dfrac{1}{8}\\begin{bmatrix} 17 & -2 & 1 \\\\ 4 & 0 & -4 \\\\ -13 & 2 & 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $X = A^{-1}B$.",
+                "math": "X = \\dfrac{1}{8}\\begin{bmatrix} 170000 - 154000 + 0 \\\\ 40000 + 0 - 0 \\\\ -130000 + 154000 + 0 \\end{bmatrix} = \\dfrac{1}{8}\\begin{bmatrix} 16000 \\\\ 40000 \\\\ 24000 \\end{bmatrix} = \\begin{bmatrix} 2000 \\\\ 5000 \\\\ 3000 \\end{bmatrix}",
+                "marks": 1
+              },
+              {
+                "do": "Hence ₹2,000 in P, ₹5,000 in Q and ₹3,000 in R.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing the interest equation as $5x + 8y + 9z = 770$; multiplying by $100$ gives $77000$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "If $A = \\begin{bmatrix} 2 & 1 & -3 \\\\ 3 & 2 & 1 \\\\ 1 & 2 & -1 \\end{bmatrix}$, find $A^{-1}$. Using $A^{-1}$, solve the system of equations: $2x + 3y + z = 4$, $x + 2y + 2z = 6$, $-3x + y - z = -10$.",
+          "solution": {
+            "answer": "$A^{-1} = -\\dfrac{1}{16}\\begin{bmatrix} -4 & -5 & 7 \\\\ 4 & 1 & -11 \\\\ 4 & -3 & 1 \\end{bmatrix}$; $x = 2$, $y = -1$, $z = 3$",
+            "concept": "The coefficient matrix here is $A'$, and $(A')^{-1} = (A^{-1})'$.",
+            "steps": [
+              {
+                "do": "Find $|A|$ by expanding along $R_1$.",
+                "math": "|A| = 2(-2 - 2) - 1(-3 - 1) - 3(6 - 2) = -8 + 4 - 12 = -16 \\ne 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 1.",
+                "math": "A_{11} = -4,\\quad A_{12} = 4,\\quad A_{13} = 4",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 2.",
+                "math": "A_{21} = -5,\\quad A_{22} = 1,\\quad A_{23} = -3",
+                "marks": 0.5
+              },
+              {
+                "do": "Cofactors of row 3.",
+                "math": "A_{31} = 7,\\quad A_{32} = -11,\\quad A_{33} = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\text{adj}\\,A$ is the transpose of the cofactor matrix.",
+                "math": "\\text{adj}\\,A = \\begin{bmatrix} -4 & -5 & 7 \\\\ 4 & 1 & -11 \\\\ 4 & -3 & 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $A^{-1}$.",
+                "math": "A^{-1} = -\\dfrac{1}{16}\\begin{bmatrix} -4 & -5 & 7 \\\\ 4 & 1 & -11 \\\\ 4 & -3 & 1 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "The columns of $A$ are the rows of the system, so it reads $A'X = B$.",
+                "math": "A'X = B,\\quad B = \\begin{bmatrix} 4 \\\\ 6 \\\\ -10 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "So $X = (A')^{-1}B = (A^{-1})'B$.",
+                "math": "X = -\\dfrac{1}{16}\\begin{bmatrix} -4 & 4 & 4 \\\\ -5 & 1 & -3 \\\\ 7 & -11 & 1 \\end{bmatrix}\\begin{bmatrix} 4 \\\\ 6 \\\\ -10 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply.",
+                "math": "X = -\\dfrac{1}{16}\\begin{bmatrix} -16 + 24 - 40 \\\\ -20 + 6 + 30 \\\\ 28 - 66 - 10 \\end{bmatrix} = -\\dfrac{1}{16}\\begin{bmatrix} -32 \\\\ 16 \\\\ -48 \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ -1 \\\\ 3 \\end{bmatrix}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $x = 2$, $y = -1$, $z = 3$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $X = A^{-1}B$; here the first equation has coefficients $2, 3, 1$, the first column of $A$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** A town park is in the shape of a triangle with corners $A(-2, 1)$, $B(4, 5)$ and $C(6, -3)$ on a map grid (1 unit $= 10$ m). A water tap $T(k, 3)$ is fixed on the fence $AB$, and a straight path is to be laid from the gate at $C$ to the tap $T$.",
+          "figure": "figs/pb-q20.svg",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Using determinants, find the area of the park in square metres.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Using determinants, find the value of $k$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Using determinants, find the equation of the path $CT$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $2800$ m$^2$; (ii) $k = 1$; (iii) $6x + 5y - 21 = 0$",
+            "concept": "Area $= \\dfrac{1}{2}\\left|\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}\\right|$; area $0$ means collinear.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Area of $\\triangle ABC$ in square units.",
+                    "math": "\\Delta = \\dfrac{1}{2}\\left|\\begin{vmatrix} -2 & 1 & 1 \\\\ 4 & 5 & 1 \\\\ 6 & -3 & 1 \\end{vmatrix}\\right| = \\dfrac{1}{2}\\left|-2(8) - 1(-2) + 1(-42)\\right| = \\dfrac{56}{2} = 28",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "1 sq unit $= 10 \\times 10 = 100$ m$^2$.",
+                    "math": "\\text{Area} = 28 \\times 100 = 2800 \\text{ m}^2",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$2800$ m$^2$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "$T$ lies on $AB$, so the area of $\\triangle ABT$ is $0$.",
+                    "math": "\\begin{vmatrix} -2 & 1 & 1 \\\\ 4 & 5 & 1 \\\\ k & 3 & 1 \\end{vmatrix} = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Expand along $R_1$ and solve.",
+                    "math": "-2(5 - 3) - 1(4 - k) + 1(12 - 5k) = 4 - 4k = 0 \\;\\Rightarrow\\; k = 1",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$k = 1$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Let $P(x, y)$ be any point on $CT$, with $C(6, -3)$ and $T(1, 3)$.",
+                    "math": "\\begin{vmatrix} x & y & 1 \\\\ 6 & -3 & 1 \\\\ 1 & 3 & 1 \\end{vmatrix} = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Expand along $R_1$.",
+                    "math": "x(-3 - 3) - y(6 - 1) + 1(18 + 3) = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "-6x - 5y + 21 = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Required path: $6x + 5y - 21 = 0$.",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$6x + 5y - 21 = 0$"
+              }
+            ],
+            "mistake": "Giving the area as $28$ m$^2$; each square unit is $10 \\text{ m} \\times 10 \\text{ m} = 100$ m$^2$."
+          }
+        }
+      ]
+    }
+  ]
+}

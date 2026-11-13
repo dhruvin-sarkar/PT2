@@ -139,9 +139,9 @@
                 "math": "\\text{A is false}"
               },
               {
-                "do": "R: this is the corner point theorem of the textbook.",
+                "do": "R: an optimal value, when it exists, always occurs at a corner point.",
                 "math": "\\text{R is true}",
-                "why": "If an optimal value exists, it occurs at a corner point."
+                "why": "Corner Point Theorem (NCERT); the CBSE key takes R as true."
               },
               {
                 "do": "A is false, so R cannot explain A."

@@ -224,6 +224,9 @@
                 "do": "But $AB \\ne BA$, so Reason (R) is false."
               },
               {
+                "do": "A false Reason cannot explain the Assertion."
+              },
+              {
                 "do": "Hence option (C).",
                 "marks": 1
               }
@@ -411,7 +414,7 @@
                 "marks": 0.5
               },
               {
-                "do": "Divide every element by 2.",
+                "do": "Divide every element by 2. Hence the required matrix is",
                 "math": "A = \\begin{bmatrix} -8 & 3 & 5 \\\\ -13 & -1 & -9 \\end{bmatrix}",
                 "marks": 0.5
               }
@@ -555,7 +558,7 @@
                 "marks": 1
               },
               {
-                "do": "Every equation gives the same value.",
+                "do": "All four equations give the same value. Hence",
                 "math": "k = 1",
                 "marks": 0.5
               }
@@ -804,8 +807,8 @@
                     "marks": 0.5
                   },
                   {
-                    "do": "Revenue from Market I.",
-                    "math": "= \\text{₹}\\,46000",
+                    "do": "Add. Revenue from Market I is ₹46,000.",
+                    "math": "= 46000",
                     "marks": 0.5
                   }
                 ],
@@ -825,8 +828,12 @@
                     "marks": 1
                   },
                   {
-                    "do": "Add for the total: $46000 + 53000 = 99000$.",
+                    "do": "Market I ₹46,000, Market II ₹53,000. Add for the total.",
+                    "math": "46000 + 53000 = 99000",
                     "marks": 0.5
+                  },
+                  {
+                    "do": "Hence the total revenue from both markets is ₹99,000."
                   }
                 ],
                 "answer": "Market I: ₹46,000; Market II: ₹53,000; total ₹99,000"

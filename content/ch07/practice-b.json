@@ -1,0 +1,477 @@
+{
+  "chapter": 7,
+  "chapterTitle": "Integrals",
+  "set": "practice-b",
+  "title": "Practice Set B",
+  "totalMarks": 54,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "$\\displaystyle\\int e^x\\left(\\dfrac{1 - x}{1 + x^2}\\right)^2 dx$ is equal to:",
+          "options": [
+            "$\\dfrac{e^x}{1 + x^2} + C$",
+            "$\\dfrac{-e^x}{1 + x^2} + C$",
+            "$\\dfrac{e^x}{\\left(1 + x^2\\right)^2} + C$",
+            "$\\dfrac{-e^x}{\\left(1 + x^2\\right)^2} + C$"
+          ],
+          "solution": {
+            "answer": "(A) $\\dfrac{e^x}{1 + x^2} + C$",
+            "concept": "$\\displaystyle\\int e^x\\,[f(x) + f'(x)]\\,dx = e^x f(x) + C$",
+            "steps": [
+              { "do": "Expand $(1 - x)^2 = (1 + x^2) - 2x$", "math": "\\left(\\dfrac{1 - x}{1 + x^2}\\right)^2 = \\dfrac{1}{1 + x^2} - \\dfrac{2x}{\\left(1 + x^2\\right)^2}" },
+              { "do": "Take $f(x) = \\dfrac{1}{1 + x^2}$", "math": "f'(x) = -\\dfrac{2x}{\\left(1 + x^2\\right)^2}" },
+              { "do": "So the integrand is $e^x[f(x) + f'(x)]$", "math": "\\displaystyle\\int e^x\\left[\\dfrac{1}{1 + x^2} - \\dfrac{2x}{(1 + x^2)^2}\\right]dx = \\dfrac{e^x}{1 + x^2} + C", "marks": 1 }
+            ],
+            "mistake": "Expanding $(1 - x)^2$ as $1 - x^2$; the middle term $-2x$ is what creates $f'(x)$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Exemplar",
+          "question": "If $\\displaystyle\\int \\dfrac{x^3}{\\sqrt{1 + x^2}}\\,dx = a\\left(1 + x^2\\right)^{3/2} + b\\sqrt{1 + x^2} + C$, then:",
+          "options": [
+            "$a = \\dfrac{1}{3},\\; b = 1$",
+            "$a = -\\dfrac{1}{3},\\; b = 1$",
+            "$a = -\\dfrac{1}{3},\\; b = -1$",
+            "$a = \\dfrac{1}{3},\\; b = -1$"
+          ],
+          "solution": {
+            "answer": "(D) $a = \\dfrac{1}{3},\\; b = -1$",
+            "concept": "Put the expression under the root $= t$ and write the leftover $x^2$ in terms of $t$.",
+            "steps": [
+              { "do": "Put $1 + x^2 = t$", "math": "2x\\,dx = dt, \\qquad x^2 = t - 1" },
+              { "do": "Write $x^3\\,dx = x^2\\cdot x\\,dx$ and substitute", "math": "\\displaystyle\\int \\dfrac{x^3}{\\sqrt{1 + x^2}}\\,dx = \\dfrac{1}{2}\\int \\dfrac{t - 1}{\\sqrt t}\\,dt = \\dfrac{1}{2}\\int \\left(t^{1/2} - t^{-1/2}\\right)dt" },
+              { "do": "Integrate", "math": "\\dfrac{1}{2}\\left(\\dfrac{2}{3}t^{3/2} - 2t^{1/2}\\right) + C = \\dfrac{1}{3}t^{3/2} - t^{1/2} + C" },
+              { "do": "Put back $t = 1 + x^2$ and compare", "math": "\\dfrac{1}{3}\\left(1 + x^2\\right)^{3/2} - \\sqrt{1 + x^2} + C \\;\\Rightarrow\\; a = \\dfrac{1}{3},\\; b = -1", "marks": 1 }
+            ],
+            "mistake": "Forgetting the $\\dfrac{1}{2}$ from $x\\,dx = \\dfrac{dt}{2}$, which doubles both $a$ and $b$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Misc. Ex. Q37",
+          "question": "The value of $\\displaystyle\\int_0^1 \\sin^{-1} x\\,dx$ is:",
+          "options": [
+            "$\\dfrac{\\pi}{2}$",
+            "$\\dfrac{\\pi}{2} - 1$",
+            "$\\dfrac{\\pi}{2} + 1$",
+            "$1$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{\\pi}{2} - 1$",
+            "concept": "By parts with the second function $1$: $\\displaystyle\\int f(x)\\,dx = x f(x) - \\int x f'(x)\\,dx$",
+            "steps": [
+              { "do": "Integrate by parts, taking $\\sin^{-1} x$ as first function and $1$ as second", "math": "\\displaystyle\\int \\sin^{-1} x\\,dx = x\\sin^{-1} x - \\int \\dfrac{x}{\\sqrt{1 - x^2}}\\,dx" },
+              { "do": "Put $1 - x^2 = t$ in the last integral", "math": "\\displaystyle\\int \\dfrac{x}{\\sqrt{1 - x^2}}\\,dx = -\\sqrt{1 - x^2}" },
+              { "do": "So", "math": "\\displaystyle\\int_0^1 \\sin^{-1} x\\,dx = \\Big[x\\sin^{-1} x + \\sqrt{1 - x^2}\\Big]_0^1" },
+              { "do": "Put the limits", "math": "\\left(\\dfrac{\\pi}{2} + 0\\right) - (0 + 1) = \\dfrac{\\pi}{2} - 1", "marks": 1 }
+            ],
+            "mistake": "Choosing (A) by forgetting that $\\sqrt{1 - x^2}$ equals $1$ at the lower limit."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "For $x > 0$, $a > 0$, $a \\neq 1$, $\\displaystyle\\int \\left(e^{x\\log a} + e^{a\\log x} + e^{a\\log a}\\right)dx$ is equal to:",
+          "options": [
+            "$a^x\\log a + \\dfrac{x^{a + 1}}{a + 1} + a^a x + C$",
+            "$\\dfrac{a^x}{\\log a} + \\dfrac{x^{a + 1}}{a + 1} + a^a x + C$",
+            "$\\dfrac{a^x}{\\log a} + \\dfrac{x^{a + 1}}{a + 1} + \\dfrac{a^{a + 1}}{a + 1} + C$",
+            "$\\dfrac{a^x}{\\log a} + a x^{a - 1} + a^a x + C$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{a^x}{\\log a} + \\dfrac{x^{a + 1}}{a + 1} + a^a x + C$",
+            "concept": "$e^{\\log m} = m$; $\\displaystyle\\int a^x\\,dx = \\dfrac{a^x}{\\log a} + C$",
+            "steps": [
+              { "do": "Use $e^{p\\log q} = e^{\\log q^p} = q^p$ on each term", "math": "e^{x\\log a} = a^x, \\qquad e^{a\\log x} = x^a, \\qquad e^{a\\log a} = a^a" },
+              { "do": "Note: $a^a$ is a constant, not a power of $x$" },
+              { "do": "Integrate term by term", "math": "\\displaystyle\\int \\left(a^x + x^a + a^a\\right)dx = \\dfrac{a^x}{\\log a} + \\dfrac{x^{a + 1}}{a + 1} + a^a x + C", "marks": 1 }
+            ],
+            "mistake": "Treating the constant $a^a$ like $x^a$ and writing $\\dfrac{a^{a + 1}}{a + 1}$, option (C)."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "If $\\displaystyle\\int_0^{\\pi/4} \\tan^4 x\\,dx = \\alpha$, then $\\displaystyle\\int_0^{\\pi/4} \\tan^6 x\\,dx$ is equal to:",
+          "options": [
+            "$\\alpha - \\dfrac{1}{5}$",
+            "$\\dfrac{1}{5} - \\alpha$",
+            "$\\dfrac{1}{5} + \\alpha$",
+            "$\\dfrac{1}{6} - \\alpha$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{1}{5} - \\alpha$",
+            "concept": "$\\tan^n x + \\tan^{n - 2} x = \\tan^{n - 2} x\\sec^2 x$; then put $\\tan x = t$.",
+            "steps": [
+              { "do": "Add the two integrals and use $1 + \\tan^2 x = \\sec^2 x$", "math": "\\displaystyle\\int_0^{\\pi/4} \\tan^6 x\\,dx + \\alpha = \\int_0^{\\pi/4} \\tan^4 x\\sec^2 x\\,dx" },
+              { "do": "Put $\\tan x = t$; limits $0$ to $1$", "math": "\\displaystyle\\int_0^1 t^4\\,dt = \\dfrac{1}{5}" },
+              { "do": "Hence", "math": "\\displaystyle\\int_0^{\\pi/4} \\tan^6 x\\,dx = \\dfrac{1}{5} - \\alpha", "marks": 1 }
+            ],
+            "mistake": "Writing $\\dfrac{1}{6}$ from the power $6$; after $\\tan x = t$ the power left is $t^4$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** $\\displaystyle\\int_{-\\pi/2}^{\\pi/2} \\left(x^3 + x\\cos x + \\sin^5 x + 1\\right)dx = \\pi$. **Reason (R):** For every function $f$ continuous on $[-a, a]$, $\\displaystyle\\int_{-a}^{a} f(x)\\,dx = 2\\int_0^a f(x)\\,dx$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(C) A is true, but R is false",
+            "concept": "On $[-a, a]$: an odd function integrates to $0$; only an even function gives $2\\displaystyle\\int_0^a f(x)\\,dx$.",
+            "steps": [
+              { "do": "Check A: $x^3$, $x\\cos x$, $\\sin^5 x$ are odd, so their integrals are $0$", "math": "\\displaystyle\\int_{-\\pi/2}^{\\pi/2} \\left(x^3 + x\\cos x + \\sin^5 x + 1\\right)dx = 0 + \\int_{-\\pi/2}^{\\pi/2} 1\\,dx = \\pi" },
+              { "do": "So A is true." },
+              { "do": "Check R with $f(x) = x$ on $[-1, 1]$", "math": "\\displaystyle\\int_{-1}^{1} x\\,dx = 0, \\qquad 2\\int_0^1 x\\,dx = 1" },
+              { "do": "The two sides differ, so R is false (it holds only for even $f$)." },
+              { "do": "A false R cannot explain A." },
+              { "do": "Hence the correct option is (C).", "marks": 1 }
+            ],
+            "mistake": "Marking (A) because R looks like a textbook property; it misses the condition that $f$ must be even."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q7",
+          "question": "Find: $\\displaystyle\\int \\dfrac{\\sin x}{\\sin(x - a)}\\,dx$.",
+          "solution": {
+            "answer": "$x\\cos a + \\sin a\\,\\log|\\sin(x - a)| + C$",
+            "concept": "Write $x = (x - a) + a$ and expand $\\sin(A + B)$.",
+            "steps": [
+              { "do": "Write $x = (x - a) + a$", "math": "\\sin x = \\sin(x - a)\\cos a + \\cos(x - a)\\sin a", "marks": 0.5 },
+              { "do": "Divide by $\\sin(x - a)$", "math": "\\dfrac{\\sin x}{\\sin(x - a)} = \\cos a + \\sin a\\cot(x - a)", "marks": 0.5 },
+              { "do": "Integrate; $\\cos a$ and $\\sin a$ are constants", "math": "I = \\displaystyle\\int \\cos a\\,dx + \\sin a\\int \\cot(x - a)\\,dx", "marks": 0.5 },
+              { "do": "Use $\\displaystyle\\int \\cot u\\,du = \\log|\\sin u|$", "math": "I = x\\cos a + \\sin a\\,\\log|\\sin(x - a)| + C", "marks": 0.5 }
+            ],
+            "mistake": "Integrating $\\cos a$ as $\\sin a$; $a$ is a constant, so $\\displaystyle\\int \\cos a\\,dx = x\\cos a$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi/2} \\cos x\\cos 2x\\cos 3x\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi}{8}$",
+            "concept": "$2\\cos A\\cos B = \\cos(A + B) + \\cos(A - B)$, used twice.",
+            "steps": [
+              { "do": "Pair $\\cos 3x$ with $\\cos x$", "math": "\\cos x\\cos 3x = \\dfrac{1}{2}(\\cos 4x + \\cos 2x)", "marks": 0.5 },
+              { "do": "Multiply by $\\cos 2x$ and use the identity again", "math": "\\cos x\\cos 2x\\cos 3x = \\dfrac{1}{4}(\\cos 6x + \\cos 2x) + \\dfrac{1}{4}(1 + \\cos 4x)", "marks": 0.5 },
+              { "do": "Integrate", "math": "I = \\dfrac{1}{4}\\left[\\dfrac{\\sin 6x}{6} + \\dfrac{\\sin 2x}{2} + x + \\dfrac{\\sin 4x}{4}\\right]_0^{\\pi/2}", "marks": 0.5 },
+              { "do": "Every sine term is $0$ at $x = 0$ and at $x = \\dfrac{\\pi}{2}$", "math": "\\sin 3\\pi = \\sin\\pi = \\sin 2\\pi = 0" },
+              { "do": "Hence", "math": "I = \\dfrac{1}{4}\\cdot\\dfrac{\\pi}{2} = \\dfrac{\\pi}{8}", "marks": 0.5 }
+            ],
+            "mistake": "Writing $\\cos 2x\\cos 2x = \\cos 4x$; it is $\\cos^2 2x = \\dfrac{1 + \\cos 4x}{2}$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Given $\\dfrac{d}{dx}F(x) = \\dfrac{x}{\\sqrt{1 + 2x^2 - x^4}}$ and $F(1) = 0$, find $F(x)$.",
+          "solution": {
+            "answer": "$F(x) = \\dfrac{1}{2}\\sin^{-1}\\left(\\dfrac{x^2 - 1}{\\sqrt 2}\\right)$",
+            "concept": "$\\displaystyle\\int \\dfrac{dt}{\\sqrt{a^2 - t^2}} = \\sin^{-1}\\dfrac{t}{a} + C$",
+            "steps": [
+              { "do": "Complete the square in $x^2$", "math": "1 + 2x^2 - x^4 = 2 - \\left(x^2 - 1\\right)^2", "marks": 0.5 },
+              { "do": "Put $x^2 - 1 = t$", "math": "2x\\,dx = dt \\;\\Rightarrow\\; x\\,dx = \\dfrac{dt}{2}", "marks": 0.5 },
+              { "do": "Substitute and integrate with $a = \\sqrt 2$", "math": "F(x) = \\dfrac{1}{2}\\displaystyle\\int \\dfrac{dt}{\\sqrt{\\left(\\sqrt 2\\right)^2 - t^2}} = \\dfrac{1}{2}\\sin^{-1}\\left(\\dfrac{x^2 - 1}{\\sqrt 2}\\right) + C", "marks": 0.5 },
+              { "do": "Use $F(1) = 0$", "math": "\\dfrac{1}{2}\\sin^{-1} 0 + C = 0 \\;\\Rightarrow\\; C = 0, \\qquad F(x) = \\dfrac{1}{2}\\sin^{-1}\\left(\\dfrac{x^2 - 1}{\\sqrt 2}\\right)", "marks": 0.5 }
+            ],
+            "mistake": "Completing the square as $2 + (x^2 - 1)^2$; take out the minus sign: $-(x^4 - 2x^2 - 1)$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Ex 7.5 Q12",
+          "question": "Find: $\\displaystyle\\int \\dfrac{x^3 + x + 1}{x^2 - 1}\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{x^2}{2} + \\dfrac{3}{2}\\log|x - 1| + \\dfrac{1}{2}\\log|x + 1| + C$",
+            "concept": "Degree of numerator $\\geq$ degree of denominator: divide first, then use partial fractions.",
+            "steps": [
+              { "do": "Divide $x^3 + x + 1$ by $x^2 - 1$", "math": "x^3 + x + 1 = x\\left(x^2 - 1\\right) + (2x + 1)", "marks": 0.5 },
+              { "do": "So", "math": "\\dfrac{x^3 + x + 1}{x^2 - 1} = x + \\dfrac{2x + 1}{(x - 1)(x + 1)}", "marks": 0.5 },
+              { "do": "Write as partial fractions", "math": "\\dfrac{2x + 1}{(x - 1)(x + 1)} = \\dfrac{A}{x - 1} + \\dfrac{B}{x + 1} \\;\\Rightarrow\\; 2x + 1 = A(x + 1) + B(x - 1)", "marks": 0.5 },
+              { "do": "Put $x = 1$, then $x = -1$", "math": "3 = 2A \\Rightarrow A = \\dfrac{3}{2}, \\qquad -1 = -2B \\Rightarrow B = \\dfrac{1}{2}", "marks": 0.5 },
+              { "do": "Integrate each term", "math": "I = \\displaystyle\\int x\\,dx + \\dfrac{3}{2}\\int \\dfrac{dx}{x - 1} + \\dfrac{1}{2}\\int \\dfrac{dx}{x + 1}", "marks": 0.5 },
+              { "do": "Hence", "math": "I = \\dfrac{x^2}{2} + \\dfrac{3}{2}\\log|x - 1| + \\dfrac{1}{2}\\log|x + 1| + C", "marks": 0.5 }
+            ],
+            "mistake": "Starting partial fractions without dividing; that misses the term $x$ and gives wrong $A$, $B$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Evaluate: $\\displaystyle\\int_{-\\pi/2}^{\\pi/2} \\dfrac{\\cos x}{1 + e^x}\\,dx$.",
+          "solution": {
+            "answer": "$1$",
+            "concept": "$\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$; here $a + b = 0$, so replace $x$ by $-x$.",
+            "steps": [
+              { "do": "Let", "math": "I = \\displaystyle\\int_{-\\pi/2}^{\\pi/2} \\dfrac{\\cos x}{1 + e^x}\\,dx \\quad \\ldots(1)" },
+              { "do": "Replace $x$ by $-\\dfrac{\\pi}{2} + \\dfrac{\\pi}{2} - x = -x$; $\\cos(-x) = \\cos x$", "math": "I = \\displaystyle\\int_{-\\pi/2}^{\\pi/2} \\dfrac{\\cos x}{1 + e^{-x}}\\,dx = \\int_{-\\pi/2}^{\\pi/2} \\dfrac{e^x\\cos x}{e^x + 1}\\,dx \\quad \\ldots(2)", "marks": 1 },
+              { "do": "Add (1) and (2)", "math": "2I = \\displaystyle\\int_{-\\pi/2}^{\\pi/2} \\dfrac{(1 + e^x)\\cos x}{1 + e^x}\\,dx = \\int_{-\\pi/2}^{\\pi/2} \\cos x\\,dx", "marks": 0.5 },
+              { "do": "Integrate", "math": "2I = \\big[\\sin x\\big]_{-\\pi/2}^{\\pi/2} = 1 - (-1) = 2", "marks": 1 },
+              { "do": "Hence", "math": "I = 1", "marks": 0.5 }
+            ],
+            "mistake": "Calling the integrand even or odd; it is neither, so you must add $f(x)$ and $f(-x)$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q24",
+          "question": "Evaluate: $\\displaystyle\\int_{\\pi/2}^{\\pi} e^x\\left(\\dfrac{1 - \\sin x}{1 - \\cos x}\\right)dx$.",
+          "solution": {
+            "answer": "$e^{\\pi/2}$",
+            "concept": "$\\displaystyle\\int e^x\\,[f(x) + f'(x)]\\,dx = e^x f(x) + C$",
+            "steps": [
+              { "do": "Use $1 - \\cos x = 2\\sin^2\\dfrac{x}{2}$ and $\\sin x = 2\\sin\\dfrac{x}{2}\\cos\\dfrac{x}{2}$", "math": "\\dfrac{1 - \\sin x}{1 - \\cos x} = \\dfrac{1}{2\\sin^2\\frac{x}{2}} - \\dfrac{2\\sin\\frac{x}{2}\\cos\\frac{x}{2}}{2\\sin^2\\frac{x}{2}}", "marks": 0.5 },
+              { "do": "Simplify", "math": "\\dfrac{1 - \\sin x}{1 - \\cos x} = \\dfrac{1}{2}\\csc^2\\dfrac{x}{2} - \\cot\\dfrac{x}{2}", "marks": 0.5 },
+              { "do": "Take $f(x) = -\\cot\\dfrac{x}{2}$", "math": "f'(x) = \\dfrac{1}{2}\\csc^2\\dfrac{x}{2}", "marks": 0.5 },
+              { "do": "Use the $e^x[f + f']$ result", "math": "I = \\left[-e^x\\cot\\dfrac{x}{2}\\right]_{\\pi/2}^{\\pi}", "marks": 0.5 },
+              { "do": "Put the limits; $\\cot\\dfrac{\\pi}{2} = 0$, $\\cot\\dfrac{\\pi}{4} = 1$", "math": "I = -e^{\\pi}\\cdot 0 + e^{\\pi/2}\\cdot 1 = e^{\\pi/2}", "marks": 1 }
+            ],
+            "mistake": "Taking $f(x) = \\cot\\dfrac{x}{2}$; its derivative is $-\\dfrac{1}{2}\\csc^2\\dfrac{x}{2}$, the wrong sign."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2021-22 (Term 2)",
+          "question": "Evaluate: $\\displaystyle\\int_{-1}^{2} \\left|x^3 - 3x^2 + 2x\\right|dx$.",
+          "solution": {
+            "answer": "$\\dfrac{11}{4}$",
+            "concept": "Split a modulus integral at the zeros of the expression inside and fix the sign on each piece.",
+            "steps": [
+              { "do": "Factorise", "math": "x^3 - 3x^2 + 2x = x(x - 1)(x - 2)", "marks": 0.5 },
+              { "do": "Find the sign on each piece", "math": "x(x - 1)(x - 2) \\leq 0 \\text{ on } [-1, 0], \\quad \\geq 0 \\text{ on } [0, 1], \\quad \\leq 0 \\text{ on } [1, 2]", "figure": "figs/pb-q13-cubic.svg", "marks": 0.5 },
+              { "do": "Split the integral; let $f(x) = x^3 - 3x^2 + 2x$", "math": "I = -\\displaystyle\\int_{-1}^{0} f(x)\\,dx + \\int_0^1 f(x)\\,dx - \\int_1^2 f(x)\\,dx", "marks": 0.5 },
+              { "do": "An antiderivative of $f$ and its values", "math": "F(x) = \\dfrac{x^4}{4} - x^3 + x^2; \\qquad F(-1) = \\dfrac{9}{4},\\; F(0) = 0,\\; F(1) = \\dfrac{1}{4},\\; F(2) = 0", "marks": 0.5 },
+              { "do": "Put the values in", "math": "I = -\\left(0 - \\dfrac{9}{4}\\right) + \\left(\\dfrac{1}{4} - 0\\right) - \\left(0 - \\dfrac{1}{4}\\right) = \\dfrac{9}{4} + \\dfrac{1}{4} + \\dfrac{1}{4}", "marks": 0.5 },
+              { "do": "Hence", "math": "I = \\dfrac{11}{4}", "marks": 0.5 }
+            ],
+            "mistake": "Integrating $f(x)$ straight from $-1$ to $2$ gives $-\\dfrac{9}{4}$; the negative parts must be flipped."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Find: $\\displaystyle\\int \\dfrac{\\sin^6 x + \\cos^6 x}{\\sin^2 x\\cos^2 x}\\,dx$.",
+          "solution": {
+            "answer": "$\\tan x - \\cot x - 3x + C$",
+            "concept": "$a^3 + b^3 = (a + b)^3 - 3ab(a + b)$ with $a = \\sin^2 x$, $b = \\cos^2 x$.",
+            "steps": [
+              { "do": "Use $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$ and $\\sin^2 x + \\cos^2 x = 1$", "math": "\\sin^6 x + \\cos^6 x = 1 - 3\\sin^2 x\\cos^2 x", "marks": 1 },
+              { "do": "Divide by $\\sin^2 x\\cos^2 x$", "math": "\\dfrac{\\sin^6 x + \\cos^6 x}{\\sin^2 x\\cos^2 x} = \\dfrac{1}{\\sin^2 x\\cos^2 x} - 3", "marks": 0.5 },
+              { "do": "Write $1 = \\sin^2 x + \\cos^2 x$ in the first fraction", "math": "\\dfrac{\\sin^2 x + \\cos^2 x}{\\sin^2 x\\cos^2 x} = \\sec^2 x + \\csc^2 x", "marks": 0.5 },
+              { "do": "Integrate", "math": "I = \\displaystyle\\int \\left(\\sec^2 x + \\csc^2 x - 3\\right)dx = \\tan x - \\cot x - 3x + C", "marks": 1 }
+            ],
+            "mistake": "Writing $\\displaystyle\\int \\csc^2 x\\,dx = \\cot x$; it is $-\\cot x$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 27,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Example 42",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi} \\dfrac{x}{a^2\\cos^2 x + b^2\\sin^2 x}\\,dx$, where $a > 0$, $b > 0$.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi^2}{2ab}$",
+            "concept": "$\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$ removes $x$; $\\displaystyle\\int_0^{2a} f = 2\\int_0^a f$ if $f(2a - x) = f(x)$.",
+            "steps": [
+              { "do": "Let", "math": "I = \\displaystyle\\int_0^{\\pi} \\dfrac{x}{a^2\\cos^2 x + b^2\\sin^2 x}\\,dx \\quad \\ldots(1)" },
+              { "do": "Replace $x$ by $\\pi - x$; $\\cos^2$ and $\\sin^2$ do not change", "math": "I = \\displaystyle\\int_0^{\\pi} \\dfrac{\\pi - x}{a^2\\cos^2 x + b^2\\sin^2 x}\\,dx \\quad \\ldots(2)", "marks": 1 },
+              { "do": "Add (1) and (2)", "math": "2I = \\pi\\displaystyle\\int_0^{\\pi} \\dfrac{dx}{a^2\\cos^2 x + b^2\\sin^2 x}", "marks": 0.5 },
+              { "do": "The integrand is unchanged by $x \\to \\pi - x$, so use $\\displaystyle\\int_0^{2a} f = 2\\int_0^a f$", "math": "I = \\pi\\displaystyle\\int_0^{\\pi/2} \\dfrac{dx}{a^2\\cos^2 x + b^2\\sin^2 x}", "marks": 0.5 },
+              { "do": "Split at $\\dfrac{\\pi}{4}$; divide by $\\cos^2 x$ in the first, $\\sin^2 x$ in the second", "math": "I = \\pi\\left[\\displaystyle\\int_0^{\\pi/4} \\dfrac{\\sec^2 x\\,dx}{a^2 + b^2\\tan^2 x} + \\int_{\\pi/4}^{\\pi/2} \\dfrac{\\csc^2 x\\,dx}{a^2\\cot^2 x + b^2}\\right]", "marks": 0.5 },
+              { "do": "Put $\\tan x = t$ in the first and $\\cot x = u$ in the second", "math": "I = \\pi\\left[\\displaystyle\\int_0^1 \\dfrac{dt}{a^2 + b^2 t^2} - \\int_1^0 \\dfrac{du}{a^2 u^2 + b^2}\\right]", "why": "$d(\\cot x) = -\\csc^2 x\\,dx$", "marks": 1 },
+              { "do": "Integrate", "math": "I = \\dfrac{\\pi}{ab}\\left[\\tan^{-1}\\dfrac{bt}{a}\\right]_0^1 - \\dfrac{\\pi}{ab}\\left[\\tan^{-1}\\dfrac{au}{b}\\right]_1^0 = \\dfrac{\\pi}{ab}\\left[\\tan^{-1}\\dfrac{b}{a} + \\tan^{-1}\\dfrac{a}{b}\\right]", "marks": 1 },
+              { "do": "Use $\\tan^{-1} m + \\tan^{-1}\\dfrac{1}{m} = \\dfrac{\\pi}{2}$ for $m > 0$", "math": "I = \\dfrac{\\pi}{ab}\\cdot\\dfrac{\\pi}{2} = \\dfrac{\\pi^2}{2ab}", "marks": 0.5 }
+            ],
+            "mistake": "Putting $\\tan x = t$ on all of $[0, \\pi]$; $\\tan x$ breaks at $\\dfrac{\\pi}{2}$, so reduce to $[0, \\dfrac{\\pi}{2}]$ first."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Misc. Ex. Q6",
+          "question": "Find: $\\displaystyle\\int \\dfrac{5x}{(x + 1)\\left(x^2 + 9\\right)}\\,dx$.",
+          "solution": {
+            "answer": "$-\\dfrac{1}{2}\\log|x + 1| + \\dfrac{1}{4}\\log\\left(x^2 + 9\\right) + \\dfrac{3}{2}\\tan^{-1}\\dfrac{x}{3} + C$",
+            "concept": "A factor $x^2 + 9$ that does not factorise needs a numerator $Bx + C$.",
+            "steps": [
+              { "do": "Write as partial fractions", "math": "\\dfrac{5x}{(x + 1)(x^2 + 9)} = \\dfrac{A}{x + 1} + \\dfrac{Bx + C}{x^2 + 9}", "marks": 1 },
+              { "do": "Multiply by $(x + 1)(x^2 + 9)$", "math": "5x = A\\left(x^2 + 9\\right) + (Bx + C)(x + 1)", "marks": 0.5 },
+              { "do": "Put $x = -1$", "math": "-5 = 10A \\;\\Rightarrow\\; A = -\\dfrac{1}{2}", "marks": 0.5 },
+              { "do": "Compare coefficients of $x^2$ and constant terms", "math": "A + B = 0 \\Rightarrow B = \\dfrac{1}{2}, \\qquad 9A + C = 0 \\Rightarrow C = \\dfrac{9}{2}", "marks": 1 },
+              { "do": "Split the integral", "math": "I = -\\dfrac{1}{2}\\displaystyle\\int \\dfrac{dx}{x + 1} + \\dfrac{1}{4}\\int \\dfrac{2x}{x^2 + 9}\\,dx + \\dfrac{9}{2}\\int \\dfrac{dx}{x^2 + 3^2}", "marks": 0.5 },
+              { "do": "Integrate each part", "math": "-\\dfrac{1}{2}\\log|x + 1|, \\qquad \\dfrac{1}{4}\\log\\left(x^2 + 9\\right), \\qquad \\dfrac{9}{2}\\cdot\\dfrac{1}{3}\\tan^{-1}\\dfrac{x}{3}", "marks": 1 },
+              { "do": "Hence", "math": "I = -\\dfrac{1}{2}\\log|x + 1| + \\dfrac{1}{4}\\log\\left(x^2 + 9\\right) + \\dfrac{3}{2}\\tan^{-1}\\dfrac{x}{3} + C", "marks": 0.5 }
+            ],
+            "mistake": "Taking only a constant $\\dfrac{C}{x^2 + 9}$ over the quadratic factor; then no values of $A$, $C$ fit."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Ex 7.10 Q16",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi} \\log(1 + \\cos x)\\,dx$.",
+          "solution": {
+            "answer": "$-\\pi\\log 2$",
+            "concept": "$\\displaystyle\\int_0^{\\pi/2} \\log\\sin x\\,dx = \\int_0^{\\pi/2} \\log\\cos x\\,dx = -\\dfrac{\\pi}{2}\\log 2$",
+            "steps": [
+              { "do": "Use $1 + \\cos x = 2\\cos^2\\dfrac{x}{2}$", "math": "I = \\displaystyle\\int_0^{\\pi} \\left[\\log 2 + 2\\log\\cos\\dfrac{x}{2}\\right]dx = \\pi\\log 2 + 2\\int_0^{\\pi} \\log\\cos\\dfrac{x}{2}\\,dx", "marks": 0.5 },
+              { "do": "Put $\\dfrac{x}{2} = t$, $dx = 2\\,dt$; limits $0$ to $\\dfrac{\\pi}{2}$", "math": "I = \\pi\\log 2 + 4J, \\qquad J = \\displaystyle\\int_0^{\\pi/2} \\log\\cos t\\,dt", "marks": 1 },
+              { "do": "Replace $t$ by $\\dfrac{\\pi}{2} - t$ in $J$", "math": "J = \\displaystyle\\int_0^{\\pi/2} \\log\\sin t\\,dt", "marks": 0.5 },
+              { "do": "Add the two forms of $J$; use $\\sin t\\cos t = \\dfrac{\\sin 2t}{2}$", "math": "2J = \\displaystyle\\int_0^{\\pi/2} \\log\\dfrac{\\sin 2t}{2}\\,dt = \\int_0^{\\pi/2} \\log\\sin 2t\\,dt - \\dfrac{\\pi}{2}\\log 2", "marks": 0.5 },
+              { "do": "Put $2t = u$; limits $0$ to $\\pi$", "math": "\\displaystyle\\int_0^{\\pi/2} \\log\\sin 2t\\,dt = \\dfrac{1}{2}\\int_0^{\\pi} \\log\\sin u\\,du", "marks": 0.5 },
+              { "do": "Use $\\displaystyle\\int_0^{2a} f = 2\\int_0^a f$, as $\\sin(\\pi - u) = \\sin u$", "math": "\\dfrac{1}{2}\\displaystyle\\int_0^{\\pi} \\log\\sin u\\,du = \\int_0^{\\pi/2} \\log\\sin u\\,du = J", "marks": 0.5 },
+              { "do": "So", "math": "2J = J - \\dfrac{\\pi}{2}\\log 2 \\;\\Rightarrow\\; J = -\\dfrac{\\pi}{2}\\log 2", "marks": 0.5 },
+              { "do": "Put $J$ back", "math": "I = \\pi\\log 2 + 4\\left(-\\dfrac{\\pi}{2}\\log 2\\right) = \\pi\\log 2 - 2\\pi\\log 2", "marks": 0.5 },
+              { "do": "Hence", "math": "I = -\\pi\\log 2", "marks": 0.5 }
+            ],
+            "mistake": "Forgetting $dx = 2\\,dt$ after $\\dfrac{x}{2} = t$, which gives $2J$ instead of $4J$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Exemplar",
+          "question": "Find: $\\displaystyle\\int \\sqrt{\\dfrac{a + x}{a - x}}\\,dx$, where $a > 0$ and $-a < x < a$.",
+          "solution": {
+            "answer": "$a\\sin^{-1}\\dfrac{x}{a} - \\sqrt{a^2 - x^2} + C$",
+            "concept": "Rationalise: multiply top and bottom by $\\sqrt{a + x}$ to get $\\dfrac{a + x}{\\sqrt{a^2 - x^2}}$.",
+            "steps": [
+              { "do": "Multiply numerator and denominator by $\\sqrt{a + x}$", "math": "\\sqrt{\\dfrac{a + x}{a - x}} = \\dfrac{a + x}{\\sqrt{(a - x)(a + x)}} = \\dfrac{a + x}{\\sqrt{a^2 - x^2}}", "marks": 0.5 },
+              { "do": "Split", "math": "I = a\\displaystyle\\int \\dfrac{dx}{\\sqrt{a^2 - x^2}} + \\int \\dfrac{x\\,dx}{\\sqrt{a^2 - x^2}}", "marks": 0.5 },
+              { "do": "First integral: standard form", "math": "a\\displaystyle\\int \\dfrac{dx}{\\sqrt{a^2 - x^2}} = a\\sin^{-1}\\dfrac{x}{a}", "marks": 0.5 },
+              { "do": "Second integral: put $a^2 - x^2 = t$, so $x\\,dx = -\\dfrac{dt}{2}$", "math": "\\displaystyle\\int \\dfrac{x\\,dx}{\\sqrt{a^2 - x^2}} = -\\dfrac{1}{2}\\int t^{-1/2}\\,dt = -\\sqrt t = -\\sqrt{a^2 - x^2}", "marks": 1 },
+              { "do": "Hence", "math": "I = a\\sin^{-1}\\dfrac{x}{a} - \\sqrt{a^2 - x^2} + C", "marks": 0.5 }
+            ],
+            "mistake": "Multiplying by $\\sqrt{a - x}$ instead; that puts $a - x$ under a root in the numerator and gets nowhere."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Exemplar",
+          "question": "Find: $\\displaystyle\\int \\sqrt{\\tan x}\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{1}{\\sqrt 2}\\tan^{-1}\\left(\\dfrac{\\tan x - 1}{\\sqrt{2\\tan x}}\\right) + \\dfrac{1}{2\\sqrt 2}\\log\\left|\\dfrac{\\tan x - \\sqrt{2\\tan x} + 1}{\\tan x + \\sqrt{2\\tan x} + 1}\\right| + C$",
+            "concept": "$2t^2 = (t^2 + 1) + (t^2 - 1)$; divide by $t^2$ and put $t - \\dfrac{1}{t} = u$, $t + \\dfrac{1}{t} = v$.",
+            "steps": [
+              { "do": "Put $\\tan x = t^2$", "math": "\\sec^2 x\\,dx = 2t\\,dt \\;\\Rightarrow\\; dx = \\dfrac{2t\\,dt}{1 + t^4}", "marks": 1 },
+              { "do": "Substitute", "math": "I = \\displaystyle\\int t\\cdot\\dfrac{2t}{1 + t^4}\\,dt = \\int \\dfrac{2t^2}{t^4 + 1}\\,dt", "marks": 0.5 },
+              { "do": "Write $2t^2 = (t^2 + 1) + (t^2 - 1)$", "math": "I = \\displaystyle\\int \\dfrac{t^2 + 1}{t^4 + 1}\\,dt + \\int \\dfrac{t^2 - 1}{t^4 + 1}\\,dt = I_1 + I_2", "marks": 0.5 },
+              { "do": "In $I_1$ divide by $t^2$ and put $t - \\dfrac{1}{t} = u$", "math": "I_1 = \\displaystyle\\int \\dfrac{1 + \\frac{1}{t^2}}{\\left(t - \\frac{1}{t}\\right)^2 + 2}\\,dt = \\int \\dfrac{du}{u^2 + 2} = \\dfrac{1}{\\sqrt 2}\\tan^{-1}\\dfrac{u}{\\sqrt 2}", "marks": 1 },
+              { "do": "In $I_2$ divide by $t^2$ and put $t + \\dfrac{1}{t} = v$", "math": "I_2 = \\displaystyle\\int \\dfrac{1 - \\frac{1}{t^2}}{\\left(t + \\frac{1}{t}\\right)^2 - 2}\\,dt = \\int \\dfrac{dv}{v^2 - 2} = \\dfrac{1}{2\\sqrt 2}\\log\\left|\\dfrac{v - \\sqrt 2}{v + \\sqrt 2}\\right|", "marks": 1 },
+              { "do": "Put back $u = \\dfrac{t^2 - 1}{t}$, $v = \\dfrac{t^2 + 1}{t}$", "math": "I = \\dfrac{1}{\\sqrt 2}\\tan^{-1}\\left(\\dfrac{t^2 - 1}{\\sqrt 2\\,t}\\right) + \\dfrac{1}{2\\sqrt 2}\\log\\left|\\dfrac{t^2 - \\sqrt 2\\,t + 1}{t^2 + \\sqrt 2\\,t + 1}\\right| + C", "marks": 0.5 },
+              { "do": "Put back $t = \\sqrt{\\tan x}$", "math": "I = \\dfrac{1}{\\sqrt 2}\\tan^{-1}\\left(\\dfrac{\\tan x - 1}{\\sqrt{2\\tan x}}\\right) + \\dfrac{1}{2\\sqrt 2}\\log\\left|\\dfrac{\\tan x - \\sqrt{2\\tan x} + 1}{\\tan x + \\sqrt{2\\tan x} + 1}\\right| + C", "marks": 0.5 }
+            ],
+            "mistake": "Writing $dx = \\dfrac{2t\\,dt}{1 + t^2}$; since $\\sec^2 x = 1 + \\tan^2 x = 1 + t^4$, it is $1 + t^4$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** In a mathematics quiz, a team is told to use only the property $\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$ (with standard integrals) to evaluate the integrals below. Answer the following.",
+          "parts": [
+            { "label": "(i)", "text": "Evaluate $\\displaystyle\\int_0^{\\pi/2} \\log\\left(\\dfrac{4 + 3\\sin x}{4 + 3\\cos x}\\right)dx$.", "marks": 1 },
+            { "label": "(ii)", "text": "Evaluate $\\displaystyle\\int_0^2 x\\sqrt{2 - x}\\,dx$.", "marks": 1 },
+            { "label": "(iii)", "text": "Evaluate $\\displaystyle\\int_0^{\\pi/2} \\dfrac{\\sin^2 x}{\\sin x + \\cos x}\\,dx$.", "marks": 2 }
+          ],
+          "solution": {
+            "answer": "(i) $0$  (ii) $\\dfrac{16\\sqrt 2}{15}$  (iii) $\\dfrac{1}{\\sqrt 2}\\log\\left(\\sqrt 2 + 1\\right)$",
+            "concept": "Replace $x$ by $a - x$; then add the two forms of $I$, or integrate the simpler form.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  { "do": "Let", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\log\\left(\\dfrac{4 + 3\\sin x}{4 + 3\\cos x}\\right)dx" },
+                  { "do": "Replace $x$ by $\\dfrac{\\pi}{2} - x$; $\\sin$ and $\\cos$ swap", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\log\\left(\\dfrac{4 + 3\\cos x}{4 + 3\\sin x}\\right)dx = -I", "marks": 0.5 },
+                  { "do": "So", "math": "2I = 0 \\;\\Rightarrow\\; I = 0", "marks": 0.5 }
+                ],
+                "answer": "$0$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  { "do": "Let", "math": "I = \\displaystyle\\int_0^2 x\\sqrt{2 - x}\\,dx" },
+                  { "do": "Replace $x$ by $2 - x$; the root becomes $\\sqrt x$", "math": "I = \\displaystyle\\int_0^2 (2 - x)\\sqrt x\\,dx = \\int_0^2 \\left(2x^{1/2} - x^{3/2}\\right)dx", "marks": 0.5 },
+                  { "do": "Integrate", "math": "I = \\left[\\dfrac{4}{3}x^{3/2} - \\dfrac{2}{5}x^{5/2}\\right]_0^2" },
+                  { "do": "Put the limits; $2^{3/2} = 2\\sqrt 2$, $2^{5/2} = 4\\sqrt 2$", "math": "I = \\dfrac{8\\sqrt 2}{3} - \\dfrac{8\\sqrt 2}{5} = \\dfrac{16\\sqrt 2}{15}", "marks": 0.5 }
+                ],
+                "answer": "$\\dfrac{16\\sqrt 2}{15}$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  { "do": "Let", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\dfrac{\\sin^2 x}{\\sin x + \\cos x}\\,dx \\quad \\ldots(1)" },
+                  { "do": "Replace $x$ by $\\dfrac{\\pi}{2} - x$", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\dfrac{\\cos^2 x}{\\cos x + \\sin x}\\,dx \\quad \\ldots(2)", "marks": 0.5 },
+                  { "do": "Add (1) and (2); $\\sin^2 x + \\cos^2 x = 1$", "math": "2I = \\displaystyle\\int_0^{\\pi/2} \\dfrac{dx}{\\sin x + \\cos x}", "marks": 0.5 },
+                  { "do": "Use $\\sin x + \\cos x = \\sqrt 2\\sin\\left(x + \\dfrac{\\pi}{4}\\right)$ and $\\displaystyle\\int \\csc\\theta\\,d\\theta = \\log|\\csc\\theta - \\cot\\theta|$", "math": "2I = \\dfrac{1}{\\sqrt 2}\\left[\\log\\left|\\csc\\left(x + \\dfrac{\\pi}{4}\\right) - \\cot\\left(x + \\dfrac{\\pi}{4}\\right)\\right|\\right]_0^{\\pi/2}", "marks": 0.5 },
+                  { "do": "Put the limits; $\\csc\\dfrac{3\\pi}{4} = \\sqrt 2$, $\\cot\\dfrac{3\\pi}{4} = -1$", "math": "2I = \\dfrac{1}{\\sqrt 2}\\left[\\log\\left(\\sqrt 2 + 1\\right) - \\log\\left(\\sqrt 2 - 1\\right)\\right] = \\dfrac{1}{\\sqrt 2}\\log\\left(\\sqrt 2 + 1\\right)^2" },
+                  { "do": "Hence", "math": "I = \\dfrac{1}{2}\\cdot\\dfrac{2}{\\sqrt 2}\\log\\left(\\sqrt 2 + 1\\right) = \\dfrac{1}{\\sqrt 2}\\log\\left(\\sqrt 2 + 1\\right)", "why": "$\\dfrac{\\sqrt 2 + 1}{\\sqrt 2 - 1} = \\left(\\sqrt 2 + 1\\right)^2$", "marks": 0.5 }
+                ],
+                "answer": "$\\dfrac{1}{\\sqrt 2}\\log\\left(\\sqrt 2 + 1\\right)$"
+              }
+            ],
+            "mistake": "In (iii), trying to integrate $\\dfrac{\\sin^2 x}{\\sin x + \\cos x}$ directly; add the $\\cos^2 x$ form first."
+          }
+        }
+      ]
+    }
+  ]
+}

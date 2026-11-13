@@ -175,8 +175,8 @@
           "n": 6,
           "marks": 1,
           "type": "assertion-reason",
-          "source": "CBSE SQP 2024-25",
-          "question": "**Assertion (A):** Consider the function defined as $f(x) = |x| + |x - 1|$, $x \\in \\mathbb{R}$. Then $f(x)$ is not differentiable at $x = 0$ and $x = 1$. **Reason (R):** Suppose $f$ be defined and continuous on $(a, b)$ and $c \\in (a, b)$; then $f(x)$ is not differentiable at $x = c$ if $\\displaystyle\\lim_{h \\to 0^-}\\dfrac{f(c+h) - f(c)}{h} \\ne \\lim_{h \\to 0^+}\\dfrac{f(c+h) - f(c)}{h}$.",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** The function $f(x) = |\\sin x|$ is continuous for every $x \\in \\mathbb{R}$. **Reason (R):** If $g$ and $h$ are both continuous on $\\mathbb{R}$, then the composite function $g \\circ h$ is continuous on $\\mathbb{R}$.",
           "options": [
             "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
             "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
@@ -185,32 +185,27 @@
           ],
           "solution": {
             "answer": "(A) Both A and R are true and R is the correct explanation of A",
-            "concept": "Differentiable at $c$ needs LHD $=$ RHD.",
+            "concept": "A composite of continuous functions is continuous.",
             "steps": [
               {
-                "do": "Remove the modulus near $0$ and $1$.",
-                "math": "f(x) = \\begin{cases} 1 - 2x, & x < 0 \\\\ 1, & 0 \\le x \\le 1 \\\\ 2x - 1, & x > 1 \\end{cases}"
+                "do": "Write $f$ as a composite: $g(x) = |x|$, $h(x) = \\sin x$.",
+                "math": "f(x) = g(h(x)) = |\\sin x|"
               },
               {
-                "do": "At $x = 0$: LHD $= -2$, RHD $= 0$; unequal.",
-                "why": "Slopes of $1 - 2x$ and $1$"
+                "do": "$|x|$ and $\\sin x$ are continuous on $\\mathbb{R}$, so $f$ is continuous. **A is true**."
               },
               {
-                "do": "At $x = 1$: LHD $= 0$, RHD $= 2$; unequal. So **A is true**.",
-                "why": "Slopes of $1$ and $2x - 1$"
+                "do": "R is the standard theorem on composite functions. **R is true**."
               },
               {
-                "do": "R is the definition: unequal one-sided derivatives mean not differentiable. **R is true**."
-              },
-              {
-                "do": "A follows exactly from the test in R, so **R explains A**.",
+                "do": "A is exactly R applied to $g$ and $h$, so **R explains A**.",
                 "marks": 1
               },
               {
                 "do": "So the correct option is (A)."
               }
             ],
-            "mistake": "Thinking a continuous function must be differentiable; $f$ is continuous but has corners at $0$ and $1$."
+            "mistake": "Thinking $|\\sin x|$ breaks where $\\sin x = 0$; it has corners there (not differentiable), but no breaks."
           }
         },
         {
@@ -456,9 +451,13 @@
                 "marks": 0.5
               },
               {
-                "do": "Put $\\dfrac{dy}{dx} = 0$: then $\\cos(x + y) = 0$, so $\\sin(x + y) = \\pm 1$.",
-                "math": "y = \\sin(x + y) = \\pm 1",
-                "why": "$\\sin^2 + \\cos^2 = 1$",
+                "do": "Put $\\dfrac{dy}{dx} = 0$.",
+                "math": "\\cos(x + y) = 0 \\;\\Rightarrow\\; \\sin(x + y) = \\pm 1",
+                "why": "$\\sin^2 + \\cos^2 = 1$"
+              },
+              {
+                "do": "But $y = \\sin(x + y)$. Hence proved.",
+                "math": "y = \\pm 1",
                 "marks": 0.5
               }
             ],
@@ -520,7 +519,7 @@
                 "math": "y_1 = n\\left(x + \\sqrt{1+x^{2}}\\right)^{n-1}\\left(1 + \\dfrac{x}{\\sqrt{1+x^{2}}}\\right)"
               },
               {
-                "do": "The bracket equals $\\dfrac{\\sqrt{1+x^2} + x}{\\sqrt{1+x^2}}$, so:",
+                "do": "Write the bracket as $\\dfrac{x + \\sqrt{1+x^2}}{\\sqrt{1+x^2}}$ and simplify.",
                 "math": "y_1 = \\dfrac{n\\left(x + \\sqrt{1+x^{2}}\\right)^{n}}{\\sqrt{1+x^{2}}} = \\dfrac{ny}{\\sqrt{1+x^{2}}}",
                 "marks": 1
               },
