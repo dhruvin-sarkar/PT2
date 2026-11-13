@@ -1,0 +1,868 @@
+{
+  "chapter": 5,
+  "chapterTitle": "Continuity and Differentiability",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The value of $k$ for which $f(x) = \\begin{cases} kx + 1, & x \\le 5 \\\\ 3x - 5, & x > 5 \\end{cases}$ is continuous at $x = 5$ is:",
+          "options": [
+            "$\\dfrac{9}{5}$",
+            "$\\dfrac{5}{9}$",
+            "$\\dfrac{11}{5}$",
+            "$2$"
+          ],
+          "solution": {
+            "answer": "(A) $\\dfrac{9}{5}$",
+            "concept": "$f$ is continuous at $x=a$ if LHL $=$ RHL $= f(a)$.",
+            "steps": [
+              {
+                "do": "Find $f(5)$ and the LHL from the first piece.",
+                "math": "f(5) = \\lim_{x \\to 5^-} (kx+1) = 5k + 1"
+              },
+              {
+                "do": "Find the RHL from the second piece.",
+                "math": "\\lim_{x \\to 5^+} (3x - 5) = 15 - 5 = 10"
+              },
+              {
+                "do": "For continuity, equate them and solve.",
+                "math": "5k + 1 = 10 \\;\\Rightarrow\\; k = \\dfrac{9}{5}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (A)."
+              }
+            ],
+            "mistake": "Using the $x \\le 5$ piece for both sides; each one-sided limit uses its own piece."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The function $f(x) = |x|$ is:",
+          "options": [
+            "continuous and differentiable everywhere",
+            "continuous everywhere but not differentiable at $x = 0$",
+            "differentiable but not continuous at $x = 0$",
+            "neither continuous nor differentiable at $x = 0$"
+          ],
+          "solution": {
+            "answer": "(B) continuous everywhere but not differentiable at $x = 0$",
+            "concept": "Differentiable at $a$ means LHD $=$ RHD; differentiability implies continuity, not the reverse.",
+            "steps": [
+              {
+                "do": "Check continuity at $x=0$: both one-sided limits equal $f(0)$.",
+                "math": "\\lim_{x\\to 0^-}(-x) = 0 = \\lim_{x\\to 0^+} x = f(0)"
+              },
+              {
+                "do": "Find the LHD at $x = 0$.",
+                "math": "\\text{LHD} = \\lim_{h\\to 0}\\dfrac{|0-h| - 0}{-h} = \\lim_{h\\to 0}\\dfrac{h}{-h} = -1"
+              },
+              {
+                "do": "Find the RHD at $x = 0$.",
+                "math": "\\text{RHD} = \\lim_{h\\to 0}\\dfrac{|0+h| - 0}{h} = 1"
+              },
+              {
+                "do": "LHD $\\ne$ RHD, so $|x|$ is not differentiable at $0$, though continuous.",
+                "math": "-1 \\ne 1",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Option (C) is impossible: a function differentiable at a point is always continuous there."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The derivative of $e^{e^{x}}$ with respect to $x$ is:",
+          "options": [
+            "$\\log x$",
+            "$e^{e^{x}}$",
+            "$e^{x} \\cdot e^{e^{x}}$",
+            "$(e^{x})^{2}$"
+          ],
+          "solution": {
+            "answer": "(C) $e^{x} \\cdot e^{e^{x}}$",
+            "concept": "Chain rule: $\\dfrac{d}{dx} e^{u} = e^{u} \\dfrac{du}{dx}$.",
+            "steps": [
+              {
+                "do": "Let $y = e^{e^{x}}$ and apply the chain rule.",
+                "math": "\\dfrac{dy}{dx} = e^{e^{x}} \\cdot \\dfrac{d}{dx}(e^{x})"
+              },
+              {
+                "do": "Differentiate the inner function $e^{x}$.",
+                "math": "\\dfrac{dy}{dx} = e^{e^{x}} \\cdot e^{x} = e^{x} \\cdot e^{e^{x}}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (C)."
+              }
+            ],
+            "mistake": "Writing just $e^{e^x}$ (option B) forgets to multiply by the derivative of the power $e^x$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $y = \\log(\\cos e^{x})$, then $\\dfrac{dy}{dx}$ is:",
+          "options": [
+            "$\\tan e^{x}$",
+            "$-e^{x}\\tan e^{x}$",
+            "$e^{x}\\tan e^{x}$",
+            "$-\\tan e^{x}$"
+          ],
+          "solution": {
+            "answer": "(B) $-e^{x}\\tan e^{x}$",
+            "concept": "Chain rule, outside to inside: $\\log \\to \\cos \\to e^{x}$.",
+            "steps": [
+              {
+                "do": "Differentiate $\\log$, then $\\cos$, then $e^{x}$ (chain rule).",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{1}{\\cos e^{x}} \\cdot (-\\sin e^{x}) \\cdot e^{x}"
+              },
+              {
+                "do": "Simplify using $\\dfrac{\\sin}{\\cos} = \\tan$.",
+                "math": "\\dfrac{dy}{dx} = -e^{x}\\tan e^{x}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Dropping the factor $e^{x}$ from the innermost function gives the wrong option (D)."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $x = at^{2}$ and $y = 2at$, then $\\dfrac{dy}{dx}$ is:",
+          "options": [
+            "$t$",
+            "$\\dfrac{1}{t}$",
+            "$2t$",
+            "$-\\dfrac{1}{t^{2}}$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{1}{t}$",
+            "concept": "Parametric form: $\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}$.",
+            "steps": [
+              {
+                "do": "Differentiate both w.r.t. $t$.",
+                "math": "\\dfrac{dx}{dt} = 2at, \\qquad \\dfrac{dy}{dt} = 2a"
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{2a}{2at} = \\dfrac{1}{t}",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (B)."
+              }
+            ],
+            "mistake": "Dividing the other way round, $\\dfrac{dx/dt}{dy/dt} = t$, gives option (A)."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** The greatest integer function $f(x) = [x]$ is discontinuous at $x = 2$. **Reason (R):** $\\displaystyle\\lim_{x \\to 2^-}[x] \\ne \\lim_{x \\to 2^+}[x]$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A",
+            "concept": "A function is discontinuous at a point where LHL $\\ne$ RHL.",
+            "steps": [
+              {
+                "do": "Find the one-sided limits of $[x]$ at $x=2$.",
+                "math": "\\lim_{x\\to 2^-}[x] = 1, \\qquad \\lim_{x\\to 2^+}[x] = 2"
+              },
+              {
+                "do": "Since $1 \\ne 2$, $f$ is discontinuous at $x=2$: **A is true**."
+              },
+              {
+                "do": "$1 \\ne 2$, so **R is true**."
+              },
+              {
+                "do": "A is true precisely because LHL $\\ne$ RHL, so **R explains A**.",
+                "marks": 1
+              },
+              {
+                "do": "So the correct option is (A)."
+              }
+            ],
+            "mistake": "Just left of $2$, $[x] = 1$, not $2$; students often take $[1.99] = 2$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "question": "Differentiate $\\sin^{-1}\\left(2x\\sqrt{1 - x^{2}}\\right)$ with respect to $x$, where $-\\dfrac{1}{\\sqrt{2}} < x < \\dfrac{1}{\\sqrt{2}}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\dfrac{2}{\\sqrt{1 - x^{2}}}$",
+            "concept": "Substitute $x = \\sin\\theta$ to simplify, using $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$.",
+            "steps": [
+              {
+                "do": "Let $y = \\sin^{-1}\\left(2x\\sqrt{1-x^2}\\right)$ and put $x = \\sin\\theta$.",
+                "math": "x = \\sin\\theta \\;\\Rightarrow\\; \\theta = \\sin^{-1}x"
+              },
+              {
+                "do": "Find the range of $\\theta$ from the given range of $x$.",
+                "math": "-\\dfrac{1}{\\sqrt{2}} < \\sin\\theta < \\dfrac{1}{\\sqrt{2}} \\;\\Rightarrow\\; -\\dfrac{\\pi}{4} < \\theta < \\dfrac{\\pi}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify the expression inside.",
+                "math": "2x\\sqrt{1-x^2} = 2\\sin\\theta\\cos\\theta = \\sin 2\\theta",
+                "why": "$\\cos\\theta > 0$ here, so $\\sqrt{1-\\sin^2\\theta} = \\cos\\theta$",
+                "marks": 0.5
+              },
+              {
+                "do": "Since $-\\dfrac{\\pi}{2} < 2\\theta < \\dfrac{\\pi}{2}$, $\\sin^{-1}$ cancels $\\sin$.",
+                "math": "y = \\sin^{-1}(\\sin 2\\theta) = 2\\theta = 2\\sin^{-1}x",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{2}{\\sqrt{1 - x^{2}}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Skipping the range check for $2\\theta$; $\\sin^{-1}(\\sin 2\\theta) = 2\\theta$ only when $2\\theta \\in \\left[-\\tfrac{\\pi}{2}, \\tfrac{\\pi}{2}\\right]$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "question": "Find $k$ so that $f(x) = \\begin{cases} \\dfrac{1 - \\cos 4x}{8x^{2}}, & x \\ne 0 \\\\ k, & x = 0 \\end{cases}$ is continuous at $x = 0$.",
+          "solution": {
+            "answer": "$k = 1$",
+            "concept": "Continuity at $0$: $\\displaystyle\\lim_{x \\to 0} f(x) = f(0)$; use $\\displaystyle\\lim_{\\theta\\to 0}\\dfrac{\\sin\\theta}{\\theta} = 1$.",
+            "steps": [
+              {
+                "do": "For continuity at $x = 0$ we need:",
+                "math": "\\lim_{x \\to 0} f(x) = f(0) = k"
+              },
+              {
+                "do": "Use $1 - \\cos 2A = 2\\sin^2 A$ with $A = 2x$.",
+                "math": "\\lim_{x \\to 0}\\dfrac{1 - \\cos 4x}{8x^{2}} = \\lim_{x \\to 0}\\dfrac{2\\sin^{2}2x}{8x^{2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Rearrange to get the standard limit $\\dfrac{\\sin 2x}{2x}$.",
+                "math": "\\lim_{x \\to 0}\\dfrac{\\sin^{2}2x}{4x^{2}} = \\lim_{x \\to 0}\\left(\\dfrac{\\sin 2x}{2x}\\right)^{2} = 1^{2} = 1",
+                "marks": 1
+              },
+              {
+                "do": "Equate the limit to $f(0)$.",
+                "math": "k = 1",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $1 - \\cos 4x = 2\\sin^2 4x$; the angle halves, so it is $2\\sin^2 2x$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "question": "Find $\\dfrac{dy}{dx}$ if $y = x^{\\sin x} + (\\sin x)^{x}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = x^{\\sin x}\\left(\\cos x \\log x + \\dfrac{\\sin x}{x}\\right) + (\\sin x)^{x}\\left(\\log \\sin x + x\\cot x\\right)$",
+            "concept": "For $(\\text{variable})^{\\text{variable}}$, take $\\log$ first; split a sum into $u + v$ before taking logs.",
+            "steps": [
+              {
+                "do": "Let $u = x^{\\sin x}$ and $v = (\\sin x)^{x}$, so $y = u + v$.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{du}{dx} + \\dfrac{dv}{dx}",
+                "why": "$\\log$ of a sum cannot be split, so separate first",
+                "marks": 0.5
+              },
+              {
+                "do": "Take log of $u$.",
+                "math": "\\log u = \\sin x \\log x"
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (product rule).",
+                "math": "\\dfrac{1}{u}\\dfrac{du}{dx} = \\cos x \\log x + \\dfrac{\\sin x}{x}"
+              },
+              {
+                "do": "Multiply by $u$.",
+                "math": "\\dfrac{du}{dx} = x^{\\sin x}\\left(\\cos x \\log x + \\dfrac{\\sin x}{x}\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Take log of $v$.",
+                "math": "\\log v = x \\log \\sin x"
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (product rule).",
+                "math": "\\dfrac{1}{v}\\dfrac{dv}{dx} = \\log\\sin x + x\\cdot\\dfrac{\\cos x}{\\sin x}"
+              },
+              {
+                "do": "Multiply by $v$.",
+                "math": "\\dfrac{dv}{dx} = (\\sin x)^{x}\\left(\\log\\sin x + x\\cot x\\right)",
+                "marks": 1
+              },
+              {
+                "do": "Add the two results.",
+                "math": "\\dfrac{dy}{dx} = x^{\\sin x}\\left(\\cos x \\log x + \\dfrac{\\sin x}{x}\\right) + (\\sin x)^{x}\\left(\\log \\sin x + x\\cot x\\right)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $\\log y = \\sin x\\log x + x\\log\\sin x$ directly; $\\log(u+v) \\ne \\log u + \\log v$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "question": "If $x = a(\\theta + \\sin\\theta)$ and $y = a(1 - \\cos\\theta)$, find $\\dfrac{dy}{dx}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\tan\\dfrac{\\theta}{2}$",
+            "concept": "Parametric form: $\\dfrac{dy}{dx} = \\dfrac{dy/d\\theta}{dx/d\\theta}$.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ w.r.t. $\\theta$.",
+                "math": "\\dfrac{dx}{d\\theta} = a(1 + \\cos\\theta)",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $y$ w.r.t. $\\theta$.",
+                "math": "\\dfrac{dy}{d\\theta} = a\\sin\\theta",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{a\\sin\\theta}{a(1 + \\cos\\theta)}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use half-angle formulas and simplify.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{2\\sin\\frac{\\theta}{2}\\cos\\frac{\\theta}{2}}{2\\cos^{2}\\frac{\\theta}{2}} = \\tan\\dfrac{\\theta}{2}",
+                "why": "$1 + \\cos\\theta = 2\\cos^2\\frac{\\theta}{2}$",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{d\\theta}(1 - \\cos\\theta) = -\\sin\\theta$; the derivative of $-\\cos\\theta$ is $+\\sin\\theta$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "question": "If $y = e^{a\\cos^{-1}x}$, $-1 < x < 1$, show that $(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - x\\dfrac{dy}{dx} - a^{2}y = 0$.",
+          "solution": {
+            "answer": "$(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - x\\dfrac{dy}{dx} - a^{2}y = 0$ (proved)",
+            "concept": "Clear the root before differentiating again; write $y_1 = \\dfrac{dy}{dx}$, $y_2 = \\dfrac{d^2y}{dx^2}$.",
+            "steps": [
+              {
+                "do": "Differentiate $y$ w.r.t. $x$ (chain rule).",
+                "math": "y_1 = e^{a\\cos^{-1}x}\\cdot\\dfrac{-a}{\\sqrt{1 - x^{2}}} = \\dfrac{-ay}{\\sqrt{1 - x^{2}}}",
+                "why": "$\\dfrac{d}{dx}\\cos^{-1}x = \\dfrac{-1}{\\sqrt{1-x^2}}$",
+                "marks": 1
+              },
+              {
+                "do": "Cross-multiply to remove the fraction.",
+                "math": "\\sqrt{1 - x^{2}}\\; y_1 = -ay",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (product rule).",
+                "math": "\\sqrt{1 - x^{2}}\\; y_2 + y_1\\cdot\\dfrac{-x}{\\sqrt{1 - x^{2}}} = -a y_1",
+                "marks": 1
+              },
+              {
+                "do": "Multiply both sides by $\\sqrt{1 - x^{2}}$.",
+                "math": "(1 - x^{2})y_2 - x y_1 = -a\\sqrt{1 - x^{2}}\\; y_1"
+              },
+              {
+                "do": "Put $\\sqrt{1 - x^{2}}\\, y_1 = -ay$ on the right.",
+                "math": "(1 - x^{2})y_2 - x y_1 = -a(-ay) = a^{2}y"
+              },
+              {
+                "do": "Rearrange. Hence proved.",
+                "math": "(1 - x^{2})\\dfrac{d^{2}y}{dx^{2}} - x\\dfrac{dy}{dx} - a^{2}y = 0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting the minus sign in the derivative of $\\cos^{-1}x$, which flips the sign of $a^2 y$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "question": "If $\\sqrt{1 - x^{2}} + \\sqrt{1 - y^{2}} = a(x - y)$, show that $\\dfrac{dy}{dx} = \\sqrt{\\dfrac{1 - y^{2}}{1 - x^{2}}}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\sqrt{\\dfrac{1 - y^{2}}{1 - x^{2}}}$ (proved)",
+            "concept": "Put $x = \\sin A$, $y = \\sin B$; then use sum-to-product formulas.",
+            "steps": [
+              {
+                "do": "Put $x = \\sin A$ and $y = \\sin B$.",
+                "math": "A = \\sin^{-1}x, \\qquad B = \\sin^{-1}y"
+              },
+              {
+                "do": "Substitute in the given equation.",
+                "math": "\\cos A + \\cos B = a(\\sin A - \\sin B)",
+                "marks": 0.5
+              },
+              {
+                "do": "Use $\\cos C + \\cos D$ and $\\sin C - \\sin D$ formulas.",
+                "math": "2\\cos\\tfrac{A+B}{2}\\cos\\tfrac{A-B}{2} = a\\cdot 2\\cos\\tfrac{A+B}{2}\\sin\\tfrac{A-B}{2}",
+                "marks": 1
+              },
+              {
+                "do": "Cancel $2\\cos\\frac{A+B}{2}$ from both sides.",
+                "math": "\\cot\\dfrac{A - B}{2} = a"
+              },
+              {
+                "do": "So $A - B$ is a constant.",
+                "math": "\\sin^{-1}x - \\sin^{-1}y = k \\quad (k \\text{ a constant})",
+                "why": "$\\cot\\frac{A-B}{2}$ equals the fixed number $a$",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate both sides w.r.t. $x$.",
+                "math": "\\dfrac{1}{\\sqrt{1 - x^{2}}} - \\dfrac{1}{\\sqrt{1 - y^{2}}}\\cdot\\dfrac{dy}{dx} = 0",
+                "why": "The derivative of the constant $k$ is $0$",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $\\dfrac{dy}{dx}$. Hence proved.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{\\sqrt{1 - y^{2}}}{\\sqrt{1 - x^{2}}} = \\sqrt{\\dfrac{1 - y^{2}}{1 - x^{2}}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Differentiating the original equation directly; it works, but the algebra gets long and error-prone."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "question": "Find $\\dfrac{dy}{dx}$ if $x^{2} + 2xy + y^{3} = 42$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = -\\dfrac{2(x + y)}{2x + 3y^{2}}$",
+            "concept": "Implicit differentiation: differentiate each term w.r.t. $x$, treating $y$ as a function of $x$.",
+            "steps": [
+              {
+                "do": "Differentiate both sides w.r.t. $x$.",
+                "math": "2x + 2\\left(x\\dfrac{dy}{dx} + y\\right) + 3y^{2}\\dfrac{dy}{dx} = 0",
+                "why": "Product rule on $2xy$; chain rule on $y^3$",
+                "marks": 1
+              },
+              {
+                "do": "Collect the $\\dfrac{dy}{dx}$ terms.",
+                "math": "(2x + 3y^{2})\\dfrac{dy}{dx} = -(2x + 2y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide to get the answer.",
+                "math": "\\dfrac{dy}{dx} = -\\dfrac{2(x + y)}{2x + 3y^{2}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\dfrac{d}{dx}(2xy) = 2y$ only; the product rule gives $2x\\dfrac{dy}{dx} + 2y$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the values of $a$ and $b$ such that $f(x) = \\begin{cases} 5, & x \\le 2 \\\\ ax + b, & 2 < x < 10 \\\\ 21, & x \\ge 10 \\end{cases}$ is continuous.",
+          "solution": {
+            "answer": "$a = 2$, $b = 1$",
+            "concept": "Each piece is a polynomial, so only the joining points $x = 2$ and $x = 10$ need checking.",
+            "steps": [
+              {
+                "do": "At $x = 2$: find $f(2)$, LHL and RHL.",
+                "math": "f(2) = 5, \\quad \\lim_{x\\to 2^-} f(x) = 5, \\quad \\lim_{x\\to 2^+}(ax + b) = 2a + b"
+              },
+              {
+                "do": "Continuity at $x = 2$ gives:",
+                "math": "2a + b = 5 \\quad \\cdots (1)",
+                "marks": 1
+              },
+              {
+                "do": "At $x = 10$: find $f(10)$, LHL and RHL.",
+                "math": "f(10) = 21, \\quad \\lim_{x\\to 10^-}(ax + b) = 10a + b, \\quad \\lim_{x\\to 10^+} f(x) = 21"
+              },
+              {
+                "do": "Continuity at $x = 10$ gives:",
+                "math": "10a + b = 21 \\quad \\cdots (2)",
+                "marks": 1
+              },
+              {
+                "do": "Subtract (1) from (2).",
+                "math": "8a = 16 \\;\\Rightarrow\\; a = 2",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $a = 2$ in (1).",
+                "math": "b = 5 - 4 = 1",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Checking only one joining point; $f$ is continuous everywhere only if both $x=2$ and $x=10$ work."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "short",
+          "question": "If $y = (\\tan^{-1}x)^{2}$, show that $(x^{2} + 1)^{2}\\dfrac{d^{2}y}{dx^{2}} + 2x(x^{2} + 1)\\dfrac{dy}{dx} = 2$.",
+          "solution": {
+            "answer": "$(x^{2} + 1)^{2}\\dfrac{d^{2}y}{dx^{2}} + 2x(x^{2} + 1)\\dfrac{dy}{dx} = 2$ (proved)",
+            "concept": "Clear the denominator after the first derivative, then differentiate again.",
+            "steps": [
+              {
+                "do": "Differentiate w.r.t. $x$ (chain rule).",
+                "math": "y_1 = 2\\tan^{-1}x \\cdot \\dfrac{1}{1 + x^{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Cross-multiply.",
+                "math": "(1 + x^{2})\\, y_1 = 2\\tan^{-1}x",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (product rule).",
+                "math": "(1 + x^{2})\\, y_2 + 2x\\, y_1 = \\dfrac{2}{1 + x^{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Multiply both sides by $(1 + x^{2})$. Hence proved.",
+                "math": "(x^{2} + 1)^{2}\\dfrac{d^{2}y}{dx^{2}} + 2x(x^{2} + 1)\\dfrac{dy}{dx} = 2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using the quotient rule on $y_1$ directly; it works but is long. Cross-multiplying first is safer."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "question": "If $(x - a)^{2} + (y - b)^{2} = c^{2}$ for some $c > 0$, prove that $\\dfrac{\\left[1 + \\left(\\dfrac{dy}{dx}\\right)^{2}\\right]^{3/2}}{\\dfrac{d^{2}y}{dx^{2}}}$ is a constant independent of $a$ and $b$.",
+          "solution": {
+            "answer": "The expression equals $-c$ (or $c$ when $y < b$), a constant independent of $a$ and $b$.",
+            "concept": "Implicit differentiation twice; then use $(x-a)^2 + (y-b)^2 = c^2$ to simplify.",
+            "steps": [
+              {
+                "do": "Differentiate the equation w.r.t. $x$.",
+                "math": "2(x - a) + 2(y - b)\\dfrac{dy}{dx} = 0"
+              },
+              {
+                "do": "Solve for $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx} = -\\dfrac{x - a}{y - b} \\quad \\cdots (1)",
+                "marks": 1
+              },
+              {
+                "do": "Differentiate (1) again (quotient rule).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{(y - b)\\cdot 1 - (x - a)\\dfrac{dy}{dx}}{(y - b)^{2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\dfrac{dy}{dx}$ from (1).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{(y - b) + \\dfrac{(x - a)^{2}}{y - b}}{(y - b)^{2}} = -\\dfrac{(y - b)^{2} + (x - a)^{2}}{(y - b)^{3}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use the given equation in the numerator.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = -\\dfrac{c^{2}}{(y - b)^{3}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Now find $1 + \\left(\\dfrac{dy}{dx}\\right)^{2}$ using (1).",
+                "math": "1 + \\dfrac{(x - a)^{2}}{(y - b)^{2}} = \\dfrac{(y - b)^{2} + (x - a)^{2}}{(y - b)^{2}} = \\dfrac{c^{2}}{(y - b)^{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Raise to the power $\\dfrac{3}{2}$.",
+                "math": "\\left[1 + \\left(\\dfrac{dy}{dx}\\right)^{2}\\right]^{3/2} = \\dfrac{c^{3}}{(y - b)^{3}}",
+                "why": "Taking $y > b$; if $y < b$ the final value is $c$",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide the two results.",
+                "math": "\\dfrac{\\left[1 + \\left(\\frac{dy}{dx}\\right)^{2}\\right]^{3/2}}{\\frac{d^{2}y}{dx^{2}}} = \\dfrac{c^{3}}{(y - b)^{3}} \\times \\dfrac{(y - b)^{3}}{-c^{2}} = -c",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the expression $= -c$, a constant independent of $a$ and $b$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not replacing $(x-a)^2 + (y-b)^2$ by $c^2$; then $a$ and $b$ seem to stay in the answer."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 3,
+          "type": "short",
+          "question": "If $x^{y} = e^{x - y}$, prove that $\\dfrac{dy}{dx} = \\dfrac{\\log x}{(1 + \\log x)^{2}}$.",
+          "solution": {
+            "answer": "$\\dfrac{dy}{dx} = \\dfrac{\\log x}{(1 + \\log x)^{2}}$ (proved)",
+            "concept": "Take $\\log$ on both sides; $\\log e^{k} = k$. Make $y$ the subject, then use the quotient rule.",
+            "steps": [
+              {
+                "do": "Take log on both sides.",
+                "math": "y\\log x = (x - y)\\log e = x - y",
+                "marks": 0.5
+              },
+              {
+                "do": "Bring the $y$ terms together.",
+                "math": "y\\log x + y = x \\;\\Rightarrow\\; y(1 + \\log x) = x"
+              },
+              {
+                "do": "Make $y$ the subject.",
+                "math": "y = \\dfrac{x}{1 + \\log x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate w.r.t. $x$ (quotient rule).",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{(1 + \\log x)\\cdot 1 - x\\cdot\\dfrac{1}{x}}{(1 + \\log x)^{2}}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify the numerator. Hence proved.",
+                "math": "\\dfrac{dy}{dx} = \\dfrac{1 + \\log x - 1}{(1 + \\log x)^{2}} = \\dfrac{\\log x}{(1 + \\log x)^{2}}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Differentiating $y\\log x = x - y$ implicitly gives an answer with $y$ in it; making $y$ the subject first avoids this."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "question": "Show that $f(x) = |x - 1| + |x - 2|$ is continuous at $x = 1$ and $x = 2$ but not differentiable at these points.",
+          "solution": {
+            "answer": "$f$ is continuous at $x = 1$ and $x = 2$; at $x = 1$, LHD $= -2 \\ne 0 =$ RHD; at $x = 2$, LHD $= 0 \\ne 2 =$ RHD, so not differentiable there.",
+            "concept": "Remove the modulus piece-wise; then compare LHL, RHL, $f(a)$ for continuity and LHD, RHD for differentiability.",
+            "figure": "figs/q18-graph.svg",
+            "steps": [
+              {
+                "do": "Remove the modulus signs on each interval.",
+                "math": "f(x) = \\begin{cases} 3 - 2x, & x < 1 \\\\ 1, & 1 \\le x \\le 2 \\\\ 2x - 3, & x > 2 \\end{cases}",
+                "marks": 1
+              },
+              {
+                "do": "Continuity at $x = 1$: find LHL, RHL and $f(1)$.",
+                "math": "\\lim_{x\\to 1^-}(3 - 2x) = 1, \\quad \\lim_{x\\to 1^+} 1 = 1, \\quad f(1) = 1"
+              },
+              {
+                "do": "All three are equal, so $f$ is continuous at $x = 1$.",
+                "marks": 1
+              },
+              {
+                "do": "Continuity at $x = 2$: find LHL, RHL and $f(2)$.",
+                "math": "\\lim_{x\\to 2^-} 1 = 1, \\quad \\lim_{x\\to 2^+}(2x - 3) = 1, \\quad f(2) = 1"
+              },
+              {
+                "do": "All three are equal, so $f$ is continuous at $x = 2$.",
+                "marks": 1
+              },
+              {
+                "do": "Differentiability at $x = 1$: find LHD.",
+                "math": "\\text{LHD} = \\lim_{h\\to 0}\\dfrac{f(1 - h) - f(1)}{-h} = \\lim_{h\\to 0}\\dfrac{(1 + 2h) - 1}{-h} = -2"
+              },
+              {
+                "do": "Find RHD at $x = 1$.",
+                "math": "\\text{RHD} = \\lim_{h\\to 0}\\dfrac{f(1 + h) - f(1)}{h} = \\lim_{h\\to 0}\\dfrac{1 - 1}{h} = 0"
+              },
+              {
+                "do": "LHD $\\ne$ RHD, so $f$ is not differentiable at $x = 1$.",
+                "math": "-2 \\ne 0",
+                "marks": 1
+              },
+              {
+                "do": "Differentiability at $x = 2$: find LHD.",
+                "math": "\\text{LHD} = \\lim_{h\\to 0}\\dfrac{f(2 - h) - f(2)}{-h} = \\lim_{h\\to 0}\\dfrac{1 - 1}{-h} = 0"
+              },
+              {
+                "do": "Find RHD at $x = 2$.",
+                "math": "\\text{RHD} = \\lim_{h\\to 0}\\dfrac{f(2 + h) - f(2)}{h} = \\lim_{h\\to 0}\\dfrac{(1 + 2h) - 1}{h} = 2",
+                "why": "$f(2+h) = 2(2+h) - 3 = 1 + 2h$"
+              },
+              {
+                "do": "LHD $\\ne$ RHD, so $f$ is not differentiable at $x = 2$.",
+                "math": "0 \\ne 2",
+                "marks": 1
+              },
+              {
+                "do": "Hence $f$ is continuous at $x = 1, 2$ but not differentiable at these points."
+              }
+            ],
+            "mistake": "Writing $f(1-h) = 1 - 2h$; in fact $3 - 2(1-h) = 1 + 2h$, so LHD $= -2$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "question": "If $x = a\\left(\\cos\\theta + \\log\\tan\\dfrac{\\theta}{2}\\right)$ and $y = \\sin\\theta$, then find $\\dfrac{d^{2}y}{dx^{2}}$ at $\\theta = \\dfrac{\\pi}{4}$.",
+          "solution": {
+            "answer": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{2\\sqrt{2}}{a^{2}}$ at $\\theta = \\dfrac{\\pi}{4}$",
+            "concept": "$\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{d}{d\\theta}\\left(\\dfrac{dy}{dx}\\right)\\cdot\\dfrac{d\\theta}{dx}$; never divide $\\dfrac{d^2y}{d\\theta^2}$ by $\\dfrac{d^2x}{d\\theta^2}$.",
+            "steps": [
+              {
+                "do": "Differentiate $x$ w.r.t. $\\theta$ (chain rule on $\\log\\tan\\frac{\\theta}{2}$).",
+                "math": "\\dfrac{dx}{d\\theta} = a\\left(-\\sin\\theta + \\dfrac{1}{\\tan\\frac{\\theta}{2}}\\cdot\\sec^{2}\\dfrac{\\theta}{2}\\cdot\\dfrac{1}{2}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify the second term.",
+                "math": "\\dfrac{\\sec^{2}\\frac{\\theta}{2}}{2\\tan\\frac{\\theta}{2}} = \\dfrac{1}{2\\sin\\frac{\\theta}{2}\\cos\\frac{\\theta}{2}} = \\dfrac{1}{\\sin\\theta}",
+                "marks": 0.5
+              },
+              {
+                "do": "Combine the terms.",
+                "math": "\\dfrac{dx}{d\\theta} = a\\left(\\dfrac{1 - \\sin^{2}\\theta}{\\sin\\theta}\\right) = \\dfrac{a\\cos^{2}\\theta}{\\sin\\theta}",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate $y$ w.r.t. $\\theta$.",
+                "math": "\\dfrac{dy}{d\\theta} = \\cos\\theta",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide to get $\\dfrac{dy}{dx}$.",
+                "math": "\\dfrac{dy}{dx} = \\cos\\theta\\cdot\\dfrac{\\sin\\theta}{a\\cos^{2}\\theta} = \\dfrac{\\tan\\theta}{a}",
+                "marks": 1
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (chain rule through $\\theta$).",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{\\sec^{2}\\theta}{a}\\cdot\\dfrac{d\\theta}{dx} = \\dfrac{\\sec^{2}\\theta}{a}\\cdot\\dfrac{\\sin\\theta}{a\\cos^{2}\\theta}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{\\sin\\theta}{a^{2}\\cos^{4}\\theta}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $\\theta = \\dfrac{\\pi}{4}$: $\\sin\\theta = \\dfrac{1}{\\sqrt{2}}$, $\\cos^{4}\\theta = \\dfrac{1}{4}$.",
+                "math": "\\left.\\dfrac{d^{2}y}{dx^{2}}\\right|_{\\theta = \\frac{\\pi}{4}} = \\dfrac{1/\\sqrt{2}}{a^{2}\\cdot\\frac{1}{4}} = \\dfrac{4}{\\sqrt{2}\\,a^{2}} = \\dfrac{2\\sqrt{2}}{a^{2}}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to multiply by $\\dfrac{d\\theta}{dx}$ when differentiating $\\dfrac{\\tan\\theta}{a}$ w.r.t. $x$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** While designing a smooth ramp, an engineer models its profile by $f(x) = \\begin{cases} x^{2} + 3x + p, & x \\le 1 \\\\ qx + 2, & x > 1 \\end{cases}$. For a smooth ramp, $f$ must be differentiable at $x = 1$.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Write the condition on $p$ and $q$ for $f$ to be continuous at $x = 1$.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Find the left-hand derivative and right-hand derivative of $f$ at $x = 1$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "Find the values of $p$ and $q$.",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $4 + p = q + 2$; (ii) LHD $= 5$, RHD $= q$; (iii) $p = 3$, $q = 5$",
+            "concept": "Differentiable at $x = 1$ needs continuity there and LHD $=$ RHD.",
+            "parts": [
+              {
+                "label": "(i)",
+                "answer": "$4 + p = q + 2$, i.e. $q = p + 2$",
+                "steps": [
+                  {
+                    "do": "Find $f(1)$ (equals LHL) and the RHL.",
+                    "math": "f(1) = 1 + 3 + p = 4 + p, \\qquad \\lim_{x\\to 1^+}(qx + 2) = q + 2",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "For continuity at $x = 1$, equate them.",
+                    "math": "4 + p = q + 2 \\quad\\text{i.e.}\\quad q = p + 2",
+                    "marks": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "(ii)",
+                "answer": "LHD $= 5$, RHD $= q$",
+                "steps": [
+                  {
+                    "do": "LHD at $x = 1$ from the left piece.",
+                    "math": "\\text{LHD} = \\lim_{h\\to 0}\\dfrac{(1-h)^{2} + 3(1-h) + p - (4 + p)}{-h} = \\lim_{h\\to 0}\\dfrac{h^{2} - 5h}{-h} = 5",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "RHD at $x = 1$ from the right piece.",
+                    "math": "\\text{RHD} = \\lim_{h\\to 0}\\dfrac{q(1+h) + 2 - (4 + p)}{h} = \\lim_{h\\to 0}\\dfrac{qh}{h} = q",
+                    "why": "Using (i): $q + 2 - (4 + p) = 0$",
+                    "marks": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "(iii)",
+                "answer": "$p = 3$, $q = 5$",
+                "steps": [
+                  {
+                    "do": "For differentiability, LHD $=$ RHD.",
+                    "math": "q = 5",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Put $q = 5$ in the condition from (i).",
+                    "math": "4 + p = 5 + 2 \\;\\Rightarrow\\; p = 3",
+                    "marks": 1
+                  }
+                ]
+              }
+            ],
+            "mistake": "Equating only LHD and RHD; continuity at $x = 1$ is also needed to find $p$."
+          }
+        }
+      ]
+    }
+  ]
+}
