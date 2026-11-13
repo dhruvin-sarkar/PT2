@@ -1,0 +1,801 @@
+{
+  "chapter": 2,
+  "chapterTitle": "Inverse Trigonometric Functions",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 43,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "The principal value of $\\cot^{-1}\\left(-\\dfrac{1}{\\sqrt{3}}\\right)$ is:",
+          "options": [
+            "$-\\dfrac{\\pi}{3}$",
+            "$\\dfrac{\\pi}{3}$",
+            "$\\dfrac{2\\pi}{3}$",
+            "$\\dfrac{5\\pi}{6}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{2\\pi}{3}$",
+            "concept": "Principal value branch of $\\cot^{-1}x$ is $(0, \\pi)$.",
+            "steps": [
+              {
+                "do": "Write the range of the principal value branch.",
+                "math": "\\cot^{-1}x \\in (0, \\pi)"
+              },
+              {
+                "do": "Recall the standard value.",
+                "math": "\\cot\\dfrac{\\pi}{3} = \\dfrac{1}{\\sqrt{3}}"
+              },
+              {
+                "do": "Find the angle in $(0, \\pi)$ whose cot is $-\\dfrac{1}{\\sqrt{3}}$.",
+                "math": "\\cot\\left(\\pi - \\dfrac{\\pi}{3}\\right) = -\\cot\\dfrac{\\pi}{3} = -\\dfrac{1}{\\sqrt{3}}",
+                "marks": 1
+              },
+              {
+                "do": "Since $\\dfrac{2\\pi}{3} \\in (0, \\pi)$, the principal value is $\\dfrac{2\\pi}{3}$. Option (C)."
+              }
+            ],
+            "mistake": "Writing $-\\dfrac{\\pi}{3}$: it is not in $(0, \\pi)$, the range of $\\cot^{-1}x$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "The value of $\\cos^{-1}\\left(\\sin\\dfrac{4\\pi}{3}\\right)$ is:",
+          "options": [
+            "$\\dfrac{4\\pi}{3}$",
+            "$-\\dfrac{\\pi}{6}$",
+            "$\\dfrac{5\\pi}{6}$",
+            "$\\dfrac{\\pi}{6}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{5\\pi}{6}$",
+            "concept": "$\\cos^{-1}y$ is the angle in $[0, \\pi]$ whose cosine is $y$.",
+            "steps": [
+              {
+                "do": "Find $\\sin\\dfrac{4\\pi}{3}$.",
+                "math": "\\sin\\dfrac{4\\pi}{3} = \\sin\\left(\\pi + \\dfrac{\\pi}{3}\\right) = -\\sin\\dfrac{\\pi}{3} = -\\dfrac{\\sqrt{3}}{2}"
+              },
+              {
+                "do": "Find the angle in $[0, \\pi]$ whose cosine is $-\\dfrac{\\sqrt{3}}{2}$.",
+                "math": "\\cos\\dfrac{5\\pi}{6} = -\\dfrac{\\sqrt{3}}{2},\\quad \\dfrac{5\\pi}{6} \\in [0, \\pi]",
+                "marks": 1
+              },
+              {
+                "do": "So $\\cos^{-1}\\left(\\sin\\dfrac{4\\pi}{3}\\right) = \\dfrac{5\\pi}{6}$. Option (C)."
+              }
+            ],
+            "mistake": "Writing $\\dfrac{4\\pi}{3}$: $\\cos^{-1}$ and $\\sin$ do not cancel, and $\\dfrac{4\\pi}{3}$ is outside $[0, \\pi]$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2025-26",
+          "question": "The inverse trigonometric function whose domain is $\\left[-\\dfrac{1}{3}, \\dfrac{1}{3}\\right]$ is:",
+          "options": [
+            "$\\cos^{-1}x$",
+            "$\\cos^{-1}\\left(\\dfrac{x}{3}\\right)$",
+            "$\\cos^{-1}(3x)$",
+            "$3\\cos^{-1}x$"
+          ],
+          "solution": {
+            "answer": "(C) $\\cos^{-1}(3x)$",
+            "concept": "$\\cos^{-1}t$ is defined only for $-1 \\le t \\le 1$.",
+            "steps": [
+              {
+                "do": "Domain of $\\cos^{-1}x$ and of $3\\cos^{-1}x$.",
+                "math": "-1 \\le x \\le 1 \\;\\Rightarrow\\; [-1, 1]"
+              },
+              {
+                "do": "Domain of $\\cos^{-1}\\left(\\dfrac{x}{3}\\right)$.",
+                "math": "-1 \\le \\dfrac{x}{3} \\le 1 \\;\\Rightarrow\\; [-3, 3]"
+              },
+              {
+                "do": "Domain of $\\cos^{-1}(3x)$.",
+                "math": "-1 \\le 3x \\le 1 \\;\\Rightarrow\\; -\\dfrac{1}{3} \\le x \\le \\dfrac{1}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Only $\\cos^{-1}(3x)$ has domain $\\left[-\\dfrac{1}{3}, \\dfrac{1}{3}\\right]$. Option (C)."
+              }
+            ],
+            "mistake": "Choosing $\\cos^{-1}\\left(\\dfrac{x}{3}\\right)$: dividing $x$ by 3 stretches the domain to $[-3, 3]$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "The graph drawn below depicts:",
+          "figure": "figs/pa-q04-graph.svg",
+          "options": [
+            "$y = \\sin^{-1}x$",
+            "$y = \\cos^{-1}x$",
+            "$y = \\operatorname{cosec}^{-1}x$",
+            "$y = \\cot^{-1}x$"
+          ],
+          "solution": {
+            "answer": "(B) $y = \\cos^{-1}x$",
+            "concept": "Read the domain and the range from the graph, then match the principal value branch.",
+            "steps": [
+              {
+                "do": "Read the domain from the graph.",
+                "math": "x \\in [-1, 1]"
+              },
+              {
+                "do": "Rule out $\\operatorname{cosec}^{-1}x$ (domain $\\mathbb{R} - (-1, 1)$) and $\\cot^{-1}x$ (domain $\\mathbb{R}$)."
+              },
+              {
+                "do": "Read the range: from $\\pi$ at $x = -1$ down to $0$ at $x = 1$.",
+                "math": "y \\in [0, \\pi]"
+              },
+              {
+                "do": "Range $[0, \\pi]$ belongs to $\\cos^{-1}x$; $\\sin^{-1}x$ has range $\\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$.",
+                "marks": 1
+              },
+              {
+                "do": "Hence the graph is $y = \\cos^{-1}x$. Option (B)."
+              }
+            ],
+            "mistake": "Picking $\\sin^{-1}x$ because the domain is $[-1, 1]$; the range $[0, \\pi]$ decides it."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "The principal value of $\\cos^{-1}\\left(-\\dfrac{1}{2}\\right) + 2\\sin^{-1}\\left(\\dfrac{1}{2}\\right)$ is:",
+          "options": [
+            "$0$",
+            "$\\dfrac{5\\pi}{6}$",
+            "$\\pi$",
+            "$\\dfrac{4\\pi}{3}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\pi$",
+            "concept": "Ranges: $\\cos^{-1}x \\in [0, \\pi]$, $\\sin^{-1}x \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$.",
+            "steps": [
+              {
+                "do": "Angle in $[0, \\pi]$ with cosine $-\\dfrac{1}{2}$.",
+                "math": "\\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2} \\;\\Rightarrow\\; \\cos^{-1}\\left(-\\dfrac{1}{2}\\right) = \\dfrac{2\\pi}{3}"
+              },
+              {
+                "do": "Angle in $\\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$ with sine $\\dfrac{1}{2}$.",
+                "math": "\\sin^{-1}\\left(\\dfrac{1}{2}\\right) = \\dfrac{\\pi}{6}"
+              },
+              {
+                "do": "Add.",
+                "math": "\\dfrac{2\\pi}{3} + 2 \\cdot \\dfrac{\\pi}{6} = \\dfrac{2\\pi}{3} + \\dfrac{\\pi}{3} = \\pi",
+                "marks": 1
+              },
+              {
+                "do": "Hence the value is $\\pi$. Option (C)."
+              }
+            ],
+            "mistake": "Taking $\\cos^{-1}\\left(-\\dfrac{1}{2}\\right) = -\\dfrac{\\pi}{3}$, which gives $0$; negative angles are outside $[0, \\pi]$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "CBSE SQP 2025-26",
+          "question": "**Assertion (A):** The value of the expression $\\sin^{-1}\\left(\\dfrac{\\sqrt{3}}{2}\\right) + \\tan^{-1}1 - \\sec^{-1}\\left(\\sqrt{2}\\right)$ is $\\dfrac{\\pi}{4}$. **Reason (R):** The principal value branch of $\\sin^{-1}x$ is $\\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$ and that of $\\sec^{-1}x$ is $[0, \\pi] - \\left\\{\\dfrac{\\pi}{2}\\right\\}$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(D) Assertion (A) is false, but Reason (R) is true.",
+            "concept": "Each principal value must lie in the range of its principal value branch.",
+            "steps": [
+              {
+                "do": "Find the three principal values.",
+                "math": "\\sin^{-1}\\dfrac{\\sqrt{3}}{2} = \\dfrac{\\pi}{3},\\quad \\tan^{-1}1 = \\dfrac{\\pi}{4},\\quad \\sec^{-1}\\sqrt{2} = \\dfrac{\\pi}{4}"
+              },
+              {
+                "do": "Check A: the value is $\\dfrac{\\pi}{3}$, not $\\dfrac{\\pi}{4}$, so A is false.",
+                "math": "\\dfrac{\\pi}{3} + \\dfrac{\\pi}{4} - \\dfrac{\\pi}{4} = \\dfrac{\\pi}{3}"
+              },
+              {
+                "do": "Check R: both branches are stated correctly, so R is true."
+              },
+              {
+                "do": "A is false, so R cannot explain A."
+              },
+              {
+                "do": "A is false and R is true. Option (D).",
+                "marks": 1
+              }
+            ],
+            "mistake": "Cancelling $\\tan^{-1}1$ with $\\sec^{-1}\\sqrt{2}$ and then taking $\\sin^{-1}\\dfrac{\\sqrt{3}}{2} = \\dfrac{\\pi}{4}$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2023",
+          "question": "Evaluate: $\\sin^{-1}\\left(\\sin\\dfrac{3\\pi}{4}\\right) + \\cos^{-1}(\\cos\\pi) + \\tan^{-1}(1)$.",
+          "solution": {
+            "answer": "$\\dfrac{3\\pi}{2}$",
+            "concept": "$\\sin^{-1}(\\sin\\theta) = \\theta$ only when $\\theta \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$; $\\cos^{-1}(\\cos\\theta) = \\theta$ only when $\\theta \\in [0, \\pi]$.",
+            "steps": [
+              {
+                "do": "$\\dfrac{3\\pi}{4}$ is not in $\\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$, so rewrite the sine.",
+                "math": "\\sin\\dfrac{3\\pi}{4} = \\sin\\left(\\pi - \\dfrac{3\\pi}{4}\\right) = \\sin\\dfrac{\\pi}{4}"
+              },
+              {
+                "do": "Since $\\dfrac{\\pi}{4} \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$:",
+                "math": "\\sin^{-1}\\left(\\sin\\dfrac{3\\pi}{4}\\right) = \\sin^{-1}\\left(\\sin\\dfrac{\\pi}{4}\\right) = \\dfrac{\\pi}{4}",
+                "marks": 1
+              },
+              {
+                "do": "$\\pi \\in [0, \\pi]$, and $\\tan\\dfrac{\\pi}{4} = 1$.",
+                "math": "\\cos^{-1}(\\cos\\pi) = \\pi,\\qquad \\tan^{-1}(1) = \\dfrac{\\pi}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the three values.",
+                "math": "\\dfrac{\\pi}{4} + \\pi + \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\sin^{-1}\\left(\\sin\\dfrac{3\\pi}{4}\\right) = \\dfrac{3\\pi}{4}$: that angle is outside the range of $\\sin^{-1}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 16,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2023",
+          "question": "Evaluate: $3\\sin^{-1}\\left(\\dfrac{1}{\\sqrt{2}}\\right) + 2\\cos^{-1}\\left(\\dfrac{\\sqrt{3}}{2}\\right) + \\cos^{-1}(0)$.",
+          "solution": {
+            "answer": "$\\dfrac{19\\pi}{12}$",
+            "concept": "Use the principal value of each term, then add.",
+            "steps": [
+              {
+                "do": "$\\sin\\dfrac{\\pi}{4} = \\dfrac{1}{\\sqrt{2}}$ and $\\dfrac{\\pi}{4} \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$.",
+                "math": "3\\sin^{-1}\\left(\\dfrac{1}{\\sqrt{2}}\\right) = 3 \\cdot \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2}$ and $\\dfrac{\\pi}{6} \\in [0, \\pi]$.",
+                "math": "2\\cos^{-1}\\left(\\dfrac{\\sqrt{3}}{2}\\right) = 2 \\cdot \\dfrac{\\pi}{6} = \\dfrac{\\pi}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\cos\\dfrac{\\pi}{2} = 0$ and $\\dfrac{\\pi}{2} \\in [0, \\pi]$.",
+                "math": "\\cos^{-1}(0) = \\dfrac{\\pi}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add, using the LCM 12.",
+                "math": "\\dfrac{3\\pi}{4} + \\dfrac{\\pi}{3} + \\dfrac{\\pi}{2} = \\dfrac{9\\pi + 4\\pi + 6\\pi}{12} = \\dfrac{19\\pi}{12}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Multiplying inside the bracket, e.g. writing $\\sin^{-1}\\left(\\dfrac{3}{\\sqrt{2}}\\right)$; the 3 multiplies the angle."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2025",
+          "question": "Find the domain of $f(x) = \\sin^{-1}\\left(-x^2\\right)$.",
+          "solution": {
+            "answer": "Domain $= [-1, 1]$",
+            "concept": "$\\sin^{-1}t$ is defined only for $-1 \\le t \\le 1$.",
+            "steps": [
+              {
+                "do": "The argument $-x^2$ must lie in $[-1, 1]$.",
+                "math": "-1 \\le -x^2 \\le 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $-1$ and reverse the signs.",
+                "math": "-1 \\le x^2 \\le 1",
+                "marks": 0.5
+              },
+              {
+                "do": "$x^2 \\ge 0 > -1$ always, so only $x^2 \\le 1$ is needed.",
+                "math": "x^2 \\le 1 \\;\\Rightarrow\\; -1 \\le x \\le 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the domain of $f$ is $[-1, 1]$.",
+                "math": "\\text{Domain} = [-1, 1]",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to reverse the inequality signs when multiplying by $-1$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2025",
+          "question": "Find the domain of $\\sec^{-1}(2x + 1)$.",
+          "solution": {
+            "answer": "Domain $= (-\\infty, -1] \\cup [0, \\infty)$",
+            "concept": "$\\sec^{-1}t$ is defined only for $t \\le -1$ or $t \\ge 1$, i.e. $t \\in \\mathbb{R} - (-1, 1)$.",
+            "steps": [
+              {
+                "do": "The argument $2x + 1$ must lie outside $(-1, 1)$.",
+                "math": "2x + 1 \\le -1 \\quad \\text{or} \\quad 2x + 1 \\ge 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve the first inequality.",
+                "math": "2x \\le -2 \\;\\Rightarrow\\; x \\le -1",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve the second inequality.",
+                "math": "2x \\ge 0 \\;\\Rightarrow\\; x \\ge 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Combine the two parts.",
+                "math": "\\text{Domain} = (-\\infty, -1] \\cup [0, \\infty)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $-1 \\le 2x + 1 \\le 1$ as for $\\sin^{-1}$; that is the gap where $\\sec^{-1}$ is not defined."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2024 (Comptt.)",
+          "question": "Evaluate: $\\sin^{-1}\\left(\\sin\\dfrac{13\\pi}{6}\\right) + \\cos^{-1}\\left(\\cos\\dfrac{\\pi}{3}\\right) + \\tan^{-1}\\left(\\sqrt{3}\\right)$.",
+          "solution": {
+            "answer": "$\\dfrac{5\\pi}{6}$",
+            "concept": "Bring each angle into the principal range before removing $\\sin^{-1}(\\sin\\,\\cdot)$ or $\\cos^{-1}(\\cos\\,\\cdot)$.",
+            "steps": [
+              {
+                "do": "$\\dfrac{13\\pi}{6} = 2\\pi + \\dfrac{\\pi}{6}$, and $\\sin$ has period $2\\pi$.",
+                "math": "\\sin\\dfrac{13\\pi}{6} = \\sin\\left(2\\pi + \\dfrac{\\pi}{6}\\right) = \\sin\\dfrac{\\pi}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Since $\\dfrac{\\pi}{6} \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$:",
+                "math": "\\sin^{-1}\\left(\\sin\\dfrac{13\\pi}{6}\\right) = \\dfrac{\\pi}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\dfrac{\\pi}{3} \\in [0, \\pi]$, and $\\tan\\dfrac{\\pi}{3} = \\sqrt{3}$.",
+                "math": "\\cos^{-1}\\left(\\cos\\dfrac{\\pi}{3}\\right) = \\dfrac{\\pi}{3},\\qquad \\tan^{-1}\\sqrt{3} = \\dfrac{\\pi}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the three values.",
+                "math": "\\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} + \\dfrac{\\pi}{3} = \\dfrac{\\pi + 2\\pi + 2\\pi}{6} = \\dfrac{5\\pi}{6}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\sin^{-1}\\left(\\sin\\dfrac{13\\pi}{6}\\right) = \\dfrac{13\\pi}{6}$, which is far outside $\\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2025-26",
+          "question": "Evaluate: $\\tan\\left(\\tan^{-1}(-1) + \\dfrac{\\pi}{3}\\right)$.",
+          "solution": {
+            "answer": "$2 - \\sqrt{3}$",
+            "concept": "$\\tan(A - B) = \\dfrac{\\tan A - \\tan B}{1 + \\tan A \\tan B}$",
+            "steps": [
+              {
+                "do": "$\\tan\\left(-\\dfrac{\\pi}{4}\\right) = -1$ and $-\\dfrac{\\pi}{4} \\in \\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$.",
+                "math": "\\tan^{-1}(-1) = -\\dfrac{\\pi}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute into the expression.",
+                "math": "\\tan\\left(-\\dfrac{\\pi}{4} + \\dfrac{\\pi}{3}\\right) = \\tan\\left(\\dfrac{\\pi}{3} - \\dfrac{\\pi}{4}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Use the formula for $\\tan(A - B)$.",
+                "math": "= \\dfrac{\\tan\\frac{\\pi}{3} - \\tan\\frac{\\pi}{4}}{1 + \\tan\\frac{\\pi}{3}\\tan\\frac{\\pi}{4}} = \\dfrac{\\sqrt{3} - 1}{\\sqrt{3} + 1}",
+                "marks": 0.5
+              },
+              {
+                "do": "Rationalise the denominator.",
+                "math": "\\begin{aligned} \\dfrac{(\\sqrt{3} - 1)^2}{(\\sqrt{3} + 1)(\\sqrt{3} - 1)} &= \\dfrac{4 - 2\\sqrt{3}}{2} \\\\ &= 2 - \\sqrt{3} \\end{aligned}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $\\tan^{-1}(-1) = \\dfrac{3\\pi}{4}$; that angle is outside $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024",
+          "question": "Find the value of $k$ if $\\sin^{-1}\\left[k\\tan\\left(2\\cos^{-1}\\dfrac{\\sqrt{3}}{2}\\right)\\right] = \\dfrac{\\pi}{3}$.",
+          "solution": {
+            "answer": "$k = \\dfrac{1}{2}$",
+            "concept": "Work from the innermost bracket outwards; $\\sin^{-1}t = \\theta \\Rightarrow t = \\sin\\theta$.",
+            "steps": [
+              {
+                "do": "$\\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2}$ and $\\dfrac{\\pi}{6} \\in [0, \\pi]$.",
+                "math": "\\cos^{-1}\\dfrac{\\sqrt{3}}{2} = \\dfrac{\\pi}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Double it and take tan.",
+                "math": "\\tan\\left(2 \\cdot \\dfrac{\\pi}{6}\\right) = \\tan\\dfrac{\\pi}{3} = \\sqrt{3}",
+                "marks": 1
+              },
+              {
+                "do": "Substitute in the given equation.",
+                "math": "\\sin^{-1}\\left(\\sqrt{3}\\,k\\right) = \\dfrac{\\pi}{3}"
+              },
+              {
+                "do": "Take sine of both sides.",
+                "math": "\\sqrt{3}\\,k = \\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}",
+                "marks": 1
+              },
+              {
+                "do": "Divide by $\\sqrt{3}$.",
+                "math": "k = \\dfrac{1}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Doubling inside: writing $\\cos^{-1}\\left(2 \\cdot \\dfrac{\\sqrt{3}}{2}\\right) = \\cos^{-1}\\sqrt{3}$, which is not even defined."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2024",
+          "question": "Find the value of $\\sin^2\\left(\\cos^{-1}\\dfrac{3}{5}\\right) + \\tan^2\\left(\\sec^{-1}3\\right)$.",
+          "solution": {
+            "answer": "$\\dfrac{216}{25}$",
+            "concept": "$\\sin^2\\theta = 1 - \\cos^2\\theta$ and $\\tan^2\\theta = \\sec^2\\theta - 1$.",
+            "steps": [
+              {
+                "do": "Let $\\cos^{-1}\\dfrac{3}{5} = \\alpha$.",
+                "math": "\\cos\\alpha = \\dfrac{3}{5}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use $\\sin^2\\alpha = 1 - \\cos^2\\alpha$.",
+                "math": "\\sin^2\\alpha = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}",
+                "marks": 1
+              },
+              {
+                "do": "Let $\\sec^{-1}3 = \\beta$.",
+                "math": "\\sec\\beta = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Use $\\tan^2\\beta = \\sec^2\\beta - 1$.",
+                "math": "\\tan^2\\beta = 9 - 1 = 8",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the two values.",
+                "math": "\\dfrac{16}{25} + 8 = \\dfrac{16 + 200}{25} = \\dfrac{216}{25}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\tan^2\\beta = \\sec^2\\beta + 1 = 10$; the identity is $\\sec^2\\beta = 1 + \\tan^2\\beta$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 3,
+          "type": "long",
+          "source": "CBSE 2023",
+          "question": "Draw the graph of $f(x) = \\sin^{-1}x$, $x \\in \\left[-\\dfrac{1}{\\sqrt{2}}, \\dfrac{1}{\\sqrt{2}}\\right]$. Also, write the range of $f(x)$.",
+          "solution": {
+            "answer": "Graph: the increasing arc of $y = \\sin^{-1}x$ from $\\left(-\\dfrac{1}{\\sqrt{2}}, -\\dfrac{\\pi}{4}\\right)$ through $(0, 0)$ to $\\left(\\dfrac{1}{\\sqrt{2}}, \\dfrac{\\pi}{4}\\right)$; range $= \\left[-\\dfrac{\\pi}{4}, \\dfrac{\\pi}{4}\\right]$.",
+            "concept": "$y = \\sin^{-1}x$ is the mirror image of $y = \\sin x$, $x \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$, in the line $y = x$; it is increasing.",
+            "steps": [
+              {
+                "do": "Make a table of values at the end points and the middle.",
+                "math": "\\begin{array}{c|c|c|c} x & -\\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\\\ \\hline y = \\sin^{-1}x & -\\frac{\\pi}{4} & 0 & \\frac{\\pi}{4} \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "Plot these points and join them by a smooth increasing curve.",
+                "figure": "figs/pa-q15-graph.svg",
+                "marks": 1
+              },
+              {
+                "do": "$\\sin^{-1}x$ is increasing, so the least and greatest values are at the end points.",
+                "math": "f\\left(-\\dfrac{1}{\\sqrt{2}}\\right) = -\\dfrac{\\pi}{4},\\qquad f\\left(\\dfrac{1}{\\sqrt{2}}\\right) = \\dfrac{\\pi}{4}"
+              },
+              {
+                "do": "Hence the range of $f$:",
+                "math": "\\text{Range} = \\left[-\\dfrac{\\pi}{4}, \\dfrac{\\pi}{4}\\right]",
+                "marks": 1
+              }
+            ],
+            "mistake": "Drawing the whole branch from $-1$ to $1$ and writing range $\\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$; the domain here is smaller."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "long",
+          "source": "CBSE 2024",
+          "question": "Find the value of $\\sin^{-1}\\left(-\\dfrac{1}{2}\\right) + \\cos^{-1}\\left(-\\dfrac{\\sqrt{3}}{2}\\right) + \\cot^{-1}\\left(\\tan\\dfrac{4\\pi}{3}\\right)$.",
+          "solution": {
+            "answer": "$\\dfrac{5\\pi}{6}$",
+            "concept": "Ranges: $\\sin^{-1} \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$, $\\cos^{-1} \\in [0, \\pi]$, $\\cot^{-1} \\in (0, \\pi)$.",
+            "steps": [
+              {
+                "do": "$\\sin\\left(-\\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$ and $-\\dfrac{\\pi}{6} \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$.",
+                "math": "\\sin^{-1}\\left(-\\dfrac{1}{2}\\right) = -\\dfrac{\\pi}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\cos\\dfrac{5\\pi}{6} = -\\cos\\dfrac{\\pi}{6} = -\\dfrac{\\sqrt{3}}{2}$ and $\\dfrac{5\\pi}{6} \\in [0, \\pi]$.",
+                "math": "\\cos^{-1}\\left(-\\dfrac{\\sqrt{3}}{2}\\right) = \\dfrac{5\\pi}{6}",
+                "marks": 1
+              },
+              {
+                "do": "$\\tan$ has period $\\pi$.",
+                "math": "\\tan\\dfrac{4\\pi}{3} = \\tan\\left(\\pi + \\dfrac{\\pi}{3}\\right) = \\tan\\dfrac{\\pi}{3} = \\sqrt{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\cot\\dfrac{\\pi}{6} = \\sqrt{3}$ and $\\dfrac{\\pi}{6} \\in (0, \\pi)$.",
+                "math": "\\cot^{-1}\\left(\\tan\\dfrac{4\\pi}{3}\\right) = \\cot^{-1}\\sqrt{3} = \\dfrac{\\pi}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the three values.",
+                "math": "-\\dfrac{\\pi}{6} + \\dfrac{5\\pi}{6} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\cot^{-1}\\left(\\tan\\dfrac{4\\pi}{3}\\right) = \\dfrac{4\\pi}{3}$; $\\cot^{-1}$ and $\\tan$ are not inverses of each other."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 3,
+          "type": "long",
+          "source": "CBSE 2024",
+          "question": "Find the domain of $f(x) = \\cos^{-1}\\left(1 - x^2\\right)$. Also, find its range.",
+          "solution": {
+            "answer": "Domain $= \\left[-\\sqrt{2}, \\sqrt{2}\\right]$; range $= [0, \\pi]$",
+            "concept": "$\\cos^{-1}t$ is defined for $-1 \\le t \\le 1$ and takes values in $[0, \\pi]$.",
+            "steps": [
+              {
+                "do": "The argument must lie in $[-1, 1]$.",
+                "math": "-1 \\le 1 - x^2 \\le 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Subtract 1, then multiply by $-1$ (signs reverse).",
+                "math": "-2 \\le -x^2 \\le 0 \\;\\Rightarrow\\; 0 \\le x^2 \\le 2",
+                "marks": 1
+              },
+              {
+                "do": "Take square roots.",
+                "math": "-\\sqrt{2} \\le x \\le \\sqrt{2} \\;\\Rightarrow\\; \\text{Domain} = \\left[-\\sqrt{2}, \\sqrt{2}\\right]",
+                "marks": 0.5
+              },
+              {
+                "do": "On this domain $1 - x^2$ takes every value from $-1$ to $1$.",
+                "math": "x = \\pm\\sqrt{2} \\Rightarrow 1 - x^2 = -1;\\qquad x = 0 \\Rightarrow 1 - x^2 = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "So $f$ takes every value of $\\cos^{-1}$ on $[-1, 1]$.",
+                "math": "\\text{Range} = [0, \\pi]",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Stopping at $x^2 \\le 2$ and writing domain $[0, \\sqrt{2}]$; negative $x$ also work."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "long",
+          "source": "CBSE 2024",
+          "question": "Simplify: $\\cos^{-1}x + \\cos^{-1}\\left[\\dfrac{x}{2} + \\dfrac{\\sqrt{3 - 3x^2}}{2}\\right]$, $\\dfrac{1}{2} \\le x \\le 1$.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi}{3}$",
+            "concept": "Put $x = \\cos\\theta$ and use $\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$.",
+            "steps": [
+              {
+                "do": "Put $x = \\cos\\theta$. As $\\dfrac{1}{2} \\le x \\le 1$:",
+                "math": "\\theta = \\cos^{-1}x,\\qquad 0 \\le \\theta \\le \\dfrac{\\pi}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify the root; $\\sin\\theta \\ge 0$ here.",
+                "math": "\\sqrt{3 - 3x^2} = \\sqrt{3}\\sqrt{1 - \\cos^2\\theta} = \\sqrt{3}\\sin\\theta",
+                "marks": 0.5
+              },
+              {
+                "do": "Rewrite the bracket using $\\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}$, $\\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$.",
+                "math": "\\cos\\dfrac{\\pi}{3}\\cos\\theta + \\sin\\dfrac{\\pi}{3}\\sin\\theta = \\cos\\left(\\dfrac{\\pi}{3} - \\theta\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "$\\dfrac{\\pi}{3} - \\theta \\in \\left[0, \\dfrac{\\pi}{3}\\right] \\subset [0, \\pi]$, so $\\cos^{-1}$ and $\\cos$ cancel.",
+                "math": "\\cos^{-1}\\left[\\cos\\left(\\dfrac{\\pi}{3} - \\theta\\right)\\right] = \\dfrac{\\pi}{3} - \\theta",
+                "marks": 0.5
+              },
+              {
+                "do": "Add the two parts.",
+                "math": "\\theta + \\dfrac{\\pi}{3} - \\theta = \\dfrac{\\pi}{3}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\cos(\\theta - \\tfrac{\\pi}{3})$ and cancelling to $\\theta - \\dfrac{\\pi}{3}$; that angle is negative, outside $[0, \\pi]$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "long",
+          "source": "CBSE 2024",
+          "question": "Express $\\tan^{-1}\\left(\\dfrac{\\cos x}{1 - \\sin x}\\right)$, $-\\dfrac{\\pi}{2} < x < \\dfrac{\\pi}{2}$, in the simplest form.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi}{4} + \\dfrac{x}{2}$",
+            "concept": "Write $\\cos x$ and $1 - \\sin x$ in terms of $\\dfrac{x}{2}$; then $\\dfrac{1 + \\tan A}{1 - \\tan A} = \\tan\\left(\\dfrac{\\pi}{4} + A\\right)$.",
+            "steps": [
+              {
+                "do": "Write $\\cos x$ using half angles.",
+                "math": "\\cos x = \\cos^2\\tfrac{x}{2} - \\sin^2\\tfrac{x}{2} = \\left(\\cos\\tfrac{x}{2} - \\sin\\tfrac{x}{2}\\right)\\left(\\cos\\tfrac{x}{2} + \\sin\\tfrac{x}{2}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $1 - \\sin x$ as a perfect square.",
+                "math": "1 - \\sin x = \\cos^2\\tfrac{x}{2} + \\sin^2\\tfrac{x}{2} - 2\\sin\\tfrac{x}{2}\\cos\\tfrac{x}{2} = \\left(\\cos\\tfrac{x}{2} - \\sin\\tfrac{x}{2}\\right)^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Cancel the common factor $\\cos\\dfrac{x}{2} - \\sin\\dfrac{x}{2}$.",
+                "why": "It is positive, since $-\\dfrac{\\pi}{4} < \\dfrac{x}{2} < \\dfrac{\\pi}{4}$.",
+                "math": "\\dfrac{\\cos x}{1 - \\sin x} = \\dfrac{\\cos\\frac{x}{2} + \\sin\\frac{x}{2}}{\\cos\\frac{x}{2} - \\sin\\frac{x}{2}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide top and bottom by $\\cos\\dfrac{x}{2}$.",
+                "math": "= \\dfrac{1 + \\tan\\frac{x}{2}}{1 - \\tan\\frac{x}{2}} = \\tan\\left(\\dfrac{\\pi}{4} + \\dfrac{x}{2}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Check the angle lies in $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$.",
+                "math": "-\\dfrac{\\pi}{2} < x < \\dfrac{\\pi}{2} \\;\\Rightarrow\\; 0 < \\dfrac{\\pi}{4} + \\dfrac{x}{2} < \\dfrac{\\pi}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "So $\\tan^{-1}$ and $\\tan$ cancel.",
+                "math": "\\tan^{-1}\\left(\\dfrac{\\cos x}{1 - \\sin x}\\right) = \\dfrac{\\pi}{4} + \\dfrac{x}{2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Skipping the range check of $\\dfrac{\\pi}{4} + \\dfrac{x}{2}$; examiners give a mark for it."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** A drone is hovering at a fixed height of 60 m vertically above a point P on level ground. An observer O stands on the ground at a horizontal distance of $x$ m from P. The angle of elevation $\\theta$ of the drone from O is given by $\\theta = \\tan^{-1}\\left(\\dfrac{60}{x}\\right)$.",
+          "figure": "figs/pa-q20-drone.svg",
+          "parts": [
+            { "label": "(i)", "text": "Find $\\theta$ when $x = 60$ m.", "marks": 1 },
+            { "label": "(ii)", "text": "Write $\\theta$ in terms of $\\cot^{-1}$, and state the range of the principal value branch of $\\cot^{-1}x$.", "marks": 1 },
+            { "label": "(iii)", "text": "Starting from $x = 60$ m, the observer walks straight towards P until $\\theta = \\dfrac{\\pi}{3}$. Find the distance walked.", "marks": 2 }
+          ],
+          "solution": {
+            "answer": "(i) $\\dfrac{\\pi}{4}$  (ii) $\\theta = \\cot^{-1}\\left(\\dfrac{x}{60}\\right)$; range $(0, \\pi)$  (iii) $20\\left(3 - \\sqrt{3}\\right) \\approx 25.36$ m",
+            "concept": "In the right triangle, $\\tan\\theta = \\dfrac{\\text{height}}{\\text{horizontal distance}} = \\dfrac{60}{x}$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Put $x = 60$.",
+                    "math": "\\theta = \\tan^{-1}\\left(\\dfrac{60}{60}\\right) = \\tan^{-1}1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "$\\tan\\dfrac{\\pi}{4} = 1$ and $\\dfrac{\\pi}{4} \\in \\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$.",
+                    "math": "\\theta = \\dfrac{\\pi}{4}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\theta = \\dfrac{\\pi}{4}$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "From $\\tan\\theta = \\dfrac{60}{x}$, take the reciprocal.",
+                    "math": "\\cot\\theta = \\dfrac{x}{60}"
+                  },
+                  {
+                    "do": "$\\theta$ is acute, so it lies in $(0, \\pi)$, the range of $\\cot^{-1}$.",
+                    "math": "\\theta = \\cot^{-1}\\left(\\dfrac{x}{60}\\right)",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "State the range of the principal value branch.",
+                    "math": "\\cot^{-1}x \\in (0, \\pi)",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\theta = \\cot^{-1}\\left(\\dfrac{x}{60}\\right)$; range of $\\cot^{-1}x$ is $(0, \\pi)$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Put $\\theta = \\dfrac{\\pi}{3}$, so $\\tan\\theta = \\sqrt{3}$.",
+                    "math": "\\dfrac{60}{x} = \\sqrt{3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Solve for the new distance from P.",
+                    "math": "x = \\dfrac{60}{\\sqrt{3}} = 20\\sqrt{3}\\ \\text{m}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Distance walked $=$ old distance $-$ new distance.",
+                    "math": "60 - 20\\sqrt{3} = 20\\left(3 - \\sqrt{3}\\right)\\ \\text{m}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Use $\\sqrt{3} \\approx 1.732$.",
+                    "math": "20 \\times 1.268 \\approx 25.36\\ \\text{m}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "Distance walked $= 20\\left(3 - \\sqrt{3}\\right) \\approx 25.36$ m"
+              }
+            ],
+            "mistake": "Answering $20\\sqrt{3}$ m in (iii): that is the new distance from P, not the distance walked."
+          }
+        }
+      ]
+    }
+  ]
+}
