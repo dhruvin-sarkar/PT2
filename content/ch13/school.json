@@ -1,0 +1,868 @@
+{
+  "chapter": 13,
+  "chapterTitle": "Probability",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $P(A) = 0.8$, $P(B) = 0.5$ and $P(B|A) = 0.4$, then $P(A \\cap B)$ is:",
+          "options": [
+            "$0.32$",
+            "$0.25$",
+            "$0.1$",
+            "$0.4$"
+          ],
+          "solution": {
+            "answer": "(A) $0.32$",
+            "concept": "Multiplication rule: $P(A \\cap B) = P(A)\\,P(B|A)$.",
+            "steps": [
+              {
+                "do": "Write the multiplication rule of probability.",
+                "math": "P(A \\cap B) = P(A)\\cdot P(B|A)"
+              },
+              {
+                "do": "Substitute the given values.",
+                "math": "P(A \\cap B) = 0.8 \\times 0.4 = 0.32",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (A)}"
+              }
+            ],
+            "mistake": "Using $P(B)$ instead of $P(A)$: the condition in $P(B|A)$ is $A$, so multiply by $P(A)$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The probability that a particular item is available in three shops A, B and C is $\\dfrac{4}{5}$, $\\dfrac{3}{4}$ and $\\dfrac{2}{3}$ respectively. If a person visits all three shops, the probability that the item is available in at least one of them is:",
+          "options": [
+            "$\\dfrac{59}{60}$",
+            "$1$",
+            "$\\dfrac{1}{60}$",
+            "$\\dfrac{9}{60}$"
+          ],
+          "solution": {
+            "answer": "(A) $\\dfrac{59}{60}$",
+            "concept": "$P(\\text{at least one}) = 1 - P(\\text{none})$, for independent events.",
+            "steps": [
+              {
+                "do": "Find the probability that the item is NOT available in each shop.",
+                "math": "P(A') = \\dfrac{1}{5},\\quad P(B') = \\dfrac{1}{4},\\quad P(C') = \\dfrac{1}{3}"
+              },
+              {
+                "do": "Shops are independent, so multiply to get 'available in none'.",
+                "math": "P(\\text{none}) = \\dfrac{1}{5}\\cdot\\dfrac{1}{4}\\cdot\\dfrac{1}{3} = \\dfrac{1}{60}"
+              },
+              {
+                "do": "Subtract from 1.",
+                "math": "P(\\text{at least one}) = 1 - \\dfrac{1}{60} = \\dfrac{59}{60}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (A)}"
+              }
+            ],
+            "mistake": "Multiplying the three given probabilities: that is 'available in all three', not 'at least one'."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "A die is thrown. If $E$ is the event “the number is 4” and $F$ is the event “the number is even”, then $P(E|F)$ is:",
+          "options": [
+            "$\\dfrac{1}{6}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{1}{3}$",
+            "$\\dfrac{2}{3}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{1}{3}$",
+            "concept": "$P(E|F) = \\dfrac{P(E \\cap F)}{P(F)}$, $P(F) \\neq 0$.",
+            "steps": [
+              {
+                "do": "Write the events.",
+                "math": "E = \\{4\\},\\quad F = \\{2, 4, 6\\},\\quad E \\cap F = \\{4\\}"
+              },
+              {
+                "do": "Find the probabilities.",
+                "math": "P(F) = \\dfrac{3}{6} = \\dfrac{1}{2},\\quad P(E \\cap F) = \\dfrac{1}{6}"
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(E|F) = \\dfrac{P(E \\cap F)}{P(F)} = \\dfrac{1/6}{1/2} = \\dfrac{1}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (C)}"
+              }
+            ],
+            "mistake": "Answering $\\dfrac{1}{6}$: once $F$ is given, only 3 outcomes remain, not 6."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $P(A) = \\dfrac{1}{2}$ and $P(B) = 0$, then $P(A|B)$ is:",
+          "options": [
+            "$0$",
+            "$\\dfrac{1}{2}$",
+            "$1$",
+            "not defined"
+          ],
+          "solution": {
+            "answer": "(D) not defined",
+            "concept": "$P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}$ is defined only when $P(B) \\neq 0$.",
+            "steps": [
+              {
+                "do": "Write the formula.",
+                "math": "P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}"
+              },
+              {
+                "do": "Here the denominator is zero, so the ratio has no value.",
+                "math": "P(B) = 0 \\;\\Rightarrow\\; P(A|B) \\text{ is not defined}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (D)}"
+              }
+            ],
+            "mistake": "Choosing $0$: the formula needs $P(B) \\neq 0$, so no value can be given."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "question": "A random variable $X$ has the distribution $P(X = 0) = k$, $P(X = 1) = 2k$, $P(X = 2) = 3k$. The value of $k$ is:",
+          "options": [
+            "$\\dfrac{1}{6}$",
+            "$\\dfrac{1}{3}$",
+            "$\\dfrac{1}{2}$",
+            "$1$"
+          ],
+          "solution": {
+            "answer": "(A) $\\dfrac{1}{6}$",
+            "concept": "In a probability distribution, $\\sum P(X = x_i) = 1$.",
+            "steps": [
+              {
+                "do": "Sum of all probabilities is 1.",
+                "math": "k + 2k + 3k = 1"
+              },
+              {
+                "do": "Solve for $k$.",
+                "math": "6k = 1 \\;\\Rightarrow\\; k = \\dfrac{1}{6}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (A)}"
+              }
+            ]
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** Events $A$ and $B$ with $P(A) = \\dfrac{1}{2}$, $P(B) = \\dfrac{1}{3}$ and $P(A \\cap B) = \\dfrac{1}{6}$ are independent. **Reason (R):** Two events $A$ and $B$ are independent if and only if $P(A \\cap B) = P(A)\\,P(B)$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A",
+            "concept": "$A$, $B$ independent $\\iff P(A \\cap B) = P(A)\\,P(B)$.",
+            "steps": [
+              {
+                "do": "Check A: find $P(A)\\,P(B)$.",
+                "math": "P(A)\\,P(B) = \\dfrac{1}{2}\\times\\dfrac{1}{3} = \\dfrac{1}{6} = P(A \\cap B)"
+              },
+              {
+                "do": "So A and B are independent. **Assertion is true.**"
+              },
+              {
+                "do": "Reason is the definition of independent events. **Reason is true.**"
+              },
+              {
+                "do": "A is proved exactly by the test stated in R. **R explains A.**"
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (A)}",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "question": "Two cards are drawn one after the other without replacement from a well-shuffled pack of 52 cards. Find the probability that both are kings.",
+          "solution": {
+            "answer": "$\\dfrac{1}{221}$",
+            "concept": "Multiplication theorem: $P(E \\cap F) = P(E)\\,P(F|E)$.",
+            "steps": [
+              {
+                "do": "Let $E$: first card is a king, $F$: second card is a king."
+              },
+              {
+                "do": "Write the multiplication theorem.",
+                "math": "P(E \\cap F) = P(E)\\cdot P(F|E)",
+                "marks": 0.5
+              },
+              {
+                "do": "4 kings in 52 cards.",
+                "math": "P(E) = \\dfrac{4}{52}",
+                "marks": 0.5
+              },
+              {
+                "do": "One king removed: 3 kings left in 51 cards.",
+                "math": "P(F|E) = \\dfrac{3}{51}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply and simplify.",
+                "math": "P(E \\cap F) = \\dfrac{4}{52}\\times\\dfrac{3}{51} = \\dfrac{12}{2652} = \\dfrac{1}{221}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{1}{221}$."
+              }
+            ],
+            "mistake": "Using $\\dfrac{4}{52}\\times\\dfrac{4}{52}$: without replacement, the second draw has 3 kings in 51 cards."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "question": "The chances of P, Q and R getting selected as CEO of a company are in the ratio $4 : 1 : 2$. The probabilities that the company increases its profits under the new CEO P, Q or R are $0.3$, $0.8$ and $0.5$ respectively. If the company increased its profits, find the probability that it is due to the appointment of R as CEO.",
+          "solution": {
+            "answer": "$P(E_3|A) = \\dfrac{1}{3}$",
+            "concept": "Bayes' theorem: $P(E_i|A) = \\dfrac{P(E_i)P(A|E_i)}{\\sum P(E_j)P(A|E_j)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1, E_2, E_3$: P, Q, R is selected. Let $A$: profits increase."
+              },
+              {
+                "do": "Ratio $4:1:2$, total $7$ parts.",
+                "math": "P(E_1) = \\dfrac{4}{7},\\quad P(E_2) = \\dfrac{1}{7},\\quad P(E_3) = \\dfrac{2}{7}",
+                "marks": 1
+              },
+              {
+                "do": "Write the given conditional probabilities.",
+                "math": "P(A|E_1) = 0.3,\\quad P(A|E_2) = 0.8,\\quad P(A|E_3) = 0.5",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $P(A)$ by the theorem of total probability.",
+                "math": "\\begin{aligned} P(A) &= \\dfrac{4}{7}(0.3) + \\dfrac{1}{7}(0.8) + \\dfrac{2}{7}(0.5) \\\\ &= \\dfrac{1.2 + 0.8 + 1.0}{7} = \\dfrac{3}{7} \\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "Apply Bayes' theorem for $E_3$.",
+                "math": "P(E_3|A) = \\dfrac{P(E_3)\\,P(A|E_3)}{P(A)} = \\dfrac{\\frac{2}{7}(0.5)}{\\frac{3}{7}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(E_3|A) = \\dfrac{1/7}{3/7} = \\dfrac{1}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{1}{3}$."
+              }
+            ],
+            "mistake": "Answering $P(A|E_3) = 0.5$: the question asks for $P(E_3|A)$, the reverse direction."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the probability distribution of the number of heads in two tosses of a fair coin. Also find its mean.",
+          "solution": {
+            "answer": "$X$: $0, 1, 2$ with $P(X)$: $\\dfrac{1}{4}, \\dfrac{1}{2}, \\dfrac{1}{4}$; mean $= 1$",
+            "concept": "Mean $E(X) = \\sum x_i\\,p_i$.",
+            "steps": [
+              {
+                "do": "Sample space and values of $X$ (number of heads).",
+                "math": "S = \\{HH, HT, TH, TT\\},\\quad X = 0, 1, 2",
+                "marks": 0.5
+              },
+              {
+                "do": "Find each probability.",
+                "math": "P(X=0) = P(TT) = \\tfrac{1}{4},\\; P(X=1) = P(HT, TH) = \\tfrac{2}{4} = \\tfrac{1}{2},\\; P(X=2) = P(HH) = \\tfrac{1}{4}"
+              },
+              {
+                "do": "Write the probability distribution.",
+                "math": "\\begin{array}{c|ccc} X & 0 & 1 & 2 \\\\ \\hline P(X) & \\frac{1}{4} & \\frac{1}{2} & \\frac{1}{4} \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "Find the mean.",
+                "math": "E(X) = 0\\cdot\\dfrac{1}{4} + 1\\cdot\\dfrac{1}{2} + 2\\cdot\\dfrac{1}{4} = 0 + \\dfrac{1}{2} + \\dfrac{1}{2} = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Mean number of heads $= 1$."
+              }
+            ],
+            "mistake": "Taking $P(X=1) = \\dfrac{1}{4}$: both $HT$ and $TH$ give one head."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "question": "Given $P(A) = 0.6$, $P(B) = 0.3$ and $P(A \\cap B) = 0.2$, find $P(A|B)$, $P(B|A)$ and $P(A'|B')$.",
+          "solution": {
+            "answer": "$P(A|B) = \\dfrac{2}{3}$, $P(B|A) = \\dfrac{1}{3}$, $P(A'|B') = \\dfrac{3}{7}$",
+            "concept": "$P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}$ and $A' \\cap B' = (A \\cup B)'$.",
+            "steps": [
+              {
+                "do": "Find $P(A|B)$.",
+                "math": "P(A|B) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{0.2}{0.3} = \\dfrac{2}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Find $P(B|A)$.",
+                "math": "P(B|A) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0.2}{0.6} = \\dfrac{1}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Find $P(A \\cup B)$ by the addition rule.",
+                "math": "P(A \\cup B) = 0.6 + 0.3 - 0.2 = 0.7"
+              },
+              {
+                "do": "Use De Morgan's law for $P(A' \\cap B')$.",
+                "math": "P(A' \\cap B') = P\\big((A \\cup B)'\\big) = 1 - 0.7 = 0.3",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $P(B')$.",
+                "math": "P(B') = 1 - 0.3 = 0.7"
+              },
+              {
+                "do": "Find $P(A'|B')$.",
+                "math": "P(A'|B') = \\dfrac{P(A' \\cap B')}{P(B')} = \\dfrac{0.3}{0.7} = \\dfrac{3}{7}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $P(A|B) = \\dfrac{2}{3}$, $P(B|A) = \\dfrac{1}{3}$, $P(A'|B') = \\dfrac{3}{7}$."
+              }
+            ],
+            "mistake": "Writing $P(A' \\cap B') = P(A')P(B')$: that needs independence, which is not given."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "question": "A and B independently try to solve a problem with probabilities $\\dfrac{1}{2}$ and $\\dfrac{1}{3}$ respectively. Find the probability that (a) the problem is solved (b) exactly one of them solves it.",
+          "solution": {
+            "answer": "(a) $\\dfrac{2}{3}$ (b) $\\dfrac{1}{2}$",
+            "concept": "For independent events, $P(A \\cap B) = P(A)P(B)$; also $A'$, $B'$ are independent.",
+            "steps": [
+              {
+                "do": "Write the given and complementary probabilities.",
+                "math": "P(A) = \\dfrac{1}{2},\\; P(B) = \\dfrac{1}{3},\\; P(A') = \\dfrac{1}{2},\\; P(B') = \\dfrac{2}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "(a) Problem is solved means at least one solves it.",
+                "math": "P(\\text{solved}) = 1 - P(A' \\cap B') = 1 - P(A')\\,P(B')",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute and simplify.",
+                "math": "P(\\text{solved}) = 1 - \\dfrac{1}{2}\\cdot\\dfrac{2}{3} = 1 - \\dfrac{1}{3} = \\dfrac{2}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "(b) Exactly one solves: A solves and B fails, or A fails and B solves.",
+                "math": "P = P(A)\\,P(B') + P(A')\\,P(B)",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute.",
+                "math": "P = \\dfrac{1}{2}\\cdot\\dfrac{2}{3} + \\dfrac{1}{2}\\cdot\\dfrac{1}{3} = \\dfrac{1}{3} + \\dfrac{1}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P = \\dfrac{2 + 1}{6} = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence (a) $\\dfrac{2}{3}$, (b) $\\dfrac{1}{2}$."
+              }
+            ],
+            "mistake": "For (a), adding $\\dfrac{1}{2} + \\dfrac{1}{3}$: this counts 'both solve' twice."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "question": "A family has two children. Find the probability that both are boys, given that at least one of them is a boy.",
+          "solution": {
+            "answer": "$\\dfrac{1}{3}$",
+            "concept": "$P(E|F) = \\dfrac{P(E \\cap F)}{P(F)}$.",
+            "steps": [
+              {
+                "do": "Write the sample space ($b$ = boy, $g$ = girl).",
+                "math": "S = \\{bb, bg, gb, gg\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $E$: both are boys, $F$: at least one is a boy.",
+                "math": "E = \\{bb\\},\\quad F = \\{bb, bg, gb\\},\\quad E \\cap F = \\{bb\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the probabilities.",
+                "math": "P(F) = \\dfrac{3}{4},\\quad P(E \\cap F) = \\dfrac{1}{4}"
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(E|F) = \\dfrac{P(E \\cap F)}{P(F)} = \\dfrac{1/4}{3/4} = \\dfrac{1}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{1}{3}$."
+              }
+            ],
+            "mistake": "Answering $\\dfrac{1}{2}$: $bg$ and $gb$ are two different outcomes, so $F$ has 3 outcomes."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "question": "A random variable $X$ has $P(X = x) = kx$ for $x = 1, 2, 3, 4$ and $0$ otherwise. Find $k$, $P(X \\geq 3)$ and the mean of $X$.",
+          "solution": {
+            "answer": "$k = \\dfrac{1}{10}$, $P(X \\geq 3) = \\dfrac{7}{10}$, mean $= 3$",
+            "concept": "$\\sum p_i = 1$ and mean $E(X) = \\sum x_i\\,p_i$.",
+            "steps": [
+              {
+                "do": "Write the distribution.",
+                "math": "\\begin{array}{c|cccc} X & 1 & 2 & 3 & 4 \\\\ \\hline P(X) & k & 2k & 3k & 4k \\end{array}"
+              },
+              {
+                "do": "Sum of probabilities is 1.",
+                "math": "k + 2k + 3k + 4k = 1 \\;\\Rightarrow\\; 10k = 1 \\;\\Rightarrow\\; k = \\dfrac{1}{10}",
+                "marks": 1
+              },
+              {
+                "do": "Find $P(X \\geq 3)$.",
+                "math": "P(X \\geq 3) = P(X=3) + P(X=4) = 3k + 4k = 7k = \\dfrac{7}{10}",
+                "marks": 1
+              },
+              {
+                "do": "Find the mean.",
+                "math": "E(X) = \\sum x\\cdot kx = k(1 + 4 + 9 + 16) = \\dfrac{30}{10}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "E(X) = 3",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $k = \\dfrac{1}{10}$, $P(X \\geq 3) = \\dfrac{7}{10}$, mean $= 3$."
+              }
+            ],
+            "mistake": "Using $\\sum kx$ instead of $\\sum x\\cdot kx$ for the mean: each value must be multiplied by its probability."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "question": "Three coins are tossed. Let $E$: “three heads or three tails” and $F$: “at least two heads”. Are $E$ and $F$ independent?",
+          "solution": {
+            "answer": "Yes, $P(E \\cap F) = \\dfrac{1}{8} = P(E)\\,P(F)$, so $E$ and $F$ are independent",
+            "concept": "$E$, $F$ independent $\\iff P(E \\cap F) = P(E)\\,P(F)$.",
+            "steps": [
+              {
+                "do": "Write the sample space (8 outcomes).",
+                "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}"
+              },
+              {
+                "do": "Write $E$ and find $P(E)$.",
+                "math": "E = \\{HHH, TTT\\},\\quad P(E) = \\dfrac{2}{8} = \\dfrac{1}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $F$ and find $P(F)$.",
+                "math": "F = \\{HHH, HHT, HTH, THH\\},\\quad P(F) = \\dfrac{4}{8} = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $E \\cap F$.",
+                "math": "E \\cap F = \\{HHH\\},\\quad P(E \\cap F) = \\dfrac{1}{8}",
+                "marks": 0.5
+              },
+              {
+                "do": "Compare with $P(E)\\,P(F)$.",
+                "math": "P(E)\\,P(F) = \\dfrac{1}{4}\\times\\dfrac{1}{2} = \\dfrac{1}{8} = P(E \\cap F)"
+              },
+              {
+                "do": "Hence $E$ and $F$ are independent.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting HHH in $F$: “at least two heads” includes three heads."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "question": "A factory has machines A, B and C producing $50\\%$, $30\\%$ and $20\\%$ of the items, of which $2\\%$, $3\\%$ and $4\\%$ respectively are defective. An item picked at random is found defective. Find the probability that it was produced by machine A.",
+          "solution": {
+            "answer": "$P(E_1|D) = \\dfrac{10}{27}$",
+            "concept": "Bayes' theorem: $P(E_i|D) = \\dfrac{P(E_i)P(D|E_i)}{\\sum P(E_j)P(D|E_j)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1, E_2, E_3$: item made by A, B, C. Let $D$: item is defective.",
+                "marks": 1
+              },
+              {
+                "do": "Write the prior probabilities.",
+                "math": "P(E_1) = 0.5,\\quad P(E_2) = 0.3,\\quad P(E_3) = 0.2",
+                "marks": 1
+              },
+              {
+                "do": "Write the probabilities of a defective item from each machine.",
+                "math": "P(D|E_1) = 0.02,\\quad P(D|E_2) = 0.03,\\quad P(D|E_3) = 0.04",
+                "marks": 1
+              },
+              {
+                "do": "State Bayes' theorem for $E_1$.",
+                "math": "P(E_1|D) = \\dfrac{P(E_1)P(D|E_1)}{P(E_1)P(D|E_1) + P(E_2)P(D|E_2) + P(E_3)P(D|E_3)}"
+              },
+              {
+                "do": "Substitute the values.",
+                "math": "P(E_1|D) = \\dfrac{0.5\\times 0.02}{0.5\\times 0.02 + 0.3\\times 0.03 + 0.2\\times 0.04}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(E_1|D) = \\dfrac{0.010}{0.010 + 0.009 + 0.008} = \\dfrac{0.010}{0.027} = \\dfrac{10}{27}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{10}{27}$."
+              }
+            ],
+            "mistake": "Writing $P(E_1|D) = 0.02$: that is $P(D|E_1)$, the reverse conditional."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "short",
+          "question": "In answering a multiple-choice question (4 options), a student either knows the answer or guesses. The probability that she knows the answer is $\\dfrac{3}{4}$. If she answers correctly, find the probability that she knew the answer.",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{12}{13}$",
+            "concept": "Bayes' theorem with two cases: knows ($E_1$) or guesses ($E_2$).",
+            "steps": [
+              {
+                "do": "Let $E_1$: she knows the answer, $E_2$: she guesses, $A$: answer is correct."
+              },
+              {
+                "do": "Write the prior probabilities.",
+                "math": "P(E_1) = \\dfrac{3}{4},\\quad P(E_2) = 1 - \\dfrac{3}{4} = \\dfrac{1}{4}",
+                "marks": 1
+              },
+              {
+                "do": "If she knows, she is surely correct; a guess is right 1 time in 4.",
+                "math": "P(A|E_1) = 1,\\quad P(A|E_2) = \\dfrac{1}{4}",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem.",
+                "math": "P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)} = \\dfrac{\\frac{3}{4}\\cdot 1}{\\frac{3}{4}\\cdot 1 + \\frac{1}{4}\\cdot\\frac{1}{4}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{12}{16}}{\\frac{13}{16}} = \\dfrac{12}{13}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{12}{13}$."
+              }
+            ],
+            "mistake": "Taking $P(A|E_1) = \\dfrac{3}{4}$: if she knows the answer she is correct with probability $1$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "question": "Two cards are drawn successively without replacement from a well-shuffled pack of 52 cards. Find the probability distribution of the number of aces and its mean.",
+          "solution": {
+            "answer": "$X$: $0, 1, 2$ with $P(X)$: $\\dfrac{188}{221}, \\dfrac{32}{221}, \\dfrac{1}{221}$; mean $= \\dfrac{2}{13}$",
+            "concept": "Without replacement: $P(E \\cap F) = P(E)\\,P(F|E)$; mean $= \\sum x_i p_i$.",
+            "steps": [
+              {
+                "do": "Let $X$ = number of aces. 4 aces, 48 non-aces. $X$ takes values $0, 1, 2$.",
+                "marks": 0.5
+              },
+              {
+                "do": "$X = 0$: both cards non-aces.",
+                "math": "P(X=0) = \\dfrac{48}{52}\\times\\dfrac{47}{51} = \\dfrac{2256}{2652} = \\dfrac{188}{221}",
+                "marks": 1
+              },
+              {
+                "do": "$X = 1$: ace then non-ace, or non-ace then ace.",
+                "math": "P(X=1) = \\dfrac{4}{52}\\times\\dfrac{48}{51} + \\dfrac{48}{52}\\times\\dfrac{4}{51} = \\dfrac{384}{2652} = \\dfrac{32}{221}",
+                "marks": 1
+              },
+              {
+                "do": "$X = 2$: both cards aces.",
+                "math": "P(X=2) = \\dfrac{4}{52}\\times\\dfrac{3}{51} = \\dfrac{12}{2652} = \\dfrac{1}{221}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the probability distribution.",
+                "math": "\\begin{array}{c|ccc} X & 0 & 1 & 2 \\\\ \\hline P(X) & \\frac{188}{221} & \\frac{32}{221} & \\frac{1}{221} \\end{array}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check: probabilities add to 1.",
+                "math": "\\dfrac{188 + 32 + 1}{221} = \\dfrac{221}{221} = 1"
+              },
+              {
+                "do": "Write the mean formula and substitute.",
+                "math": "E(X) = \\sum x_i p_i = 0\\cdot\\dfrac{188}{221} + 1\\cdot\\dfrac{32}{221} + 2\\cdot\\dfrac{1}{221}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "E(X) = \\dfrac{32 + 2}{221} = \\dfrac{34}{221} = \\dfrac{2}{13}",
+                "marks": 1
+              },
+              {
+                "do": "Mean number of aces $= \\dfrac{2}{13}$."
+              }
+            ],
+            "mistake": "Counting only ace-then-non-ace for $X = 1$: the other order must be added too."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "question": "A random variable $X$ has the distribution: $X$: $0, 1, 2, 3, 4, 5, 6, 7$ with $P(X)$: $0,\\ k,\\ 2k,\\ 2k,\\ 3k,\\ k^2,\\ 2k^2,\\ 7k^2 + k$. Find $k$, $P(X < 3)$ and $P(X > 6)$.",
+          "solution": {
+            "answer": "$k = \\dfrac{1}{10}$, $P(X < 3) = \\dfrac{3}{10}$, $P(X > 6) = \\dfrac{17}{100}$",
+            "concept": "$\\sum p_i = 1$, and every $p_i \\geq 0$.",
+            "steps": [
+              {
+                "do": "Sum of all probabilities is 1.",
+                "math": "0 + k + 2k + 2k + 3k + k^2 + 2k^2 + 7k^2 + k = 1"
+              },
+              {
+                "do": "Collect terms to get a quadratic.",
+                "math": "10k^2 + 9k - 1 = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Factorise.",
+                "math": "(10k - 1)(k + 1) = 0 \\;\\Rightarrow\\; k = \\dfrac{1}{10} \\text{ or } k = -1"
+              },
+              {
+                "do": "Reject $k = -1$, since a probability cannot be negative.",
+                "math": "k = \\dfrac{1}{10}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $P(X < 3)$.",
+                "math": "P(X < 3) = P(0) + P(1) + P(2) = 0 + k + 2k = 3k = \\dfrac{3}{10}",
+                "marks": 1
+              },
+              {
+                "do": "Find $P(X > 6)$.",
+                "math": "P(X > 6) = P(X = 7) = 7k^2 + k = \\dfrac{7}{100} + \\dfrac{1}{10} = \\dfrac{17}{100}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $k = \\dfrac{1}{10}$, $P(X<3) = \\dfrac{3}{10}$, $P(X>6) = \\dfrac{17}{100}$."
+              }
+            ],
+            "mistake": "Keeping $k = -1$: then $P(X = 1) = -1$, which is impossible."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "question": "A laboratory blood test is $99\\%$ effective in detecting a disease when it is present, but gives a false positive for $0.5\\%$ of healthy persons. If $0.1\\%$ of the population has the disease, find the probability that a person who tests positive actually has the disease.",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{22}{133}$",
+            "concept": "Bayes' theorem: $P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1$: person has the disease, $E_2$: person is healthy, $A$: test is positive.",
+                "marks": 1
+              },
+              {
+                "do": "Write the prior probabilities.",
+                "math": "P(E_1) = 0.1\\% = 0.001,\\quad P(E_2) = 1 - 0.001 = 0.999",
+                "marks": 1
+              },
+              {
+                "do": "Write the probabilities of a positive test.",
+                "math": "P(A|E_1) = 99\\% = 0.99,\\quad P(A|E_2) = 0.5\\% = 0.005",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem.",
+                "math": "P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)}"
+              },
+              {
+                "do": "Substitute the values.",
+                "math": "P(E_1|A) = \\dfrac{0.001\\times 0.99}{0.001\\times 0.99 + 0.999\\times 0.005}",
+                "marks": 1
+              },
+              {
+                "do": "Multiply numerator and denominator by $10^6$.",
+                "math": "P(E_1|A) = \\dfrac{990}{990 + 4995} = \\dfrac{990}{5985}"
+              },
+              {
+                "do": "Divide top and bottom by 45.",
+                "math": "P(E_1|A) = \\dfrac{22}{133}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{22}{133}$ (about $0.165$)."
+              }
+            ],
+            "mistake": "Taking $P(A|E_2) = 0.995$: the false positive rate $0.5\\%$ is itself $P(A|E_2)$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** An NGO organises a charity event to distribute woollen caps to children in winter. The caps are in three boxes: Box I has 30 red caps, Box II has 20 red and 10 green caps, and Box III has 30 green caps. The probability that Box $i$ is selected and a cap picked out is $\\dfrac{i}{6}$, $i = 1, 2, 3$. A person selects a cap.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "What is the probability that he selects a red cap?",
+              "marks": 2
+            },
+            {
+              "label": "(ii)",
+              "text": "If he selects a green cap, what is the probability that it has come from Box II?",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $\\dfrac{7}{18}$ (ii) $\\dfrac{2}{11}$",
+            "concept": "Total probability for (i); Bayes' theorem for (ii).",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Let $E_1, E_2, E_3$: Box I, II, III is selected. Let $R$: red cap."
+                  },
+                  {
+                    "do": "Write $P(E_i) = \\dfrac{i}{6}$.",
+                    "math": "P(E_1) = \\dfrac{1}{6},\\quad P(E_2) = \\dfrac{2}{6},\\quad P(E_3) = \\dfrac{3}{6}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Probability of red from each box.",
+                    "math": "P(R|E_1) = \\dfrac{30}{30} = 1,\\; P(R|E_2) = \\dfrac{20}{30} = \\dfrac{2}{3},\\; P(R|E_3) = 0",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Theorem of total probability.",
+                    "math": "P(R) = \\dfrac{1}{6}(1) + \\dfrac{2}{6}\\left(\\dfrac{2}{3}\\right) + \\dfrac{3}{6}(0) = \\dfrac{3}{18} + \\dfrac{4}{18}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(R) = \\dfrac{7}{18}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Probability of a red cap $= \\dfrac{7}{18}$."
+                  }
+                ],
+                "answer": "$\\dfrac{7}{18}$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Let $G$: green cap. Probability of green from each box.",
+                    "math": "P(G|E_1) = 0,\\quad P(G|E_2) = \\dfrac{10}{30} = \\dfrac{1}{3},\\quad P(G|E_3) = 1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Find $P(G)$ by total probability.",
+                    "math": "P(G) = \\dfrac{1}{6}(0) + \\dfrac{2}{6}\\left(\\dfrac{1}{3}\\right) + \\dfrac{3}{6}(1) = \\dfrac{2}{18} + \\dfrac{9}{18} = \\dfrac{11}{18}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Apply Bayes' theorem for Box II.",
+                    "math": "P(E_2|G) = \\dfrac{P(E_2)P(G|E_2)}{P(G)} = \\dfrac{\\frac{2}{6}\\cdot\\frac{1}{3}}{\\frac{11}{18}}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(E_2|G) = \\dfrac{2/18}{11/18} = \\dfrac{2}{11}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Required probability $= \\dfrac{2}{11}$."
+                  }
+                ],
+                "answer": "$\\dfrac{2}{11}$"
+              }
+            ],
+            "mistake": "Taking each box as equally likely ($\\dfrac{1}{3}$): here $P(E_i) = \\dfrac{i}{6}$."
+          }
+        }
+      ]
+    }
+  ]
+}

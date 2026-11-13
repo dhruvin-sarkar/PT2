@@ -1,0 +1,912 @@
+{
+  "chapter": 13,
+  "chapterTitle": "Probability",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "If $P(A|B) = 0.3$, $P(A) = 0.4$ and $P(B) = 0.8$, then $P(B|A)$ is:",
+          "options": [
+            "$0.6$",
+            "$0.3$",
+            "$0.06$",
+            "$0.4$"
+          ],
+          "solution": {
+            "answer": "(A) $0.6$",
+            "concept": "Multiplication rule: $P(A \\cap B) = P(B)\\,P(A|B) = P(A)\\,P(B|A)$.",
+            "steps": [
+              {
+                "do": "Find $P(A \\cap B)$ by the multiplication rule.",
+                "math": "P(A \\cap B) = P(B)\\cdot P(A|B) = 0.8 \\times 0.3 = 0.24"
+              },
+              {
+                "do": "Now divide by $P(A)$.",
+                "math": "P(B|A) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0.24}{0.4} = 0.6",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (A)}"
+              }
+            ],
+            "mistake": "Answering $0.3$: $P(B|A)$ and $P(A|B)$ are not the same."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "If $E$ and $F$ are two independent events such that $P(E) = \\dfrac{2}{3}$ and $P(F) = \\dfrac{3}{7}$, then $P(E|\\bar{F})$ is equal to:",
+          "options": [
+            "$\\dfrac{1}{6}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{2}{3}$",
+            "$\\dfrac{7}{9}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{2}{3}$",
+            "concept": "If $E$ and $F$ are independent, then $E$ and $\\bar{F}$ are also independent.",
+            "steps": [
+              {
+                "do": "$E$, $F$ independent, so $E$, $\\bar{F}$ are independent.",
+                "math": "P(E \\cap \\bar{F}) = P(E)\\,P(\\bar{F})"
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(E|\\bar{F}) = \\dfrac{P(E)\\,P(\\bar{F})}{P(\\bar{F})} = P(E) = \\dfrac{2}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (C)}"
+              }
+            ],
+            "mistake": "Answering $P(\\bar{F}) = \\dfrac{4}{7}$ or multiplying: for independent events the condition does not change $P(E)$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2025-26",
+          "question": "A person observed the first 4 digits of your 6-digit PIN. What is the probability that the person can guess your PIN?",
+          "options": [
+            "$\\dfrac{1}{81}$",
+            "$\\dfrac{1}{100}$",
+            "$\\dfrac{1}{90}$",
+            "$1$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{1}{100}$",
+            "concept": "Given the first 4 digits, only the last 2 digits are unknown.",
+            "steps": [
+              {
+                "do": "Each of the last 2 digits can be any of $0, 1, \\dots, 9$.",
+                "math": "\\text{Possible endings} = 10 \\times 10 = 100"
+              },
+              {
+                "do": "Only one ending is correct.",
+                "math": "P(\\text{correct guess}) = \\dfrac{1}{100}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (B)}"
+              }
+            ],
+            "mistake": "Choosing $\\dfrac{1}{90}$ or $\\dfrac{1}{81}$: PIN digits can repeat and can be $0$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "For any two events $A$ and $B$, if $P(\\bar{A}) = \\dfrac{1}{2}$, $P(\\bar{B}) = \\dfrac{2}{3}$ and $P(A \\cap B) = \\dfrac{1}{4}$, then $P(\\bar{A}|\\bar{B})$ equals:",
+          "options": [
+            "$\\dfrac{3}{8}$",
+            "$\\dfrac{8}{9}$",
+            "$\\dfrac{5}{8}$",
+            "$\\dfrac{1}{4}$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{5}{8}$",
+            "concept": "$P(\\bar{A} \\cap \\bar{B}) = P\\big((A \\cup B)'\\big) = 1 - P(A \\cup B)$.",
+            "steps": [
+              {
+                "do": "Find $P(A)$ and $P(B)$.",
+                "math": "P(A) = 1 - \\dfrac{1}{2} = \\dfrac{1}{2},\\quad P(B) = 1 - \\dfrac{2}{3} = \\dfrac{1}{3}"
+              },
+              {
+                "do": "Addition rule.",
+                "math": "P(A \\cup B) = \\dfrac{1}{2} + \\dfrac{1}{3} - \\dfrac{1}{4} = \\dfrac{7}{12}"
+              },
+              {
+                "do": "Use De Morgan's law.",
+                "math": "P(\\bar{A} \\cap \\bar{B}) = 1 - \\dfrac{7}{12} = \\dfrac{5}{12}"
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(\\bar{A}|\\bar{B}) = \\dfrac{P(\\bar{A} \\cap \\bar{B})}{P(\\bar{B})} = \\dfrac{5/12}{2/3} = \\dfrac{5}{8}",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (C)}"
+              }
+            ],
+            "mistake": "Writing $P(\\bar{A} \\cap \\bar{B}) = 1 - P(A \\cap B)$: it is $1 - P(A \\cup B)$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "A random variable $X$ has the probability distribution $X$: $-1,\\ 0,\\ 1,\\ 2$ with $P(X)$: $0.2,\\ k,\\ 2k,\\ 0.2$. The value of $k$ is:",
+          "options": [
+            "$0.1$",
+            "$0.2$",
+            "$0.3$",
+            "$0.6$"
+          ],
+          "solution": {
+            "answer": "(B) $0.2$",
+            "concept": "In a probability distribution, $\\sum P(X = x_i) = 1$.",
+            "steps": [
+              {
+                "do": "Sum of all probabilities is 1.",
+                "math": "0.2 + k + 2k + 0.2 = 1"
+              },
+              {
+                "do": "Solve for $k$.",
+                "math": "3k = 0.6 \\;\\Rightarrow\\; k = 0.2",
+                "marks": 1
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (B)}"
+              }
+            ],
+            "mistake": "Stopping at $3k = 0.6$ and choosing $0.6$: divide by 3."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** Events $A$ and $B$ with $P(A) = 0.5$, $P(B) = 0.4$ and $P(A \\cup B) = 0.8$ are independent. **Reason (R):** Two events $A$ and $B$ are independent if and only if $P(A \\cap B) = P(A)\\,P(B)$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(D) A is false, but R is true",
+            "concept": "$A$, $B$ independent $\\iff P(A \\cap B) = P(A)\\,P(B)$.",
+            "steps": [
+              {
+                "do": "Find $P(A \\cap B)$ from the addition rule.",
+                "math": "P(A \\cap B) = 0.5 + 0.4 - 0.8 = 0.1"
+              },
+              {
+                "do": "Compare with $P(A)\\,P(B)$.",
+                "math": "P(A)\\,P(B) = 0.5 \\times 0.4 = 0.2 \\neq 0.1"
+              },
+              {
+                "do": "$P(A \\cap B) \\neq P(A)\\,P(B)$, so **Assertion (A) is false**."
+              },
+              {
+                "do": "Reason is the definition of independent events, so **Reason (R) is true**."
+              },
+              {
+                "do": "A is false, so the question of R explaining A does not arise."
+              },
+              {
+                "do": "Pick the matching option.",
+                "math": "\\text{Option (D)}",
+                "marks": 1
+              }
+            ],
+            "mistake": "Taking $P(A \\cap B) = 0.8$: that is $P(A \\cup B)$, not the intersection."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A box of oranges is inspected by examining three randomly selected oranges drawn without replacement. If all the three oranges are good, the box is approved for sale, otherwise it is rejected. Find the probability that a box containing 15 oranges, out of which 12 are good and 3 are bad, will be approved for sale.",
+          "solution": {
+            "answer": "$\\dfrac{44}{91}$",
+            "concept": "Multiplication theorem: $P(E_1 \\cap E_2 \\cap E_3) = P(E_1)\\,P(E_2|E_1)\\,P(E_3|E_1 \\cap E_2)$.",
+            "steps": [
+              {
+                "do": "Let $E_1, E_2, E_3$: first, second, third orange is good."
+              },
+              {
+                "do": "Write the multiplication theorem.",
+                "math": "P(E_1 \\cap E_2 \\cap E_3) = P(E_1)\\,P(E_2|E_1)\\,P(E_3|E_1 \\cap E_2)",
+                "marks": 0.5
+              },
+              {
+                "do": "12 good oranges in 15.",
+                "math": "P(E_1) = \\dfrac{12}{15}",
+                "marks": 0.5
+              },
+              {
+                "do": "Without replacement: 11 good in 14, then 10 good in 13.",
+                "math": "P(E_2|E_1) = \\dfrac{11}{14},\\quad P(E_3|E_1 \\cap E_2) = \\dfrac{10}{13}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply and simplify.",
+                "math": "P = \\dfrac{12}{15}\\times\\dfrac{11}{14}\\times\\dfrac{10}{13} = \\dfrac{1320}{2730} = \\dfrac{44}{91}",
+                "marks": 0.5
+              },
+              {
+                "do": "Probability that the box is approved $= \\dfrac{44}{91}$."
+              }
+            ],
+            "mistake": "Using $\\left(\\dfrac{12}{15}\\right)^3$: without replacement, the counts drop after each draw."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "A bank offers loans to its customers on three types of interest: fixed rate, floating rate and variable rate. From past data, a customer avails a loan on fixed rate, floating rate and variable rate with probabilities $10\\%$, $20\\%$ and $70\\%$ respectively. The probability that a customer defaults on repayment is $5\\%$, $3\\%$ and $1\\%$ for fixed, floating and variable rate loans respectively. A customer is found to have defaulted on loan repayment. Find the probability that he availed the loan at a variable rate of interest.",
+          "solution": {
+            "answer": "$P(E_3|A) = \\dfrac{7}{18}$",
+            "concept": "Bayes' theorem: $P(E_i|A) = \\dfrac{P(E_i)P(A|E_i)}{\\sum P(E_j)P(A|E_j)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1, E_2, E_3$: loan on fixed, floating, variable rate; $A$: customer defaults."
+              },
+              {
+                "do": "Write the prior probabilities.",
+                "math": "P(E_1) = \\dfrac{10}{100},\\quad P(E_2) = \\dfrac{20}{100},\\quad P(E_3) = \\dfrac{70}{100}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the probabilities of default.",
+                "math": "P(A|E_1) = \\dfrac{5}{100},\\quad P(A|E_2) = \\dfrac{3}{100},\\quad P(A|E_3) = \\dfrac{1}{100}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $P(A)$ by the theorem of total probability.",
+                "math": "P(A) = \\dfrac{10 \\times 5 + 20 \\times 3 + 70 \\times 1}{10000} = \\dfrac{180}{10000} = \\dfrac{18}{1000}",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem for $E_3$.",
+                "math": "P(E_3|A) = \\dfrac{P(E_3)\\,P(A|E_3)}{P(A)} = \\dfrac{70/10000}{180/10000}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(E_3|A) = \\dfrac{70}{180} = \\dfrac{7}{18}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{7}{18}$."
+              }
+            ],
+            "mistake": "Answering $P(A|E_3) = 1\\%$: the question asks for $P(E_3|A)$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A fair die is thrown twice. Find the probability distribution of the number of sixes. Also find its mean.",
+          "solution": {
+            "answer": "$X$: $0, 1, 2$ with $P(X)$: $\\dfrac{25}{36}, \\dfrac{10}{36}, \\dfrac{1}{36}$; mean $= \\dfrac{1}{3}$",
+            "concept": "Mean $E(X) = \\sum x_i\\,p_i$.",
+            "steps": [
+              {
+                "do": "Let $X$ = number of sixes. $X$ takes values $0, 1, 2$.",
+                "math": "P(\\text{six}) = \\dfrac{1}{6},\\quad P(\\text{not six}) = \\dfrac{5}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find each probability (throws are independent).",
+                "math": "P(X=0) = \\tfrac{5}{6}\\cdot\\tfrac{5}{6} = \\tfrac{25}{36},\\; P(X=1) = 2\\cdot\\tfrac{1}{6}\\cdot\\tfrac{5}{6} = \\tfrac{10}{36},\\; P(X=2) = \\tfrac{1}{36}"
+              },
+              {
+                "do": "Write the probability distribution.",
+                "math": "\\begin{array}{c|ccc} X & 0 & 1 & 2 \\\\ \\hline P(X) & \\frac{25}{36} & \\frac{10}{36} & \\frac{1}{36} \\end{array}",
+                "marks": 1
+              },
+              {
+                "do": "Find the mean.",
+                "math": "E(X) = 0\\cdot\\dfrac{25}{36} + 1\\cdot\\dfrac{10}{36} + 2\\cdot\\dfrac{1}{36} = \\dfrac{12}{36} = \\dfrac{1}{3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Mean number of sixes $= \\dfrac{1}{3}$."
+              }
+            ],
+            "mistake": "Taking $P(X=1) = \\dfrac{5}{36}$: a six can come on the first or the second throw."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "The probability that it rains today is $0.4$. If it rains today, the probability that it will rain tomorrow is $0.8$. If it does not rain today, the probability that it will rain tomorrow is $0.7$. Let $P_1$ denote the probability that it does not rain today, $P_2$ the probability that it will not rain tomorrow if it rains today, $P_3$ the probability that it will rain tomorrow if it does not rain today, and $P_4$ the probability that it will not rain tomorrow if it does not rain today.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Find the value of $P_1 \\times P_4 - P_2 \\times P_3$.",
+              "marks": 2
+            },
+            {
+              "label": "(ii)",
+              "text": "Calculate the probability of raining tomorrow.",
+              "marks": 1
+            }
+          ],
+          "solution": {
+            "answer": "(i) $0.04$ (ii) $0.74$",
+            "concept": "$P(\\bar{A}|E) = 1 - P(A|E)$; total probability: $P(A) = \\sum P(E_i)P(A|E_i)$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Not raining today is the complement of raining today.",
+                    "math": "P_1 = 1 - 0.4 = 0.6",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "If it rains today, 'no rain tomorrow' is the complement.",
+                    "math": "P_2 = 1 - 0.8 = 0.2",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "If it does not rain today: given value and its complement.",
+                    "math": "P_3 = 0.7,\\quad P_4 = 1 - 0.7 = 0.3",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Substitute.",
+                    "math": "P_1 P_4 - P_2 P_3 = 0.6 \\times 0.3 - 0.2 \\times 0.7 = 0.18 - 0.14 = 0.04",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$0.04$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Let $E_1$: rain today, $E_2$: no rain today, $A$: rain tomorrow.",
+                    "math": "P(E_1) = 0.4,\\; P(E_2) = 0.6,\\; P(A|E_1) = 0.8,\\; P(A|E_2) = 0.7"
+                  },
+                  {
+                    "do": "Theorem of total probability.",
+                    "math": "P(A) = P(E_1)P(A|E_1) + P(E_2)P(A|E_2) = 0.4 \\times 0.8 + 0.6 \\times 0.7",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(A) = 0.32 + 0.42 = 0.74",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Probability of rain tomorrow $= 0.74$."
+                  }
+                ],
+                "answer": "$0.74$"
+              }
+            ],
+            "mistake": "Adding $0.8 + 0.7$ for (ii): each conditional must be weighted by $P(E_1)$ or $P(E_2)$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2025-26",
+          "question": "Two students Mehul and Rashi are seeking admission in a college. The probability that Mehul is selected is $0.4$ and the probability of selection of exactly one of them is $0.5$. Chances of selection of them are independent of each other. Find the chances of selection of Rashi. Also find the probability of selection of at least one of them.",
+          "solution": {
+            "answer": "$P(R) = 0.5$; $P(\\text{at least one}) = 0.7$",
+            "concept": "For independent events, $P(M \\cap R) = P(M)P(R)$, and $M'$, $R'$ are also independent.",
+            "steps": [
+              {
+                "do": "Let $M$: Mehul selected, $R$: Rashi selected, $P(R) = x$.",
+                "math": "P(M) = 0.4,\\quad P(M') = 0.6,\\quad P(R') = 1 - x",
+                "marks": 0.5
+              },
+              {
+                "do": "Exactly one selected: $M$ and not $R$, or not $M$ and $R$.",
+                "math": "P(M)P(R') + P(M')P(R) = 0.5",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute and simplify.",
+                "math": "0.4(1 - x) + 0.6x = 0.5 \\;\\Rightarrow\\; 0.4 + 0.2x = 0.5",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $x$.",
+                "math": "x = P(R) = 0.5",
+                "marks": 0.5
+              },
+              {
+                "do": "At least one selected $= 1 -$ neither selected.",
+                "math": "P(\\text{at least one}) = 1 - P(M')P(R') = 1 - 0.6 \\times 0.5",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(\\text{at least one}) = 1 - 0.3 = 0.7",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence $P(\\text{Rashi}) = 0.5$ and $P(\\text{at least one}) = 0.7$."
+              }
+            ],
+            "mistake": "Writing 'exactly one' as $P(M) + P(R)$: that also counts the case when both are selected."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A die is thrown twice and the sum of the numbers appearing is observed to be 6. What is the conditional probability that the number 4 has appeared at least once?",
+          "solution": {
+            "answer": "$\\dfrac{2}{5}$",
+            "concept": "$P(E|F) = \\dfrac{P(E \\cap F)}{P(F)}$.",
+            "steps": [
+              {
+                "do": "Let $F$: sum is 6. Write its outcomes.",
+                "math": "F = \\{(1,5), (2,4), (3,3), (4,2), (5,1)\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "Let $E$: 4 appears at least once. Find $E \\cap F$.",
+                "math": "E \\cap F = \\{(2,4), (4,2)\\}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the probabilities (36 outcomes in all).",
+                "math": "P(F) = \\dfrac{5}{36},\\quad P(E \\cap F) = \\dfrac{2}{36}"
+              },
+              {
+                "do": "Apply the conditional probability formula.",
+                "math": "P(E|F) = \\dfrac{2/36}{5/36} = \\dfrac{2}{5}",
+                "marks": 1
+              },
+              {
+                "do": "Required probability $= \\dfrac{2}{5}$."
+              }
+            ],
+            "mistake": "Answering $\\dfrac{11}{36}$: that is $P(E)$; the sum 6 is already given."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "A random variable $X$ can take all non-negative integral values and the probability that $X$ takes the value $r$ is proportional to $5^{-r}$. Find $P(X < 3)$.",
+          "solution": {
+            "answer": "$P(X < 3) = \\dfrac{124}{125}$ (with $k = \\dfrac{4}{5}$)",
+            "concept": "$\\sum P(X = r) = 1$; sum of an infinite G.P. $= \\dfrac{a}{1 - r}$ for $|r| < 1$.",
+            "steps": [
+              {
+                "do": "Proportional to $5^{-r}$, so put a constant $k$.",
+                "math": "P(X = r) = \\dfrac{k}{5^r},\\quad r = 0, 1, 2, \\dots",
+                "marks": 0.5
+              },
+              {
+                "do": "Sum of all probabilities is 1.",
+                "math": "k\\left(1 + \\dfrac{1}{5} + \\dfrac{1}{5^2} + \\dots\\right) = 1",
+                "marks": 0.5
+              },
+              {
+                "do": "Sum the infinite G.P. with ratio $\\dfrac{1}{5}$.",
+                "math": "k \\cdot \\dfrac{1}{1 - \\frac{1}{5}} = 1 \\;\\Rightarrow\\; \\dfrac{5k}{4} = 1 \\;\\Rightarrow\\; k = \\dfrac{4}{5}",
+                "marks": 0.5
+              },
+              {
+                "do": "$X < 3$ means $X = 0, 1, 2$.",
+                "math": "P(X < 3) = \\dfrac{4}{5}\\left(1 + \\dfrac{1}{5} + \\dfrac{1}{25}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(X < 3) = \\dfrac{4}{5}\\cdot\\dfrac{25 + 5 + 1}{25} = \\dfrac{124}{125}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $P(X < 3) = \\dfrac{124}{125}$."
+              }
+            ],
+            "mistake": "Starting the values at $r = 1$: non-negative integers include $r = 0$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A die is thrown once. Let $E$: “the number is even” and $F$: “the number is a prime number”. Are $E$ and $F$ independent? Justify.",
+          "solution": {
+            "answer": "No, $P(E \\cap F) = \\dfrac{1}{6} \\neq \\dfrac{1}{4} = P(E)\\,P(F)$, so $E$ and $F$ are not independent",
+            "concept": "$E$, $F$ independent $\\iff P(E \\cap F) = P(E)\\,P(F)$.",
+            "steps": [
+              {
+                "do": "Write the sample space.",
+                "math": "S = \\{1, 2, 3, 4, 5, 6\\}"
+              },
+              {
+                "do": "Write $E$ and find $P(E)$.",
+                "math": "E = \\{2, 4, 6\\},\\quad P(E) = \\dfrac{3}{6} = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write $F$ and find $P(F)$.",
+                "math": "F = \\{2, 3, 5\\},\\quad P(F) = \\dfrac{3}{6} = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $E \\cap F$.",
+                "math": "E \\cap F = \\{2\\},\\quad P(E \\cap F) = \\dfrac{1}{6}",
+                "marks": 0.5
+              },
+              {
+                "do": "Compare with $P(E)\\,P(F)$.",
+                "math": "P(E)\\,P(F) = \\dfrac{1}{2}\\times\\dfrac{1}{2} = \\dfrac{1}{4} \\neq \\dfrac{1}{6}"
+              },
+              {
+                "do": "Hence $E$ and $F$ are not independent.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Counting 1 as a prime: the primes on a die are only 2, 3 and 5."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "In an office three employees Jayant, Sonia and Oliver process incoming copies of a certain form. Jayant processes $50\\%$ of the forms, Sonia processes $20\\%$ and Oliver the remaining $30\\%$ of the forms. Jayant has an error rate of $0.06$, Sonia has an error rate of $0.04$ and Oliver has an error rate of $0.03$. The manager selects a form at random from the day's output of processed forms. If the form selected has an error, find the probability that the form is not processed by Jayant.",
+          "solution": {
+            "answer": "$P(\\text{not Jayant}|E) = \\dfrac{17}{47}$",
+            "concept": "Bayes' theorem: $P(E_i|E) = \\dfrac{P(E_i)P(E|E_i)}{\\sum P(E_j)P(E|E_j)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1, E_2, E_3$: form processed by Jayant, Sonia, Oliver. Let $E$: form has an error.",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the prior probabilities.",
+                "math": "P(E_1) = 0.5,\\quad P(E_2) = 0.2,\\quad P(E_3) = 0.3",
+                "marks": 1
+              },
+              {
+                "do": "Write the error rates.",
+                "math": "P(E|E_1) = 0.06,\\quad P(E|E_2) = 0.04,\\quad P(E|E_3) = 0.03",
+                "marks": 1
+              },
+              {
+                "do": "Find $P(E)$ by the theorem of total probability.",
+                "math": "\\begin{aligned} P(E) &= 0.5 \\times 0.06 + 0.2 \\times 0.04 + 0.3 \\times 0.03 \\\\ &= 0.030 + 0.008 + 0.009 = 0.047 \\end{aligned}",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem for Jayant.",
+                "math": "P(E_1|E) = \\dfrac{P(E_1)P(E|E_1)}{P(E)} = \\dfrac{0.030}{0.047} = \\dfrac{30}{47}",
+                "marks": 1
+              },
+              {
+                "do": "'Not Jayant' is the complement.",
+                "math": "P(\\text{not Jayant}|E) = 1 - \\dfrac{30}{47} = \\dfrac{17}{47}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{17}{47}$."
+              }
+            ],
+            "mistake": "Answering $1 - 0.5 = 0.5$: the error is given, so Bayes' theorem must be used."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A man is known to speak the truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{3}{8}$",
+            "concept": "Bayes' theorem with two cases: six occurs ($E_1$) or does not ($E_2$).",
+            "steps": [
+              {
+                "do": "Let $E_1$: six occurs, $E_2$: six does not occur, $A$: he reports a six."
+              },
+              {
+                "do": "Write the prior probabilities.",
+                "math": "P(E_1) = \\dfrac{1}{6},\\quad P(E_2) = \\dfrac{5}{6}",
+                "marks": 1
+              },
+              {
+                "do": "He reports a six when truthful (six) or lying (no six).",
+                "math": "P(A|E_1) = \\dfrac{3}{4},\\quad P(A|E_2) = \\dfrac{1}{4}",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{1}{6}\\cdot\\frac{3}{4}}{\\frac{1}{6}\\cdot\\frac{3}{4} + \\frac{5}{6}\\cdot\\frac{1}{4}}",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{3}{24}}{\\frac{3}{24} + \\frac{5}{24}} = \\dfrac{3}{8}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{3}{8}$."
+              }
+            ],
+            "mistake": "Answering $\\dfrac{3}{4}$: that ignores how unlikely a six is in the first place."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "Two numbers are selected at random (without replacement) from the first six positive integers. Let $X$ denote the larger of the two numbers obtained. Find the probability distribution of $X$ and hence find its mean $E(X)$.",
+          "solution": {
+            "answer": "$X$: $2, 3, 4, 5, 6$ with $P(X)$: $\\dfrac{1}{15}, \\dfrac{2}{15}, \\dfrac{3}{15}, \\dfrac{4}{15}, \\dfrac{5}{15}$; $E(X) = \\dfrac{14}{3}$",
+            "concept": "Mean $E(X) = \\sum x_i\\,p_i$.",
+            "steps": [
+              {
+                "do": "Number of ways to select 2 numbers from 6.",
+                "math": "{}^{6}C_2 = 15 \\text{ equally likely pairs}",
+                "marks": 0.5
+              },
+              {
+                "do": "The larger number can be 2, 3, 4, 5 or 6.",
+                "math": "X = 2, 3, 4, 5, 6",
+                "marks": 0.5
+              },
+              {
+                "do": "Larger number $= x$: the other number is one of $1, \\dots, x - 1$.",
+                "math": "P(X = 2) = \\dfrac{1}{15},\\quad P(X = 3) = \\dfrac{2}{15},\\quad P(X = 4) = \\dfrac{3}{15}",
+                "marks": 1
+              },
+              {
+                "do": "Continue the same way.",
+                "math": "P(X = 5) = \\dfrac{4}{15},\\quad P(X = 6) = \\dfrac{5}{15}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the probability distribution.",
+                "math": "\\begin{array}{c|ccccc} X & 2 & 3 & 4 & 5 & 6 \\\\ \\hline P(X) & \\frac{1}{15} & \\frac{2}{15} & \\frac{3}{15} & \\frac{4}{15} & \\frac{5}{15} \\end{array}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check: probabilities add to 1.",
+                "math": "\\dfrac{1 + 2 + 3 + 4 + 5}{15} = \\dfrac{15}{15} = 1"
+              },
+              {
+                "do": "Write the mean formula and substitute.",
+                "math": "E(X) = \\sum x_i p_i = \\dfrac{2(1) + 3(2) + 4(3) + 5(4) + 6(5)}{15}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "E(X) = \\dfrac{2 + 6 + 12 + 20 + 30}{15} = \\dfrac{70}{15} = \\dfrac{14}{3}",
+                "marks": 1
+              },
+              {
+                "do": "Mean of $X = \\dfrac{14}{3}$."
+              }
+            ],
+            "mistake": "Including $X = 1$: the larger of two different numbers is at least 2."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "A random variable $X$ has the probability distribution $X$: $0, 1, 2, 3, 4$ with $P(X)$: $k,\\ k,\\ 2k^2,\\ 3k^2,\\ 5k^2 + k$. Find $k$, $P(X < 2)$ and $P(X \\geq 3)$.",
+          "solution": {
+            "answer": "$k = \\dfrac{1}{5}$, $P(X < 2) = \\dfrac{2}{5}$, $P(X \\geq 3) = \\dfrac{13}{25}$",
+            "concept": "$\\sum p_i = 1$, and every $p_i \\geq 0$.",
+            "steps": [
+              {
+                "do": "Sum of all probabilities is 1.",
+                "math": "k + k + 2k^2 + 3k^2 + 5k^2 + k = 1 \\;\\Rightarrow\\; 10k^2 + 3k - 1 = 0",
+                "marks": 0.5
+              },
+              {
+                "do": "Factorise.",
+                "math": "(5k - 1)(2k + 1) = 0 \\;\\Rightarrow\\; k = \\dfrac{1}{5} \\text{ or } k = -\\dfrac{1}{2}"
+              },
+              {
+                "do": "Reject $k = -\\dfrac{1}{2}$, since a probability cannot be negative.",
+                "math": "k = \\dfrac{1}{5}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find $P(X < 2)$.",
+                "math": "P(X < 2) = P(X=0) + P(X=1) = 2k = \\dfrac{2}{5}",
+                "marks": 1
+              },
+              {
+                "do": "Find $P(X \\geq 3)$.",
+                "math": "P(X \\geq 3) = 3k^2 + 5k^2 + k = \\dfrac{8}{25} + \\dfrac{1}{5} = \\dfrac{13}{25}",
+                "marks": 1
+              },
+              {
+                "do": "Hence $k = \\dfrac{1}{5}$, $P(X < 2) = \\dfrac{2}{5}$, $P(X \\geq 3) = \\dfrac{13}{25}$."
+              }
+            ],
+            "mistake": "Keeping $k = -\\dfrac{1}{2}$: then $P(X = 0)$ would be negative."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "Assume that the chances of a patient having a heart attack are $40\\%$. A meditation and yoga course reduces the risk of heart attack by $30\\%$, and prescription of a certain drug reduces its chance by $25\\%$. At a time, a patient can choose any one of the two options with equal probabilities. It is given that after going through one of the two options, a patient selected at random suffers a heart attack. Find the probability that the patient followed a course of meditation and yoga.",
+          "solution": {
+            "answer": "$P(E_1|A) = \\dfrac{14}{29}$",
+            "concept": "Bayes' theorem: $P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)}$.",
+            "steps": [
+              {
+                "do": "Let $E_1$: yoga course, $E_2$: drug, $A$: patient has a heart attack.",
+                "marks": 1
+              },
+              {
+                "do": "Both options are equally likely.",
+                "math": "P(E_1) = P(E_2) = \\dfrac{1}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Yoga cuts the $40\\%$ risk by $30\\%$ of itself.",
+                "math": "P(A|E_1) = 0.40 \\times (1 - 0.30) = 0.28",
+                "marks": 1
+              },
+              {
+                "do": "The drug cuts the $40\\%$ risk by $25\\%$ of itself.",
+                "math": "P(A|E_2) = 0.40 \\times (1 - 0.25) = 0.30",
+                "marks": 1
+              },
+              {
+                "do": "Apply Bayes' theorem.",
+                "math": "P(E_1|A) = \\dfrac{\\frac{1}{2}\\times 0.28}{\\frac{1}{2}\\times 0.28 + \\frac{1}{2}\\times 0.30}",
+                "marks": 1
+              },
+              {
+                "do": "Simplify.",
+                "math": "P(E_1|A) = \\dfrac{0.28}{0.58} = \\dfrac{28}{58} = \\dfrac{14}{29}",
+                "marks": 0.5
+              },
+              {
+                "do": "Required probability $= \\dfrac{14}{29}$."
+              }
+            ],
+            "mistake": "Taking $P(A|E_1) = 0.40 - 0.30 = 0.10$: 'reduces by $30\\%$' means $30\\%$ of $0.40$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2025-26",
+          "question": "**Case Study:** Excessive use of screens can result in vision problems, obesity, sleep disorders, anxiety and low retention problems. In a class of students of the age group 14 to 17, the students were put into three groups from a feedback form. The first group spent more than 4 hours per day on mobile or gaming screens, the second group spent 2 to 4 hours per day and the third group spent less than 2 hours per day. The first group (high screen time) is $60\\%$ of all the students, the second group (moderate screen time) is $30\\%$ and the third group (low screen time) is only $10\\%$. It was observed that $80\\%$ of the first group, $70\\%$ of the second group and $30\\%$ of the third group faced severe anxiety and low retention issues.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "What is the total percentage of students who suffer from anxiety and low retention issues in the class?",
+              "marks": 2
+            },
+            {
+              "label": "(ii)",
+              "text": "A student is selected at random, and he is found to suffer from anxiety and low retention issues. What is the probability that he/she spends screen time of more than 4 hours per day?",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $72\\%$ (ii) $\\dfrac{2}{3}$",
+            "concept": "Total probability for (i); Bayes' theorem for (ii).",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Let $E_1, E_2, E_3$: student in group 1, 2, 3. Let $A$: student has the issues."
+                  },
+                  {
+                    "do": "Write the prior probabilities.",
+                    "math": "P(E_1) = 0.6,\\quad P(E_2) = 0.3,\\quad P(E_3) = 0.1",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Write the conditional probabilities.",
+                    "math": "P(A|E_1) = 0.8,\\quad P(A|E_2) = 0.7,\\quad P(A|E_3) = 0.3",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Theorem of total probability.",
+                    "math": "P(A) = 0.6 \\times 0.8 + 0.3 \\times 0.7 + 0.1 \\times 0.3 = 0.48 + 0.21 + 0.03",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Simplify and convert to a percentage.",
+                    "math": "P(A) = 0.72 = 72\\%",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$72\\%$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Required: $P(E_1|A)$. Write Bayes' theorem.",
+                    "math": "P(E_1|A) = \\dfrac{P(E_1)P(A|E_1)}{P(A)}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Substitute, using $P(A) = 0.72$ from (i).",
+                    "math": "P(E_1|A) = \\dfrac{0.6 \\times 0.8}{0.72} = \\dfrac{0.48}{0.72}",
+                    "marks": 1
+                  },
+                  {
+                    "do": "Simplify.",
+                    "math": "P(E_1|A) = \\dfrac{48}{72} = \\dfrac{2}{3}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Required probability $= \\dfrac{2}{3}$."
+                  }
+                ],
+                "answer": "$\\dfrac{2}{3}$"
+              }
+            ],
+            "mistake": "Answering $0.8$ in (ii): that is $P(A|E_1)$, not $P(E_1|A)$."
+          }
+        }
+      ]
+    }
+  ]
+}
