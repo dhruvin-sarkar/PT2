@@ -1,0 +1,470 @@
+{
+  "chapter": 7,
+  "chapterTitle": "Integrals",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 54,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "$\\displaystyle\\int e^x \\sec x\\,(1 + \\tan x)\\,dx$ is equal to:",
+          "options": [
+            "$e^x\\cos x + C$",
+            "$e^x\\sec x + C$",
+            "$e^x\\sin x + C$",
+            "$e^x\\tan x + C$"
+          ],
+          "solution": {
+            "answer": "(B) $e^x\\sec x + C$",
+            "concept": "$\\displaystyle\\int e^x\\,[f(x) + f'(x)]\\,dx = e^x f(x) + C$",
+            "steps": [
+              { "do": "Open the bracket", "math": "e^x\\sec x\\,(1 + \\tan x) = e^x\\,(\\sec x + \\sec x\\tan x)" },
+              { "do": "Take $f(x) = \\sec x$", "math": "f'(x) = \\sec x\\tan x" },
+              { "do": "So the integral is", "math": "\\displaystyle\\int e^x(\\sec x + \\sec x\\tan x)\\,dx = e^x\\sec x + C", "marks": 1 }
+            ],
+            "mistake": "Picking (D): $f(x) = \\tan x$ needs $f'(x) = \\sec^2 x$, which is not in the bracket."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2025-26",
+          "question": "If $\\displaystyle\\int x^3\\sin^4(x^4)\\cos(x^4)\\,dx = a\\sin^5(x^4) + C$, then $a$ is equal to:",
+          "options": [
+            "$-\\dfrac{1}{10}$",
+            "$\\dfrac{1}{20}$",
+            "$\\dfrac{1}{4}$",
+            "$\\dfrac{1}{5}$"
+          ],
+          "solution": {
+            "answer": "(B) $\\dfrac{1}{20}$",
+            "concept": "Put the inside function $= t$; its derivative must be present (up to a constant).",
+            "steps": [
+              { "do": "Put $\\sin(x^4) = t$", "math": "\\cos(x^4)\\cdot 4x^3\\,dx = dt \\;\\Rightarrow\\; x^3\\cos(x^4)\\,dx = \\dfrac{dt}{4}" },
+              { "do": "Substitute", "math": "\\displaystyle\\int t^4\\cdot\\dfrac{dt}{4} = \\dfrac{1}{4}\\cdot\\dfrac{t^5}{5} + C = \\dfrac{t^5}{20} + C" },
+              { "do": "Put back $t = \\sin(x^4)$ and compare", "math": "\\dfrac{1}{20}\\sin^5(x^4) + C \\;\\Rightarrow\\; a = \\dfrac{1}{20}", "marks": 1 }
+            ],
+            "mistake": "Forgetting the $\\dfrac{1}{4}$ from $d(x^4) = 4x^3\\,dx$ and choosing (D) $\\dfrac{1}{5}$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "The value of $\\displaystyle\\int_0^{\\pi/2} x\\sin x\\,dx$ is:",
+          "options": [
+            "$0$",
+            "$1$",
+            "$\\dfrac{\\pi}{2}$",
+            "$\\dfrac{\\pi}{2} - 1$"
+          ],
+          "solution": {
+            "answer": "(B) $1$",
+            "concept": "By parts: $\\displaystyle\\int u\\,v\\,dx = u\\int v\\,dx - \\int\\left(u'\\int v\\,dx\\right)dx$",
+            "steps": [
+              { "do": "Integrate by parts, taking $u = x$, $v = \\sin x$", "math": "\\displaystyle\\int x\\sin x\\,dx = -x\\cos x + \\int\\cos x\\,dx = -x\\cos x + \\sin x" },
+              { "do": "Put the limits", "math": "\\big[-x\\cos x + \\sin x\\big]_0^{\\pi/2} = \\left(-\\dfrac{\\pi}{2}\\cdot 0 + 1\\right) - (0 + 0)" },
+              { "do": "Simplify", "math": "= 1", "marks": 1 }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\sin x\\,dx = \\cos x$; the correct result is $-\\cos x$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "$\\displaystyle\\int \\dfrac{dx}{x^3\\left(1 + x^4\\right)^{1/2}}$ equals:",
+          "options": [
+            "$-\\dfrac{1}{2x^2}\\sqrt{1 + x^4} + C$",
+            "$\\dfrac{1}{2x}\\sqrt{1 + x^4} + C$",
+            "$-\\dfrac{1}{4x}\\sqrt{1 + x^4} + C$",
+            "$\\dfrac{1}{4x^2}\\sqrt{1 + x^4} + C$"
+          ],
+          "solution": {
+            "answer": "(A) $-\\dfrac{1}{2x^2}\\sqrt{1 + x^4} + C$",
+            "concept": "Take the highest power of $x$ out of the root, then substitute.",
+            "steps": [
+              { "do": "Take $x^4$ out of the root ($x > 0$)", "math": "\\displaystyle\\int \\dfrac{dx}{x^3\\cdot x^2\\sqrt{1 + x^{-4}}} = \\int \\dfrac{x^{-5}\\,dx}{\\sqrt{1 + x^{-4}}}" },
+              { "do": "Put $1 + x^{-4} = t$", "math": "-4x^{-5}\\,dx = dt" },
+              { "do": "Substitute", "math": "-\\dfrac{1}{4}\\displaystyle\\int t^{-1/2}\\,dt = -\\dfrac{1}{2}\\sqrt t + C" },
+              { "do": "Put back $t = \\dfrac{1 + x^4}{x^4}$", "math": "-\\dfrac{1}{2}\\cdot\\dfrac{\\sqrt{1 + x^4}}{x^2} + C = -\\dfrac{1}{2x^2}\\sqrt{1 + x^4} + C", "marks": 1 }
+            ],
+            "mistake": "Choosing (D): the sign is lost if $dt = -4x^{-5}\\,dx$ is written as $+4x^{-5}\\,dx$."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2025-26",
+          "question": "If $f(a + b - x) = f(x)$, then $\\displaystyle\\int_a^b x\\,f(x)\\,dx$ is equal to:",
+          "options": [
+            "$\\dfrac{a + b}{2}\\displaystyle\\int_a^b f(b - x)\\,dx$",
+            "$\\dfrac{a + b}{2}\\displaystyle\\int_a^b f(a - x)\\,dx$",
+            "$\\dfrac{b - a}{2}\\displaystyle\\int_a^b f(x)\\,dx$",
+            "$\\dfrac{a + b}{2}\\displaystyle\\int_a^b f(x)\\,dx$"
+          ],
+          "solution": {
+            "answer": "(D) $\\dfrac{a + b}{2}\\displaystyle\\int_a^b f(x)\\,dx$",
+            "concept": "$\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$",
+            "steps": [
+              { "do": "Let", "math": "I = \\displaystyle\\int_a^b x\\,f(x)\\,dx \\quad \\ldots(1)" },
+              { "do": "Replace $x$ by $a + b - x$ and use $f(a + b - x) = f(x)$", "math": "I = \\displaystyle\\int_a^b (a + b - x)\\,f(x)\\,dx \\quad \\ldots(2)" },
+              { "do": "Add (1) and (2)", "math": "2I = (a + b)\\displaystyle\\int_a^b f(x)\\,dx \\;\\Rightarrow\\; I = \\dfrac{a + b}{2}\\int_a^b f(x)\\,dx", "marks": 1 }
+            ],
+            "mistake": "Choosing (C): the factor is $a + b$ (from adding $x$ and $a + b - x$), not $b - a$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** $\\displaystyle\\int_{-1}^{1} \\log\\left(\\dfrac{2 - x}{2 + x}\\right)dx = 0$. **Reason (R):** If $f$ is an even function, then $\\displaystyle\\int_{-a}^{a} f(x)\\,dx = 2\\int_0^a f(x)\\,dx$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(B) Both true; R is not the correct explanation of A",
+            "concept": "If $f(-x) = -f(x)$, then $\\displaystyle\\int_{-a}^{a} f(x)\\,dx = 0$",
+            "steps": [
+              { "do": "Check A: let $f(x) = \\log\\dfrac{2 - x}{2 + x}$ and replace $x$ by $-x$", "math": "f(-x) = \\log\\dfrac{2 + x}{2 - x} = -\\log\\dfrac{2 - x}{2 + x} = -f(x)" },
+              { "do": "So $f$ is odd and its integral over $[-1, 1]$ is $0$. A is true." },
+              { "do": "Check R: it is the standard property of even functions. R is true." },
+              { "do": "A needs the odd-function property; R is about even functions. So R does not explain A.", "marks": 1 }
+            ],
+            "mistake": "Marking (A) because both statements are true, without checking that R is about even functions."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find $\\displaystyle\\int \\dfrac{\\sin x - \\cos x}{\\sqrt{1 + \\sin 2x}}\\,dx$, $\\;0 < x < \\dfrac{\\pi}{2}$.",
+          "solution": {
+            "answer": "$-\\log|\\sin x + \\cos x| + C$",
+            "concept": "$1 + \\sin 2x = (\\sin x + \\cos x)^2$",
+            "steps": [
+              { "do": "Write $1 = \\sin^2 x + \\cos^2 x$ and $\\sin 2x = 2\\sin x\\cos x$", "math": "1 + \\sin 2x = (\\sin x + \\cos x)^2", "marks": 0.5 },
+              { "do": "For $0 < x < \\dfrac{\\pi}{2}$, $\\sin x + \\cos x > 0$", "math": "I = \\displaystyle\\int \\dfrac{\\sin x - \\cos x}{\\sin x + \\cos x}\\,dx", "marks": 0.5 },
+              { "do": "Put $\\sin x + \\cos x = t$", "math": "(\\cos x - \\sin x)\\,dx = dt \\;\\Rightarrow\\; (\\sin x - \\cos x)\\,dx = -dt", "marks": 0.5 },
+              { "do": "Integrate and put back $t$", "math": "I = -\\displaystyle\\int \\dfrac{dt}{t} = -\\log|t| + C = -\\log|\\sin x + \\cos x| + C", "marks": 0.5 }
+            ],
+            "mistake": "Losing the minus sign: the derivative of $\\sin x + \\cos x$ is $\\cos x - \\sin x$, the negative of the numerator."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi/4} \\tan^2 x\\,dx$.",
+          "solution": {
+            "answer": "$1 - \\dfrac{\\pi}{4}$",
+            "concept": "$\\tan^2 x = \\sec^2 x - 1$",
+            "steps": [
+              { "do": "Use $\\tan^2 x = \\sec^2 x - 1$", "math": "I = \\displaystyle\\int_0^{\\pi/4} (\\sec^2 x - 1)\\,dx", "marks": 0.5 },
+              { "do": "Integrate", "math": "I = \\big[\\tan x - x\\big]_0^{\\pi/4}", "marks": 0.5 },
+              { "do": "Put the limits", "math": "I = \\left(\\tan\\dfrac{\\pi}{4} - \\dfrac{\\pi}{4}\\right) - (0 - 0) = 1 - \\dfrac{\\pi}{4}", "marks": 1 }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\tan^2 x\\,dx = \\dfrac{\\tan^3 x}{3}$; there is no $\\sec^2 x$ factor for that."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2023-24",
+          "question": "Find: $\\displaystyle\\int \\sqrt{\\dfrac{x}{1 - x^3}}\\,dx$; $\\;x \\in (0, 1)$.",
+          "solution": {
+            "answer": "$\\dfrac{2}{3}\\sin^{-1}\\left(x^{3/2}\\right) + C$",
+            "concept": "$\\displaystyle\\int \\dfrac{dt}{\\sqrt{1 - t^2}} = \\sin^{-1} t + C$",
+            "steps": [
+              { "do": "Write $x^3 = \\left(x^{3/2}\\right)^2$", "math": "I = \\displaystyle\\int \\dfrac{\\sqrt x}{\\sqrt{1 - \\left(x^{3/2}\\right)^2}}\\,dx", "marks": 0.5 },
+              { "do": "Put $x^{3/2} = t$", "math": "\\dfrac{3}{2}x^{1/2}\\,dx = dt \\;\\Rightarrow\\; \\sqrt x\\,dx = \\dfrac{2}{3}\\,dt", "marks": 0.5 },
+              { "do": "Substitute", "math": "I = \\dfrac{2}{3}\\displaystyle\\int \\dfrac{dt}{\\sqrt{1 - t^2}} = \\dfrac{2}{3}\\sin^{-1} t + C", "marks": 0.5 },
+              { "do": "Put back $t = x^{3/2}$", "math": "I = \\dfrac{2}{3}\\sin^{-1}\\left(x^{3/2}\\right) + C", "marks": 0.5 }
+            ],
+            "mistake": "Putting $x^3 = t$; then $\\sqrt x$ in the numerator does not match $3x^2\\,dx$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2023-24",
+          "question": "Find: $\\displaystyle\\int \\dfrac{2x^2 + 3}{x^2\\left(x^2 + 9\\right)}\\,dx$; $\\;x \\neq 0$.",
+          "solution": {
+            "answer": "$-\\dfrac{1}{3x} + \\dfrac{5}{9}\\tan^{-1}\\dfrac{x}{3} + C$",
+            "concept": "Only $x^2$ appears, so put $x^2 = y$ just to find the partial fractions.",
+            "steps": [
+              { "do": "Put $x^2 = y$ (for partial fractions only)", "math": "\\dfrac{2y + 3}{y(y + 9)} = \\dfrac{A}{y} + \\dfrac{B}{y + 9}", "marks": 0.5 },
+              { "do": "Multiply by $y(y + 9)$", "math": "2y + 3 = A(y + 9) + By", "marks": 0.5 },
+              { "do": "Put $y = 0$, then $y = -9$", "math": "A = \\dfrac{3}{9} = \\dfrac{1}{3}, \\qquad B = \\dfrac{-15}{-9} = \\dfrac{5}{3}", "marks": 1 },
+              { "do": "Put back $y = x^2$ and integrate", "math": "I = \\dfrac{1}{3}\\displaystyle\\int x^{-2}\\,dx + \\dfrac{5}{3}\\int \\dfrac{dx}{x^2 + 3^2}", "marks": 0.5 },
+              { "do": "Use $\\displaystyle\\int \\dfrac{dx}{x^2 + a^2} = \\dfrac{1}{a}\\tan^{-1}\\dfrac{x}{a}$", "math": "I = -\\dfrac{1}{3x} + \\dfrac{5}{9}\\tan^{-1}\\dfrac{x}{3} + C", "marks": 0.5 }
+            ],
+            "mistake": "Integrating $\\dfrac{1}{x^2 + 9}$ as $\\tan^{-1}\\dfrac{x}{3}$ and dropping the factor $\\dfrac{1}{3}$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Evaluate: $\\displaystyle\\int_{\\pi/6}^{\\pi/3} \\dfrac{dx}{1 + \\sqrt{\\tan x}}$.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi}{12}$",
+            "concept": "$\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$; here $a + b = \\dfrac{\\pi}{2}$.",
+            "steps": [
+              { "do": "Write $\\tan x = \\dfrac{\\sin x}{\\cos x}$", "math": "I = \\displaystyle\\int_{\\pi/6}^{\\pi/3} \\dfrac{\\sqrt{\\cos x}}{\\sqrt{\\cos x} + \\sqrt{\\sin x}}\\,dx \\quad \\ldots(1)", "marks": 0.5 },
+              { "do": "Replace $x$ by $\\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} - x = \\dfrac{\\pi}{2} - x$", "math": "I = \\displaystyle\\int_{\\pi/6}^{\\pi/3} \\dfrac{\\sqrt{\\sin x}}{\\sqrt{\\sin x} + \\sqrt{\\cos x}}\\,dx \\quad \\ldots(2)", "marks": 1 },
+              { "do": "Add (1) and (2)", "math": "2I = \\displaystyle\\int_{\\pi/6}^{\\pi/3} 1\\,dx", "marks": 0.5 },
+              { "do": "Integrate", "math": "2I = \\dfrac{\\pi}{3} - \\dfrac{\\pi}{6} = \\dfrac{\\pi}{6}", "marks": 0.5 },
+              { "do": "Hence", "math": "I = \\dfrac{\\pi}{12}", "marks": 0.5 }
+            ],
+            "mistake": "Replacing $x$ by $\\dfrac{\\pi}{3} - x$; with limits $a$ to $b$ it must be $a + b - x$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "Evaluate: $\\displaystyle\\int \\left\\{\\dfrac{1}{\\log x} - \\dfrac{1}{(\\log x)^2}\\right\\}dx$; $\\;x > 1$.",
+          "solution": {
+            "answer": "$\\dfrac{x}{\\log x} + C$",
+            "concept": "$\\displaystyle\\int e^t\\,[f(t) + f'(t)]\\,dt = e^t f(t) + C$",
+            "steps": [
+              { "do": "Put $\\log x = t$", "math": "x = e^t, \\qquad dx = e^t\\,dt", "marks": 1 },
+              { "do": "Substitute", "math": "I = \\displaystyle\\int e^t\\left(\\dfrac{1}{t} - \\dfrac{1}{t^2}\\right)dt", "marks": 0.5 },
+              { "do": "Take $f(t) = \\dfrac{1}{t}$", "math": "f'(t) = -\\dfrac{1}{t^2}", "marks": 0.5 },
+              { "do": "Use the $e^t[f + f']$ result", "math": "I = e^t\\cdot\\dfrac{1}{t} + C", "marks": 0.5 },
+              { "do": "Put back $e^t = x$, $t = \\log x$", "math": "I = \\dfrac{x}{\\log x} + C", "marks": 0.5 }
+            ],
+            "mistake": "Forgetting $dx = e^t\\,dt$, which is what creates the $e^t$ factor."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2025-26",
+          "question": "Sketch the graph of $y = |x + 1|$. Evaluate $\\displaystyle\\int_{-4}^{2} |x + 1|\\,dx$. What does the value of this integral represent on the graph?",
+          "solution": {
+            "answer": "$9$; it is the area bounded by $y = |x + 1|$, the $x$-axis and the lines $x = -4$, $x = 2$.",
+            "concept": "Split a modulus integral at the point where the expression inside is $0$.",
+            "steps": [
+              { "do": "Remove the modulus ($x + 1 = 0$ at $x = -1$)", "math": "|x + 1| = \\begin{cases} -(x + 1), & x < -1 \\\\ x + 1, & x \\geq -1 \\end{cases}", "marks": 0.5 },
+              { "do": "Sketch: a V-shape with vertex at $(-1, 0)$", "figure": "figs/pa-q13-modgraph.svg", "marks": 0.5 },
+              { "do": "Split the integral at $x = -1$", "math": "I = \\displaystyle\\int_{-4}^{-1} -(x + 1)\\,dx + \\int_{-1}^{2} (x + 1)\\,dx", "marks": 0.5 },
+              { "do": "First part", "math": "-\\left[\\dfrac{(x + 1)^2}{2}\\right]_{-4}^{-1} = -\\left(0 - \\dfrac{9}{2}\\right) = \\dfrac{9}{2}", "marks": 0.5 },
+              { "do": "Second part", "math": "\\left[\\dfrac{(x + 1)^2}{2}\\right]_{-1}^{2} = \\dfrac{9}{2} - 0 = \\dfrac{9}{2}", "marks": 0.5 },
+              { "do": "Add; the value is the shaded area in the graph", "math": "I = \\dfrac{9}{2} + \\dfrac{9}{2} = 9 \\text{ sq. units}", "marks": 0.5 }
+            ],
+            "mistake": "Integrating $(x + 1)$ straight from $-4$ to $2$, which gives $3$ because the left part counts as negative."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2025",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi/4} \\dfrac{dx}{\\cos^3 x\\,\\sqrt{2\\sin 2x}}$.",
+          "solution": {
+            "answer": "$\\dfrac{6}{5}$",
+            "concept": "Change everything to $\\tan x$ and $\\sec^2 x$, then put $\\tan x = t$.",
+            "steps": [
+              { "do": "Use $\\sin 2x = 2\\sin x\\cos x = 2\\tan x\\cos^2 x$", "math": "\\sqrt{2\\sin 2x} = \\sqrt{4\\tan x\\cos^2 x} = 2\\cos x\\sqrt{\\tan x}", "marks": 0.5 },
+              { "do": "So the integrand becomes", "math": "\\dfrac{1}{2\\cos^4 x\\sqrt{\\tan x}} = \\dfrac{\\sec^2 x\\,(1 + \\tan^2 x)}{2\\sqrt{\\tan x}}", "marks": 0.5 },
+              { "do": "Put $\\tan x = t$, $\\sec^2 x\\,dx = dt$", "math": "x = 0 \\Rightarrow t = 0, \\qquad x = \\dfrac{\\pi}{4} \\Rightarrow t = 1", "marks": 0.5 },
+              { "do": "Change the integral", "math": "I = \\dfrac{1}{2}\\displaystyle\\int_0^1 \\left(t^{-1/2} + t^{3/2}\\right)dt", "marks": 0.5 },
+              { "do": "Integrate", "math": "I = \\dfrac{1}{2}\\left[2t^{1/2} + \\dfrac{2}{5}t^{5/2}\\right]_0^1", "marks": 0.5 },
+              { "do": "Put the limits", "math": "I = \\dfrac{1}{2}\\left(2 + \\dfrac{2}{5}\\right) = \\dfrac{6}{5}", "marks": 0.5 }
+            ],
+            "mistake": "Writing $\\sec^4 x = \\sec^2 x$; one $\\sec^2 x$ must become $1 + \\tan^2 x$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 27,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi} \\dfrac{x\\tan x}{\\sec x + \\tan x}\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi(\\pi - 2)}{2}$",
+            "concept": "$\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$ removes the factor $x$.",
+            "steps": [
+              { "do": "Let", "math": "I = \\displaystyle\\int_0^{\\pi} \\dfrac{x\\tan x}{\\sec x + \\tan x}\\,dx \\quad \\ldots(1)" },
+              { "do": "Replace $x$ by $\\pi - x$; $\\tan$ and $\\sec$ both change sign", "math": "I = \\displaystyle\\int_0^{\\pi} \\dfrac{(\\pi - x)(-\\tan x)}{-\\sec x - \\tan x}\\,dx = \\int_0^{\\pi} \\dfrac{(\\pi - x)\\tan x}{\\sec x + \\tan x}\\,dx \\quad \\ldots(2)", "marks": 1 },
+              { "do": "Add (1) and (2)", "math": "2I = \\pi\\displaystyle\\int_0^{\\pi} \\dfrac{\\tan x}{\\sec x + \\tan x}\\,dx", "marks": 0.5 },
+              { "do": "Multiply top and bottom by $\\cos x$", "math": "\\dfrac{\\tan x}{\\sec x + \\tan x} = \\dfrac{\\sin x}{1 + \\sin x} = 1 - \\dfrac{1}{1 + \\sin x}", "marks": 0.5 },
+              { "do": "Multiply by $\\dfrac{1 - \\sin x}{1 - \\sin x}$", "math": "\\dfrac{1}{1 + \\sin x} = \\dfrac{1 - \\sin x}{\\cos^2 x} = \\sec^2 x - \\sec x\\tan x", "marks": 0.5 },
+              { "do": "So", "math": "2I = \\pi\\displaystyle\\int_0^{\\pi} \\left(1 - \\sec^2 x + \\sec x\\tan x\\right)dx", "marks": 0.5 },
+              { "do": "Integrate", "math": "2I = \\pi\\big[x - \\tan x + \\sec x\\big]_0^{\\pi}", "marks": 1 },
+              { "do": "Put the limits ($\\sec\\pi = -1$, $\\sec 0 = 1$)", "math": "2I = \\pi\\left[(\\pi - 0 - 1) - (0 - 0 + 1)\\right] = \\pi(\\pi - 2)", "marks": 0.5 },
+              { "do": "Hence", "math": "I = \\dfrac{\\pi(\\pi - 2)}{2}", "marks": 0.5 }
+            ],
+            "mistake": "Taking $\\sec(\\pi - x) = \\sec x$; it is $-\\sec x$, like $\\cos(\\pi - x) = -\\cos x$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2025-26",
+          "question": "Find: $\\displaystyle\\int \\dfrac{(3\\sin\\theta - 2)\\cos\\theta}{5 - \\cos^2\\theta - 4\\sin\\theta}\\,d\\theta$.",
+          "solution": {
+            "answer": "$3\\log(2 - \\sin\\theta) + \\dfrac{4}{2 - \\sin\\theta} + C$",
+            "concept": "Repeated factor $(t - a)^2$ needs two fractions: $\\dfrac{A}{t - a} + \\dfrac{B}{(t - a)^2}$.",
+            "steps": [
+              { "do": "Put $\\sin\\theta = t$", "math": "\\cos\\theta\\,d\\theta = dt", "marks": 1 },
+              { "do": "Use $\\cos^2\\theta = 1 - t^2$ in the denominator", "math": "5 - (1 - t^2) - 4t = t^2 - 4t + 4 = (t - 2)^2", "marks": 0.5 },
+              { "do": "So", "math": "I = \\displaystyle\\int \\dfrac{3t - 2}{(t - 2)^2}\\,dt", "marks": 0.5 },
+              { "do": "Write as partial fractions", "math": "\\dfrac{3t - 2}{(t - 2)^2} = \\dfrac{A}{t - 2} + \\dfrac{B}{(t - 2)^2} \\;\\Rightarrow\\; 3t - 2 = A(t - 2) + B", "marks": 0.5 },
+              { "do": "Compare coefficient of $t$; then put $t = 2$", "math": "A = 3, \\qquad B = 4", "marks": 1 },
+              { "do": "Integrate each fraction", "math": "I = 3\\displaystyle\\int \\dfrac{dt}{t - 2} + 4\\int (t - 2)^{-2}\\,dt = 3\\log|t - 2| - \\dfrac{4}{t - 2} + C", "marks": 1 },
+              { "do": "Put back $t = \\sin\\theta$; note $|\\sin\\theta - 2| = 2 - \\sin\\theta$", "math": "I = 3\\log(2 - \\sin\\theta) + \\dfrac{4}{2 - \\sin\\theta} + C", "marks": 0.5 }
+            ],
+            "mistake": "Writing $\\displaystyle\\int \\dfrac{dt}{(t - 2)^2} = \\log(t - 2)^2$; it is $-\\dfrac{1}{t - 2}$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2025-26",
+          "question": "Evaluate: $\\displaystyle\\int_0^1 \\dfrac{\\log(1 + x)}{1 + x^2}\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{\\pi}{8}\\log 2$",
+            "concept": "Put $x = \\tan\\theta$, then use $\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$.",
+            "steps": [
+              { "do": "Put $x = \\tan\\theta$, $dx = \\sec^2\\theta\\,d\\theta$", "math": "x = 0 \\Rightarrow \\theta = 0, \\qquad x = 1 \\Rightarrow \\theta = \\dfrac{\\pi}{4}", "marks": 1 },
+              { "do": "Use $1 + \\tan^2\\theta = \\sec^2\\theta$", "math": "I = \\displaystyle\\int_0^{\\pi/4} \\dfrac{\\log(1 + \\tan\\theta)}{\\sec^2\\theta}\\,\\sec^2\\theta\\,d\\theta = \\int_0^{\\pi/4} \\log(1 + \\tan\\theta)\\,d\\theta \\quad \\ldots(1)", "marks": 0.5 },
+              { "do": "Replace $\\theta$ by $\\dfrac{\\pi}{4} - \\theta$", "math": "1 + \\tan\\left(\\dfrac{\\pi}{4} - \\theta\\right) = 1 + \\dfrac{1 - \\tan\\theta}{1 + \\tan\\theta} = \\dfrac{2}{1 + \\tan\\theta}", "marks": 1 },
+              { "do": "So", "math": "I = \\displaystyle\\int_0^{\\pi/4} \\log\\dfrac{2}{1 + \\tan\\theta}\\,d\\theta = \\int_0^{\\pi/4} \\left[\\log 2 - \\log(1 + \\tan\\theta)\\right]d\\theta", "marks": 0.5 },
+              { "do": "Use (1) for the second integral", "math": "I = \\dfrac{\\pi}{4}\\log 2 - I", "marks": 1 },
+              { "do": "Hence", "math": "2I = \\dfrac{\\pi}{4}\\log 2 \\;\\Rightarrow\\; I = \\dfrac{\\pi}{8}\\log 2", "marks": 1 }
+            ],
+            "mistake": "Not changing the limits: after $x = \\tan\\theta$ the upper limit is $\\dfrac{\\pi}{4}$, not $1$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find: $\\displaystyle\\int \\dfrac{x + 3}{\\sqrt{5 - 4x - x^2}}\\,dx$.",
+          "solution": {
+            "answer": "$-\\sqrt{5 - 4x - x^2} + \\sin^{-1}\\left(\\dfrac{x + 2}{3}\\right) + C$",
+            "concept": "Numerator $= A\\cdot\\dfrac{d}{dx}(\\text{quadratic}) + B$; then $\\displaystyle\\int \\dfrac{dx}{\\sqrt{a^2 - x^2}} = \\sin^{-1}\\dfrac{x}{a}$",
+            "steps": [
+              { "do": "Write $x + 3 = A\\dfrac{d}{dx}(5 - 4x - x^2) + B$", "math": "x + 3 = A(-4 - 2x) + B" },
+              { "do": "Compare coefficients: $-2A = 1$, $-4A + B = 3$", "math": "A = -\\dfrac{1}{2}, \\qquad B = 1", "marks": 0.5 },
+              { "do": "Split the integral", "math": "I = -\\dfrac{1}{2}\\displaystyle\\int \\dfrac{-4 - 2x}{\\sqrt{5 - 4x - x^2}}\\,dx + \\int \\dfrac{dx}{\\sqrt{5 - 4x - x^2}} = -\\dfrac{1}{2}I_1 + I_2", "marks": 0.5 },
+              { "do": "In $I_1$ put $5 - 4x - x^2 = t$, so $(-4 - 2x)\\,dx = dt$", "math": "I_1 = \\displaystyle\\int \\dfrac{dt}{\\sqrt t} = 2\\sqrt t = 2\\sqrt{5 - 4x - x^2}", "marks": 0.5 },
+              { "do": "In $I_2$ complete the square", "math": "5 - 4x - x^2 = 9 - (x + 2)^2 = 3^2 - (x + 2)^2", "marks": 0.5 },
+              { "do": "Use $\\displaystyle\\int \\dfrac{dx}{\\sqrt{a^2 - x^2}} = \\sin^{-1}\\dfrac{x}{a}$", "math": "I_2 = \\sin^{-1}\\left(\\dfrac{x + 2}{3}\\right)", "marks": 0.5 },
+              { "do": "Hence", "math": "I = -\\sqrt{5 - 4x - x^2} + \\sin^{-1}\\left(\\dfrac{x + 2}{3}\\right) + C", "marks": 0.5 }
+            ],
+            "mistake": "Completing the square wrongly as $9 + (x + 2)^2$; take out the minus sign first: $-(x^2 + 4x - 5)$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Evaluate: $\\displaystyle\\int_0^{\\pi/4} \\dfrac{\\sin x + \\cos x}{9 + 16\\sin 2x}\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{1}{40}\\log 9$",
+            "concept": "Put $\\sin x - \\cos x = t$; then $\\sin 2x = 1 - t^2$.",
+            "steps": [
+              { "do": "Put $\\sin x - \\cos x = t$", "math": "(\\cos x + \\sin x)\\,dx = dt", "marks": 1 },
+              { "do": "Square $\\sin x - \\cos x = t$", "math": "1 - \\sin 2x = t^2 \\;\\Rightarrow\\; \\sin 2x = 1 - t^2", "marks": 1 },
+              { "do": "Change the limits", "math": "x = 0 \\Rightarrow t = -1, \\qquad x = \\dfrac{\\pi}{4} \\Rightarrow t = 0", "marks": 0.5 },
+              { "do": "Simplify the denominator", "math": "9 + 16(1 - t^2) = 25 - 16t^2", "marks": 0.5 },
+              { "do": "So", "math": "I = \\displaystyle\\int_{-1}^{0} \\dfrac{dt}{25 - 16t^2} = \\dfrac{1}{16}\\int_{-1}^{0} \\dfrac{dt}{\\left(\\frac{5}{4}\\right)^2 - t^2}", "marks": 0.5 },
+              { "do": "Use $\\displaystyle\\int \\dfrac{dt}{a^2 - t^2} = \\dfrac{1}{2a}\\log\\left|\\dfrac{a + t}{a - t}\\right|$ with $a = \\dfrac{5}{4}$", "math": "I = \\dfrac{1}{16}\\cdot\\dfrac{2}{5}\\left[\\log\\left|\\dfrac{5 + 4t}{5 - 4t}\\right|\\right]_{-1}^{0} = \\dfrac{1}{40}\\left[\\log\\left|\\dfrac{5 + 4t}{5 - 4t}\\right|\\right]_{-1}^{0}", "marks": 1 },
+              { "do": "Put the limits", "math": "I = \\dfrac{1}{40}\\left[\\log 1 - \\log\\dfrac{1}{9}\\right] = \\dfrac{1}{40}\\log 9", "marks": 0.5 }
+            ],
+            "mistake": "Putting $\\sin x + \\cos x = t$; its derivative is $\\cos x - \\sin x$, which does not match the numerator."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** While revising definite integrals, a student notes the property $\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$. With $a = 0$ it becomes $\\displaystyle\\int_0^a f(x)\\,dx = \\int_0^a f(a - x)\\,dx$. Use these properties to answer the following.",
+          "parts": [
+            { "label": "(i)", "text": "Evaluate $\\displaystyle\\int_2^8 \\dfrac{\\sqrt{10 - x}}{\\sqrt x + \\sqrt{10 - x}}\\,dx$.", "marks": 1 },
+            { "label": "(ii)", "text": "Evaluate $\\displaystyle\\int_0^{\\pi/2} \\log(\\tan x)\\,dx$.", "marks": 1 },
+            { "label": "(iii)", "text": "Evaluate $\\displaystyle\\int_0^{\\pi/2} \\left(2\\log\\sin x - \\log\\sin 2x\\right)dx$.", "marks": 2 }
+          ],
+          "solution": {
+            "answer": "(i) $3$  (ii) $0$  (iii) $-\\dfrac{\\pi}{2}\\log 2$",
+            "concept": "$\\displaystyle\\int_a^b f(x)\\,dx = \\int_a^b f(a + b - x)\\,dx$; on $\\left[0, \\dfrac{\\pi}{2}\\right]$, $\\sin$ and $\\cos$ swap.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  { "do": "Let", "math": "I = \\displaystyle\\int_2^8 \\dfrac{\\sqrt{10 - x}}{\\sqrt x + \\sqrt{10 - x}}\\,dx \\quad \\ldots(1)" },
+                  { "do": "Replace $x$ by $2 + 8 - x = 10 - x$", "math": "I = \\displaystyle\\int_2^8 \\dfrac{\\sqrt x}{\\sqrt{10 - x} + \\sqrt x}\\,dx \\quad \\ldots(2)", "marks": 0.5 },
+                  { "do": "Add (1) and (2)", "math": "2I = \\displaystyle\\int_2^8 1\\,dx = 6 \\;\\Rightarrow\\; I = 3", "marks": 0.5 }
+                ],
+                "answer": "$3$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  { "do": "Let", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\log(\\tan x)\\,dx \\quad \\ldots(1)" },
+                  { "do": "Replace $x$ by $\\dfrac{\\pi}{2} - x$", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\log(\\cot x)\\,dx = -\\int_0^{\\pi/2} \\log(\\tan x)\\,dx = -I", "marks": 0.5 },
+                  { "do": "So", "math": "2I = 0 \\;\\Rightarrow\\; I = 0", "marks": 0.5 }
+                ],
+                "answer": "$0$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  { "do": "Use $\\sin 2x = 2\\sin x\\cos x$", "math": "2\\log\\sin x - \\log\\sin 2x = \\log\\sin x - \\log\\cos x - \\log 2", "marks": 0.5 },
+                  { "do": "So", "math": "I = \\displaystyle\\int_0^{\\pi/2} \\log\\sin x\\,dx - \\int_0^{\\pi/2} \\log\\cos x\\,dx - \\dfrac{\\pi}{2}\\log 2", "marks": 0.5 },
+                  { "do": "Replace $x$ by $\\dfrac{\\pi}{2} - x$ in the first integral", "math": "\\displaystyle\\int_0^{\\pi/2} \\log\\sin x\\,dx = \\int_0^{\\pi/2} \\log\\cos x\\,dx", "marks": 0.5 },
+                  { "do": "The first two integrals cancel", "math": "I = -\\dfrac{\\pi}{2}\\log 2", "marks": 0.5 }
+                ],
+                "answer": "$-\\dfrac{\\pi}{2}\\log 2$"
+              }
+            ],
+            "mistake": "In (iii), trying to find $\\displaystyle\\int_0^{\\pi/2}\\log\\sin x\\,dx$ separately; it is not needed, it cancels."
+          }
+        }
+      ]
+    }
+  ]
+}
