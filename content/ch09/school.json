@@ -1,0 +1,878 @@
+{
+  "chapter": 9,
+  "chapterTitle": "Differential Equations",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The order and degree of the differential equation $\\left[1+\\left(\\dfrac{dy}{dx}\\right)^2\\right]^5=\\dfrac{d^2y}{dx^2}$ are:",
+          "options": [
+            "order 1, degree 1",
+            "order 1, degree 2",
+            "order 2, degree 1",
+            "order 2, degree 2"
+          ],
+          "solution": {
+            "answer": "(C) order 2, degree 1",
+            "concept": "Order = order of the highest derivative; degree = its highest power, once the equation is a polynomial in derivatives.",
+            "steps": [
+              {
+                "do": "Find the highest order derivative.",
+                "math": "\\dfrac{d^2y}{dx^2}\\ \\Rightarrow\\ \\text{Order} = 2"
+              },
+              {
+                "do": "The equation is a polynomial in derivatives; power of $\\dfrac{d^2y}{dx^2}$ is $1$.",
+                "math": "\\text{Degree} = 1",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (C)."
+              }
+            ],
+            "mistake": "Taking degree $5$ or $10$ from the power on $\\dfrac{dy}{dx}$; degree is read only from the highest order derivative."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The degree of the differential equation $\\dfrac{d^2y}{dx^2}+\\sin\\left(\\dfrac{dy}{dx}\\right)=0$ is:",
+          "options": [
+            "$1$",
+            "$2$",
+            "$0$",
+            "not defined"
+          ],
+          "solution": {
+            "answer": "(D) not defined",
+            "concept": "Degree is defined only when the equation is a polynomial in its derivatives.",
+            "steps": [
+              {
+                "do": "Highest order derivative is $\\dfrac{d^2y}{dx^2}$, so order $= 2$."
+              },
+              {
+                "do": "The term $\\sin\\left(\\dfrac{dy}{dx}\\right)$ is not a polynomial in $\\dfrac{dy}{dx}$.",
+                "marks": 1
+              },
+              {
+                "do": "So the degree is not defined. Hence option (D)."
+              }
+            ],
+            "mistake": "Answering degree $1$ by looking only at $\\dfrac{d^2y}{dx^2}$ and ignoring the $\\sin$ term."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The integrating factor of the differential equation $x\\dfrac{dy}{dx}-y=x^2$ is:",
+          "options": [
+            "$x$",
+            "$-x$",
+            "$\\dfrac{1}{x}$",
+            "$\\log x$"
+          ],
+          "solution": {
+            "answer": "(C) $\\dfrac{1}{x}$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$, $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Divide by $x$ to get the standard form.",
+                "math": "\\dfrac{dy}{dx}-\\dfrac{1}{x}\\,y=x"
+              },
+              {
+                "do": "Compare with $\\dfrac{dy}{dx}+Py=Q$.",
+                "math": "P=-\\dfrac{1}{x},\\quad Q=x"
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int -\\frac{1}{x}dx}=e^{-\\log x}=\\dfrac{1}{x}",
+                "why": "$e^{-\\log x}=e^{\\log x^{-1}}=x^{-1}$",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (C)."
+              }
+            ],
+            "mistake": "Taking $P=-1$ without first dividing the whole equation by $x$."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The number of arbitrary constants in the general solution of a differential equation of order 4 is:",
+          "options": [
+            "$0$",
+            "$2$",
+            "$3$",
+            "$4$"
+          ],
+          "solution": {
+            "answer": "(D) $4$",
+            "concept": "General solution of an $n$th order equation has exactly $n$ arbitrary constants.",
+            "steps": [
+              {
+                "do": "Number of arbitrary constants = order of the equation."
+              },
+              {
+                "do": "Order is $4$, so there are $4$ arbitrary constants.",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (D)."
+              }
+            ]
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The general solution of $\\dfrac{dy}{dx}=e^{x+y}$ is:",
+          "options": [
+            "$e^x+e^{-y}=C$",
+            "$e^x+e^y=C$",
+            "$e^{-x}+e^y=C$",
+            "$e^{-x}+e^{-y}=C$"
+          ],
+          "solution": {
+            "answer": "(A) $e^x+e^{-y}=C$",
+            "concept": "Variable separable: bring all $y$ terms to $dy$ and all $x$ terms to $dx$, then integrate.",
+            "steps": [
+              {
+                "do": "Split the exponent.",
+                "math": "\\dfrac{dy}{dx}=e^{x}\\cdot e^{y}"
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "e^{-y}\\,dy=e^{x}\\,dx"
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "-e^{-y}=e^{x}+C_1"
+              },
+              {
+                "do": "Rearrange, writing $-C_1=C$.",
+                "math": "e^{x}+e^{-y}=C",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (A)."
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int e^{-y}dy=e^{-y}$ and losing the minus sign."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** $y=e^{2x}$ is a solution of the differential equation $\\dfrac{d^2y}{dx^2}-4y=0$. **Reason (R):** A function is a solution of a differential equation if it satisfies the equation identically.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true and R is the correct explanation of A.",
+            "steps": [
+              {
+                "do": "Differentiate $y=e^{2x}$ twice.",
+                "math": "\\dfrac{dy}{dx}=2e^{2x},\\qquad \\dfrac{d^2y}{dx^2}=4e^{2x}"
+              },
+              {
+                "do": "Substitute in the LHS: it is $0$ for every $x$. So A is true.",
+                "math": "\\dfrac{d^2y}{dx^2}-4y=4e^{2x}-4e^{2x}=0"
+              },
+              {
+                "do": "R is the definition of a solution. So R is true."
+              },
+              {
+                "do": "A holds exactly because $e^{2x}$ satisfies the equation identically. So R explains A.",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (A)."
+              }
+            ]
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the general solution of $\\dfrac{dy}{dx}=\\dfrac{1+y^2}{1+x^2}$.",
+          "solution": {
+            "answer": "$\\tan^{-1}y=\\tan^{-1}x+C$",
+            "concept": "$\\displaystyle\\int\\dfrac{dx}{1+x^2}=\\tan^{-1}x+C$",
+            "steps": [
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dy}{1+y^2}=\\dfrac{dx}{1+x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\displaystyle\\int\\dfrac{dy}{1+y^2}=\\int\\dfrac{dx}{1+x^2}"
+              },
+              {
+                "do": "Use the standard integral on each side.",
+                "math": "\\tan^{-1}y=\\tan^{-1}x+C",
+                "marks": 1
+              },
+              {
+                "do": "Hence the general solution is $\\tan^{-1}y=\\tan^{-1}x+C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting the constant $C$; a general solution must contain it."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "question": "A bacteria sample grows exponentially. The differential equation representing the growth is $\\dfrac{dP}{dt}=kP$, where $P$ is the population at time $t$. Obtain the general solution and express $P$ as an exponential function of $t$.",
+          "solution": {
+            "answer": "$P=P_0e^{kt}$, where $P_0$ is the population at $t=0$",
+            "concept": "Separate variables, integrate, then remove the log by taking exponentials.",
+            "steps": [
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dP}{P}=k\\,dt",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\displaystyle\\int\\dfrac{dP}{P}=k\\int dt\\ \\Rightarrow\\ \\log P=kt+C",
+                "why": "$P>0$ for a population, so $|P|=P$.",
+                "marks": 1
+              },
+              {
+                "do": "Take exponentials on both sides.",
+                "math": "P=e^{kt+C}=e^{C}\\,e^{kt}"
+              },
+              {
+                "do": "Put $t=0$: $P=e^{C}$, the initial population. Call it $P_0$.",
+                "math": "e^{C}=P_0"
+              },
+              {
+                "do": "Hence the population is an exponential function of $t$.",
+                "math": "P=P_0\\,e^{kt}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $P=e^{kt}+C$; the constant becomes a multiplier $e^{C}$, not an added term."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the particular solution of $\\dfrac{dy}{dx}=y\\tan x$, given that $y=1$ when $x=0$.",
+          "solution": {
+            "answer": "$y=\\sec x$",
+            "concept": "$\\displaystyle\\int\\tan x\\,dx=\\log|\\sec x|+C$",
+            "steps": [
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dy}{y}=\\tan x\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\log|y|=\\log|\\sec x|+C",
+                "marks": 1
+              },
+              {
+                "do": "Put $x=0$, $y=1$.",
+                "math": "\\log 1=\\log(\\sec 0)+C\\ \\Rightarrow\\ 0=0+C"
+              },
+              {
+                "do": "So the constant is zero.",
+                "math": "C=0",
+                "marks": 1
+              },
+              {
+                "do": "Substitute $C=0$ and remove logs. Hence the particular solution is $y=\\sec x$.",
+                "math": "\\log|y|=\\log|\\sec x|\\ \\Rightarrow\\ y=\\sec x",
+                "why": "Near $x=0$, $y>0$ and $\\sec x>0$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\tan x\\,dx=\\sec^2 x$; that is the derivative of $\\tan x$, not its integral."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve: $x\\dfrac{dy}{dx}+2y=x^2$ $(x\\neq 0)$.",
+          "solution": {
+            "answer": "$y=\\dfrac{x^2}{4}+\\dfrac{C}{x^2}$",
+            "concept": "Linear equation $\\dfrac{dy}{dx}+Py=Q$: $\\ y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, with $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Divide by $x$ to get the standard linear form.",
+                "math": "\\dfrac{dy}{dx}+\\dfrac{2}{x}\\,y=x,\\qquad P=\\dfrac{2}{x},\\ Q=x",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\frac{2}{x}dx}=e^{2\\log|x|}=x^2",
+                "why": "$e^{\\log|x|^2}=|x|^2=x^2$",
+                "marks": 1
+              },
+              {
+                "do": "Write the solution form $y\\cdot\\text{I.F.}=\\int Q\\cdot\\text{I.F.}\\,dx+C$.",
+                "math": "y\\,x^2=\\displaystyle\\int x\\cdot x^2\\,dx+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate.",
+                "math": "y\\,x^2=\\dfrac{x^4}{4}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide by $x^2$. Hence the general solution is:",
+                "math": "y=\\dfrac{x^2}{4}+\\dfrac{C}{x^2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Using $P=2$ instead of $\\dfrac{2}{x}$ because the equation was not divided by $x$ first."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve the homogeneous differential equation $x\\dfrac{dy}{dx}=x+y$.",
+          "solution": {
+            "answer": "$y=x\\log|x|+Cx$",
+            "concept": "Homogeneous equation $\\dfrac{dy}{dx}=F\\left(\\dfrac{y}{x}\\right)$: put $y=vx$, so $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+            "steps": [
+              {
+                "do": "Write the equation as $\\dfrac{dy}{dx}=F\\left(\\dfrac{y}{x}\\right)$; so it is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{x+y}{x}=1+\\dfrac{y}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute and simplify.",
+                "math": "v+x\\dfrac{dv}{dx}=1+v\\ \\Rightarrow\\ x\\dfrac{dv}{dx}=1",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "dv=\\dfrac{dx}{x}"
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "v=\\log|x|+C",
+                "marks": 1
+              },
+              {
+                "do": "Put back $v=\\dfrac{y}{x}$ and multiply by $x$. Hence the general solution is:",
+                "math": "\\dfrac{y}{x}=\\log|x|+C\\ \\Rightarrow\\ y=x\\log|x|+Cx",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to replace $v$ by $\\dfrac{y}{x}$ at the end; the answer must be in $x$ and $y$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "question": "Verify that $y=Ax+\\dfrac{B}{x}$ is a solution of $x^2\\dfrac{d^2y}{dx^2}+x\\dfrac{dy}{dx}-y=0$.",
+          "solution": {
+            "answer": "LHS $=0=$ RHS, so $y=Ax+\\dfrac{B}{x}$ is a solution.",
+            "concept": "A function is a solution if it satisfies the equation identically.",
+            "steps": [
+              {
+                "do": "Differentiate $y=Ax+Bx^{-1}$ w.r.t. $x$.",
+                "math": "\\dfrac{dy}{dx}=A-\\dfrac{B}{x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again.",
+                "math": "\\dfrac{d^2y}{dx^2}=\\dfrac{2B}{x^3}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute in the LHS.",
+                "math": "\\text{LHS}=x^2\\cdot\\dfrac{2B}{x^3}+x\\left(A-\\dfrac{B}{x^2}\\right)-\\left(Ax+\\dfrac{B}{x}\\right)",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify.",
+                "math": "\\text{LHS}=\\dfrac{2B}{x}+Ax-\\dfrac{B}{x}-Ax-\\dfrac{B}{x}=0=\\text{RHS}"
+              },
+              {
+                "do": "Hence $y=Ax+\\dfrac{B}{x}$ is a solution of the given equation.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Sign slip: the derivative of $\\dfrac{B}{x}$ is $-\\dfrac{B}{x^2}$, and of that, $+\\dfrac{2B}{x^3}$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the general solution of $\\dfrac{dy}{dx}=\\sin^{-1}x$.",
+          "solution": {
+            "answer": "$y=x\\sin^{-1}x+\\sqrt{1-x^2}+C$",
+            "concept": "Integration by parts: $\\displaystyle\\int u\\,v\\,dx=u\\int v\\,dx-\\int\\left(u'\\int v\\,dx\\right)dx$.",
+            "steps": [
+              {
+                "do": "Separate the variables and integrate both sides.",
+                "math": "dy=\\sin^{-1}x\\,dx\\ \\Rightarrow\\ y=\\displaystyle\\int\\sin^{-1}x\\cdot 1\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate by parts: $\\sin^{-1}x$ first function, $1$ second function.",
+                "math": "y=x\\sin^{-1}x-\\displaystyle\\int\\dfrac{x}{\\sqrt{1-x^2}}\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $1-x^2=t$, so $x\\,dx=-\\dfrac{dt}{2}$.",
+                "math": "\\displaystyle\\int\\dfrac{x}{\\sqrt{1-x^2}}\\,dx=-\\dfrac{1}{2}\\int t^{-1/2}\\,dt=-\\sqrt{1-x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute back. Hence the general solution is:",
+                "math": "y=x\\sin^{-1}x+\\sqrt{1-x^2}+C",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Sign error: $-\\displaystyle\\int\\dfrac{x}{\\sqrt{1-x^2}}dx$ gives $+\\sqrt{1-x^2}$, not $-\\sqrt{1-x^2}$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the particular solution of the differential equation $\\dfrac{dy}{dx}-2xy=3x^2e^{x^2}$, given $y(0)=5$.",
+          "solution": {
+            "answer": "$y=(x^3+5)\\,e^{x^2}$",
+            "concept": "Linear equation: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, $\\ \\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Compare with $\\dfrac{dy}{dx}+Py=Q$.",
+                "math": "P=-2x,\\qquad Q=3x^2e^{x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int -2x\\,dx}=e^{-x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution form.",
+                "math": "y\\,e^{-x^2}=\\displaystyle\\int 3x^2e^{x^2}\\cdot e^{-x^2}\\,dx+C=\\int 3x^2\\,dx+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate.",
+                "math": "y\\,e^{-x^2}=x^3+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=0$, $y=5$.",
+                "math": "5\\cdot e^{0}=0+C\\ \\Rightarrow\\ C=5",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute $C=5$ and multiply by $e^{x^2}$. Hence the particular solution is:",
+                "math": "y=(x^3+5)\\,e^{x^2}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $\\text{I.F.}=e^{x^2}$; here $P=-2x$, so the I.F. is $e^{-x^2}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "question": "Solve: $x\\,dy-y\\,dx=\\sqrt{x^2+y^2}\\,dx$.",
+          "solution": {
+            "answer": "$y+\\sqrt{x^2+y^2}=Cx^2$",
+            "concept": "Homogeneous equation: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$; and $\\displaystyle\\int\\dfrac{dv}{\\sqrt{1+v^2}}=\\log\\left|v+\\sqrt{1+v^2}\\right|$.",
+            "steps": [
+              {
+                "do": "Rewrite in the form $\\dfrac{dy}{dx}=F(x,y)$.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{y+\\sqrt{x^2+y^2}}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Check: $F(\\lambda x,\\lambda y)=\\lambda^0F(x,y)$, so the equation is homogeneous.",
+                "math": "F(\\lambda x,\\lambda y)=\\dfrac{\\lambda y+\\lambda\\sqrt{x^2+y^2}}{\\lambda x}=F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute, taking $x>0$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{vx+\\sqrt{x^2+v^2x^2}}{x}=v+\\sqrt{1+v^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Cancel $v$ on both sides.",
+                "math": "x\\dfrac{dv}{dx}=\\sqrt{1+v^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dv}{\\sqrt{1+v^2}}=\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides; write the constant as $\\log C$.",
+                "math": "\\log\\left|v+\\sqrt{1+v^2}\\right|=\\log|x|+\\log C",
+                "marks": 1
+              },
+              {
+                "do": "Combine the logs.",
+                "math": "v+\\sqrt{1+v^2}=Cx",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$ and multiply by $x$. Hence the general solution is:",
+                "math": "\\dfrac{y+\\sqrt{x^2+y^2}}{x}=Cx\\ \\Rightarrow\\ y+\\sqrt{x^2+y^2}=Cx^2",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\sqrt{x^2+v^2x^2}=x+vx$; the correct step is $x\\sqrt{1+v^2}$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "short",
+          "question": "Find the particular solution of $(1+x^2)\\dfrac{dy}{dx}+2xy=\\dfrac{1}{1+x^2}$, given $y=0$ when $x=1$.",
+          "solution": {
+            "answer": "$y(1+x^2)=\\tan^{-1}x-\\dfrac{\\pi}{4}$",
+            "concept": "Linear equation: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, $\\ \\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Divide by $(1+x^2)$ to get the standard form.",
+                "math": "\\dfrac{dy}{dx}+\\dfrac{2x}{1+x^2}\\,y=\\dfrac{1}{(1+x^2)^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\frac{2x}{1+x^2}dx}=e^{\\log(1+x^2)}=1+x^2",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution form.",
+                "math": "y(1+x^2)=\\displaystyle\\int\\dfrac{1}{(1+x^2)^2}\\cdot(1+x^2)\\,dx+C=\\int\\dfrac{dx}{1+x^2}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate.",
+                "math": "y(1+x^2)=\\tan^{-1}x+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=1$, $y=0$.",
+                "math": "0=\\tan^{-1}1+C=\\dfrac{\\pi}{4}+C\\ \\Rightarrow\\ C=-\\dfrac{\\pi}{4}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is:",
+                "math": "y(1+x^2)=\\tan^{-1}x-\\dfrac{\\pi}{4}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Not dividing the RHS by $(1+x^2)$ too, so $Q$ is taken as $\\dfrac{1}{1+x^2}$ instead of $\\dfrac{1}{(1+x^2)^2}$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "question": "Find the particular solution of $x\\sin\\left(\\dfrac{y}{x}\\right)\\dfrac{dy}{dx}+x-y\\sin\\left(\\dfrac{y}{x}\\right)=0$, given $y=\\dfrac{\\pi}{2}$ when $x=1$.",
+          "solution": {
+            "answer": "$\\cos\\left(\\dfrac{y}{x}\\right)=\\log|x|$",
+            "concept": "Homogeneous equation: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$, separate, integrate, put back $v=\\dfrac{y}{x}$.",
+            "steps": [
+              {
+                "do": "Make $\\dfrac{dy}{dx}$ the subject.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{y\\sin\\left(\\frac{y}{x}\\right)-x}{x\\sin\\left(\\frac{y}{x}\\right)}",
+                "marks": 0.5
+              },
+              {
+                "do": "RHS is a function of $\\dfrac{y}{x}$ only, so the equation is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{y}{x}-\\dfrac{1}{\\sin\\left(\\frac{y}{x}\\right)}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute and cancel $v$.",
+                "math": "v+x\\dfrac{dv}{dx}=v-\\dfrac{1}{\\sin v}\\ \\Rightarrow\\ x\\dfrac{dv}{dx}=-\\dfrac{1}{\\sin v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\sin v\\,dv=-\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides; multiply by $-1$ and rename the constant $C$.",
+                "math": "-\\cos v=-\\log|x|+C_1\\ \\Rightarrow\\ \\cos v=\\log|x|+C",
+                "marks": 1
+              },
+              {
+                "do": "Put back $v=\\dfrac{y}{x}$.",
+                "math": "\\cos\\left(\\dfrac{y}{x}\\right)=\\log|x|+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=1$, $y=\\dfrac{\\pi}{2}$.",
+                "math": "\\cos\\dfrac{\\pi}{2}=\\log 1+C\\ \\Rightarrow\\ 0=0+C\\ \\Rightarrow\\ C=0",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is:",
+                "math": "\\cos\\left(\\dfrac{y}{x}\\right)=\\log|x|",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\sin v\\,dv=\\cos v$; it is $-\\cos v$."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve the differential equation: $x^2\\,dy+y(x+y)\\,dx=0$.",
+          "solution": {
+            "answer": "$x^2y=C(y+2x)$",
+            "concept": "Homogeneous equation: put $y=vx$; use partial fractions $\\dfrac{1}{v(v+2)}=\\dfrac{1}{2}\\left(\\dfrac{1}{v}-\\dfrac{1}{v+2}\\right)$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dy}{dx}$; numerator and denominator are both of degree 2, so it is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=-\\dfrac{xy+y^2}{x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+                "math": "v+x\\dfrac{dv}{dx}=-(v+v^2)",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify and separate the variables.",
+                "math": "x\\dfrac{dv}{dx}=-(v^2+2v)\\ \\Rightarrow\\ \\dfrac{dv}{v(v+2)}=-\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Use partial fractions and integrate.",
+                "math": "\\dfrac{1}{2}\\displaystyle\\int\\left(\\dfrac{1}{v}-\\dfrac{1}{v+2}\\right)dv=-\\int\\dfrac{dx}{x}"
+              },
+              {
+                "do": "Integrate; write the constant as $\\log|C_1|$.",
+                "math": "\\dfrac{1}{2}\\log\\left|\\dfrac{v}{v+2}\\right|=-\\log|x|+\\log|C_1|",
+                "marks": 1
+              },
+              {
+                "do": "Multiply by 2 and remove logs, writing $C=\\pm C_1^2$.",
+                "math": "\\dfrac{v}{v+2}=\\dfrac{C}{x^2}"
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$. Hence the general solution is:",
+                "math": "\\dfrac{y}{y+2x}=\\dfrac{C}{x^2}\\ \\Rightarrow\\ x^2y=C(y+2x)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Dropping the factor $\\dfrac{1}{2}$ from the partial fractions, which changes $x^2$ to $x$ in the answer."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "question": "Solve: $(\\tan^{-1}y-x)\\,dy=(1+y^2)\\,dx$.",
+          "solution": {
+            "answer": "$x=\\tan^{-1}y-1+Ce^{-\\tan^{-1}y}$",
+            "concept": "Linear in $x$: $\\dfrac{dx}{dy}+P_1x=Q_1$ gives $x\\cdot\\text{I.F.}=\\displaystyle\\int Q_1\\cdot\\text{I.F.}\\,dy+C$, $\\ \\text{I.F.}=e^{\\int P_1dy}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dx}{dy}$, since the equation is linear in $x$.",
+                "math": "\\dfrac{dx}{dy}=\\dfrac{\\tan^{-1}y-x}{1+y^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Rearrange to the form $\\dfrac{dx}{dy}+P_1x=Q_1$.",
+                "math": "\\dfrac{dx}{dy}+\\dfrac{1}{1+y^2}\\,x=\\dfrac{\\tan^{-1}y}{1+y^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\frac{dy}{1+y^2}}=e^{\\tan^{-1}y}",
+                "marks": 1
+              },
+              {
+                "do": "Write the solution form.",
+                "math": "x\\,e^{\\tan^{-1}y}=\\displaystyle\\int\\dfrac{\\tan^{-1}y}{1+y^2}\\,e^{\\tan^{-1}y}\\,dy+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Call this integral $I$. Put $\\tan^{-1}y=t$, so $\\dfrac{dy}{1+y^2}=dt$.",
+                "math": "I=\\displaystyle\\int\\dfrac{\\tan^{-1}y}{1+y^2}\\,e^{\\tan^{-1}y}\\,dy=\\int t\\,e^{t}\\,dt",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate by parts.",
+                "math": "I=t\\,e^{t}-\\displaystyle\\int e^{t}\\,dt=(t-1)\\,e^{t}=(\\tan^{-1}y-1)\\,e^{\\tan^{-1}y}",
+                "marks": 1
+              },
+              {
+                "do": "Substitute $I$ back.",
+                "math": "x\\,e^{\\tan^{-1}y}=(\\tan^{-1}y-1)\\,e^{\\tan^{-1}y}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide by $e^{\\tan^{-1}y}$. Hence the general solution is:",
+                "math": "x=\\tan^{-1}y-1+C\\,e^{-\\tan^{-1}y}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Trying to solve it as $\\dfrac{dy}{dx}$; it is linear only in $x$, so use $\\dfrac{dx}{dy}$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** In a laboratory culture, the number of bacteria $P$ increases at a rate proportional to the number present. The count of 1,00,000 bacteria increases by 10% in 2 hours.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Write the differential equation modelling this situation and state its order and degree.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Solve it to express $P$ in terms of $t$ and find the constant $k$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "In how many hours will the count reach 2,00,000?",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $\\dfrac{dP}{dt}=kP$, order 1, degree 1; (ii) $P=100000\\,e^{kt}$, $k=\\dfrac{1}{2}\\log 1.1$; (iii) $t=\\dfrac{2\\log 2}{\\log 1.1}\\approx 14.5$ hours",
+            "concept": "Rate proportional to amount: $\\dfrac{dP}{dt}=kP$ gives $P=P_0e^{kt}$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Rate of increase is proportional to $P$, with constant $k>0$.",
+                    "math": "\\dfrac{dP}{dt}=kP",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Highest derivative is $\\dfrac{dP}{dt}$, with power 1.",
+                    "math": "\\text{Order}=1,\\quad\\text{Degree}=1",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\dfrac{dP}{dt}=kP$; order 1, degree 1"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Separate and integrate.",
+                    "math": "\\dfrac{dP}{P}=k\\,dt\\ \\Rightarrow\\ \\log P=kt+C"
+                  },
+                  {
+                    "do": "At $t=0$, $P=100000$, so $C=\\log 100000$.",
+                    "math": "\\log\\dfrac{P}{100000}=kt\\ \\Rightarrow\\ P=100000\\,e^{kt}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "At $t=2$, $P=100000+10\\%\\text{ of }100000=110000$.",
+                    "math": "110000=100000\\,e^{2k}\\ \\Rightarrow\\ e^{2k}=1.1"
+                  },
+                  {
+                    "do": "Take log on both sides.",
+                    "math": "2k=\\log 1.1\\ \\Rightarrow\\ k=\\dfrac{1}{2}\\log 1.1",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$P=100000\\,e^{kt}$, $k=\\dfrac{1}{2}\\log 1.1\\ (\\approx 0.0477)$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Put $P=200000$.",
+                    "math": "200000=100000\\,e^{kt}\\ \\Rightarrow\\ e^{kt}=2",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Take log on both sides.",
+                    "math": "kt=\\log 2",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Put $k=\\dfrac{1}{2}\\log 1.1$.",
+                    "math": "t=\\dfrac{\\log 2}{k}=\\dfrac{2\\log 2}{\\log 1.1}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Use $\\log 2\\approx 0.6931$, $\\log 1.1\\approx 0.0953$. Hence the count reaches 2,00,000 in:",
+                    "math": "t\\approx\\dfrac{2\\times 0.6931}{0.0953}\\approx 14.5\\text{ hours}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$t=\\dfrac{2\\log 2}{\\log 1.1}\\approx 14.5$ hours"
+              }
+            ],
+            "mistake": "Taking $P=10000$ (the increase) instead of $P=110000$ (the new count) at $t=2$."
+          }
+        }
+      ]
+    }
+  ]
+}

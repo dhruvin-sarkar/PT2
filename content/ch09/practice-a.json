@@ -1,0 +1,909 @@
+{
+  "chapter": 9,
+  "chapterTitle": "Differential Equations",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 51,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2023",
+          "question": "The order and the degree of the differential equation $\\left(1+3\\dfrac{dy}{dx}\\right)^2=4\\dfrac{d^3y}{dx^3}$ respectively are:",
+          "options": [
+            "$1,\\ \\dfrac{2}{3}$",
+            "$3,\\ 1$",
+            "$3,\\ 3$",
+            "$1,\\ 2$"
+          ],
+          "solution": {
+            "answer": "(B) $3,\\ 1$",
+            "concept": "Order = order of the highest derivative; degree = its highest power, once the equation is a polynomial in derivatives.",
+            "steps": [
+              {
+                "do": "Find the highest order derivative.",
+                "math": "\\dfrac{d^3y}{dx^3}\\ \\Rightarrow\\ \\text{Order}=3"
+              },
+              {
+                "do": "The equation is a polynomial in derivatives; the power of $\\dfrac{d^3y}{dx^3}$ is $1$.",
+                "math": "\\text{Degree}=1",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Taking degree $2$ from the square on $\\left(1+3\\dfrac{dy}{dx}\\right)$; degree is read only from the highest order derivative."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2023",
+          "question": "The degree of the differential equation $\\sin x+\\cos\\left(\\dfrac{dy}{dx}\\right)=y^2$ is:",
+          "options": [
+            "$2$",
+            "$1$",
+            "not defined",
+            "$0$"
+          ],
+          "solution": {
+            "answer": "(C) not defined",
+            "concept": "Degree is defined only when the equation is a polynomial in its derivatives.",
+            "steps": [
+              {
+                "do": "The only derivative is $\\dfrac{dy}{dx}$, so the order is $1$."
+              },
+              {
+                "do": "The term $\\cos\\left(\\dfrac{dy}{dx}\\right)$ is not a polynomial in $\\dfrac{dy}{dx}$.",
+                "marks": 1
+              },
+              {
+                "do": "So the degree is not defined. Hence option (C)."
+              }
+            ],
+            "mistake": "Blaming $\\sin x$ or $y^2$; they are fine. Only a non-polynomial function of a derivative, here $\\cos\\left(\\dfrac{dy}{dx}\\right)$, makes the degree undefined."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2023",
+          "question": "The integrating factor of the differential equation $(1-y^2)\\dfrac{dx}{dy}+yx=ay$, $(-1<y<1)$ is:",
+          "options": [
+            "$\\dfrac{1}{y^2-1}$",
+            "$\\dfrac{1}{\\sqrt{y^2-1}}$",
+            "$\\dfrac{1}{1-y^2}$",
+            "$\\dfrac{1}{\\sqrt{1-y^2}}$"
+          ],
+          "solution": {
+            "answer": "(D) $\\dfrac{1}{\\sqrt{1-y^2}}$",
+            "concept": "For $\\dfrac{dx}{dy}+Px=Q$ ($P,Q$ functions of $y$), $\\text{I.F.}=e^{\\int P\\,dy}$.",
+            "steps": [
+              {
+                "do": "Divide by $1-y^2$ to get the standard form.",
+                "math": "\\dfrac{dx}{dy}+\\dfrac{y}{1-y^2}\\,x=\\dfrac{ay}{1-y^2}"
+              },
+              {
+                "do": "Compare with $\\dfrac{dx}{dy}+Px=Q$.",
+                "math": "P=\\dfrac{y}{1-y^2}"
+              },
+              {
+                "do": "Integrate $P$.",
+                "math": "\\displaystyle\\int\\dfrac{y}{1-y^2}\\,dy=-\\dfrac{1}{2}\\log(1-y^2)",
+                "why": "Put $1-y^2=t$, so $-2y\\,dy=dt$."
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{-\\frac{1}{2}\\log(1-y^2)}=(1-y^2)^{-\\frac{1}{2}}=\\dfrac{1}{\\sqrt{1-y^2}}",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (D)."
+              }
+            ],
+            "mistake": "Dropping the $\\dfrac{1}{2}$ from the integral and choosing (C)."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "NCERT Ex 9.2 Q12",
+          "question": "The number of arbitrary constants in the particular solution of a differential equation of third order are:",
+          "options": [
+            "$3$",
+            "$2$",
+            "$1$",
+            "$0$"
+          ],
+          "solution": {
+            "answer": "(D) $0$",
+            "concept": "A particular solution is got from the general solution by giving fixed values to all its arbitrary constants.",
+            "steps": [
+              {
+                "do": "The general solution of a third order equation has $3$ arbitrary constants."
+              },
+              {
+                "do": "In a particular solution, every constant gets a fixed value. So none is left.",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (D)."
+              }
+            ],
+            "mistake": "Answering $3$; that is the count for the general solution, not the particular solution."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "What is the general solution of the differential equation $e^{y'}=x$?",
+          "options": [
+            "$y=x\\log x+c$",
+            "$y=x\\log x-x+c$",
+            "$y=x\\log x+x+c$",
+            "$y=x+c$"
+          ],
+          "solution": {
+            "answer": "(B) $y=x\\log x-x+c$",
+            "concept": "$\\displaystyle\\int\\log x\\,dx=x\\log x-x+c$ (by parts).",
+            "steps": [
+              {
+                "do": "Take log on both sides.",
+                "math": "y'=\\log x\\ \\Rightarrow\\ \\dfrac{dy}{dx}=\\log x"
+              },
+              {
+                "do": "Separate and integrate.",
+                "math": "y=\\displaystyle\\int\\log x\\,dx"
+              },
+              {
+                "do": "Integrate by parts, taking $1$ as the second function.",
+                "math": "y=x\\log x-\\displaystyle\\int x\\cdot\\dfrac{1}{x}\\,dx=x\\log x-x+c",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Forgetting the $-x$ from integration by parts and choosing (A)."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "Board-pattern",
+          "question": "**Assertion (A):** $y=ae^{3x}+be^{-2x}$ is a solution of the differential equation $\\dfrac{d^2y}{dx^2}-\\dfrac{dy}{dx}-6y=0$. **Reason (R):** The number of arbitrary constants in the general solution of a differential equation is equal to its order.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(B) Both A and R are true, but R is not the correct explanation of A.",
+            "steps": [
+              {
+                "do": "Differentiate $y$ twice.",
+                "math": "\\dfrac{dy}{dx}=3ae^{3x}-2be^{-2x},\\qquad \\dfrac{d^2y}{dx^2}=9ae^{3x}+4be^{-2x}"
+              },
+              {
+                "do": "Substitute in the LHS: it is $0$ for every $x$. So A is true.",
+                "math": "(9-3-6)\\,ae^{3x}+(4+2-6)\\,be^{-2x}=0"
+              },
+              {
+                "do": "R is a standard fact about general solutions. So R is true."
+              },
+              {
+                "do": "A holds because $y$ satisfies the equation on substitution. R does not explain this.",
+                "marks": 1
+              },
+              {
+                "do": "Hence option (B)."
+              }
+            ],
+            "mistake": "Choosing (A) because both statements mention a second order equation; R says nothing about why $y$ satisfies it."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the general solution of the differential equation $\\dfrac{dy}{dx}=e^{x-y}+x^2e^{-y}$.",
+          "solution": {
+            "answer": "$e^y=e^x+\\dfrac{x^3}{3}+C$",
+            "concept": "Variable separable: bring all $y$ terms to $dy$ and all $x$ terms to $dx$, then integrate.",
+            "steps": [
+              {
+                "do": "Take out the common factor $e^{-y}$.",
+                "math": "\\dfrac{dy}{dx}=e^{-y}\\left(e^x+x^2\\right)"
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "e^y\\,dy=\\left(e^x+x^2\\right)dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\displaystyle\\int e^y\\,dy=\\int\\left(e^x+x^2\\right)dx\\ \\Rightarrow\\ e^y=e^x+\\dfrac{x^3}{3}+C",
+                "marks": 1
+              },
+              {
+                "do": "Hence the general solution is $e^y=e^x+\\dfrac{x^3}{3}+C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $e^{x-y}=e^x-e^y$; the correct split is $e^{x-y}=e^x\\cdot e^{-y}$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 18,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "source": "NCERT Ex 9.3 Q20",
+          "question": "In a bank, principal increases continuously at the rate of $r\\%$ per year. Find the value of $r$ if ₹100 double itself in 10 years $(\\log_e 2=0.6931)$.",
+          "solution": {
+            "answer": "$r=6.931$, i.e. the rate is $6.931\\%$ per year",
+            "concept": "Rate proportional to amount: $\\dfrac{dP}{dt}=kP$ gives $P=P_0e^{kt}$.",
+            "steps": [
+              {
+                "do": "Let $P$ be the principal at time $t$ years. Write the rate of growth.",
+                "math": "\\dfrac{dP}{dt}=\\dfrac{r}{100}\\,P",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate and integrate.",
+                "math": "\\dfrac{dP}{P}=\\dfrac{r}{100}\\,dt\\ \\Rightarrow\\ \\log P=\\dfrac{rt}{100}+C"
+              },
+              {
+                "do": "At $t=0$, $P=100$, so $C=\\log 100$.",
+                "math": "\\log\\dfrac{P}{100}=\\dfrac{rt}{100}",
+                "marks": 0.5
+              },
+              {
+                "do": "At $t=10$, $P=200$.",
+                "math": "\\log 2=\\dfrac{10r}{100}=\\dfrac{r}{10}",
+                "marks": 0.5
+              },
+              {
+                "do": "Solve for $r$.",
+                "math": "r=10\\log 2=10\\times 0.6931=6.931",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the rate is $6.931\\%$ per year."
+              }
+            ],
+            "mistake": "Writing $\\dfrac{dP}{dt}=rP$; the rate is $r\\%$, so the constant is $\\dfrac{r}{100}$."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "source": "NCERT Misc. Ex. Q7",
+          "question": "Find the particular solution of the differential equation $(1+e^{2x})\\,dy+(1+y^2)\\,e^x\\,dx=0$, given that $y=1$ when $x=0$.",
+          "solution": {
+            "answer": "$\\tan^{-1}y+\\tan^{-1}\\left(e^x\\right)=\\dfrac{\\pi}{2}$, i.e. $y=e^{-x}$",
+            "concept": "$\\displaystyle\\int\\dfrac{dt}{1+t^2}=\\tan^{-1}t+C$",
+            "steps": [
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{dy}{1+y^2}=-\\dfrac{e^x}{1+e^{2x}}\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "In the RHS put $e^x=t$, so $e^x\\,dx=dt$.",
+                "math": "\\displaystyle\\int\\dfrac{dy}{1+y^2}=-\\int\\dfrac{dt}{1+t^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides and put back $t=e^x$.",
+                "math": "\\tan^{-1}y=-\\tan^{-1}\\left(e^x\\right)+C\\ \\Rightarrow\\ \\tan^{-1}y+\\tan^{-1}\\left(e^x\\right)=C",
+                "marks": 1
+              },
+              {
+                "do": "Put $x=0$, $y=1$.",
+                "math": "\\tan^{-1}1+\\tan^{-1}1=C\\ \\Rightarrow\\ C=\\dfrac{\\pi}{4}+\\dfrac{\\pi}{4}=\\dfrac{\\pi}{2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is $\\tan^{-1}y+\\tan^{-1}\\left(e^x\\right)=\\dfrac{\\pi}{2}$, i.e. $y=e^{-x}$.",
+                "why": "$\\dfrac{\\pi}{2}-\\tan^{-1}e^x=\\cot^{-1}e^x=\\tan^{-1}e^{-x}$",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Putting $e^{2x}=t$ instead of $e^x=t$; then $e^x\\,dx$ in the numerator does not become $dt$."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the general solution of the differential equation $x\\dfrac{dy}{dx}+y=x\\cos x+\\sin x$, $(x\\neq 0)$.",
+          "solution": {
+            "answer": "$xy=x\\sin x+C$, i.e. $y=\\sin x+\\dfrac{C}{x}$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$, where $\\text{I.F.}=e^{\\int P\\,dx}$.",
+            "steps": [
+              {
+                "do": "Divide by $x$ to get the standard form.",
+                "math": "\\dfrac{dy}{dx}+\\dfrac{1}{x}\\,y=\\cos x+\\dfrac{\\sin x}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Here $P=\\dfrac{1}{x}$. Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\frac{1}{x}dx}=e^{\\log x}=x",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution formula.",
+                "math": "y\\cdot x=\\displaystyle\\int x\\left(\\cos x+\\dfrac{\\sin x}{x}\\right)dx=\\int\\left(x\\cos x+\\sin x\\right)dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate $x\\cos x$ by parts.",
+                "math": "\\displaystyle\\int x\\cos x\\,dx=x\\sin x-\\int\\sin x\\,dx=x\\sin x+\\cos x",
+                "marks": 0.5
+              },
+              {
+                "do": "Add $\\displaystyle\\int\\sin x\\,dx=-\\cos x$.",
+                "math": "xy=x\\sin x+\\cos x-\\cos x+C=x\\sin x+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the general solution is $y=\\sin x+\\dfrac{C}{x}$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $P=1$ and $Q=x\\cos x+\\sin x$ without first dividing the whole equation by $x$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2023",
+          "question": "Solve the differential equation $(x^2-y^2)\\,dx+2xy\\,dy=0$.",
+          "solution": {
+            "answer": "$x^2+y^2=Cx$",
+            "concept": "Homogeneous equation $\\dfrac{dy}{dx}=g\\left(\\dfrac{y}{x}\\right)$: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dy}{dx}$. Numerator and denominator are both of degree $2$, so it is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{y^2-x^2}{2xy}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{v^2x^2-x^2}{2vx^2}=\\dfrac{v^2-1}{2v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "x\\dfrac{dv}{dx}=\\dfrac{v^2-1-2v^2}{2v}=-\\dfrac{1+v^2}{2v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{2v}{1+v^2}\\,dv=-\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "\\log(1+v^2)=-\\log|x|+\\log|C|\\ \\Rightarrow\\ x(1+v^2)=C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$. Hence the general solution is $x^2+y^2=Cx$.",
+                "math": "x\\left(1+\\dfrac{y^2}{x^2}\\right)=C\\ \\Rightarrow\\ x^2+y^2=Cx",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Getting the sign of $x^2-y^2$ wrong when moving it across: $\\dfrac{dy}{dx}=\\dfrac{y^2-x^2}{2xy}$, not $\\dfrac{x^2-y^2}{2xy}$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Verify that $y=A\\cos(\\log x)+B\\sin(\\log x)$ is a solution of the differential equation $x^2\\dfrac{d^2y}{dx^2}+x\\dfrac{dy}{dx}+y=0$.",
+          "solution": {
+            "answer": "$x^2\\dfrac{d^2y}{dx^2}+x\\dfrac{dy}{dx}+y=0$ holds, so the function is a solution.",
+            "concept": "A function is a solution if it satisfies the equation identically.",
+            "steps": [
+              {
+                "do": "Differentiate w.r.t. $x$ (chain rule).",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{-A\\sin(\\log x)+B\\cos(\\log x)}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $x$.",
+                "math": "x\\dfrac{dy}{dx}=-A\\sin(\\log x)+B\\cos(\\log x)",
+                "marks": 0.5
+              },
+              {
+                "do": "Differentiate again w.r.t. $x$ (product rule on the left).",
+                "math": "x\\dfrac{d^2y}{dx^2}+\\dfrac{dy}{dx}=\\dfrac{-A\\cos(\\log x)-B\\sin(\\log x)}{x}=-\\dfrac{y}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Multiply by $x$ and rearrange. Hence verified.",
+                "math": "x^2\\dfrac{d^2y}{dx^2}+x\\dfrac{dy}{dx}+y=0",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting the factor $\\dfrac{1}{x}$ from the chain rule when differentiating $\\cos(\\log x)$."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find the general solution of the differential equation $\\dfrac{dy}{dx}=x\\log x$, $(x>0)$.",
+          "solution": {
+            "answer": "$y=\\dfrac{x^2}{2}\\log x-\\dfrac{x^2}{4}+C$",
+            "concept": "Integration by parts: $\\displaystyle\\int u\\,v\\,dx=u\\int v\\,dx-\\int\\left(u'\\int v\\,dx\\right)dx$.",
+            "steps": [
+              {
+                "do": "Separate and integrate.",
+                "math": "dy=x\\log x\\,dx\\ \\Rightarrow\\ y=\\displaystyle\\int x\\log x\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate by parts, taking $\\log x$ as the first function.",
+                "math": "y=\\log x\\cdot\\dfrac{x^2}{2}-\\displaystyle\\int\\dfrac{1}{x}\\cdot\\dfrac{x^2}{2}\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Simplify and integrate.",
+                "math": "y=\\dfrac{x^2}{2}\\log x-\\displaystyle\\int\\dfrac{x}{2}\\,dx=\\dfrac{x^2}{2}\\log x-\\dfrac{x^2}{4}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the general solution is $y=\\dfrac{x^2}{2}\\log x-\\dfrac{x^2}{4}+C$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $x$ as the first function; then $\\log x$ must be integrated, which makes it harder."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "source": "Board-pattern",
+          "question": "Find the particular solution of the differential equation $\\dfrac{dy}{dx}+y=\\cos x-\\sin x$, given that $y=3$ when $x=0$.",
+          "solution": {
+            "answer": "$y=\\cos x+2e^{-x}$",
+            "concept": "$\\displaystyle\\int e^x\\left[f(x)+f'(x)\\right]dx=e^xf(x)+C$",
+            "steps": [
+              {
+                "do": "Compare with $\\dfrac{dy}{dx}+Py=Q$.",
+                "math": "P=1,\\quad Q=\\cos x-\\sin x",
+                "marks": 0.5
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int 1\\,dx}=e^x",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution formula.",
+                "math": "y\\,e^x=\\displaystyle\\int e^x\\left(\\cos x-\\sin x\\right)dx+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Take $f(x)=\\cos x$, so $f'(x)=-\\sin x$.",
+                "math": "y\\,e^x=e^x\\cos x+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=0$, $y=3$.",
+                "math": "3=1+C\\ \\Rightarrow\\ C=2",
+                "marks": 0.5
+              },
+              {
+                "do": "Divide by $e^x$. Hence the particular solution is $y=\\cos x+2e^{-x}$.",
+                "math": "y=\\cos x+2e^{-x}",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Forgetting to divide $C$ by $e^x$ too: the answer is $\\cos x+2e^{-x}$, not $\\cos x+2$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "NCERT Ex 9.4 Q1",
+          "question": "Show that the differential equation $(x^2+xy)\\,dy=(x^2+y^2)\\,dx$ is homogeneous and solve it.",
+          "solution": {
+            "answer": "$(x-y)^2=Cx\\,e^{-y/x}$",
+            "concept": "Homogeneous equation: $F(\\lambda x,\\lambda y)=\\lambda^0F(x,y)$; then put $y=vx$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dy}{dx}=F(x,y)$.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{x^2+y^2}{x^2+xy}=F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Replace $x,y$ by $\\lambda x,\\lambda y$. So $F$ is homogeneous of degree $0$.",
+                "math": "F(\\lambda x,\\lambda y)=\\dfrac{\\lambda^2(x^2+y^2)}{\\lambda^2(x^2+xy)}=\\lambda^0F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{1+v^2}{1+v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "x\\dfrac{dv}{dx}=\\dfrac{1+v^2-v-v^2}{1+v}=\\dfrac{1-v}{1+v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\dfrac{1+v}{1-v}\\,dv=\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Split the fraction.",
+                "math": "\\dfrac{1+v}{1-v}=-1+\\dfrac{2}{1-v}",
+                "why": "$1+v=2-(1-v)$",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "-v-2\\log|1-v|=\\log|x|+C_1",
+                "marks": 1
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$.",
+                "math": "-\\dfrac{y}{x}-2\\log\\left|\\dfrac{x-y}{x}\\right|=\\log|x|+C_1",
+                "marks": 0.5
+              },
+              {
+                "do": "Open the log and collect the log terms on the left.",
+                "math": "\\log|x|-2\\log|x-y|=\\dfrac{y}{x}+C_1\\ \\Rightarrow\\ \\log\\dfrac{|x|}{(x-y)^2}=\\dfrac{y}{x}+C_1"
+              },
+              {
+                "do": "Take exponentials. Hence the general solution is $(x-y)^2=Cx\\,e^{-y/x}$.",
+                "math": "(x-y)^2=Cx\\,e^{-y/x}",
+                "why": "$C=\\pm e^{-C_1}$ is an arbitrary constant.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\displaystyle\\int\\dfrac{2}{1-v}\\,dv=2\\log|1-v|$; it is $-2\\log|1-v|$, because the derivative of $1-v$ is $-1$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2026-27",
+          "question": "Find the particular solution of the differential equation $x\\,dy+(y-x^2e^x)\\,dx=0$, given that $y(1)=0$.",
+          "solution": {
+            "answer": "$xy=e^x\\left(x^2-2x+2\\right)-e$",
+            "concept": "For $\\dfrac{dy}{dx}+Py=Q$: $y\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dx+C$.",
+            "steps": [
+              {
+                "do": "Divide by $x\\,dx$ to get the standard form.",
+                "math": "\\dfrac{dy}{dx}+\\dfrac{1}{x}\\,y=xe^x",
+                "marks": 0.5
+              },
+              {
+                "do": "Here $P=\\dfrac{1}{x}$. Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int\\frac{1}{x}dx}=e^{\\log x}=x",
+                "marks": 0.5
+              },
+              {
+                "do": "Write the solution formula.",
+                "math": "y\\cdot x=\\displaystyle\\int x\\cdot xe^x\\,dx=\\int x^2e^x\\,dx",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate by parts twice.",
+                "math": "\\begin{aligned}xy&=x^2e^x-2\\displaystyle\\int xe^x\\,dx\\\\&=x^2e^x-2\\left(xe^x-e^x\\right)+C=e^x\\left(x^2-2x+2\\right)+C\\end{aligned}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=1$, $y=0$.",
+                "math": "0=e(1-2+2)+C\\ \\Rightarrow\\ C=-e",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is $xy=e^x\\left(x^2-2x+2\\right)-e$.",
+                "math": "xy=e^x\\left(x^2-2x+2\\right)-e",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Taking $Q=x^2e^x$; after dividing by $x$ the right side is $xe^x$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "CBSE SQP 2025-26",
+          "question": "Find the particular solution of the differential equation $2y\\,e^{x/y}\\,dx+\\left(y-2x\\,e^{x/y}\\right)dy=0$, given that $y(0)=1$.",
+          "solution": {
+            "answer": "$2e^{x/y}+\\log|y|=2$",
+            "concept": "When $\\dfrac{dx}{dy}=F\\left(\\dfrac{x}{y}\\right)$, put $x=vy$, $\\dfrac{dx}{dy}=v+y\\dfrac{dv}{dy}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dx}{dy}=F(x,y)$.",
+                "math": "\\dfrac{dx}{dy}=\\dfrac{2x\\,e^{x/y}-y}{2y\\,e^{x/y}}=F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Replace $x,y$ by $\\lambda x,\\lambda y$; $\\dfrac{x}{y}$ does not change. So $F$ is homogeneous of degree $0$.",
+                "math": "F(\\lambda x,\\lambda y)=\\lambda^0F(x,y)",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=vy$, $\\dfrac{dx}{dy}=v+y\\dfrac{dv}{dy}$.",
+                "math": "v+y\\dfrac{dv}{dy}=\\dfrac{2vy\\,e^v-y}{2y\\,e^v}=\\dfrac{2v\\,e^v-1}{2e^v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "y\\dfrac{dv}{dy}=\\dfrac{2v\\,e^v-1}{2e^v}-v=-\\dfrac{1}{2e^v}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "2e^v\\,dv=-\\dfrac{dy}{y}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "2e^v=-\\log|y|+C",
+                "marks": 1
+              },
+              {
+                "do": "Put $v=\\dfrac{x}{y}$.",
+                "math": "2e^{x/y}+\\log|y|=C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=0$, $y=1$.",
+                "math": "2e^0+\\log 1=C\\ \\Rightarrow\\ C=2",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is $2e^{x/y}+\\log|y|=2$.",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Putting $y=vx$ out of habit; here $\\dfrac{x}{y}$ appears, so $x=vy$ is the easy substitution."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2023",
+          "question": "Find the general solution of the differential equation $(xy-x^2)\\,dy=y^2\\,dx$.",
+          "solution": {
+            "answer": "$\\dfrac{y}{x}-\\log|y|=C$",
+            "concept": "Homogeneous equation: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dy}{dx}$. Numerator and denominator are both of degree $2$, so it is homogeneous.",
+                "math": "\\dfrac{dy}{dx}=\\dfrac{y^2}{xy-x^2}",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $y=vx$.",
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{v^2x^2}{vx^2-x^2}=\\dfrac{v^2}{v-1}",
+                "marks": 0.5
+              },
+              {
+                "do": "Move $v$ to the right.",
+                "math": "x\\dfrac{dv}{dx}=\\dfrac{v^2-v^2+v}{v-1}=\\dfrac{v}{v-1}",
+                "marks": 0.5
+              },
+              {
+                "do": "Separate the variables.",
+                "math": "\\left(1-\\dfrac{1}{v}\\right)dv=\\dfrac{dx}{x}",
+                "marks": 0.5
+              },
+              {
+                "do": "Integrate both sides.",
+                "math": "v-\\log|v|=\\log|x|+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $v=\\dfrac{y}{x}$; $\\log|x|$ cancels. Hence $\\dfrac{y}{x}-\\log|y|=C$.",
+                "math": "\\dfrac{y}{x}-\\log|y|+\\log|x|=\\log|x|+C\\ \\Rightarrow\\ \\dfrac{y}{x}-\\log|y|=C",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Writing $\\log\\left|\\dfrac{y}{x}\\right|=\\dfrac{\\log|y|}{\\log|x|}$; the correct rule is $\\log|y|-\\log|x|$."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Find the particular solution of the differential equation $y\\,e^y\\,dx=\\left(y^3+2x\\,e^y\\right)dy$, given that $x=0$ when $y=1$.",
+          "solution": {
+            "answer": "$x=y^2\\left(e^{-1}-e^{-y}\\right)$",
+            "concept": "For $\\dfrac{dx}{dy}+Px=Q$: $x\\cdot\\text{I.F.}=\\displaystyle\\int Q\\cdot\\text{I.F.}\\,dy+C$, where $\\text{I.F.}=e^{\\int P\\,dy}$.",
+            "steps": [
+              {
+                "do": "Write $\\dfrac{dx}{dy}$ and split the fraction.",
+                "math": "\\dfrac{dx}{dy}=\\dfrac{y^3+2x\\,e^y}{y\\,e^y}=y^2e^{-y}+\\dfrac{2x}{y}",
+                "marks": 0.5
+              },
+              {
+                "do": "Rearrange: it is linear in $x$.",
+                "math": "\\dfrac{dx}{dy}-\\dfrac{2}{y}\\,x=y^2e^{-y}",
+                "marks": 0.5
+              },
+              {
+                "do": "Compare with $\\dfrac{dx}{dy}+Px=Q$.",
+                "math": "P=-\\dfrac{2}{y},\\quad Q=y^2e^{-y}"
+              },
+              {
+                "do": "Find the integrating factor.",
+                "math": "\\text{I.F.}=e^{\\int -\\frac{2}{y}dy}=e^{-2\\log y}=\\dfrac{1}{y^2}",
+                "marks": 1
+              },
+              {
+                "do": "Write the solution formula.",
+                "math": "x\\cdot\\dfrac{1}{y^2}=\\displaystyle\\int y^2e^{-y}\\cdot\\dfrac{1}{y^2}\\,dy+C",
+                "marks": 1
+              },
+              {
+                "do": "Integrate.",
+                "math": "\\dfrac{x}{y^2}=\\displaystyle\\int e^{-y}\\,dy=-e^{-y}+C",
+                "marks": 0.5
+              },
+              {
+                "do": "Put $x=0$, $y=1$.",
+                "math": "0=-e^{-1}+C\\ \\Rightarrow\\ C=\\dfrac{1}{e}",
+                "marks": 0.5
+              },
+              {
+                "do": "Substitute $C$.",
+                "math": "\\dfrac{x}{y^2}=\\dfrac{1}{e}-e^{-y}",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is $x=y^2\\left(e^{-1}-e^{-y}\\right)$.",
+                "math": "x=y^2\\left(e^{-1}-e^{-y}\\right)",
+                "marks": 0.5
+              }
+            ],
+            "mistake": "Trying to write it as $\\dfrac{dy}{dx}+Py=Q$; it is linear only in $x$, so use $\\dfrac{dx}{dy}$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "Board-pattern",
+          "question": "**Case Study:** The population of a village increases continuously at a rate proportional to the number of its inhabitants present at any time. The population was 20,000 in the year 2019 and 25,000 in the year 2024. Measure the time $t$ in years from 2019.",
+          "parts": [
+            {
+              "label": "(i)",
+              "text": "Write the differential equation for the population $P$ at time $t$ and state its order and degree.",
+              "marks": 1
+            },
+            {
+              "label": "(ii)",
+              "text": "Solve it to express $P$ in terms of $t$ and find the constant $k$.",
+              "marks": 1
+            },
+            {
+              "label": "(iii)",
+              "text": "In which year will the population be 31,250?",
+              "marks": 2
+            }
+          ],
+          "solution": {
+            "answer": "(i) $\\dfrac{dP}{dt}=kP$, order 1, degree 1; (ii) $P=20000\\,e^{kt}$, $k=\\dfrac{1}{5}\\log\\dfrac{5}{4}$; (iii) $t=10$, the year 2029",
+            "concept": "Rate proportional to amount: $\\dfrac{dP}{dt}=kP$ gives $P=P_0e^{kt}$.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  {
+                    "do": "Rate of increase is proportional to $P$, with constant $k>0$.",
+                    "math": "\\dfrac{dP}{dt}=kP",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Highest derivative is $\\dfrac{dP}{dt}$, with power $1$.",
+                    "math": "\\text{Order}=1,\\quad\\text{Degree}=1",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$\\dfrac{dP}{dt}=kP$; order 1, degree 1"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  {
+                    "do": "Separate and integrate.",
+                    "math": "\\dfrac{dP}{P}=k\\,dt\\ \\Rightarrow\\ \\log P=kt+C"
+                  },
+                  {
+                    "do": "At $t=0$, $P=20000$, so $C=\\log 20000$.",
+                    "math": "\\log\\dfrac{P}{20000}=kt\\ \\Rightarrow\\ P=20000\\,e^{kt}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "At $t=5$ (year 2024), $P=25000$.",
+                    "math": "25000=20000\\,e^{5k}\\ \\Rightarrow\\ e^{5k}=\\dfrac{5}{4}"
+                  },
+                  {
+                    "do": "Take log on both sides.",
+                    "math": "k=\\dfrac{1}{5}\\log\\dfrac{5}{4}",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$P=20000\\,e^{kt}$, $k=\\dfrac{1}{5}\\log\\dfrac{5}{4}\\ (\\approx 0.0446)$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  {
+                    "do": "Put $P=31250$.",
+                    "math": "31250=20000\\,e^{kt}\\ \\Rightarrow\\ e^{kt}=\\dfrac{25}{16}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Write $\\dfrac{25}{16}$ using $e^{5k}=\\dfrac{5}{4}$.",
+                    "math": "\\dfrac{25}{16}=\\left(\\dfrac{5}{4}\\right)^2=\\left(e^{5k}\\right)^2=e^{10k}",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Compare powers.",
+                    "math": "e^{kt}=e^{10k}\\ \\Rightarrow\\ t=10",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Count $10$ years from 2019. Hence the population will be 31,250 in the year 2029.",
+                    "math": "2019+10=2029",
+                    "marks": 0.5
+                  }
+                ],
+                "answer": "$t=10$ years, i.e. in the year 2029"
+              }
+            ],
+            "mistake": "Taking $t=2024$ instead of $t=5$; time must be counted from the starting year 2019."
+          }
+        }
+      ]
+    }
+  ]
+}
