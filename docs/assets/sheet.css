@@ -65,8 +65,8 @@
   display: block;
   line-height: 2;
 }
-.math-alt[hidden] {
-  display: none;
+.math-fit [hidden] {
+  display: none !important;
 }
 
 /* ---------- figures ---------- */
@@ -293,6 +293,11 @@
   display: grid;
   grid-template-columns: var(--col-step-n) minmax(0, 1fr) var(--col-marks);
   border-bottom: 1px solid var(--rule);
+}
+/* number and working share the first baseline, so "10" sits level with a tall first line */
+.step-n,
+.step-body {
+  align-self: baseline;
 }
 .step-n {
   padding: 0.42rem 0 0.4rem;

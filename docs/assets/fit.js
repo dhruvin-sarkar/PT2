@@ -3,13 +3,16 @@
  * Used by tools/build-pdf.mjs before printing, and by the website (call again on resize).
  *
  *   <script src="assets/fit.js"></script>
- *   PT.fitMath(rootElement = document)   -> number of maths blocks that were adjusted
+ *   PT.fitMath(rootElement = document, { lastResort: 'scale' | 'scroll' })
+ *                                        -> number of maths blocks that were adjusted
+ *   PT.findOverflow(rootElement)         -> [{ q, cls, over }] anything still wider than its column
  *
  * For every display block (.math-fit, see src/rich.mjs):
  *   1. if it fits, leave it;
  *   2. else shrink its font-size to fit (down to MIN_SCALE);
  *   3. if that is not enough and a line-breakable version exists (.math-alt), show that instead;
- *   4. last resort: scale it with a transform so it can never overflow or be clipped.
+ *   4. last resort: scale it with a transform so it can never overflow or be clipped (print default), or,
+ *      with { lastResort: 'scroll' } (nicer on a phone), keep MIN_SCALE and let the block scroll sideways.
  * Inline maths (.katex outside .math-fit) that is wider than its line box is shrunk the same way.
  */
 (function () {
@@ -17,6 +20,7 @@
 
   function reset(el) {
     el.style.fontSize = '';
+    el.style.overflowX = '';
     el.removeAttribute('data-fit');
     var inner = el.querySelector(':scope > .math-inner');
     var alt = el.querySelector(':scope > .math-alt');
@@ -35,7 +39,7 @@
     return Math.max(html.scrollWidth, html.getBoundingClientRect().width);
   }
 
-  function fitDisplay(el) {
+  function fitDisplay(el, opts) {
     reset(el);
     var avail = el.clientWidth;
     var inner = el.querySelector(':scope > .math-inner');
@@ -63,6 +67,11 @@
     }
     el.style.fontSize = MIN_SCALE * 100 + '%';
     var now = natural(inner);
+    if (now > avail + 0.5 && opts && opts.lastResort === 'scroll') {
+      el.style.overflowX = 'auto';
+      el.setAttribute('data-fit', 'scroll');
+      return true;
+    }
     if (now > avail + 0.5) {
       var s = avail / now;
       var h = inner.getBoundingClientRect().height;
@@ -87,11 +96,11 @@
     return true;
   }
 
-  function fitMath(root) {
+  function fitMath(root, opts) {
     root = root || document;
     var n = 0;
     var blocks = root.querySelectorAll('.math-fit');
-    for (var i = 0; i < blocks.length; i++) if (fitDisplay(blocks[i])) n++;
+    for (var i = 0; i < blocks.length; i++) if (fitDisplay(blocks[i], opts || {})) n++;
     var inl = root.querySelectorAll('.katex');
     for (var j = 0; j < inl.length; j++) {
       if (inl[j].closest('.math-fit')) continue;
