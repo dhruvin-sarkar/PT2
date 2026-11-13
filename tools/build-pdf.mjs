@@ -15,8 +15,8 @@ import { copyAssets, ASSET_DIR } from '../src/assets.mjs';
 import { solutionsHtml, worksheetHtml, solutionsTitle, worksheetTitle } from '../src/sheets.mjs';
 
 const BROWSERS = [
-  'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
+  'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
 ];
 
 function parseArgs(argv) {
@@ -160,10 +160,12 @@ async function main() {
     if (!exe) throw new Error('No browser found. Pass --browser <path to msedge.exe or chrome.exe>.');
     const tmp = path.join(REPO_ROOT, '.tmp', 'browser-tmp');
     fs.mkdirSync(tmp, { recursive: true });
+    // A fresh profile per run: a profile left locked by a killed run stops the browser from launching.
+    const profile = path.join(cacheDir, `browser-profile-${process.pid}`);
     const browser = await puppeteer.launch({
       executablePath: exe,
       headless: true,
-      userDataDir: path.join(cacheDir, 'browser-profile'),
+      userDataDir: profile,
       env: { ...process.env, TEMP: tmp, TMP: tmp },
       args: ['--no-first-run', '--no-default-browser-check', '--disable-extensions', '--allow-file-access-from-files', '--font-render-hinting=none', '--disable-gpu'],
     });
@@ -185,6 +187,7 @@ async function main() {
       await Promise.all(Array.from({ length: Math.min(opts.concurrency, todo.length) }, worker));
     } finally {
       await browser.close();
+      fs.rmSync(profile, { recursive: true, force: true, maxRetries: 5, retryDelay: 300 });
     }
   }
 
