@@ -1,0 +1,436 @@
+{
+  "chapter": 4,
+  "chapterTitle": "Determinants",
+  "set": "school",
+  "title": "School Worksheet",
+  "totalMarks": 54,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $\\begin{vmatrix} x & 2 \\\\ 18 & x \\end{vmatrix} = \\begin{vmatrix} 6 & 2 \\\\ 18 & 6 \\end{vmatrix}$, then $x$ is equal to:",
+          "options": ["$6$", "$\\pm 6$", "$-6$", "$0$"],
+          "solution": {
+            "answer": "(B) $\\pm 6$",
+            "concept": "$\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc$",
+            "steps": [
+              { "do": "Expand the left determinant.", "math": "\\begin{vmatrix} x & 2 \\\\ 18 & x \\end{vmatrix} = x^2 - 36" },
+              { "do": "Expand the right determinant.", "math": "\\begin{vmatrix} 6 & 2 \\\\ 18 & 6 \\end{vmatrix} = 36 - 36 = 0" },
+              { "do": "Equate the two and solve.", "math": "x^2 - 36 = 0 \\;\\Rightarrow\\; x^2 = 36 \\;\\Rightarrow\\; x = \\pm 6", "marks": 1 },
+              { "do": "Hence the correct option is (B)." }
+            ],
+            "mistake": "Writing only $x = 6$; a square equation gives two roots, $\\pm 6$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $A$ is a square matrix of order 3 with $|A| = 5$, then $|\\text{adj}\\, A|$ is:",
+          "options": ["$5$", "$25$", "$125$", "$\\dfrac{1}{5}$"],
+          "solution": {
+            "answer": "(B) $25$",
+            "concept": "For a square matrix of order $n$, $|\\text{adj}\\, A| = |A|^{n-1}$.",
+            "steps": [
+              { "do": "Use the property of the adjoint.", "math": "|\\text{adj}\\, A| = |A|^{n-1}" },
+              { "do": "Put $n = 3$ and $|A| = 5$.", "math": "|\\text{adj}\\, A| = 5^{3-1} = 5^2 = 25", "marks": 1 },
+              { "do": "Hence the correct option is (B)." }
+            ],
+            "mistake": "Using $|A|^n = 125$; the power is $n - 1$, not $n$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "question": "If $A$ is a square matrix of order 3 and $|A| = 4$, then $|2A|$ is:",
+          "options": ["$8$", "$16$", "$32$", "$64$"],
+          "solution": {
+            "answer": "(C) $32$",
+            "concept": "For a square matrix of order $n$, $|kA| = k^n |A|$.",
+            "steps": [
+              { "do": "Use the property for a scalar multiple.", "math": "|kA| = k^n |A|" },
+              { "do": "Put $k = 2$, $n = 3$, $|A| = 4$.", "math": "|2A| = 2^3 \\times 4 = 8 \\times 4 = 32", "marks": 1 },
+              { "do": "Hence the correct option is (C)." }
+            ],
+            "mistake": "Writing $|2A| = 2|A| = 8$; each of the 3 rows is multiplied by 2."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The area of the triangle with vertices $(-2, -3)$, $(3, 2)$ and $(-1, -8)$ is:",
+          "options": ["$15$ sq units", "$30$ sq units", "$20$ sq units", "$10$ sq units"],
+          "solution": {
+            "answer": "(A) $15$ sq units",
+            "concept": "Area $\\Delta = \\dfrac{1}{2}\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}$, taken with absolute value.",
+            "steps": [
+              { "do": "Write the area as a determinant.", "math": "\\Delta = \\dfrac{1}{2}\\begin{vmatrix} -2 & -3 & 1 \\\\ 3 & 2 & 1 \\\\ -1 & -8 & 1 \\end{vmatrix}" },
+              { "do": "Expand along $R_1$.", "math": "\\begin{aligned} \\Delta &= \\tfrac{1}{2}\\left[-2(2+8) + 3(3+1) + 1(-24+2)\\right] \\\\ &= \\tfrac{1}{2}(-20 + 12 - 22) = \\tfrac{1}{2}(-30) = -15 \\end{aligned}" },
+              { "do": "Area is always positive, so take the absolute value.", "math": "\\text{Area} = |-15| = 15 \\text{ sq units}", "marks": 1 },
+              { "do": "Hence the correct option is (A)." }
+            ],
+            "mistake": "Forgetting the $\\dfrac{1}{2}$ and choosing $30$ sq units."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "question": "The cofactor of the element $a_{12}$ in $\\begin{vmatrix} 2 & -3 & 5 \\\\ 6 & 0 & 4 \\\\ 1 & 5 & -7 \\end{vmatrix}$ is:",
+          "options": ["$46$", "$-46$", "$4$", "$-4$"],
+          "solution": {
+            "answer": "(A) $46$",
+            "concept": "Cofactor $A_{ij} = (-1)^{i+j} M_{ij}$, where $M_{ij}$ is the minor.",
+            "steps": [
+              { "do": "Delete row 1 and column 2 to get the minor $M_{12}$.", "math": "M_{12} = \\begin{vmatrix} 6 & 4 \\\\ 1 & -7 \\end{vmatrix} = -42 - 4 = -46" },
+              { "do": "Attach the sign $(-1)^{1+2}$.", "math": "A_{12} = (-1)^{1+2} M_{12} = -(-46) = 46", "marks": 1 },
+              { "do": "Hence the correct option is (A)." }
+            ],
+            "mistake": "Giving the minor $-46$ as the answer and forgetting the sign $(-1)^{i+j}$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "question": "**Assertion (A):** If $A$ is a $3 \\times 3$ matrix with $|A| = 2$, then $|A\\,(\\text{adj}\\, A)| = 8$. **Reason (R):** For any square matrix $A$, $A\\,(\\text{adj}\\, A) = |A|\\, I$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both A and R are true, and R is the correct explanation of A",
+            "concept": "$A(\\text{adj}\\, A) = (\\text{adj}\\, A)A = |A|\\, I$ for every square matrix $A$.",
+            "steps": [
+              { "do": "Check A: use $A(\\text{adj}\\, A) = |A| I$ with $n = 3$.", "math": "|A(\\text{adj}\\, A)| = \\big|\\,|A|\\, I\\,\\big| = |A|^3 |I| = 2^3 = 8" },
+              { "do": "So Assertion (A) is true." },
+              { "do": "Check R: $A(\\text{adj}\\, A) = |A| I$ is a standard theorem, so R is true." },
+              { "do": "A is obtained directly from R, so R correctly explains A." },
+              { "do": "Hence the correct option is (A).", "marks": 1 }
+            ],
+            "mistake": "Taking $\\big||A| I\\big| = |A| = 2$; a scalar comes out of a $3 \\times 3$ determinant as $|A|^3$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the values of $k$ if the area of the triangle with vertices $(k, 0)$, $(4, 0)$ and $(0, 2)$ is $4$ sq units.",
+          "solution": {
+            "answer": "$k = 0$ or $k = 8$",
+            "concept": "Area $= \\pm \\dfrac{1}{2}\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}$, so use both signs.",
+            "steps": [
+              { "do": "Write the area as a determinant.", "math": "\\Delta = \\dfrac{1}{2}\\begin{vmatrix} k & 0 & 1 \\\\ 4 & 0 & 1 \\\\ 0 & 2 & 1 \\end{vmatrix}", "marks": 0.5 },
+              { "do": "Expand along $R_1$.", "math": "\\Delta = \\dfrac{1}{2}\\left[k(0 - 2) - 0 + 1(8 - 0)\\right] = \\dfrac{1}{2}(8 - 2k) = 4 - k", "marks": 0.5 },
+              { "do": "Area is $4$, so the determinant value can be $+4$ or $-4$.", "math": "4 - k = \\pm 4", "marks": 0.5 },
+              { "do": "Solve each case.", "math": "4 - k = 4 \\Rightarrow k = 0; \\qquad 4 - k = -4 \\Rightarrow k = 8" },
+              { "do": "Hence $k = 0$ or $k = 8$.", "marks": 0.5 }
+            ],
+            "mistake": "Taking only $4 - k = 4$ and missing the second value $k = 8$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 17,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 2,
+          "type": "short",
+          "question": "Find the adjoint and inverse of $A = \\begin{bmatrix} 2 & -1 \\\\ 4 & 3 \\end{bmatrix}$.",
+          "solution": {
+            "answer": "$\\text{adj}\\, A = \\begin{bmatrix} 3 & 1 \\\\ -4 & 2 \\end{bmatrix}$, $A^{-1} = \\dfrac{1}{10}\\begin{bmatrix} 3 & 1 \\\\ -4 & 2 \\end{bmatrix}$",
+            "concept": "$A^{-1} = \\dfrac{1}{|A|}\\, \\text{adj}\\, A$, provided $|A| \\neq 0$.",
+            "steps": [
+              { "do": "For a $2 \\times 2$ matrix, swap the diagonal and change signs of the others.", "math": "\\text{adj}\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}" },
+              { "do": "Write the adjoint of $A$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} 3 & 1 \\\\ -4 & 2 \\end{bmatrix}", "marks": 1 },
+              { "do": "Find $|A|$.", "math": "|A| = 2(3) - (-1)(4) = 6 + 4 = 10 \\neq 0", "why": "$|A| \\neq 0$, so $A^{-1}$ exists.", "marks": 0.5 },
+              { "do": "Write the inverse.", "math": "A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\, A = \\dfrac{1}{10}\\begin{bmatrix} 3 & 1 \\\\ -4 & 2 \\end{bmatrix}", "marks": 0.5 }
+            ],
+            "mistake": "Changing the signs of the diagonal elements instead of the off-diagonal ones."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 3,
+          "type": "short",
+          "question": "If $A = \\begin{bmatrix} 3 & 1 \\\\ -1 & 2 \\end{bmatrix}$, show that $A^2 - 5A + 7I = O$. Hence find $A^{-1}$.",
+          "solution": {
+            "answer": "$A^2 - 5A + 7I = O$ shown; $A^{-1} = \\dfrac{1}{7}\\begin{bmatrix} 2 & -1 \\\\ 1 & 3 \\end{bmatrix}$",
+            "concept": "Multiply the matrix equation by $A^{-1}$ and use $A^{-1}A = I$.",
+            "steps": [
+              { "do": "Find $A^2 = A \\cdot A$.", "math": "A^2 = \\begin{bmatrix} 3 & 1 \\\\ -1 & 2 \\end{bmatrix}\\begin{bmatrix} 3 & 1 \\\\ -1 & 2 \\end{bmatrix} = \\begin{bmatrix} 9 - 1 & 3 + 2 \\\\ -3 - 2 & -1 + 4 \\end{bmatrix} = \\begin{bmatrix} 8 & 5 \\\\ -5 & 3 \\end{bmatrix}", "marks": 1 },
+              { "do": "Write $5A$ and $7I$.", "math": "5A = \\begin{bmatrix} 15 & 5 \\\\ -5 & 10 \\end{bmatrix}, \\qquad 7I = \\begin{bmatrix} 7 & 0 \\\\ 0 & 7 \\end{bmatrix}" },
+              { "do": "Substitute in $A^2 - 5A + 7I$.", "math": "A^2 - 5A + 7I = \\begin{bmatrix} 8 - 15 + 7 & 5 - 5 + 0 \\\\ -5 + 5 + 0 & 3 - 10 + 7 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O", "marks": 1 },
+              { "do": "Hence $A^2 - 5A + 7I = O$ is shown." },
+              { "do": "Check that $A^{-1}$ exists.", "math": "|A| = 6 + 1 = 7 \\neq 0" },
+              { "do": "Pre-multiply $A^2 - 5A + 7I = O$ by $A^{-1}$.", "math": "(A^{-1}A)A - 5(A^{-1}A) + 7A^{-1}I = A^{-1}O \\;\\Rightarrow\\; A - 5I + 7A^{-1} = O", "marks": 0.5 },
+              { "do": "Make $A^{-1}$ the subject and simplify.", "math": "A^{-1} = \\dfrac{1}{7}(5I - A) = \\dfrac{1}{7}\\begin{bmatrix} 5 - 3 & 0 - 1 \\\\ 0 + 1 & 5 - 2 \\end{bmatrix} = \\dfrac{1}{7}\\begin{bmatrix} 2 & -1 \\\\ 1 & 3 \\end{bmatrix}", "marks": 0.5 }
+            ],
+            "mistake": "Writing $5 - A$ instead of $5I - A$; a number cannot be subtracted from a matrix."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 2,
+          "type": "short",
+          "question": "Using determinants, find the equation of the line joining the points $(1, 2)$ and $(3, 6)$.",
+          "solution": {
+            "answer": "$y = 2x$",
+            "concept": "Three points are collinear when the area determinant is zero.",
+            "steps": [
+              { "do": "Let $P(x, y)$ be any point on the line." },
+              { "do": "$P$, $(1, 2)$, $(3, 6)$ are collinear, so the area is zero.", "math": "\\dfrac{1}{2}\\begin{vmatrix} x & y & 1 \\\\ 1 & 2 & 1 \\\\ 3 & 6 & 1 \\end{vmatrix} = 0", "marks": 1 },
+              { "do": "Expand along $R_1$.", "math": "x(2 - 6) - y(1 - 3) + 1(6 - 6) = 0 \\;\\Rightarrow\\; -4x + 2y = 0", "marks": 0.5 },
+              { "do": "Simplify to get the required line.", "math": "y = 2x", "marks": 0.5 }
+            ],
+            "mistake": "Expanding the determinant with wrong signs; the middle term of $R_1$ is $-y(\\ldots)$."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "question": "Solve the system of equations using the matrix method: $5x + 2y = 4$, $7x + 3y = 5$.",
+          "solution": {
+            "answer": "$x = 2$, $y = -3$",
+            "concept": "If $AX = B$ and $|A| \\neq 0$, then $X = A^{-1}B$ (unique solution).",
+            "steps": [
+              { "do": "Write the system as $AX = B$.", "math": "\\begin{bmatrix} 5 & 2 \\\\ 7 & 3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 5 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $|A|$.", "math": "|A| = 15 - 14 = 1 \\neq 0", "why": "So the system has a unique solution.", "marks": 0.5 },
+              { "do": "Find $\\text{adj}\\, A$ and $A^{-1}$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} 3 & -2 \\\\ -7 & 5 \\end{bmatrix}, \\qquad A^{-1} = \\dfrac{1}{1}\\begin{bmatrix} 3 & -2 \\\\ -7 & 5 \\end{bmatrix}", "marks": 1 },
+              { "do": "Find $X = A^{-1}B$.", "math": "X = \\begin{bmatrix} 3 & -2 \\\\ -7 & 5 \\end{bmatrix}\\begin{bmatrix} 4 \\\\ 5 \\end{bmatrix} = \\begin{bmatrix} 12 - 10 \\\\ -28 + 25 \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ -3 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Hence $x = 2$, $y = -3$.", "marks": 0.5 }
+            ],
+            "mistake": "Writing $X = BA^{-1}$; the order must be $A^{-1}B$."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 2,
+          "type": "short",
+          "question": "Examine the consistency of the system: $x + 3y = 5$, $2x + 6y = 8$.",
+          "solution": {
+            "answer": "Inconsistent (no solution), since $|A| = 0$ and $(\\text{adj}\\, A)B \\neq O$",
+            "concept": "If $|A| = 0$ and $(\\text{adj}\\, A)B \\neq O$, the system is inconsistent.",
+            "steps": [
+              { "do": "Write the system as $AX = B$.", "math": "A = \\begin{bmatrix} 1 & 3 \\\\ 2 & 6 \\end{bmatrix}, \\quad X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 \\\\ 8 \\end{bmatrix}" },
+              { "do": "Find $|A|$.", "math": "|A| = 6 - 6 = 0", "why": "$A$ is singular, so check $(\\text{adj}\\, A)B$.", "marks": 0.5 },
+              { "do": "Find $\\text{adj}\\, A$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} 6 & -3 \\\\ -2 & 1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $(\\text{adj}\\, A)B$.", "math": "(\\text{adj}\\, A)B = \\begin{bmatrix} 6 & -3 \\\\ -2 & 1 \\end{bmatrix}\\begin{bmatrix} 5 \\\\ 8 \\end{bmatrix} = \\begin{bmatrix} 30 - 24 \\\\ -10 + 8 \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ -2 \\end{bmatrix} \\neq O", "marks": 0.5 },
+              { "do": "Hence the system is inconsistent (it has no solution).", "marks": 0.5 }
+            ],
+            "mistake": "Stopping at $|A| = 0$; you must also check $(\\text{adj}\\, A)B$ before concluding."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 2,
+          "type": "short",
+          "question": "If $A = \\begin{bmatrix} 2 & 3 \\\\ 5 & -2 \\end{bmatrix}$, show that $A^{-1} = \\dfrac{1}{19}A$.",
+          "solution": {
+            "answer": "$A^{-1} = \\dfrac{1}{19}\\begin{bmatrix} 2 & 3 \\\\ 5 & -2 \\end{bmatrix} = \\dfrac{1}{19}A$ (shown)",
+            "concept": "$A^{-1} = \\dfrac{1}{|A|}\\, \\text{adj}\\, A$",
+            "steps": [
+              { "do": "Find $|A|$.", "math": "|A| = 2(-2) - 3(5) = -4 - 15 = -19 \\neq 0", "marks": 0.5 },
+              { "do": "Find $\\text{adj}\\, A$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} -2 & -3 \\\\ -5 & 2 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Write $A^{-1}$.", "math": "A^{-1} = \\dfrac{1}{-19}\\begin{bmatrix} -2 & -3 \\\\ -5 & 2 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Take the minus sign inside the matrix.", "math": "A^{-1} = \\dfrac{1}{19}\\begin{bmatrix} 2 & 3 \\\\ 5 & -2 \\end{bmatrix} = \\dfrac{1}{19}A", "marks": 0.5 },
+              { "do": "Hence $A^{-1} = \\dfrac{1}{19}A$ is shown." }
+            ],
+            "mistake": "Losing the negative sign of $|A| = -19$ when writing $A^{-1}$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 3,
+          "type": "short",
+          "question": "If $A = \\begin{bmatrix} 2 & 3 \\\\ 1 & -4 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & -2 \\\\ -1 & 3 \\end{bmatrix}$, verify that $(AB)^{-1} = B^{-1}A^{-1}$.",
+          "solution": {
+            "answer": "$(AB)^{-1} = B^{-1}A^{-1} = \\dfrac{1}{11}\\begin{bmatrix} 14 & 5 \\\\ 5 & 1 \\end{bmatrix}$ (verified)",
+            "concept": "Reversal law: $(AB)^{-1} = B^{-1}A^{-1}$.",
+            "steps": [
+              { "do": "Find $AB$.", "math": "AB = \\begin{bmatrix} 2 - 3 & -4 + 9 \\\\ 1 + 4 & -2 - 12 \\end{bmatrix} = \\begin{bmatrix} -1 & 5 \\\\ 5 & -14 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $|AB|$ and $\\text{adj}(AB)$.", "math": "|AB| = 14 - 25 = -11, \\qquad \\text{adj}(AB) = \\begin{bmatrix} -14 & -5 \\\\ -5 & -1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Write $(AB)^{-1}$.", "math": "(AB)^{-1} = \\dfrac{1}{-11}\\begin{bmatrix} -14 & -5 \\\\ -5 & -1 \\end{bmatrix} = \\dfrac{1}{11}\\begin{bmatrix} 14 & 5 \\\\ 5 & 1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $A^{-1}$.", "math": "|A| = -8 - 3 = -11, \\qquad A^{-1} = \\dfrac{1}{-11}\\begin{bmatrix} -4 & -3 \\\\ -1 & 2 \\end{bmatrix} = \\dfrac{1}{11}\\begin{bmatrix} 4 & 3 \\\\ 1 & -2 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $B^{-1}$.", "math": "|B| = 3 - 2 = 1, \\qquad B^{-1} = \\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Multiply $B^{-1}A^{-1}$.", "math": "B^{-1}A^{-1} = \\dfrac{1}{11}\\begin{bmatrix} 3 & 2 \\\\ 1 & 1 \\end{bmatrix}\\begin{bmatrix} 4 & 3 \\\\ 1 & -2 \\end{bmatrix} = \\dfrac{1}{11}\\begin{bmatrix} 12 + 2 & 9 - 4 \\\\ 4 + 1 & 3 - 2 \\end{bmatrix} = \\dfrac{1}{11}\\begin{bmatrix} 14 & 5 \\\\ 5 & 1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Both sides are equal, so $(AB)^{-1} = B^{-1}A^{-1}$ is verified." }
+            ],
+            "mistake": "Multiplying $A^{-1}B^{-1}$ instead of $B^{-1}A^{-1}$; matrix order matters."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 29,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "question": "A school wants to allocate students into three clubs: Sports, Music and Drama, under the following conditions: (i) the number of students in the Sports club should be equal to the sum of the numbers of students in the Music and Drama clubs; (ii) the number of students in the Music club should be 20 more than half the number of students in the Sports club; (iii) the total number of students allocated to the three clubs is 180. Using the matrix method, find the number of students allocated to each club.",
+          "solution": {
+            "answer": "Sports $= 90$, Music $= 65$, Drama $= 25$ students",
+            "concept": "Form $AX = B$; if $|A| \\neq 0$, then $X = A^{-1}B$ with $A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\, A$.",
+            "steps": [
+              { "do": "Let the numbers in Sports, Music and Drama be $x$, $y$, $z$." },
+              { "do": "Write the three conditions as equations.", "math": "x - y - z = 0, \\qquad -x + 2y = 40, \\qquad x + y + z = 180", "why": "$y = \\tfrac{x}{2} + 20 \\Rightarrow 2y = x + 40$", "marks": 1 },
+              { "do": "Write the system as $AX = B$.", "math": "\\begin{bmatrix} 1 & -1 & -1 \\\\ -1 & 2 & 0 \\\\ 1 & 1 & 1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 40 \\\\ 180 \\end{bmatrix}" },
+              { "do": "Find $|A|$ by expanding along $R_1$.", "math": "|A| = 1(2 - 0) + 1(-1 - 0) - 1(-1 - 2) = 2 - 1 + 3 = 4 \\neq 0", "why": "So $A^{-1}$ exists and the solution is unique.", "marks": 1 },
+              { "do": "Find the cofactors of row 1.", "math": "A_{11} = 2, \\quad A_{12} = 1, \\quad A_{13} = -3", "marks": 0.5 },
+              { "do": "Find the cofactors of rows 2 and 3.", "math": "A_{21} = 0, \\; A_{22} = 2, \\; A_{23} = -2; \\qquad A_{31} = 2, \\; A_{32} = 1, \\; A_{33} = 1", "marks": 0.5 },
+              { "do": "Write $\\text{adj}\\, A$ (transpose of cofactors) and $A^{-1}$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} 2 & 0 & 2 \\\\ 1 & 2 & 1 \\\\ -3 & -2 & 1 \\end{bmatrix}, \\qquad A^{-1} = \\dfrac{1}{4}\\begin{bmatrix} 2 & 0 & 2 \\\\ 1 & 2 & 1 \\\\ -3 & -2 & 1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $X = A^{-1}B$.", "math": "X = \\dfrac{1}{4}\\begin{bmatrix} 0 + 0 + 360 \\\\ 0 + 80 + 180 \\\\ 0 - 80 + 180 \\end{bmatrix} = \\dfrac{1}{4}\\begin{bmatrix} 360 \\\\ 260 \\\\ 100 \\end{bmatrix} = \\begin{bmatrix} 90 \\\\ 65 \\\\ 25 \\end{bmatrix}", "marks": 1 },
+              { "do": "Hence Sports $= 90$, Music $= 65$, Drama $= 25$ students.", "marks": 0.5 }
+            ],
+            "mistake": "Writing condition (ii) as $y = \\tfrac{1}{2}(x + 20)$; it is $y = \\tfrac{x}{2} + 20$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "question": "Find the product $\\begin{bmatrix} 1 & -1 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4 \\end{bmatrix}\\begin{bmatrix} -2 & 0 & 1 \\\\ 9 & 2 & -3 \\\\ 6 & 1 & -2 \\end{bmatrix}$ and use it to solve: $x - y + 2z = 1$, $2y - 3z = 1$, $3x - 2y + 4z = 2$.",
+          "solution": {
+            "answer": "Product $= I$; $x = 0$, $y = 5$, $z = 3$",
+            "concept": "If $AB = I$, then $A^{-1} = B$.",
+            "steps": [
+              { "do": "Call the first matrix $A$ and the second $B$. Multiply row by column.", "math": "AB = \\begin{bmatrix} -2 - 9 + 12 & 0 - 2 + 2 & 1 + 3 - 4 \\\\ 0 + 18 - 18 & 0 + 4 - 3 & 0 - 6 + 6 \\\\ -6 - 18 + 24 & 0 - 4 + 4 & 3 + 6 - 8 \\end{bmatrix}", "marks": 1.5 },
+              { "do": "Simplify the product.", "math": "AB = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix} = I", "marks": 0.5 },
+              { "do": "Since $AB = I$, $B$ is the inverse of $A$.", "math": "A^{-1} = B = \\begin{bmatrix} -2 & 0 & 1 \\\\ 9 & 2 & -3 \\\\ 6 & 1 & -2 \\end{bmatrix}", "marks": 1 },
+              { "do": "Write the system as $AX = C$; its coefficient matrix is $A$.", "math": "\\begin{bmatrix} 1 & -1 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ 2 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $X = A^{-1}C = BC$.", "math": "X = \\begin{bmatrix} -2 & 0 & 1 \\\\ 9 & 2 & -3 \\\\ 6 & 1 & -2 \\end{bmatrix}\\begin{bmatrix} 1 \\\\ 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} -2 + 0 + 2 \\\\ 9 + 2 - 6 \\\\ 6 + 1 - 4 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 5 \\\\ 3 \\end{bmatrix}", "marks": 1 },
+              { "do": "Hence $x = 0$, $y = 5$, $z = 3$.", "marks": 0.5 }
+            ],
+            "mistake": "Forgetting the $0$ coefficient of $x$ in $2y - 3z = 1$ when writing row 2 of $A$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "question": "If $A = \\begin{bmatrix} 1 & 2 & -3 \\\\ 2 & 3 & 2 \\\\ 3 & -3 & -4 \\end{bmatrix}$, find $A^{-1}$. Hence solve: $x + 2y - 3z = -4$, $2x + 3y + 2z = 2$, $3x - 3y - 4z = 11$.",
+          "solution": {
+            "answer": "$A^{-1} = \\dfrac{1}{67}\\begin{bmatrix} -6 & 17 & 13 \\\\ 14 & 5 & -8 \\\\ -15 & 9 & -1 \\end{bmatrix}$; $x = 3$, $y = -2$, $z = 1$",
+            "concept": "$A^{-1} = \\dfrac{1}{|A|}\\,\\text{adj}\\, A$ and $X = A^{-1}B$.",
+            "steps": [
+              { "do": "Find $|A|$ by expanding along $R_1$.", "math": "|A| = 1(-12 + 6) - 2(-8 - 6) - 3(-6 - 9) = -6 + 28 + 45 = 67 \\neq 0", "marks": 1 },
+              { "do": "Find the cofactors of row 1.", "math": "A_{11} = -6, \\quad A_{12} = 14, \\quad A_{13} = -15", "marks": 0.5 },
+              { "do": "Find the cofactors of row 2.", "math": "A_{21} = 17, \\quad A_{22} = 5, \\quad A_{23} = 9", "marks": 0.5 },
+              { "do": "Find the cofactors of row 3.", "math": "A_{31} = 13, \\quad A_{32} = -8, \\quad A_{33} = -1", "marks": 0.5 },
+              { "do": "Write $\\text{adj}\\, A$ (transpose of cofactors) and $A^{-1}$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} -6 & 17 & 13 \\\\ 14 & 5 & -8 \\\\ -15 & 9 & -1 \\end{bmatrix}, \\qquad A^{-1} = \\dfrac{1}{67}\\begin{bmatrix} -6 & 17 & 13 \\\\ 14 & 5 & -8 \\\\ -15 & 9 & -1 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "The system is $AX = B$ with this $A$, so $X = A^{-1}B$.", "math": "B = \\begin{bmatrix} -4 \\\\ 2 \\\\ 11 \\end{bmatrix}, \\qquad X = A^{-1}B", "marks": 0.5 },
+              { "do": "Multiply.", "math": "X = \\dfrac{1}{67}\\begin{bmatrix} 24 + 34 + 143 \\\\ -56 + 10 - 88 \\\\ 60 + 18 - 11 \\end{bmatrix} = \\dfrac{1}{67}\\begin{bmatrix} 201 \\\\ -134 \\\\ 67 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -2 \\\\ 1 \\end{bmatrix}", "marks": 1 },
+              { "do": "Hence $x = 3$, $y = -2$, $z = 1$.", "marks": 0.5 }
+            ],
+            "mistake": "Using the cofactor matrix itself as $\\text{adj}\\, A$; it must be transposed."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 5,
+          "type": "long",
+          "question": "The cost of 4 kg onion, 3 kg wheat and 2 kg rice is ₹60. The cost of 2 kg onion, 4 kg wheat and 6 kg rice is ₹90. The cost of 6 kg onion, 2 kg wheat and 3 kg rice is ₹70. Find the cost of each item per kg by the matrix method.",
+          "solution": {
+            "answer": "Onion ₹5 per kg, wheat ₹8 per kg, rice ₹8 per kg",
+            "concept": "Form $AX = B$; if $|A| \\neq 0$, then $X = A^{-1}B$.",
+            "steps": [
+              { "do": "Let onion, wheat and rice cost ₹$x$, ₹$y$, ₹$z$ per kg." },
+              { "do": "Write the equations.", "math": "4x + 3y + 2z = 60, \\qquad 2x + 4y + 6z = 90, \\qquad 6x + 2y + 3z = 70", "marks": 1 },
+              { "do": "Write the system as $AX = B$.", "math": "\\begin{bmatrix} 4 & 3 & 2 \\\\ 2 & 4 & 6 \\\\ 6 & 2 & 3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 60 \\\\ 90 \\\\ 70 \\end{bmatrix}" },
+              { "do": "Find $|A|$ by expanding along $R_1$.", "math": "|A| = 4(12 - 12) - 3(6 - 36) + 2(4 - 24) = 0 + 90 - 40 = 50 \\neq 0", "marks": 1 },
+              { "do": "Find the cofactors of row 1.", "math": "A_{11} = 0, \\quad A_{12} = 30, \\quad A_{13} = -20", "marks": 0.5 },
+              { "do": "Find the cofactors of rows 2 and 3.", "math": "A_{21} = -5, \\; A_{22} = 0, \\; A_{23} = 10; \\qquad A_{31} = 10, \\; A_{32} = -20, \\; A_{33} = 10", "marks": 0.5 },
+              { "do": "Write $\\text{adj}\\, A$ (transpose of cofactors) and $A^{-1}$.", "math": "\\text{adj}\\, A = \\begin{bmatrix} 0 & -5 & 10 \\\\ 30 & 0 & -20 \\\\ -20 & 10 & 10 \\end{bmatrix}, \\qquad A^{-1} = \\dfrac{1}{50}\\begin{bmatrix} 0 & -5 & 10 \\\\ 30 & 0 & -20 \\\\ -20 & 10 & 10 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Find $X = A^{-1}B$.", "math": "X = \\dfrac{1}{50}\\begin{bmatrix} 0 - 450 + 700 \\\\ 1800 + 0 - 1400 \\\\ -1200 + 900 + 700 \\end{bmatrix} = \\dfrac{1}{50}\\begin{bmatrix} 250 \\\\ 400 \\\\ 400 \\end{bmatrix} = \\begin{bmatrix} 5 \\\\ 8 \\\\ 8 \\end{bmatrix}", "marks": 1 },
+              { "do": "Hence onion costs ₹5 per kg, wheat ₹8 per kg and rice ₹8 per kg.", "marks": 0.5 }
+            ],
+            "mistake": "Mixing up the order of items in a row; keep onion, wheat, rice in the same order."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 5,
+          "type": "long",
+          "question": "If $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ -2 & -1 & -2 \\\\ 0 & -1 & 1 \\end{bmatrix}$, find $A^{-1}$. Using $A^{-1}$, solve: $x - 2y = 10$, $2x - y - z = 8$, $-2y + z = 7$.",
+          "solution": {
+            "answer": "$A^{-1} = \\begin{bmatrix} -3 & -2 & -4 \\\\ 2 & 1 & 2 \\\\ 2 & 1 & 3 \\end{bmatrix}$; $x = 0$, $y = -5$, $z = -3$",
+            "concept": "The coefficient matrix here is $A'$, and $(A')^{-1} = (A^{-1})'$.",
+            "steps": [
+              { "do": "Find $|A|$ by expanding along $R_1$.", "math": "|A| = 1(-1 - 2) - 2(-2 - 0) + 0 = -3 + 4 = 1 \\neq 0", "marks": 1 },
+              { "do": "Find the cofactors of row 1.", "math": "A_{11} = -3, \\quad A_{12} = 2, \\quad A_{13} = 2", "marks": 0.5 },
+              { "do": "Find the cofactors of row 2.", "math": "A_{21} = -2, \\quad A_{22} = 1, \\quad A_{23} = 1", "marks": 0.5 },
+              { "do": "Find the cofactors of row 3.", "math": "A_{31} = -4, \\quad A_{32} = 2, \\quad A_{33} = 3", "marks": 0.5 },
+              { "do": "Write $\\text{adj}\\, A$ and $A^{-1}$ (here $|A| = 1$).", "math": "A^{-1} = \\dfrac{1}{1}\\,\\text{adj}\\, A = \\begin{bmatrix} -3 & -2 & -4 \\\\ 2 & 1 & 2 \\\\ 2 & 1 & 3 \\end{bmatrix}", "marks": 0.5 },
+              { "do": "Write the system in matrix form $CX = B$.", "math": "\\begin{bmatrix} 1 & -2 & 0 \\\\ 2 & -1 & -1 \\\\ 0 & -2 & 1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ 8 \\\\ 7 \\end{bmatrix}" },
+              { "do": "The rows of $C$ are the columns of $A$, so $C = A'$.", "math": "A'X = B \\;\\Rightarrow\\; X = (A')^{-1}B = (A^{-1})'B", "why": "Inverse of a transpose is the transpose of the inverse.", "marks": 0.5 },
+              { "do": "Multiply.", "math": "X = \\begin{bmatrix} -3 & 2 & 2 \\\\ -2 & 1 & 1 \\\\ -4 & 2 & 3 \\end{bmatrix}\\begin{bmatrix} 10 \\\\ 8 \\\\ 7 \\end{bmatrix} = \\begin{bmatrix} -30 + 16 + 14 \\\\ -20 + 8 + 7 \\\\ -40 + 16 + 21 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ -5 \\\\ -3 \\end{bmatrix}", "marks": 1 },
+              { "do": "Hence $x = 0$, $y = -5$, $z = -3$.", "marks": 0.5 }
+            ],
+            "mistake": "Using $X = A^{-1}B$ directly; the coefficient matrix is $A'$, not $A$."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "question": "**Case Study:** A farmer owns a triangular plot of land whose corners, on a map grid, are $A(2, 3)$, $B(-1, 0)$ and $C(3, -2)$ (1 unit = 10 m). He plans to fix a pole at a point $D(k, 1)$ on the boundary line $AB$.",
+          "parts": [
+            { "label": "(i)", "text": "Using determinants, find the area of the plot in square units.", "marks": 1 },
+            { "label": "(ii)", "text": "Find the value of $k$ so that $D$ lies on line $AB$.", "marks": 1 },
+            { "label": "(iii)", "text": "Using determinants, find the equation of line $AB$.", "marks": 2 }
+          ],
+          "solution": {
+            "answer": "(i) $9$ sq units (ii) $k = 0$ (iii) $x - y + 1 = 0$",
+            "concept": "Area $= \\dfrac{1}{2}\\left|\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}\\right|$; collinear points give area zero.",
+            "figure": "figs/q20-plot.svg",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  { "do": "Write the area as a determinant.", "math": "\\Delta = \\dfrac{1}{2}\\begin{vmatrix} 2 & 3 & 1 \\\\ -1 & 0 & 1 \\\\ 3 & -2 & 1 \\end{vmatrix}", "marks": 0.5 },
+                  { "do": "Expand along $R_1$.", "math": "\\Delta = \\dfrac{1}{2}\\left[2(0 + 2) - 3(-1 - 3) + 1(2 - 0)\\right] = \\dfrac{1}{2}(4 + 12 + 2) = 9" },
+                  { "do": "Hence area of the plot $= 9$ sq units.", "why": "On the ground this is $9 \\times 100 = 900$ m².", "marks": 0.5 }
+                ],
+                "answer": "$9$ sq units"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  { "do": "$D$ on line $AB$ means $A$, $B$, $D$ are collinear, so area is zero.", "math": "\\begin{vmatrix} 2 & 3 & 1 \\\\ -1 & 0 & 1 \\\\ k & 1 & 1 \\end{vmatrix} = 0", "marks": 0.5 },
+                  { "do": "Expand along $R_1$ and solve.", "math": "2(0 - 1) - 3(-1 - k) + 1(-1 - 0) = 0 \\;\\Rightarrow\\; 3k = 0" },
+                  { "do": "Hence $k = 0$, so the pole is at $D(0, 1)$.", "marks": 0.5 }
+                ],
+                "answer": "$k = 0$"
+              },
+              {
+                "label": "(iii)",
+                "steps": [
+                  { "do": "Let $P(x, y)$ be any point on $AB$; $P$, $A$, $B$ are collinear.", "math": "\\begin{vmatrix} x & y & 1 \\\\ 2 & 3 & 1 \\\\ -1 & 0 & 1 \\end{vmatrix} = 0", "marks": 1 },
+                  { "do": "Expand along $R_1$.", "math": "x(3 - 0) - y(2 + 1) + 1(0 + 3) = 0 \\;\\Rightarrow\\; 3x - 3y + 3 = 0", "marks": 0.5 },
+                  { "do": "Divide by 3 to get the equation of line $AB$.", "math": "x - y + 1 = 0", "marks": 0.5 }
+                ],
+                "answer": "$x - y + 1 = 0$"
+              }
+            ],
+            "mistake": "In (ii), using $C$ instead of $B$; $D$ must be collinear with $A$ and $B$."
+          }
+        }
+      ]
+    }
+  ]
+}
