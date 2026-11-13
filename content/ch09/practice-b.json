@@ -504,7 +504,7 @@
               {
                 "do": "Here $P=-\\dfrac{t}{1+t}=-1+\\dfrac{1}{1+t}$. Integrate $P$.",
                 "math": "\\displaystyle\\int P\\,dt=-t+\\log(1+t)",
-                "why": "$\\dfrac{t}{1+t}=1-\\dfrac{1}{1+t}$",
+                "why": "$t=(1+t)-1$, so $\\dfrac{t}{1+t}=1-\\dfrac{1}{1+t}$",
                 "marks": 0.5
               },
               {
@@ -717,7 +717,7 @@
           "source": "CBSE SQP 2026-27",
           "question": "Find the particular solution of the differential equation $(x^2+y^2)\\,dy=xy\\,dx$, given that $y(0)=1$.",
           "solution": {
-            "answer": "$x^2=2y^2\\log|y|$",
+            "answer": "$x^2=2y^2\\log|y|$, i.e. $y=e^{\\frac{x^2}{2y^2}}$",
             "concept": "Homogeneous equation: put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.",
             "steps": [
               {
@@ -727,8 +727,7 @@
               },
               {
                 "do": "Put $y=vx$.",
-                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{v}{1+v^2}",
-                "marks": 0.5
+                "math": "v+x\\dfrac{dv}{dx}=\\dfrac{v}{1+v^2}"
               },
               {
                 "do": "Move $v$ to the right.",
@@ -737,8 +736,7 @@
               },
               {
                 "do": "Separate the variables.",
-                "math": "\\left(\\dfrac{1}{v^3}+\\dfrac{1}{v}\\right)dv=-\\dfrac{dx}{x}",
-                "marks": 0.5
+                "math": "\\left(\\dfrac{1}{v^3}+\\dfrac{1}{v}\\right)dv=-\\dfrac{dx}{x}"
               },
               {
                 "do": "Integrate both sides.",
@@ -747,10 +745,16 @@
               },
               {
                 "do": "Put $v=\\dfrac{y}{x}$; $\\log|x|$ cancels.",
-                "math": "-\\dfrac{x^2}{2y^2}+\\log|y|-\\log|x|=-\\log|x|+C\\ \\Rightarrow\\ \\log|y|-\\dfrac{x^2}{2y^2}=C"
+                "math": "-\\dfrac{x^2}{2y^2}+\\log|y|-\\log|x|=-\\log|x|+C\\ \\Rightarrow\\ \\log|y|-\\dfrac{x^2}{2y^2}=C",
+                "marks": 0.5
               },
               {
-                "do": "Put $x=0$, $y=1$: $C=0$. Hence the particular solution is $x^2=2y^2\\log|y|$.",
+                "do": "Put $x=0$, $y=1$.",
+                "math": "\\log 1-0=C\\ \\Rightarrow\\ C=0",
+                "marks": 0.5
+              },
+              {
+                "do": "Hence the particular solution is $x^2=2y^2\\log|y|$.",
                 "math": "\\log|y|=\\dfrac{x^2}{2y^2}\\ \\Rightarrow\\ x^2=2y^2\\log|y|",
                 "marks": 0.5
               }
@@ -826,7 +830,7 @@
             },
             {
               "label": "(iii)(a)",
-              "text": "Find the amount of medicine present 6 hours after the dose.",
+              "text": "Find the amount of medicine present 6 hours after the dose, and the percentage of the dose removed by then.",
               "marks": 2
             },
             {
@@ -837,7 +841,7 @@
             }
           ],
           "solution": {
-            "answer": "(i) $\\dfrac{dA}{dt}=-kA$, order 1, degree 1; (ii) shown; (iii)(a) 225 mg; OR (iii)(b) after 9 hours",
+            "answer": "(i) $\\dfrac{dA}{dt}=-kA$, order 1, degree 1; (ii) shown; (iii)(a) 225 mg, 43.75% removed; OR (iii)(b) after 9 hours",
             "concept": "Rate proportional to amount: $\\dfrac{dA}{dt}=-kA$ gives $A=A_0e^{-kt}$.",
             "figure": "figs/pb-q20.svg",
             "parts": [
@@ -892,14 +896,19 @@
                   {
                     "do": "Simplify.",
                     "math": "A=400\\times\\dfrac{9}{16}=225",
-                    "marks": 1
+                    "marks": 0.5
                   },
                   {
-                    "do": "Hence 225 mg of medicine is present after 6 hours.",
+                    "do": "Amount removed $=400-225=175$ mg. Find it as a percentage of the dose.",
+                    "math": "\\dfrac{175}{400}\\times 100=43.75\\%",
+                    "marks": 0.5
+                  },
+                  {
+                    "do": "Hence 225 mg is present after 6 hours, and 43.75% of the dose has been removed.",
                     "marks": 0.5
                   }
                 ],
-                "answer": "225 mg"
+                "answer": "225 mg; 43.75% removed"
               },
               {
                 "label": "(iii)(b)",

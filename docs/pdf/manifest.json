@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T13:09:30.818Z",
+  "generated": "2026-11-13T13:10:42.484Z",
   "items": [
     {
       "key": "ch01/school",
@@ -559,13 +559,13 @@
         "file": "ch09/practice-b-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 9: Differential Equations (Practice Set B), step-wise solutions",
         "pages": 17,
-        "bytes": 577347
+        "bytes": 580773
       },
       "worksheet": {
         "file": "ch09/practice-b-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 9: Differential Equations",
         "pages": 4,
-        "bytes": 239551
+        "bytes": 240170
       }
     },
     {
