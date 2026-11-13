@@ -1,0 +1,480 @@
+{
+  "chapter": 6,
+  "chapterTitle": "Application of Derivatives",
+  "set": "practice-a",
+  "title": "Practice Set A",
+  "totalMarks": 52,
+  "levels": [
+    {
+      "name": "Level 1",
+      "marks": 8,
+      "questions": [
+        {
+          "n": 1,
+          "marks": 1,
+          "type": "mcq",
+          "source": "Board-pattern",
+          "question": "The radius of a circular plate is increasing at the rate of $0.2$ cm/s. The rate at which its area is increasing when the radius is $5$ cm is:",
+          "options": [
+            "$\\pi\\ \\text{cm}^2/\\text{s}$",
+            "$2\\pi\\ \\text{cm}^2/\\text{s}$",
+            "$10\\pi\\ \\text{cm}^2/\\text{s}$",
+            "$25\\pi\\ \\text{cm}^2/\\text{s}$"
+          ],
+          "solution": {
+            "answer": "(B) $2\\pi\\ \\text{cm}^2/\\text{s}$",
+            "concept": "Chain rule: $\\dfrac{dA}{dt} = \\dfrac{dA}{dr}\\cdot\\dfrac{dr}{dt}$",
+            "steps": [
+              { "do": "Area of a circle", "math": "A = \\pi r^2" },
+              { "do": "Differentiate both sides w.r.t. $t$", "math": "\\dfrac{dA}{dt} = 2\\pi r\\,\\dfrac{dr}{dt}" },
+              { "do": "Put $r = 5$ and $\\dfrac{dr}{dt} = 0.2$", "math": "\\dfrac{dA}{dt} = 2\\pi(5)(0.2) = 2\\pi\\ \\text{cm}^2/\\text{s}", "marks": 1 }
+            ],
+            "mistake": "Forgetting to multiply by $\\dfrac{dr}{dt}$ gives $10\\pi$."
+          }
+        },
+        {
+          "n": 2,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2024-25",
+          "question": "The interval in which the function $f$ defined by $f(x) = e^x$ is strictly increasing, is:",
+          "options": [
+            "$[1, \\infty)$",
+            "$(-\\infty, 0)$",
+            "$(-\\infty, \\infty)$",
+            "$(0, \\infty)$"
+          ],
+          "solution": {
+            "answer": "(C) $(-\\infty, \\infty)$",
+            "concept": "If $f'(x) > 0$ for all $x$ in an interval, $f$ is strictly increasing there.",
+            "steps": [
+              { "do": "Differentiate", "math": "f'(x) = e^x" },
+              { "do": "$e^x > 0$ for every real $x$", "math": "f'(x) > 0 \\ \\text{for all } x \\in \\mathbb{R}" },
+              { "do": "So $f$ is strictly increasing on the whole real line", "math": "(-\\infty, \\infty)", "marks": 1 }
+            ],
+            "mistake": "Options (A), (B), (D) are only parts of $\\mathbb{R}$; the full interval is $(-\\infty, \\infty)$."
+          }
+        },
+        {
+          "n": 3,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE SQP 2025-26",
+          "question": "A function $f(x) = 10 - x - 2x^2$ is increasing on the interval:",
+          "options": [
+            "$\\left(-\\infty, -\\dfrac{1}{4}\\right]$",
+            "$\\left(-\\infty, \\dfrac{1}{4}\\right)$",
+            "$\\left[-\\dfrac{1}{4}, \\infty\\right)$",
+            "$\\left[-\\dfrac{1}{4}, \\dfrac{1}{4}\\right]$"
+          ],
+          "solution": {
+            "answer": "(A) $\\left(-\\infty, -\\dfrac{1}{4}\\right]$",
+            "concept": "$f$ is increasing where $f'(x) \\ge 0$.",
+            "steps": [
+              { "do": "Differentiate", "math": "f'(x) = -1 - 4x" },
+              { "do": "Put $f'(x) \\ge 0$", "math": "-1 - 4x \\ge 0 \\;\\Rightarrow\\; 4x \\le -1" },
+              { "do": "Divide by $4$", "math": "x \\le -\\dfrac{1}{4} \\;\\Rightarrow\\; \\left(-\\infty, -\\dfrac{1}{4}\\right]", "marks": 1 }
+            ],
+            "mistake": "Getting $x \\ge -\\dfrac{1}{4}$ by a sign slip, which gives (C), where $f$ actually decreases."
+          }
+        },
+        {
+          "n": 4,
+          "marks": 1,
+          "type": "mcq",
+          "source": "CBSE 2025",
+          "question": "The absolute maximum value of the function $f(x) = x^3 - 3x + 2$ in $[0, 2]$ is:",
+          "options": [
+            "$0$",
+            "$2$",
+            "$4$",
+            "$5$"
+          ],
+          "solution": {
+            "answer": "(C) $4$",
+            "concept": "On $[a, b]$, compare $f$ at the critical points and at the end points.",
+            "steps": [
+              { "do": "Differentiate and equate to zero", "math": "f'(x) = 3x^2 - 3 = 0 \\;\\Rightarrow\\; x = \\pm 1" },
+              { "do": "Only $x = 1$ lies in $[0, 2]$; find the values", "math": "f(0) = 2,\\quad f(1) = 0,\\quad f(2) = 4" },
+              { "do": "Largest value", "math": "\\text{Absolute maximum} = 4 \\ \\text{at } x = 2", "marks": 1 }
+            ],
+            "mistake": "Checking only the critical point $x = 1$ and forgetting the end points."
+          }
+        },
+        {
+          "n": 5,
+          "marks": 1,
+          "type": "mcq",
+          "source": "PYQ-style",
+          "question": "The local minimum value of $f(x) = x^3 - 3x$ is:",
+          "options": [
+            "$-2$",
+            "$2$",
+            "$1$",
+            "$-1$"
+          ],
+          "solution": {
+            "answer": "(A) $-2$",
+            "concept": "Second derivative test: $f'(c) = 0$ and $f''(c) > 0$ gives a local minimum at $c$.",
+            "steps": [
+              { "do": "Differentiate and equate to zero", "math": "f'(x) = 3x^2 - 3 = 0 \\;\\Rightarrow\\; x = \\pm 1" },
+              { "do": "Second derivative test", "math": "f''(x) = 6x,\\quad f''(1) = 6 > 0" },
+              { "do": "So local minimum at $x = 1$; its value is", "math": "f(1) = 1 - 3 = -2", "marks": 1 }
+            ],
+            "mistake": "Giving the point $x = 1$, or the local maximum value $2$, instead of $f(1) = -2$."
+          }
+        },
+        {
+          "n": 6,
+          "marks": 1,
+          "type": "assertion-reason",
+          "source": "CBSE SQP 2023-24",
+          "question": "Let $f(x)$ be a polynomial function of degree 6 such that $\\dfrac{d}{dx}\\big(f(x)\\big) = (x-1)^3(x-3)^2$. **Assertion (A):** $f(x)$ has a minimum at $x = 1$. **Reason (R):** When $\\dfrac{d}{dx}\\big(f(x)\\big) < 0$ for all $x \\in (a-h, a)$ and $\\dfrac{d}{dx}\\big(f(x)\\big) > 0$ for all $x \\in (a, a+h)$, where $h$ is an infinitesimally small positive quantity, then $f(x)$ has a minimum at $x = a$, provided $f(x)$ is continuous at $x = a$.",
+          "options": [
+            "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+            "Both Assertion (A) and Reason (R) are true, but Reason (R) is **not** the correct explanation of the Assertion (A).",
+            "Assertion (A) is true, but Reason (R) is false.",
+            "Assertion (A) is false, but Reason (R) is true."
+          ],
+          "solution": {
+            "answer": "(A) Both true; R is the correct explanation of A.",
+            "concept": "First derivative test: $f'$ changes from $-$ to $+$ at $c$ means local minimum at $c$.",
+            "steps": [
+              { "do": "Near $x = 1$, $(x-3)^2 > 0$ and $(x-1)^3$ changes sign from $-$ to $+$", "math": "x < 1: f'(x) < 0,\\qquad x > 1: f'(x) > 0" },
+              { "do": "So $f$ has a minimum at $x = 1$: **A is true**" },
+              { "do": "R is the first derivative test: **R is true**" },
+              { "do": "A is obtained by applying R at $a = 1$: R explains A", "math": "\\text{Option (A)}", "marks": 1 }
+            ],
+            "mistake": "Thinking $(x-1)^3$ keeps one sign; an odd power changes sign at $x = 1$."
+          }
+        },
+        {
+          "n": 7,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE 2025",
+          "question": "The side of an equilateral triangle is increasing at the rate of $3$ cm/s. At what rate is its area increasing when the side of the triangle is $15$ cm?",
+          "solution": {
+            "answer": "Area increases at $\\dfrac{45\\sqrt{3}}{2}\\ \\text{cm}^2/\\text{s}$",
+            "concept": "Area of an equilateral triangle of side $x$ is $\\dfrac{\\sqrt{3}}{4}x^2$.",
+            "steps": [
+              { "do": "Let side $= x$; write the area", "math": "A = \\dfrac{\\sqrt{3}}{4}x^2", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $t$", "math": "\\dfrac{dA}{dt} = \\dfrac{\\sqrt{3}}{4}\\cdot 2x\\,\\dfrac{dx}{dt}", "marks": 0.5 },
+              { "do": "Put $x = 15$, $\\dfrac{dx}{dt} = 3$", "math": "\\dfrac{dA}{dt} = \\dfrac{\\sqrt{3}}{4}\\cdot 2(15)(3) = \\dfrac{45\\sqrt{3}}{2}", "marks": 0.5 },
+              { "do": "Hence the area increases at", "math": "\\dfrac{45\\sqrt{3}}{2}\\ \\text{cm}^2/\\text{s}", "marks": 0.5 }
+            ],
+            "mistake": "Dropping the $\\dfrac{dx}{dt} = 3$ factor, or writing the units as cm/s."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 2",
+      "marks": 19,
+      "questions": [
+        {
+          "n": 8,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2025",
+          "question": "Find the intervals in which the function $f(x) = 5x^3 - 3x^2$ is (i) increasing (ii) decreasing.",
+          "solution": {
+            "answer": "(i) Increasing in $(-\\infty, 0] \\cup \\left[\\dfrac{2}{5}, \\infty\\right)$ (ii) Decreasing in $\\left[0, \\dfrac{2}{5}\\right]$",
+            "concept": "$f'(x) \\ge 0$ gives increasing; $f'(x) \\le 0$ gives decreasing.",
+            "steps": [
+              { "do": "Differentiate and factorise", "math": "f'(x) = 15x^2 - 6x = 3x(5x - 2)", "marks": 1 },
+              { "do": "Put $f'(x) = 0$", "math": "x = 0,\\quad x = \\dfrac{2}{5}", "marks": 0.5 },
+              { "do": "Check the sign of $f'(x)$ in each interval", "math": "\\begin{aligned} x < 0 &: f'(x) > 0 \\\\ 0 < x < \\tfrac{2}{5} &: f'(x) < 0 \\\\ x > \\tfrac{2}{5} &: f'(x) > 0 \\end{aligned}", "marks": 0.5 },
+              { "do": "(i) $f$ is increasing in", "math": "(-\\infty, 0] \\cup \\left[\\dfrac{2}{5}, \\infty\\right)", "marks": 0.5 },
+              { "do": "(ii) $f$ is decreasing in", "math": "\\left[0, \\dfrac{2}{5}\\right]", "marks": 0.5 }
+            ],
+            "mistake": "Skipping the sign check: $f'(x) < 0$ between $0$ and $\\dfrac{2}{5}$, so $f$ falls there."
+          }
+        },
+        {
+          "n": 9,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2025-26",
+          "question": "A spherical ball of ice melts in such a way that the rate at which its volume decreases at any instant is directly proportional to its surface area. Prove that the radius of the ice ball decreases at a constant rate.",
+          "solution": {
+            "answer": "$\\dfrac{dr}{dt} = -k$, a constant; so the radius decreases at a constant rate.",
+            "concept": "$V = \\dfrac{4}{3}\\pi r^3$, $S = 4\\pi r^2$, and $\\dfrac{dV}{dt} = \\dfrac{dV}{dr}\\cdot\\dfrac{dr}{dt}$",
+            "steps": [
+              { "do": "Let radius $= r$ at time $t$", "math": "V = \\dfrac{4}{3}\\pi r^3,\\qquad S = 4\\pi r^2" },
+              { "do": "Given: volume decreases at a rate proportional to $S$ ($k > 0$)", "math": "\\dfrac{dV}{dt} = -kS = -4k\\pi r^2", "marks": 0.5 },
+              { "do": "Differentiate $V$ w.r.t. $t$", "math": "\\dfrac{dV}{dt} = 4\\pi r^2\\,\\dfrac{dr}{dt}", "marks": 0.5 },
+              { "do": "Equate the two expressions", "math": "4\\pi r^2\\,\\dfrac{dr}{dt} = -4k\\pi r^2", "marks": 0.5 },
+              { "do": "Cancel $4\\pi r^2$. Hence the radius decreases at a constant rate $k$", "math": "\\dfrac{dr}{dt} = -k \\ (\\text{constant})", "marks": 0.5 }
+            ],
+            "mistake": "Leaving out the minus sign: the volume is decreasing, so $\\dfrac{dV}{dt}$ is negative."
+          }
+        },
+        {
+          "n": 10,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the local maximum and local minimum values of $f(x) = 3x^4 + 4x^3 - 12x^2 + 12$.",
+          "solution": {
+            "answer": "Local maximum value $12$ (at $x = 0$); local minimum values $-20$ (at $x = -2$) and $7$ (at $x = 1$)",
+            "concept": "Second derivative test: $f''(c) < 0$ gives local max, $f''(c) > 0$ gives local min.",
+            "steps": [
+              { "do": "Differentiate and factorise", "math": "f'(x) = 12x^3 + 12x^2 - 24x = 12x(x + 2)(x - 1)", "marks": 0.5 },
+              { "do": "Put $f'(x) = 0$", "math": "x = -2,\\ 0,\\ 1", "marks": 0.5 },
+              { "do": "Second derivative", "math": "f''(x) = 36x^2 + 24x - 24", "marks": 0.5 },
+              { "do": "At $x = -2$: $f''(-2) = 72 > 0$, local minimum", "math": "f(-2) = 48 - 32 - 48 + 12 = -20", "marks": 0.5 },
+              { "do": "At $x = 0$: $f''(0) = -24 < 0$, local maximum", "math": "f(0) = 12", "marks": 0.5 },
+              { "do": "At $x = 1$: $f''(1) = 36 > 0$, local minimum", "math": "f(1) = 3 + 4 - 12 + 12 = 7", "marks": 0.5 },
+              { "do": "Hence local maximum value $= 12$; local minimum values $= -20$ and $7$" }
+            ],
+            "mistake": "Missing the root $x = 0$ after taking $12x$ common."
+          }
+        },
+        {
+          "n": 11,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2023-24",
+          "question": "Find the interval/s in which the function $f : \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = xe^x$ is increasing.",
+          "solution": {
+            "answer": "$f$ is increasing in $[-1, \\infty)$",
+            "concept": "Product rule: $(uv)' = u'v + uv'$; $f$ increases where $f'(x) \\ge 0$.",
+            "steps": [
+              { "do": "Differentiate by the product rule", "math": "f'(x) = e^x + xe^x = e^x(x + 1)", "marks": 1 },
+              { "do": "Put $f'(x) = 0$; $e^x$ is never zero", "math": "x + 1 = 0 \\;\\Rightarrow\\; x = -1", "marks": 0.5 },
+              { "do": "Sign of $f'(x)$, using $e^x > 0$", "math": "\\begin{aligned} x > -1 &: f'(x) > 0 \\\\ x < -1 &: f'(x) < 0 \\end{aligned}", "marks": 1 },
+              { "do": "Hence $f$ is increasing in", "math": "[-1, \\infty)", "marks": 0.5 }
+            ],
+            "mistake": "Trying to solve $e^x = 0$; it has no solution, so only $x + 1$ decides the sign."
+          }
+        },
+        {
+          "n": 12,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE SQP 2024-25",
+          "question": "A kite is flying at a height of $3$ metres and $5$ metres of string is out. If the kite is moving away horizontally at the rate of $200$ cm/s, find the rate at which the string is being released.",
+          "solution": {
+            "answer": "String is released at $1.6$ m/s ($= 160$ cm/s)",
+            "concept": "Pythagoras theorem, then differentiate w.r.t. $t$.",
+            "figure": "figs/pa-q12-kite.svg",
+            "steps": [
+              { "do": "Let horizontal distance $= x$ m and string $= s$ m; height is fixed at $3$ m", "math": "s^2 = x^2 + 3^2", "marks": 0.5 },
+              { "do": "When $s = 5$", "math": "x = \\sqrt{25 - 9} = 4\\ \\text{m}", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $t$", "math": "2s\\,\\dfrac{ds}{dt} = 2x\\,\\dfrac{dx}{dt}", "marks": 1 },
+              { "do": "Put $x = 4$, $s = 5$, $\\dfrac{dx}{dt} = 200$ cm/s $= 2$ m/s", "math": "\\dfrac{ds}{dt} = \\dfrac{4 \\times 2}{5} = 1.6\\ \\text{m/s}", "marks": 0.5 },
+              { "do": "Hence the string is released at $1.6$ m/s, i.e. $160$ cm/s", "marks": 0.5 }
+            ],
+            "mistake": "Mixing cm/s with metres; convert $200$ cm/s to $2$ m/s first."
+          }
+        },
+        {
+          "n": 13,
+          "marks": 3,
+          "type": "short",
+          "source": "CBSE 2025",
+          "question": "Find the absolute maximum and absolute minimum of the function $f(x) = 2x^3 - 15x^2 + 36x + 1$ on $[1, 5]$.",
+          "solution": {
+            "answer": "Absolute maximum $= 56$ at $x = 5$; absolute minimum $= 24$ at $x = 1$",
+            "concept": "On $[a, b]$, compare $f$ at all critical points and at both end points.",
+            "steps": [
+              { "do": "Differentiate and factorise", "math": "f'(x) = 6x^2 - 30x + 36 = 6(x - 2)(x - 3)", "marks": 0.5 },
+              { "do": "Critical points (both lie in $[1, 5]$)", "math": "x = 2,\\quad x = 3", "marks": 0.5 },
+              { "do": "Values at critical points and end points", "math": "\\begin{aligned} f(1) &= 24, & f(2) &= 29 \\\\ f(3) &= 28, & f(5) &= 56 \\end{aligned}", "marks": 1 },
+              { "do": "Largest value", "math": "\\text{Absolute maximum} = 56 \\ \\text{at } x = 5", "marks": 0.5 },
+              { "do": "Smallest value", "math": "\\text{Absolute minimum} = 24 \\ \\text{at } x = 1", "marks": 0.5 }
+            ],
+            "mistake": "Taking the local max $f(2) = 29$ as the absolute maximum without checking $f(5)$."
+          }
+        },
+        {
+          "n": 14,
+          "marks": 2,
+          "type": "short",
+          "source": "CBSE SQP 2023-24",
+          "question": "Find the maximum profit that a company can make, if the profit function is given by $P(x) = 72 + 42x - x^2$, where $x$ is the number of units and $P$ is the profit in rupees.",
+          "solution": {
+            "answer": "Maximum profit $= ₹\\,513$ (at $x = 21$ units)",
+            "concept": "$P'(x) = 0$ and $P''(x) < 0$ give the maximum.",
+            "steps": [
+              { "do": "Differentiate", "math": "P'(x) = 42 - 2x", "marks": 0.5 },
+              { "do": "Put $P'(x) = 0$", "math": "x = 21", "marks": 0.5 },
+              { "do": "Second derivative test", "math": "P''(x) = -2 < 0 \\;\\Rightarrow\\; \\text{maximum at } x = 21", "marks": 0.5 },
+              { "do": "Maximum profit", "math": "P(21) = 72 + 882 - 441 = ₹\\,513", "marks": 0.5 }
+            ],
+            "mistake": "Stopping at $x = 21$; the question asks for the profit $P(21)$."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "marks": 25,
+      "questions": [
+        {
+          "n": 15,
+          "marks": 5,
+          "type": "long",
+          "source": "Board-pattern",
+          "question": "Show that among all right-angled triangles with a given hypotenuse $h$, the isosceles triangle has the maximum area. Also find this maximum area.",
+          "solution": {
+            "answer": "Area is maximum when both legs equal $\\dfrac{h}{\\sqrt{2}}$ (isosceles); maximum area $= \\dfrac{h^2}{4}$",
+            "concept": "Area and (area)$^2$ are maximum together, so maximise $S = A^2$ to avoid the square root.",
+            "figure": "figs/pa-q15-right-triangle.svg",
+            "steps": [
+              { "do": "Let the legs be $x$ and $y$; by Pythagoras", "math": "x^2 + y^2 = h^2 \\;\\Rightarrow\\; y = \\sqrt{h^2 - x^2}", "marks": 1 },
+              { "do": "Area of the triangle", "math": "A = \\dfrac{1}{2}x\\sqrt{h^2 - x^2}", "marks": 0.5 },
+              { "do": "Let $S = A^2$", "math": "S = \\dfrac{1}{4}x^2(h^2 - x^2) = \\dfrac{1}{4}(h^2x^2 - x^4)", "why": "$A > 0$, so $A$ and $A^2$ are maximum together", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $x$", "math": "\\dfrac{dS}{dx} = \\dfrac{1}{4}(2h^2x - 4x^3)", "marks": 0.5 },
+              { "do": "Put $\\dfrac{dS}{dx} = 0$ ($x \\neq 0$)", "math": "x^2 = \\dfrac{h^2}{2} \\;\\Rightarrow\\; x = \\dfrac{h}{\\sqrt{2}}", "marks": 0.5 },
+              { "do": "Second derivative test", "math": "\\dfrac{d^2S}{dx^2} = \\dfrac{1}{4}(2h^2 - 12x^2) = \\dfrac{1}{4}(2h^2 - 6h^2) = -h^2 < 0", "marks": 1 },
+              { "do": "So the area is maximum; find the other leg", "math": "y = \\sqrt{h^2 - \\dfrac{h^2}{2}} = \\dfrac{h}{\\sqrt{2}} = x", "marks": 0.5 },
+              { "do": "Legs are equal, so the triangle is isosceles. Maximum area", "math": "A = \\dfrac{1}{2}\\cdot\\dfrac{h}{\\sqrt{2}}\\cdot\\dfrac{h}{\\sqrt{2}} = \\dfrac{h^2}{4}", "marks": 0.5 }
+            ],
+            "mistake": "Differentiating $A$ directly and making an error with the square root; work with $S = A^2$."
+          }
+        },
+        {
+          "n": 16,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "Show that the altitude of the right circular cone of maximum volume that can be inscribed in a sphere of radius $r$ is $\\dfrac{4r}{3}$. Also show that the maximum volume of the cone is $\\dfrac{8}{27}$ of the volume of the sphere.",
+          "solution": {
+            "answer": "Altitude $= \\dfrac{4r}{3}$; maximum volume $= \\dfrac{32\\pi r^3}{81} = \\dfrac{8}{27}\\times\\dfrac{4}{3}\\pi r^3$",
+            "concept": "Write $V$ in one variable $h$, then use $V'(h) = 0$ and $V''(h) < 0$.",
+            "figure": "figs/pa-q16-cone-in-sphere.svg",
+            "steps": [
+              { "do": "Let the cone have height $h$ and base radius $R$. From the right triangle with hypotenuse $r$", "math": "R^2 + (h - r)^2 = r^2 \\;\\Rightarrow\\; R^2 = 2rh - h^2", "marks": 1 },
+              { "do": "Volume of the cone", "math": "V = \\dfrac{1}{3}\\pi R^2 h = \\dfrac{\\pi}{3}(2rh^2 - h^3)", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $h$", "math": "\\dfrac{dV}{dh} = \\dfrac{\\pi}{3}(4rh - 3h^2)", "marks": 0.5 },
+              { "do": "Put $\\dfrac{dV}{dh} = 0$ ($h \\neq 0$)", "math": "4r = 3h \\;\\Rightarrow\\; h = \\dfrac{4r}{3}", "marks": 0.5 },
+              { "do": "Second derivative at $h = \\dfrac{4r}{3}$", "math": "\\dfrac{d^2V}{dh^2} = \\dfrac{\\pi}{3}(4r - 6h) = \\dfrac{\\pi}{3}(4r - 8r) = -\\dfrac{4\\pi r}{3} < 0", "marks": 1 },
+              { "do": "So $V$ is maximum when altitude $h = \\dfrac{4r}{3}$. Then", "math": "R^2 = 2r\\cdot\\dfrac{4r}{3} - \\dfrac{16r^2}{9} = \\dfrac{8r^2}{9}", "marks": 0.5 },
+              { "do": "Maximum volume", "math": "V = \\dfrac{1}{3}\\pi\\cdot\\dfrac{8r^2}{9}\\cdot\\dfrac{4r}{3} = \\dfrac{32\\pi r^3}{81}", "marks": 0.5 },
+              { "do": "Compare with the sphere's volume $\\dfrac{4}{3}\\pi r^3$", "math": "\\dfrac{32\\pi r^3/81}{4\\pi r^3/3} = \\dfrac{32}{81}\\cdot\\dfrac{3}{4} = \\dfrac{8}{27}", "marks": 0.5 }
+            ],
+            "mistake": "Taking the distance from the centre to the base as $h$ instead of $h - r$."
+          }
+        },
+        {
+          "n": 17,
+          "marks": 5,
+          "type": "long",
+          "source": "PYQ-style",
+          "question": "A window is in the form of a rectangle surmounted by an equilateral triangle. The perimeter of the window is $12$ m. Find the dimensions of the rectangle that will produce the largest area of the window.",
+          "figure": "figs/pa-q17-window.svg",
+          "solution": {
+            "answer": "Width $= \\dfrac{12}{6 - \\sqrt{3}}$ m ($\\approx 2.81$ m), height $= \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}}$ m ($\\approx 1.78$ m)",
+            "concept": "Use the perimeter to write area in one variable, then $A'(x) = 0$, $A''(x) < 0$.",
+            "steps": [
+              { "do": "Let width $= x$, height $= y$. Perimeter = base + 2 heights + 2 triangle sides", "math": "x + 2y + 2x = 12 \\;\\Rightarrow\\; y = \\dfrac{12 - 3x}{2}", "marks": 1 },
+              { "do": "Area of window = rectangle + equilateral triangle", "math": "A = xy + \\dfrac{\\sqrt{3}}{4}x^2", "marks": 0.5 },
+              { "do": "Substitute $y$", "math": "A = 6x - \\dfrac{3}{2}x^2 + \\dfrac{\\sqrt{3}}{4}x^2", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $x$", "math": "\\dfrac{dA}{dx} = 6 - 3x + \\dfrac{\\sqrt{3}}{2}x", "marks": 0.5 },
+              { "do": "Put $\\dfrac{dA}{dx} = 0$", "math": "x\\left(3 - \\dfrac{\\sqrt{3}}{2}\\right) = 6 \\;\\Rightarrow\\; x = \\dfrac{12}{6 - \\sqrt{3}}", "marks": 0.5 },
+              { "do": "Second derivative test", "math": "\\dfrac{d^2A}{dx^2} = -3 + \\dfrac{\\sqrt{3}}{2} < 0 \\;\\Rightarrow\\; \\text{maximum}", "marks": 1 },
+              { "do": "Find $y$", "math": "y = 6 - \\dfrac{3}{2}\\cdot\\dfrac{12}{6 - \\sqrt{3}} = \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}}", "marks": 0.5 },
+              { "do": "Hence, for the largest area, the rectangle has", "math": "\\text{width} = \\dfrac{12}{6 - \\sqrt{3}}\\ \\text{m},\\quad \\text{height} = \\dfrac{18 - 6\\sqrt{3}}{6 - \\sqrt{3}}\\ \\text{m}", "marks": 0.5 }
+            ],
+            "mistake": "Counting the common side (top of the rectangle) in the perimeter: it is not on the boundary."
+          }
+        },
+        {
+          "n": 18,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "Find the intervals in which the function $f(x) = \\sin^4 x + \\cos^4 x$, $0 \\le x \\le \\dfrac{\\pi}{2}$, is strictly increasing or strictly decreasing.",
+          "solution": {
+            "answer": "Strictly decreasing in $\\left(0, \\dfrac{\\pi}{4}\\right)$; strictly increasing in $\\left(\\dfrac{\\pi}{4}, \\dfrac{\\pi}{2}\\right)$",
+            "concept": "$2\\sin x\\cos x = \\sin 2x$, $\\cos^2 x - \\sin^2 x = \\cos 2x$, $2\\sin 2x\\cos 2x = \\sin 4x$",
+            "steps": [
+              { "do": "Differentiate", "math": "f'(x) = 4\\sin^3 x\\cos x - 4\\cos^3 x\\sin x", "marks": 0.5 },
+              { "do": "Take $-4\\sin x\\cos x$ common and use double-angle formulas", "math": "f'(x) = -4\\sin x\\cos x(\\cos^2 x - \\sin^2 x) = -2\\sin 2x\\cos 2x = -\\sin 4x", "marks": 0.5 },
+              { "do": "Put $f'(x) = 0$ for $0 < x < \\dfrac{\\pi}{2}$, i.e. $0 < 4x < 2\\pi$", "math": "\\sin 4x = 0 \\;\\Rightarrow\\; 4x = \\pi \\;\\Rightarrow\\; x = \\dfrac{\\pi}{4}", "marks": 0.5 },
+              { "do": "For $0 < x < \\dfrac{\\pi}{4}$: $0 < 4x < \\pi$, so $\\sin 4x > 0$", "math": "f'(x) < 0 \\;\\Rightarrow\\; \\text{strictly decreasing in } \\left(0, \\dfrac{\\pi}{4}\\right)", "marks": 1 },
+              { "do": "For $\\dfrac{\\pi}{4} < x < \\dfrac{\\pi}{2}$: $\\pi < 4x < 2\\pi$, so $\\sin 4x < 0$", "math": "f'(x) > 0 \\;\\Rightarrow\\; \\text{strictly increasing in } \\left(\\dfrac{\\pi}{4}, \\dfrac{\\pi}{2}\\right)", "marks": 0.5 }
+            ],
+            "mistake": "Forgetting the minus sign in $f'(x) = -\\sin 4x$, which swaps the two answers."
+          }
+        },
+        {
+          "n": 19,
+          "marks": 3,
+          "type": "short",
+          "source": "PYQ-style",
+          "question": "A water tank has the shape of an inverted right circular cone with its axis vertical and vertex lowermost. Its semi-vertical angle is $\\tan^{-1}(0.5)$. Water is poured into it at a constant rate of $5\\ \\text{m}^3/\\text{h}$. Find the rate at which the level of the water is rising at the instant when the depth of water in the tank is $4$ m.",
+          "solution": {
+            "answer": "The water level rises at $\\dfrac{5}{4\\pi}$ m/h ($\\approx 0.40$ m/h)",
+            "concept": "Similar triangles fix $r$ in terms of $h$; then $V = \\dfrac{1}{3}\\pi r^2 h$ in one variable.",
+            "figure": "figs/pa-q19-cone-tank.svg",
+            "steps": [
+              { "do": "Let depth $= h$ and radius of water surface $= r$; semi-vertical angle $\\alpha$ has $\\tan\\alpha = 0.5$", "math": "\\dfrac{r}{h} = 0.5 \\;\\Rightarrow\\; r = \\dfrac{h}{2}", "marks": 0.5 },
+              { "do": "Volume of water in terms of $h$", "math": "V = \\dfrac{1}{3}\\pi\\left(\\dfrac{h}{2}\\right)^2 h = \\dfrac{\\pi h^3}{12}", "marks": 0.5 },
+              { "do": "Differentiate w.r.t. $t$", "math": "\\dfrac{dV}{dt} = \\dfrac{\\pi h^2}{4}\\,\\dfrac{dh}{dt}", "marks": 1 },
+              { "do": "Put $\\dfrac{dV}{dt} = 5$, $h = 4$", "math": "5 = \\dfrac{\\pi(16)}{4}\\,\\dfrac{dh}{dt} \\;\\Rightarrow\\; \\dfrac{dh}{dt} = \\dfrac{5}{4\\pi}", "marks": 0.5 },
+              { "do": "Hence the water level rises at", "math": "\\dfrac{5}{4\\pi}\\ \\text{m/h}", "marks": 0.5 }
+            ],
+            "mistake": "Differentiating $V = \\dfrac{1}{3}\\pi r^2 h$ with both $r$ and $h$ varying; replace $r$ by $\\dfrac{h}{2}$ first."
+          }
+        },
+        {
+          "n": 20,
+          "marks": 4,
+          "type": "case",
+          "source": "CBSE SQP 2025-26",
+          "question": "**Case Study:** LED bulbs are energy-efficient because they use much less electricity than traditional bulbs while producing the same amount of light. A company manufactures a new type of energy-efficient LED bulb. The cost of production and the revenue generated by selling $x$ bulbs (in an hour) are modelled as $C(x) = 0.5x^2 - 10x + 150$ and $R(x) = -0.3x^2 + 20x$ respectively, where $C(x)$ and $R(x)$ are both in ₹. Use the given models to answer the following questions.",
+          "parts": [
+            { "label": "(i)", "text": "Derive the profit function $P(x)$.", "marks": 1 },
+            { "label": "(ii)", "text": "Find the critical points of $P(x)$.", "marks": 1 },
+            { "label": "(iii)(a)", "text": "Determine whether the critical points correspond to a maximum or a minimum profit by using the second derivative test.", "marks": 2 },
+            { "label": "(iii)(b)", "text": "Identify the possible practical value of $x$ (i.e. the number of bulbs that can realistically be produced and sold) that can maximise the profit, if the resources available and the expenditure on machines allow the company to produce a minimum of 10 but not more than 18 bulbs per hour. Also calculate the maximum profit.", "marks": 2, "alt": true }
+          ],
+          "solution": {
+            "answer": "(i) $P(x) = -0.8x^2 + 30x - 150$ (ii) $x = 18.75$ (iii)(a) $P''(x) = -1.6 < 0$, so maximum profit (iii)(b) $x = 18$ bulbs, maximum profit $= ₹\\,130.80$",
+            "concept": "Profit $=$ Revenue $-$ Cost; $P'(x) = 0$ gives critical points; $P''(x) < 0$ gives a maximum.",
+            "parts": [
+              {
+                "label": "(i)",
+                "steps": [
+                  { "do": "Profit = Revenue − Cost", "math": "P(x) = R(x) - C(x) = (-0.3x^2 + 20x) - (0.5x^2 - 10x + 150)", "marks": 0.5 },
+                  { "do": "Simplify", "math": "P(x) = -0.8x^2 + 30x - 150", "marks": 0.5 }
+                ],
+                "answer": "$P(x) = -0.8x^2 + 30x - 150$"
+              },
+              {
+                "label": "(ii)",
+                "steps": [
+                  { "do": "Differentiate", "math": "P'(x) = -1.6x + 30", "marks": 0.5 },
+                  { "do": "Put $P'(x) = 0$", "math": "x = \\dfrac{30}{1.6} = 18.75", "marks": 0.5 }
+                ],
+                "answer": "Only critical point: $x = 18.75$"
+              },
+              {
+                "label": "(iii)(a)",
+                "steps": [
+                  { "do": "Second derivative", "math": "P''(x) = -1.6", "marks": 1 },
+                  { "do": "At $x = 18.75$, $P'' < 0$. Hence the critical point gives maximum profit", "math": "P''(18.75) = -1.6 < 0 \\;\\Rightarrow\\; \\text{maximum}", "marks": 1 }
+                ],
+                "answer": "$P''(18.75) = -1.6 < 0$, so $x = 18.75$ gives maximum profit"
+              },
+              {
+                "label": "(iii)(b)",
+                "alt": true,
+                "steps": [
+                  { "do": "For $x < 18.75$, $P'(x) > 0$, so $P$ is increasing on $[10, 18]$", "math": "P'(x) = -1.6x + 30 > 0 \\ \\text{for } 10 \\le x \\le 18", "marks": 1 },
+                  { "do": "So profit is greatest at the largest allowed value", "math": "x = 18 \\ \\text{bulbs per hour}", "marks": 0.5 },
+                  { "do": "Maximum profit", "math": "P(18) = -0.8(324) + 540 - 150 = 130.8", "marks": 0.5 }
+                ],
+                "answer": "$x = 18$ bulbs per hour; maximum profit $= ₹\\,130.80$"
+              }
+            ],
+            "mistake": "In (iii)(b), choosing $x = 19$ (nearest whole number to $18.75$); only $10 \\le x \\le 18$ is allowed."
+          }
+        }
+      ]
+    }
+  ]
+}
