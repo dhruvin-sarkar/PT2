@@ -1,6 +1,6 @@
 node_modules/
-source/
 .remember/
 __pycache__/
 *.log
 .tmp/
+.cache/
