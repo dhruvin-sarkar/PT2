@@ -150,6 +150,28 @@ p {
 .q-solved + .q-solved {
   margin-top: var(--sp-5);
 }
+/* A question moves to the next page whole rather than be parted from its first line of working.
+   Only a big question box (a case study, or one with parts or its own figure) may end a page with its
+   solution starting on the next: moving it whole would leave half a page blank. */
+.q[data-type="case"] > .q-box,
+.q-box:has(> .q-fig),
+.q-box:has(> .q-parts) {
+  break-after: auto;
+}
+/* the concept line stays with the solution figure; the steps may start on the next page */
+.sol-fig {
+  break-after: auto;
+}
+.sol-fig + .steps {
+  break-before: auto;
+}
+/* an inline formula is not split across two lines (fit.js shrinks one that is wider than its line) */
+.katex {
+  white-space: nowrap;
+}
+.math-alt .katex {
+  white-space: normal; /* the line-breakable fallback of a long display equation must still wrap */
+}
 
 /* ---------- worksheet (question paper) ---------- */
 .ws-lines {
@@ -287,12 +309,14 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0.94rem; /* a reference page: a touch smaller so a matrix-heavy key still fits one page */
 }
 .key-list li {
   display: grid;
   grid-template-columns: 2.4rem minmax(0, 1fr);
+  align-items: baseline; /* the number sits level with "A =" even beside a tall matrix */
   gap: var(--sp-2);
-  padding: 0.28rem 0;
+  padding: 0.2rem 0;
   border-bottom: 1px solid var(--rule);
   break-inside: avoid;
   line-height: 1.4;

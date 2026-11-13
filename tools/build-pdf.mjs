@@ -45,10 +45,14 @@ function parseArgs(argv) {
 
 function rendererHash() {
   const h = crypto.createHash('sha1');
+  // src/site/ is the website only (pages, site.css, site.js); the PDFs never read it, so it is left out
+  const siteDir = path.join(REPO_ROOT, 'src', 'site');
   const walk = (dir) => {
     for (const d of fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
       const p = path.join(dir, d.name);
-      if (d.isDirectory()) walk(p);
+      if (d.isDirectory()) {
+        if (p !== siteDir) walk(p);
+      }
       else {
         h.update(p.slice(REPO_ROOT.length));
         h.update(fs.readFileSync(p));

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T11:08:04.938Z",
+  "generated": "2026-11-13T11:59:39.266Z",
   "items": [
     {
       "key": "ch01/school",
@@ -13,13 +13,13 @@
         "file": "ch01/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 1: Relations and Functions (School Worksheet), step-wise solutions",
         "pages": 14,
-        "bytes": 530151
+        "bytes": 529838
       },
       "worksheet": {
         "file": "ch01/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 1: Relations and Functions",
         "pages": 4,
-        "bytes": 241412
+        "bytes": 241384
       }
     },
     {
@@ -34,13 +34,13 @@
         "file": "ch01/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 1: Relations and Functions (Practice Set A), step-wise solutions",
         "pages": 14,
-        "bytes": 578469
+        "bytes": 578840
       },
       "worksheet": {
         "file": "ch01/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 1: Relations and Functions",
         "pages": 5,
-        "bytes": 295829
+        "bytes": 295766
       }
     },
     {
@@ -55,13 +55,13 @@
         "file": "ch02/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 2: Inverse Trigonometric Functions (School Worksheet), step-wise solutions",
         "pages": 14,
-        "bytes": 491820
+        "bytes": 491902
       },
       "worksheet": {
         "file": "ch02/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 2: Inverse Trigonometric Functions",
-        "pages": 4,
-        "bytes": 223740
+        "pages": 3,
+        "bytes": 221389
       }
     },
     {
@@ -75,14 +75,14 @@
       "solutions": {
         "file": "ch02/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 2: Inverse Trigonometric Functions (Practice Set A), step-wise solutions",
-        "pages": 16,
-        "bytes": 516415
+        "pages": 15,
+        "bytes": 515090
       },
       "worksheet": {
         "file": "ch02/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 2: Inverse Trigonometric Functions",
         "pages": 5,
-        "bytes": 242007
+        "bytes": 242054
       }
     },
     {
@@ -96,14 +96,14 @@
       "solutions": {
         "file": "ch03/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 3: Matrices (School Worksheet), step-wise solutions",
-        "pages": 16,
-        "bytes": 493535
+        "pages": 15,
+        "bytes": 496906
       },
       "worksheet": {
         "file": "ch03/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 3: Matrices",
         "pages": 4,
-        "bytes": 230670
+        "bytes": 234474
       }
     },
     {
@@ -117,14 +117,14 @@
       "solutions": {
         "file": "ch03/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 3: Matrices (Practice Set A), step-wise solutions",
-        "pages": 15,
-        "bytes": 502904
+        "pages": 14,
+        "bytes": 505723
       },
       "worksheet": {
         "file": "ch03/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 3: Matrices",
         "pages": 4,
-        "bytes": 239878
+        "bytes": 243506
       }
     },
     {
@@ -139,13 +139,13 @@
         "file": "ch03/practice-b-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 3: Matrices (Practice Set B), step-wise solutions",
         "pages": 15,
-        "bytes": 507450
+        "bytes": 507441
       },
       "worksheet": {
         "file": "ch03/practice-b-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 3: Matrices",
         "pages": 4,
-        "bytes": 242744
+        "bytes": 242718
       }
     },
     {
@@ -160,13 +160,13 @@
         "file": "ch04/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 4: Determinants (School Worksheet), step-wise solutions",
         "pages": 16,
-        "bytes": 518377
+        "bytes": 518442
       },
       "worksheet": {
         "file": "ch04/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 4: Determinants",
         "pages": 4,
-        "bytes": 225687
+        "bytes": 225787
       }
     },
     {
@@ -181,13 +181,13 @@
         "file": "ch04/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 4: Determinants (Practice Set A), step-wise solutions",
         "pages": 16,
-        "bytes": 529458
+        "bytes": 530089
       },
       "worksheet": {
         "file": "ch04/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 4: Determinants",
         "pages": 5,
-        "bytes": 255600
+        "bytes": 255331
       }
     },
     {
@@ -202,13 +202,13 @@
         "file": "ch05/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 5: Continuity and Differentiability (School Worksheet), step-wise solutions",
         "pages": 16,
-        "bytes": 521021
+        "bytes": 521485
       },
       "worksheet": {
         "file": "ch05/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 5: Continuity and Differentiability",
         "pages": 4,
-        "bytes": 238824
+        "bytes": 238656
       }
     },
     {
@@ -222,14 +222,14 @@
       "solutions": {
         "file": "ch05/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 5: Continuity and Differentiability (Practice Set A), step-wise solutions",
-        "pages": 16,
-        "bytes": 532576
+        "pages": 15,
+        "bytes": 531853
       },
       "worksheet": {
         "file": "ch05/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 5: Continuity and Differentiability",
         "pages": 4,
-        "bytes": 248193
+        "bytes": 248052
       }
     },
     {
@@ -243,14 +243,14 @@
       "solutions": {
         "file": "ch06/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 6: Application of Derivatives (School Worksheet), step-wise solutions",
-        "pages": 18,
-        "bytes": 585178
+        "pages": 17,
+        "bytes": 582620
       },
       "worksheet": {
         "file": "ch06/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 6: Application of Derivatives",
         "pages": 4,
-        "bytes": 234093
+        "bytes": 233886
       }
     },
     {
@@ -265,13 +265,13 @@
         "file": "ch06/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 6: Application of Derivatives (Practice Set A), step-wise solutions",
         "pages": 17,
-        "bytes": 598583
+        "bytes": 599491
       },
       "worksheet": {
         "file": "ch06/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 6: Application of Derivatives",
         "pages": 5,
-        "bytes": 292215
+        "bytes": 292183
       }
     },
     {
@@ -285,14 +285,14 @@
       "solutions": {
         "file": "ch07/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 7: Integrals (School Worksheet), step-wise solutions",
-        "pages": 17,
-        "bytes": 471012
+        "pages": 16,
+        "bytes": 467427
       },
       "worksheet": {
         "file": "ch07/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 7: Integrals",
         "pages": 4,
-        "bytes": 214092
+        "bytes": 213890
       }
     },
     {
@@ -307,13 +307,13 @@
         "file": "ch07/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 7: Integrals (Practice Set A), step-wise solutions",
         "pages": 16,
-        "bytes": 502831
+        "bytes": 501386
       },
       "worksheet": {
         "file": "ch07/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 7: Integrals",
-        "pages": 5,
-        "bytes": 223913
+        "pages": 4,
+        "bytes": 222152
       }
     },
     {
@@ -328,13 +328,13 @@
         "file": "ch08/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 8: Application of Integrals (School Worksheet), step-wise solutions",
         "pages": 20,
-        "bytes": 644486
+        "bytes": 644596
       },
       "worksheet": {
         "file": "ch08/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 8: Application of Integrals",
         "pages": 4,
-        "bytes": 215014
+        "bytes": 215040
       }
     },
     {
@@ -349,13 +349,13 @@
         "file": "ch08/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 8: Application of Integrals (Practice Set A), step-wise solutions",
         "pages": 19,
-        "bytes": 614233
+        "bytes": 614274
       },
       "worksheet": {
         "file": "ch08/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 8: Application of Integrals",
         "pages": 4,
-        "bytes": 229408
+        "bytes": 229439
       }
     },
     {
@@ -370,13 +370,13 @@
         "file": "ch09/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 9: Differential Equations (School Worksheet), step-wise solutions",
         "pages": 15,
-        "bytes": 490940
+        "bytes": 490963
       },
       "worksheet": {
         "file": "ch09/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 9: Differential Equations",
         "pages": 4,
-        "bytes": 229764
+        "bytes": 229697
       }
     },
     {
@@ -391,13 +391,13 @@
         "file": "ch09/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 9: Differential Equations (Practice Set A), step-wise solutions",
         "pages": 15,
-        "bytes": 507306
+        "bytes": 507435
       },
       "worksheet": {
         "file": "ch09/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 9: Differential Equations",
         "pages": 4,
-        "bytes": 235816
+        "bytes": 235988
       }
     },
     {
@@ -412,13 +412,13 @@
         "file": "ch10/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 10: Vector Algebra (School Worksheet), step-wise solutions",
         "pages": 15,
-        "bytes": 512781
+        "bytes": 510695
       },
       "worksheet": {
         "file": "ch10/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 10: Vector Algebra",
         "pages": 4,
-        "bytes": 230613
+        "bytes": 229645
       }
     },
     {
@@ -433,13 +433,13 @@
         "file": "ch10/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 10: Vector Algebra (Practice Set A), step-wise solutions",
         "pages": 15,
-        "bytes": 512367
+        "bytes": 512714
       },
       "worksheet": {
         "file": "ch10/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 10: Vector Algebra",
         "pages": 4,
-        "bytes": 236651
+        "bytes": 236715
       }
     },
     {
@@ -453,14 +453,14 @@
       "solutions": {
         "file": "ch11/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 11: Three Dimensional Geometry (School Worksheet), step-wise solutions",
-        "pages": 16,
-        "bytes": 539897
+        "pages": 15,
+        "bytes": 536677
       },
       "worksheet": {
         "file": "ch11/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 11: Three Dimensional Geometry",
-        "pages": 5,
-        "bytes": 228851
+        "pages": 4,
+        "bytes": 226612
       }
     },
     {
@@ -475,13 +475,13 @@
         "file": "ch11/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 11: Three Dimensional Geometry (Practice Set A), step-wise solutions",
         "pages": 15,
-        "bytes": 552798
+        "bytes": 550638
       },
       "worksheet": {
         "file": "ch11/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 11: Three Dimensional Geometry",
-        "pages": 5,
-        "bytes": 234946
+        "pages": 4,
+        "bytes": 232512
       }
     },
     {
@@ -496,13 +496,13 @@
         "file": "ch12/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 12: Linear Programming (School Worksheet), step-wise solutions",
         "pages": 12,
-        "bytes": 456376
+        "bytes": 456388
       },
       "worksheet": {
         "file": "ch12/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 12: Linear Programming",
         "pages": 3,
-        "bytes": 190930
+        "bytes": 190902
       }
     },
     {
@@ -517,13 +517,13 @@
         "file": "ch12/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 12: Linear Programming (Practice Set A), step-wise solutions",
         "pages": 12,
-        "bytes": 484267
+        "bytes": 484294
       },
       "worksheet": {
         "file": "ch12/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 12: Linear Programming",
         "pages": 4,
-        "bytes": 195334
+        "bytes": 195356
       }
     },
     {
@@ -537,14 +537,14 @@
       "solutions": {
         "file": "ch13/school-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 13: Probability (School Worksheet), step-wise solutions",
-        "pages": 16,
-        "bytes": 481008
+        "pages": 14,
+        "bytes": 475864
       },
       "worksheet": {
         "file": "ch13/school-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 13: Probability",
-        "pages": 5,
-        "bytes": 217870
+        "pages": 4,
+        "bytes": 215813
       }
     },
     {
@@ -558,14 +558,14 @@
       "solutions": {
         "file": "ch13/practice-a-solutions.pdf",
         "title": "Class 12 Mathematics, Chapter 13: Probability (Practice Set A), step-wise solutions",
-        "pages": 16,
-        "bytes": 494198
+        "pages": 15,
+        "bytes": 492443
       },
       "worksheet": {
         "file": "ch13/practice-a-worksheet.pdf",
         "title": "Class 12 Mathematics, Chapter 13: Probability",
         "pages": 5,
-        "bytes": 224709
+        "bytes": 224347
       }
     }
   ]

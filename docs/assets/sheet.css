@@ -190,6 +190,19 @@
 }
 .q-options.is-grid {
   grid-template-columns: 1fr 1fr;
+  align-items: baseline; /* options side by side share one baseline, even when one holds a fraction */
+}
+.q-options.is-grid.is-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 30rem) {
+  .q-options.is-grid.is-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* stacked fractions or matrices need a little more air between rows */
+.q-options:has(.mfrac, .mtable) {
+  row-gap: var(--sp-3);
 }
 .q-opt {
   display: grid;

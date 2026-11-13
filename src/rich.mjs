@@ -8,8 +8,10 @@
  *                                      [<span class="math-alt" hidden>line-breakable KaTeX</span>]</span>
  *                                      `wrap: true` adds the line-breakable alternative for long one-line equations;
  *                                      src/client/fit.js swaps it in when scaling alone would make the maths too small.
- *   renderRich(s)                     contract "Rich text" -> HTML: $..$ inline maths, $$..$$ display maths,
- *                                      **bold** -> <strong>, everything else escaped.
+ *                                      Matrix / cases rows holding fractions get a little extra row spacing.
+ *   renderRich(s, { fullSize })       contract "Rich text" -> HTML: $..$ inline maths, $$..$$ display maths,
+ *                                      **bold** -> <strong>, everything else escaped. fullSize: inline maths in
+ *                                      display style (answer strips).
  *   fmtMarks(n)                       0.5 -> "½", 1 -> "1", 1.5 -> "1½" (never "0.5").
  *   marksHtml(n)                      fmtMarks with the ½ wrapped in <span class="half"> (for hand-font marks).
  *   marksLabel(n)                     "½ mark", "1 mark", "4 marks".
@@ -40,9 +42,20 @@ export function escapeHtml(s) {
 
 const STRUCTURED = /\\begin\{(aligned|alignedat|gathered|bmatrix|pmatrix|vmatrix|Vmatrix|matrix|array|cases|split)\}|\\\\/;
 
+/* Rows of a matrix (or cases) that hold stacked fractions touch each other at KaTeX's default row
+   spacing; open them up a little. Rows that already set their own spacing (\\[..]) are left alone. */
+const ROWED = /\\begin\{([bpvBV]?matrix|cases)\}([\s\S]*?)\\end\{\1\}/g;
+function spaceFractionRows(tex) {
+  return tex.replace(ROWED, (m, env, body) => {
+    if (!/\\[dt]?frac/.test(body)) return m;
+    const gap = /\\dfrac/.test(body) || env === 'cases' ? '0.45em' : '0.3em';
+    return `\\begin{${env}}${body.replace(/\\\\(?!\s*\[)/g, `\\\\[${gap}]`)}\\end{${env}}`;
+  });
+}
+
 /** KaTeX -> HTML. Display maths gets the fit wrapper. */
 export function renderMath(tex, { display = false, wrap } = {}) {
-  const src = String(tex ?? '').trim();
+  const src = spaceFractionRows(String(tex ?? '').trim());
   if (!display) {
     return katex.renderToString(src, { ...KATEX_OPTS, displayMode: false });
   }
@@ -54,13 +67,14 @@ export function renderMath(tex, { display = false, wrap } = {}) {
   return `<span class="math-fit math-display"><span class="math-inner">${main}</span>${alt}</span>`;
 }
 
-/** Contract rich text -> HTML. */
-export function renderRich(s) {
+/** Contract rich text -> HTML. { fullSize: true } sets inline maths in display style (full-size fractions),
+ *  used for the final-answer strip so a result like $\frac{\pi}{4}$ is not printed tiny. */
+export function renderRich(s, { fullSize = false } = {}) {
   if (s === undefined || s === null || s === '') return '';
   const parts = [];
   // Replace maths with placeholders first so ** can span across maths and nothing inside maths is touched.
   const withHolders = String(s).replace(MATH, (_, disp, inl) => {
-    parts.push(disp !== undefined ? renderMath(disp, { display: true }) : renderMath(inl, { display: false }));
+    parts.push(disp !== undefined ? renderMath(disp, { display: true }) : renderMath(fullSize ? `\\displaystyle ${inl}` : inl, { display: false }));
     return `\u0001${parts.length - 1}\u0002`;
   });
   let html = escapeHtml(withHolders);

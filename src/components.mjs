@@ -12,6 +12,7 @@
  *   renderAnswer(html, ctx)       the boxed "Answer" strip on its own.
  *   renderLevelHead(level, ctx)   level heading with its marks.
  *   correctOptionIndex(q)         0-3 from solution.answer "(B) ...", or -1.
+ *   optionWidth(richText)         rough printed width of an option in body characters (picks the option layout).
  *   questionAnchor(q)             "q3" (used as the element id).
  *
  * ctx: { dir: content directory of the file (for figures), chapter, set, reveal, showPartText, idBase }
@@ -22,8 +23,9 @@
  *     div.q-box                              lightly tinted restatement of the question
  *       div.q-text                           question rich text
  *       figure.fig.q-fig                     question figure (inline SVG)
- *       ol.q-options(.is-grid)               li.q-opt(.is-correct) > span.q-opt-letter (+ .sk-circle when correct)
- *                                              + span.q-opt-text
+ *       ol.q-options(.is-grid)(.is-row)      li.q-opt(.is-correct) > span.q-opt-letter (+ .sk-circle when correct)
+ *                                              + span.q-opt-text. .is-grid = 2 x 2; .is-grid.is-row = all four
+ *                                              on one line (short options); neither = one per line.
  *       ol.q-parts                           li.q-part(.is-alt) > .q-part-label .q-part-text .q-part-marks;
  *                                              li.q-or ("OR") sits before an alt part
  *   section.sol                              the solution
@@ -54,25 +56,109 @@ export function correctOptionIndex(q) {
 const seedOf = (ctx, q, k = 0) => (Number(ctx?.chapter) || 0) * 1000 + (Number(q?.n) || 0) * 17 + k;
 const figId = (ctx, q, k) => `${ctx?.idBase || 'c'}${ctx?.chapter ?? ''}q${q.n}${k}`;
 
-function optionsLookLong(options) {
-  return options.some((o) => {
-    const s = String(o);
-    const prose = s.replace(/\$\$[\s\S]+?\$\$|\$[^$]+?\$/g, 'xxxxxx');
-    return prose.length > 34 || /\\begin|\$\$|\\dfrac|\\displaystyle|\\int|\\sum/.test(s);
+/* ---- option layout: estimate how wide each option prints, in body-text character widths ---- */
+const ZERO_WIDTH = new Set(['left', 'right', 'big', 'Big', 'bigg', 'Bigg', 'displaystyle', 'textstyle', 'limits', 'nolimits',
+  'mathrm', 'mathbf', 'mathit', 'mathbb', 'mathcal', 'boldsymbol', 'text', 'textbf', 'operatorname', 'hat', 'vec', 'bar',
+  'overline', 'overrightarrow', 'widehat', 'tilde', 'dot', 'ddot', 'mathsf']);
+const WORD_OPS = new Set(['sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'cosec', 'log', 'ln', 'exp', 'lim', 'max', 'min', 'det', 'adj']);
+const WIDE_OPS = new Set(['le', 'ge', 'leq', 'geq', 'ne', 'neq', 'to', 'in', 'notin', 'subset', 'subseteq', 'cup', 'cap', 'times',
+  'cdot', 'pm', 'mp', 'Rightarrow', 'Leftarrow', 'implies', 'iff', 'rightarrow', 'leftarrow', 'approx', 'equiv', 'perp', 'parallel']);
+
+function braceGroup(s, i) {
+  while (s[i] === ' ') i++;
+  if (s[i] !== '{') {
+    const m = s.slice(i).match(/^\\[a-zA-Z]+|^./s);
+    return m ? [m[0], i + m[0].length] : ['', i];
+  }
+  let depth = 0;
+  for (let j = i; j < s.length; j++) {
+    if (s[j] === '{') depth++;
+    else if (s[j] === '}' && --depth === 0) return [s.slice(i + 1, j), j + 1];
+  }
+  return [s.slice(i + 1), s.length];
+}
+
+function mathUnits(tex) {
+  const s = String(tex);
+  let u = 0;
+  let i = 0;
+  while (i < s.length) {
+    const c = s[i];
+    if (c === '\\') {
+      const m = s.slice(i).match(/^\\([a-zA-Z]+|.)/s);
+      const name = m[1];
+      i += m[0].length;
+      if (/^[dtc]?frac$|^binom$/.test(name)) {
+        const [a, j] = braceGroup(s, i);
+        const [b, k] = braceGroup(s, j);
+        u += Math.max(mathUnits(a), mathUnits(b)) + 0.6;
+        i = k;
+      } else if (name === 'begin') {
+        const [env, j] = braceGroup(s, i);
+        const end = s.indexOf(`\\end{${env}}`, j);
+        const body = s.slice(j, end < 0 ? s.length : end);
+        const rows = body.split('\\\\').map((r) => r.split('&'));
+        const cols = Math.max(...rows.map((r) => r.length));
+        const colW = Array.from({ length: cols }, (_, ci) => Math.max(...rows.map((r) => mathUnits(r[ci] ?? ''))));
+        u += colW.reduce((a, b) => a + b, 0) + cols * 1.4 + 1.5;
+        i = end < 0 ? s.length : end + `\\end{${env}}`.length;
+      } else if (name === 'sqrt') {
+        if (s[i] === '[') i = s.indexOf(']', i) + 1 || s.length;
+        const [a, j] = braceGroup(s, i);
+        u += mathUnits(a) + 1.2;
+        i = j;
+      } else if (ZERO_WIDTH.has(name)) {
+        /* the argument is counted as it is read */
+      } else if (WORD_OPS.has(name)) u += name.length + 0.4;
+      else if (WIDE_OPS.has(name)) u += 2;
+      else if (name === 'quad') u += 2;
+      else if (name === 'qquad') u += 4;
+      else if (/^[,;:! ]$/.test(name)) u += 0.3;
+      else u += 1.1; // greek letters and other symbols
+    } else if (c === '^' || c === '_') {
+      const [a, j] = braceGroup(s, i + 1);
+      u += 0.7 * mathUnits(a);
+      i = j;
+    } else {
+      if ('=<>'.includes(c)) u += 2;
+      else if ('+-'.includes(c)) u += 1.8;
+      else if (c !== '{' && c !== '}' && c !== ' ' && c !== '&') u += 1;
+      i++;
+    }
+  }
+  return u;
+}
+
+/** Rough printed width of an option, in average body-text characters (maths counts a little wider). */
+export function optionWidth(o) {
+  let units = 0;
+  const prose = String(o).replace(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g, (_, d, t) => {
+    units += 1.15 * mathUnits(d ?? t);
+    return '';
   });
+  return units + prose.replace(/\*\*/g, '').length;
+}
+
+/** '' (one per line), 'is-grid' (2 x 2) or 'is-grid is-row' (all four on one line), as a CBSE paper sets them. */
+function optionsLayout(q) {
+  if (q.type !== 'mcq' || q.options.length !== 4) return '';
+  const w = Math.max(...q.options.map(optionWidth));
+  if (w <= 11) return 'is-grid is-row';
+  if (w <= 31) return 'is-grid';
+  return '';
 }
 
 function renderOptions(q, ctx) {
   if (!Array.isArray(q.options)) return '';
   const correct = ctx?.reveal ? correctOptionIndex(q) : -1;
-  const grid = q.type === 'mcq' && !optionsLookLong(q.options);
+  const layout = optionsLayout(q);
   const items = q.options
     .map((o, i) => {
       const ok = i === correct;
       return `<li class="q-opt${ok ? ' is-correct' : ''}"><span class="q-opt-letter">${ok ? sketchCircle(seedOf(ctx, q, i)) : ''}(${LETTERS[i]})</span><span class="q-opt-text">${renderRich(o)}</span>${ok ? '<span class="visually-hidden"> (correct)</span>' : ''}</li>`;
     })
     .join('');
-  return `<ol class="q-options${grid ? ' is-grid' : ''}" type="A">${items}</ol>`;
+  return `<ol class="q-options${layout ? ` ${layout}` : ''}" type="A">${items}</ol>`;
 }
 
 function renderQuestionParts(q) {
@@ -94,7 +180,7 @@ function renderQuestionHead(q, ctx) {
 
 function renderQuestionBox(q, ctx) {
   const fig = q.figure
-    ? inlineFigure(ctx.dir, q.figure, { cls: 'q-fig', idPrefix: figId(ctx, q, 'q'), maxWidthMm: 92, maxHeightMm: 72, alt: `Figure for question ${q.n}` })
+    ? inlineFigure(ctx.dir, q.figure, { cls: 'q-fig', idPrefix: figId(ctx, q, 'q'), maxWidthMm: 100, maxHeightMm: 80, alt: `Figure for question ${q.n}` })
     : '';
   return `<div class="q-box"><div class="q-text">${renderRich(q.question)}</div>${fig}${renderOptions(q, ctx)}${renderQuestionParts(q)}</div>`;
 }
@@ -111,7 +197,7 @@ export function renderSteps(steps, ctx = {}, q = { n: 0 }, partKey = '') {
       const math = st.math ? `<div class="step-math">${renderMath(st.math, { display: true })}</div>` : '';
       const why = st.why ? `<p class="step-why">${renderRich(st.why)}</p>` : '';
       const fig = st.figure
-        ? inlineFigure(ctx.dir, st.figure, { cls: 'step-fig', idPrefix: figId(ctx, q, `s${partKey}${i}`), maxWidthMm: 92, maxHeightMm: 72, alt: `Figure for step ${i + 1}` })
+        ? inlineFigure(ctx.dir, st.figure, { cls: 'step-fig', idPrefix: figId(ctx, q, `s${partKey}${i}`), maxWidthMm: 110, maxHeightMm: 88, alt: `Figure for step ${i + 1}` })
         : '';
       const has = typeof st.marks === 'number' && st.marks > 0;
       const marks = has
@@ -136,7 +222,7 @@ function renderSolvedParts(q, ctx) {
       const marks = qp && typeof qp.marks === 'number' ? `<span class="sol-part-marks">${marksLabel(qp.marks)}</span>` : '';
       const text = ctx.showPartText && qp ? `<span class="sol-part-text">${renderRich(qp.text)}</span>` : '';
       const or = p.alt ? '<div class="sol-or"><span>OR</span></div>' : '';
-      return `<div class="sol-part${p.alt ? ' is-alt' : ''}">${or}<h4 class="sol-part-head"><span class="sol-part-label">${escapeHtml(p.label)}</span>${text}${marks}</h4>${renderSteps(p.steps, ctx, q, `p${i}`)}${renderAnswer(renderRich(p.answer), ctx, { part: true, label: `Answer ${p.label}`, seed: seedOf(ctx, q, 50 + i) })}</div>`;
+      return `<div class="sol-part${p.alt ? ' is-alt' : ''}">${or}<h4 class="sol-part-head"><span class="sol-part-label">${escapeHtml(p.label)}</span>${text}${marks}</h4>${renderSteps(p.steps, ctx, q, `p${i}`)}${renderAnswer(renderRich(p.answer, { fullSize: true }), ctx, { part: true, label: `Answer ${p.label}`, seed: seedOf(ctx, q, 50 + i) })}</div>`;
     })
     .join('');
 }
@@ -146,11 +232,11 @@ export function renderSolution(q, ctx = {}) {
   const s = q.solution || {};
   const concept = s.concept ? `<p class="sol-concept"><span class="sol-label">Formula / idea</span> ${renderRich(s.concept)}</p>` : '';
   const fig = s.figure
-    ? inlineFigure(ctx.dir, s.figure, { cls: 'sol-fig', idPrefix: figId(ctx, q, 's'), maxWidthMm: 100, maxHeightMm: 80, alt: `Figure for the solution of question ${q.n}` })
+    ? inlineFigure(ctx.dir, s.figure, { cls: 'sol-fig', idPrefix: figId(ctx, q, 's'), maxWidthMm: 115, maxHeightMm: 90, alt: `Figure for the solution of question ${q.n}` })
     : '';
   const hasParts = Array.isArray(s.parts) && s.parts.length;
   const body = hasParts ? renderSolvedParts(q, ctx) : renderSteps(s.steps, ctx, q);
-  const answer = hasParts ? '' : renderAnswer(renderRich(s.answer), ctx, { seed: seedOf(ctx, q, 40) });
+  const answer = hasParts ? '' : renderAnswer(renderRich(s.answer, { fullSize: true }), ctx, { seed: seedOf(ctx, q, 40) });
   const watch = s.mistake ? `<p class="watch"><span class="watch-label">Watch out</span> ${renderRich(s.mistake)}</p>` : '';
   return `<section class="sol" aria-label="Solution to question ${q.n}">${concept}${fig}${body}${answer}${watch}</section>`;
 }

@@ -1,7 +1,7 @@
 /*
  * Copies everything a rendered page needs into one folder (docs/assets by default):
  *
- *   <dest>/katex/katex.min.css + <dest>/katex/fonts/*.woff2   (from the katex npm package)
+ *   <dest>/katex/katex.min.css + <dest>/katex/fonts/*.woff2   (from the katex npm package; CSS trimmed to woff2 only)
  *   <dest>/fonts/*.woff2 + <dest>/fonts.css                    (Atkinson Hyperlegible + Patrick Hand, from @fontsource)
  *   <dest>/tokens.css <dest>/sheet.css <dest>/print.css        (src/styles)
  *   <dest>/fit.js                                              (src/client/fit.js)
@@ -22,8 +22,8 @@ const FONT_FILES = [
   ['@fontsource/patrick-hand/files', /^patrick-hand-latin(-ext)?-400-normal\.woff2$/],
 ];
 
-function copyIfChanged(src, dst, written, rel) {
-  const buf = fs.readFileSync(src);
+function copyIfChanged(src, dst, written, rel, transform) {
+  const buf = transform ? Buffer.from(transform(fs.readFileSync(src, 'utf8'))) : fs.readFileSync(src);
   try {
     if (fs.readFileSync(dst).equals(buf)) return;
   } catch {
@@ -37,7 +37,9 @@ function copyIfChanged(src, dst, written, rel) {
 export function copyAssets(dest = ASSET_DIR) {
   const written = [];
   const kdist = path.join(NM, 'katex', 'dist');
-  copyIfChanged(path.join(kdist, 'katex.min.css'), path.join(dest, 'katex', 'katex.min.css'), written, 'katex/katex.min.css');
+  // only the .woff2 fonts are copied, so drop the .woff / .ttf fallbacks that would point at missing files
+  const woff2Only = (css) => css.replace(/,url\(fonts\/[^)]+\.(?:woff|ttf)\) format\("(?:woff|truetype)"\)/g, '');
+  copyIfChanged(path.join(kdist, 'katex.min.css'), path.join(dest, 'katex', 'katex.min.css'), written, 'katex/katex.min.css', woff2Only);
   for (const f of fs.readdirSync(path.join(kdist, 'fonts'))) {
     if (f.endsWith('.woff2')) copyIfChanged(path.join(kdist, 'fonts', f), path.join(dest, 'katex', 'fonts', f), written, `katex/fonts/${f}`);
   }
